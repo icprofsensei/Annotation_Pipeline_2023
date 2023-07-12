@@ -11,5 +11,5 @@ sg.popup("You entered", outputfiles)
 result = ann(jsondic, inputfiles, outputfiles)
 result.initialsteps()
 '''
-result = ann('New_Pipeline_2023/NCBI_TAX_DIC.json', 'output', 'New_Pipeline_2023')
+result = ann('New_Pipeline_2023/newdic.json', 'output', 'New_Pipeline_2023')
 result.initialsteps()
