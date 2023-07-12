@@ -46,7 +46,7 @@ class Annotator:
 
 
 #For each PMC file, the data is loaded as a json and my_list is made. Text is under documents --> passages --> annotations --> text --> word     
-            progress = len(PMC_files)
+            
                                       
             for in_file in PMC_files: 
                     with open(self.input_directory+ "/" + in_file , encoding = 'utf-8') as m_file:
@@ -60,8 +60,7 @@ class Annotator:
                                 total = len(passages)
                                 with alive_bar(total) as bar: 
                                     for m in passages:
-                                        m['annotations']=[]
-                                        found_microbiome=[]         
+                                        m['annotations']=[]      
                                         textsection=m['text']
                                         wordlist=textsection.split(" ")
                                         #Iterates over a list of words in the wordlist, taken from the text section.
@@ -71,20 +70,20 @@ class Annotator:
                                                 #if word[0].isupper() == True:
                                                         if word in CleanNames:
                                                             match = next((l for l in dict_data if l['CleanName'] == word), None)
-                                                            found_microbiome.append(word)
+                                                            my_list.append(word, {match['CleanName'], match['TaxRank']})
                                                             m['annotations'].append({
                                                                                         "text":textsection,
                                                                                         "infons":{
                                                                                             "name":word,
                                                                                             "identifier": match['CleanName'] ,
-                                                                                            "type": match['TaxRank'] ,
+                                                                                            "taxonomic rank": match['TaxRank'] ,
                                                                                             "annotator":"dhylan.patel21@imperial.ac.uk",
                                                                                             "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
                                                                                         },
                                                                                         "id": match['TaxID'],
                                                                                         "locations":{
                                                                                             "length": len(textsection),
-                                                                                            "index": "index",
+                                                                                            "parent taxonomic id": match['ParentTaxID'],
                                                                                             
                                                                                         }
                                                                                     })
@@ -95,6 +94,7 @@ class Annotator:
                                                 
                                         
                 #saving it as a json file 
+                                print(my_list)
                                 list1.append(my_list)
                                 for i in data: 
                                     a_file = open(self.output_directory + "/Annotated_output2"+ "/" +str(in_file), "w")
