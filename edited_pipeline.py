@@ -70,7 +70,7 @@ class Annotator:
                                                 #if word[0].isupper() == True:
                                                         if word in CleanNames:
                                                             match = next((l for l in dict_data if l['CleanName'] == word), None)
-                                                            my_list.append(word, {match['CleanName'], match['TaxRank']})
+                                                            my_list.append(str(word) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
                                                             m['annotations'].append({
                                                                                         "text":textsection,
                                                                                         "infons":{
@@ -94,7 +94,10 @@ class Annotator:
                                                 
                                         
                 #saving it as a json file 
-                                print(my_list)
+                                my_list = {*my_list}
+                                my_list = list(my_list)
+                                for j in my_list:
+                                      print(j)
                                 list1.append(my_list)
                                 for i in data: 
                                     a_file = open(self.output_directory + "/Annotated_output2"+ "/" +str(in_file), "w")
