@@ -66,8 +66,6 @@ class Annotator:
                                         #Iterates over a list of words in the wordlist, taken from the text section.
                                         
                                         for word in wordlist:
-                                            #if not word.startswith(" "):
-                                                #if word[0].isupper() == True:
                                                         if word in CleanNames:
                                                             match = next((l for l in dict_data if l['CleanName'] == word), None)
                                                             my_list.append(str(word) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
