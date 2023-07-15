@@ -73,22 +73,7 @@ class Annotator:
                                                       match = next((l for l in dict_data if l['CleanName'] == word), None)
                                                       my_list.append(str(word) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
                                                       count += 1
-                                                      m['annotations'].append({
-                                                                                "text":word,
-                                                                                "infons":{
-                                                                                    "identifier": "TAXRANK:"+ match['TaxID'] ,
-                                                                                    "type": match['TaxRank'] ,
-                                                                                    "annotator":"dhylan.patel21@imperial.ac.uk",
-                                                                                    "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
-                                                                                    "parent_taxonomic_id": match['ParentTaxID']
-                                                                                },
-                                                                                "id": count,
-                                                                                "locations":{
-                                                                                    "length": len(word),
-                                                                                    "offset": index +1 ,
-                                                                                    
-                                                                                }
-                                                                            })
+                                                      self.AddAnnotation(word, match, count, index, m)
                                                 else:   
                                                         possible = []
                                                         for cn in CleanNames:
@@ -113,22 +98,7 @@ class Annotator:
                                                                             match = d
                                                                             my_list.append(str(p) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
                                                                             count +=1
-                                                                            m['annotations'].append({
-                                                                                "text":word,
-                                                                                "infons":{
-                                                                                    "identifier": "TAXRANK:"+ match['TaxID'] ,
-                                                                                    "type": match['TaxRank'] ,
-                                                                                    "annotator":"dhylan.patel21@imperial.ac.uk",
-                                                                                    "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
-                                                                                    "parent_taxonomic_id": match['ParentTaxID']
-                                                                                },
-                                                                                "id": count,
-                                                                                "locations":{
-                                                                                    "length": len(word),
-                                                                                    "offset": index +1 ,
-                                                                                    
-                                                                                }
-                                                                            })
+                                                                            self.AddAnnotation(word, match, count, index, m)
                                                          #Checks if the word after is a match
                                                                 elif pos >=0 and (wordlist[index -1] in p):
                                                                      p= " ".join(p)
@@ -137,22 +107,7 @@ class Annotator:
                                                                             match = d
                                                                             my_list.append(str(p) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
                                                                             count +=1
-                                                                            m['annotations'].append({
-                                                                                "text":word,
-                                                                                "infons":{
-                                                                                    "identifier": "TAXRANK:"+ match['TaxID'] ,
-                                                                                    "type": match['TaxRank'] ,
-                                                                                    "annotator":"dhylan.patel21@imperial.ac.uk",
-                                                                                    "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
-                                                                                    "parent_taxonomic_id": match['ParentTaxID']
-                                                                                },
-                                                                                "id": count,
-                                                                                "locations":{
-                                                                                    "length": len(word),
-                                                                                    "offset": index +1 ,
-                                                                                    
-                                                                                }
-                                                                            })
+                                                                            self.AddAnnotation(word, match, count, index, m)
                                                             
                                                                     
                                                         
@@ -184,3 +139,20 @@ class Annotator:
                 time_file.write("This file contains all the kingdoms and taxonomic ranks for each species found.")
                 time_file.write(str(list1))
 
+        def AddAnnotation(self, word, match, count, index, m):
+             m['annotations'].append({
+                                        "text":word,
+                                        "infons":{
+                                            "identifier": "TAXRANK:"+ match['TaxID'] ,
+                                            "type": match['TaxRank'] ,
+                                            "annotator":"dhylan.patel21@imperial.ac.uk",
+                                            "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
+                                            "parent_taxonomic_id": match['ParentTaxID']
+                                        },
+                                        "id": count,
+                                        "locations":{
+                                            "length": len(word),
+                                            "offset": index +1 ,
+                                            
+                                        }
+                                    })
