@@ -65,14 +65,13 @@ class Annotator:
                                         textsection=m['text']
                                         wordlist=textsection.split(" ")
                                         #Iterates over a list of words in the wordlist, taken from the text section.
-                                        
+                                        wordsintextsection = len(wordlist)
                                         for index, word in enumerate(wordlist):
                                             if len(word) >= 4:
                                                 #Checks if word is an exact match
                                                 if word in CleanNames: 
                                                       match = next((l for l in dict_data if l['CleanName'] == word), None)
                                                       my_list.append(str(word) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
-                                                      count += 1
                                                       self.AddAnnotation(word, match, count, index, m)
                                                 else:   
                                                         possible = []
@@ -90,6 +89,7 @@ class Annotator:
                                                                 
                                                                 p = p.split(" ")
                                                                 pos = p.index(word)
+                                                                length = len(p)
                                                                 if pos == 0 and (wordlist[index +1 ] in p):
                                                        #Checks if the word before is a match         
                                                                     p= " ".join(p)
@@ -97,17 +97,24 @@ class Annotator:
                                                                         if d['CleanName'] == p:
                                                                             match = d
                                                                             my_list.append(str(p) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
-                                                                            count +=1
                                                                             self.AddAnnotation(word, match, count, index, m)
                                                          #Checks if the word after is a match
                                                                 elif pos >=0 and (wordlist[index -1] in p):
-                                                                     p= " ".join(p)
-                                                                     for d in dict_data:
+                                                                    p= " ".join(p)
+                                                                    for d in dict_data:
                                                                         if d['CleanName'] == p:
                                                                             match = d
                                                                             my_list.append(str(p) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
-                                                                            count +=1
                                                                             self.AddAnnotation(word, match, count, index, m)
+                                                                elif length>2 and index != wordsintextsection -1 :
+                                                                    if (pos>0 and pos<length-1) and (wordlist[index -1] in p or wordlist[index + 1] in p):
+                                                                        p= " ".join(p)
+                                                                        for d in dict_data:
+                                                                            if d['CleanName'] == p:
+                                                                                match = d
+                                                                                my_list.append(str(p) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
+                                                                                self.AddAnnotation(word, match, count, index, m)
+                                                                
                                                             
                                                                     
                                                         
@@ -140,6 +147,7 @@ class Annotator:
                 time_file.write(str(list1))
 
         def AddAnnotation(self, word, match, count, index, m):
+             count +=1
              m['annotations'].append({
                                         "text":word,
                                         "infons":{
