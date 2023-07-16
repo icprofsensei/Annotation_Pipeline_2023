@@ -84,18 +84,24 @@ class Annotator:
                                                         count +=1
                                                         my_list.append(str(word) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
                                                         self.AddAnnotation(word, match, count, index, m)
+                                                elif word in ['[sp]', '[spp]']:
+                                                        match = next((l for l in dict_data if l['CleanName'] == wordlist[index -1]), None)
+                                                        self.ChangeAnnotation(wordlist[index - 1], match, count, index - 1, m, "species")
+                                                        #Need to change word before from genus to species.
                                                 else:   
                                                         possible = []
                                                         for cn in CleanNames:
                                                             if word in cn:
                                                                 x = cn.find(word)
                                                                 y = len(word)
-                                                                if  (cn.startswith(word) and cn[x+y] == " ") or (cn.endswith(word) and cn[x-1] == " ") or (cn[x-1] == " " and cn[x+y] ==" ") :
+                                                                if  (cn.startswith(word) and cn[x+y] == " ") or (cn.endswith(word) and cn[x-1] == " ") or (cn[x-1] == " " and cn[x+y] ==" ") : #Cleannames may be multiple words. We do not want words within words. eg: tar in starship. 
                                                                     possible.append(cn)
                                                         #Possible is a list of clean names which contain a word from the text.  If there is a possible list, do the following:             
                                                         if len(possible) >=1:
+                                                            '''
                                                             if len(possible)<=10:
                                                                 print("Possible: ", possible)
+                                                                '''
                                                             for p in possible:
                                                                 p= p.split(" ")
                                                                 longest = max(0, len(p))
@@ -164,6 +170,25 @@ class Annotator:
                                             
                                         }
                                     })
+        def ChangeAnnotation(self, word, match, count, index, m, newrank):
+             m['annotations'].remove()
+             m['annotations'].append({
+                                        "text":word,
+                                        "infons":{
+                                            "identifier": "TAXRANK:"+ match['TaxID'] ,
+                                            "type": newrank ,
+                                            "annotator":"dhylan.patel21@imperial.ac.uk",
+                                            "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
+                                            "parent_taxonomic_id": match['ParentTaxID']
+                                        },
+                                        "id": count,
+                                        "locations":{
+                                            "length": len(word),
+                                            "offset": index +1 ,
+                                            
+                                        }
+                                    })
+             
 '''
 
                                                                 if pos == 0 and (wordlist[index +1 ] in p):
