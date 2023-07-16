@@ -59,55 +59,68 @@ class Annotator:
                         for j in documents:
                                 passages= j['passages'] 
                                 total = len(passages)
-                                #with alive_bar(total) as bar: 
-                                for m in passages:
-                                    m['annotations']=[]      
-                                    textsection=m['text']
-                                    wordlist=textsection.split(" ")
+                                with alive_bar(total) as bar: 
+                                    for m in passages:
+                                        m['annotations']=[]      
+                                        textsection=m['text']
+                                        wordlist=textsection.split(" ")
                                     #Iterates over a list of words in the wordlist, taken from the text section.
-                                    wordsintextsection = len(wordlist)
-                                    for index, word in enumerate(wordlist):
-                                        if len(word) >= 4:
-                                            #Checks if word is an exact match
-                                            if word in CleanNames: 
-                                                    match = next((l for l in dict_data if l['CleanName'] == word), None)
-                                                    count +=1
-                                                    my_list.append(str(word) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
-                                                    self.AddAnnotation(word, match, count, index, m)
-                                            else:   
-                                                    possible = []
-                                                    for cn in CleanNames:
-                                                        if word in cn:
-                                                            x = cn.find(word)
-                                                            y = len(word)
-                                                            if  cn[x-1] ==" " and (cn.endswith(word) or cn[x+y]==" "):
-                                                                possible.append(cn)
-                                                    #Possible is a list of clean names which contain a word from the text.  If there is a possible list, do the following:             
-                                                    if len(possible) >=1:
-                                                        print("Possible: ", possible)
-                                                        with alive_bar(len(possible)) as bar:
+                                        for index, word in enumerate(wordlist):
+                                            for i in word:
+                                                if i.isalnum() == True:
+                                                    if i.isupper():
+                                                        break
+                                                    else:
+                                                        word = word.rstrip(".,")
+                                                        wordlist[index] = word.rstrip(".,")
+                                                else: 
+                                                    continue
+                                            print(word)
+                                            if len(word) >= 4:
+                                                #Checks if word is an exact match
+                                                if word in CleanNames: 
+                                                        print("Exact_match")
+                                                        match = next((l for l in dict_data if l['CleanName'] == word), None)
+                                                        count +=1
+                                                        my_list.append(str(word) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
+                                                        self.AddAnnotation(word, match, count, index, m)
+                                                else:   
+                                                        possible = []
+                                                        for cn in CleanNames:
+                                                            if word in cn:
+                                                                x = cn.find(word)
+                                                                y = len(word)
+                                                                if  (cn.startswith(word) and cn[x+y] == " ") or (cn.endswith(word) and cn[x-1] == " ") or (cn[x-1] == " " and cn[x+y] ==" ") :
+                                                                    possible.append(cn)
+                                                        #Possible is a list of clean names which contain a word from the text.  If there is a possible list, do the following:             
+                                                        if len(possible) >=1:
+                                                            if len(possible)<=10:
+                                                                print("Possible: ", possible)
                                                             for p in possible:
+                                                                p= p.split(" ")
+                                                                longest = max(0, len(p))
                                                                 
-                                                                p = p.split(" ")
-                                                                scanlength = len(p)
-                                                                scanstart = index + 1 - scanlength
-                                                                scanend = index - 1 + scanlength
-                                                                for n in range(scanstart, scanend):
-                                                                    section = wordlist[n: n + scanlength]
-                                                                    if section == p:
-                                                                        
-                                                                        p= " ".join(p)
+                                                            scanstart = index - longest
+                                                            scanend = index + longest
+                                                            for n in range(scanstart, scanend):
+                                                                section = wordlist[n: n + longest:1]
+                                                                section = " ".join(section)
+                                                                print(section)
+                                                                if section in possible:
+
+                                                                        print("Identified", section)
                                                                         for d in dict_data:
-                                                                                if d['CleanName'] == p:
+                                                                                if d['CleanName'] == section:
                                                                                     match = d
                                                                                     count +=1
-                                                                                    my_list.append(str(p) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
+                                                                                    my_list.append(str(section) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
                                                                                     self.AddAnnotation(word, match, count, index, m)
                                                                         break
-                                                                    else:
+                                                                else:
                                                                             continue
+                                bar()
 
-                                                            bar()
+                                                          
 
                                 my_list = {*my_list}
                                 my_list = list(my_list)
