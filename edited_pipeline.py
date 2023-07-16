@@ -82,12 +82,20 @@ class Annotator:
                                                         print("Exact_match")
                                                         match = next((l for l in dict_data if l['CleanName'] == word), None)
                                                         count +=1
-                                                        my_list.append(str(word) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
-                                                        self.AddAnnotation(word, match, count, index, m)
-                                                elif word in ['[sp]', '[spp]']:
-                                                        match = next((l for l in dict_data if l['CleanName'] == wordlist[index -1]), None)
-                                                        self.ChangeAnnotation(wordlist[index - 1], match, count, index - 1, m, "species")
-                                                        #Need to change word before from genus to species.
+                                                        if wordlist[index + 1].rstrip(".,") in ['[sp]', '[spp]']:
+                                                            modifier = "species" 
+                                                            my_list.append(str(word) + " " + str(match['CleanName']) + " " + modifier)
+                                                            self.AddAnnotation(word, match, count, index, m, modifier)
+                                                        elif wordlist[index + 1].rstrip(".,") in ['[ge]', '[genus]']:
+                                                            modifier = "genus" 
+                                                            my_list.append(str(word) + " " + str(match['CleanName']) + " " + modifier)
+                                                            self.AddAnnotation(word, match, count, index, m, modifier)
+
+
+                                                        else:
+                                                             my_list.append(str(word) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
+                                                             self.AddAnnotation(word, match, count, index, m, " ")
+                                        
                                                 else:   
                                                         possible = []
                                                         for cn in CleanNames:
@@ -120,7 +128,7 @@ class Annotator:
                                                                                     match = d
                                                                                     count +=1
                                                                                     my_list.append(str(section) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
-                                                                                    self.AddAnnotation(word, match, count, index, m)
+                                                                                    self.AddAnnotation(word, match, count, index, m, " ")
                                                                         break
                                                                 else:
                                                                             continue
@@ -152,9 +160,26 @@ class Annotator:
                 time_file.write("This file contains all the kingdoms and taxonomic ranks for each species found.")
                 time_file.write(str(list1))
 
-        def AddAnnotation(self, word, match, count, index, m):
-    
-             m['annotations'].append({
+        def AddAnnotation(self, word, match, count, index, m, modifier):
+            if modifier != " ": 
+                    dictannot = {
+                                        "text":word,
+                                        "infons":{
+                                            "identifier": "TAXRANK:"+ match['TaxID'] ,
+                                            "type": modifier ,
+                                            "annotator":"dhylan.patel21@imperial.ac.uk",
+                                            "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
+                                            "parent_taxonomic_id": match['ParentTaxID']
+                                        },
+                                        "id": count,
+                                        "locations":{
+                                            "length": len(word),
+                                            "offset": index +1 ,
+                                            
+                                        }
+                                    }
+            else:
+                    dictannot = {
                                         "text":word,
                                         "infons":{
                                             "identifier": "TAXRANK:"+ match['TaxID'] ,
@@ -169,25 +194,9 @@ class Annotator:
                                             "offset": index +1 ,
                                             
                                         }
-                                    })
-        def ChangeAnnotation(self, word, match, count, index, m, newrank):
-             m['annotations'].remove()
-             m['annotations'].append({
-                                        "text":word,
-                                        "infons":{
-                                            "identifier": "TAXRANK:"+ match['TaxID'] ,
-                                            "type": newrank ,
-                                            "annotator":"dhylan.patel21@imperial.ac.uk",
-                                            "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
-                                            "parent_taxonomic_id": match['ParentTaxID']
-                                        },
-                                        "id": count,
-                                        "locations":{
-                                            "length": len(word),
-                                            "offset": index +1 ,
-                                            
-                                        }
-                                    })
+                                    }
+            m['annotations'].append(dictannot)
+
              
 '''
 
