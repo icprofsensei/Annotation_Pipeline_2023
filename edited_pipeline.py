@@ -71,6 +71,7 @@ class Annotator:
                                             #Checks if word is an exact match
                                             if word in CleanNames: 
                                                     match = next((l for l in dict_data if l['CleanName'] == word), None)
+                                                    count +=1
                                                     my_list.append(str(word) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
                                                     self.AddAnnotation(word, match, count, index, m)
                                             else:   
@@ -81,7 +82,7 @@ class Annotator:
                                                             y = len(word)
                                                             if  cn[x-1] ==" " and (cn.endswith(word) or cn[x+y]==" "):
                                                                 possible.append(cn)
-                                                    #Possible is a list of clean names which contain a word from the text.               
+                                                    #Possible is a list of clean names which contain a word from the text.  If there is a possible list, do the following:             
                                                     if len(possible) >=1:
                                                         print("Possible: ", possible)
                                                         with alive_bar(len(possible)) as bar:
@@ -99,6 +100,7 @@ class Annotator:
                                                                         for d in dict_data:
                                                                                 if d['CleanName'] == p:
                                                                                     match = d
+                                                                                    count +=1
                                                                                     my_list.append(str(p) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
                                                                                     self.AddAnnotation(word, match, count, index, m)
                                                                         break
@@ -132,7 +134,7 @@ class Annotator:
                 time_file.write(str(list1))
 
         def AddAnnotation(self, word, match, count, index, m):
-             count +=1
+    
              m['annotations'].append({
                                         "text":word,
                                         "infons":{
