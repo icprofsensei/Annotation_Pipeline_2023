@@ -79,7 +79,7 @@ class Annotator:
                                             if len(word) >= 4:
                                                 #Checks if word is an exact match
                                                 if word in CleanNames: 
-                                                        print("Exact_match")
+                                                        #print("Exact_match")
                                                         match = next((l for l in dict_data if l['CleanName'] == word), None)
                                                         count +=1
                                                         if wordlist[index + 1].rstrip(".,") in ['[sp]', '[spp]', '[species]']:
@@ -117,10 +117,10 @@ class Annotator:
                                                             for n in range(scanstart, scanend):
                                                                 section = wordlist[n: n + longest:1]
                                                                 section = " ".join(section)
-                                                                print(section)
+                                                                #print(section)
                                                                 if section in possible:
 
-                                                                        print("Identified", section)
+                                                                        #print("Identified", section)
                                                                         for d in dict_data:
                                                                                 if d['CleanName'] == section:
                                                                                     match = d
