@@ -130,7 +130,7 @@ class Annotator:
                                                                         break
                                                                 else:
                                                                             continue
-                                bar()
+                                        bar()
 
                                                           
 
@@ -225,7 +225,4 @@ class Annotator:
                                                                 
                                                             '''
                                                                     
-                                        
-                                                
-                                        
-                #saving it as a json file 
+  
