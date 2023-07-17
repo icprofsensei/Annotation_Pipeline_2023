@@ -82,7 +82,7 @@ class Annotator:
                                                         print("Exact_match")
                                                         match = next((l for l in dict_data if l['CleanName'] == word), None)
                                                         count +=1
-                                                        if wordlist[index + 1].rstrip(".,") in ['[sp]', '[spp]']:
+                                                        if wordlist[index + 1].rstrip(".,") in ['[sp]', '[spp]', '[species]']:
                                                             modifier = "species" 
                                                             my_list.append(str(word) + " " + str(match['CleanName']) + " " + modifier)
                                                             self.AddAnnotation(word, match, count, index, m, modifier)
@@ -90,8 +90,6 @@ class Annotator:
                                                             modifier = "genus" 
                                                             my_list.append(str(word) + " " + str(match['CleanName']) + " " + modifier)
                                                             self.AddAnnotation(word, match, count, index, m, modifier)
-
-
                                                         else:
                                                              my_list.append(str(word) + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
                                                              self.AddAnnotation(word, match, count, index, m, " ")
