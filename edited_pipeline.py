@@ -167,7 +167,7 @@ class Annotator:
                                             "type": modifier ,
                                             "annotator":"dhylan.patel21@imperial.ac.uk",
                                             "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
-                                            "parent_taxonomic_id": match['ParentTaxID']
+                                            "parent_taxonomic_id": "Modified type - not identified"
                                         },
                                         "id": count,
                                         "locations":{
