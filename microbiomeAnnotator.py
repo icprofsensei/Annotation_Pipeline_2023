@@ -18,7 +18,7 @@ class Annotator:
             self.output_directory = output_directory    #Output file directory where Annotated_ouput is created. 
 
         def initialsteps(self):
-            os.mkdir(self.output_directory + "/Annotated_output2")
+            os.mkdir(self.output_directory + "/Annotated_output2" + time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()))
             f1 = open(self.dic_directory, encoding = 'utf-8') 
             if os.path.isfile(self.dic_directory) == True:
                  print("Dictionary loaded")
