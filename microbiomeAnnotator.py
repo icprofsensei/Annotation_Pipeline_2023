@@ -18,7 +18,8 @@ class Annotator:
             self.output_directory = output_directory    #Output file directory where Annotated_ouput is created. 
 
         def initialsteps(self):
-            os.mkdir(self.output_directory + "/Annotated_output2" + time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()))
+            folder = "/Annotated_output_" + time.strftime("%Y-%m-%d %H:%M:%S",time.localtime())
+            os.mkdir(self.output_directory + folder)
             f1 = open(self.dic_directory, encoding = 'utf-8') 
             if os.path.isfile(self.dic_directory) == True:
                  print("Dictionary loaded")
@@ -140,7 +141,7 @@ class Annotator:
                                       print(j)
                                 list1.append(my_list)
                                 for i in data: 
-                                    a_file = open(self.output_directory + "/Annotated_output2"+ "/" +str(in_file), "w")
+                                    a_file = open(self.output_directory + folder + "/" +str(in_file), "w")
                                     json.dump(data, a_file, indent = 4)
                                     a_file.close()
              
@@ -148,12 +149,12 @@ class Annotator:
             print(id)
             message = 'Start time is ' + str(start_time) + '\n' + 'Stop time is ' + str(stop_time)  
 
-            with open(self.output_directory + "/Annotated_output2"+ "/" + 'runtime11.log', 'a') as time_file:   #start and stop time are written into a runtime.log file
+            with open(self.output_directory + folder + "/" + 'runtime11.log', 'a') as time_file:   #start and stop time are written into a runtime.log file
                 
             
                 time_file.write(message)
 
-            with open(self.output_directory + "/Annotated_output2"+ "/" + 'runtime12new.log', 'a') as time_file:   #start and stop time are written into a runtime.log file
+            with open(self.output_directory + folder + "/" + 'runtime12new.log', 'a') as time_file:   #start and stop time are written into a runtime.log file
                 
                 time_file.write("This file contains all the kingdoms and taxonomic ranks for each species found.")
                 time_file.write(str(list1))
