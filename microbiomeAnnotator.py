@@ -179,7 +179,7 @@ class Annotator:
                                     }
             else:
                     dictannot = {
-                                        "text":word,
+                                        "text":match['CleanName'],
                                         "infons":{
                                             "identifier": match['TaxID'] ,
                                             "type": match['TaxRank'] ,
