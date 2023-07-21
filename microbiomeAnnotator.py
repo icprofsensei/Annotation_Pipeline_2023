@@ -73,7 +73,6 @@ class Annotator:
                                                     if i.isupper():
                                                         break
                                                     else:
-                                                        #word = word.rstrip(".,")
                                                         wordlist[index] = word.rstrip(".,")
                                                 else: 
                                                     continue
@@ -89,10 +88,10 @@ class Annotator:
                                                                   continue
                                                              else:
                                                                   self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext)
-                                                        elif wordlist[index + 1].rstrip(".,") in ['sp', 'spp']:
+                                                        elif wordlist[index + 1] in ['sp', 'spp']:
                                                             modifier = "species"
                                                             self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext)
-                                                        elif wordlist[index + 1].rstrip(".,") in ['genus', 'gen']:
+                                                        elif wordlist[index + 1] in ['genus', 'gen']:
                                                             modifier = "genus"
                                                             self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext)
                                                         else:
