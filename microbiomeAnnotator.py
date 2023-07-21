@@ -158,7 +158,13 @@ class Annotator:
                                                                                     break
                                                                                 else:
                                                                                     continue
-                                                    
+                                                                elif wordlist[index -1][0].isupper() and wordlist[index -1][1] == '.':
+                                                                     if word in taxa_per_file:
+                                                                          knownspec = taxa_per_file.index(word)
+                                                                          spec = taxa_per_file[knownspec].split(" ")
+                                                                          match  = spec[0]
+                                                                          modifier = "species"
+                                                                          self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext)
                                                             
                                             sentenceoffset += (len(word)+ 1)
                                         bar()
