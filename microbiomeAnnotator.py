@@ -82,7 +82,7 @@ class Annotator:
                                                 if word in CleanNames: 
                                                         #Exact_match
                                                         match = next((l for l in dict_data if l['CleanName'] == word), None)
-                                                        if match['TaxRank'] == "genus":
+                                                        if match['TaxRank'] == "genus" and (wordlist[index + 1] not in ['sp', 'spp', 'genus', 'gen']):
                                                              possible_species = word + " " + str(wordlist[index + 1])
                                                              if possible_species in CleanNames:
                                                                   continue
