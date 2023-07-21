@@ -89,10 +89,10 @@ class Annotator:
                                                                   continue
                                                              else:
                                                                   self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext)
-                                                        elif wordlist[index + 1].rstrip(".,") in ['[sp]', '[spp]', '[species]', 'sp', 'spp']:
+                                                        elif wordlist[index + 1].rstrip(".,") in ['sp', 'spp']:
                                                             modifier = "species"
                                                             self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext)
-                                                        elif wordlist[index + 1].rstrip(".,") in ['[gen]', '[genus]', 'genus', 'gen']:
+                                                        elif wordlist[index + 1].rstrip(".,") in ['genus', 'gen']:
                                                             modifier = "genus"
                                                             self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext)
                                                         else:
