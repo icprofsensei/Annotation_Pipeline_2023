@@ -67,81 +67,88 @@ class Annotator:
                                         wordlist=textsection.split(" ")
                                     #Iterates over a list of words in the wordlist, taken from the text section.
                                         sentenceoffset = 0
+                                        skipper = False
                                         for index, word in enumerate(wordlist):
-                                            for i in word:
-                                                if i.isalnum() == True:
-                                                    if i.isupper():
-                                                        break
-                                                    else:
-                                                        wordlist[index] = word.rstrip(".,")
-                                                else: 
-                                                    continue
+                                            if any(c.isalpha() for c in word) == False:
+                                                 wordlist.pop(index)
+                                            else:
+                                                for i in word:
+                                                    if i.isalnum() == True:
+                                                        if i.isupper() and len(word) == 2:
+                                                            break
+                                                        else:
+                                                            wordlist[index] = word.rstrip(".,")
+                                                    else: 
+                                                        continue
 
                                         for index, word in enumerate(wordlist):
-                                            if len(word) >= 4:
+                                            if skipper == True:
+                                                skipper = False
+                                                continue
+                                            
+                                            else:
                                                 if word in CleanNames: 
                                                         #Exact_match
                                                         match = next((l for l in dict_data if l['CleanName'] == word), None)
                                                         if match['TaxRank'] == "genus" and (wordlist[index + 1] not in ['sp', 'spp', 'genus', 'gen']):
                                                              possible_species = word + " " + str(wordlist[index + 1])
                                                              if possible_species in CleanNames:
-                                                                  continue
+                                                                  match = next((l for l in dict_data if l['CleanName'] == possible_species), None)
+                                                                  modifier = "species"
+                                                                  self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext)
+                                                                  skipper = True
                                                              else:
                                                                   self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext)
+                                                                  skipper = False
+                                                                  
                                                         elif wordlist[index + 1] in ['sp', 'spp']:
                                                             modifier = "species"
                                                             self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext)
+                                                            skipper = False
                                                         elif wordlist[index + 1] in ['genus', 'gen']:
                                                             modifier = "genus"
                                                             self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext)
+                                                            skipper = False
                                                         else:
                                                              self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext)
+                                                             skipper = False
      
                                                      
                                                 else:   
                                                         possible = []
                                                         for cn in CleanNames:
+                                                            cn.split(" ")
                                                             if word in cn:
-                                                                x = cn.find(word)
-                                                                y = len(word)
-                                                                if  (cn.startswith(word) and cn[x+y] == " ") or (cn.endswith(word) and cn[x-1] == " ") or (cn[x-1] == " " and cn[x+y] ==" ") : #Cleannames may be multiple words. We do not want words within words. eg: tar in starship. 
+                                                                #Cleannames may be multiple words. We do not want words within words. eg: tar in starship. 
                                                                     possible.append(cn)
                                                         #Possible is a list of clean names which contain a word from the text.  If there is a possible list, do the following:     
                                                               
                                                         if len(possible) == 0:
                                                              #Try latin plural endings
                                                              if word.endswith('ae'):
-                                                                word = re.sub('ae$', 'a', word)
-                                                                for cn in CleanNames:
-                                                                    if word in cn:
-                                                                        x = cn.find(word)
-                                                                        y = len(word)
-                                                                        if  (cn.startswith(word) and cn[x+y] == " ") or (cn.endswith(word) and cn[x-1] == " ") or (cn[x-1] == " " and cn[x+y] ==" ") : #Cleannames may be multiple words. We do not want words within words. eg: tar in starship. 
-                                                                            possible.append(cn)
+                                                                newword = re.sub('ae$', 'a', word)
                                                              elif word.endswith('i'):
-                                                                word = re.sub('i$', 'us', word)
-                                                                for cn in CleanNames:
-                                                                    if word in cn:
-                                                                        x = cn.find(word)
-                                                                        y = len(word)
-                                                                        if  (cn.startswith(word) and cn[x+y] == " ") or (cn.endswith(word) and cn[x-1] == " ") or (cn[x-1] == " " and cn[x+y] ==" ") : #Cleannames may be multiple words. We do not want words within words. eg: tar in starship. 
-                                                                            possible.append(cn)
+                                                                newword = re.sub('i$', 'us', word)
                                                              elif word.endswith('a'):
-                                                                word= re.sub('a$', 'um', word)
-                                                                for cn in CleanNames:
-                                                                    if word in cn:
-                                                                        x = cn.find(word)
-                                                                        y = len(word)
-                                                                        if  (cn.startswith(word) and cn[x+y] == " ") or (cn.endswith(word) and cn[x-1] == " ") or (cn[x-1] == " " and cn[x+y] ==" ") : #Cleannames may be multiple words. We do not want words within words. eg: tar in starship. 
-                                                                            possible.append(cn)
+                                                                newword= re.sub('a$', 'um', word)
                                                              else:
                                                                   continue
+                                                             if newword in CleanNames:
+                                                                  match = next((l for l in dict_data if l['CleanName'] == newword), None)
+                                                                  self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext)
+                                                                  skipper = False
+                                                                          
+                                                             for cn in CleanNames:
+                                                                    cn.split(" ")
+                                                                    if newword in cn:
+                                                                         possible.append(cn)
+                                                        else: continue     
                                                                      
                                                         if len(possible) >=1:
                                                             for p in possible:
                                                                 p= p.split(" ")
                                                                 longest = max(0, len(p))
-                                                                
+                                                                 # Scans for words nearby a recognised word. Accounts for multipart words
                                                             scanstart = index - longest
                                                             scanend = index + longest
                                                             for n in range(scanstart, scanend):
@@ -155,18 +162,24 @@ class Annotator:
                                                                                 if d['CleanName'] == section:
                                                                                     match = d
                                                                                     self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext)
+                                                                                    skipper = False
                                                                                     break
                                                                                 else:
                                                                                     continue
-                                                                elif wordlist[index -1][0].isupper() and wordlist[index -1][1] == '.':
-                                                                     if word in taxa_per_file:
-                                                                          knownspec = taxa_per_file.index(word)
-                                                                          spec = taxa_per_file[knownspec].split(" ")
-                                                                          match  = spec[0]
-                                                                          modifier = "species"
-                                                                          self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext)
+                                                                else: # Format E. coli
+                                                                     section = section.split(" ")
+                                                                     if (len(section) ==2) :
+                                                                          if section[0][0].isupper()  and (section[0][1] == '.'):
+                                                                            for p in possible:
+                                                                                if section[0][0] == p[0] and p in taxa_per_file:
+                                                                                     match = next((l for l in dict_data if l['CleanName'] == p), None)
+                                                                                     modifier = "species"
+                                                                                     self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext)
+                                                                                     skipper = False
+                                                                          
+                                                                          
                                                             
-                                            sentenceoffset += (len(word)+ 1)
+                                                sentenceoffset += (len(word)+ 1)
                                         bar()
 
                                                           
@@ -214,7 +227,7 @@ class Annotator:
                                             
                                         }
                                     }
-                    taxa_per_file.append(str(match['CleanName']) + " " + str(match['CleanName']) + " " + modifier)
+                    taxa_per_file.append(str(match['CleanName']))
             else:
                     dictannot = {
                                         "text":match['CleanName'],
@@ -232,7 +245,7 @@ class Annotator:
                                             
                                         }
                                     }
-                    taxa_per_file.append(match['CleanName'] + " " + str(match['CleanName']) + " " + str(match['TaxRank']))
+                    taxa_per_file.append(match['CleanName'])
     
             m['annotations'].append(dictannot)
 
