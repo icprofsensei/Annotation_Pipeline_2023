@@ -65,50 +65,53 @@ class Annotator:
                                         textsection=m['text']
                                         offsetoftext = m['offset']
                                         wordlist=textsection.split(" ")
+                                        
                                     #Iterates over a list of words in the wordlist, taken from the text section.
                                         sentenceoffset = 0
                                         skipper = False
                                         for index, word in enumerate(wordlist):
-                                            if any(c.isalpha() for c in word) == False:
-                                                 wordlist.pop(index)
-                                            else:
-                                                for i in word:
-                                                    if i.isalnum() == True:
-                                                        if i.isupper() and len(word) == 2:
-                                                            break
-                                                        else:
-                                                            wordlist[index] = word.rstrip(".,")
-                                                    else: 
-                                                        continue
-
+                                            wordaslist = list(word)
+                                            finalword = []
+                                            for i in wordaslist:
+                                                 if i == '.' or i == ',':
+                                                      continue
+                                                 else:
+                                                      finalword.append(i)
+                                            finalword = "".join(finalword)
+                                            wordlist[index] = finalword
+                                        print(wordlist)
                                         for index, word in enumerate(wordlist):
                                             if skipper == True:
                                                 skipper = False
                                                 continue
                                             
                                             else:
-                                                if word in CleanNames: 
+                                                if word in CleanNames:
                                                         #Exact_match
                                                         match = next((l for l in dict_data if l['CleanName'] == word), None)
-                                                        if match['TaxRank'] == "genus" and (wordlist[index + 1] not in ['sp', 'spp', 'genus', 'gen']):
-                                                             possible_species = word + " " + str(wordlist[index + 1])
-                                                             if possible_species in CleanNames:
-                                                                  match = next((l for l in dict_data if l['CleanName'] == possible_species), None)
-                                                                  modifier = "species"
-                                                                  self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext)
-                                                                  skipper = True
-                                                             else:
-                                                                  self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext)
-                                                                  skipper = False
-                                                                  
-                                                        elif wordlist[index + 1] in ['sp', 'spp']:
-                                                            modifier = "species"
-                                                            self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext)
-                                                            skipper = False
-                                                        elif wordlist[index + 1] in ['genus', 'gen']:
-                                                            modifier = "genus"
-                                                            self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext)
-                                                            skipper = False
+                                                        if index < len(wordlist) -1:
+                                                            if match['TaxRank'] == "genus" and (wordlist[index + 1] not in ['sp', 'spp', 'genus', 'gen']):
+                                                                possible_species = word + " " + str(wordlist[index + 1])
+                                                                if possible_species in CleanNames:
+                                                                    match = next((l for l in dict_data if l['CleanName'] == possible_species), None)
+                                                                    modifier = "species"
+                                                                    self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext)
+                                                                    skipper = True
+                                                                else:
+                                                                    self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext)
+                                                                    skipper = False
+                                                                    
+                                                            elif wordlist[index + 1] in ['sp', 'spp']:
+                                                                modifier = "species"
+                                                                self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext)
+                                                                skipper = False
+                                                            elif wordlist[index + 1] in ['genus', 'gen']:
+                                                                modifier = "genus"
+                                                                self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext)
+                                                                skipper = False
+                                                            else:
+                                                                 self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext)
+                                                                 skipper = False
                                                         else:
                                                              self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext)
                                                              skipper = False
