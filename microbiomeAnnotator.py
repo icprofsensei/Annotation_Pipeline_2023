@@ -34,7 +34,7 @@ class Annotator:
             start_time = datetime.datetime.now() #start time
             message = '' #message with start and stop time
             all_files = os.listdir(self.input_directory) 
-
+            
 #PMC_files contains all files in the input which begin with PMC. 
             PMC_files=[]  
             for n in all_files:   
@@ -204,13 +204,14 @@ class Annotator:
 
         def AddAnnotation(self, match, count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext):
             self.count = int(count) + 1
-            
+            kingdic = {'NCBI:txid2': 'bacteria', 'NCBI:txid2157':'archaea', 'NCBI:txid4751':'fungi'}
+            kingdom = kingdic[match['KingdomID']]
             if modifier != " ": 
                     dictannot = {
                                         "text":match['CleanName'],
                                         "infons":{
                                             "identifier":  match['TaxID'] ,
-                                            "type": modifier ,
+                                            "type": kingdom + "_" + modifier ,
                                             "annotator":"dhylan.patel21@imperial.ac.uk",
                                             "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
                                             "parent_taxonomic_id": "Modified type - not identified"
@@ -228,7 +229,7 @@ class Annotator:
                                         "text":match['CleanName'],
                                         "infons":{
                                             "identifier": match['TaxID'] ,
-                                            "type": match['TaxRank'] ,
+                                            "type": kingdom + "_" + match['TaxRank'] ,
                                             "annotator":"dhylan.patel21@imperial.ac.uk",
                                             "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
                                             "parent_taxonomic_id": match['ParentTaxID']
