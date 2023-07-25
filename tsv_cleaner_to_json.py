@@ -33,8 +33,8 @@ with open("NCBI_TAX_DIC.json", 'r+') as f:
                 newdata.append(i)
             bar()
 
-with open("NCBI_tax_dictionary3.json", "w") as e:
+with open("NCBI_tax_dictionary4.json", "w") as e:
     json.dump(newdata, e, indent = 4)
 
-if os.path.isfile('NCBI_tax_dictionary3.json') == True:
+if os.path.isfile('NCBI_tax_dictionary4.json') == True:
                  os.remove('NCBI_TAX_DIC.json')
