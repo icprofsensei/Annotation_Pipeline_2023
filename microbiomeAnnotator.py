@@ -41,7 +41,7 @@ class Annotator:
 #PMC_files contains all files in the input which begin with PMC. 
             PMC_files=[]  
             for n in all_files:   
-                if n.startswith('PMC') and n.endswith('bioc.json'):  
+                if  n.endswith('bioc.json'):  #n.startswith('PMC') and
                     PMC_files.append(n)
 #For each PMC file, the data is loaded as a json and my_list is made. Text is under documents --> passages --> annotations --> text --> word     
             for i in range(len(PMC_files)):
