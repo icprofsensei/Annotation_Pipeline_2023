@@ -4,7 +4,7 @@ import csv
 from alive_progress import alive_bar
 import os
 array = []
-tsv = open('NCBI_taxonomy_dictionary_v6.tsv', 'r')
+tsv = open('NCBI_taxonomy_dictionary_v7.tsv', 'r')
 titles = ["OriginalName", "TaxRank", "CleanName", "TaxID", "ParentTaxID", "KingdomID"]
 for line in tsv:
     d = {}
