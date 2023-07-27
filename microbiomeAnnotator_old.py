@@ -41,7 +41,7 @@ class Annotator:
 #PMC_files contains all files in the input which begin with PMC. 
             PMC_files=[]  
             for n in all_files:   
-                if n.startswith('PMC') and n.endswith('bioc.json'):  
+                if  n.endswith('bioc.json'):  
                     PMC_files.append(n)
 #For each PMC file, the data is loaded as a json and my_list is made. Text is under documents --> passages --> annotations --> text --> word     
             for i in range(len(PMC_files)):
@@ -169,7 +169,6 @@ class Annotator:
                                                                 else: # Format of G. species
                                                                      section = section.split(" ")
                                                                      if (len(section) ==2) :
-                                                                          #print(section)
                                                                           ls0 = len(section[0])
                                                                           
                                                                           if (ls0>0 and section[0][0].isupper()) and ((ls0==1) or (section[0][1] == '.')):
@@ -221,11 +220,11 @@ class Annotator:
                     dictannot = {
                                         "text":match['CleanName'],
                                         "infons":{
-                                            "identifier": (match['TaxID'] + " " + str(repeats) + " " + finalid).strip() ,
+                                            "identifier":  match['TaxID'] + " " + str(repeats) + " " + finalid ,
                                             "type": kingdom + "_" + modifier ,
                                             "annotator":"dhylan.patel21@imperial.ac.uk",
                                             "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
-                                            "parent_taxonomic_id": "Modified type - not identified"
+                                            "parent_taxonomic_id": match['ParentTaxID']
                                         },
                                         "id": count,
                                         "locations":{
@@ -239,7 +238,7 @@ class Annotator:
                     dictannot = {
                                         "text":match['CleanName'],
                                         "infons":{
-                                            "identifier": (match['TaxID'] + " " + str(repeats) + " " + finalid).strip() ,
+                                            "identifier": match['TaxID'] + " " + str(repeats) + " " + finalid  ,
                                             "type": kingdom + "_" + match['TaxRank'] ,
                                             "annotator":"dhylan.patel21@imperial.ac.uk",
                                             "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
