@@ -228,7 +228,7 @@ class Annotator:
                                             "type": kingdom + "_" + modifier ,
                                             "annotator":"dhylan.patel21@imperial.ac.uk",
                                             "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
-                                            "parent_taxonomic_id": "Modified type - not identified"
+                                            "parent_taxonomic_id": match['ParentTaxID']
                                         },
                                         "id": count,
                                         "locations":{
