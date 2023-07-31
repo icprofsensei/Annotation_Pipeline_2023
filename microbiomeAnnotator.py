@@ -97,7 +97,7 @@ class Annotator:
                                                 if word in CleanNames:
                                                         #Exact_match
                                                         match = next((l for l in dict_data if l['CleanName'] == word), None)
-                                                        
+                                                        idinuse = []
                                                         if index < len(wordlist) -1:
                                                             nextword = wordlist[index + 1]
                                                             newnextword = ""
@@ -108,33 +108,33 @@ class Annotator:
                                                                 if possible_species in CleanNames:
                                                                     match = next((l for l in dict_data if l['CleanName'] == possible_species), None)
                                                                     modifier = "species"
-                                                                    self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids)
+                                                                    self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse)
                                                                     skipper = True
                                                                 elif possible_plural in CleanNames:
                                                                      match = next((l for l in dict_data if l['CleanName'] == possible_plural), None)
                                                                      modifier = "species"
-                                                                     self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids)
+                                                                     self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse)
                                                                      skipper = True
                                                                 else:
-                                                                    self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids)
+                                                                    self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse)
                                                                     skipper = False   
                                                             elif nextword in ['sp', 'spp']:
                                                                 modifier = "species"
-                                                                self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids)
+                                                                self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse)
                                                                 skipper = True
                                                             elif nextword in ['genus', 'gen']:
                                                                 modifier = "genus"
-                                                                self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids)
+                                                                self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse)
                                                                 skipper = True
                                                             else:
-                                                                 self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids)
+                                                                 self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse)
                                                                  skipper = False
                                                         else:
-                                                             self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids)
+                                                             self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse)
                                                              skipper = False
                                                 elif newword in CleanNames: 
                                                      match = next((l for l in dict_data if l['CleanName'] == newword), None)
-                                                     self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids)
+                                                     self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse)
                                                      skipper = False
                                                      
                                                 else:   
@@ -162,7 +162,7 @@ class Annotator:
                                                                         for d in dict_data:
                                                                                 if d['CleanName'] == section:
                                                                                     match = d
-                                                                                    self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids)
+                                                                                    self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse)
                                                                                     skipper = False
                                                                                     break
                                                                                 else:
@@ -181,8 +181,17 @@ class Annotator:
                                                                                      recurring = taxa_per_file.index(p)
                                                                                      match = next((l for l in dict_data if l['CleanName'] == taxa_per_file[recurring]), None)
                                                                                      modifier = "species"
-                                                                                     self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids)
+                                                                                     self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse)
                                                                                      skipper = False
+                                                                                elif section[0][0] == p[0] and p not in taxa_per_file:
+                                                                                     match = next((l for l in dict_data if l['CleanName'] == p), None)
+                                                                                     modifier = "species"
+                                                                                     if match['TaxID'] != idinuse:
+                                                                                          
+                                                                                        self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse)
+                                                                                        skipper = False
+                                                                                     else:
+                                                                                        continue
                                                 sentenceoffset += (len(word)+ 1)
                                         bar()
                                 taxa_per_file = {*taxa_per_file}
@@ -208,56 +217,58 @@ class Annotator:
                 time_file.write("This file contains all the kingdoms and taxonomic ranks for each species found.")
                 time_file.write(str(taxalist))
 
-        def AddAnnotation(self, match, count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids):
-            repeats, finalid = "", ""
-            self.count = int(count) + 1
-            kingdic = {'NCBI:txid2': 'bacteria', 'NCBI:txid2157':'archaea', 'NCBI:txid4751':'fungi'}
-            kingdom = kingdic[match['KingdomID']]
-            if match['CleanName'] in strains:
-                  repeats = int(strains[match['CleanName']])
-    
-                  for i in dict_data:
-                    if i['CleanName'] == match['CleanName']:
-                        duptxids.append(i['TaxID'])
-             
-            if modifier != " ": 
-                    dictannot = {
-                                        "text":match['CleanName'],
-                                        "infons":{
-                                            "identifier": match['TaxID'] + " " + str(repeats) + " " + str(duptxids) ,
-                                            "type": kingdom + "_" + modifier ,
-                                            "annotator":"dhylan.patel21@imperial.ac.uk",
-                                            "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
-                                            "parent_taxonomic_id": match['ParentTaxID']
-                                        },
-                                        "id": count,
-                                        "locations":{
-                                            "length": len(match['CleanName']),
-                                            "offset": sentenceoffset + offsetoftext ,
-                                            
+        def AddAnnotation(self, match, count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse):
+            if match['TaxID'] not in idinuse:
+                repeats= "", 
+                self.count = int(count) + 1
+                kingdic = {'NCBI:txid2': 'bacteria', 'NCBI:txid2157':'archaea', 'NCBI:txid4751':'fungi'}
+                kingdom = kingdic[match['KingdomID']]
+                if match['CleanName'] in strains:
+                    repeats = int(strains[match['CleanName']])
+        
+                    for i in dict_data:
+                        if i['CleanName'] == match['CleanName']:
+                            duptxids.append(i['TaxID'])
+                
+                if modifier != " ": 
+                        dictannot = {
+                                            "text":match['CleanName'],
+                                            "infons":{
+                                                "identifier": match['TaxID'] + " " + str(repeats) + " " + str(duptxids) ,
+                                                "type": kingdom + "_" + modifier ,
+                                                "annotator":"dhylan.patel21@imperial.ac.uk",
+                                                "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
+                                                "parent_taxonomic_id": match['ParentTaxID']
+                                            },
+                                            "id": count,
+                                            "locations":{
+                                                "length": len(match['CleanName']),
+                                                "offset": sentenceoffset + offsetoftext ,
+                                                
+                                            }
                                         }
-                                    }
-                    taxa_per_file.append(str(match['CleanName']))
-            else:
-                    dictannot = {
-                                        "text":match['CleanName'],
-                                        "infons":{
-                                            "identifier": match['TaxID'] + " " + str(repeats) + " " + str(duptxids) ,
-                                            "type": kingdom + "_" + match['TaxRank'] ,
-                                            "annotator":"dhylan.patel21@imperial.ac.uk",
-                                            "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
-                                            "parent_taxonomic_id": match['ParentTaxID']
-                                        },
-                                        "id": count,
-                                        "locations":{
-                                            "length": len(match['CleanName']),
-                                            "offset": sentenceoffset + offsetoftext ,
-                                            
+                        taxa_per_file.append(str(match['CleanName']))
+                else:
+                        dictannot = {
+                                            "text":match['CleanName'],
+                                            "infons":{
+                                                "identifier": match['TaxID'] + " " + str(repeats) + " " + str(duptxids) ,
+                                                "type": kingdom + "_" + match['TaxRank'] ,
+                                                "annotator":"dhylan.patel21@imperial.ac.uk",
+                                                "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
+                                                "parent_taxonomic_id": match['ParentTaxID']
+                                            },
+                                            "id": count,
+                                            "locations":{
+                                                "length": len(match['CleanName']),
+                                                "offset": sentenceoffset + offsetoftext ,
+                                                
+                                            }
                                         }
-                                    }
-                    taxa_per_file.append(match['CleanName'])
-    
-            m['annotations'].append(dictannot)
+                        taxa_per_file.append(match['CleanName'])
+                idinuse.append(match['TaxID'])
+                print(idinuse)
+                m['annotations'].append(dictannot)
 
         def CheckLatin (self, word, newword):
                 if word.endswith('ae'):
