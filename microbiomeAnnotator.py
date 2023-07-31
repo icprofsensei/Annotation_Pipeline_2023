@@ -210,11 +210,19 @@ class Annotator:
                                                      unproc_str = i['infons']['identifier'][loc_id:len(i['infons']['identifier'])].split(" ")
                                                      loc_in_text = int(i['locations']['offset']) - int(m['offset'])
                                                      possible_ids = []
-                                                     
+                                                     items = []
                                                      for pid in unproc_str: 
                                                           pid = pid.strip("',[]")
                                                           possible_ids.append(pid)
-                                                     print(loc_in_text, possible_ids)
+                                                     for i in possible_ids:
+                                                          match = next((l for l in dict_data if l['TaxID'] == i), None)
+                                                          kingdic = {'NCBI:txid2': 'bacteria', 'NCBI:txid2157':'archaea', 'NCBI:txid4751':'fungi'}
+                                                          kingdom = kingdic[match['KingdomID']]
+                                                          identifier = kingdom + "_" + match['TaxRank'] 
+                                                          what = [i, identifier]
+                                                          items.append(what)
+                                                     print(items)
+
                                 taxa_per_file = {*taxa_per_file}
                                 taxa_per_file = list(taxa_per_file)
                                 for j in taxa_per_file:
