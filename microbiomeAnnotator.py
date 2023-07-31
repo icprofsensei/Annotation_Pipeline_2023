@@ -86,10 +86,12 @@ class Annotator:
                                                       continue
                                                  
                                         for index, word in enumerate(wordlist):
+                                            idinuse = []
                                             newword = ""
                                             newword = self.CheckLatin(word, newword)
                                             duptxids = []
                                             if skipper == True:
+                                                sentenceoffset += (len(word)+ 1) 
                                                 skipper = False
                                                 continue
                                             
@@ -97,7 +99,7 @@ class Annotator:
                                                 if word in CleanNames:
                                                         #Exact_match
                                                         match = next((l for l in dict_data if l['CleanName'] == word), None)
-                                                        idinuse = []
+                                                        
                                                         if index < len(wordlist) -1:
                                                             nextword = wordlist[index + 1]
                                                             newnextword = ""
@@ -192,7 +194,7 @@ class Annotator:
                                                                                         skipper = False
                                                                                      else:
                                                                                         continue
-                                                sentenceoffset += (len(word)+ 1)
+                                            sentenceoffset += (len(word)+ 1)         
                                         bar()
                                 taxa_per_file = {*taxa_per_file}
                                 taxa_per_file = list(taxa_per_file)
@@ -229,12 +231,17 @@ class Annotator:
                     for i in dict_data:
                         if i['CleanName'] == match['CleanName']:
                             duptxids.append(i['TaxID'])
+                if repeats == "" or duptxids == []:
+                     identifierstring = match['TaxID']
+                else:
+                     
+                    identifierstring = match['TaxID'] + " (" + str(repeats) + ") " + str(duptxids)
                 
                 if modifier != " ": 
                         dictannot = {
                                             "text":match['CleanName'],
                                             "infons":{
-                                                "identifier": match['TaxID'] + " " + str(repeats) + " " + str(duptxids) ,
+                                                "identifier": identifierstring,
                                                 "type": kingdom + "_" + modifier ,
                                                 "annotator":"dhylan.patel21@imperial.ac.uk",
                                                 "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
@@ -252,7 +259,7 @@ class Annotator:
                         dictannot = {
                                             "text":match['CleanName'],
                                             "infons":{
-                                                "identifier": match['TaxID'] + " " + str(repeats) + " " + str(duptxids) ,
+                                                "identifier": identifierstring,
                                                 "type": kingdom + "_" + match['TaxRank'] ,
                                                 "annotator":"dhylan.patel21@imperial.ac.uk",
                                                 "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
@@ -267,7 +274,6 @@ class Annotator:
                                         }
                         taxa_per_file.append(match['CleanName'])
                 idinuse.append(match['TaxID'])
-                print(idinuse)
                 m['annotations'].append(dictannot)
 
         def CheckLatin (self, word, newword):
