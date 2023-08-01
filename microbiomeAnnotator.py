@@ -6,6 +6,7 @@ import time
 import os
 import datetime
 import os.path
+
 from collections import Counter
 from alive_progress import alive_bar
 
@@ -205,18 +206,22 @@ class Annotator:
                                        
                                         if needs_processing != []:
                                              print("Needs post processing!")
-                                             for ann, i in enumerate(m['annotations']):
-                                                if  ']' in i['infons']['identifier']:
-                                                     offset = i['locations']['offset']
-                                                     m['annotations'].remove(i)
+                                             for ann, ian in enumerate(m['annotations']):
+                                                if  '(' in ian['infons']['identifier']:
+                                                     offset = ian['locations']['offset']
+                                                     countog = ian["id"]
+                                                     #
                                                      others = []
                                                      if ann == 0:
                                                         others.append(m['annotations'][ann + 1]['infons']['type'])
-                                                        
                                                      else:
-                                                        others.append(m['annotations'][ann - 1]['infons']['type'])
-                                                     loc_id = i['infons']['identifier'].find('[')
-                                                     unproc_str = i['infons']['identifier'][loc_id:len(i['infons']['identifier'])].split(" ")
+                                                        if '(' not in m['annotations'][ann -1]['infons']['identifier']:
+                                                            others.append(m['annotations'][ann - 1]['infons']['type'])
+                                                        elif '(' not in m['annotations'][ann +1]['infons']['identifier']:
+                                                             others.append(m['annotations'][ann + 1]['infons']['type'])
+                                                        else: ian['infons']['type'] = 'unresolved'
+                                                     loc_id = ian['infons']['identifier'].find('[')
+                                                     unproc_str = ian['infons']['identifier'][loc_id:len(ian['infons']['identifier'])].split(" ")
                                                      possible_ids = []
                                                      items = []
                                                      for pid in unproc_str: 
@@ -229,15 +234,40 @@ class Annotator:
                                                           identifier = kingdom + "_" + match['TaxRank'] 
                                                           item = [pid, identifier]
                                                           items.append(item)
-                                                     print(items)
+                                        
                                                      for item in items:
                                                           if item[1] in others:
                                                                
                                                                match = next((l for l in dict_data if l['TaxID'] == item[0]), None)
-                                                               offsetoftext = offset - sentenceoffset
-                                                               self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing)
+                                                               
+                                                               print(match['CleanName'], item[1])
+                                                               
+                                                               dictannot = {
+                                                                                "text":match['CleanName'],
+                                                                                "infons":{
+                                                                                    "identifier": item[0],
+                                                                                    "type": item[1] ,
+                                                                                    "annotator":"dhylan.patel21@imperial.ac.uk",
+                                                                                    "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
+                                                                                    "parent_taxonomic_id": match['ParentTaxID']
+                                                                                },
+                                                                                "id": countog,
+                                                                                "locations":{
+                                                                                    "length": len(match['CleanName']),
+                                                                                    "offset": offset ,
+                                                                                    
+                                                                                }
+                                                                            }
+                                                               m['annotations'].append(dictannot)            
+                                                                
                                                           else:
                                                                continue
+                                        m['annotations'].sort(key = lambda e: (e["id"]))    
+                                        for ian in m['annotations']:
+                                             if  '(' in ian['infons']['identifier'] and ian['infons']['type'] != 'unresolved':
+                                                  m['annotations'].remove(ian)
+                                             else:
+                                                  continue
                                 taxa_per_file = {*taxa_per_file}
                                 taxa_per_file = list(taxa_per_file)
                                 for j in taxa_per_file:
