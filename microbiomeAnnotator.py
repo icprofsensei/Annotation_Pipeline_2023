@@ -162,31 +162,32 @@ class Annotator:
                                                             scanstart = index - 2
                                                             scanend = index + 2
                                                             for n in range(scanstart, scanend):
-                                                                section = wordlist[n: n + 2:1]
-                                                                ls0 = len(section[0])
-                                                                # G. species
-                                                                if (ls0>0 and section[0][0].isupper()) and ((ls0==1) or (section[0][1] == '.')):
-                                                                            for p in possible:
-                                                                                if section[0][0] == p[0] and p in taxa_per_file:
-                                                                                     recurring = taxa_per_file.index(p)
-                                                                                     match = next((l for l in dict_data if l['CleanName'] == taxa_per_file[recurring]), None)
-                                                                                     modifier = "species"
-                                                                                     self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing)
-                                                                                     skipper = False
-                                                                                elif section[0][0] == p[0] and p not in taxa_per_file:
-                                                                                     match = next((l for l in dict_data if l['CleanName'] == p), None)
-                                                                                     modifier = "species"
-                                                                                     if match['TaxID'] != idinuse:
+                                                                section = list(wordlist[n: n + 2:1])
+                                                                if len(section) == 2:
+                                                                    ls0 = len(section[0])
+                                                                    # G. species
+                                                                    if (ls0>0 and section[0][0].isupper()) and ((ls0==1) or (section[0][1] == '.')):
+                                                                                for p in possible:
+                                                                                    if section[0][0] == p[0] and p in taxa_per_file:
+                                                                                        recurring = taxa_per_file.index(p)
+                                                                                        match = next((l for l in dict_data if l['CleanName'] == taxa_per_file[recurring]), None)
+                                                                                        modifier = "species"
                                                                                         self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing)
                                                                                         skipper = False
-                                                                                     else:
-                                                                                        continue
+                                                                                    elif section[0][0] == p[0] and p not in taxa_per_file:
+                                                                                        match = next((l for l in dict_data if l['CleanName'] == p), None)
+                                                                                        modifier = "species"
+                                                                                        if match['TaxID'] != idinuse:
+                                                                                            self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing)
+                                                                                            skipper = False
+                                                                                        else:
+                                                                                            continue
                                             sentenceoffset += (len(word)+ 1)  
                                                
                                         bar()
                                        # Post processing to remove ambiguity
                                         if needs_processing != []:
-                                             print("Needs post processing!")
+                                             #print("Needs post processing!")
                                              for ann, ian in enumerate(m['annotations']):
                                                 if  '(' in ian['infons']['identifier']:
                                                      offset = ian['locations']['offset']
@@ -221,7 +222,7 @@ class Annotator:
                                                                
                                                                match = next((l for l in dict_data if l['TaxID'] == item[0]), None)
                                                                
-                                                               print(match['CleanName'], item[1])
+                                                               #print(match['CleanName'], item[1])
                                                                
                                                                dictannot = {
                                                                                 "text":match['CleanName'],
