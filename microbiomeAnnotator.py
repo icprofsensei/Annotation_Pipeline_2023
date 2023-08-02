@@ -136,6 +136,10 @@ class Annotator:
                                                                 modifier = "genus"
                                                                 self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing)
                                                                 skipper = True
+                                                            # [Any] Only one word, so continue to the next word.   
+                                                            else:
+                                                                 self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing)
+                                                                 skipper = False
                                                         # [Any] Only one word, so continue to the next word.   
                                                         else:
                                                              self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing)
