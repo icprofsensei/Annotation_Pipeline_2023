@@ -159,29 +159,13 @@ class Annotator:
                                                             else: continue     
                                                                      
                                                         if len(possible) >=1:
-                                                            for p in possible:
-                                                                p= p.split(" ")
-                                                                longest = max(0, len(p))
-                                                                 # Scans for words nearby a recognised word. Accounts for multipart words
-                                                            scanstart = index - longest
-                                                            scanend = index + longest
+                                                            scanstart = index - 2
+                                                            scanend = index + 2
                                                             for n in range(scanstart, scanend):
-                                                                section = wordlist[n: n + longest:1]
-                                                                section = " ".join(section)
-                                                                if section in possible:
-                                                                        for d in dict_data:
-                                                                                if d['CleanName'] == section:
-                                                                                    match = d
-                                                                                    self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing)
-                                                                                    skipper = False
-                                                                                    break
-                                                                                else:
-                                                                                    continue
-                                                                else: #  G. species
-                                                                     section = section.split(" ")
-                                                                     if (len(section) ==2) :
-                                                                          ls0 = len(section[0])
-                                                                          if (ls0>0 and section[0][0].isupper()) and ((ls0==1) or (section[0][1] == '.')):
+                                                                section = wordlist[n: n + 2:1]
+                                                                ls0 = len(section[0])
+                                                                # G. species
+                                                                if (ls0>0 and section[0][0].isupper()) and ((ls0==1) or (section[0][1] == '.')):
                                                                             for p in possible:
                                                                                 if section[0][0] == p[0] and p in taxa_per_file:
                                                                                      recurring = taxa_per_file.index(p)
@@ -200,7 +184,7 @@ class Annotator:
                                             sentenceoffset += (len(word)+ 1)  
                                                
                                         bar()
-                                       
+                                       # Post processing to remove ambiguity
                                         if needs_processing != []:
                                              print("Needs post processing!")
                                              for ann, ian in enumerate(m['annotations']):
