@@ -47,7 +47,7 @@ class Annotator:
             for i in range(len(PMC_files)):
                     in_file = PMC_files[i]
                     print("Annotating file: ", i + 1, "of: ", len(PMC_files), in_file)    
-                    base = in_file.rstrip("bioc.json")                     
+                    base = i                   
                     count = str(self.count)
                     with open(self.input_directory+ "/" + in_file , encoding = 'utf-8') as m_file:
                         if os.path.isfile(self.input_directory+ "/" + in_file) == True:
@@ -71,8 +71,9 @@ class Annotator:
                                         sentenceoffset = 0
                                         skipper = False
                                         for index, word in enumerate(wordlist):
-                                            idinuse = []
-                                            duptxids = []
+                                            annot_stopper = False # Allows the use of multiple annotations for the same word. 
+                                            idinuse = [] 
+                                            duptxids = [] 
                                             if skipper == True:
                                                 sentenceoffset += (len(word)+ 1) 
                                                 skipper = False
@@ -95,16 +96,19 @@ class Annotator:
                                                                  # [Any] sp - Do not annotate the next word
                                                                     if nextword in ['sp', 'spp']:
                                                                         modifier = "species"
-                                                                        self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base)
-                                                                        skipper = True
+                                                                        self.AddAnnotation(finalword, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                        skipper =  True
+                                                                        annot_stopper = True
                                                                     # [Any] genus - Do not annotate the next word
                                                                     elif nextword in ['genus', 'gen']:
                                                                         modifier = "genus"
-                                                                        self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base)
+                                                                        self.AddAnnotation(finalword, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                         skipper = True
+                                                                        annot_stopper = True
                                                                     else:
-                                                                        self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base)
+                                                                        self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                         skipper = False
+                                                                        annot_stopper = True
                                                             elif match['TaxRank'] == "genus" and (nextword not in ['sp', 'spp', 'genus', 'gen']):
                                                                         possible_species = finalword + " " + str(nextword)
                                                                         possible_plural = finalword + " " + str(newnextword)
@@ -112,41 +116,49 @@ class Annotator:
                                                                         if possible_species in CleanNames:
                                                                             match = next((l for l in dict_data if l['CleanName'] == possible_species), None)
                                                                             modifier = "species"
-                                                                            self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base)
+                                                                            self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                             skipper = True
+                                                                            annot_stopper = True
                                                                         #Genus species(pl) - Do not annotate the next word
                                                                         elif possible_plural in CleanNames:
                                                                             match = next((l for l in dict_data if l['CleanName'] == possible_plural), None)
                                                                             modifier = "species"
-                                                                            self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base)
+                                                                            self.AddAnnotation(possible_plural, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                             skipper = True
+                                                                            annot_stopper = True
                                                                         # Genus - Only one word, so continue to annotate the next word
                                                                         else:
-                                                                            self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base)
-                                                                            skipper = False   
+                                                                            self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                            skipper = False 
+                                                                            annot_stopper = True  
                                                             # [Any] sp - Do not annotate the next word
                                                             elif nextword in ['sp', 'spp']:
                                                                 modifier = "species"
-                                                                self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base)
+                                                                self.AddAnnotation(finalword, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                 skipper = True
+                                                                annot_stopper = True
                                                             # [Any] genus - Do not annotate the next word
                                                             elif nextword in ['genus', 'gen']:
                                                                 modifier = "genus"
-                                                                self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base)
+                                                                self.AddAnnotation(finalword, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                 skipper = True
+                                                                annot_stopper = True
                                                             # [Any] Only one word, so continue to the next word.   
                                                             else:
-                                                                 self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base)
+                                                                 self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                  skipper = False
+                                                                 annot_stopper = True
                                                         # [Any] Only one word, so continue to the next word.   
                                                         elif index == len(wordlist) -1 :
-                                                             self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base)
+                                                             self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                              skipper = False
+                                                             annot_stopper = True
                                                 #  [Any pl] Only one word, so continue to annotate the next word - EXACT MATCH
                                                 elif newword in CleanNames: 
                                                      match = next((l for l in dict_data if l['CleanName'] == newword), None)
-                                                     self.AddAnnotation(match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base)
+                                                     self.AddAnnotation(newword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                      skipper = False
+                                                     annot_stopper = True
                                                      
                                                 else:   
                                                     if len(finalword) >= 4:
@@ -177,9 +189,10 @@ class Annotator:
                                                                                  if section[1] in tpf and section[0][0] == tpf[0][0]:
                                                                                         match = next((l for l in dict_data if l['CleanName'] == " ".join(tpf)), None)
                                                                                         modifier = "species"
-                                                                                        self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base)
+                                                                                        self.AddAnnotation(" ".join(tpf), match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                                         skipper = False
                                                                                         generalcheck = False
+                                                                                        annot_stopper = True
                                                                                  else:
                                                                                       continue
                                                                             if generalcheck == True:
@@ -188,8 +201,9 @@ class Annotator:
                                                                                         match = next((l for l in dict_data if l['CleanName'] == p), None)
                                                                                         modifier = "species"
                                                                                         if match['TaxID'] != idinuse:
-                                                                                            self.AddAnnotation(match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base)
+                                                                                            self.AddAnnotation(section[1], match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                                             skipper = False
+                                                                                            annot_stopper = False
                                                                                         else:
                                                                                             continue
                                             sentenceoffset += (len(word)+ 1)  
@@ -230,7 +244,7 @@ class Annotator:
                                                           if item[1] in others:
                                                                match = next((l for l in dict_data if l['TaxID'] == item[0] and l['CleanName'] == ian['text']), None)
                                                                dictannot = {
-                                                                                "text":match['CleanName'],
+                                                                                "text":ian['text'],
                                                                                 "infons":{
                                                                                     "identifier": item[0],
                                                                                     "type": item[1] ,
@@ -259,7 +273,7 @@ class Annotator:
                                                   m['annotations'].remove(ian)
                                              else:
                                                   continue
-                                        
+                                        m['annotations'].sort(key = lambda e: (int(e["id"])))  
                                 taxa_per_file = {*taxa_per_file}
                                 taxa_per_file = list(taxa_per_file)
                                 print(taxa_per_file)
@@ -282,8 +296,8 @@ class Annotator:
                 time_file.write("This file contains all the kingdoms and taxonomic ranks for each species found.")
                 time_file.write(str(taxalist))
 
-        def AddAnnotation(self, match, count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base):
-            if match['TaxID'] not in idinuse:
+        def AddAnnotation(self, word, match, count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper):
+            if match['TaxID'] not in idinuse and annot_stopper == False:
                 repeats= "", 
                 self.count = int(count) + 1
                 kingdic = {'NCBI:txid2': 'bacteria', 'NCBI:txid2157':'archaea', 'NCBI:txid4751':'fungi'}
@@ -305,7 +319,7 @@ class Annotator:
                 
                 if modifier != " ": 
                         dictannot = {
-                                            "text":match['CleanName'],
+                                            "text":word,
                                             "infons":{
                                                 "identifier": identifierstring,
                                                 "type": kingdom + "_" + modifier ,
@@ -323,7 +337,7 @@ class Annotator:
                         taxa_per_file.append(str(match['CleanName']))
                 else:
                         dictannot = {
-                                            "text":match['CleanName'],
+                                            "text":word,
                                             "infons":{
                                                 "identifier": identifierstring,
                                                 "type": kingdom + "_" + match['TaxRank'] ,
