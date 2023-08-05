@@ -170,11 +170,10 @@ class Annotator:
                                                                     possible.append(" ".join(cn))
                                                             elif newword in cn:
                                                                   possible.append(" ".join(cn))
-                                                            else: continue     
-                                                                     
+                                                            else: continue              
                                                         if len(possible) >=1:
                                                             
-                                                            scanstart = index - 2
+                                                            scanstart = index - 1
                                                             scanend = index + 2
                                                             for n in range(scanstart, scanend):
                                                                 section = list(wordlist[n: n + 2:1])
@@ -183,29 +182,42 @@ class Annotator:
                                                                 if (len(section) == 2) :
                                                                           ls0 = len(section[0])
                                                                           if (ls0>0 and section[0][0].isupper()) and ((ls0==1) or (section[0][1] == '.')):
-                                                                            generalcheck = True
-                                                                            for tpf in taxa_per_file:
-                                                                                 tpf = tpf.split(" ")
-                                                                                 if section[1] in tpf and section[0][0] == tpf[0][0]:
-                                                                                        match = next((l for l in dict_data if l['CleanName'] == " ".join(tpf)), None)
-                                                                                        modifier = "species"
-                                                                                        self.AddAnnotation(" ".join(tpf), match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
-                                                                                        skipper = False
-                                                                                        generalcheck = False
-                                                                                        annot_stopper = True
-                                                                                 else:
-                                                                                      continue
-                                                                            if generalcheck == True:
-                                                                                 for p in possible:    
-                                                                                    if section[0][0] == p[0] and p not in taxa_per_file:
-                                                                                        match = next((l for l in dict_data if l['CleanName'] == p), None)
-                                                                                        modifier = "species"
-                                                                                        if match['TaxID'] != idinuse:
-                                                                                            self.AddAnnotation(section[1], match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                generalcheck = True
+                                                                                for tpf in taxa_per_file:
+                                                                                    tpf = tpf.split(" ")
+                                                                                    if section[1] in tpf and section[0][0] == tpf[0][0]:
+                                                                                            match = next((l for l in dict_data if l['CleanName'] == " ".join(tpf)), None)
+                                                                                            modifier = "species"
+                                                                                            self.AddAnnotation(" ".join(section), match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                                             skipper = False
-                                                                                            annot_stopper = False
-                                                                                        else:
-                                                                                            continue
+                                                                                            generalcheck = False
+                                                                                            annot_stopper = True
+                                                                                    else:
+                                                                                        continue
+                                                                                if generalcheck == True:
+                                                                                    for p in possible:    
+                                                                                        if section[0][0] == p[0] and p not in taxa_per_file:
+                                                                                            match = next((l for l in dict_data if l['CleanName'] == p), None)
+                                                                                            modifier = "species"
+                                                                                            if match['TaxID'] != idinuse:
+                                                                                                self.AddAnnotation(" ".join(section), match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                                skipper = False
+                                                                                                annot_stopper = False
+                                                                                            else:
+                                                                                                continue
+                                                                          else:
+                                                                               if " ".join(section) in CleanNames:
+                                                                                   match = next((l for l in dict_data if l['CleanName'] == " ".join(section)), None)
+                                                                                   self.AddAnnotation(" ".join(section), match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                   print(" ".join(section), "newcode")
+                                                                                   if match['TaxRank'] == "species":
+                                                                                            skipper = True
+                                                                                            annot_stopper = True
+                                                                                   else:
+                                                                                            skipper = False
+                                                                                            annot_stopper = True
+                                                                                  
+                                                                     
                                             sentenceoffset += (len(word)+ 1)  
                                                
                                         bar()
@@ -329,7 +341,7 @@ class Annotator:
                                             },
                                             "id": str(base) + str(count),
                                             "locations":{
-                                                "length": len(match['CleanName']),
+                                                "length": len(word),
                                                 "offset": sentenceoffset + offsetoftext ,
                                                 
                                             }
@@ -347,7 +359,7 @@ class Annotator:
                                             },
                                             "id": str(base) + str(count),
                                             "locations":{
-                                                "length": len(match['CleanName']),
+                                                "length": len(word),
                                                 "offset": sentenceoffset + offsetoftext ,
                                                 
                                             }
@@ -368,7 +380,7 @@ class Annotator:
                 wordaslist = list(word)
                 if len(wordaslist)!=2:   
                     for i in wordaslist:
-                        if i == '.' or i == ',':
+                        if i == '.' or i == ',' or i == '(' or i == ')':
                             continue
                         else:
                             finalword.append(i)
