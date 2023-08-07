@@ -83,13 +83,12 @@ class Annotator:
                                                 wordlist[index] = finalword 
                                                 newword = ""
                                                 newword = self.CheckLatin(finalword, newword)
+                                            
                                                 possible = []
                                                 #Checks if word matches a word within a clean name.
                                                 for cn in CleanNames:
                                                     cn = cn.split(" ")
                                                     if finalword in cn:
-                                                            possible.append(" ".join(cn))
-                                                    elif newword in cn:
                                                             possible.append(" ".join(cn))
                                                     else: continue  
                                                 if finalword in CleanNames:
