@@ -83,6 +83,15 @@ class Annotator:
                                                 wordlist[index] = finalword 
                                                 newword = ""
                                                 newword = self.CheckLatin(finalword, newword)
+                                                possible = []
+                                                #Checks if word matches a word within a clean name.
+                                                for cn in CleanNames:
+                                                    cn = cn.split(" ")
+                                                    if finalword in cn:
+                                                            possible.append(" ".join(cn))
+                                                    elif newword in cn:
+                                                            possible.append(" ".join(cn))
+                                                    else: continue  
                                                 if finalword in CleanNames:
                                                         
                                                         match = next((l for l in dict_data if l['CleanName'] == finalword), None)
@@ -95,26 +104,29 @@ class Annotator:
                                                             possible_species = finalword + " " + str(nextword)
                                                             possible_plural = finalword + " " + str(newnextword)
                                                             if finalword in strains: 
+                                                                    # Strains is a list of duplicate cleannames.
+                                                                    # [Any strain] species - Do not annotate the next word
                                                                     if possible_species in strains:
                                                                                 match = next((l for l in dict_data if l['CleanName'] == possible_species), None)
                                                                                 modifier = "species"
                                                                                 self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                                 skipper = True
                                                                                 annot_stopper = True
-                                                                 # [Any] sp - Do not annotate the next word
+                                                                 # [Any strain] sp - Do not annotate the next word
                                                                     elif nextword in ['sp', 'spp']:
                                                                                 match = next((l for l in dict_data if l['CleanName'] == finalword), None)
                                                                                 modifier = "species"
                                                                                 self.AddAnnotation(finalword, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                                 skipper =  True
                                                                                 annot_stopper = True
-                                                                    # [Any] genus - Do not annotate the next word
+                                                                    # [Any strain] genus - Do not annotate the next word
                                                                     elif nextword in ['genus', 'gen']:
                                                                                 match = next((l for l in dict_data if l['CleanName'] == finalword), None)
                                                                                 modifier = "genus"
                                                                                 self.AddAnnotation(finalword, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                                 skipper = True
                                                                                 annot_stopper = True
+                                                                    # [Any strain]
                                                                     else:
                                                                                 match = next((l for l in dict_data if l['CleanName'] == finalword), None)
                                                                                 self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
@@ -154,35 +166,19 @@ class Annotator:
                                                                 self.AddAnnotation(finalword, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                 skipper = True
                                                                 annot_stopper = True
-                                                            # [Any] Only one word, so continue to the next word.   
+                                                            # [Any] Only one word, so continue to the next word.   (middle of text)
                                                             else:
                                                                  self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                  skipper = False
                                                                  annot_stopper = True
-                                                        # [Any] Only one word, so continue to the next word.   
+                                                        # [Any] Only one word, so continue to the next word.   (words at the end of the text)
                                                         elif index == len(wordlist) -1 :
                                                              self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                              skipper = False
                                                              annot_stopper = True
-                                                #  [Any pl] Only one word, so continue to annotate the next word - EXACT MATCH
-                                                elif newword in CleanNames: 
-                                                     match = next((l for l in dict_data if l['CleanName'] == newword), None)
-                                                     self.AddAnnotation(newword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
-                                                     skipper = False
-                                                     annot_stopper = True
+                                                
                                                      
-                                                else:   
-                                                    if len(finalword) >= 4:
-                                                        possible = []
-                                                        #Checks if word matches a word within a clean name.
-                                                        for cn in CleanNames:
-                                                            cn = cn.split(" ")
-                                                            if finalword in cn:
-                                                                    possible.append(" ".join(cn))
-                                                            elif newword in cn:
-                                                                  possible.append(" ".join(cn))
-                                                            else: continue              
-                                                        if len(possible) >=1:
+                                                elif len(possible) >=1:
                                                             
                                                             scanstart = index - 1
                                                             scanend = index + 2
@@ -230,7 +226,7 @@ class Annotator:
                                                                           else:
                                                                                if " ".join(section) in CleanNames:
                                                                                    match = next((l for l in dict_data if l['CleanName'] == " ".join(section)), None)
-                                                                                   self.AddAnnotation(" ".join(section), match, self.count, m, "", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                   self.AddAnnotation(" ".join(section), match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                                    
                                                                                    if match['TaxRank'] == "species":
                                                                                             skipper = True
@@ -238,7 +234,15 @@ class Annotator:
                                                                                    else:
                                                                                             skipper = False
                                                                                             annot_stopper = True
-                                                                                  
+                                            #  [Any pl] Only one word, so continue to annotate the next word - EXACT MATCH
+                                                elif newword in CleanNames: 
+                                                     print(newword)
+                                                     match = next((l for l in dict_data if l['CleanName'] == newword), None)
+                                                     self.AddAnnotation(newword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                     skipper = False
+                                                     annot_stopper = True  
+                                                else:
+                                                    continue                                    
                                                                      
                                             sentenceoffset += (len(word)+ 1)  
                                         
@@ -271,7 +275,7 @@ class Annotator:
                                                      for pid in possible_ids:
                                                           
                                                           match = next((l for l in dict_data if l['TaxID'] == pid), None)
-                                                          identifier = self.MakeIdentifier(match,"")  
+                                                          identifier = self.MakeIdentifier(match," ", "")  
                                                           item = [pid, identifier]
                                                           items.append(item)
                                                      unresolved  = False
@@ -316,14 +320,27 @@ class Annotator:
                                                  unproc_str = ian['infons']['identifier'][loc_id:len(ian['infons']['identifier'])].split(" ")
                                                  possible_ids = []
                                                  itemstoadd = []
+                                                 trimmed = False
+                                                 parentids = []
                                                  for pid in unproc_str: 
                                                     pid = pid.strip("',[]")
                                                     possible_ids.append(pid)
+                                                 if len(possible_ids) >= 4:
+                                                       trimmed = True
+                                                       possible_ids = [possible_ids[0], possible_ids[len(possible_ids) -1]]
                                                  for pid in possible_ids:
                                                     match = next((l for l in dict_data if l['TaxID'] == pid), None)
-                                                    identifier = self.MakeIdentifier(match,"")    
+                                                    identifier = self.MakeIdentifier(match," ","")    
                                                     itemstoadd.append(identifier)
+                                                    parentids.append(match['ParentTaxID'])
+                                                 ian['infons']['identifier'] = possible_ids
                                                  ian['infons']['type'] = itemstoadd
+                                                 ian['infons']['parent_taxonomic_id'] = parentids
+                                                 if trimmed == True:
+                                                    ian['infons']['identifier'] = str(possible_ids) + " Trimmed"
+                                                    ian['infons']['type'] = itemstoadd
+                                                    ian['infons']['parent_taxonomic_id'] = parentids
+
                                                  
                                         
                                 taxa_per_file = {*taxa_per_file}
@@ -367,7 +384,7 @@ class Annotator:
                             
                                 match = next((l for l in dict_data if l['TaxID'] == i), None)
                                 
-                                typemod = self.MakeIdentifier(match, "") 
+                                typemod = self.MakeIdentifier(match, " ", "") 
                                 typels.append(typemod)
                                 parentls.append(match['ParentTaxID'])
                 if  duptxids == []:
@@ -382,7 +399,7 @@ class Annotator:
                                             "text":word,
                                             "infons":{
                                                 "identifier": identifierstring,
-                                                "type": self.MakeIdentifier(match,"") ,
+                                                "type": self.MakeIdentifier(match, modifier, "") ,
                                                 "annotator":"dhylan.patel21@imperial.ac.uk",
                                                 "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
                                                 "parent_taxonomic_id": match['ParentTaxID']
@@ -413,13 +430,13 @@ class Annotator:
                                                 
                                             }
                                         }
-                        taxa_per_file.append(match['CleanName'])
+                        taxa_per_file.append(word)
                 else:
                         dictannot = {
                                             "text":word,
                                             "infons":{
                                                 "identifier": identifierstring,
-                                                "type": self.MakeIdentifier(match,"")  ,
+                                                "type": self.MakeIdentifier(match, modifier, "")  ,
                                                 "annotator":"dhylan.patel21@imperial.ac.uk",
                                                 "date": time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()) ,
                                                 "parent_taxonomic_id": match['ParentTaxID']
@@ -444,7 +461,13 @@ class Annotator:
                     newword= re.sub('a$', 'um', word)
                 return newword
         def RemovePunc (self, word, finalword):
-                wordaslist = list(word)
+                wordaslist = []
+                listword = list(word)
+                for i in listword:
+                      if i == '(' or i == ')':
+                            continue
+                      else:
+                          wordaslist.append(i)
                 if len(wordaslist)!=2:   
                     for i in wordaslist:
                         if i == '.' or i == ',' or i == '(' or i == ')':
@@ -464,10 +487,13 @@ class Annotator:
                      
                 finalword = "".join(finalword)
                 return finalword
-        def MakeIdentifier (self, match, identifier):
+        def MakeIdentifier (self, match, modifier, identifier):
               kingdic = {'NCBI:txid2': 'bacteria', 'NCBI:txid2157':'archaea', 'NCBI:txid4751':'fungi'}
               kingdom = kingdic[match['KingdomID']]
-              identifier = kingdom + "_" + match['TaxRank']
+              if modifier != " ":
+                    identifier = kingdom + "_" + modifier
+              else:
+                    identifier = kingdom + "_" + match['TaxRank']
               return identifier
         
 
