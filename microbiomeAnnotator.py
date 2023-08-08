@@ -179,7 +179,7 @@ class Annotator:
                                                      
                                                 elif len(possible) >=1:
                                                             
-                                                            scanstart = index - 1
+                                                            scanstart = index -1
                                                             scanend = index + 2
                                                             for n in range(scanstart, scanend):
                                                                 section = list(wordlist[n: n + 2:1])
@@ -193,6 +193,7 @@ class Annotator:
                                                                                 for tpf in taxa_per_file:
                                                                                     tpf = tpf.split(" ")
                                                                                     if section[1] in tpf and section[0][0] == tpf[0][0]:
+                                                                                            
                                                                                             match = next((l for l in dict_data if l['CleanName'] == " ".join(tpf)), None)
                                                                                             modifier = "species"
                                                                                             self.AddAnnotation(" ".join(section), match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
@@ -236,7 +237,7 @@ class Annotator:
                                                                                             annot_stopper = True
                                             #  [Any pl] Only one word, so continue to annotate the next word - EXACT MATCH
                                                 elif newword in CleanNames: 
-                                                     print(newword)
+                                                     
                                                      match = next((l for l in dict_data if l['CleanName'] == newword), None)
                                                      self.AddAnnotation(newword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                      skipper = False
@@ -246,9 +247,34 @@ class Annotator:
                                                     continue 
                                                 sentenceoffset += (len(word)+ 1)                                    
                                                                      
-                                            
+                                        
+                                                 
                                         
                                         bar()
+                                        # Post processing
+                                        #Adjust offset
+                                        for ann, ian in enumerate(m['annotations']):
+                                              wordfound = ian['text']
+                                              currentoffset = ian['locations']['offset']
+                                              locs = []
+                                              distances = []
+                                              
+                                              for start in re.finditer(wordfound, textsection):
+                                                    locs.append({'offset': start.start(), 'distance': abs(currentoffset - (start.start() + m['offset']))})
+                                                    #print(wordfound, {'offset': start.start(), 'distance': abs(currentoffset - (start.start() + m['offset']))})
+                                              if len(locs) >=2:
+                                                    for i in locs: 
+                                                        distances.append(i['distance'])
+                                                    min_val = min(distances)
+                                                    for i in locs: 
+                                                        if i['distance'] == min_val:
+                                                            correct =  i['offset']
+                                                        ian['locations']['offset'] = correct
+                                              elif len(locs) == 1 :
+                                                    ian['locations']['offset'] = locs[0]['offset'] 
+                                              else:
+                                                    continue
+                                        # Adjust for strains
                                         if needs_processing != []:
                                              for ann, ian in enumerate(m['annotations']):
                                                 if  '[' in ian['infons']['identifier']: # Finds ambiguous annotations
@@ -373,7 +399,7 @@ class Annotator:
                 self.count = int(count) + 1
                 if word in strains:
                     
-                    repeats = int(strains[word])
+                    #repeats = int(strains[word])
                     if duptxids == []:
                         for i in dict_data:
                             if i['CleanName'] == word:
