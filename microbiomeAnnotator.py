@@ -188,7 +188,7 @@ class Annotator:
                                                                 if (len(section) == 2) :
                                                                           ls0 = len(section[0])
                                                                           if (ls0>0 and section[0][0].isupper()) and ((ls0==1) or (section[0][1] == '.')):
-                                                                                offsetoftext = offsetoftext -3
+                                                                                
                                                                                 generalcheck = True
                                                                                 for tpf in taxa_per_file:
                                                                                     tpf = tpf.split(" ")
@@ -322,13 +322,13 @@ class Annotator:
                                                  unproc_str = ian['infons']['identifier'][loc_id:len(ian['infons']['identifier'])].split(" ")
                                                  possible_ids = []
                                                  itemstoadd = []
-                                                 trimmed = False
+                                                 trimmed = 0
                                                  parentids = []
                                                  for pid in unproc_str: 
                                                     pid = pid.strip("',[]")
                                                     possible_ids.append(pid)
                                                  if len(possible_ids) >= 4:
-                                                       trimmed = True
+                                                       trimmed = len(possible_ids)
                                                        possible_ids = [possible_ids[0], possible_ids[len(possible_ids) -1]]
                                                  for pid in possible_ids:
                                                     match = next((l for l in dict_data if l['TaxID'] == pid), None)
@@ -338,8 +338,8 @@ class Annotator:
                                                  ian['infons']['identifier'] = possible_ids
                                                  ian['infons']['type'] = itemstoadd
                                                  ian['infons']['parent_taxonomic_id'] = parentids
-                                                 if trimmed == True:
-                                                    ian['infons']['identifier'] = str(possible_ids) + " Trimmed"
+                                                 if trimmed != 0:
+                                                    ian['infons']['identifier'] = str(possible_ids) + " Trimmed from : " + str(trimmed)
                                                     ian['infons']['type'] = itemstoadd
                                                     ian['infons']['parent_taxonomic_id'] = parentids
 
