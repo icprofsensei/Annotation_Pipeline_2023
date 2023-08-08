@@ -188,6 +188,7 @@ class Annotator:
                                                                 if (len(section) == 2) :
                                                                           ls0 = len(section[0])
                                                                           if (ls0>0 and section[0][0].isupper()) and ((ls0==1) or (section[0][1] == '.')):
+                                                                                offsetoftext = offsetoftext -3
                                                                                 generalcheck = True
                                                                                 for tpf in taxa_per_file:
                                                                                     tpf = tpf.split(" ")
@@ -218,7 +219,7 @@ class Annotator:
                                                                                                 
                                                                                                 match = next((l for l in dict_data if l['TaxID'] == duptxids[0]), None) 
                                                                                                 duptxids = []
-                                                                                                self.AddAnnotation(" ".join(section), match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, [], idinuse, needs_processing, base, annot_stopper)
+                                                                                                self.AddAnnotation(" ".join(section), match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext - 3 , strains, dict_data, [], idinuse, needs_processing, base, annot_stopper)
                                                                                                 annot_stopper = True
                                                                                                 skipper = True
                                                                                     
