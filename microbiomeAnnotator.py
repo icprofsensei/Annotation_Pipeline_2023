@@ -269,9 +269,9 @@ class Annotator:
                                                     for i in locs: 
                                                         if i['distance'] == min_val:
                                                             correct =  i['offset']
-                                                        ian['locations']['offset'] = correct
+                                                        ian['locations']['offset'] = int(correct) + int(m['offset'])
                                               elif len(locs) == 1 :
-                                                    ian['locations']['offset'] = locs[0]['offset'] 
+                                                    ian['locations']['offset'] = int(locs[0]['offset']) + int(m['offset'])
                                               else:
                                                     continue
                                         # Adjust for strains
