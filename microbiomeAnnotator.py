@@ -83,7 +83,7 @@ class Annotator:
                                                 wordlist[index] = finalword 
                                                 newword = ""
                                                 newword = self.CheckLatin(finalword, newword)
-                                            
+                                                 
                                                 possible = []
                                                 #Checks if word matches a word within a clean name.
                                                 for cn in CleanNames:
@@ -241,9 +241,11 @@ class Annotator:
                                                      skipper = False
                                                      annot_stopper = True  
                                                 else:
-                                                    continue                                    
+                                                    sentenceoffset += (len(word)+ 1)  
+                                                    continue 
+                                                sentenceoffset += (len(word)+ 1)                                    
                                                                      
-                                            sentenceoffset += (len(word)+ 1)  
+                                            
                                         
                                         bar()
                                         if needs_processing != []:
