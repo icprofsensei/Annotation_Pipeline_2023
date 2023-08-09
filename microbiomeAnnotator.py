@@ -266,6 +266,7 @@ class Annotator:
                                                     for i in locs: 
                                                         distances.append(i['distance'])
                                                     min_val = min(distances)
+                                                    correct = 0
                                                     for i in locs: 
                                                         if i['distance'] == min_val:
                                                             correct =  i['offset']
