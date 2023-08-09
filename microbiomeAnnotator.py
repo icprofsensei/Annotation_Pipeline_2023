@@ -310,7 +310,7 @@ class Annotator:
                                                      unresolved  = False
                                                      for item in items:
                                                           if item[1] in others:
-                                                               match = next((l for l in dict_data if l['TaxID'] == item[0] and l['CleanName'] == ian['text']), None)
+                                                               match = next((l for l in dict_data if l['TaxID'] == item[0]), None)
                                                                dictannot = {
                                                                                 "text":ian['text'],
                                                                                 "infons":{
@@ -322,7 +322,7 @@ class Annotator:
                                                                                 },
                                                                                 "id": countog,
                                                                                 "locations":{
-                                                                                    "length": len(match['CleanName']),
+                                                                                    "length": len(ian['text']),
                                                                                     "offset": offset ,
                                                                                     
                                                                                 }

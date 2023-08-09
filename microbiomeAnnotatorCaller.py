@@ -11,6 +11,6 @@ sg.popup("You entered", outputfiles)
 result = ann(jsondic, inputfiles, outputfiles, 0)
 result.initialsteps()
 '''
-result = ann('NCBI_tax_dictionary4.json', 'testset', 'results', 0)
+result = ann('NCBI_tax_dictionary4.json', 'Testset2', 'results', 0)
 result.initialsteps()
 '''
