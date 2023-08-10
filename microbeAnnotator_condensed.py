@@ -306,7 +306,9 @@ class Annotator:
                                                  itemstoadd = []
                                                  trimmed = 0
                                                  parentids = []
-                                                 possible_ids = [pid.strip("',[]") for pid in unproc_str]
+                                                 for pid in unproc_str: 
+                                                    pid = pid.strip("',[]")
+                                                    possible_ids.append(pid)
                                                  if len(possible_ids) >= 4:
                                                        trimmed = len(possible_ids)
                                                        possible_ids = [possible_ids[0], possible_ids[len(possible_ids) -1]]
