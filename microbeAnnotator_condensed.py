@@ -28,9 +28,7 @@ class Annotator:
             if os.path.isfile(self.dic_directory) == True:
                  print("Dictionary loaded")
             dict_data = json.load(opendic)
-            CleanNames = []
-            for i in dict_data:
-                CleanNames.append(i['CleanName'])
+            CleanNames = [i['CleanName'] for i in dict_data]
             cncounts = dict(Counter(CleanNames))
             strains = {key:value for key, value in cncounts.items() if value > 1}
             CleanNames =list(dict.fromkeys(CleanNames))
@@ -88,14 +86,6 @@ class Annotator:
                                                     #print(finalword)
                                                     newword = ""
                                                     newword = self.CheckLatin(finalword, newword)
-                                                    
-                                                    possible = []
-                                                    #Checks if word matches a word within a clean name.
-                                                    for cn in CleanNames:
-                                                        cn = cn.split(" ")
-                                                        if finalword in cn:
-                                                                possible.append(" ".join(cn))
-                                                        else: continue  
                                                     if finalword in CleanNames:
                                                             
                                                             match = next((l for l in dict_data if l['CleanName'] == finalword), None)
@@ -153,13 +143,10 @@ class Annotator:
                                                                     finalword = list(finalword)
                                                                     nextword = wordlist[index + 1]
                                                                     nextword = self.RemovePunc(nextword, []) 
-                                                                    nonregistered_genus = []
+                                                                  
                                                                     possible_species = "".join(finalword) + " " + str(nextword)
-                                                                    for cn in CleanNames:
-                                                                            cn = cn.split(" ")
-                                                                            if "".join(finalword) in cn:
-                                                                                    nonregistered_genus.append(" ".join(cn))
-                                                                            else: continue  
+                                                                      
+                                                                    nonregistered_genus = [cn for cn in CleanNames if "".join(finalword) in cn.split(" ")]
                                                                     if len(nonregistered_genus) >= 1:
                                                                             for nrg in nonregistered_genus:
                                                                                 if nrg == possible_species:
@@ -170,11 +157,8 @@ class Annotator:
                                                                                         annot_stopper = True  
                                                                     #G. species
                                                                     elif (len(finalword) == 2 and finalword[1] == '.' and finalword[0].isupper) or (len(finalword) == 1 and finalword[0].isupper):
-                                                                                for cn in CleanNames:
-                                                                                        cn = cn.split(" ")
-                                                                                        if nextword in cn and cn[0][0] == finalword[0]:
-                                                                                                possible.append(" ".join(cn))
-                                                                                        else: continue  
+                                                                                
+                                                                                possible = [cn for cn in CleanNames if nextword in cn.split(" ") and cn.split(" ")[0][0] == finalword[0]]
                                                                                 
                                                                                 if len(possible) == 1:
                                                                                         match = match = next((l for l in dict_data if l['CleanName'] == possible[0]), None)
@@ -229,7 +213,7 @@ class Annotator:
                                                                     continue
                                                     sentenceoffset += (len(word)+ 1) 
                                                 except:
-                                                    problemwords.append(finalword, sentenceoffset)
+                                                    problemwords.append([finalword, sentenceoffset])
                                         bar()
                                         # Post processing
                                         #Adjust offset
@@ -237,14 +221,12 @@ class Annotator:
                                               wordfound = ian['text']
                                               currentoffset = ian['locations']['offset']
                                               locs = []
-                                              distances = []
                                               
-                                              for start in re.finditer(wordfound, textsection):
-                                                    locs.append({'offset': start.start(), 'distance': abs(currentoffset - (start.start() + m['offset']))})
-                                                    #print(wordfound, {'offset': start.start(), 'distance': abs(currentoffset - (start.start() + m['offset']))})
+                                              
+                                              
+                                              locs = [{'offset': start.start(), 'distance': abs(currentoffset - (start.start() + m['offset']))} for start in re.finditer(wordfound, textsection)]
                                               if len(locs) >=2:
-                                                    for i in locs: 
-                                                        distances.append(i['distance'])
+                                                    distances = [i['distance'] for i in locs]
                                                     min_val = min(distances)
                                                     correct = 0
                                                     for i in locs: 
@@ -278,15 +260,8 @@ class Annotator:
                                                      unproc_str = ian['infons']['identifier'][loc_id:len(ian['infons']['identifier'])].split(" ")
                                                      possible_ids = []
                                                      items = []
-                                                     for pid in unproc_str: 
-                                                          pid = pid.strip("',[]")
-                                                          possible_ids.append(pid)
-                                                     for pid in possible_ids:
-                                                          
-                                                          match = next((l for l in dict_data if l['TaxID'] == pid), None)
-                                                          identifier = self.MakeIdentifier(match," ", "")  
-                                                          item = [pid, identifier]
-                                                          items.append(item)
+                                                     possible_ids = [pid.strip("',[]") for pid in unproc_str]
+                                                     items = [[pid, self.MakeIdentifier(next((l for l in dict_data if l['TaxID'] == pid), None)," ", "")] for pid in possible_ids]
                                                      unresolved  = False
                                                      for item in items:
                                                           if item[1] in others:
@@ -331,9 +306,7 @@ class Annotator:
                                                  itemstoadd = []
                                                  trimmed = 0
                                                  parentids = []
-                                                 for pid in unproc_str: 
-                                                    pid = pid.strip("',[]")
-                                                    possible_ids.append(pid)
+                                                 possible_ids = [pid.strip("',[]") for pid in unproc_str]
                                                  if len(possible_ids) >= 4:
                                                        trimmed = len(possible_ids)
                                                        possible_ids = [possible_ids[0], possible_ids[len(possible_ids) -1]]
@@ -385,9 +358,8 @@ class Annotator:
                     
                     #repeats = int(strains[word])
                     if duptxids == []:
-                        for i in dict_data:
-                            if i['CleanName'] == word:
-                                duptxids.append(i['TaxID'])
+                        duptxids = [i['TaxID'] for i in dict_data if i['CleanName'] == word]
+                        
                    
                     typels = []
                     parentls = []
@@ -399,6 +371,7 @@ class Annotator:
                                 typemod = self.MakeIdentifier(match, " ", "") 
                                 typels.append(typemod)
                                 parentls.append(match['ParentTaxID'])
+                    duptxids = list(dict.fromkeys(duptxids))
                 if  duptxids == []:
                      identifierstring = match['TaxID']
                 elif modifier != " ":
@@ -475,11 +448,8 @@ class Annotator:
         def RemovePunc (self, word, finalword):
                 wordaslist = []
                 listword = list(word)
-                for i in listword:
-                      if i == '(' or i == ')':
-                            continue
-                      else:
-                          wordaslist.append(i)
+                
+                wordaslist = [i for i in listword if i not in ['(', ')']]
                 if len(wordaslist)!=2:   
                     for i in wordaslist:
                         if i == '.' or i == ',' or i == '(' or i == ')':
