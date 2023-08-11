@@ -1,5 +1,3 @@
-import numpy as np
-import pandas as pd
 import json
 import re
 import time
@@ -14,14 +12,17 @@ from alive_progress import alive_bar
 
 
 class Annotator:
-        def __init__(self, dic_directory, input_directory, output_directory, count):
+        def __init__(self, dic_directory, input_directory, output_directory, count, keyword):
             #Initialise inputs
             self.dic_directory = dic_directory          #newdic.json
             self.input_directory = input_directory      #Input bioc files
             self.output_directory = output_directory    #Output file directory where Annotated_ouput is created. 
             self.count = count
+            self.keyword = keyword
 
         def initialsteps(self):
+            self.keyword = self.keyword[0]
+            print(type(self.keyword))
             folder = '/Annotated_output_' + str(time.strftime('%Y-%m-%d_%H-%M-%S',time.localtime()))
             os.mkdir(self.output_directory + folder)
             opendic = open(self.dic_directory, encoding = 'utf-8') 
@@ -61,11 +62,29 @@ class Annotator:
                                 with alive_bar(total) as bar: 
                                     taxa_per_file=[]
                                     problemwords = []
+                                    
                                     for m in passages:
+                                        self.keyword = str(self.keyword)
+                                        important = False
+                                        upperword = self.keyword[0].upper() + self.keyword[1:len(self.keyword)]
+                                        lowerword = self.keyword[0].lower() + self.keyword[1:len(self.keyword)]
+                                        for v in m['infons'].values():
+                                                      if v == upperword or v == lowerword:
+                                                           important = True
+                                                      elif upperword in v.split(" "):
+                                                           important = True
+                                                      elif lowerword in v.split(" "):
+                                                           important = True
+                                                      else:
+                                                           continue
                                         m['annotations']=[]      
                                         textsection=m['text']
                                         offsetoftext = m['offset']
-                                        wordlist=textsection.split(" ")
+                                        if important == True:
+                                              
+                                            wordlist=textsection.split(" ")
+                                        else:
+                                             wordlist = []
                                         needs_processing  = []
                                         sentenceoffset = 0
                                         skipper = False
@@ -83,7 +102,7 @@ class Annotator:
                                                       
                                                     finalword = self.RemovePunc(word, [])             
                                                     wordlist[index] = finalword 
-                                                    #print(finalword)
+                                                    
                                                     newword = ""
                                                     newword = self.CheckLatin(finalword, newword)
                                                     if finalword in CleanNames:
@@ -325,7 +344,10 @@ class Annotator:
                                                     ian['infons']['type'] = itemstoadd
                                                     ian['infons']['parent_taxonomic_id'] = parentids
 
-                                                 
+                                        if important == True: 
+                                              importantls = [ian for ian in m['annotations']]
+                                              print(importantls) 
+                                        
                                         
                                 taxa_per_file = {*taxa_per_file}
                                 taxa_per_file = list(taxa_per_file)
@@ -336,7 +358,8 @@ class Annotator:
                                     a_file = open(self.output_directory + folder + "/" +str(in_file), "w")
                                     json.dump(data, a_file, indent = 4)
                                     a_file.close()
-             
+                                
+                                 
             stop_time = datetime.datetime.now() #stop time
             message = 'Start time is ' + str(start_time) + '\n' + 'Stop time is ' + str(stop_time)  
 
