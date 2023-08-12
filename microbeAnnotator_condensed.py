@@ -83,7 +83,7 @@ class Annotator:
                                         m['annotations']=[]      
                                         textsection=m['text']
                                         offsetoftext = m['offset']
-                                        if important == True:
+                                        if important == True or self.keyword == 'ALL':
                                               
                                             wordlist=textsection.split(" ")
                                         else:

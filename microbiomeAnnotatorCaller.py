@@ -16,5 +16,5 @@ window.close()
 result = ann(jsondic, inputfiles, outputfiles, 0, values)
 result.initialsteps()
 '''
-result = ann('NCBI_tax_dictionary8.json', 'Testset3', 'results', 0, 'results')
+result = ann('NCBI_tax_dictionary8.json', 'Testset', 'results', 0, 'ALL')
 result.initialsteps()
