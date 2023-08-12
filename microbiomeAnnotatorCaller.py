@@ -1,7 +1,7 @@
 #Annotator caller
 import PySimpleGUI as sg
 from microbeAnnotator_condensed import Annotator as ann
-
+'''
 jsondic = sg.popup_get_file("Location of NCBI_Tax_dictionary.json:")
 sg.popup('You entered', jsondic)
 inputfiles = sg.popup_get_folder("Folder of input bioc files:")
@@ -18,4 +18,3 @@ result.initialsteps()
 '''
 result = ann('NCBI_tax_dictionary8.json', 'Testset3', 'results', 0, 'results')
 result.initialsteps()
-'''

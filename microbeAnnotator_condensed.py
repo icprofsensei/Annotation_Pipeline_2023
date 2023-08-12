@@ -21,9 +21,12 @@ class Annotator:
             self.keyword = keyword
 
         def initialsteps(self):
-            self.keyword = self.keyword[0]
+            if type(self.keyword) == dict:
+                 
+                self.keyword = self.keyword[0]
+            
             print(type(self.keyword))
-            folder = '/Annotated_output_' + str(time.strftime('%Y-%m-%d_%H-%M-%S',time.localtime()))
+            folder = '/' + self.keyword + 'Annotated_output_' + str(time.strftime('%Y-%m-%d_%H-%M-%S',time.localtime()))
             os.mkdir(self.output_directory + folder)
             opendic = open(self.dic_directory, encoding = 'utf-8') 
             if os.path.isfile(self.dic_directory) == True:
@@ -93,8 +96,13 @@ class Annotator:
                                             annot_stopper = False # Allows the use of multiple annotations for the same word. 
                                             idinuse = [] 
                                             duptxids = [] 
+                                            if index != 0:
+                                                 
+                                                sentenceoffset += (len(wordlist[index - 1])+ 1) 
+                                            else:
+                                                 sentenceoffset == 0 
                                             if skipper == True:
-                                                sentenceoffset += (len(word)+ 1) 
+                                                
                                                 skipper = False
                                                 continue
                                             else:
@@ -174,6 +182,8 @@ class Annotator:
                                                                                         self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                                         skipper = True
                                                                                         annot_stopper = True  
+                                                                                else:
+                                                                                     continue
                                                                     #G. species
                                                                     elif (len(finalword) == 2 and finalword[1] == '.' and finalword[0].isupper) or (len(finalword) == 1 and finalword[0].isupper):
                                                                                 
@@ -228,14 +238,14 @@ class Annotator:
                                                                         skipper = False
                                                                         annot_stopper = True  
                                                                 else:
-                                                                    sentenceoffset += (len(word)+ 1)
                                                                     continue
-                                                    sentenceoffset += (len(word)+ 1) 
+                                                    
                                                 except:
                                                     problemwords.append([finalword, sentenceoffset])
                                         bar()
                                         # Post processing
                                         #Adjust offset
+                                        '''
                                         for ann, ian in enumerate(m['annotations']):
                                               wordfound = ian['text']
                                               currentoffset = ian['locations']['offset']
@@ -256,6 +266,7 @@ class Annotator:
                                                     ian['locations']['offset'] = int(locs[0]['offset']) + int(m['offset'])
                                               else:
                                                     continue
+                                                    '''
                                         # Adjust for strains
                                         if needs_processing != []:
                                              for ann, ian in enumerate(m['annotations']):
