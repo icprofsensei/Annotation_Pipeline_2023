@@ -4,6 +4,7 @@ import time
 import os
 import datetime
 import os.path
+from phylotree_maker import TreeMaker as TM
 
 from collections import Counter
 from alive_progress import alive_bar
@@ -355,9 +356,7 @@ class Annotator:
                                                     ian['infons']['type'] = itemstoadd
                                                     ian['infons']['parent_taxonomic_id'] = parentids
 
-                                        if important == True: 
-                                              importantls = [ian for ian in m['annotations']]
-                                              print(importantls) 
+                                        
                                         
                                         
                                 taxa_per_file = {*taxa_per_file}
@@ -369,8 +368,8 @@ class Annotator:
                                     a_file = open(self.output_directory + folder + "/" +str(in_file), "w")
                                     json.dump(data, a_file, indent = 4)
                                     a_file.close()
-                                
-                                 
+                                tree = TM(self.output_directory + folder + "/" +str(in_file), self.dic_directory)
+                                tree.TM()
             stop_time = datetime.datetime.now() #stop time
             message = 'Start time is ' + str(start_time) + '\n' + 'Stop time is ' + str(stop_time)  
 

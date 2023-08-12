@@ -1,6 +1,7 @@
 #Annotator caller
 import PySimpleGUI as sg
 from microbeAnnotator_condensed import Annotator as ann
+from phylotree_maker import TreeMaker as TM
 '''
 jsondic = sg.popup_get_file("Location of NCBI_Tax_dictionary.json:")
 sg.popup('You entered', jsondic)
@@ -16,5 +17,11 @@ window.close()
 result = ann(jsondic, inputfiles, outputfiles, 0, values)
 result.initialsteps()
 '''
+
 result = ann('NCBI_tax_dictionary8.json', 'Testset', 'results', 0, 'ALL')
 result.initialsteps()
+'''
+
+object = TM('ALLAnnotated_output_2023-08-12_15-04-07', 'NCBI_tax_dictionary8.json')
+object.dictionary_to_lineage()
+'''
