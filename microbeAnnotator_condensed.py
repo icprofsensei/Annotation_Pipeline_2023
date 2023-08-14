@@ -4,7 +4,6 @@ import time
 import os
 import datetime
 import os.path
-from phylotree_maker import TreeMaker as TM
 
 from collections import Counter
 from alive_progress import alive_bar
@@ -110,7 +109,7 @@ class Annotator:
                                                 try:
                                                       
                                                     finalword = self.RemovePunc(word, [])             
-                                                    wordlist[index] = finalword 
+                                                    #wordlist[index] = finalword 
                                                     
                                                     newword = ""
                                                     newword = self.CheckLatin(finalword, newword)
@@ -250,11 +249,8 @@ class Annotator:
                                         for ann, ian in enumerate(m['annotations']):
                                               wordfound = ian['text']
                                               currentoffset = ian['locations']['offset']
-                                              locs = []
-                                              
-                                              
-                                              
                                               locs = [{'offset': start.start(), 'distance': abs(currentoffset - (start.start() + m['offset']))} for start in re.finditer(wordfound, textsection)]
+                                              
                                               if len(locs) >=2:
                                                     distances = [i['distance'] for i in locs]
                                                     min_val = min(distances)
@@ -263,11 +259,12 @@ class Annotator:
                                                         if i['distance'] == min_val:
                                                             correct =  i['offset']
                                                         ian['locations']['offset'] = int(correct) + int(m['offset'])
-                                              elif len(locs) == 1 :
+                                                       
+                                              if len(locs) == 1 :
                                                     ian['locations']['offset'] = int(locs[0]['offset']) + int(m['offset'])
                                               else:
                                                     continue
-                                                    '''
+                                                 '''
                                         # Adjust for strains
                                         if needs_processing != []:
                                              for ann, ian in enumerate(m['annotations']):
@@ -355,10 +352,6 @@ class Annotator:
                                                     ian['infons']['identifier'] = str(possible_ids) + " Trimmed from : " + str(trimmed)
                                                     ian['infons']['type'] = itemstoadd
                                                     ian['infons']['parent_taxonomic_id'] = parentids
-
-                                        
-                                        
-                                        
                                 taxa_per_file = {*taxa_per_file}
                                 taxa_per_file = list(taxa_per_file)
                                 print(taxa_per_file)
@@ -368,8 +361,7 @@ class Annotator:
                                     a_file = open(self.output_directory + folder + "/" +str(in_file), "w")
                                     json.dump(data, a_file, indent = 4)
                                     a_file.close()
-                                tree = TM(self.output_directory + folder + "/" +str(in_file), self.dic_directory)
-                                tree.TM()
+                                
             stop_time = datetime.datetime.now() #stop time
             message = 'Start time is ' + str(start_time) + '\n' + 'Stop time is ' + str(stop_time)  
 
