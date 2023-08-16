@@ -1,6 +1,6 @@
 #Annotator caller
 import PySimpleGUI as sg
-from microbeAnnotator_condensed import Annotator as ann
+from microbiomeAnnotator_condensed import Annotator as ann
 
 '''
 
@@ -19,7 +19,7 @@ result = ann(jsondic, inputfiles, outputfiles, 0, values)
 result.initialsteps()
 
 '''
-result = ann('NCBI_tax_dictionary8.json', 'Testset3', 'results', 0, 'ALL')
+result = ann('NCBI_tax_dictionary8.json', 'Testset2', 'results', 0, 'ALL')
 result.initialsteps()
 
 

@@ -4,7 +4,7 @@ import time
 import os
 import datetime
 import os.path
-
+from phylotree_maker import TreeMaker as TM
 from collections import Counter
 from alive_progress import alive_bar
 
@@ -55,7 +55,7 @@ class Annotator:
                         if os.path.isfile(self.input_directory+ "/" + in_file) == True:
                                 print("Input file found")
                         data = json.load(m_file)
-                        
+                        lin_list = []
                         documents = []
                         documents=data['documents'] 
                         for j in documents:
@@ -244,27 +244,7 @@ class Annotator:
                                                     problemwords.append([finalword, sentenceoffset])
                                         bar()
                                         # Post processing
-                                        #Adjust offset
-                                        '''
-                                        for ann, ian in enumerate(m['annotations']):
-                                              wordfound = ian['text']
-                                              currentoffset = ian['locations']['offset']
-                                              locs = [{'offset': start.start(), 'distance': abs(currentoffset - (start.start() + m['offset']))} for start in re.finditer(wordfound, textsection)]
-                                              
-                                              if len(locs) >=2:
-                                                    distances = [i['distance'] for i in locs]
-                                                    min_val = min(distances)
-                                                    correct = 0
-                                                    for i in locs: 
-                                                        if i['distance'] == min_val:
-                                                            correct =  i['offset']
-                                                        ian['locations']['offset'] = int(correct) + int(m['offset'])
-                                                       
-                                              if len(locs) == 1 :
-                                                    ian['locations']['offset'] = int(locs[0]['offset']) + int(m['offset'])
-                                              else:
-                                                    continue
-                                                 '''
+                                     
                                         # Adjust for strains
                                         if needs_processing != []:
                                              for ann, ian in enumerate(m['annotations']):
@@ -327,6 +307,7 @@ class Annotator:
                                                   continue
                                         m['annotations'].sort(key = lambda e: (int(e["id"])))  
                                         for ian in m['annotations']:
+                                              
                                               if ian['infons']['type'] == 'unresolved':
                                                  loc_id = ian['infons']['identifier'].find('[')
                                                  unproc_str = ian['infons']['identifier'][loc_id:len(ian['infons']['identifier'])].split(" ")
@@ -352,15 +333,49 @@ class Annotator:
                                                     ian['infons']['identifier'] = str(possible_ids) + " Trimmed from : " + str(trimmed)
                                                     ian['infons']['type'] = itemstoadd
                                                     ian['infons']['parent_taxonomic_id'] = parentids
+                                              else:
+                                                   taxid = ian['infons']['identifier']
+                                                   lineage = TM(self.dic_directory, taxid)
+                                                   lin_list.append(lineage.dictionary_to_lineage())
+
                                 taxa_per_file = {*taxa_per_file}
                                 taxa_per_file = list(taxa_per_file)
                                 print(taxa_per_file)
-                                print(problemwords)
+                                #print(lin_list)
+                                #print(problemwords)
                                 taxalist.append(taxa_per_file)
                                 for i in data: 
                                     a_file = open(self.output_directory + folder + "/" +str(in_file), "w")
                                     json.dump(data, a_file, indent = 4)
                                     a_file.close()
+                                longest = len(max(lin_list, key = len))
+                                node = max(lin_list, key = len)[len(max(lin_list, key = len)) - 1]
+                                for i in lin_list: 
+                                    node = 'fixed'
+                                    i = i[::-1]
+                                    if len(i) == longest:
+                                        if i[0] != 0:   
+                                            node == 'unfixed'
+                                if node == 'fixed':
+                                    transitions = []
+                                    reversed_list = [i[::-1] for i in lin_list if len(i) == longest]
+                                    for i in range(longest):
+                                        if i <= longest - 2:
+                                            transls = [rl[i] + ' --> ' + rl[i + 1] for rl in reversed_list]
+                                            transls = set(transls)
+                                            transitions.append(transls)
+                                    #print(transitions)
+                                    for t in transitions[0]:
+                                        nextnode = t.split(" ")[2]
+                                        for tr in transitions[1]:
+                                            if tr.split(" ")[0] == nextnode:
+                                                nextnextnode = tr.split(" ")[2]
+                                                for tra in transitions[2]:
+                                                    if tra.split(" ")[0] == nextnextnode:
+                                                        nextnextnextnode = tra.split(" ")[2]
+                                                        for tran in transitions[3]:
+                                                            if tran.split(" ")[0] == nextnextnextnode:
+                                                                print(t, tr, tra, tran)
                                 
             stop_time = datetime.datetime.now() #stop time
             message = 'Start time is ' + str(start_time) + '\n' + 'Stop time is ' + str(stop_time)  
