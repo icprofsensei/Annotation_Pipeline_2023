@@ -341,13 +341,15 @@ class Annotator:
                                 taxa_per_file = {*taxa_per_file}
                                 taxa_per_file = list(taxa_per_file)
                                 print(taxa_per_file)
-                                #print(lin_list)
+                                for i in lin_list:
+                                     print(i)
                                 #print(problemwords)
                                 taxalist.append(taxa_per_file)
                                 for i in data: 
                                     a_file = open(self.output_directory + folder + "/" +str(in_file), "w")
                                     json.dump(data, a_file, indent = 4)
                                     a_file.close()
+                                    '''
                                 longest = len(max(lin_list, key = len))
                                 node = max(lin_list, key = len)[len(max(lin_list, key = len)) - 1]
                                 for i in lin_list: 
@@ -365,18 +367,21 @@ class Annotator:
                                             transls = set(transls)
                                             transitions.append(transls)
                                     #print(transitions)
-                                    for t in transitions[0]:
-                                        nextnode = t.split(" ")[2]
-                                        for tr in transitions[1]:
-                                            if tr.split(" ")[0] == nextnode:
-                                                nextnextnode = tr.split(" ")[2]
-                                                for tra in transitions[2]:
-                                                    if tra.split(" ")[0] == nextnextnode:
-                                                        nextnextnextnode = tra.split(" ")[2]
-                                                        for tran in transitions[3]:
-                                                            if tran.split(" ")[0] == nextnextnextnode:
-                                                                print(t, tr, tra, tran)
-                                
+                                    items = len(transitions)
+                                    for j in range(0, items + 1):
+                                        print(j)   
+                                        if j <= items -1: 
+                                            nodes = []
+                                            for i in transitions[j]:
+                                                node = i.split(" ")[0]
+                                                nodes.append(node)
+                                        elif j == items:
+                                            nodes = []
+                                            for i in transitions[j - 1]:
+                                                node = i.split(" ")[2]
+                                                nodes.append(node)
+                                        print(set(nodes))
+                                         '''                       
             stop_time = datetime.datetime.now() #stop time
             message = 'Start time is ' + str(start_time) + '\n' + 'Stop time is ' + str(stop_time)  
 
