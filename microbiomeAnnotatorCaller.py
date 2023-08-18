@@ -19,7 +19,13 @@ result = ann(jsondic, inputfiles, outputfiles, 0, values)
 result.initialsteps()
 
 '''
+
 result = ann('NCBI_tax_dictionary8.json', 'Testset2', 'results', 0, 'ALL')
 result.initialsteps()
-
-
+'''
+from folder_parser import species_miner as sm
+result = sm('All_annotated_files', 'introduction')
+result.Miner()
+result.Analyser()
+result.Analyser()
+'''

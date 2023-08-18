@@ -1,0 +1,201 @@
+'''
+list = [['a', 'b', 'c', 'd', 'z'],['e', 'b', 'f', 'd', 'z'], ['g', 'i', 'f', 'd', 'z'], ['l', 'm', 'n', 'o', 'z'], ['p', 'b', 'f', 'd', 'z'], ['q', 'r', 's', 't', 'z'], ['v', 'w', 's', 't', 'z'], ['x', 'y', 'n', 'o', 'z'],['i', 'o', 'z'],['f', 'd', 'z'], ['k', 't', 'z']]
+longest = len(max(list, key = len))
+node = max(list, key = len)[len(max(list, key = len)) - 1]
+
+for i in list: 
+    nodeset = 'fixed'
+    i = i[::-1]
+    if len(i) == longest:
+        if i[0] != node[0]:   
+            print(i[0])
+            nodeset == 'unfixed'
+if nodeset == 'fixed':
+    transitions = []
+    reversed_list = [i[::-1] for i in list if len(i) == longest]
+    for i in range(longest):
+        if i <= longest - 2:
+            transls = [rl[i] + ' --> ' + rl[i + 1] for rl in reversed_list]
+            transls = set(transls)
+            transitions.append(transls)
+    print(transitions)
+
+ 
+    height = len(transitions[0])
+    items = len(transitions)
+    allnodes = []
+    for j in range(0, items + 1):   
+        if j <= items -1: 
+            nodes = []
+            for i in transitions[j]:
+                node = i.split(" ")[0]
+                nodes.append(node)
+        elif j == items:
+            nodes = []
+            for i in transitions[j - 1]:
+                node = i.split(" ")[2]
+                nodes.append(node)
+        allnodes.append(set(nodes))
+    print(allnodes)
+
+'''
+import os
+import json
+import requests
+class species_miner:
+        def __init__(self, folder_directory, keyword):
+            #Initialise inputs
+            self.folder_directory = folder_directory
+            self.keyword = keyword
+        
+        def Miner(self):
+
+                all_files = os.listdir(self.folder_directory)   
+                PMC_files = [n for n in all_files if n.endswith('bioc.json')]
+                annotation_list = []
+                with open('txidlist.txt', 'w') as f: # self.folder_directory+ "/" + 
+                    for i in PMC_files:
+                        in_file = i
+                        #print("Annotating file: ",  in_file) 
+                        with open(self.folder_directory+ "/" + in_file , encoding = 'utf-8') as m_file:
+                            data = json.load(m_file)
+                            documents=data['documents'] 
+                            for j in documents:
+                                    passages= j['passages'] 
+                                    for m in passages:
+                                        self.keyword = str(self.keyword)
+                                        important = False
+                                        upperword = self.keyword[0].upper() + self.keyword[1:len(self.keyword)]
+                                        lowerword = self.keyword[0].lower() + self.keyword[1:len(self.keyword)]
+                                        for v in m['infons'].values():
+                                                        if v == upperword or v == lowerword:
+                                                            important = True
+                                                        elif upperword in v.split(" "):
+                                                            important = True
+                                                        elif lowerword in v.split(" "):
+                                                            important = True
+                                                        else:
+                                                            continue
+                                        
+                                    
+                                        if important == True or self.keyword == 'ALL':
+                                                
+                                            for ian in m['annotations']:
+                                                annotation_list.append(str(ian['infons']['identifier']))
+                                        else:
+                                            continue
+                        annotation_list = list(dict.fromkeys(annotation_list))
+                        annotation_list = [i.lstrip("NCBI:txid") for i in annotation_list if i.startswith('[') == False]
+                        querystring = ""
+                        for i in annotation_list:
+                              querystring += i
+                              querystring += "%2C"
+                        url = "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/taxonomy/taxon/" + querystring
+                        response = requests.request("GET", url)
+                        if response.status_code == 200:
+                                    print("sucessfully fetched the data")
+                                    
+                        else:
+                                    print(f"There's a {response.status_code} error with your request")
+                        jsonresponse = response.json()
+                        for i in jsonresponse['taxonomy_nodes']:
+                            #print(i)
+                            if i['query'] == ['']:
+                              continue
+                            else:
+                              f.write("Query")
+                              f.write(str(i['query']))
+                              f.write("Lineage")
+                              f.write(str(i['taxonomy']['lineage']))
+                              f.write('\n')
+                    #print(annotation_list)                      
+
+        def Analyser(self):
+                          with open('txidlist.txt',encoding = 'utf-8') as m_file:
+                                text = m_file.readlines()
+                                size = len(text)
+                                print(size)
+                                empty = []
+                                for line in text:
+                                      if line not in empty:
+                                            empty.append(line)
+                                output_file = "output.txt"
+                                with open(output_file, "w") as fp:
+                                    fp.write("".join(empty))
+                          with open(self.folder_directory + 'outputclean.txt',encoding = 'utf-8') as fp:
+                                    text2 = fp.readlines()
+                                    size2 = len(text2)
+                                    print(size2)
+                          all_files = os.listdir(self.folder_directory)   
+                          PMC_files = [n for n in all_files if n.endswith('bioc.json')]
+                          annotation_list = []
+                          for i in PMC_files:
+                                in_file = i
+                                with open(self.folder_directory+ "/" + in_file , encoding = 'utf-8') as m_file:
+                                    data = json.load(m_file)
+                                    documents=data['documents'] 
+                                    for j in documents:
+                                            passages= j['passages'] 
+                                            for m in passages:
+                                                self.keyword = str(self.keyword)
+                                                important = False
+                                                upperword = self.keyword[0].upper() + self.keyword[1:len(self.keyword)]
+                                                lowerword = self.keyword[0].lower() + self.keyword[1:len(self.keyword)]
+                                                for v in m['infons'].values():
+                                                                if v == upperword or v == lowerword:
+                                                                    important = True
+                                                                elif upperword in v.split(" "):
+                                                                    important = True
+                                                                elif lowerword in v.split(" "):
+                                                                    important = True
+                                                                else:
+                                                                    continue
+                                                
+                                            
+                                                if important == True or self.keyword == 'ALL':
+                                                        
+                                                    for ian in m['annotations']:
+                                                        annotation_list.append(str(ian['infons']['identifier']))
+                                                else:
+                                                    continue
+                          annotation_list = list(dict.fromkeys(annotation_list))
+                          annotation_list = [i.lstrip("NCBI:txid") for i in annotation_list if i.startswith('[') == False]
+                          print(len(annotation_list))
+                          with open(self.folder_directory +'outputclean.txt',encoding = 'utf-8') as fp:
+                                    text2 = fp.readlines()
+                                    firsttry = []
+                                    for i in text2:
+                                          id = i[6:i.find(']')]
+                                          id = id.replace("'", "")
+                                          firsttry.append(str(id))
+                          print(firsttry)
+                          secondtry = []
+                          for id in annotation_list:
+                                if id in firsttry:
+                                      continue
+                                else:
+                                      secondtry.append(id)
+                          print(secondtry)
+                          with open('txidlist.txt', 'a') as f:
+                                querystring = ""
+                                for i in secondtry:
+                                    querystring += i
+                                    querystring += "%2C"
+                                url = "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/taxonomy/taxon/" + querystring
+                                response = requests.request("GET", url)
+                                if response.status_code == 200:
+                                            print("sucessfully fetched the data")
+                                            
+                                else:
+                                            print(f"There's a {response.status_code} error with your request")
+                                jsonresponse = response.json()
+                                for i in jsonresponse['taxonomy_nodes']:
+                                    #print(i)
+                                    if i['query'] == ['']:
+                                        continue
+                                    else:
+                                        f.write("Query")
+                                        f.write(str(i['query']))
+                                        f.write("Lineage")
+                                        f.write(str(i['taxonomy']['lineage']))
+                                        f.write('\n')
