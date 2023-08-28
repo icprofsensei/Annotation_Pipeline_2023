@@ -1,13 +1,16 @@
-from ete3 import Tree, TreeStyle
+from ete3 import Tree, TreeStyle, faces, AttrFace, NodeStyle
 from ete3 import NCBITaxa
-import sys
 from ete3 import nexml
-
+from ete3 import Phyloxml, phyloxml
+from Bio import Phylo
+from ete3 import PhyloTree
+import os
 
 '''
 items = [['a', 'b', 'c', 'd'],['a', 'b', 'c'], ['a','b','c','d','e'], ['a','b','c','d','e', 'f'], ['a','b','c','d','e', 'g'], ['a','b','c','d','h']]
 '''
 with open('output.txt',encoding = 'utf-8') as fp:
+                                    os.mkdir("trees")
                                     text = fp.readlines()
                                     topologyfeeder = []
                                     for i in text:
@@ -15,19 +18,26 @@ with open('output.txt',encoding = 'utf-8') as fp:
                                           id = id.replace("'", "")
                                           topologyfeeder.append(str(id))
                                     print(topologyfeeder)
+                                  
                                     ncbi = NCBITaxa()
                                     
                                     tree = ncbi.get_topology(topologyfeeder, intermediate_nodes=True)
-                                    print(tree.get_ascii(attributes=["sci_name", "rank"]))
-                                    tree.write(format = 100, outfile = "new_tree.nw")
+                                    #print(tree.get_ascii(attributes=["sci_name", "rank"]))
                                     
+                                    
+                                   
                                     ts = TreeStyle()
-                                    ts.show_leaf_name = True
+                                    ts.show_leaf_name = False
                                     ts.mode = "c"
+                                    ts.root_opening_factor = 1
                                     ts.arc_start = -180 # 0 degrees = 3 o'clock
-                                    ts.arc_span = 180
+                                    ts.arc_span = 360
                                     tree.show(tree_style=ts)
+                                    tree.write(format = 1, outfile = "trees/new_tree.nwk")
+                                    tree2 = PhyloTree("trees/new_tree.nwk", sp_naming_function=lambda name: name)
+                                    tax2names, tax2lineages, tax2rank = tree2.annotate_ncbi_taxa()
+                                    tree2.write(format = 1, outfile = "trees/new_tree2.nwk")
+                                    
+tree = Phylo.read("trees/new_tree.nwk", "newick")
 
-# Start with the shortest sequence = Basis
-# Find trees with length = shortest + 1
-# Add their last items inside brackets 
+Phylo.convert("trees/new_tree.nwk", "newick", "trees/new_tree.xml", "nexml")
