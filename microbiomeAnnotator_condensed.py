@@ -139,19 +139,19 @@ class Annotator:
                                                                             elif possible_plural in CleanNames:
                                                                                 match = next((l for l in dict_data if l['CleanName'] == possible_plural), None)
                                                                                 modifier = "species"
-                                                                                self.AddAnnotation(possible_plural, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                                 skipper = True
                                                                                 annot_stopper = True
                                                                             # [Any] sp - Do not annotate the next word
                                                                             elif nextword in ['sp', 'spp']:
                                                                                 modifier = "species"
-                                                                                self.AddAnnotation(finalword, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                                 skipper = True
                                                                                 annot_stopper = True
                                                                             # [Any] genus - Do not annotate the next word
                                                                             elif nextword in ['genus', 'gen']:
                                                                                 modifier = "genus"
-                                                                                self.AddAnnotation(finalword, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                                 skipper = True
                                                                                 annot_stopper = True
                                                                             # [Any] Only one word, so continue to the next word.   (middle of text)
@@ -224,7 +224,7 @@ class Annotator:
                                                                     elif newword in CleanNames: 
                                                         
                                                                         match = next((l for l in dict_data if l['CleanName'] == newword), None)
-                                                                        self.AddAnnotation(newword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                        self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                         skipper = False
                                                                         annot_stopper = True 
                                                                     
@@ -234,7 +234,7 @@ class Annotator:
                                                                 if newword in CleanNames: 
                                                         
                                                                         match = next((l for l in dict_data if l['CleanName'] == newword), None)
-                                                                        self.AddAnnotation(newword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                        self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                         skipper = False
                                                                         annot_stopper = True  
                                                                 else:
@@ -341,9 +341,11 @@ class Annotator:
                                 taxa_per_file = {*taxa_per_file}
                                 taxa_per_file = list(taxa_per_file)
                                 print(taxa_per_file)
+                                '''
                                 for i in lin_list:
                                      print(i)
-                                #print(problemwords)
+                                print(problemwords)
+                                '''
                                 taxalist.append(taxa_per_file)
                                 for i in data: 
                                     a_file = open(self.output_directory + folder + "/" +str(in_file), "w")
