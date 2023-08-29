@@ -8,7 +8,7 @@ from phylotree_maker import TreeMaker as TM
 from collections import Counter
 from alive_progress import alive_bar
 
-
+from ete3_trial import Tree as T
 
 
 class Annotator:
@@ -41,6 +41,7 @@ class Annotator:
             message = '' 
             all_files = os.listdir(self.input_directory) 
             PMC_files=[]  
+            allids = []
             for n in all_files:   
                 if  n.endswith('bioc.json'):  
                     PMC_files.append(n)
@@ -335,8 +336,7 @@ class Annotator:
                                                     ian['infons']['parent_taxonomic_id'] = parentids
                                               else:
                                                    taxid = ian['infons']['identifier']
-                                                   lineage = TM(self.dic_directory, taxid)
-                                                   lin_list.append(lineage.dictionary_to_lineage())
+                                                   allids.append(taxid.lstrip("NCBI:txid"))
 
                                 taxa_per_file = {*taxa_per_file}
                                 taxa_per_file = list(taxa_per_file)
@@ -351,39 +351,7 @@ class Annotator:
                                     a_file = open(self.output_directory + folder + "/" +str(in_file), "w")
                                     json.dump(data, a_file, indent = 4)
                                     a_file.close()
-                                    '''
-                                longest = len(max(lin_list, key = len))
-                                node = max(lin_list, key = len)[len(max(lin_list, key = len)) - 1]
-                                for i in lin_list: 
-                                    node = 'fixed'
-                                    i = i[::-1]
-                                    if len(i) == longest:
-                                        if i[0] != 0:   
-                                            node == 'unfixed'
-                                if node == 'fixed':
-                                    transitions = []
-                                    reversed_list = [i[::-1] for i in lin_list if len(i) == longest]
-                                    for i in range(longest):
-                                        if i <= longest - 2:
-                                            transls = [rl[i] + ' --> ' + rl[i + 1] for rl in reversed_list]
-                                            transls = set(transls)
-                                            transitions.append(transls)
-                                    #print(transitions)
-                                    items = len(transitions)
-                                    for j in range(0, items + 1):
-                                        print(j)   
-                                        if j <= items -1: 
-                                            nodes = []
-                                            for i in transitions[j]:
-                                                node = i.split(" ")[0]
-                                                nodes.append(node)
-                                        elif j == items:
-                                            nodes = []
-                                            for i in transitions[j - 1]:
-                                                node = i.split(" ")[2]
-                                                nodes.append(node)
-                                        print(set(nodes))
-                                         '''                       
+                                                     
             stop_time = datetime.datetime.now() #stop time
             message = 'Start time is ' + str(start_time) + '\n' + 'Stop time is ' + str(stop_time)  
 
@@ -398,7 +366,8 @@ class Annotator:
                 taxa_file.write(str(taxalist))
                 taxa_file.write("This file contains all problem words.")
                 taxa_file.write(str(problemwords))
-
+            call = T(allids, self.output_directory + folder + "/")
+            call.Maker()
         def AddAnnotation(self, word, match, count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper):
             if match['TaxID'] not in idinuse and annot_stopper == False:
                  
