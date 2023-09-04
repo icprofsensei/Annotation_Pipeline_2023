@@ -20,5 +20,5 @@ result.initialsteps()
 
 '''
 
-result = ann('NCBI_tax_dictionary8.json', 'Testset2', 'results', 0, 'ALL')
+result = ann('NCBI_tax_dictionary8.json', 'testset', 'results', 0, 'ALL')
 result.initialsteps()
