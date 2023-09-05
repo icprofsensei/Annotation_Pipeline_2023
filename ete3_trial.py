@@ -5,6 +5,7 @@ from ete3 import Phyloxml, phyloxml
 from Bio import Phylo
 from ete3 import PhyloTree
 import os
+import requests
 
 '''
 items = [['a', 'b', 'c', 'd'],['a', 'b', 'c'], ['a','b','c','d','e'], ['a','b','c','d','e', 'f'], ['a','b','c','d','e', 'g'], ['a','b','c','d','h']]
@@ -19,8 +20,48 @@ class Tree:
                 for itf in listtobeprocessed:
                         for i in ncbi.get_lineage(itf):
                                 allitems.append(str(i))
+                                #print(ncbi.get_lineage(itf))
                 allitems = list(dict.fromkeys(allitems))
                 return allitems
+        def colourselecter(self):
+                allitems = self.listmaker(self.items_to_find, [])
+                iddict=dict.fromkeys(allitems,0)
+                print(iddict)
+                ncbi = NCBITaxa()
+                with open ('childnodes.txt',encoding = 'utf-8') as cn:
+                        text = cn.readlines()
+                        childnodedict = dict()
+                        for i in text:
+                                item = i.split(" ")
+                                if item[1] == "\n":
+                                        item[1] = 1
+                                else:
+                                        item[1] = item[1].strip("\n")
+                                key = item[0]
+                                value = item[1]
+                                childnodedict[key] = value
+                print(childnodedict)
+                for itf in self.items_to_find:
+                        reversedls = ncbi.get_lineage(itf)[::-1]
+                        print(reversedls)
+                        factor = 1
+                        for index, i in enumerate(reversedls):
+                                        print(i)
+                                        if index == 0:
+                                                print("Factor:", 1)
+                                                iddict[str(i)] += 1 
+                                        else:
+                                                if str(i) in childnodedict.keys():
+
+                                                        newfactor = 1/ int(childnodedict[str(i)])
+                                                        factor = factor * newfactor
+                                                        print("Factor:", factor)
+                                                        iddict[str(i)] += factor
+                                                else:
+                                                        iddict[str(i)] += factor 
+                print(iddict) 
+                                        
+
         def layoutfunc(self, node):
                   node.complete_branch_lines_when_necessary = False
                   node.optimal_scale_level = "full"
