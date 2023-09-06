@@ -6,10 +6,12 @@ from Bio import Phylo
 from ete3 import PhyloTree
 import os
 import requests
+import math
 
 '''
 items = [['a', 'b', 'c', 'd'],['a', 'b', 'c'], ['a','b','c','d','e'], ['a','b','c','d','e', 'f'], ['a','b','c','d','e', 'g'], ['a','b','c','d','h']]
 '''
+
 class Tree:
         def __init__(self, items_to_find, directorypath):
             #Initialise inputs
@@ -26,7 +28,7 @@ class Tree:
         def colourselecter(self):
                 allitems = self.listmaker(self.items_to_find, [])
                 iddict=dict.fromkeys(allitems,0)
-                print(iddict)
+                #print(iddict)
                 ncbi = NCBITaxa()
                 with open ('childnodes.txt',encoding = 'utf-8') as cn:
                         text = cn.readlines()
@@ -40,26 +42,133 @@ class Tree:
                                 key = item[0]
                                 value = item[1]
                                 childnodedict[key] = value
-                print(childnodedict)
+                #print(childnodedict)
                 for itf in self.items_to_find:
                         reversedls = ncbi.get_lineage(itf)[::-1]
-                        print(reversedls)
+                        #print(reversedls)
                         factor = 1
                         for index, i in enumerate(reversedls):
-                                        print(i)
+                                        #print(i)
                                         if index == 0:
-                                                print("Factor:", 1)
+                                                #print("Factor:", 1)
                                                 iddict[str(i)] += 1 
                                         else:
                                                 if str(i) in childnodedict.keys():
 
                                                         newfactor = 1/ int(childnodedict[str(i)])
                                                         factor = factor * newfactor
-                                                        print("Factor:", factor)
+                                                        #print("Factor:", factor)
                                                         iddict[str(i)] += factor
                                                 else:
                                                         iddict[str(i)] += factor 
-                print(iddict) 
+                total = max(iddict.values())
+                viridis = ['#fde725',
+'#f8e621',
+'#f1e51d',
+'#ece51b',
+'#e5e419',
+'#dfe318',
+'#d8e219',
+'#d0e11c',
+'#cae11f',
+'#c2df23',
+'#bddf26',
+'#b5de2b',
+'#addc30',
+'#a8db34',
+'#a0da39',
+'#9bd93c',
+'#93d741',
+'#8ed645',
+'#86d549',
+'#7fd34e',
+'#7ad151',
+'#73d056',
+'#6ece58',
+'#67cc5c',
+'#60ca60',
+'#5cc863',
+'#56c667',
+'#52c569',
+'#4cc26c',
+'#48c16e',
+'#42be71',
+'#3dbc74',
+'#3aba76',
+'#35b779',
+'#32b67a',
+'#2eb37c',
+'#2ab07f',
+'#28ae80',
+'#25ac82',
+'#24aa83',
+'#22a785',
+'#20a486',
+'#1fa287',
+'#1fa088',
+'#1f9e89',
+'#1e9b8a',
+'#1f998a',
+'#1f968b',
+'#20938c',
+'#20928c',
+'#218f8d',
+'#228d8d',
+'#238a8d',
+'#24878e',
+'#25858e',
+'#26828e',
+'#26818e',
+'#277e8e',
+'#287c8e',
+'#29798e',
+'#2a768e',
+'#2b748e',
+'#2c718e',
+'#2d708e',
+'#2e6d8e',
+'#306a8e',
+'#31688e',
+'#32658e',
+'#33638d',
+'#34608d',
+'#365d8d',
+'#375b8d',
+'#38588c',
+'#39558c',
+'#3b528b',
+'#3c508b',
+'#3d4d8a',
+'#3e4989',
+'#3f4788',
+'#414487',
+'#424186',
+'#433e85',
+'#443a83',
+'#453882',
+'#463480',
+'#46327e',
+'#472e7c',
+'#472c7a',
+'#482878',
+'#482475',
+'#482173',
+'#481d6f',
+'#481b6d',
+'#481769',
+'#471365',
+'#471063',
+'#460b5e',
+'#46085c',
+'#450457',
+'#440154']
+                reverseviridis = viridis[::-1]
+                for key, value in iddict.items():
+                        index = (value / total) * 100
+                        index = math.ceil(index)
+                        iddict[key] = reverseviridis[index - 1]
+                        
+                return(iddict) 
                                         
 
         def layoutfunc(self, node):
@@ -67,23 +176,24 @@ class Tree:
                   node.optimal_scale_level = "full"
                   node.guiding_lines_type = 0
                   node.extra_branch_line_type = 0
-                  allitems = self.listmaker(self.items_to_find, [])
+                  mydict = self.colourselecter()
+                  
                   node.img_style["hz_line_type"] = 0
-                  if node.get_children() == [] or node.name not in allitems:
+                  if node.get_children() == [] or node.name not in mydict.keys():
                           node.img_style["hz_line_color"] = "#ffffff"
                   nohorline = False
                   
                   
-                  if node.name in allitems:
+                  if node.name in mydict.keys():
                         #node.img_style["size"] = 0.1
                         #node.img_style["shape"] = "circle"
-                        #node.img_style["fgcolor"] = "#006400"
-                        node.img_style["vt_line_color"] = "#000000"
-                        node.img_style["hz_line_color"] = "#000000"
+                        node.img_style["fgcolor"] = mydict[node.name]
+                        node.img_style["vt_line_color"] = mydict[node.name]
+                        node.img_style["hz_line_color"] = mydict[node.name]
                         #faces.add_face_to_node(AttrFace("name", fsize = 25), node, column=0)
                         if node.get_children == []:
                                 for i in node.get_children():
-                                        if i in allitems:
+                                        if i in mydict.keys():
                                                 continue
                                         else:
                                                 nohorline == True
