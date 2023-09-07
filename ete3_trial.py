@@ -259,7 +259,7 @@ class Tree:
                         reversedls = ncbi.get_lineage(itf)[::-1]
                         #print(reversedls)
                         factor = 1
-                        for index, i in enumerate(self.items_to_find):
+                        for index, i in enumerate(reversedls):
                                         #print(i)
                                         if index == 0:
                                                 #print("Factor:", 1)

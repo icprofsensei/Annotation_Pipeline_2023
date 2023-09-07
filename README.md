@@ -10,3 +10,16 @@ HTML
 Package requirements: 
 PySimpleGUI, numpy, pandas, json, time, os, datetime, alive_progress, 
 https://github.com/etetoolkit/ete/archive/ete4.zip
+
+Installation instructions
+
+Command prompt in terminal: 
+
+1)          pip install virtualenv
+2)          mkdir Annotator
+3)          cd Annotator
+4)          python3.11 -m venv Annotatorenvironment
+5)          Annotatorenvironment/Scripts/activate.bat
+6)          pip install -r requirements.txt
+
+
