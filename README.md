@@ -19,7 +19,8 @@ Command prompt in terminal:
 2)          mkdir Annotator
 3)          cd Annotator
 4)          python3.11 -m venv Annotatorenvironment
-5)          Annotatorenvironment/Scripts/activate.bat
+5)          cd Annotatorenvironment/Scripts
+6)          activate.bat
 6)          pip install -r requirements.txt
 
 
