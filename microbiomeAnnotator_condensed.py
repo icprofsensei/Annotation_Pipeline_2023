@@ -9,18 +9,20 @@ from collections import Counter
 from alive_progress import alive_bar
 
 from ete3_trial import TreeMaker as T
-
+from childnodes import Childnodes as C
 
 class Annotator:
-        def __init__(self, dic_directory, input_directory, output_directory, count, keyword, treeyn, treedir):
+        def __init__(self, updatechildnodeyn, dic_directory, input_directory, output_directory, count, keyword, treeyn, cnodes, ncbikey):
             #Initialise inputs
+            self.updatechildnodeyn = updatechildnodeyn
             self.dic_directory = dic_directory          #newdic.json
             self.input_directory = input_directory      #Input bioc files
             self.output_directory = output_directory    #Output file directory where Annotated_ouput is created. 
             self.count = count
             self.keyword = keyword
             self.treeyn = treeyn
-            self.treedir = treedir
+            self.cnodesdir = cnodes
+            self.ncbikey = ncbikey
 
         def initialsteps(self):
             if type(self.keyword) == dict:
@@ -29,6 +31,9 @@ class Annotator:
             if type(self.treeyn) == dict:
                  
                 self.treeyn = self.treeyn[0]
+            if type(self.updatechildnodeyn) == dict:
+                 
+                self.updatechildnodeyn = self.updatechildnodeyn[0]
             
             folder = '/' + self.keyword + 'Annotated_output_' + str(time.strftime('%Y-%m-%d_%H-%M-%S',time.localtime()))
             os.mkdir(self.output_directory + folder)
@@ -370,9 +375,13 @@ class Annotator:
                 taxa_file.write(str(taxalist))
                 taxa_file.write("This file contains all problem words.")
                 taxa_file.write(str(problemwords))
-            
+            if str(self.updatechildnodeyn) == "YES":
+                 call = C(self.cnodesdir, allids, self.ncbikey)
+                 call.filerefresh()
             if str(self.treeyn) == 'YES':
-                call = T(allids, self.output_directory + folder + "/", self.treedir)
+                call2 = C(self.cnodesdir, allids, self.ncbikey)
+                call2.updatenewspec()
+                call = T(allids, self.output_directory + folder + "/", self.cnodesdir, self.input_directory)
                 call.Maker()
         def AddAnnotation(self, word, match, count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper):
             if match['TaxID'] not in idinuse and annot_stopper == False:

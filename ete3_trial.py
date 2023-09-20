@@ -1,4 +1,4 @@
-from ete3 import Tree, TreeStyle
+from ete3 import Tree, TreeStyle, RectFace, faces
 from ete3 import NCBITaxa
 from ete3 import nexml
 from ete3 import Phyloxml, phyloxml
@@ -7,13 +7,18 @@ from ete3 import PhyloTree
 import os
 import requests
 import math
+# Make sure to install svglib and rlPyCairo - rlPyCairo is not in the imports but is necessary to make svglib and reportlab work
+from PIL import Image, ImageFont, ImageDraw
+from svglib.svglib import svg2rlg
+from reportlab.graphics import renderPM
 
 class TreeMaker:
-        def __init__(self, items_to_find, directorypath, treedir):
+        def __init__(self, items_to_find, directorypath, cnodesdir, treetitle):
             #Initialise inputs
             self.items_to_find = items_to_find
             self.directorypath = directorypath
-            self.treedir = treedir
+            self.cnodesdir = cnodesdir
+            self.treetitle = treetitle
         def listmaker(self, listtobeprocessed, allitems):
                 ncbi = NCBITaxa()
                 for itf in listtobeprocessed:
@@ -27,7 +32,7 @@ class TreeMaker:
                 iddict=dict.fromkeys(allitems,0)
                 #print(iddict)
                 ncbi = NCBITaxa()
-                with open (self.treedir ,encoding = 'utf-8') as cn:
+                with open (self.cnodesdir ,encoding = 'utf-8') as cn:
                         text = cn.readlines()
                         childnodedict = dict()
                         for i in text:
@@ -165,8 +170,8 @@ class TreeMaker:
                         placeindex = (value / total) * 100
                         placeindex = math.ceil(placeindex)
                         colourdict[key] = reverseviridis[placeindex - 1]
-                #print(colourdict)
-                return(colourdict) 
+                delivery = [colourdict, total]
+                return(delivery) 
                                         
 
         def layoutfunc(self, node):
@@ -174,7 +179,7 @@ class TreeMaker:
                   node.optimal_scale_level = "full"
                   node.guiding_lines_type = 0
                   node.extra_branch_line_type = 0
-                  colourdict = self.colourselecter({})
+                  colourdict = self.colourselecter({})[0]
                   
                   node.img_style["hz_line_type"] = 0
                   if node.get_children() == [] or node.name not in colourdict.keys():
@@ -188,9 +193,8 @@ class TreeMaker:
                         node.img_style["fgcolor"] = colourdict[str(node.name)]
                         node.img_style["vt_line_color"] = colourdict[str(node.name)]
                         node.img_style["hz_line_color"] = colourdict[str(node.name)]
-                        node.img_style["vt_line_width"] = 4
-                        node.img_style["hz_line_width"] = 4
-                        
+                        node.img_style["vt_line_width"] = 5
+                        node.img_style["hz_line_width"] = 5
                         #faces.add_face_to_node(AttrFace("name", fsize = 25), node, column=0)
                         if node.get_children == []:
                                 for i in node.get_children():
@@ -198,7 +202,37 @@ class TreeMaker:
                                                 continue
                                         else:
                                                 nohorline == True
-        
+                        if node.img_style["hz_line_color"] in ['#fde725',
+'#f8e621',
+'#f1e51d',
+'#ece51b',
+'#e5e419',
+'#dfe318',
+'#d8e219',
+'#d0e11c',
+'#cae11f',
+'#c2df23',
+'#bddf26',
+'#b5de2b',
+'#addc30',
+'#a8db34',
+'#a0da39',
+'#9bd93c',
+'#93d741',
+'#8ed645',
+'#86d549',
+'#7fd34e',
+'#7ad151',
+'#73d056',
+'#6ece58',
+'#67cc5c',
+'#60ca60',
+'#5cc863',
+'#56c667',
+'#52c569',
+'#4cc26c',
+'#48c16e']:
+                                faces.add_face_to_node(RectFace(2, 2, fgcolor = colourdict[str(node.name)], bgcolor= 'black', label = {'text': node.name , 'font': 'arial', 'fontsize' : 7}), node, column = 0, position = "branch-bottom")      
                   else: 
                         
                         node.img_style["size"] = 0
@@ -217,7 +251,7 @@ class TreeMaker:
                              
         def Maker(self):     
                                 
-                                     with open(self.treedir,encoding = 'utf-8') as fp:
+                                     with open(self.cnodesdir,encoding = 'utf-8') as fp:
                                                       os.mkdir(self.directorypath + "trees")
                                                       text = fp.readlines()
                                                       topologyfeeder = []
@@ -248,12 +282,23 @@ class TreeMaker:
                                                       tree.write(format = 0, outfile = self.directorypath + "trees/new_tree.nwk")
                                                       tree.render(self.directorypath + "trees/img_tree.svg", w= 3600, units = 'px', tree_style = ts)
                                                       Phylo.convert(self.directorypath + "trees/new_tree.nwk", "newick", self.directorypath + "trees/new_tree.xml", "nexml")
-                                                      '''
-                                                      tree2 = PhyloTree("trees/new_tree.nwk", sp_naming_function=lambda name: name)
-                                                      tax2names, tax2lineages, tax2rank = tree2.annotate_ncbi_taxa()
-                                                      tree2.write(format = 1, outfile = "trees/new_tree2.nwk")
-                                                      '''
-                                                      '''  
-                                                      os.mkdir(self.directorypath + "trees")
-                                                      tree = Tree(self.treedir, format =0)
-                                                      ''' 
+                                                      img = svg2rlg(self.directorypath + "trees/img_tree.svg")
+                                                      renderPM.drawToFile(img, self.directorypath + "trees/tree.png", fmt = "PNG")
+
+                                                      filename = self.directorypath + "trees/tree.png"
+                                                      with Image.open(filename) as img: 
+                                                                width, height = img.size
+                                                                img = img.resize((width * 2, height * 2 ))
+                                                                img.save(self.directorypath + "trees/tree.png")
+                                                                img2 = Image.open('colourbar.png')
+                                                                img.paste(img2, (10, 10))
+                                                                img.save(self.directorypath + "trees/tree+bar.png")
+                                                      total = self.colourselecter({})[1]
+                                                      img = Image.open(self.directorypath + "trees/tree+bar.png")
+                                                      draw = ImageDraw.Draw(img)
+                                                      font = ImageFont.truetype("arial", 50)
+                                                      font2 = ImageFont.truetype("arial", 70)
+                                                      draw.text((600, 150), "Weighted total=  " + str(total), (0, 0, 0), font = font)
+                                                      img.save(self.directorypath + "trees/tree+bar.png")
+                                                      draw.text((2500, 150), "Phylogenetic Tree based on the named entities in the folder: "  + self.treetitle, (0, 0, 0), font = font2)
+                                                      img.save(self.directorypath + "trees/tree+bar.png")

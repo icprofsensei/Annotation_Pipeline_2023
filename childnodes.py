@@ -38,7 +38,8 @@ class Childnodes:
                                     for i in text2:
                                           id = i.split(" ")[0]
                                           firsttry.append(str(id))
-                with open(str(time.strftime('%Y-%m-%d_%H-%M-%S')) +'childnodes.txt', "a", encoding = 'utf-8') as fp:
+                filename = str(time.strftime('%Y-%m-%d_%H-%M-%S')) +'childnodes.txt'
+                with open(filename, "a", encoding = 'utf-8') as fp:
                         for ft in firsttry:
                                 url = "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/taxonomy/taxon/" + str(ft) + "/filtered_subtree"
                                 response = requests.request("GET", url , params =  {"key": self.ncbikey})
@@ -54,6 +55,6 @@ class Childnodes:
                 with open(str(time.strftime('%Y-%m-%d_%H-%M-%S')) +'childnodes.txt', "r", encoding = 'utf-8') as fp:
                         
                         linecount =  len(fp.readlines())
-                if os.path.isfile(str(time.strftime('%Y-%m-%d_%H-%M-%S')) +'childnodes.txt') == True and linecount == len(firsttry):
+                if os.path.isfile(filename) == True and linecount == len(firsttry):
 
                     os.remove(self.childnodesdir)
