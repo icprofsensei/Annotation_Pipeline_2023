@@ -182,7 +182,8 @@ class Annotator:
                                                                     nextword = self.RemovePunc(nextword, []) 
                                                                   
                                                                     possible_species = "".join(finalword) + " " + str(nextword)
-                                                                      
+                                                                    if index != 0: 
+                                                                         possible_lc_species = self.lccheck(wordlist[index - 1], wordlist[index])  
                                                                     nonregistered_genus = [cn for cn in CleanNames if "".join(finalword) in cn.split(" ")]
                                                                     if len(nonregistered_genus) >= 1:
                                                                             for nrg in nonregistered_genus:
@@ -190,6 +191,12 @@ class Annotator:
                                                                                         match = next((l for l in dict_data if l['CleanName'] == nrg), None)
                                                                                         modifier = "species"
                                                                                         self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                        skipper = True
+                                                                                        annot_stopper = True  
+                                                                                elif nrg == possible_lc_species:
+                                                                                        match = next((l for l in dict_data if l['CleanName'] == nrg), None)
+                                                                                        modifier = "species"
+                                                                                        self.AddAnnotation(possible_lc_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                                         skipper = True
                                                                                         annot_stopper = True  
                                                                                 else:
@@ -511,7 +518,11 @@ class Annotator:
                     identifier = kingdom + "_" + match['TaxRank']
               return identifier
         
-
+        def lccheck (self, firstword, secondword):
+             firstword = list(firstword)
+             firstword[0] = firstword[0].upper()
+             secondword = "".join(firstword) + " " + secondword
+             return secondword
 # Latin noun endings
 '''
 G1      F       puella      puellae
