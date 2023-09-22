@@ -5,7 +5,12 @@ class Childnodes:
         def __init__(self, childnodesdir, specfound, ncbikey):
             #Initialise inputs
             self.childnodesdir = childnodesdir
-            self.specfound = specfound
+            with open(specfound) as sf:
+                    text = sf.readlines()
+                    newls = []
+                    for i in text:
+                            newls.append(i.rstrip("\n"))
+            self.specfound = newls
             self.ncbikey = ncbikey
         def updatenewspec (self):
                 with open(self.childnodesdir, "a+", encoding = 'utf-8') as fp:

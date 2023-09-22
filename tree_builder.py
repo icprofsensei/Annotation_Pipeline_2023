@@ -1,11 +1,8 @@
-from ete3 import Tree, TreeStyle, RectFace, faces
+from ete3 import TreeStyle, RectFace, faces
 from ete3 import NCBITaxa
-from ete3 import nexml
-from ete3 import Phyloxml, phyloxml
+
 from Bio import Phylo
-from ete3 import PhyloTree
 import os
-import requests
 import math
 # Make sure to install svglib and rlPyCairo - rlPyCairo is not in the imports but is necessary to make svglib and reportlab work
 from PIL import Image, ImageFont, ImageDraw
@@ -15,7 +12,12 @@ from reportlab.graphics import renderPM
 class TreeMaker:
         def __init__(self, items_to_find, directorypath, cnodesdir, treetitle):
             #Initialise inputs
-            self.items_to_find = items_to_find
+            with open(items_to_find) as sf:
+                    text = sf.readlines()
+                    newls = []
+                    for i in text:
+                            newls.append(i.rstrip("\n"))
+            self.items_to_find = newls
             self.directorypath = directorypath
             self.cnodesdir = cnodesdir
             self.treetitle = treetitle
@@ -252,7 +254,7 @@ class TreeMaker:
         def Maker(self):     
                                 
                                      with open(self.cnodesdir,encoding = 'utf-8') as fp:
-                                                      os.mkdir(self.directorypath + "trees")
+                                                      os.mkdir(self.directorypath + "/trees")
                                                       text = fp.readlines()
                                                       topologyfeeder = []
                                                       for i in text:
@@ -279,26 +281,26 @@ class TreeMaker:
                                                       ts.layout_fn = self.layoutfunc
 
                                                       tree.show(tree_style=ts)
-                                                      tree.write(format = 0, outfile = self.directorypath + "trees/new_tree.nwk")
-                                                      tree.render(self.directorypath + "trees/img_tree.svg", w= 3600, units = 'px', tree_style = ts)
-                                                      Phylo.convert(self.directorypath + "trees/new_tree.nwk", "newick", self.directorypath + "trees/new_tree.xml", "nexml")
-                                                      img = svg2rlg(self.directorypath + "trees/img_tree.svg")
-                                                      renderPM.drawToFile(img, self.directorypath + "trees/tree.png", fmt = "PNG")
+                                                      tree.write(format = 0, outfile = self.directorypath + "/trees/new_tree.nwk")
+                                                      tree.render(self.directorypath + "/trees/img_tree.svg", w= 3600, units = 'px', tree_style = ts)
+                                                      Phylo.convert(self.directorypath + "/trees/new_tree.nwk", "newick", self.directorypath + "/trees/new_tree.xml", "nexml")
+                                                      img = svg2rlg(self.directorypath + "/trees/img_tree.svg")
+                                                      renderPM.drawToFile(img, self.directorypath + "/trees/tree.png", fmt = "PNG")
 
-                                                      filename = self.directorypath + "trees/tree.png"
+                                                      filename = self.directorypath + "/trees/tree.png"
                                                       with Image.open(filename) as img: 
                                                                 width, height = img.size
                                                                 img = img.resize((width * 2, height * 2 ))
-                                                                img.save(self.directorypath + "trees/tree.png")
+                                                                img.save(self.directorypath + "/trees/tree.png")
                                                                 img2 = Image.open('colourbar.png')
                                                                 img.paste(img2, (10, 10))
-                                                                img.save(self.directorypath + "trees/tree+bar.png")
+                                                                img.save(self.directorypath + "/trees/tree+bar.png")
                                                       total = self.colourselecter({})[1]
-                                                      img = Image.open(self.directorypath + "trees/tree+bar.png")
+                                                      img = Image.open(self.directorypath + "/trees/tree+bar.png")
                                                       draw = ImageDraw.Draw(img)
                                                       font = ImageFont.truetype("arial", 50)
                                                       font2 = ImageFont.truetype("arial", 70)
                                                       draw.text((600, 150), "Weighted total=  " + str(total), (0, 0, 0), font = font)
-                                                      img.save(self.directorypath + "trees/tree+bar.png")
+                                                      img.save(self.directorypath + "/trees/tree+bar.png")
                                                       draw.text((2500, 150), "Phylogenetic Tree based on the named entities in the folder: "  + self.treetitle, (0, 0, 0), font = font2)
-                                                      img.save(self.directorypath + "trees/tree+bar.png")
+                                                      img.save(self.directorypath + "/trees/tree+bar.png")

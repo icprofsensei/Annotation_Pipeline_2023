@@ -1,5 +1,5 @@
 # Caller
-from ete3_trial import TreeMaker as T
+from tree_builder import TreeMaker as T
 call = T(['43675', '644652'], 'results2/', 'childnodes.txt', 'my choice')
 call.Maker()
 '''
