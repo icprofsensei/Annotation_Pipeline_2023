@@ -16,6 +16,11 @@ layout = [[sg.Text('Please enter the section title being searched for. Type ALL 
 window = sg.Window('Data Entry', layout)
 event, values = window.read()
 window.close()
+layoutcs = [[sg.Text('Type YES if you would like to turn case sensitivity ON')],
+[sg.Text('Section Title', size = (15,1)), sg.InputText()], [sg.Submit(), sg.Cancel()]]
+windowcs = sg.Window('Data Entry', layoutcs)
+event, valuescs = windowcs.read()
+window.close()
 layout2 = [[sg.Text('Type YES to produce a phylogenetic tree of entities.')],
 [sg.Text('Section Title', size = (15,1)), sg.InputText()], [sg.Submit(), sg.Cancel()]]
 window2 = sg.Window('Data Entry', layout2)
@@ -33,7 +38,7 @@ layout4 = [[sg.Text('Enter the NCBI REST API key associated with your account')]
 window4 = sg.Window('Data Entry', layout4)
 event, values4 = window4.read()
 window4.close()
-result = ann(jsondic, inputfiles, outputfiles, 0, values)
+result = ann(jsondic, inputfiles, outputfiles, 0, values, valuescs)
 result.initialsteps()
 if type(values2) == dict:
                  
@@ -61,8 +66,8 @@ if values2 == 'YES':
         result3.Maker()
 '''
 # ann(tax dictionary, input directory, output directory, count, section)
-#result = ann('NCBI_tax_dictionary8.json', 'testset', 'results', 0, 'ALL')
-#result.initialsteps()
+result = ann('NCBI_tax_dictionary8.json', 'testset', 'results', 0, 'ALL', 'NO')
+result.initialsteps()
 # C(childnodesdir, ids found text file, ncbiapikey)
 #result2 = C('childnodes.txt', 'results/ALLAnnotated_output_2023-09-22_17-01-00/ids.txt', 'f55726c2c32772c2b82304814b30148aff07')
 #result2.updatenewspec()

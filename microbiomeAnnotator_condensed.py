@@ -11,7 +11,7 @@ from alive_progress import alive_bar
 
 
 class Annotator:
-        def __init__(self,dic_directory, input_directory, output_directory, count, keyword):
+        def __init__(self,dic_directory, input_directory, output_directory, count, keyword, casesens):
             #Initialise inputs
          
             self.dic_directory = dic_directory          #newdic.json
@@ -19,12 +19,15 @@ class Annotator:
             self.output_directory = output_directory    #Output file directory where Annotated_ouput is created. 
             self.count = count
             self.keyword = keyword
+            self.casesens = casesens
 
         def initialsteps(self):
             if type(self.keyword) == dict:
                  
                 self.keyword = self.keyword[0]
-
+            if type(self.casesens) == dict:
+                            
+                            self.casesens = self.casesens[0]
             
             folder = '/' + self.keyword + 'Annotated_output_' + str(time.strftime('%Y-%m-%d_%H-%M-%S',time.localtime()))
             os.mkdir(self.output_directory + folder)
@@ -33,6 +36,7 @@ class Annotator:
                  print("Dictionary loaded")
             dict_data = json.load(opendic)
             CleanNames = [i['CleanName'] for i in dict_data]
+            lcCleanNames = [i['CleanName'].lower() for i in dict_data]
             cncounts = dict(Counter(CleanNames))
             strains = {key:value for key, value in cncounts.items() if value > 1}
             CleanNames =list(dict.fromkeys(CleanNames))
@@ -92,164 +96,314 @@ class Annotator:
                                         needs_processing  = []
                                         sentenceoffset = 0
                                         skipper = False
-                                        
-                                        for index, word in enumerate(wordlist):
-                                            annot_stopper = False # Allows the use of multiple annotations for the same word. 
-                                            idinuse = [] 
-                                            duptxids = [] 
-                                            if index != 0:
-                                                 
-                                                sentenceoffset += (len(wordlist[index - 1])+ 1) 
-                                            else:
-                                                 sentenceoffset == 0 
-                                            if skipper == True:
-                                                
-                                                skipper = False
-                                                continue
-                                            else:
-                                                try:
-                                                      
-                                                    finalword = self.RemovePunc(word, [])             
-                                                    #wordlist[index] = finalword 
-                                                    
-                                                    newword = ""
-                                                    newword = self.CheckLatin(finalword, newword)
-                                                    if finalword in CleanNames:
-                                                            
-                                                            match = next((l for l in dict_data if l['CleanName'] == finalword), None)
-                                                            
-                                                            if index <= len(wordlist) -2:
-                                                                            nextword = wordlist[index + 1]
-                                                                            nextword = self.RemovePunc(nextword, [])  
-                                                                            newnextword = ""
-                                                                            newnextword = self.CheckLatin(nextword, newnextword) 
-                                                                            possible_species = finalword + " " + str(nextword)
-                                                                            possible_plural = finalword + " " + str(newnextword)
-                                                                            
-                                                                    
-                                                                                        
-                                                                            #Genus species - Do not annotate the next word 
-                                                                            
-                                                                            if possible_species in CleanNames:
-                                                                                match = next((l for l in dict_data if l['CleanName'] == possible_species), None)
-                                                                                modifier = "species"
-                                                                                self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
-                                                                                skipper = True
-                                                                                annot_stopper = True
-                                                                            #Genus species(pl) - Do not annotate the next word
-                                                                            elif possible_plural in CleanNames:
-                                                                                match = next((l for l in dict_data if l['CleanName'] == possible_plural), None)
-                                                                                modifier = "species"
-                                                                                self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
-                                                                                skipper = True
-                                                                                annot_stopper = True
-                                                                            # [Any] sp - Do not annotate the next word
-                                                                            elif nextword in ['sp', 'spp']:
-                                                                                modifier = "species"
-                                                                                self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
-                                                                                skipper = True
-                                                                                annot_stopper = True
-                                                                            # [Any] genus - Do not annotate the next word
-                                                                            elif nextword in ['genus', 'gen']:
-                                                                                modifier = "genus"
-                                                                                self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
-                                                                                skipper = True
-                                                                                annot_stopper = True
-                                                                            # [Any] Only one word, so continue to the next word.   (middle of text)
-                                                                            else:
-                                                                                self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
-                                                                                skipper = False
-                                                                                annot_stopper = True
-                                                            # [Any] Only one word, so continue to the next word.   (words at the end of the text)
-                                                            elif index == len(wordlist) -1 :
-                                                                self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
-                                                                skipper = False
-                                                                annot_stopper = True
-                                                    
+                                        if self.casesens == 'YES':
+                                             for index, word in enumerate(wordlist):
+                                                    annot_stopper = False # Allows the use of multiple annotations for the same word. 
+                                                    idinuse = [] 
+                                                    duptxids = [] 
+                                                    if index != 0:
+                                                        
+                                                        sentenceoffset += (len(wordlist[index - 1])+ 1) 
                                                     else:
-                                                            if index <= len(wordlist) -2:
-                                                                    finalword = list(finalword)
-                                                                    nextword = wordlist[index + 1]
-                                                                    nextword = self.RemovePunc(nextword, []) 
-                                                                  
-                                                                    possible_species = "".join(finalword) + " " + str(nextword)
-                                                                    if index != 0: 
-                                                                         possible_lc_species = self.lccheck(wordlist[index - 1], wordlist[index])  
-                                                                    nonregistered_genus = [cn for cn in CleanNames if "".join(finalword) in cn.split(" ")]
-                                                                    if len(nonregistered_genus) >= 1:
-                                                                            for nrg in nonregistered_genus:
-                                                                                if nrg == possible_species:
-                                                                                        match = next((l for l in dict_data if l['CleanName'] == nrg), None)
-                                                                                        modifier = "species"
-                                                                                        self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
-                                                                                        skipper = True
-                                                                                        annot_stopper = True  
-                                                                                elif nrg == possible_lc_species:
-                                                                                        match = next((l for l in dict_data if l['CleanName'] == nrg), None)
-                                                                                        modifier = "species"
-                                                                                        self.AddAnnotation(possible_lc_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
-                                                                                        skipper = True
-                                                                                        annot_stopper = True  
-                                                                                else:
-                                                                                     continue
-                                                                    #G. species
-                                                                    elif (len(finalword) == 2 and finalword[1] == '.' and finalword[0].isupper) or (len(finalword) == 1 and finalword[0].isupper):
-                                                                                
-                                                                                possible = [cn for cn in CleanNames if nextword in cn.split(" ") and cn.split(" ")[0][0] == finalword[0]]
-                                                                                
-                                                                                if len(possible) == 1:
-                                                                                        match = match = next((l for l in dict_data if l['CleanName'] == possible[0]), None)
+                                                        sentenceoffset == 0 
+                                                    if skipper == True:
+                                                        
+                                                        skipper = False
+                                                        continue
+                                                    else:
+                                                        try:
+                                                            
+                                                            finalword = self.RemovePunc(word, [])             
+                                                            #wordlist[index] = finalword 
+                                                            
+                                                            newword = ""
+                                                            newword = self.CheckLatin(finalword, newword)
+                                                            if finalword in CleanNames:
+                                                                    
+                                                                    match = next((l for l in dict_data if l['CleanName'] == finalword), None)
+                                                                    
+                                                                    if index <= len(wordlist) -2:
+                                                                                    nextword = wordlist[index + 1]
+                                                                                    if nextword not in [ 'sp.', 'spp.', 'gen.']:
+                                                                                        nextword = self.RemovePunc(nextword, [])  
+                                                                                        nextwordlc = self.RemovePunc(nextword, []).lower()  
+                                                                                    newnextword = ""
+                                                                                    newnextword = self.CheckLatin(nextword, newnextword)
+                                                                                    possible_species = finalword + " " + str(nextword)
+                                                                                    possible_plural = finalword + " " + str(newnextword)
+                                                                            
+                                                                                                
+                                                                                    #Genus species - Do not annotate the next word 
+                                                                                    
+                                                                                    if possible_species in CleanNames:
+                                                                                        match = next((l for l in dict_data if l['CleanName'] == possible_species), None)
                                                                                         modifier = "species"
                                                                                         self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                                         skipper = True
                                                                                         annot_stopper = True
-                                                                                elif len(possible) >= 2:
-                                                                                        generalcheck = True
-                                                                                        for tpf in taxa_per_file:
-                                                                                                    if tpf in possible:
-                                                                                                            match = next((l for l in dict_data if l['CleanName'] == tpf), None)
-                                                                                                            possible_species = "".join(finalword) + " " + str(nextword)
-                                                                                                            modifier = "species"
-                                                                                                            self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
-                                                                                                            skipper = True
-                                                                                                            annot_stopper = True
-                                                                                                            generalcheck == False
-                                                                                                    else:
-                                                                                                        continue
-                                                                                        for p in possible:
-                                                                                            match = next((l for l in dict_data if l['CleanName'] == p), None)
-                                                                                            duptxids.append(match['TaxID'])
-                                                                                        if generalcheck == True:  
-                                                                                            strains[possible_species] = len(duptxids)
-                                                                                            match = next((l for l in dict_data if l['TaxID'] == duptxids[0]), None) 
-                                                                                            self.AddAnnotation(possible_species, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
-                                                                                            annot_stopper = True
-                                                                                            skipper = True
+                                                                                    #Genus species(pl) - Do not annotate the next word
+                                                                                    elif possible_plural in lcCleanNames:
+                                                                                        match = next((l for l in dict_data if l['CleanName'] == possible_plural), None)
+                                                                                        modifier = "species"
+                                                                                        self.AddAnnotation(possible_plural, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                        skipper = True
+                                                                                        annot_stopper = True
+                                                                                    # [Any] sp - Do not annotate the next word
+                                                                                    elif nextword in ['sp', 'spp', 'sp.', 'spp.']:
+                                                                                        modifier = "species"
+                                                                                        self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                        skipper = True
+                                                                                        annot_stopper = True
+                                                                                    # [Any] genus - Do not annotate the next word
+                                                                                    elif nextword in ['genus', 'gen', 'gen.']:
+                                                                                        modifier = "genus"
+                                                                                        self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                        skipper = True
+                                                                                        annot_stopper = True
+                                                                                    # [Any] Only one word, so continue to the next word.   (middle of text)
+                                                                                    else:
+                                                                                        self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                        skipper = False
+                                                                                        annot_stopper = True
+                                                                    # [Any] Only one word, so continue to the next word.   (words at the end of the text)
+                                                                    elif index == len(wordlist) -1 :
+                                                                        self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                        skipper = False
+                                                                        annot_stopper = True
+                                                            
+                                                            else:
+                                                                    if index <= len(wordlist) -2:
+                                                                            finalword = list(finalword)
+                                                                            nextword = wordlist[index + 1]
+                                                                            nextword = self.RemovePunc(nextword, [])
+                                                                            possible_spec = "".join(finalword) + " " + str(nextword)
+                                                                            nonregistered_genus = [cn for cn in CleanNames if "".join(finalword) in cn.split(" ")]
+                                                                            #Non registered geni eg: Escherichia/Shigella  coli or Anguillina coli
+                                                                            if len(nonregistered_genus) >= 1:
+                                                                                    for nrg in nonregistered_genus:
+                                                                                        if nrg == possible_spec:
+                                                                                                match = next((l for l in dict_data if l['CleanName'] == nrg), None)
+                                                                                                modifier = "species"
+                                                                                                self.AddAnnotation(possible_spec, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                                skipper = True
+                                                                                                annot_stopper = True
                                                                                         else:
                                                                                             continue
-                                                                                else:
-                                                                                    continue
-                                                                    elif newword in CleanNames: 
+                                                                            #G. species
+                                                                            elif (len(finalword) == 2 and finalword[1] == '.' and finalword[0].isupper) or (len(finalword) == 1 and finalword[0].isupper):
+                                                                                        
+                                                                                        possible = [cn for cn in CleanNames if nextword in cn.split(" ") and cn.split(" ")[0][0] == finalword[0]]
+                                                                                        
+                                                                                        if len(possible) == 1:
+                                                                                                match = next((l for l in dict_data if l['CleanName'] == possible[0]), None)
+                                                                                                modifier = "species"
+                                                                                                self.AddAnnotation(possible_spec, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                                skipper = True
+                                                                                                annot_stopper = True
+                                                                                        elif len(possible) >= 2:
+                                                                                                generalcheck = True
+                                                                                                for tpf in taxa_per_file:
+                                                                                                            if tpf in possible:
+                                                                                                                    match = next((l for l in dict_data if l['CleanName'] == tpf), None)
+                                                                                                                    possible_spec_abb = "".join(finalword) + " " + str(nextword)
+                                                                                                                    modifier = "species"
+                                                                                                                    self.AddAnnotation(possible_spec_abb, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                                                    skipper = True
+                                                                                                                    annot_stopper = True
+                                                                                                                    generalcheck == False
+                                                                                                            else:
+                                                                                                                continue
+                                                                                                for p in possible:
+                                                                                                    match = next((l for l in dict_data if l['CleanName'] == p), None)
+                                                                                                    duptxids.append(match['TaxID'])
+                                                                                                if generalcheck == True:  
+                                                                                                    strains[possible_spec_abb] = len(duptxids)
+                                                                                                    match = next((l for l in dict_data if l['TaxID'] == duptxids[0]), None) 
+                                                                                                    self.AddAnnotation(possible_spec_abb, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                                    annot_stopper = True
+                                                                                                    skipper = True
+                                                                                                else:
+                                                                                                    continue
+                                                                                        else:
+                                                                                            continue
+                                                                            elif newword in CleanNames: 
+                                                                
+                                                                                match = next((l for l in dict_data if l['CleanName'] == newword), None)
+                                                                                self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                skipper = False
+                                                                                annot_stopper = True 
+                                                                            
+                                                                            else:
+                                                                                continue
+                                                                    else:
+                                                                        if newword in CleanNames: 
+                                                                
+                                                                                match = next((l for l in dict_data if l['CleanName'] == newword), None)
+                                                                                self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                skipper = False
+                                                                                annot_stopper = True  
+                                                                        else:
+                                                                            continue
+                                                        except:
+                                                            problemwords.append([finalword, sentenceoffset])
+                                        else:
+                                             
+                                            for index, word in enumerate(wordlist):
+                                                annot_stopper = False # Allows the use of multiple annotations for the same word. 
+                                                idinuse = [] 
+                                                duptxids = [] 
+                                                if index != 0:
+                                                    
+                                                    sentenceoffset += (len(wordlist[index - 1])+ 1) 
+                                                else:
+                                                    sentenceoffset == 0 
+                                                if skipper == True:
+                                                    
+                                                    skipper = False
+                                                    continue
+                                                else:
+                                                    try:
                                                         
-                                                                        match = next((l for l in dict_data if l['CleanName'] == newword), None)
-                                                                        self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
-                                                                        skipper = False
-                                                                        annot_stopper = True 
+                                                        finalword = self.RemovePunc(word, [])             
+                                                        #wordlist[index] = finalword 
+                                                        
+                                                        newword = ""
+                                                        newword = self.CheckLatin(finalword, newword)
+                                                        if finalword.lower() in lcCleanNames:
+                                                                
+                                                                match = next((l for l in dict_data if l['CleanName'].lower() == finalword.lower()), None)
+                                                                
+                                                                if index <= len(wordlist) -2:
+                                                                                nextword = wordlist[index + 1]
+                                                                                if nextword not in [ 'sp.', 'spp.', 'gen.']:
+                                                                                    nextword = self.RemovePunc(nextword, [])  
+                                                                                    nextwordlc = self.RemovePunc(nextword, []).lower()  
+                                                                                newnextword = ""
+                                                                                newnextword = self.CheckLatin(nextword, newnextword) 
+                                                                                newnextwordlc = ""
+                                                                                newnextwordlc = self.CheckLatin(nextwordlc, newnextwordlc) 
+                                                                                possible_specieslc = finalword.lower() + " " + str(nextwordlc)
+                                                                                possible_plurallc = finalword.lower() + " " + str(newnextwordlc)
+                                                                                possible_species = finalword + " " + str(nextword)
+                                                                                possible_plural = finalword + " " + str(newnextword)
+                                                                        
+                                                                                            
+                                                                                #Genus species - Do not annotate the next word 
+                                                                                
+                                                                                if possible_specieslc in lcCleanNames:
+                                                                                    match = next((l for l in dict_data if l['CleanName'].lower() == possible_specieslc), None)
+                                                                                    modifier = "species"
+                                                                                    self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                    skipper = True
+                                                                                    annot_stopper = True
+                                                                                #Genus species(pl) - Do not annotate the next word
+                                                                                elif possible_plurallc in lcCleanNames:
+                                                                                    match = next((l for l in dict_data if l['CleanName'].lower() == possible_plurallc), None)
+                                                                                    modifier = "species"
+                                                                                    self.AddAnnotation(possible_plural, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                    skipper = True
+                                                                                    annot_stopper = True
+                                                                                # [Any] sp - Do not annotate the next word
+                                                                                elif nextword in ['sp', 'spp', 'sp.', 'spp.']:
+                                                                                    modifier = "species"
+                                                                                    self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                    skipper = True
+                                                                                    annot_stopper = True
+                                                                                # [Any] genus - Do not annotate the next word
+                                                                                elif nextword in ['genus', 'gen', 'gen.']:
+                                                                                    modifier = "genus"
+                                                                                    self.AddAnnotation(possible_species, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                    skipper = True
+                                                                                    annot_stopper = True
+                                                                                # [Any] Only one word, so continue to the next word.   (middle of text)
+                                                                                else:
+                                                                                    self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                    skipper = False
+                                                                                    annot_stopper = True
+                                                                # [Any] Only one word, so continue to the next word.   (words at the end of the text)
+                                                                elif index == len(wordlist) -1 :
+                                                                    self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                    skipper = False
+                                                                    annot_stopper = True
+                                                        
+                                                        else:
+                                                                if index <= len(wordlist) -2:
+                                                                        finalword = list(finalword)
+                                                                        nextword = wordlist[index + 1]
+                                                                        nextword = self.RemovePunc(nextword, []) 
                                                                     
+                                                                        possible_specieslc = "".join(finalword).lower() + " " + str(nextword).lower()
+                                                                        possible_spec = "".join(finalword) + " " + str(nextword)
+                                                                        nonregistered_genus = [cn for cn in lcCleanNames if "".join(finalword).lower() in cn.split(" ")]
+                                                                        #Non registered geni eg: Escherichia/Shigella  coli or Anguillina coli
+                                                                        if len(nonregistered_genus) >= 1:
+                                                                                for nrg in nonregistered_genus:
+                                                                                    if nrg == possible_specieslc:
+                                                                                            match = next((l for l in dict_data if l['CleanName'].lower() == nrg), None)
+                                                                                            modifier = "species"
+                                                                                            self.AddAnnotation(possible_spec, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                            skipper = True
+                                                                                            annot_stopper = True
+                                                                                    else:
+                                                                                        continue
+                                                                        #G. species
+                                                                        elif (len(finalword) == 2 and finalword[1] == '.' and finalword[0].isupper) or (len(finalword) == 1 and finalword[0].isupper):
+                                                                                    
+                                                                                    possible = [cn for cn in CleanNames if nextword in cn.split(" ") and cn.split(" ")[0][0] == finalword[0]]
+                                                                                    
+                                                                                    if len(possible) == 1:
+                                                                                            match = next((l for l in dict_data if l['CleanName'] == possible[0]), None)
+                                                                                            modifier = "species"
+                                                                                            self.AddAnnotation(possible_spec, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                            skipper = True
+                                                                                            annot_stopper = True
+                                                                                    elif len(possible) >= 2:
+                                                                                            generalcheck = True
+                                                                                            for tpf in taxa_per_file:
+                                                                                                        if tpf in possible:
+                                                                                                                match = next((l for l in dict_data if l['CleanName'] == tpf), None)
+                                                                                                                possible_spec_abb = "".join(finalword) + " " + str(nextword)
+                                                                                                                modifier = "species"
+                                                                                                                self.AddAnnotation(possible_spec_abb, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                                                skipper = True
+                                                                                                                annot_stopper = True
+                                                                                                                generalcheck == False
+                                                                                                        else:
+                                                                                                            continue
+                                                                                            for p in possible:
+                                                                                                match = next((l for l in dict_data if l['CleanName'] == p), None)
+                                                                                                duptxids.append(match['TaxID'])
+                                                                                            if generalcheck == True:  
+                                                                                                strains[possible_spec_abb] = len(duptxids)
+                                                                                                match = next((l for l in dict_data if l['TaxID'] == duptxids[0]), None) 
+                                                                                                self.AddAnnotation(possible_spec_abb, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                                annot_stopper = True
+                                                                                                skipper = True
+                                                                                            else:
+                                                                                                continue
+                                                                                    else:
+                                                                                        continue
+                                                                        elif newword.lower() in lcCleanNames: 
+                                                            
+                                                                            match = next((l for l in dict_data if l['CleanName'].lower() == newword.lower()), None)
+                                                                            self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                            skipper = False
+                                                                            annot_stopper = True 
+                                                                        
+                                                                        else:
+                                                                            continue
+                                                                else:
+                                                                    if newword.lower() in lcCleanNames: 
+                                                            
+                                                                            match = next((l for l in dict_data if l['CleanName'].lower() == newword.lower()), None)
+                                                                            self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                            skipper = False
+                                                                            annot_stopper = True  
                                                                     else:
                                                                         continue
-                                                            else:
-                                                                if newword in CleanNames: 
-                                                        
-                                                                        match = next((l for l in dict_data if l['CleanName'] == newword), None)
-                                                                        self.AddAnnotation(finalword, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
-                                                                        skipper = False
-                                                                        annot_stopper = True  
-                                                                else:
-                                                                    continue
                                                     
-                                                except:
-                                                    problemwords.append([finalword, sentenceoffset])
+                                                    except:
+                                                        problemwords.append([finalword, sentenceoffset])
                                         bar()
                                         # Post processing
                                      
