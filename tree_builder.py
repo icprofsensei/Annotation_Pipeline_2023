@@ -65,6 +65,7 @@ class TreeMaker:
                                         else:
                                                         iddict[str(i)] += factor 
                 total = max(iddict.values())
+                
                 #print(total)
                 #print(iddict)
                 viridis = ['#fde725',
@@ -168,11 +169,15 @@ class TreeMaker:
 '#450457',
 '#440154']
                 reverseviridis = viridis[::-1]
+                heavy = []
                 for key, value in iddict.items():
+                        if value > 1: 
+                                heavy.append(key)
                         placeindex = (value / total) * 100
                         placeindex = math.ceil(placeindex)
                         colourdict[key] = reverseviridis[placeindex - 1]
-                delivery = [colourdict, total]
+
+                delivery = [colourdict, total, heavy]
                 return(delivery) 
                                         
 
@@ -181,8 +186,9 @@ class TreeMaker:
                   node.optimal_scale_level = "full"
                   node.guiding_lines_type = 0
                   node.extra_branch_line_type = 0
-                  colourdict = self.colourselecter({})[0]
-                  
+                  delivery = self.colourselecter({})
+                  colourdict = delivery[0]
+                  tblabelled = delivery[2]
                   node.img_style["hz_line_type"] = 0
                   if node.get_children() == [] or node.name not in colourdict.keys():
                           node.img_style["hz_line_color"] = "#ffffff"
@@ -204,37 +210,8 @@ class TreeMaker:
                                                 continue
                                         else:
                                                 nohorline == True
-                        if node.img_style["hz_line_color"] in ['#fde725',
-'#f8e621',
-'#f1e51d',
-'#ece51b',
-'#e5e419',
-'#dfe318',
-'#d8e219',
-'#d0e11c',
-'#cae11f',
-'#c2df23',
-'#bddf26',
-'#b5de2b',
-'#addc30',
-'#a8db34',
-'#a0da39',
-'#9bd93c',
-'#93d741',
-'#8ed645',
-'#86d549',
-'#7fd34e',
-'#7ad151',
-'#73d056',
-'#6ece58',
-'#67cc5c',
-'#60ca60',
-'#5cc863',
-'#56c667',
-'#52c569',
-'#4cc26c',
-'#48c16e']:
-                                faces.add_face_to_node(RectFace(2, 2, fgcolor = colourdict[str(node.name)], bgcolor= 'black', label = {'text': node.name , 'font': 'arial', 'fontsize' : 7}), node, column = 0, position = "branch-bottom")      
+                        if node.name in tblabelled:
+                                faces.add_face_to_node(RectFace(4, 4, fgcolor = colourdict[str(node.name)], bgcolor= 'black', label = {'text': node.name , 'font': 'arial', 'fontsize' : 10}), node, column = 0, position = "branch-bottom")      
                   else: 
                         
                         node.img_style["size"] = 0
