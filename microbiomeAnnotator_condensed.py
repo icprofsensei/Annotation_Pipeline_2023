@@ -349,8 +349,7 @@ class Annotator:
                                                                         #G. species
                                                                         elif (len(finalword) == 2 and finalword[1] == '.' and finalword[0].isupper) or (len(finalword) == 1 and finalword[0].isupper):
                                                                                     
-                                                                                    possible = [cn for cn in CleanNames if nextword in cn.split(" ") and cn.split(" ")[0][0] == finalword[0]]
-                                                                                    
+                                                                                    possible = [cn for cn in CleanNames if nextword.lower() in cn.split(" ") and cn.split(" ")[0][0] == finalword[0]]
                                                                                     if len(possible) == 1:
                                                                                             match = next((l for l in dict_data if l['CleanName'] == possible[0]), None)
                                                                                             modifier = "species"
@@ -362,9 +361,9 @@ class Annotator:
                                                                                             for tpf in taxa_per_file:
                                                                                                         if tpf in possible:
                                                                                                                 match = next((l for l in dict_data if l['CleanName'] == tpf), None)
-                                                                                                                possible_spec_abb = "".join(finalword) + " " + str(nextword)
+                                                                                                                possible_spec_abbr = "".join(finalword) + " " + str(nextword)
                                                                                                                 modifier = "species"
-                                                                                                                self.AddAnnotation(possible_spec_abb, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                                                self.AddAnnotation(possible_spec_abbr, match, self.count, m, modifier, taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                                                                 skipper = True
                                                                                                                 annot_stopper = True
                                                                                                                 generalcheck == False
@@ -373,10 +372,11 @@ class Annotator:
                                                                                             for p in possible:
                                                                                                 match = next((l for l in dict_data if l['CleanName'] == p), None)
                                                                                                 duptxids.append(match['TaxID'])
+                                                                                            possible_spec_abbr = "".join(finalword) + " " + str(nextword)
                                                                                             if generalcheck == True:  
-                                                                                                strains[possible_spec_abb] = len(duptxids)
+                                                                                                strains[possible_spec_abbr] = len(duptxids)
                                                                                                 match = next((l for l in dict_data if l['TaxID'] == duptxids[0]), None) 
-                                                                                                self.AddAnnotation(possible_spec_abb, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
+                                                                                                self.AddAnnotation(possible_spec_abbr, match, self.count, m, " ", taxa_per_file, sentenceoffset, offsetoftext, strains, dict_data, duptxids, idinuse, needs_processing, base, annot_stopper)
                                                                                                 annot_stopper = True
                                                                                                 skipper = True
                                                                                             else:
