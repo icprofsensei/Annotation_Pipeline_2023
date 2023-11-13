@@ -1,0 +1,2693 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC6026117",
+            "inputfile": "../microbiome_corpus_HTML\\PMC6026117.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Differential preservation of endogenous human and microbial DNA in dental calculus and dentin",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 93,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Dental calculus (calcified dental plaque) is prevalent in archaeological skeletal collections and is\u00a0a rich source of oral microbiome and host-derived ancient biomolecules. Recently, it has been proposed that dental calculus may provide a more robust environment for DNA preservation than other skeletal remains, but this has not been systematically tested. In this study, shotgun-sequenced data from paired dental calculus and dentin samples from 48 globally distributed individuals are compared using a metagenomic approach. Overall, we find DNA from dental calculus is consistently more abundant and less contaminated than DNA from dentin. The majority of DNA in dental calculus is microbial and originates from the oral microbiome; however, a small but consistent proportion of DNA (mean 0.08\u2009\u00b1\u20090.08%, range 0.007\u20130.47%) derives from the host genome. Host DNA content within dentin is variable (mean 13.70\u2009\u00b1\u200918.62%, range 0.003\u201370.14%), and for a subset of dentin samples (15.21%), oral bacteria contribute\u2009>\u200920% of total DNA. Human DNA in dental calculus is highly fragmented, and is consistently shorter than both microbial DNA in dental calculus and human DNA in paired dentin samples. Finally, we find that microbial DNA fragmentation patterns are associated with guanine-cytosine (GC) content, but not aspects of cellular structure.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:04:00",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "23419751",
+                            "locations": {
+                                "length": 8,
+                                "offset": 1084
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 1442,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Dental calculus is a mineralized form of dental plaque1, a sequentially generated microbial biofilm2 that entraps microbial, dietary, host, and ambient debris during spontaneous calcification events3. Unlike body mucosal surfaces that have continual cell turnover, teeth do not remodel. Consequently, they are relatively stable environments for bacterial colonization during biofilm development4, making the formation of dental calculus difficult to prevent without mechanical removal. As a result, dental calculus is prevalent in the archaeological record, and due to its excellent morphological preservation, it has long been an attractive target for microscopic analysis5\u201311. More recently, dental calculus has been explored as a source of ancient DNA (aDNA) and has been shown to retain an excellent record of the human oral microbiome12\u201315. It may provide insights on ancient diet through isotopic analysis16, and it\u00a0serves as an alternative source of endogenous host DNA17.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2433,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Retrieving viable aDNA from archaeological sources, whether from skeletal tissues (bone and dentin) or from secondary substrates (dental calculus and paleofeces), is challenged by post-mortem decomposition, where temporal and environmental factors compromise the molecular stability of DNA. These degradative processes include oxidative and hydrolytic damage to individual bases, hydrolytic lesions on the sugar-phosphate backbone, DNA fragmentation due to nuclease activity, and general degradation by microorganisms involved in the decomposition process18,19. As a result, there is a reduction in the amount of recoverable DNA, and aDNA that is retrieved is characterized by predictable forms of damage, including extreme fragmentation, depurination, and high-levels of terminal cytosine deamination19\u201321. In addition to damage, ancient samples can acquire exogenous contamination that may obscure any remaining endogenous signal. Susceptibility to contamination and molecular degradation appears to be tissue specific, with petrous bone and tooth cementum generally exhibiting the highest proportions of endogenous human DNA among archaeological skeletal and soft tissues22\u201325. Recent studies have suggested that dental calculus may be more resistant to environmental contamination than other sources of aDNA, and higher overall DNA yields have been reported from dental calculus than from any other archaeological source14,17. While these attributes of dental calculus are compelling, they have been reported from a small number of samples that have been\u00a0insufficiently explored for additional variables such as temporal age, depositional context, or geographic location14,17,26. Therefore, the prospect of ancient dental calculus as a dependable source of well-preserved, endogenous aDNA (both host and oral microbiome derived) has yet to be rigorously and systematically tested.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4317,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In the present study, metagenomic sequence data from 48 paired dentin and dental calculus samples are compared to determine whether endogenous DNA exhibits a different degree of preservation in dental calculus than in dentin from the same individual. Individuals included in this study represent seven archaeological sites spanning diverse geographic, environmental, and temporal ranges. Thirty-six paired samples were selected from a single medieval cemetery in Kilteasheen, Ireland (here referred to as the regional sample set) in order to examine intra-site variation in preservation. Additionally, 12 paired samples from six different archaeological sites on three continents spanning a broad temporal range were selected to control for environment, burial context, time period, and individual dynamics that may impact preservation quality (here referred to as the global sample set) (Fig.\u00a01; Supplementary Table\u00a0S1). We compare DNA preservation within archaeological dental calculus and dentin from the same tooth, with a specific focus on four main measures: (1) DNA abundance, (2) microbial community composition and contamination, (3) human DNA content, and (4) DNA fragmentation and damage patterns. Our findings confirm that calculus yields more total DNA when compared to dentin, with a low, albeit consistent, proportion of endogenous human DNA. Microbial profiles of dental calculus suggest that it retains a robust signal of the human oral microbiome and is relatively resistant to exogenous contamination, while dentin is typically dominated by environmental microbial sources. A subset of dentin, however, contains DNA from oral bacteria (possibly deriving from postmortem colonization during decomposition processes), indicating that dentin may serve as an alternative source for DNA from individual oral microbes in some cases. With respect to DNA degradation, we find that DNA fragmentation patterns within dental calculus are associated with the genomic source of the DNA (human vs. microbial) but not with cellular structure (e.g., microbial cell wall type or presence of a surface-layer). Additionally, human DNA is consistently shorter in dental calculus than in paired dentin samples, which may reflect differences in the manner by which human DNA is incorporated into each matrix. Finally, we observe a systematic loss of short AT-rich DNA fragments that is particularly marked in bacteria with low to medium GC content genomes.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:04:52",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "23419752",
+                            "locations": {
+                                "length": 8,
+                                "offset": 5962
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:05:01",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "23419753",
+                            "locations": {
+                                "length": 8,
+                                "offset": 6723
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 6770,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "DNA abundance",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The total amount of DNA recovered from dental calculus is substantially higher than from dentin as measured by both fluorometric quantitation (Qubit) (Fig.\u00a02a) and quantitative PCR (qPCR) (Fig.\u00a02b). Immediately following extraction, DNA yields from dental calculus as measured by fluorometry ranged from 4.9\u2009ng/mg to 214.4\u2009ng/mg (median 72.1\u2009ng/mg), while dentin samples from the same individuals yielded 0.2\u2009ng/mg to 35.7\u2009ng/mg (median 4.8\u2009ng/mg). These measurements are moderately correlated (Pearson\u2019s coefficient: 0.59; 95% CI: 0.43, 0.72) to the average DNA copy number estimated after library construction using qPCR. This fit accounts for 34% of the total variance using a linear regression model (Fig.\u00a02b). Differences between the two methods may be artifacts of DNA library construction, during which inefficient ligation of universal adapters to the DNA fragments and several silica-based purification steps contribute to substantial, but stochastic, DNA loss27. While differences in DNA abundance are not as stark in the qPCR results, the overall amount of DNA recovered from dental calculus is significantly higher than from dentin using both metrics (fluorometry, p\u2009=\u20097.822e-11, Wilcoxon signed-rank paired test; qPCR, p\u2009=\u20096.941e-07, Wilcoxon signed-rank paired test).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8071,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Microbial community composition and contamination",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Overall, archaeological dental calculus and dentin contain microbial DNA from highly distinct communities. To explore these differences, shotgun-sequenced reads from the 48 dentin and dental calculus pairs were taxonomically binned for microbial identification using MALT28, and the resulting assignments were visualized using MEGAN29 (Supplementary Tables\u00a0S2 and S3). A species-level PCoA plot based on a Bray-Curtis dissimilarity matrix demonstrates that dental calculus samples form a relatively tight and cohesive group that is distinct from the more diffuse distribution of microbial communities identified within dentin (Fig.\u00a03a). Alpha diversity is significantly higher for dentin samples as compared to dental calculus (Mann-Whitney-U, p\u2009=\u20098.55E-15), consistent with a signal of external contamination (Supplementary Figure\u00a0S1). Differences in microbial community structure and composition between dentin, calculus, and blanks was further explored using linear discriminant analysis30. Dentin and blank samples are primarily discriminated by taxa that are environmentally abundant, while calculus samples are discriminated by typically oral taxa (see Supplementary Methods; Supplementary Table\u00a0S4). Importantly, microbial communities from each material (dental calculus or dentin) are less similar to their paired sample than they are to samples of the same material. This pattern is consistent with expectations that the microbial taxa within dental calculus represent a relatively well preserved biological community derived from dental plaque, while dentin \u2013 being sterile in life \u2013 is expected to harbor a microbial community primarily composed of exogenous contaminant bacteria acquired through stochastic postmortem processes.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:05:33",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "23419754",
+                            "locations": {
+                                "length": 8,
+                                "offset": 9753
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 9860,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Microbial community composition and contamination",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Two additional approaches were used to characterize further the nature and inferred sources of the microbial communities present within sample-types. First, microbial species-level identifications were categorized according to a nested scheme reflecting organism membership in one or more of the following source categories: environmental, uncultured environmental, human microbiome, human oral, pathobiont, and opportunistic pathogen (Fig.\u00a03b; Supplementary Table\u00a0S5), which were then visualized using the Krona Excel template31. Category membership was determined by species presence or absence in the Human Oral Microbiome Database32 as well as source and habitat descriptions in the twenty most recent articles in PubMed33 using the species name as the search keyword. Using this analysis, stark differences are observed in the inferred microbial source contributions to archaeological dental calculus and dentin, whereby dental calculus is strongly dominated by human-associated \u2013 and especially oral-associated \u2013 taxa, while dentin is primarily composed of environmental taxa (Supplementary Table\u00a0S6).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10967,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Microbial community composition and contamination",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "As a separate confirmation method, SourceTracker, a Bayesian source-prediction tool34, was used to estimate proportions of source similarity (Supplementary Table\u00a0S7) in dental calculus and dentin based on a set of modern reference microbial communities sequenced from human dental plaque35,36, human hand swabs37, and top soil samples from Oklahoma and Alaska38 (Fig.\u00a03c). The human hand swab reference community was included in this analysis to detect microbial contaminants introduced through handling during excavation or storage. In agreement with the other methods presented here, archaeological dental calculus is estimated to be composed primarily of dental plaque-associated taxa, while dentin is dominated by genera associated with human skin and environmental sources (Supplementary Table\u00a0S8). The highest predicted contributions of skin and soil to dental calculus samples are 7.9% and 14.0%, respectively, while the same predicted contributions for dentin are 33.5% and 89.0%, respectively. Together, these analyses suggest dental calculus is relatively robust to environmental contamination when compared to dentin.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12095,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Microbial community composition and contamination",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Although most dentin samples are strongly dominated by environmental taxa, two dentin samples from the site of Norris Farms \u2013 NF47 and NF217 \u2013 cluster with dental calculus samples in the PCoA (Fig.\u00a03a) and are estimated via SourceTracker analysis34 to contain microbial DNA that is 56.2% and 78.4% derived from dental plaque, respectively (Supplementary Figure\u00a0S2). Unlike other teeth in this study, the Norris Farms teeth were obtained in a fragmented state. Lacking the full intact teeth, the presence of carious lesions could not be ruled out. In addition, because caries are not associated with the presence, absence, or even abundance of specific organisms, we were not able to determine whether a carious lesion was present using metagenomic data alone39,40. For this reason, the Norris Farms samples were excluded from further downstream analyses.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12949,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Microbial community composition and contamination",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "In samples for which the tooth was intact, tooth dentin is generally strongly dominated by environmental taxa; however, a subset of dentin samples exhibit a slight signal of the human oral microbiome, ranging from 0.0% to 40.0%, with 7 of 46 dentin samples having a predicted oral source contribution of 20.0% or more by SourceTracker analysis (Supplementary Figure\u00a0S3). A PCoA and SourceTracker analysis including blanks confirms this oral signal is not due to laboratory-based contamination (Supplementary Figure\u00a0S4). Based on our classification scheme visualized by Krona plots, microbial DNA derived from human microbiome sources constituted a median of 98% (ranging from 90.1% to 99.3%) of the total microbial contribution in the calculus samples, whereas, for dentin, human microbiome DNA constitutes a median of 3.7% (ranging from 0.2% to 61%; Supplementary Table\u00a0S6).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13824,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Human DNA content",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Although typically higher than in dental calculus, the proportion of human endogenous DNA in dentin varies substantially, ranging more than 3 orders of magnitude in this study, from 0.034% to 70.1% of all reads (Fig.\u00a04a). By contrast, the proportion of human DNA in dental calculus is relatively low, but consistent across all samples, differing by less than 2 orders of magnitude, from 0.007% to 0.47%. To verify these reads as authentic host DNA and to mitigate the possibility that they represent spurious mapping to the human genome or modern contamination, a secondary verification procedure was performed. Here, only those reads that (1) met stringent mapping criteria when mapped to the hg19 human reference genome (see Supplementary Methods), (2) were assigned to the Homo sapiens node in lowest common ancestor assignment by MALT, and (3) displayed typical ancient DNA damage profiles41 were included in a high confidence human dataset for further inspection.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14809,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Human DNA content",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The number of human-assigned reads following strict mapping decreased across all samples but was more severe among samples from the Kilteasheen (regional) dataset. As the strict mapping parameters allow only one mismatch per 50 base pairs, this comparatively high loss of reads in the regional dataset likely results from the fact that these samples were sequenced using a single-end, 75 cycle sequencing strategy, rather than the paired-end 200 cycle sequencing strategy employed for the global sample set. Of all originally designated human reads in the regional dataset, between 20.7% to 60.9% of the dental calculus reads and 0.6% to 67.1% of dentin reads pass the initial strict mapping step. Within the global dataset, between 60.1% to 88.3% of dental calculus and 74.0% to 97.9% of dentin reads pass.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15616,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Human DNA content",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Reads passing strict mapping were next analyzed with MALT using the full NCBI nucleotide database as a reference to ensure proper assignment to Homo sapiens rather than to other organisms. Among all dental calculus samples, the proportion of reads uniquely assigned to the Homo sapiens node ranges from 79.6% to 90.3%. Within all dentin samples the proportion of reads assigned to Homo sapiens ranges from 81.1% to 92.7%.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16037,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Human DNA content",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Finally, to establish that these reads are consistent with patterns expected of authentic ancient host DNA and not modern contamination, rates of terminal cytosine deamination were evaluated using mapDamage 2.041. While damage rates declined (median 3% in dentin and 4% in calculus) after these verification steps (Wilcoxon sign rank test, dentin p\u2009=\u20091.36E-15, calculus p\u2009=\u20096.74E-15; See Supplementary Table\u00a0S9), all samples except one dentin (KT05, Supplementary Figure\u00a0S5d) present damage patterns consistent with authentic aDNA both pre- and post-verification. This contrasts with contaminant human DNA observed in the extraction and library blanks, which showed no evidence of DNA damage, and thus is consistent with modern human contamination (Supplementary Figure\u00a0S5; Supplementary Table\u00a0S10). Because the human DNA sequences present in the blanks lack damage, they are therefore unlikely to be the source of the damaged human reads in the dentin and calculus samples. Taken together, these analyses suggest that although a small subset of reads may be erroneously assigned to the human genome, most reads are likely correctly assigned, and these reads appear to be authentic ancient human DNA and not contamination.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17259,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Human DNA content",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Next, DNA fragmentation and damage patterns of human reads in paired dentin and dental calculus samples were compared for a subset of the samples for which paired-end DNA sequence data was generated (Supplementary Table\u00a0S11), which includes the entire global sample set (n\u2009=\u200910 individuals) and a representative subset of the regional sample set (n\u2009=\u200913 individuals). Overall, the median fragment lengths of total DNA recovered from both dental calculus (56\u201388\u2009bp, mean 72.8\u2009bp) and dentin (53\u2013105\u2009bp, mean 66.0\u2009bp) are short and fall within a size range expected for archaeological samples (Supplementary Table\u00a0S1). For each dental calculus sample, the median fragment length of human reads was found to be 15.5\u2009\u00b1\u20094.2\u2009bp shorter than the overall median fragment length of DNA in each sample, which is primarily microbial in origin (Fig.\u00a04b). Dentin samples, however, show no pattern with respect to human DNA fragment length compared to overall DNA fragment length. Because some dentin samples have a high endogenous human content, a separate analysis comparing the fragment length profile of human mapped reads and all non-human reads was performed (Supplementary Figure\u00a0S6). In calculus, there is a greater average magnitude of difference between the mean fragment length of human and non-human reads (calculus: 0.50\u2009\u00b1\u20090.15; dentin: 0.20\u2009\u00b1\u20090.17, Cohen\u2019s d), and the median length of non-human reads is consistently longer than that of human reads. Conversely, the magnitude of difference between human and non-human fragment length profiles in dentin is variable and inconsistent (Supplementary Table\u00a0S11). This analysis confirms that the observed differences in fragment length profiles between dentin and dental calculus is not the result of high human endogenous content of particular samples. Comparing human DNA in dental calculus and dentine, we find that human DNA within dental calculus is generally more fragmented than human DNA in paired dentin samples, with the median length of calculus-derived fragments being approximately 10.3\u2009bp\u2009\u00b1\u200912.0 shorter than that of dentin-derived fragments (Wilcoxon signed-rank test, p\u2009=\u20090.01178); however, this pattern is largely driven by the relatively long human DNA fragment lengths in dentin, and further work is needed to determine if this is an artifact of sample preparation or a true biological pattern.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19618,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Human DNA content",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We next investigated the relative degree of terminal cytosine deamination among human reads in dental calculus and dentin pairs from the same individual (Supplementary Figure\u00a0S7). Across all samples, the terminal cytosine deamination rate of dentin is significantly higher than dental calculus (p\u2009=\u20090.0009, Wilcoxon signed-rank test), yet there is no significant difference in the cytosine deamination in overhangs (\u03b4d, p\u2009=\u20090.49, Wilcoxon signed-rank test) or in double stranded regions (\u03b4s, p\u2009=\u20090.07, Wilcoxon signed-rank test). However, the average length of overhangs (\u03bb) is significantly different between all dentin and calculus samples (p\u2009=\u20090.04, Wilcoxon signed-rank test) (Supplementary Table\u00a0S9). These results suggest that while differential damage parameters may not be consistent between paired samples, some patterns may be predicted by sample type.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20480,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Microbial DNA fragmentation and damage patterns",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We next investigated fragmentation and terminal cytosine damage patterns for a selection of oral microbes preserved at high abundance within dental calculus in order to determine the impact of cell wall or genomic structure on aDNA preservation (Supplementary Table\u00a0S12). It has been previously suggested that cell wall composition may influence the preservation of microbial DNA in archaeological dental calculus and dentin13,42. Fifty oral bacteria were selected based on their frequency in the dataset and presence in the Human Oral Microbiome Database32 and categorized into groups based on whether they are known to be Gram stain positive or Gram stain negative, the presence or absence of a surface layer (S-layer), and overall genomic GC content (Figs\u00a05a and c). Additionally, a subset of 20 of these taxa that were highly abundant in our dataset was analyzed to examine species-level patterns of fragmentation (Fig.\u00a05b) and DNA damage (Fig.\u00a05d).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:07:40",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "23419755",
+                            "locations": {
+                                "length": 8,
+                                "offset": 20922
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 21480,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Microbial DNA fragmentation and damage patterns",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We found no indication of a relationship between terminal cytosine damage and microbial genomic source (Fig.\u00a05c,d, Supplementary Table\u00a0S13) nor a relationship between fragmentation and cell wall structure. However, we do see a small decline in average DNA fragment length in taxa with higher genomic GC content (Fig.\u00a05a). This pattern is also reflected among the 20-species subset of oral bacteria chosen for closer analysis, and reads assigned to Actinomyces radicidentis, the species with the highest GC content, have the largest displacement from the median fragment length of all selected taxa (Fig.\u00a05b).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:07:51",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "23419756",
+                            "locations": {
+                                "length": 8,
+                                "offset": 21869
+                            }
+                        },
+                        {
+                            "text": "Actinomyces radicidentis",
+                            "infons": {
+                                "identifier": "NCBI:txid111015",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:07:51",
+                                "parent_taxonomic_id": "NCBI:txid1654"
+                            },
+                            "id": "23419757",
+                            "locations": {
+                                "length": 24,
+                                "offset": 21928
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 22088,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "GC content shifts",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Finally, the relationship between fragment length and mean GC content was examined for five prevalent oral genera in dental calculus samples and a single prevalent soil genus in dentin samples to evaluate further the influence of genomic structure on microbial DNA survival. Genera were chosen to maximize the range of GC content with two genera each representing low, medium, and high-expected genomic GC content (Fig.\u00a06). Among all published genomes available in the NCBI genome database33, members of the genus Methanobrevibacter range in genomic GC content from 24.2% in M. wolinii to 32.6% in M. ruminantium. The common oral methanogen M. oralis is expected to have a GC content of 27.9%. Members of Fusobacterium also have low GC content, ranging from 26.0% (F. perfoetens) to 35.1% (F. necrophorum). Among the medium GC content genera, the GC content of Tannerella ranges from 37.7% (T. sp. CAG:118) to 56.5% (T. sp. oral taxon HOT-286), and Porphyromonas range from 42.7% (P. gingivicanis) to 56.3% (P. bennonis). Finally, for high GC content genera, Actinomyces ranges from 49.6% (A. coleocanis) to 73.1% (A. dentalis), and Streptomyces ranges from 56.4% (S. sp. WAC00263) to 71.1% (S. sp. NBRC110027). In comparing reads assigned to these genera in our samples, we detect an increase in GC content at shorter read lengths among all chosen genera except for Streptomyces, where no shift was observed. Importantly, this shift is greater for genera with moderate and low expected GC content. For example, in Methanobrevibacter and Fusobacterium the length at which the mean GC content begins to substantially shift (\u22651 z score) is 39\u2009bp and 48\u2009bp, respectively (Supplementary Figure\u00a0S8). This shift occurs at longer lengths for Tannerella and Porphyromonas at 59\u2009bp and 58\u2009bp, respectively, while Actinomyces does not present a substantial shift until 35\u2009bp. No shift is observed in Streptomyces, although this may occur in short fragments that are below the length-filtering threshold (30\u2009bp) used for this dataset.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Methanobrevibacter",
+                            "infons": {
+                                "identifier": "NCBI:txid2172",
+                                "type": "archaea_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:07:59",
+                                "parent_taxonomic_id": "NCBI:txid2159"
+                            },
+                            "id": "23419758",
+                            "locations": {
+                                "length": 18,
+                                "offset": 22602
+                            }
+                        },
+                        {
+                            "text": "M. wolinii",
+                            "infons": {
+                                "identifier": "NCBI:txid190977",
+                                "type": "archaea_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:00",
+                                "parent_taxonomic_id": "NCBI:txid2172"
+                            },
+                            "id": "23419759",
+                            "locations": {
+                                "length": 10,
+                                "offset": 22663
+                            }
+                        },
+                        {
+                            "text": "M. ruminantium",
+                            "infons": {
+                                "identifier": "NCBI:txid83816",
+                                "type": "archaea_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:16",
+                                "parent_taxonomic_id": "NCBI:txid2172"
+                            },
+                            "id": "23419760",
+                            "locations": {
+                                "length": 14,
+                                "offset": 22686
+                            }
+                        },
+                        {
+                            "text": "methanogen",
+                            "infons": {
+                                "identifier": "NCBI:txid224756",
+                                "type": "archaea_class",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:00",
+                                "parent_taxonomic_id": "NCBI:txid2290931"
+                            },
+                            "id": "23419761",
+                            "locations": {
+                                "length": 10,
+                                "offset": 22718
+                            }
+                        },
+                        {
+                            "text": "M. oralis",
+                            "infons": {
+                                "identifier": "NCBI:txid66851",
+                                "type": "archaea_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:00",
+                                "parent_taxonomic_id": "NCBI:txid2172"
+                            },
+                            "id": "23419762",
+                            "locations": {
+                                "length": 9,
+                                "offset": 22729
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid848",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:01",
+                                "parent_taxonomic_id": "NCBI:txid203492"
+                            },
+                            "id": "23419763",
+                            "locations": {
+                                "length": 13,
+                                "offset": 22793
+                            }
+                        },
+                        {
+                            "text": "F. perfoetens",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid852"
+                                ],
+                                "type": [
+                                    "bacteria_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:02",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid848"
+                                ]
+                            },
+                            "id": "23419764",
+                            "locations": {
+                                "length": 13,
+                                "offset": 22852
+                            }
+                        },
+                        {
+                            "text": "F. necrophorum",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid859"
+                                ],
+                                "type": [
+                                    "bacteria_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:02",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid848"
+                                ]
+                            },
+                            "id": "23419765",
+                            "locations": {
+                                "length": 14,
+                                "offset": 22877
+                            }
+                        },
+                        {
+                            "text": "Tannerella",
+                            "infons": {
+                                "identifier": "NCBI:txid195950",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:03",
+                                "parent_taxonomic_id": "NCBI:txid2005525"
+                            },
+                            "id": "23419766",
+                            "locations": {
+                                "length": 10,
+                                "offset": 22949
+                            }
+                        },
+                        {
+                            "text": "T. sp",
+                            "infons": {
+                                "identifier": "NCBI:txid1196081",
+                                "type": "fungi_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:03",
+                                "parent_taxonomic_id": "NCBI:txid2752537"
+                            },
+                            "id": "23419767",
+                            "locations": {
+                                "length": 5,
+                                "offset": 22978
+                            }
+                        },
+                        {
+                            "text": "T. sp",
+                            "infons": {
+                                "identifier": "NCBI:txid1196081",
+                                "type": "fungi_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:04",
+                                "parent_taxonomic_id": "NCBI:txid2752537"
+                            },
+                            "id": "23419768",
+                            "locations": {
+                                "length": 5,
+                                "offset": 23004
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas",
+                            "infons": {
+                                "identifier": "NCBI:txid836",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:04",
+                                "parent_taxonomic_id": "NCBI:txid171551"
+                            },
+                            "id": "23419769",
+                            "locations": {
+                                "length": 13,
+                                "offset": 23037
+                            }
+                        },
+                        {
+                            "text": "P. gingivicanis",
+                            "infons": {
+                                "identifier": "NCBI:txid266762",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:04",
+                                "parent_taxonomic_id": "NCBI:txid836"
+                            },
+                            "id": "23419770",
+                            "locations": {
+                                "length": 15,
+                                "offset": 23068
+                            }
+                        },
+                        {
+                            "text": "P. bennonis",
+                            "infons": {
+                                "identifier": "NCBI:txid501496",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:05",
+                                "parent_taxonomic_id": "NCBI:txid836"
+                            },
+                            "id": "23419771",
+                            "locations": {
+                                "length": 11,
+                                "offset": 23095
+                            }
+                        },
+                        {
+                            "text": "Actinomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:05",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "23419772",
+                            "locations": {
+                                "length": 11,
+                                "offset": 23147
+                            }
+                        },
+                        {
+                            "text": "A. coleocanis",
+                            "infons": {
+                                "identifier": "NCBI:txid103618",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:06",
+                                "parent_taxonomic_id": "NCBI:txid2692113"
+                            },
+                            "id": "23419773",
+                            "locations": {
+                                "length": 13,
+                                "offset": 23177
+                            }
+                        },
+                        {
+                            "text": "A. dentalis",
+                            "infons": {
+                                "identifier": "NCBI:txid272548",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:06",
+                                "parent_taxonomic_id": "NCBI:txid1654"
+                            },
+                            "id": "23419774",
+                            "locations": {
+                                "length": 11,
+                                "offset": 23202
+                            }
+                        },
+                        {
+                            "text": "Streptomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1883",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:06",
+                                "parent_taxonomic_id": "NCBI:txid2062"
+                            },
+                            "id": "23419775",
+                            "locations": {
+                                "length": 12,
+                                "offset": 23221
+                            }
+                        },
+                        {
+                            "text": "S. sp",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid641062",
+                                    "NCBI:txid1926389"
+                                ],
+                                "type": [
+                                    "bacteria_species",
+                                    "fungi_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:06",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid2593676",
+                                    "NCBI:txid2644703"
+                                ]
+                            },
+                            "id": "23419776",
+                            "locations": {
+                                "length": 5,
+                                "offset": 23252
+                            }
+                        },
+                        {
+                            "text": "S. sp",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid641062",
+                                    "NCBI:txid1926389"
+                                ],
+                                "type": [
+                                    "bacteria_species",
+                                    "fungi_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:07",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid2593676",
+                                    "NCBI:txid2644703"
+                                ]
+                            },
+                            "id": "23419777",
+                            "locations": {
+                                "length": 5,
+                                "offset": 23279
+                            }
+                        },
+                        {
+                            "text": "Streptomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1883",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:09",
+                                "parent_taxonomic_id": "NCBI:txid2062"
+                            },
+                            "id": "23419778",
+                            "locations": {
+                                "length": 12,
+                                "offset": 23455
+                            }
+                        },
+                        {
+                            "text": "Methanobrevibacter",
+                            "infons": {
+                                "identifier": "NCBI:txid2172",
+                                "type": "archaea_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:10",
+                                "parent_taxonomic_id": "NCBI:txid2159"
+                            },
+                            "id": "23419779",
+                            "locations": {
+                                "length": 18,
+                                "offset": 23603
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid848",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:10",
+                                "parent_taxonomic_id": "NCBI:txid203492"
+                            },
+                            "id": "23419780",
+                            "locations": {
+                                "length": 13,
+                                "offset": 23626
+                            }
+                        },
+                        {
+                            "text": "Tannerella",
+                            "infons": {
+                                "identifier": "NCBI:txid195950",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:13",
+                                "parent_taxonomic_id": "NCBI:txid2005525"
+                            },
+                            "id": "23419781",
+                            "locations": {
+                                "length": 10,
+                                "offset": 23823
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas",
+                            "infons": {
+                                "identifier": "NCBI:txid836",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:13",
+                                "parent_taxonomic_id": "NCBI:txid171551"
+                            },
+                            "id": "23419782",
+                            "locations": {
+                                "length": 13,
+                                "offset": 23838
+                            }
+                        },
+                        {
+                            "text": "Actinomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:13",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "23419783",
+                            "locations": {
+                                "length": 11,
+                                "offset": 23892
+                            }
+                        },
+                        {
+                            "text": "Streptomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1883",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:08:14",
+                                "parent_taxonomic_id": "NCBI:txid2062"
+                            },
+                            "id": "23419784",
+                            "locations": {
+                                "length": 12,
+                                "offset": 23978
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 24128,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Dental calculus is a richer source of genetic material than dentin",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In agreement with the findings of previous studies14,17, overall DNA recovery from ancient dental calculus was found to be substantially higher than from dentin, and this pattern is consistent through time and across preservation contexts. This higher DNA content of archaeological dental calculus compared to dentin likely reflects biological differences between the two substrates in cellular composition and structure during life, as well as decomposition patterns after death.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24684,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Dental calculus is a richer source of genetic material than dentin",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Dental calculus is formed from dental plaque, a dense microbial biofilm that has been estimated to contain more than 200 million cells per milligram43. Approximately 70% of the dry weight of plaque consists of microbial cells44, and a large proportion of the biofilm matrix itself is composed of extracellular bacterial DNA, which provides both structural support and protection to its microbial inhabitants45. Furthermore, the mineralization process that leads to dental calculus formation involves rapid inter- and intracellular crystal formation by calcium phosphates, including hydroxyapatite, which strongly bind DNA. The result is a dense crystalline structure that is relatively inert and resistant to microbial attack, enzymatic action, and non-acidic chemical alteration46. Although the surface of dental calculus remains porous47, penetration of substances towards the internal layers of the calculus matrix is restricted48, which may account for its high DNA preservation qualities. Calculus is not an entirely closed system, however. It has been shown to disproportionately lose soluble small metabolites over time49, suggesting that the mineralized matrix allows some degree of water movement.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25890,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Dental calculus is a richer source of genetic material than dentin",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In contrast to dental calculus, dental hard tissues are largely acellular, with live cells in mature teeth being limited to a layer of odontoblasts lining the pulp chamber wall, a sparse distribution of entrapped cementocytes within apical cementum, and a layer of cementoblasts around the periodontal ligament44,50,51. Most cells within teeth are instead found within the dental pulp and consist of perivascular cells, blood cells, and pulpal blood vessels44,52, all of which decompose readily after death through a combination of necrosis and microbial invasion3. Thus, while the majority of cells within dental calculus are found within a mineralized structure conducive to preservation, the majority of cells within teeth are not, which may partially explain the large differences in total DNA yield between the two substrates. However, further studies of total DNA yields from freshly extracted teeth and their component tissues are needed to fully understand these differences.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26873,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Dental calculus and dentin harbor distinct microbial communities",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Microbial DNA obtained from dental calculus and dentin derives from distinct communities. In agreement with previous studies3,14, the microbial community in dental calculus is dominated by human-associated oral taxa, and DNA derived from these organisms greatly exceeds that originating from environmental sources. The consistent preservation of a strong oral microbiome signal in all 48 dental calculus samples in this study suggests that this pattern is typical for archaeological dental calculus. By contrast, microbial DNA within dentin primarily derives from environmental sources. This distinction between the two substrates is preserved across geography, burial environment, and temporal period.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27639,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Dental calculus and dentin harbor distinct microbial communities",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "The tight clustering of all calculus samples included in this study, in contrast to the diffuse distribution of dentin samples in the PCoA (Fig.\u00a03a), indicates that the oral microbiome signal is relatively uniform and stable across diverse contexts, as expected for a preserved biological community. In comparison, the diffuse distribution of dentin samples reflects the diverging influences of exogenous microbes from different environmental contexts and the absence of a consistent microbial composition. Despite the presence of DNA belonging to oral microbes in some dentin samples, none of those included in this analysis join the calculus cluster, indicating they are the\u00a0result of stochastic preservation of particular oral microbes and do not retain a signal of a biological community.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28431,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Dentin is a source of oral microbial DNA",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Although most microbial DNA within dentin is environmental in origin, we find that oral bacteria contribute >20% of total DNA in 7 of 46 dentin samples in this study. Notably, the teeth in this study (with the exception of the two excluded Norris Farms teeth) could be confirmed to be free of oral pathology, such as caries, and the dentin collection procedure included either surface cleaning or only the pulp chamber was sampled. Thus, dental infection and incomplete calculus removal are unlikely explanations for the presence of oral microbial DNA we observe in dentin. Our results agree with recently reported data53, in which human-associated microbes constituted ~15% of the organisms identified in a metagenomic study of over 100 archaeological, root-derived dentin samples. These findings suggest that members of the oral microbiome may also participate in postmortem dental decomposition, although to a lesser extent than environmental microbes.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:09:03",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "23419785",
+                            "locations": {
+                                "length": 8,
+                                "offset": 28519
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 29426,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Dentin is a source of oral microbial DNA",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "The presence of DNA from oral taxa in dentin has important implications for the study of ancient commensal microbes and their evolution. Although prevalent, dental calculus is not always present or preserved in archaeological skeletal collections. Additionally, dental calculus may be absent or found in low abundance in young individuals or for certain populations or time periods due to genetic, dietary, or behavioral differences. If insufficient calculus is available for study, it may be possible to instead access aspects of the oral microbiome through tooth dentin. Although the stochastic processes of postmortem microbial growth would preclude oral microbiome community-level analyses, genetic sequencing of dentin could nevertheless provide access to the genomes of individual oral taxa for analysis.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30236,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Dental calculus is a source of host DNA",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Although dentin generally contains a higher proportion of total human DNA than dental calculus, many dental calculus samples in this study have comparable proportions of human DNA to their dentin pair, with one dental calculus sample from the Netherlands (S454) having a higher proportion of DNA assigned to the human genome than its paired dentin sample (Supplementary Table\u00a0S9). This pattern is largely driven by the high variability of human DNA preservation within dentin.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30751,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Dental calculus is a source of host DNA",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Except in cases of blood-borne infections that infiltrate the pulp chamber and expose pathogen DNA to the dentin matrix42, nearly all DNA in dentin should originate from the host genome at the time of death. However, archaeological teeth typically contain low proportions of human DNA due to postmortem degradation and exogenous microbial growth. By contrast, the relative proportion of human DNA is uniformly low and relatively consistent in dental calculus. When dentin is strongly degraded and the relative proportion of host DNA in dentin is very low (<0.1%), the absolute amount of human DNA within dental calculus can exceed that of dentin. In such cases, the genetic richness of dental calculus appears to compensate for its low relative proportion of human DNA. Although obtaining host DNA from dental calculus using shotgun sequencing is generally inefficient given its low relative abundance, dental calculus has been shown to be a valuable reservoir for recovering host DNA using DNA capture methods17.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31764,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Human DNA in dental calculus is highly fragmented",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "We find human DNA from dental calculus to be consistently shorter than the total DNA from the same sample, and on average shorter than human DNA recovered from the paired dentin sample. As a microbial biofilm, dental calculus is not a human tissue and does not contain viable human cells. The mechanisms by which human DNA is incorporated into dental calculus are not well understood but are presumed to include passive adsorption of human DNA from oral fluids and shed mucosal cells, as well as more active incorporation through host inflammatory responses, including a kind of immune response mediated by neutrophils known as NETosis14,54. Neutrophils, the most abundant nucleated cell type in human blood, are an essential cell type of the innate immune system that are recruited during active microbial infection55. Particularly important in the pathogenesis of periodontal disease, neutrophils are recruited in high numbers into the gingival crevice to attack dental plaque bacteria45,56. Previous research has found that most human proteins recovered from both modern and ancient dental calculus are associated with the innate immune system, and specifically with neutrophils14.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32997,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Human DNA in dental calculus is highly fragmented",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "If host immune activity is a major contributor of human DNA to dental calculus, the role of neutrophils in this activity may partially explain the higher degree of human DNA fragmentation in dental calculus than in dentin. While neutrophils and other immune cells are capable of phagocytizing individual or small aggregates of microbial cells, large pathogens or those that can thwart phagocytosis by forming biofilms stimulate the formation of neutrophilic extracelluar traps (NETs)57,58. NETs are composed of decondensed chromatin that is released from the nuclear membrane and mixed with disarticulated histones and granules containing antimicrobial proteins before being ejected from the cell55,58\u201360. The expelled chromatin traps the offending microbes while simultaneously promoting destruction of the entrapped cells55. Interestingly, along with the granular proteins, disarticulated histones and short fragments of DNA (<100\u2009bp) are also potent antimicrobials, likely increasing the antibiotic effect of NETs59,61.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34019,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Human DNA in dental calculus is highly fragmented",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Many bacteria have been shown in vitro to stimulate NETosis, including the oral bacteria Porphyromonas gingivalis and Aggregatibacter actinomycetemcomitans62. Moreover, certain bacteria subvert NETosis by producing extracellular nucleases (DNases) which are either bound to the cell membrane or secreted from the cell63. These nucleases free trapped bacteria by degrading the DNA backbone of the excreted NETs55. This activity is particularly prevalent during periodontal disease, and a wide range of oral bacteria including P. gingivalis, Tannerella forsythia, Fusobacterium nucleatum, and Parvimonas micra are able to produce extracellular nucleases45.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:10:04",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "23419786",
+                            "locations": {
+                                "length": 8,
+                                "offset": 34024
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:10:05",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "23419787",
+                            "locations": {
+                                "length": 8,
+                                "offset": 34099
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas gingivalis",
+                            "infons": {
+                                "identifier": "NCBI:txid837",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:10:05",
+                                "parent_taxonomic_id": "NCBI:txid836"
+                            },
+                            "id": "23419788",
+                            "locations": {
+                                "length": 24,
+                                "offset": 34108
+                            }
+                        },
+                        {
+                            "text": "Aggregatibacter",
+                            "infons": {
+                                "identifier": "NCBI:txid416916",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:10:05",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "23419789",
+                            "locations": {
+                                "length": 15,
+                                "offset": 34137
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:10:05",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "23419790",
+                            "locations": {
+                                "length": 8,
+                                "offset": 34196
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:10:07",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "23419791",
+                            "locations": {
+                                "length": 8,
+                                "offset": 34369
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:10:09",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "23419792",
+                            "locations": {
+                                "length": 8,
+                                "offset": 34525
+                            }
+                        },
+                        {
+                            "text": "P. gingivalis",
+                            "infons": {
+                                "identifier": "NCBI:txid837",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:10:09",
+                                "parent_taxonomic_id": "NCBI:txid836"
+                            },
+                            "id": "23419793",
+                            "locations": {
+                                "length": 13,
+                                "offset": 34544
+                            }
+                        },
+                        {
+                            "text": "Tannerella forsythia",
+                            "infons": {
+                                "identifier": "NCBI:txid28112",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:10:09",
+                                "parent_taxonomic_id": "NCBI:txid195950"
+                            },
+                            "id": "23419794",
+                            "locations": {
+                                "length": 20,
+                                "offset": 34559
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium nucleatum",
+                            "infons": {
+                                "identifier": "NCBI:txid851",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:10:09",
+                                "parent_taxonomic_id": "NCBI:txid848"
+                            },
+                            "id": "23419795",
+                            "locations": {
+                                "length": 23,
+                                "offset": 34581
+                            }
+                        },
+                        {
+                            "text": "Parvimonas micra",
+                            "infons": {
+                                "identifier": "NCBI:txid33033",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:10:09",
+                                "parent_taxonomic_id": "NCBI:txid543311"
+                            },
+                            "id": "23419796",
+                            "locations": {
+                                "length": 16,
+                                "offset": 34610
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 34673,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Human DNA in dental calculus is highly fragmented",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "If host DNA is incorporated into dental calculus in an acellular form \u2013 either through NETosis or by another mechanism \u2013 the exposed DNA would be vulnerable to a variety of damaging processes, including both hydrolysis and extracellular nuclease activity. This may explain why, even within the same sample, human DNA within dental calculus exhibits a higher level of fragmentation than DNA derived from oral microbes64.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35092,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Cell wall structure is not correlated with microbial DNA fragmentation or damage",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "It has been previously proposed that certain microbial cell wall attributes, such as the presence (Gram-positive) or absence (Gram-negative) of a thick peptidoglycan layer, may influence the preservation of microbial DNA and therefore contribute to biases in taxonomic analyses of archaeological dental calculus13. However, a subsequent investigation of four dental calculus samples failed to find such a correlation26. In this study, we test this hypothesis in 48 dental calculus samples and find no relationship between attributes such as cell wall peptidoglycan structure or the presence of an S-layer and DNA fragmentation or terminal cytosine damage patterns. This analysis does not preclude other aspects of cellular structure (e.g., spore formation or the presence of mycolic acids) that may impact aDNA preservation and were not tested in this study. Our analysis of reads assigned to specific bacteria suggests that fragmentation and damage patterns may be taxonomically structured. However, the consistency and biological basis of these patterns is beyond the scope of the data presented here.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:10:25",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "23419797",
+                            "locations": {
+                                "length": 8,
+                                "offset": 35994
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 36275,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Loss of short AT-rich DNA fragments may contribute to taxonomic skew",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Analysis of the relationship between genomic GC content, DNA fragment GC content, and DNA fragment length reveals an inverse relationship between DNA fragment length and GC content in taxa with low- and medium-GC genomes, suggesting a systematic loss of short AT-rich fragments. Short DNA fragments lack thermostability and are easily lost through denaturation. The melting temperature of short DNA fragments is primarily dependent on DNA sequence and length, in addition to environmental conditions and other factors65, and in general sequences with longer lengths and higher GC content have higher melting temperatures. Short DNA fragments from taxa with lower GC content genomes are expected to be more susceptible to loss through denaturation because their melting point for a given fragment length will be lower, and this may contribute to taxonomic skew. Consistent with this hypothesis, we found that high GC-content genera had slightly shorter median fragment lengths overall (Fig.\u00a05b), which accords with a higher retention of short DNA fragments.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37399,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Loss of short AT-rich DNA fragments may contribute to taxonomic skew",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Although we observe these patterns in archaeological dental calculus, it is unclear if this is an artifact introduced during sequencing preparation or a naturally occurring taphonomic process. Importantly, this effect is weaker or absent from high genomic GC content genera (Fig.\u00a06), which include many soil bacteria66. If the loss of short AT-rich fragments is primarily taphonomic and not methodological in nature, greater taxonomic skew may be expected in libraries generated using a single-stranded library preparation, which is known to retain a higher proportion of shorter DNA fragments than the double-stranded DNA library preparation method used in this study67. Documentation of potential taxonomic-specific biases in recovery of DNA is critical as they impact downstream interpretations of metagenomic data, affecting accurate description of these ancient microbial ecosystems.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38287,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Loss of short AT-rich DNA fragments may contribute to taxonomic skew",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In this study, we use metagenomic sequencing data to explore patterns of preservation in microbial- and host-derived DNA in a large and diverse set of paired archaeological dentin and dental calculus samples (n\u2009=\u200948 individuals, n\u2009=\u200996 samples). Our results confirm that dental calculus is a rich source of well-preserved oral microbiome DNA and a consistent source of highly fragmented and low abundance human DNA. We find that cell wall structure has no significant association with microbial DNA preservation, but that all samples exhibit systematic loss of short AT-rich DNA fragments, a trend that disproportionately affects taxa with low and moderate GC content genomes. Finally, we show that approximately one third of teeth retain DNA from the oral microbiome and thus dentin may serve as an alternative source of oral bacterial DNA in the absence of preserved dental calculus deposits. Our findings demonstrate that dental calculus provides a favorable environment for long-term DNA preservation.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39292,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Samples and DNA extraction",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Paired dental calculus and dentin samples were obtained from seven geographically and temporally distinct sites: Middenbeemster in the Netherlands (n\u2009=\u20092, ca. 1611\u20131866 CE)68, Camino del Molino in southeastern Iberia (n\u2009=\u20092, cal. 2340\u20132920 BCE)69, Samdzong in Nepal (n\u2009=\u20092, cal. 400\u2013650 CE)70,71, Arbulag Soum, Kh\u00f6vsg\u00f6l in Mongolia (n\u2009=\u20092, 930\u20131650 BCE)72, Anse \u00e0 La Gourde in Guadeloupe (n\u2009=\u20092, cal. 975\u20131395 CE26), Norris Farms in IL, USA (n\u2009=\u20092, ca. 1300 CE)17,73, and Kilteasheen in Ireland (n\u2009=\u200936, ca. 600\u20131300 CE)74 (Supplementary Table\u00a0S1). The first six sites were selected to represent global patterns of DNA preservation across diverse environments, burial contexts, and time periods. Remains and data from this site are referred to as the global dataset. A more extensive sampling of a single site in Kilteasheen, Ireland was performed to account for regional DNA preservation between individuals with similar burial contexts across a time transect of approximately six centuries. Remains and data from this site are referred to as the regional dataset.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40390,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Global sample set",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Samples were prepared for sequencing in a dedicated ancient DNA laboratory at the Laboratories of Molecular Anthropology and Microbiome Research (LMAMR) in Norman, Oklahoma, USA. With the exception of the previously processed Norris Farms samples (see Ozga et al.17), teeth were first decontaminated with bleach, then the calculus was separated using a dental scaler. The crown was separated from the root using a Dremel rotary tool. Partitioned tooth roots and calculus were further decontaminated via exposure to UV irradiation for 2\u2009minutes. DNA extraction was performed as described by Ziesemer et al.26. Approximately 10\u201320\u2009mg of dental calculus and 100\u2009mg of dentin were crushed and then immersed in 1\u2009ml of 0.5 EDTA for 15\u2009minutes to remove any additional surface contaminants. Dental calculus samples were demineralized in a solution of 0.45\u2009M EDTA and 10% proteinase K (Qiagen, the Netherlands) at 37\u201355\u2009\u00b0C for 8\u201312\u2009hours followed by room temperature incubation for five days until digestion was complete. Dentin samples were demineralized at room temperature. After 2 days, the EDTA supernatant was removed and refreshed with new EDTA and 50\u2009\u03bcl of proteinase K (Qiagen, the Netherlands). Dentin samples were then left to demineralize for an additional 3 days at room temperature. The two dentin fractions were combined after digestion was complete. Prior to demineralization, all samples were centrifuged and the supernatant was used for DNA extraction using a phenol-chloroform-isoamyl alcohol (25:24:1) along with three blanks. Extracted DNA was isolated using a modified Qiagen MinElute silica spin column purification protocol. Extracted DNA was eluted twice for a total volume of 60\u2009\u03bcl, and quantified using a Qubit High Sensitivity fluorometer (Life Technologies) (Supplementary Table\u00a0S1).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42212,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Regional sample set",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Samples were prepared and extracted in the paleogenetics clean room at the Institute for Archaeological Sciences, University of T\u00fcbingen (INA). The surface of the dedicated sampling hood was cleaned with HPLC water and UV irradiated by an internal light source between uses. Any calculus was removed from the surfaces of the teeth using dental scalers that had been rinsed with bleach and HPLC water and UV irradiated for 10\u2009minutes between uses. Large calculus samples were pulverized with a tube pestle. Teeth were then sectioned horizontally at the cementoenamel junction and dentin was drilled from the pulp chamber using a dental drill. For calculus samples weighing over 20\u2009mg, half the pulverized material was carried over for extraction. For dentin samples over 70\u2009mg, aliquots of approximately 50\u2009mg were taken for extraction. Dentin and calculus samples were extracted using a previously described silica-based method75. In brief, samples were submerged in a digestion buffer with final concentrations of 0.45\u2009M EDTA and 0.25\u2009mg/mL proteinase K (Qiagen, the Netherlands) and rotated at 37\u2009\u00b0C until decalcified. After incubation, samples were centrifuged and the supernatant was purified using a 5\u2009M guanidine-hydrochloride binding buffer with High Pure Viral Nucleic Acid Large Volume kits (Roche, Switzerland). The extracts were eluted in 100\u2009\u03bcl of a 10\u2009mM tris-hydrochloride, 1\u2009mM EDTA (pH 8.0), and 0.005% tween-20 buffer (TET). One extraction blank was prepared for every ten samples, and one positive control of cave bear bone powder was processed alongside each extraction batch to ensure efficiency. The extracts were quantified using a Qubit High Sensitivity fluorometer (Life Technologies) (Supplementary Table\u00a0S1).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43965,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Global sample set ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Approximately 100\u2009ng of DNA was built into each Illumina shotgun library at the LMAMR, Norman, Oklahoma using NEBNext DNA Library Prep Master Set (E6076) and blunt-end modified Illumina adapters. Manufacturer\u2019s instructions were followed with the exception of Nebulization. Blunt-end repair was performed using 50\u2009\u03bcl reactions with 30\u2009\u03bcl of DNA extract for each sample which was then incubated for 20\u2009min at 12\u2009\u00b0C and 15\u2009min at 37\u2009\u00b0C and purified using Qiagen MinElute silica spin columns following the manufacturer\u2019s instructions. All samples were eluted in 30\u2009\u03bcl. Following blunt-end repair, Illumina adapters were ligated in 50\u2009\u03bcl reactions. Reactions were incubated for 15\u2009minutes at 20\u2009\u00b0C and purified using Qiagen QiaQuick columns before elution in 30\u2009\u03bcl EB. Samples were then incubated for 20\u2009minutes at 37\u2009\u00b0C followed by 20\u2009min at 80\u2009\u00b0C in a final volume of 50\u2009\u03bcl for adapter fill-in. Libraries were quantified using a real-time quantitative PCR assay (qPCR, Lightcycler 480 Roche) targeting the IS7 and IS8 sequences in the universal Illumina adapters (Supplementary Table\u00a0S1). Libraries were amplified and dual-indexed in a 50\u2009\u03bcl PCR reaction using 15\u2009\u03bcl template, 25\u2009\u03bcl of a 2\u2009\u00d7\u2009KAPA U\u2009+\u2009master mix, 5.5\u2009\u03bcl H2O, 1.5\u2009\u03bcl DMSO, 1\u2009\u03bcl BSA (20\u2009mg/ml), and 1\u2009\u03bcl of each forward and reverse index (10\u2009\u03bcl\u2009\u03bcM). Thermocycling conditions were 5\u2009min at 98\u2009\u00b0C followed by 10\u201312 cycles of 15\u2009seconds at 98\u2009\u00b0C, 20\u2009seconds at 60\u2009\u00b0C, and 20\u2009seconds at 72\u2009\u00b0C, followed by a final elongation step for 1\u2009minute at 72\u2009\u00b0C. Amplified libraries were then purified using Agencourt AMPure XP beads and eluted in 30\u2009\u03bcl EB. Samples were sent for sequencing on an Illumina HiSeq2500 using a paired-end, 200-cycle, rapid-run chemistry. Samples were sequenced to an average depth of 36 million reads (Supplementary Table\u00a0S1), and blanks were sequenced to a depth of 0.4\u20131 million reads (Supplementary Table\u00a0S10). Deeper sequencing of the blanks was not performed because a high degree of clonality was already achieved at this depth of sequencing.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46009,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Regional Sample Set ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Double-stranded Illumina libraries were built using 10\u2009\u03bcl of extract for each sample according to an established protocol76. Purification of the blunt-end repair and adapter ligation steps was performed using Qiagen MinElute columns. After the adapter fill-in step, the Bst polymerase was deactivated with a 20\u2009minute incubation at 80\u2009\u00b0C. A single library blank was used for every ten samples. The libraries were then quantified using real-time qPCR assay (Lightcycler 480 Roche) targeting the IS7 and IS8 sequences of the universal Illumina adapters (Suppelementary Table\u00a0S1). Each library was assigned a unique pair of indices, added to the library over 2\u201315 indexing reactions per library. Libraries were double-indexed77 in 100\u2009\u03bcl reactions using varied amounts of template and H2O based on library richness, 10\u2009\u03bcl PfuTurbo buffer, 1\u2009\u03bcl PfuTurbo (Agilent Technologies), 1\u2009\u03bcl dNTP mix (25\u2009mM), 1.5\u2009\u03bcl BSA (10\u2009mg/ml), and 2\u2009\u03bcl of each indexing primer (10\u2009\u03bcM). The reactions were purified, pooled, and eluted over MinElute columns in 50\u2009\u03bcl TET. Efficiency of the indexing reactions was evaluated using a qPCR assay. Approximately one-third of each indexed library was amplified using 3\u20135\u2009\u03bcl of template in 70\u2009\u03bcl reactions with Herculase II Fusion DNA Polymerase (Agilent Technologies). Products for each sample were pooled and quantified using an Agilent Tape Station D1000 Screen Tape kit. Amplified sample and blank libraries were pooled into two 10\u2009nM pools for shotgun sequencing. Samples and blanks were sequenced separately on Illumina NextSeq500 using single-end, 75-cycle, high-output kits. Samples were sequenced to a depth of approximately 5 million reads per library (Supplementary Table\u00a0S1), and blanks were sequenced to a depth of 157,109 to 841,776 reads (Supplementary Table\u00a0S10). Additionally, thirteen individuals of the regional sample set were re-sequenced using paired-end 150-cycle chemistry on an Illumina NextSeq500 so they could be included in fragment length analyses.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48023,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Computational Methods ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Sequencing data from the global and regional sample sets were computationally processed identically using EAGER v1.9278. In brief, adapters were removed, paired-end data merged, and reads quality filtered using Clip&Merge78 with a minimum base quality of 20 and a minimum fragment length of 30. Processed reads were then taxonomically binned using MALT version 03828 and the full NCBI nucleotide database (\u2018nt\u2019, April 2016) with an 85% identity threshold, a minSupportPercent threshold of 0.01, and a topPercent value of 1.0 (Supplementary Tables\u00a0S2, S3, S14). Metagenomic profiles were analyzed with MEGAN6 CE29 and screened for specific taxonomic levels for fragment length and damage pattern profiles using a RMA file format parsing script79. Length and damage patterns were visualized using the ggplot280 and lattice81 libraries in R. For all fragment length and damage rate analyses only those samples that were paired end sequenced were used. Additionally, only merged reads were considered to prevent artifacts brought on by unmerged pairs, the maximum length of which is fixed. Mapping to the human genome (hg19) was performed using BWA (\u2212n 0.01, \u2212l 1000, \u2212q 30)82 as implemented in EAGER v1.9278. A normalized taxon table with species-level assigned reads (Supplementary Table\u00a0S2) was exported from the bacterial and archaeal sub-trees in MEGAN and used to generate a Bray-Curtis taxonomic distance matrix in R using the vegan library (version 2.4\u20131)83. Principal coordinates were generated using the R ape library84 and visualized as a PCoA plot using ggplot280. The same taxon table was used to produce microbial profiles of each sample according to isolation source within a nested classification scheme85. This scheme illustrates the relative environmental and human microbial contributions to each sample based on a species-by-species literature survey based on species name searches in PubMed. Pathobionts and opportunistic pathogens are designated as such when literature on the organism consistently presented it as a health threat, though it also may be a natural inhabitant of the human microbiome or soil. Assigned read counts for the classified species were tabulated and visualized using the Krona Excel Template31. Potential source contribution to samples was also calculated from summarized read quantities of the bacterial and archaeal sub-trees (Supplementary Table\u00a0S3) using SourceTracker version 0.9.834. Source accession numbers: ERR1017187, ERR1019366, ERR1022687, ERR1022692, ERR1034454, ERR1035437, ERR1035438, ERR1035441, ERR1039457, ERR1039458, ERR1043165, ERR1044071, ERR1044072, ERR1051325, SRR1631060, SRR1631061, SRR1631063, SRR1631064, SRR1633008, SRR3184100, SRR3184876, SRR3189411, SRR3189416, SRR3189418, SRS014107, SRS015650, SRS018665, SRS018975, SRS019029, SRS019129, SRS019387, SRS023538, SRS063215, SRS077312. The microbial classification scheme with Krona plots and SourceTracker were used in conjunction to control for potential biases related to the modern samples used in the latter and together present a layered representation of the types of microorganisms typically found in ancient dental calculus and dentin. Finally, GC content versus length profiles were generated using a custom python script (https://github.com/aemann01/gcLenCorPlots). When possible, analyses were run in parallel using GNU parallel86.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51409,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Accession numbers",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Genetic data have been deposited in the NCBI Short Read Archive (SRA) under the Bioproject accession PRJNA445215.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51539,
+                    "infons": {
+                        "section_title_1": "Electronic supplementary material",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51573,
+                    "infons": {
+                        "section_title_1": "Acknowledgements",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "This work was supported by the European Research Council under the European Union\u2019s Seventh Framework Programme (FP7/2007-2013) ERC grant agreement (319209 \u2018Nexus 1492\u2019 to C.H.) and the US National Science Foundation (BCS-1516633 and BCS-1528698 to C.W., BCS-1515163 to A.C.S.,\u00a0and BCS-1643318 to C.W. and C.A.H.). Funding for open access charge: Max Planck Society. The authors also thank Ron H\u00fcbler and Felix Key for access to their RMA parsing script. Thanks to Joaqu\u00edn Lomba, Mar\u00eda Haber and Azucena Avil\u00e9s for allowing sampling of the Camino del Molino samples.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52155,
+                    "infons": {
+                        "section_title_1": "Author Contributions",
+                        "iao_name_1": "author contributions section",
+                        "iao_id_1": "IAO:0000323"
+                    },
+                    "text": "C.W. and K.I.B. designed the study. A.M., S.S., K.Z., \u00c5.J.V., H.S., A.T.O., C.A.H. and D.S.G. performed the experiments. A.M., S.S., K.S., and J.F.Y. analyzed the data. D.S.G., B.F., M.A., M.H., C.R., G.M., A.C.S., C.M.L., J.K, and C.H. provided materials and resources. A.M., S.S., and C.W. wrote the manuscript with input from all other authors.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52522,
+                    "infons": {
+                        "section_title_1": "Notes",
+                        "iao_name_1": "notes section",
+                        "iao_id_1": "IAO:0000634"
+                    },
+                    "text": "The authors declare no competing interests.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52570,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Allison E. Mann and Susanna Sabin contributed equally to this work.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52646,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Electronic supplementary material",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52679,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Supplementary information accompanies this paper at 10.1038/s41598-018-28091-9.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52758,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Publisher's note: Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52894,
+                    "infons": {
+                        "journal": "Biofouling. ",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. White DJ. Processes contributing to the formation of dental calculus. Biofouling. 1991;4:209\u2013218. doi: 10.1080/08927019109378211. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53064,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Marsh, P. D. Dental plaque as a biofilm and microbial community - implications for health and disease. BMC Oral Health6, 10.1186/1472-6831-6-S1-S14 (2006). [PMC free article] [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53250,
+                    "infons": {
+                        "journal": "Phil. Trans. R. Soc. B. ",
+                        "volume": "370",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Warinner C, Speller C, Collins MJ. A new era in palaeomicrobiology: prospects for ancient dental calculus as a long-term record of the human oral microbiome. Phil. Trans. R. Soc. B. 2015;370:20130376. doi: 10.1098/rstb.2013.0376. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53538,
+                    "infons": {
+                        "journal": "Journal of Industrial Microbiology. ",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Marsh PD, Bradshaw DJ. Dental plaque as a biofilm. Journal of Industrial Microbiology. 1995;15:169\u2013175. doi: 10.1007/BF01569822. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53706,
+                    "infons": {
+                        "journal": "Scientific Reports. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Power RC, Salazar-Garc\u00eda DC, Wittig RM, Freiberger M, Henry AG. Dental calculus evidence of plant diet and life history transitions in the chimpanzees of the Ta\u00ef Forest. Scientific Reports. 2015;5:15161. doi: 10.1038/srep15161. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53992,
+                    "infons": {
+                        "journal": "Journal of Archaeological Science. ",
+                        "volume": "49",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Power RC, Salazar-Garc\u00eda DC, Wittig RM, Henry AG. Assesing use and suitability of scanning electron microscopy in the analysis of micro remains in dental calculus. Journal of Archaeological Science. 2014;49:160\u2013169. doi: 10.1016/j.jas.2014.04.016. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54270,
+                    "infons": {
+                        "journal": "Journal of Archaeological Science. ",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Armitage PL. The extraction and identification of opal phytoliths from the teeth of ungulates. Journal of Archaeological Science. 1975;2:187\u2013197. doi: 10.1016/0305-4403(75)90056-4. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54481,
+                    "infons": {
+                        "journal": "Journal of Archaeological Science. ",
+                        "volume": "21",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Fox CL, P\u00e9rez-P\u00e9rez A, Juan J. Dietary Information through the Examination of Plant Phytoliths on the Enamel Surface of Human Dentition. Journal of Archaeological Science. 1994;21:29\u201334. doi: 10.1006/jasc.1994.1005. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54727,
+                    "infons": {
+                        "journal": "Proceedings of the National Academy of Sciences. ",
+                        "volume": "108",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Henry AG, Brooks AS, Piperno DR. Microfossils in calculus demonstrate consumption of plants and cooked foods in Neanderthal diets (Shanidar III, Iraq; Spy I and II, Belgium) Proceedings of the National Academy of Sciences. 2011;108:486. doi: 10.1073/pnas.1016868108. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55052,
+                    "infons": {
+                        "journal": "International Journal of Osteoarchaeology. ",
+                        "volume": "24",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Dudgeon John V, Tromp M. Diet, Geography and Drinking Water in Polynesia: Microfossil Research from Archaeological Human Dental Calculus, Rapa Nui (Easter Island) International Journal of Osteoarchaeology. 2012;24:634\u2013648. doi: 10.1002/oa.2249. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55328,
+                    "infons": {
+                        "journal": "Journal of Archaeological Science: Reports. ",
+                        "volume": "16",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. King DJ, Searcy MT, Yost CL, Waller K. Corn, Beer, and Marine Resources at Casas Grandes, Mexico: An Analysis of Prehistoric Diets Using Microfossils Recovered from Dental Calculus. Journal of Archaeological Science: Reports. 2017;16:365\u2013379. doi: 10.1016/j.jasrep.2017.10.013. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55637,
+                    "infons": {
+                        "journal": "Archaeometry. ",
+                        "volume": "55",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. de la Fuente C, Flores S, Moraga M. DNA from human ancient bacteria: A novel source of genetic evidence from archaeological dental calculus. Archaeometry. 2013;55:767\u2013778. doi: 10.1111/j.1475-4754.2012.00707.x. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55879,
+                    "infons": {
+                        "journal": "Nat Genet. ",
+                        "volume": "45",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Adler CJ, et al. Sequencing ancient calcified dental plaque shows changes in oral microbiota with dietary shifts of the Neolithic and Industrial revolutions. Nat Genet. 2013;45(450-455):455e451. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56122,
+                    "infons": {
+                        "journal": "Nat. Genet. ",
+                        "volume": "46",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Warinner C, et al. Pathogens and host immunity in the ancient human oral cavity. Nat. Genet. 2014;46:336\u2013344. doi: 10.1038/ng.2906. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56313,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "544",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Weyrich LS, et al. Neanderthal behaviour, diet, and disease inferred from ancient DNA in dental calculus. Nature. 2017;544:357. doi: 10.1038/nature21674. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56507,
+                    "infons": {
+                        "journal": "Journal of Archaeological Science. ",
+                        "volume": "91",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Price SDR, Keenleyside A, Schwarcz HP. Testing the validity of stable isotope analyses of dental calculus as a proxy in paleodietary studies. Journal of Archaeological Science. 2018;91:92\u2013103. doi: 10.1016/j.jas.2018.01.008. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56763,
+                    "infons": {
+                        "journal": "American journal of physical anthropology. ",
+                        "volume": "160",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Ozga AT, et al. Successful enrichment and recovery of whole mitochondrial genomes from ancient human dental calculus. American journal of physical anthropology. 2016;160:220\u2013228. doi: 10.1002/ajpa.22960. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 57026,
+                    "infons": {
+                        "journal": "Annual review of genetics. ",
+                        "volume": "38",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Paabo S, et al. Genetic analyses from ancient DNA. Annual review of genetics. 2004;38:645\u2013679. doi: 10.1146/annurev.genet.37.110801.143214. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 57206,
+                    "infons": {
+                        "journal": "Cold Spring Harbor perspectives in biology. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Dabney J, Meyer M, P\u00e4\u00e4bo S. Ancient DNA damage. Cold Spring Harbor perspectives in biology. 2013;5:a012567. doi: 10.1101/cshperspect.a012567. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 57407,
+                    "infons": {
+                        "journal": "Nucleic acids research. ",
+                        "volume": "29",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Hofreiter M, Jaenicke V, Serre D, von Haeseler A, P\u00e4\u00e4bo S. DNA sequences from multiple amplifications reveal artifacts induced by cytosine deamination in ancient DNA. Nucleic acids research. 2001;29:4793\u20134799. doi: 10.1093/nar/29.23.4793. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 57705,
+                    "infons": {
+                        "journal": "PLoS One. ",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Sawyer S, Krause J, Guschanski K, Savolainen V, P\u00e4\u00e4bo S. Temporal patterns of nucleotide misincorporations and DNA fragmentation in ancient DNA. PLoS One. 2012;7:e34131. doi: 10.1371/journal.pone.0034131. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 57969,
+                    "infons": {
+                        "journal": "Scientific Reports. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Damgaard PB, et al. Improving access to endogenous DNA in ancient bones and teeth. Scientific Reports. 2015;5:11184. doi: 10.1038/srep11184. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 58169,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Gamba, C. et al. Genome flux and stasis in a five millennium transect of European prehistory. Nature Communications5, 5257, https://www.nature.com/articles/ncomms6257 - supplementary-information, 10.1038/ncomms6257 (2014). [PMC free article] [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 58423,
+                    "infons": {
+                        "journal": "PloS one. ",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Pinhasi R, et al. Optimal ancient DNA yields from the inner ear part of the human petrous bone. PloS one. 2015;10:e0129102. doi: 10.1371/journal.pone.0129102. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 58641,
+                    "infons": {
+                        "journal": "PLoS One. ",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Hansen HB, et al. Comparing ancient DNA preservation in petrous bone and tooth cementum. PLoS One. 2017;12:e0170940. doi: 10.1371/journal.pone.0170940. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 58852,
+                    "infons": {
+                        "journal": "Sci Rep. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Ziesemer KA, et al. Intrinsic challenges in ancient microbiome reconstruction using 16S rRNA gene amplification. Sci Rep. 2015;5:16498. doi: 10.1038/srep16498. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 59071,
+                    "infons": {
+                        "journal": "Human Biology. ",
+                        "volume": "86",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Kemp BM, Winters M, Monroe C, Barta JL. How much DNA is lost? Measuring DNA loss of short-tandem-repeat length fragments targeted by the PowerPlex 16 System using the Qiagen MinElute Purification Kit. Human Biology. 2014;86:1\u201318. doi: 10.13110/humanbiology.86.1.fm. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 59377,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. V\u00e5gene, \u00c5. J. et al. Salmonella enterica genomes from victims of a major sixteenth-century epidemic in Mexico. Nature Ecology & Evolution, 10.1038/s41559-017-0446-6 (2018). [PubMed]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Salmonella enterica",
+                            "infons": {
+                                "identifier": "NCBI:txid28901",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:14:39",
+                                "parent_taxonomic_id": "NCBI:txid590"
+                            },
+                            "id": "23419798",
+                            "locations": {
+                                "length": 19,
+                                "offset": 59402
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 59562,
+                    "infons": {
+                        "journal": "PLOS Computational Biology. ",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Huson DH, et al. MEGAN Community Edition - Interactive Exploration and Analysis of Large-Scale Microbiome Sequencing Data. PLOS Computational Biology. 2016;12:e1004957. doi: 10.1371/journal.pcbi.1004957. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 59825,
+                    "infons": {
+                        "journal": "Genome biology. ",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Segata N, et al. Metagenomic biomarker discovery and explanation. Genome biology. 2011;12:R60. doi: 10.1186/gb-2011-12-6-r60. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 60010,
+                    "infons": {
+                        "journal": "BMC Bioinformatics. ",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Ondov BD, Bergman NH, Phillippy AM. Interactive metagenomic visualization in a Web browser. BMC Bioinformatics. 2011;12:385. doi: 10.1186/1471-2105-12-385. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 60225,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Chen, T. et al. The Human Oral Microbiome Database: a web accessible resource for investigating oral microbe taxonomic and genomic information. Database2010 (2010). [PMC free article] [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 60421,
+                    "infons": {
+                        "journal": "Nucleic Acids Res. ",
+                        "volume": "46",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Coordinators NR. Database resources of the National Center for Biotechnology Information. Nucleic Acids Res. 2018;46:D8\u2013D13. doi: 10.1093/nar/gkx1095. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 60631,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Knights, D. et al. Bayesian community-wide culture-independent microbial source tracking. Nat Meth8, 761\u2013763, http://www.nature.com/nmeth/journal/v8/n9/abs/nmeth.1650.html - supplementary-information (2011). [PMC free article] [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 60870,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "486",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Meth\u00e9 BA, et al. A framework for human microbiome research. Nature. 2012;486:215. doi: 10.1038/nature11209. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 61037,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "486",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "36. Huttenhower C, et al. Structure, function and diversity of the healthy human microbiome. Nature. 2012;486:207. doi: 10.1038/nature11234. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 61233,
+                    "infons": {
+                        "journal": "Cell. ",
+                        "volume": "165",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "37. Oh J, et al. Temporal stability of the human skin microbiome. Cell. 2016;165:854\u2013866. doi: 10.1016/j.cell.2016.04.008. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 61411,
+                    "infons": {
+                        "journal": "Frontiers in microbiology. ",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "38. Johnston ER, et al. Metagenomics reveals pervasive bacterial populations and reduced community diversity across the Alaska tundra ecosystem. Frontiers in microbiology. 2016;7:579. doi: 10.3389/fmicb.2016.00579. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 61681,
+                    "infons": {
+                        "journal": "The ISME journal. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "39. Belda-Ferre P, et al. The oral metagenome in health and disease. The ISME journal. 2012;6:46. doi: 10.1038/ismej.2011.85. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 61862,
+                    "infons": {
+                        "journal": "Microbial ecology. ",
+                        "volume": "67",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "40. Jiang W, et al. Pyrosequencing analysis of oral microbiota shifting in various caries states in childhood. Microbial ecology. 2014;67:962\u2013969. doi: 10.1007/s00248-014-0372-y. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 62077,
+                    "infons": {
+                        "journal": "Bioinformatics. ",
+                        "volume": "29",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "41. Jonsson H, Ginolhac A, Schubert M, Johnson PL, Orlando L. mapDamage2.0: fast approximate Bayesian estimates of ancient DNA damage parameters. Bioinformatics. 2013;29:1682\u20131684. doi: 10.1093/bioinformatics/btt193. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 62349,
+                    "infons": {
+                        "journal": "Science. ",
+                        "volume": "341",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "42. Schuenemann VJ, et al. Genome-Wide Comparison of Medieval and Modern &lt;em&gt;Mycobacterium leprae&lt;/em&gt. Science. 2013;341:179. doi: 10.1126/science.1238286. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 62553,
+                    "infons": {
+                        "journal": "Periodontology 2000. ",
+                        "volume": "28",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "43. Socransky SS, Haffajee AD. Dental biofilms: difficult therapeutic targets. Periodontology 2000. 2002;28:2\u201355. doi: 10.1034/j.1600-0757.2002.280102.x. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 62743,
+                    "infons": {
+                        "journal": "Journal of Dentistry. ",
+                        "volume": "25",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "44. Marshall GW, Marshall SJ, Kinney JH, Balooch M. The dentin substrate: structure and properties related to bonding. Journal of Dentistry. 1997;25:441\u2013458. doi: 10.1016/S0300-5712(96)00065-6. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 62973,
+                    "infons": {
+                        "journal": "Journal of periodontal research. ",
+                        "volume": "47",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "45. Palmer L, Chapple I, Wright H, Roberts A, Cooper P. Extracellular deoxyribonuclease production by periodontal bacteria. Journal of periodontal research. 2012;47:439\u2013445. doi: 10.1111/j.1600-0765.2011.01451.x. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:15:13",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "23419799",
+                            "locations": {
+                                "length": 8,
+                                "offset": 63087
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 63222,
+                    "infons": {
+                        "journal": "Journal of Human Evolution. ",
+                        "volume": "79",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "46. Warinner C, Speller C, Collins MJ, C. M. L., Jr. Ancient human microbiomes. Journal of Human Evolution. 2015;79:125\u2013136. doi: 10.1016/j.jhevol.2014.10.016. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 63437,
+                    "infons": {
+                        "journal": "The Journal of Nihon University School of Dentistry. ",
+                        "volume": "23",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "47. SHIRATO M, et al. Observations of the surface of dental calculus using scanning electron microscopy. The Journal of Nihon University School of Dentistry. 1981;23:179\u2013187. doi: 10.2334/josnusd1959.23.179. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 63681,
+                    "infons": {
+                        "journal": "Journal of dental research. ",
+                        "volume": "84",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "48. Watson P, et al. Penetration of fluoride into natural plaque biofilms. Journal of dental research. 2005;84:451\u2013455. doi: 10.1177/154405910508400510. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 63870,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "49. Velsko, I. M. et al. The dental calculus metabolome in modern and historic samples. Metabolomics13 (2017). [PMC free article] [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 64008,
+                    "infons": {
+                        "journal": "Critical Reviews in Oral Biology and Medicine. ",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "50. Linde A, Goldberg M. Dentinogenesis. Critical Reviews in Oral Biology and Medicine. 1993;4:679\u2013728. doi: 10.1177/10454411930040050301. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 64183,
+                    "infons": {
+                        "journal": "Journal of Periodontal Research. ",
+                        "volume": "36",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "51. Lekic P, Rojas J, Birek C, Tenenbaum H, McCulloch CAG. Phenotypic comparison of periodontal ligament cells in vivo and in vitro. Journal of Periodontal Research. 2001;36:71\u201379. doi: 10.1034/j.1600-0765.2001.360202.x. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 64440,
+                    "infons": {
+                        "journal": "Circulation Research. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "52. Provenza DV. The Blood Vascular Supply of the Dental Pulp with Emphasis on Capillary Circulation. Circulation Research. 1958;6:213. doi: 10.1161/01.RES.6.2.213. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 64641,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "53. Philips, A. et al. Comprehensive analysis of microorganisms accompanying human archaeological remains. GigaScience (2017). [PMC free article] [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 64795,
+                    "infons": {
+                        "journal": "Journal of Cell Biology. ",
+                        "volume": "176",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "54. Fuchs TA, et al. Novel cell death program leads to neutrophil extracellular traps. Journal of Cell Biology. 2007;176:231\u2013241. doi: 10.1083/jcb.200606027. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 65008,
+                    "infons": {
+                        "journal": "PLoS pathogens. ",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "55. Seper A, et al. Vibrio cholerae evades neutrophil extracellular traps by the activity of two extracellular nucleases. PLoS pathogens. 2013;9:e1003614. doi: 10.1371/journal.ppat.1003614. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Vibrio cholerae",
+                            "infons": {
+                                "identifier": "NCBI:txid666",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:15:32",
+                                "parent_taxonomic_id": "NCBI:txid662"
+                            },
+                            "id": "23419800",
+                            "locations": {
+                                "length": 15,
+                                "offset": 65028
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 65253,
+                    "infons": {
+                        "journal": "Periodontology 2000. ",
+                        "volume": "53",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "56. Ryder MI. Comparison of neutrophil functions in aggressive and chronic periodontitis. Periodontology 2000. 2010;53:124\u2013137. doi: 10.1111/j.1600-0757.2009.00327.x. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 65456,
+                    "infons": {
+                        "journal": "Nature immunology. ",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "57. Branzk N, et al. Neutrophils sense microbe size and selectively release neutrophil extracellular traps in response to large pathogens. Nature immunology. 2014;15:1017. doi: 10.1038/ni.2987. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 65705,
+                    "infons": {
+                        "journal": "Frontiers in microbiology. ",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "58. von K\u00f6ckritz-Blickwede M, Blodkamp S, Nizet V. Interaction of bacterial exotoxins with neutrophil extracellular traps: impact for the infected host. Frontiers in microbiology. 2016;7:402. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 65941,
+                    "infons": {
+                        "journal": "Biochemical Journal. ",
+                        "volume": "474",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "59. Bhongir RK, et al. DNA-fragmentation is a source of bactericidal activity against Pseudomonas aeruginosa. Biochemical Journal. 2017;474:411\u2013425. doi: 10.1042/BCJ20160706. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:15:41",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "23419801",
+                            "locations": {
+                                "length": 22,
+                                "offset": 66027
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 66152,
+                    "infons": {
+                        "journal": "Frontiers in immunology. ",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "60. Majewski P, et al. Inhibitors of serine proteases in regulating the production and function of neutrophil extracellular traps. Frontiers in immunology. 2016;7:261. doi: 10.3389/fimmu.2016.00261. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 66406,
+                    "infons": {
+                        "journal": "J Cell Biol. ",
+                        "volume": "198",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "61. Brinkmann V, Zychlinsky A. Neutrophil extracellular traps: is immunity the second function of chromatin? J Cell Biol. 2012;198:773\u2013783. doi: 10.1083/jcb.201203170. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 66629,
+                    "infons": {
+                        "journal": "Journal of periodontal research. ",
+                        "volume": "51",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "62. Palmer LJ, Damgaard C, Holmstrup P, Nielsen CH. Influence of complement on neutrophil extracellular trap release induced by bacteria. Journal of periodontal research. 2016;51:70\u201376. doi: 10.1111/jre.12284. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:15:48",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "23419802",
+                            "locations": {
+                                "length": 8,
+                                "offset": 66757
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 66875,
+                    "infons": {
+                        "journal": "Scientific reports. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "63. Dang G, et al. Characterization of Rv0888, a novel extracellular nuclease from Mycobacterium tuberculosis. Scientific reports. 2016;6:19033. doi: 10.1038/srep19033. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Mycobacterium tuberculosis",
+                            "infons": {
+                                "identifier": "NCBI:txid1773",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 22:15:49",
+                                "parent_taxonomic_id": "NCBI:txid1763"
+                            },
+                            "id": "23419803",
+                            "locations": {
+                                "length": 26,
+                                "offset": 66958
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 67099,
+                    "infons": {
+                        "journal": "Annual Review of Genomics and Human Genetics. ",
+                        "volume": "18",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "64. Warinner C, et al. A Robust Framework for Microbial Archaeology. Annual Review of Genomics and Human Genetics. 2017;18:321\u2013356. doi: 10.1146/annurev-genom-091416-035526. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 67328,
+                    "infons": {
+                        "journal": "Nucleic Acids Research. ",
+                        "volume": "33",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "65. Panjkovich A, Norambuena T, Melo F. dnaMATE: a consensus melting temperature prediction server for short DNA sequences. Nucleic Acids Research. 2005;33:W570\u2013W572. doi: 10.1093/nar/gki379. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 67575,
+                    "infons": {
+                        "journal": "EMBO reports. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "66. Foerstner KU, Von Mering C, Hooper SD, Bork P. Environments shape the nucleotide composition of genomes. EMBO reports. 2005;6:1208\u20131213. doi: 10.1038/sj.embor.7400538. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 67802,
+                    "infons": {
+                        "journal": "Nucleic Acids Research. ",
+                        "volume": "45",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "67. Gansauge M-T, et al. Single-stranded DNA library preparation from highly degraded DNA using T4 DNA ligase. Nucleic Acids Research. 2017;45:e79\u2013e79. doi: 10.1093/nar/gkw835. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 68034,
+                    "infons": {
+                        "journal": "Int J Pathology. ",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "68. Waters-Rist AL, Hoogland MLP. Osteological evidence of short-limbed dwarfism in a nineteenth century Dutch family: Achondroplasia or hypochondroplasia. Int J Pathology. 2013;3:243\u2013256. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 68248,
+                    "infons": {
+                        "journal": "Trabajos Prehist. ",
+                        "volume": "66",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "69. Maurandi JL, Martinex ML, Martinez FR, Fernandez AA. The collective Chalcolithic burial of Camino del Molino (Caravaca de la Cruz, Murcia, Spain). Methodology and the first results of an exceptional archaeological site. Trabajos Prehist. 2009;66:143\u2013159. doi: 10.3989/tp.2009.09025. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 68562,
+                    "infons": {
+                        "journal": "Journal of the International Association for Bon Research. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "70. Aldenderfer M. Variation in mortuary practice on the early Tibetan plateau and the high Himalayas. Journal of the International Association for Bon Research. 2013;1:293\u2013318. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 68756,
+                    "infons": {
+                        "journal": "Proc Natl Acad Sci USA. ",
+                        "volume": "113",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "71. Jeong C, et al. Long-term genetic stability and a high-altitude East Asian origin for the peoples of the high valleys of the Himalayan arc. Proc Natl Acad Sci USA. 2016;113:7485\u20137490. doi: 10.1073/pnas.1520844113. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 69029,
+                    "infons": {
+                        "journal": "Journal of Archaeological Science. ",
+                        "volume": "39",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "72. Littleton J, et al. Taphonomic analysis of Bronze Age burials in Mongolian khirigsuurs. Journal of Archaeological Science. 2012;39:3361\u20133370. doi: 10.1016/j.jas.2012.06.004. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 69234,
+                    "infons": {
+                        "journal": "American Journal of Physical Anthropology. ",
+                        "volume": "92",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "73. Stone AC, Stoneking M. Ancient DNA from a pre-columbian Amerindian population. American Journal of Physical Anthropology. 1993;92:463\u2013471. doi: 10.1002/ajpa.1330920405. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 69443,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "74. Read, C. In Medieval Lough C\u00e9: history, archaeology, and landscape (ed. Thomas Finan) (Four Courts Press, 2010).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 69559,
+                    "infons": {
+                        "journal": "Proceedings of the National Academy of Sciences. ",
+                        "volume": "110",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "75. Dabney J, et al. Complete mitochondrial genome sequence of a Middle Pleistocene cave bear reconstructed from ultrashort DNA fragments. Proceedings of the National Academy of Sciences. 2013;110:15758\u201315763. doi: 10.1073/pnas.1314445110. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 69854,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "76. Meyer, M. & Kircher, M. Illumina sequencing library preparation for highly multiplexed target capture and sequencing. Cold Spring Harbor Protocols 2010, pdb. prot5448 (2010). [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 70041,
+                    "infons": {
+                        "journal": "Nucleic Acids Research. ",
+                        "volume": "40",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "77. Kircher M, Sawyer S, Meyer M. Double indexing overcomes inaccuracies in multiplex sequencing on the Illumina platform. Nucleic Acids Research. 2012;40:e3. doi: 10.1093/nar/gkr771. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 70280,
+                    "infons": {
+                        "journal": "Genome biology. ",
+                        "volume": "17",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "78. Peltzer A, et al. EAGER: efficient ancient genome reconstruction. Genome biology. 2016;17:60. doi: 10.1186/s13059-016-0918-z. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 70465,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "79. H\u00fcbler, R. et al. In ISMB/ECCB (Prague, Czech Republic, 2017).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 70531,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "80. Wickham, H. ggplot2: Elegant Graphics for Data Analysis. (Springer-Verlag, 2009).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 70616,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "81. Sarkar, D. Lattice: multivariate data visualization with R. (Springer Science & Business Media, 2008).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 70722,
+                    "infons": {
+                        "journal": "Bioinformatics. ",
+                        "volume": "25",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "82. Li H, Durbin R. Fast and accurate short read alignment with Burrows-Wheeler Transform. Bioinformatics. 2009;25:1754\u20131760. doi: 10.1093/bioinformatics/btp324. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 70939,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "83. Oksanen, J. et al. vegan: Community Ecology Package, https://CRAN.R-project.org/package=vegan (2016).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 71044,
+                    "infons": {
+                        "journal": "Bioinformatics. ",
+                        "volume": "20",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "84. Paradis E, Claude J, Strimmer K. APE: analyses of phylogenetics and evolution in R language. Bioinformatics. 2004;20:289\u2013290. doi: 10.1093/bioinformatics/btg412. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 71246,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "85. Sabin, S. Ancient DNA analysis of dental remains from Kilteasheen: a case study in metagenomics and an exploration of dental calculus M.Sc. thesis, Eberhard-Karls-Universit\u00e4t T\u00fcbingen, (2016).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 71442,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "86. Tange, O. In The USENIX Magazine 42-47 (2011).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

@@ -1,0 +1,3035 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC3542080",
+            "inputfile": "../microbiome_corpus_HTML\\PMC3542080.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "A Guide to Enterotypes across the Human Body: Meta-Analysis of Microbial Community Structures in Human Microbiome Datasets",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 122,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Recent analyses of human-associated bacterial diversity have categorized individuals into \u2018enterotypes\u2019 or clusters based on the abundances of key bacterial genera in the gut microbiota. There is a lack of consensus, however, on the analytical basis for enterotypes and on the interpretation of these results. We tested how the following factors influenced the detection of enterotypes: clustering methodology, distance metrics, OTU-picking approaches, sequencing depth, data type (whole genome shotgun (WGS) vs.16S rRNA gene sequence data), and 16S rRNA region. We included 16S rRNA gene sequences from the Human Microbiome Project (HMP) and from 16 additional studies and WGS sequences from the HMP and MetaHIT. In most body sites, we observed smooth abundance gradients of key genera without discrete clustering of samples. Some body habitats displayed bimodal (e.g., gut) or multimodal (e.g., vagina) distributions of sample abundances, but not all clustering methods and workflows accurately highlight such clusters. Because identifying enterotypes in datasets depends not only on the structure of the data but is also sensitive to the methods applied to identifying clustering strength, we recommend that multiple approaches be used and compared when testing for enterotypes.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1411,
+                    "infons": {
+                        "section_title_1": "Author Summary",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Recent work has suggested that individuals can be classified into \u2018enterotypes\u2019 based on the abundance of key bacterial taxa in gut microbial communities. However, the generality of enterotypes across populations, and the existence of similar cluster types for other body sites, remains to be evaluated. We combined the Human Microbiome Project 16S rRNA gene sequence data and metagenomes with similar published data to assess the existence of enterotypes across body sites. We found that rather than forming enterotypes (note we use this term for clusters in all body sites), most samples fell into gradients based on taxonomic abundances of bacteria such as Bacteroides, although in some body sites there is a bi/multi modal distribution of samples across gradients. Furthermore, many of the methods used in the analysis (e.g., distance metrics and clustering approaches) affected the likelihood of identifying enterotypes in particular body habitats. We recommend that multiple approaches be used and compared when testing for enterotypes.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:05:38",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "18617949",
+                            "locations": {
+                                "length": 8,
+                                "offset": 2054
+                            }
+                        },
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:05:39",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "18617950",
+                            "locations": {
+                                "length": 11,
+                                "offset": 2071
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 2467,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Together with the MetaHIT consortium [1], the Human Microbiome Project (HMP) represents one of the first major attempts to define the microbial diversity comprising the \u201cnormal healthy\u201d human microbiome [2]. The HMP dataset includes 16S rRNA gene sequence data of roughly twice the size of all similarly derived data in previously published studies, effectively tripling the size of combined data available for comparative studies (Table S1). In addition, the HMP generated whole-genome shotgun (WGS) metagenomic data for a subset of individuals. These data allowed for the characterization of patterns of microbial diversity across body sites and between individuals [2].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3151,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The HMP data also provides an opportunity to test the generality of the concept of enterotypes in the human microbiome. Arumugam et al. first articulated the concept of enterotypes as robust clustering of human gut samples based on microbial community composition, and largely driven by the abundances of key bacterial genera [3]. Although the term \u2018enterotype\u2019 refers to microbiota types within the gut, the concept can be applied generally, and here, for convenience, we use the term \u2018enterotype\u2019 to refer to microbiota types across different body sites. The HMP data are ideally suited to test the robustness of the enterotype concept in multiple body sites, and together with recently published community-generated datasets, across multiple populations.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3908,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In this report, we combined 16S rRNA gene sequence data generated using next-generation sequencing by the scientific community (hereafter, \u2018community data\u2019) together with the MetaHIT WGS data [3] and the recently released HMP 16S rRNA gene sequence data and WGS data [2]. Because there is currently no community standard for testing for enterotypes, we explore how the detection of enterotypes is affected by the following: clustering methodology, distance metrics, OTU-picking approaches, sequencing depth (i.e., rarefaction), data type (16S rRNA vs. WGS), and the specific region of the 16S rRNA gene sequenced. We find that the emergence of enterotypes is sensitive to the community structure of communities within each body site, and importantly also to the analysis methods employed. Our comparative analysis of various approaches across datasets informs the discussion on the technical basis for enterotyping and on how to interpret enterotype results.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4866,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "16S rRNA Gene Sequence Processing",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We constructed a database containing the recently released HMP 16S rRNA gene sequence data [4] and publically available (published) human microbiome datasets (community data). For inclusion, community datasets were required to contain a minimum of 25 samples per study and sequences generated using the Roche 454 platform (Table S1). The majority of samples were from healthy controls; however, a small subset of samples was derived from subjects that differed from adult healthy subjects due to age (i.e., infants and the elderly), use of antibiotics, or possible presence of disease (Fig. S1). We acquired raw SFF files and metadata files containing the unique identifiers for each sample within a study (barcodes) from the authors and re-processed the data using the default settings in the Quantitative Insights Into Microbial Ecology (QIIME) analysis pipeline [5]. For the majority of samples, quality filtering consisted of rejecting reads <200 nt and >1000 nt, excluding homopolymer runs >6 nt, accepting 0 barcode corrections and 0 primer mismatches; two datasets were processed with slightly different screening parameters, as described in their respective publications [6], [7]. When picking operational taxonomic units (OTUs) we used the OTU tables generated by the HMP, which were created de novo. Because the regions of the 16S rRNA gene differed between studies (and within: the HMP sequenced both V1\u2013V3 and V3\u2013V5 regions), we used a reference-based approach (hence, we did not denoise the data) to pick OTUs at 97% pairwise identity using as a reference the latest release of the GreenGenes (GG) taxonomy [8]. We also used the phylogenetic tree from GG to calculate weighted (abundance based) and unweighted (presence/absence based) UniFrac distances between communities [9], after applying two rarefactions (1,000 and 2,000 sequences/sample) to standardize sequence counts. Principal coordinates analysis (PCoA) was applied to the distance matrices for visualization.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6903,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Metagenomic Data Processing",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The HMP and MetaHIT shotgun metagenomic datasets were taxonomically profiled using MetaPhlAn [10] (version 1.1, default parameter settings), which infers relative abundances for all taxonomic levels (from phyla to species) for Bacteria and Archaea. We performed standard quality control on the HMP and MetaHIT samples as reported in the original studies [2], [3] - other metagenomic pre-processing steps (e.g., error detection, assembly, or gene annotation) are not required by MetaPhlAn. The taxonomic profiles of HMP metagenomes are available at http://www.hmpdacc.org/HMSMCP/, and the MetaHIT profiles can be downloaded from http://huttenhower.sph.harvard.edu/metaphlan/. The 690 HMP metagenomic samples from 7 different body sites can be accessed at http://hmpdacc.org/HMASM/, from which we used the \u2018WGS\u2019 reads (i.e., we did not use the \u2018PGA\u2019 assemblies), collapsing multiple visits from the same individual into one sample. The 124 fecal samples from MetaHIT were downloaded from the European Nucleotide Archive (http://www.ebi.ac.uk/ena/, study accession number ERP000108).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:06:34",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "18617951",
+                            "locations": {
+                                "length": 8,
+                                "offset": 7130
+                            }
+                        },
+                        {
+                            "text": "Archaea",
+                            "infons": {
+                                "identifier": "NCBI:txid2157",
+                                "type": "archaea_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:06:34",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "18617952",
+                            "locations": {
+                                "length": 7,
+                                "offset": 7143
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 8010,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Enterotyping",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "To evaluate the clustering results in the context of previously published results reporting enterotypes, we merged publicly available data (genus relative abundance tables) from MetaHIT [3] with data for the 16S rRNA-based HMP and non-HMP samples, based on genus-level taxonomy assignments. We performed enterotype testing using the relative abundances of OTUs (rarified at 1,000 sequences/sample for the majority of analyses, except where effect of rarefaction was tested specifically), to which we applied five distance metrics: Jensen-Shannon divergence (JSD), Root Jensen-Shannon divergence (rJSD), Bray-Curtis (BC), and weighted/unweighted UniFrac distances. For the calculation of JSD and BC distances, we first binned the counts of OTUs at the desired level (95% and 97% ID for genus and species level OTUs, respectively). We used the R \u201cvegan\u201d package [11] for calculating the Bray-Curtis distance according to this formula for the distance between samples j and k, with taxa/OTUs indexed by i:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9024,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Synthetic Dataset",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We generated a synthetic dataset of 100 communities each containing 3,000 \u201csequences\u201d belonging to 500 mock OTUs. For each synthetic community, 90% (2,700 sequences, or OTU observations) was drawn from the same randomly generated lognormal abundance distribution (shared across all communities) and the remaining 10% (300 sequences) drawn from one of four unique lognormal distributions, forcing the data into four clusters. We then applied the enterotyping methods as described above.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9526,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Mapping HMP Diversity onto Community-Generated Diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Beta-diversity measures provide a view of how diversity differs between sets of samples and quantifies those differences. We used the unweighted UniFrac measure of \u03b2-diversity to contrast the range of bacterial phylogenetic diversity captured by the HMP data to existing community data (Fig. 1). This analysis showed that the overall pattern of diversity is similar for HMP and community data, with clear separation between body sites (Figs. 1A, B, S1) as has been described previously [2], [20]. Similarly, Fig. S2 shows the locations of the MetaHIT samples relative to the HMP and other community fecal samples. The HMP and MetaHIT data map onto the community data well (Fig. 1C; Fig. S2), lending support for the approach of combining these sets in a meta-analysis of body habitats.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10389,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Mapping HMP Diversity onto Community-Generated Diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The gut microbiota are the most extensively studied of the human-associated microbiota. Combining community and HMP fecal microbial 16S rRNA gene sequence data effectively extended the subject age range from early infancy to old age (3 days to 85 years old), with the HMP supplying the majority of the middle years of the human life span. Interestingly, infant samples (younger than 2.5 years) were outliers in the range of diversity represented by the healthy adult and elder (older than 70 years) gut (Fig. 1D) and were more similar to vaginal and skin communities. Adult HMP samples cluster together with those from the community studies, excluding samples from infants (<2.5 yrs) and elders (Table S1). This combined analysis corroborates the previously described vast difference between bacterial diversity of infants and adults [21], [22].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11234,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Effect of Clustering Methodology",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We first tested the effects of different cluster scoring methods using a lognormally distributed synthetic community data containing 4 clusters that served as a positive control for enterotypes. We applied the JSD, rJSD and BC distance measures to the synthetic dataset and compared cluster scores using prediction strength (PS, Fig. 2A), silhouette index (SI, Fig. 2B) and Cali\u0144ksi-Harabasz (CH, Fig. 2C) scores. This analysis revealed strong support for 4 clusters using PS for the BC, JSD and rJSD distance metrics, but SI provided no support for clustering using BC and rJSD, and only weak support for 3\u20135 clusters using the JSD distance metric. The CH index supported 4 clusters using only the JSD distance metric. Wu et al. also reported a discrepancy in cluster scoring strengths between clustering methods [15]: CH indicated that 3 enterotypes were present, but SI provided weak support using rJSD. Wu et al. also compared clustering with CH and SI together with weighted/normalized unweighted UniFrac, BC and Euclidean distances, and reported concordant numbers of clusters with weighted UniFrac only. Together these results indicate that these different clustering methodologies can yield inconsistent results, although SI and CH have been reported to be stable and comparable [23], [24].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12564,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Effect of Clustering Methodology",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Arumugan et al. used CH as the basis for choosing the number of enterotypes, even when SI values were very low (all published values were less than or equal to 0.25), indicating weak or no support for clustering [3]. It is important to note that the CH score is a relative measure that alone cannot be used to determine statistical significance of clustering in the data, and that furthermore, CH is intended to indicate the optimal number of clusters based on the assumption that clusters exist. PS and SI, on the other hand, are absolute measures of how likely cluster structure is to emerge from a dataset. Based on our results, we recommend using at least one absolute measure (specifically, we recommend PS), and if possible confirming those results with an additional absolute measure (such as SI), when searching for enterotypes. Depending on the signal-to-noise distribution within individual datasets and data types, PS may have difficulty identifying clusters represented by few samples, as we discuss below (e.g., posterior fornix WGS data). In such cases SI may be relied on, but we recommend using a high threshold (e.g., \u22650.75) in identifying potentially reproducible clusters. We prefer PS over SI for large sample sizes because (1) it has a clear quantitative and intuitive interpretation, (2) it allows estimation of the clustering stability of individual samples, and (3) it performs better than SI in recovering known enterotypes in synthetic datasets. Note however that there is currently no consensus in the field on the specific thresholds that should be used with these methods for assessing clustering strength, making it all the more important for researchers to clearly state the criteria they apply when reporting enterotypes.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14317,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Effect of Distance Metric",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We searched for fecal enterotypes in the HMP and community 16S rRNA gene sequence data using the relative abundances of OTUs across samples, and applying five different distance metrics: JSD, rJSD, BC, and weighted/unweighted UniFrac distances, and three cluster evaluation methods (PS, CH and SI; Fig. 3). Using PS, we observed at best moderate support for 2 fecal enterotypes in the HMP data using weighted UniFrac, but little or no support using other distance metrics (Fig. 3A). We obtained similar results using community data alone and when combined together (Fig. 3A). Weighted UniFrac scoring for enterotypes was weak with SI (Fig. 3). Figs. S3, S4, S5, S6, S7 show similar analyses for 3 different vaginal sites, and 9 oral and 3 skin sites. Moderate to strong clustering is evident in only 3 out of these 15 body sites. In the mid vagina there is strong support for 2 clusters (discussed below) using BC, JSD and rJSD (Fig. S3; weighted UniFrac provided moderate support; unweighted UniFrac provided no support). In the posterior fornix (Fig. S3) and the attached keratinized gingiva (Fig. S4), we observed moderate support for 2 clusters using 5 and 4 distance metrics, respectively (unweighted UniFrac resulted in little or no support in the gingiva).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15605,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Effect of Distance Metric",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "These results indicate that the detection of enterotypes is sensitive to the distance metric used, a result also recently reported by Claesson et al. [25]. Note that this sensitivity is not dependent on body site. However, because enterotyping is driven by the relative abundances of specific genera within samples, unweighted UniFrac, which takes into account presence/absence of tree branches but not abundances of sequences mapping to those branches, may not be an ideal distance measure to use for enterotyping. We include it here because it is widely used in microbiome studies. In contrast, the weighted UniFrac, BC, JSD and rJSD distance metrics are based on OTU abundances and should in principle be more appropriate. The lack of concordance between results based on different abundance-based distance metrics raises the following questions: if enterotypes are to be considered robust, must they be observed using more than one distance metric? Or does the lack of concordance between results using different distance metrics indicate that (here at least) weighted UniFrac is the best choice for enterotyping? Because the interpretation of the findings is currently subjective, and in the absence of any community-wide best practices, we recommend using at least 2 or 3 distance metrics and clearly stating the criteria used for calling enterotypes within the context of any particular study. Particularly, if different metrics yield different results, authors should attempt to understand the discrepancies and justify their choice of distance metric.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17165,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Effect of OTU Taxonomic Level",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The effects of OTU taxonomic levels (for instance, clustering sequences at genus or species level) on the recovery of enterotypes are best illustrated with 16S rRNA gene sequence data from vaginal sites (Figs. 4 and S3). Ravel et al.\n[26] reported enterotypes in the vagina based on the abundances of bacterial species (as opposed to genera used in gut studies). We used the abundances of both species and genus-level OTUs from the Ravel et al. dataset to test for enterotypes. Our analysis shows strong support for two genus-level enterotypes using 4 of 5 distance metrics (i.e., unweighted UniFrac had moderate support) for the Ravel et al. dataset when using the PS to test the strength of the clustering (Fig. 4). We also observed strong support for genus-level mid-vaginal enterotypes using 3 of 5 distance metrics (BC, JSD and rJSD) for the HMP dataset (Fig. 4). Additionally, using a species-level analysis, we obtained moderate support for five enterotypes using BC and JSD in the Ravel et al. data (we also scored strong support for 2 enterotypes with weighted UniFrac), and moderate to strong support for 2 clusters (i.e., little or no support for five clusters) in the HMP data (Fig. 4).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18392,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Effect of OTU Taxonomic Level",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We also tested for clustering of vaginal samples using SI and CH. When using SI (Fig. S8) at the genus level we found strong support for 2 clusters in the HMP and Ravel et al. datasets using 3 and 1 distance metrics respectively. But when using CH (Fig. S9) on the HMP data at the genus level, the highest scores were obtained for 2\u20133 and 9\u201310 clusters, and in the Ravel data the strongest support was for 2 clusters. At species level, we observed strong support with SI for 2 enterotypes in the HMP data using weighted UniFrac, and for 5 enterotypes using JSD (Fig. S8). No strong support was observed for the Ravel data for any number of clusters at the species level using SI. With CH, at the species level, the highest score was for 10 clusters in the HMP data, while for the Ravel data the highest score was for 2 clusters. The differences in number of enterotypes found at the genus and species levels underscore the sensitivity of enterotyping to the taxonomic depths used in constructing OTUs.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19393,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Effect of 16S rRNA Variable Region",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "To test for the influence of the specific variable region of the 16S rRNA gene on the detection of fecal enterotypes, we compared fecal samples from the HMP for which sequence data for both the V1\u2013V3 and V3\u2013V5 regions were available. Data from the V3\u2013V5 region yielded moderate support for two fecal enterotypes, but no enterotypes were detected using data from the V1\u2013V3 region. When using SI, we observed moderate support for 2 clusters when using JSD on the V1\u2013V3 data and weak support for the V3\u2013V5 data. The highest scores using CH were three clusters using BC for V1\u2013V3 data and two clusters using weighted UniFrac for V3\u2013V5 data (Fig. S10). Different primers amplifying different regions of the 16S rRNA gene sequence are known to impact the diversity described for a microbial community. For example, primers for the V1\u2013V3 region (e.g., 27F-338R) are not efficient for amplifying 16S rRNA gene sequences from members of the Bifidobacteria genus, which can dominate the infant microbiota [22], [27]. Our analysis demonstrates that the specific region of the 16S rRNA gene that is amplified during PCR is another factor that can affect the outcome when searching for enterotypes.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20612,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Effect of OTU-Picking Method",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We compared enterotype clustering using two methods for OTU picking: (1) de novo sequence clustering into OTUs, in which sequences are clustered based on similarity to one another, and (2) a reference based approach, in which sequences are clustered based on similarity to sequences in a reference database [27]. We found that for the HMP dataset, the two OTU picking approaches yielded consistent results for the majority of body sites (Fig. 5). However, for the attached keratinized gingiva, posterior fornix and tongue dorsum, the reference-based approach provided moderate support for enterotypes, whereas the de novo approach did not support clustering. One important difference between the two OTU-picking approaches is that the reference-based method can yield fewer OTUs, particularly at fine taxonomic resolution, because any sequence that fails to find a match in the database is discarded. In contrast, the de novo approach retains all sequences and has the potential to yield higher OTU counts. Fewer OTUs would have the effect of increasing the relative abundances of the dominant genera, and may therefore strengthen the gradient effect frequently observed (see below). Thus, the reference-based OTU picking approach may result in over-confidence in enterotype discovery.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21925,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Effect of Sequence Rarefaction Depth",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Rarefaction is the commonly used normalization practice of randomly subsampling the data so that an equal number of sequences are drawn for each sample. We rarefied the sequences from the HMP fecal samples at 2,000 sequences per sample and compared the results to those obtained after rarefying at 1,000 sequences per sample (Fig. S11). Rarefaction depth did not seem to strongly affect the results of the clustering.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22378,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Effect of Data Type: WGS versus 16S rRNA Gene Sequences",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We also implemented our methodology in the smaller set of HMP samples for which WGS data were available, in addition to the MetaHIT WGS data [3]. While the HMP WGS data included fewer samples and body sites than the 16S rRNA gene sequence data (approximately 700 spanning the gut, nares, three oral habitats, and posterior fornix), they provided consistent species-level resolution. We found a strong gradient effect in the fecal samples (see discussion on gradients below) for almost all genera and species, and between species within the genus Bacteroides and members of the Firmicutes. We also found that the presence of Prevotella (specifically, P. copri) was clearly associated with the first principal coordinate in the PCoA using three distance measures. This feature in turn drove moderate support for two clusters in the HMP data (using JSD and rJSD) and strong support for 2 clusters in the MetaHIT data (Figs. 6 and S12), that appeared to separate roughly according to presence/absence of Prevotella.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:09:45",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "18617954",
+                            "locations": {
+                                "length": 11,
+                                "offset": 22924
+                            }
+                        },
+                        {
+                            "text": "Firmicutes",
+                            "infons": {
+                                "identifier": "NCBI:txid1239",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:09:46",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "18617955",
+                            "locations": {
+                                "length": 10,
+                                "offset": 22955
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:09:46",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18617956",
+                            "locations": {
+                                "length": 10,
+                                "offset": 23002
+                            }
+                        },
+                        {
+                            "text": "P. copri",
+                            "infons": {
+                                "identifier": "NCBI:txid165179",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:09:46",
+                                "parent_taxonomic_id": "NCBI:txid838"
+                            },
+                            "id": "18617957",
+                            "locations": {
+                                "length": 8,
+                                "offset": 23028
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:09:51",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18617958",
+                            "locations": {
+                                "length": 10,
+                                "offset": 23378
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 23444,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Effect of Data Type: WGS versus 16S rRNA Gene Sequences",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "\nPrevotella is similarly influential in driving variation along the first principal coordinate axis when using Jensen-Shannon divergence for the 16S-based samples, albeit not with weighted UniFrac (Figs. S13-S14). Although the importance of Prevotella in clustering analysis clearly depends on the choice of distance metric, the genus does exhibit enterotype-like behavior in that it follows a bimodal distribution: high relative abundance in a small fraction of samples, but low or zero relative abundance in many other samples. Note that the HMP 16S rRNA gene sequence surveys include a smaller fraction of samples containing high relative abundance of Prevotella compared to WGS data (12.3% and 10.9% of samples contained >10% Prevotella in the HMP V1\u2013V3 and HMP V3\u2013V5 data sets, respectively, compared to 13.9% and 24.2% in the HMP and MetaHIT shotgun metagenomics). Although a bias of certain primers against Prevotella in 16S surveys has been reported previously [28], this is not likely to have affected the HMP data. The difference in Prevotella abundance between MetaHIT and HMP samples remains to be explained.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:09:53",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18617959",
+                            "locations": {
+                                "length": 10,
+                                "offset": 23685
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:09:58",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18617960",
+                            "locations": {
+                                "length": 10,
+                                "offset": 24099
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:09:59",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18617961",
+                            "locations": {
+                                "length": 10,
+                                "offset": 24174
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:02",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18617962",
+                            "locations": {
+                                "length": 10,
+                                "offset": 24358
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:03",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18617963",
+                            "locations": {
+                                "length": 10,
+                                "offset": 24487
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 24564,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Effect of Data Type: WGS versus 16S rRNA Gene Sequences",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "In all other body sites, we again found general agreement between metagenomics clustering results and the 16S rRNA gene sequence-based clustering results regarding cluster quality (Figs. S15-S16), with the exception of the moderate support for two enterotypes in the buccal mucosa WGS data (Fig. S15), and lack of consistent support for enterotypes in the posterior fornix (Fig. S16). As we described above, we found moderate support for enterotypes in the posterior fornix in 16S data (Fig. S3). The discrepancy might be due to the fact that the WGS data included too few samples from the smaller \u201cclusters\u201d to permit detection by the prediction strength approach; SI was highest for two enterotypes at the genus level corresponding to Lactobacillus (either dominant or absent; JSD jackknifed SI: 0.89\u00b10.012), and statistically tied as highest for five (four Lactobacillus species or Lactobacillus absent, JSD jackknifed SI: 0.79\u00b10.005) and eight (JSD jackknifed SI: 0.79\u00b10.008) enterotypes at the species level (Fig. S17).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Lactobacillus",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:13",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "18617964",
+                            "locations": {
+                                "length": 13,
+                                "offset": 25301
+                            }
+                        },
+                        {
+                            "text": "Lactobacillus",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:14",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "18617965",
+                            "locations": {
+                                "length": 13,
+                                "offset": 25424
+                            }
+                        },
+                        {
+                            "text": "Lactobacillus",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:14",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "18617966",
+                            "locations": {
+                                "length": 13,
+                                "offset": 25449
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 25588,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "\nBacteroidetes/Firmicutes in gut samples ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Gut enterotypes would be apparent if the underlying data contained sharp divisions in the distribution of samples based on genus-level abundances (i.e., clear regions with no samples between the modes in PCoA plots). We observed a smooth gradient distribution of HMP + community samples based on their Bacteroides abundances (Fig. 7), which in turn was the major determinant of inter-individual \u03b2-diversity patterns (Fig. 8). Samples at the extremes of this gradient were highly enriched in or depleted of Bacteroides, but such extremes can be interpretable as outliers on a continuum, rather than statistically significant groups. To further assess the possibility that this gradient was bi- or multi-modal, we mapped the density of samples along the first two dimensions of weighted UniFrac PCoA (Fig. 8). The kernel density estimates for samples mapped on principal coordinates 1 and 2 show two peaks emerging from the community data (but not from HMP data), which contributed to a second, low peak in the combined data (Fig. 8). The HMP samples tended to have higher Bacteroides-abundance when compared to the community samples (Fig. 9).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:19",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "18617967",
+                            "locations": {
+                                "length": 11,
+                                "offset": 25890
+                            }
+                        },
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:22",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "18617968",
+                            "locations": {
+                                "length": 11,
+                                "offset": 26094
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26770,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "\nBacteroidetes/Firmicutes in gut samples ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The vast majority of samples occupies the intermediate region between low- and high-Bacteroides individuals and forms a smooth distribution of gut community configurations (Fig. 8). Similar gradients of Bacteroides abundance across samples have been observed in other studies [3], [15]. The factors that drive the bimodal distribution of samples at ends of the gradient remain to be determined. Distinctive boundaries of gut enterotypes in small populations are likely to be blurred with the addition of samples containing intermediate levels of Bacteroides, although in some cases they may reflect host and environmental influences.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:32",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "18617969",
+                            "locations": {
+                                "length": 11,
+                                "offset": 26973
+                            }
+                        },
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:36",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "18617970",
+                            "locations": {
+                                "length": 11,
+                                "offset": 27316
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 27403,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "\nBacteroidetes/Firmicutes in gut samples ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The extent to which a subject's microbiota varies along the gradient with time is not yet understood. Although many studies to date suggest relative stability of microbial communities over time within adult subjects [20], [29], [30], [31], the relative abundance of Bacteroides has been shown to vary over time within individuals, for instance, changes in Bacteroides abundances were reported over the course of a year-long weight loss study in obese individuals [30].",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:40",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "18617971",
+                            "locations": {
+                                "length": 11,
+                                "offset": 27669
+                            }
+                        },
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:41",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "18617972",
+                            "locations": {
+                                "length": 11,
+                                "offset": 27759
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 27871,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "\nBacteroidetes/Firmicutes in gut samples ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Recent work has also revealed an important role for nutrient status in determining the abundance of Bacteroides. Fasting (in mice), and feeding (in pythons) can alter the relative abundance of Bacteroides quite rapidly [32], [33]. In humans, excess energy intake above that needed for weight maintenance has been shown to reduce Bacteroides levels [34]. Furthermore, long-term dietary habits have been linked to enterotypes [15].",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:43",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "18617973",
+                            "locations": {
+                                "length": 11,
+                                "offset": 27971
+                            }
+                        },
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:44",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "18617974",
+                            "locations": {
+                                "length": 11,
+                                "offset": 28064
+                            }
+                        },
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:46",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "18617975",
+                            "locations": {
+                                "length": 11,
+                                "offset": 28200
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 28300,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "\nBacteroidetes/Firmicutes in gut samples ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The low Bacteroides-abundance samples within the HMP + community dataset included a rare subset (total of 6 adult samples and 7 infant/child samples) with a high abundance (\u22650.6) of Prevotella (Fig. S18), which was notable due to generally low abundance of this genus in most other samples (90.1% of adults had <10% Prevotella, 64.8% had none in V3\u2013V5 region data rarefied at 1,000 sequences/sample). Samples with high Prevotella abundances have previously been observed in non-Western human populations [6]. This community pattern has also been suggested to associate with high-carbohydrate diets [15]. It is likely that the size of this Prevotella peak will increase with the addition of more data from diverse populations, especially given the fact that 7 of the 13 Prevotella-rich samples noted above came from non-western subjects. This Prevotella-dominant community, belonging to a distinct group of samples, was the most enterotype-like cluster we observed in the fecal samples.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:49",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18617976",
+                            "locations": {
+                                "length": 10,
+                                "offset": 28482
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:51",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18617977",
+                            "locations": {
+                                "length": 10,
+                                "offset": 28616
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:52",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18617978",
+                            "locations": {
+                                "length": 10,
+                                "offset": 28719
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:10:54",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18617979",
+                            "locations": {
+                                "length": 10,
+                                "offset": 28939
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 29285,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Other body sites ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We next looked for enterotypes within the oral samples, which had the greatest degree of beta-diversity and were also the richest (highest \u03b1-diversity) within the HMP population [2]. The 9 oral sites also contained gradients of OTU relative abundances (Figs. S19-S27). These tremendous ranges of phylogenetic diversity occurred in continua among individuals and did not provide strong support for discrete enterotypes (Fig. S4-S6), although in the attached keratinized gingiva we saw moderate support for two enterotypes using weighted UniFrac, JSD, rJSD and BC (Fig. S4).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29874,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Other body sites ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We observed the same pattern was observed for the skin sites. Each of the three skin types contained typically one or two dominant OTUs that accounted for the majority of the genus-level abundances [2]. Our analysis did not detect any enterotypes in the skin sites (retroauricular creases, antecubital fossae and anterior nares; Fig. S7), as these communities contained gradients of genus abundances across samples (Figs. S28-S30).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30305,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Prospectus",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Our results underscore the importance of methodology in assessing whether populations can be categorized by enterotypes. Table 1 summarizes the factors that might have an effect on enterotyping: the two with the largest effect are the distance metric and the clustering score method. We recommend using at least one absolute scoring method (i.e., PS or SI) combined with at least 2\u20133 distance metrics to verify the presence of enterotypes. When using the different scoring methods, authors should indicate and justify the choice of thresholds for indicating levels of support for enterotypes. Other factors that should be kept in mind are the data type (and if using 16S rRNA gene sequence data, the variable region sequenced) and the OTU picking method. At the present time, there is no community consensus on how to define an enterotype, and two researchers with the same data can easily come to opposite conclusions regarding the presence of enterotypes if they apply different criteria. Microbial ecologists and clinicians interested in the enterotype concept need to standardize enterotyping methods for the concept to gain utility.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31452,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Prospectus",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The large size of the HMP dataset, augmented with the community and MetaHIT data, brought to light the extent of bacterial abundance gradients within body habitats. The presence of these gradients underscores that discrete enterotypes (i.e., enterotypes with distinct boundaries) are lacking. Instead, for continuous OTU and genus gradients are the norm for most body sites, although a few body sites had multimodal distributions of samples with modes near the extremes of the gradients, and very few cases (e.g., the vagina) had consistent discrete community types. The biological drivers of these patterns, and their robustness over time, may be manifestations of host-microbial interactions, especially if they correlate with host factors such as diet, lifestyle, or genetics.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32231,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Health state for the subjects whose samples are shown in Fig. 1. (A) All samples from healthy subjects, for all body sites. (B) Samples from individuals with health problems, or other factors that may influence the diversity of the microbiota (i.e., smoking, use of antibiotics). (C) Combined data from panels A and B. For body site legend, see Fig. 1.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32614,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(TIFF)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32620,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S2",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "The relative locations of the different studies containing gut samples in PCoA plots of weighted UniFrac and Jensen-Shannon distances (For study names see Table S1).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32794,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S3",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Prediction strength scores for enterotypes in HMP (A) mid vagina, (B) posterior fornix, and (C) vaginal introitus samples. Prediction strength scores calculated using 5 distances metrics. The thresholds for significance of clustering scores are indicated as dashed lines on the plots. Bars are standard errors.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33113,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S3",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(ZIP)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33118,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S4",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Prediction strength scores for enterotypes in HMP (A) subgingival plaque, (B) supragingival plaque, and (C) attached keratinized gingiva samples. Prediction strength scores calculated using 5 distances metrics. The thresholds for significance of clustering scores are indicated as dashed lines on the plots.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33434,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S5",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Prediction strength scores for enterotypes in HMP (A) buccal mucosa, (B) hard palate, and (C) tongue dorsum samples. Prediction strength scores calculated using 5 distances metrics. The thresholds for significance of clustering scores are indicated as dashed lines on the plots. Bars are standard errors.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33747,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S6",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Prediction strength scores for enterotypes in HMP (A) saliva, (B) palatine tonsils, and (C) throat samples. Prediction strength scores calculated using 5 distances metrics. The thresholds for significance of clustering scores are indicated as dashed lines on the plots. Bars are standard errors.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34051,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S7",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Prediction strength scores for enterotypes in HMP (A) retroauricular crease, (B) antecubital fossa, and (C) anterior nares samples. Prediction strength scores calculated using 5 distances metrics. The thresholds for significance of clustering scores are indicated as dashed lines on the plots. Bars are standard errors.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34379,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S8",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Enterotypes in mid vaginal sites samples in both the HMP and the Ravel et al. [26] datasets. Average silhouette width scores calculated using 5 distances metrics for HMP mid vaginal samples at the genus level, Ravel et al. mid vaginal samples at the genus level, HMP mid vaginal samples at the species level, Ravel et al. mid vaginal samples at the species level. The thresholds for significance of clustering scores are indicated as dashed lines on the plots. Bars are standard errors.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34874,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S9",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Enterotypes in mid vaginal sites samples in both the HMP and the Ravel et al. [26] datasets. Cali\u0144ski-Harabasz scores calculated using 5 distances metrics for HMP mid vaginal samples at the genus level, Ravel et al. mid vaginal samples at the genus level, HMP mid vaginal samples at the species level, Ravel et al. mid vaginal samples at the species level. Bars are standard errors.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35265,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S10",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Clustering scores for fecal enterotypes in data from (A) V1\u2013V3 and (B) V3\u2013V5 variable regions of the16S rRNA gene using PS, SI and CH. Clustering scores calculated using 5 distances metrics. The thresholds for significance of clustering scores are indicated as dashed lines on the plots. Bars are standard errors.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35588,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S11",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Prediction scores for enterotypes in HMP fecal samples using 16S rRNA data and rarefying at (A) 1,000 and (B) 2,000 sequences per sample. Prediction strength scores calculated using 5 distances metrics. The thresholds for significance of clustering scores are indicated as dashed lines on the plots. Bars are standard errors.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35923,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S12",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Clustering scores for enterotypes in MetaHIT fecal samples using WGS data. (A) Prediction strength scores, (B) average silhouette scores and (C) Cali\u0144ski-Harabasz calculated using 3 distances metrics. The thresholds for significance of clustering scores are indicated as dashed lines on the plots. Bars are standard errors.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36256,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S13",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Gradients of the 24 taxa most highly correlated with the first 2 PCs in HMP fecal samples using Jensen-Shannon divergence for the V3\u2013V5 16S-based data.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36417,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S14",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Gradients of the 24 taxa most highly correlated with the first 2 PCs in HMP fecal samples using weighted UniFrac for the V3\u2013V5 16S-based data.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36569,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S15",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Prediction scores for enterotypes in HMP samples using WGS data. Prediction strength scores calculated using 3 distances metrics for buccal mucosa (A), supragingival (B), and tongue dorsum (C) samples. The thresholds for significance of clustering scores are indicated as dashed lines on the plots. Bars are standard errors.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36903,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S16",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Prediction scores for enterotypes in HMP samples using WGS data. Prediction strength scores calculated using 3 distances metrics for anterior nares (A), and posterior fornix (B) samples. The thresholds for significance of clustering scores are indicated as dashed lines on the plots. Bars are standard errors.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37222,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S17",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Silhouette index for enterotypes in HMP vaginal samples using WGS data at different taxonomic levels. Silhouette index scores calculated using 3 distances metrics for genus (A), and species (B) levels. The thresholds for significance of clustering scores are indicated as dashed lines on the plots. Bars are standard errors.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37556,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S18",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Taxon distribution for the 10 most common genera in the small number (13) of high Prevotella samples (\u22650.6 relative abundance).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:31",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18617980",
+                            "locations": {
+                                "length": 10,
+                                "offset": 37638
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 37693,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S19",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Gradients of Prevotella, Fusobacterium and Treponema abundances in subgingival plaque samples. HMP samples are shown in a principal coordinates analysis of unweighted UniFrac distances. Samples are colored according to (A) putative cluster membership and by their abundances (0\u20131, see legend inserts) of (B) Prevotella, (C) Fusobacterium and (D) Treponema.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:31",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18617981",
+                            "locations": {
+                                "length": 10,
+                                "offset": 37706
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid848",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:31",
+                                "parent_taxonomic_id": "NCBI:txid203492"
+                            },
+                            "id": "18617982",
+                            "locations": {
+                                "length": 13,
+                                "offset": 37718
+                            }
+                        },
+                        {
+                            "text": "Treponema",
+                            "infons": {
+                                "identifier": "NCBI:txid157",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:31",
+                                "parent_taxonomic_id": "NCBI:txid2845253"
+                            },
+                            "id": "18617983",
+                            "locations": {
+                                "length": 9,
+                                "offset": 37736
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:34",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18617984",
+                            "locations": {
+                                "length": 10,
+                                "offset": 38001
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid848",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:34",
+                                "parent_taxonomic_id": "NCBI:txid203492"
+                            },
+                            "id": "18617985",
+                            "locations": {
+                                "length": 13,
+                                "offset": 38017
+                            }
+                        },
+                        {
+                            "text": "Treponema",
+                            "infons": {
+                                "identifier": "NCBI:txid157",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:34",
+                                "parent_taxonomic_id": "NCBI:txid2845253"
+                            },
+                            "id": "18617986",
+                            "locations": {
+                                "length": 9,
+                                "offset": 38039
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 38059,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S20",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Gradients of Selenomonas, Streptococcus and Leptotrichia abundances in supragingival plaque samples. HMP samples are shown in a principal coordinates analysis of unweighted UniFrac distances. Samples are colored according to (A) putative cluster membership and by their abundances (0\u20131, see legend inserts) of (B) Selenomonas, (C) Streptococcus and (D) Leptotrichia.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Selenomonas",
+                            "infons": {
+                                "identifier": "NCBI:txid970",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:35",
+                                "parent_taxonomic_id": "NCBI:txid1843491"
+                            },
+                            "id": "18617987",
+                            "locations": {
+                                "length": 11,
+                                "offset": 38072
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:35",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18617988",
+                            "locations": {
+                                "length": 13,
+                                "offset": 38085
+                            }
+                        },
+                        {
+                            "text": "Leptotrichia",
+                            "infons": {
+                                "identifier": "NCBI:txid32067",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:35",
+                                "parent_taxonomic_id": "NCBI:txid1129771"
+                            },
+                            "id": "18617989",
+                            "locations": {
+                                "length": 12,
+                                "offset": 38103
+                            }
+                        },
+                        {
+                            "text": "Selenomonas",
+                            "infons": {
+                                "identifier": "NCBI:txid970",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:38",
+                                "parent_taxonomic_id": "NCBI:txid1843491"
+                            },
+                            "id": "18617990",
+                            "locations": {
+                                "length": 11,
+                                "offset": 38373
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:38",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18617991",
+                            "locations": {
+                                "length": 13,
+                                "offset": 38390
+                            }
+                        },
+                        {
+                            "text": "Leptotrichia",
+                            "infons": {
+                                "identifier": "NCBI:txid32067",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:38",
+                                "parent_taxonomic_id": "NCBI:txid1129771"
+                            },
+                            "id": "18617992",
+                            "locations": {
+                                "length": 12,
+                                "offset": 38412
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 38435,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S21",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Gradients of Prevotella, Streptococcus and Porphyromonas abundances in attached keratinized gingiva samples. HMP samples are shown in a principal coordinates analysis of unweighted UniFrac distances. Samples are colored according to (A) putative cluster membership and by their abundances (0\u20131, see legend inserts) of (B) Prevotella, (C) Streptococcus and (D) Porphyromonas.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:38",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18617993",
+                            "locations": {
+                                "length": 10,
+                                "offset": 38448
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:38",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18617994",
+                            "locations": {
+                                "length": 13,
+                                "offset": 38460
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas",
+                            "infons": {
+                                "identifier": "NCBI:txid836",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:38",
+                                "parent_taxonomic_id": "NCBI:txid171551"
+                            },
+                            "id": "18617995",
+                            "locations": {
+                                "length": 13,
+                                "offset": 38478
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:41",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18617996",
+                            "locations": {
+                                "length": 10,
+                                "offset": 38757
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:41",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18617997",
+                            "locations": {
+                                "length": 13,
+                                "offset": 38773
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas",
+                            "infons": {
+                                "identifier": "NCBI:txid836",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:41",
+                                "parent_taxonomic_id": "NCBI:txid171551"
+                            },
+                            "id": "18617998",
+                            "locations": {
+                                "length": 13,
+                                "offset": 38795
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 38819,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S22",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Gradients of Haemophilus, Streptococcus and Veillonella abundances in buccal mucosa samples. HMP samples are shown in a principal coordinates analysis of unweighted UniFrac distances. Samples are colored according to (A) putative cluster membership and by their abundances (0\u20131, see legend inserts) of (B) Haemophilus, (C) Streptococcus and (D) Veillonella.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:42",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "18617999",
+                            "locations": {
+                                "length": 11,
+                                "offset": 38832
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:42",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18618000",
+                            "locations": {
+                                "length": 13,
+                                "offset": 38845
+                            }
+                        },
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:42",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "18618001",
+                            "locations": {
+                                "length": 11,
+                                "offset": 38863
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:45",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "18618002",
+                            "locations": {
+                                "length": 11,
+                                "offset": 39125
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:45",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18618003",
+                            "locations": {
+                                "length": 13,
+                                "offset": 39142
+                            }
+                        },
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:45",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "18618004",
+                            "locations": {
+                                "length": 11,
+                                "offset": 39164
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 39186,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S23",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Gradients of Streptococcus, Prevotella and Porphyromonas abundances in hard palate samples. HMP samples are shown in a principal coordinates analysis of unweighted UniFrac distances. Samples are colored according to (A) putative cluster membership and by their abundances (0\u20131, see legend inserts) of (B) Streptococcus, (C) Prevotella and (D) Porphyromonas.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:45",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18618005",
+                            "locations": {
+                                "length": 13,
+                                "offset": 39199
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:45",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18618006",
+                            "locations": {
+                                "length": 10,
+                                "offset": 39214
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas",
+                            "infons": {
+                                "identifier": "NCBI:txid836",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:45",
+                                "parent_taxonomic_id": "NCBI:txid171551"
+                            },
+                            "id": "18618007",
+                            "locations": {
+                                "length": 13,
+                                "offset": 39229
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:48",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18618008",
+                            "locations": {
+                                "length": 13,
+                                "offset": 39491
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:48",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18618009",
+                            "locations": {
+                                "length": 10,
+                                "offset": 39510
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas",
+                            "infons": {
+                                "identifier": "NCBI:txid836",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:48",
+                                "parent_taxonomic_id": "NCBI:txid171551"
+                            },
+                            "id": "18618010",
+                            "locations": {
+                                "length": 13,
+                                "offset": 39529
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 39553,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S24",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Gradients of Streptococcus, Porphyromonas and Atopobium abundances in tongue dorsum samples. HMP samples are shown in a principal coordinates analysis of unweighted UniFrac distances. Samples are colored according to (A) putative cluster membership and by their abundances (0\u20131, see legend inserts) of (B) Streptococcus, (C) Porphyromonas and (D) Atopobium.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:48",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18618011",
+                            "locations": {
+                                "length": 13,
+                                "offset": 39566
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas",
+                            "infons": {
+                                "identifier": "NCBI:txid836",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:48",
+                                "parent_taxonomic_id": "NCBI:txid171551"
+                            },
+                            "id": "18618012",
+                            "locations": {
+                                "length": 13,
+                                "offset": 39581
+                            }
+                        },
+                        {
+                            "text": "Atopobium",
+                            "infons": {
+                                "identifier": "NCBI:txid1380",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:49",
+                                "parent_taxonomic_id": "NCBI:txid1643824"
+                            },
+                            "id": "18618013",
+                            "locations": {
+                                "length": 9,
+                                "offset": 39599
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:52",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18618014",
+                            "locations": {
+                                "length": 13,
+                                "offset": 39859
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas",
+                            "infons": {
+                                "identifier": "NCBI:txid836",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:52",
+                                "parent_taxonomic_id": "NCBI:txid171551"
+                            },
+                            "id": "18618015",
+                            "locations": {
+                                "length": 13,
+                                "offset": 39878
+                            }
+                        },
+                        {
+                            "text": "Atopobium",
+                            "infons": {
+                                "identifier": "NCBI:txid1380",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:52",
+                                "parent_taxonomic_id": "NCBI:txid1643824"
+                            },
+                            "id": "18618016",
+                            "locations": {
+                                "length": 9,
+                                "offset": 39900
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 39920,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S25",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Gradients of Prevotella, Unclassified Veillonellaceae and Streptococcus abundances in saliva samples. HMP samples are shown in a principal coordinates analysis of unweighted UniFrac distances. Samples are colored according to (A) putative cluster membership and by their abundances (0\u20131, see legend inserts) of (B) Prevotella, (C) Unclassified Veillonellaceae and (D) Streptococcus.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:52",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18618017",
+                            "locations": {
+                                "length": 10,
+                                "offset": 39933
+                            }
+                        },
+                        {
+                            "text": "Veillonellaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid31977",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:52",
+                                "parent_taxonomic_id": "NCBI:txid1843489"
+                            },
+                            "id": "18618018",
+                            "locations": {
+                                "length": 15,
+                                "offset": 39958
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:52",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18618019",
+                            "locations": {
+                                "length": 13,
+                                "offset": 39978
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:55",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18618020",
+                            "locations": {
+                                "length": 10,
+                                "offset": 40235
+                            }
+                        },
+                        {
+                            "text": "Veillonellaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid31977",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:55",
+                                "parent_taxonomic_id": "NCBI:txid1843489"
+                            },
+                            "id": "18618021",
+                            "locations": {
+                                "length": 15,
+                                "offset": 40264
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:55",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18618022",
+                            "locations": {
+                                "length": 13,
+                                "offset": 40288
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 40312,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S26",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Gradients of Prevotella, Streptococcus and Porphyromonas abundances in palatine tonsils samples. HMP samples are shown in a principal coordinates analysis of unweighted UniFrac distances. Samples are colored according to their (A) putative cluster membership and by abundances (0\u20131, see legend inserts) of (B) Prevotella, (C) Streptococcus and (D) Porphyromonas.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:56",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18618023",
+                            "locations": {
+                                "length": 10,
+                                "offset": 40325
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:56",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18618024",
+                            "locations": {
+                                "length": 13,
+                                "offset": 40337
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas",
+                            "infons": {
+                                "identifier": "NCBI:txid836",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:56",
+                                "parent_taxonomic_id": "NCBI:txid171551"
+                            },
+                            "id": "18618025",
+                            "locations": {
+                                "length": 13,
+                                "offset": 40355
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:58",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18618026",
+                            "locations": {
+                                "length": 10,
+                                "offset": 40622
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:58",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18618027",
+                            "locations": {
+                                "length": 13,
+                                "offset": 40638
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas",
+                            "infons": {
+                                "identifier": "NCBI:txid836",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:59",
+                                "parent_taxonomic_id": "NCBI:txid171551"
+                            },
+                            "id": "18618028",
+                            "locations": {
+                                "length": 13,
+                                "offset": 40660
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 40684,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S27",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Gradients of Prevotella, Neisseria and Unclassified Veillonellaceae abundances in throat samples. HMP samples are shown in a principal coordinates analysis of unweighted UniFrac distances. Samples are colored according to (A) putative cluster membership and by their abundances (0\u20131, see legend inserts) of (B) Prevotella, (C) Neisseria and (D) Unclassified Veillonellaceae.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:59",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18618029",
+                            "locations": {
+                                "length": 10,
+                                "offset": 40697
+                            }
+                        },
+                        {
+                            "text": "Neisseria",
+                            "infons": {
+                                "identifier": "NCBI:txid482",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:59",
+                                "parent_taxonomic_id": "NCBI:txid481"
+                            },
+                            "id": "18618030",
+                            "locations": {
+                                "length": 9,
+                                "offset": 40709
+                            }
+                        },
+                        {
+                            "text": "Veillonellaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid31977",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:12:59",
+                                "parent_taxonomic_id": "NCBI:txid1843489"
+                            },
+                            "id": "18618031",
+                            "locations": {
+                                "length": 15,
+                                "offset": 40736
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:02",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18618032",
+                            "locations": {
+                                "length": 10,
+                                "offset": 40995
+                            }
+                        },
+                        {
+                            "text": "Neisseria",
+                            "infons": {
+                                "identifier": "NCBI:txid482",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:02",
+                                "parent_taxonomic_id": "NCBI:txid481"
+                            },
+                            "id": "18618033",
+                            "locations": {
+                                "length": 9,
+                                "offset": 41011
+                            }
+                        },
+                        {
+                            "text": "Veillonellaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid31977",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:02",
+                                "parent_taxonomic_id": "NCBI:txid1843489"
+                            },
+                            "id": "18618034",
+                            "locations": {
+                                "length": 15,
+                                "offset": 41042
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 41068,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S28",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Gradients of Propionibacterium, Staphylococcus and Corynebacterium abundances in retroauricular crease samples. HMP samples are shown in a principal coordinates analysis of unweighted UniFrac distances. Samples are colored according to (A) putative cluster membership and by their abundances (0\u20131, see legend inserts) of (B) Propionibacterium, (C) Staphylococcus and (D) Corynebacterium.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Propionibacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1743",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:02",
+                                "parent_taxonomic_id": "NCBI:txid31957"
+                            },
+                            "id": "18618035",
+                            "locations": {
+                                "length": 17,
+                                "offset": 41081
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:02",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "18618036",
+                            "locations": {
+                                "length": 14,
+                                "offset": 41100
+                            }
+                        },
+                        {
+                            "text": "Corynebacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1716",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:02",
+                                "parent_taxonomic_id": "NCBI:txid1653"
+                            },
+                            "id": "18618037",
+                            "locations": {
+                                "length": 15,
+                                "offset": 41119
+                            }
+                        },
+                        {
+                            "text": "Propionibacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1743",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:05",
+                                "parent_taxonomic_id": "NCBI:txid31957"
+                            },
+                            "id": "18618038",
+                            "locations": {
+                                "length": 17,
+                                "offset": 41393
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:05",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "18618039",
+                            "locations": {
+                                "length": 14,
+                                "offset": 41416
+                            }
+                        },
+                        {
+                            "text": "Corynebacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1716",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:06",
+                                "parent_taxonomic_id": "NCBI:txid1653"
+                            },
+                            "id": "18618040",
+                            "locations": {
+                                "length": 15,
+                                "offset": 41439
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 41465,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S29",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Gradients of Propionibacterium, Staphylococcus and Parabacteroides abundances in antecubital fossa samples. HMP samples are shown in a principal coordinates analysis of unweighted UniFrac distances. Samples are colored according to (A) putative cluster membership and by their abundances (0\u20131, see legend inserts) of (B) Propionibacterium, (C) Staphylococcus and (D) Parabacteroides.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Propionibacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1743",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:06",
+                                "parent_taxonomic_id": "NCBI:txid31957"
+                            },
+                            "id": "18618041",
+                            "locations": {
+                                "length": 17,
+                                "offset": 41478
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:06",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "18618042",
+                            "locations": {
+                                "length": 14,
+                                "offset": 41497
+                            }
+                        },
+                        {
+                            "text": "Parabacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid375288",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:06",
+                                "parent_taxonomic_id": "NCBI:txid2005525"
+                            },
+                            "id": "18618043",
+                            "locations": {
+                                "length": 15,
+                                "offset": 41516
+                            }
+                        },
+                        {
+                            "text": "Propionibacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1743",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:09",
+                                "parent_taxonomic_id": "NCBI:txid31957"
+                            },
+                            "id": "18618044",
+                            "locations": {
+                                "length": 17,
+                                "offset": 41786
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:09",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "18618045",
+                            "locations": {
+                                "length": 14,
+                                "offset": 41809
+                            }
+                        },
+                        {
+                            "text": "Parabacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid375288",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:09",
+                                "parent_taxonomic_id": "NCBI:txid2005525"
+                            },
+                            "id": "18618046",
+                            "locations": {
+                                "length": 15,
+                                "offset": 41832
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 41858,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S30",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Gradients of Corynebacterium, Staphylococcus and Propionibacterium abundances in anterior nares samples. HMP samples are shown in a principal coordinates analysis of unweighted UniFrac distances. Samples are colored according to (A) putative cluster membership and by their abundances (0\u20131, see legend inserts) of (B) Corynebacterium, (C) Staphylococcus and (D) Propionibacterium.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Corynebacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1716",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:09",
+                                "parent_taxonomic_id": "NCBI:txid1653"
+                            },
+                            "id": "18618047",
+                            "locations": {
+                                "length": 15,
+                                "offset": 41871
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:09",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "18618048",
+                            "locations": {
+                                "length": 14,
+                                "offset": 41888
+                            }
+                        },
+                        {
+                            "text": "Propionibacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1743",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:09",
+                                "parent_taxonomic_id": "NCBI:txid31957"
+                            },
+                            "id": "18618049",
+                            "locations": {
+                                "length": 17,
+                                "offset": 41907
+                            }
+                        },
+                        {
+                            "text": "Corynebacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1716",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:12",
+                                "parent_taxonomic_id": "NCBI:txid1653"
+                            },
+                            "id": "18618050",
+                            "locations": {
+                                "length": 15,
+                                "offset": 42176
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:12",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "18618051",
+                            "locations": {
+                                "length": 14,
+                                "offset": 42197
+                            }
+                        },
+                        {
+                            "text": "Propionibacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1743",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:13",
+                                "parent_taxonomic_id": "NCBI:txid31957"
+                            },
+                            "id": "18618052",
+                            "locations": {
+                                "length": 17,
+                                "offset": 42220
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 42248,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "List of studies used in the data analysis.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42298,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(DOCX)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42304,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "Calculations were performed with the assistance of Shane Canon at NERSC.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42391,
+                    "infons": {
+                        "title": "A human gut microbial gene catalogue established by metagenomic sequencing",
+                        "journal": "Nature",
+                        "volume": "464",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Qin J, Li R, Raes J, Arumugam M, Burgdorf KS, et al. (2010) A human gut microbial gene catalogue established by metagenomic sequencing. Nature464: 59\u201365. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42602,
+                    "infons": {
+                        "title": "Structure, function and diversity of the healthy human microbiome",
+                        "journal": "Nature",
+                        "volume": "486",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. The Human Microbiome Project Consortium (2012) Structure, function and diversity of the healthy human microbiome. Nature486: 207\u2013214. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42783,
+                    "infons": {
+                        "title": "Enterotypes of the human gut microbiome",
+                        "journal": "Nature",
+                        "volume": "473",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Arumugam M, Raes J, Pelletier E, Le Paslier D, Yamada T, et al. (2011) Enterotypes of the human gut microbiome. Nature473: 174\u2013180. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42962,
+                    "infons": {
+                        "title": "A framework for human microbiome research",
+                        "journal": "Nature",
+                        "volume": "486",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. The Human Microbiome Project Consortium (2012) A framework for human microbiome research. Nature486: 215\u2013221. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43119,
+                    "infons": {
+                        "title": "QIIME allows analysis of high-throughput community sequencing data",
+                        "journal": "Nat Methods",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Caporaso JG, Kuczynski J, Stombaugh J, Bittinger K, Bushman FD, et al. (2010) QIIME allows analysis of high-throughput community sequencing data. Nat Methods7: 335\u2013336. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43335,
+                    "infons": {
+                        "title": "Impact of diet in shaping gut microbiota revealed by a comparative study in children from Europe and rural Africa",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "107",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. De Filippo C, Cavalieri D, Di Paola M, Ramazzotti M, Poullet JB, et al. (2010) Impact of diet in shaping gut microbiota revealed by a comparative study in children from Europe and rural Africa. Proc Natl Acad Sci U S A107: 14691\u201314696. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43618,
+                    "infons": {
+                        "title": "Incomplete recovery and individualized responses of the human distal gut microbiota to repeated antibiotic perturbation",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "108",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Dethlefsen L, Relman DA (2011) Incomplete recovery and individualized responses of the human distal gut microbiota to repeated antibiotic perturbation. Proc Natl Acad Sci U S A108 (Suppl 1) 4554\u20134561. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43866,
+                    "infons": {
+                        "title": "An improved Greengenes taxonomy with explicit ranks for ecological and evolutionary analyses of bacteria and archaea",
+                        "journal": "ISME J",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. McDonald D, Price MN, Goodrich J, Nawrocki EP, Desantis TZ, et al. (2011) An improved Greengenes taxonomy with explicit ranks for ecological and evolutionary analyses of bacteria and archaea. ISME J6: 610\u2013618. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:34",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "18618053",
+                            "locations": {
+                                "length": 8,
+                                "offset": 44039
+                            }
+                        },
+                        {
+                            "text": "archaea",
+                            "infons": {
+                                "identifier": "NCBI:txid2157",
+                                "type": "archaea_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 16:13:34",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "18618054",
+                            "locations": {
+                                "length": 7,
+                                "offset": 44052
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 44123,
+                    "infons": {
+                        "title": "UniFrac: a new phylogenetic method for comparing microbial communities",
+                        "journal": "Appl Environ Microbiol",
+                        "volume": "71",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Lozupone C, Knight R (2005) UniFrac: a new phylogenetic method for comparing microbial communities. Appl Environ Microbiol71: 8228\u20138235. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44307,
+                    "infons": {
+                        "title": "Metagenomic microbial community profiling using unique clade-specific marker genes",
+                        "journal": "Nat Methods",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Segata N, Waldron L, Ballarini A, Narasimhan V, Jousson O, et al. (2012) Metagenomic microbial community profiling using unique clade-specific marker genes. Nat Methods9: 811\u2013814. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44535,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Oksanen J, Blanchet FG, Kindt R, Legendre P, Minchin PR, et al.. (2011) vegan: Community ecology package. R package version 2.0-0. http://cran.r-project.org/web/packages/vegan/index.html.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44726,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Maechler M, Rousseeuw P, Struyf A, Hubert M, Hornik K (2012) cluster: Cluster analysis basics and extensions. R package version 1.14.2 ed.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44868,
+                    "infons": {
+                        "title": "Cluster validation by prediction strength",
+                        "journal": "J Comput Graph Stat",
+                        "volume": "14",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Tibshirani R, Walther G (2005) Cluster validation by prediction strength. J Comput Graph Stat14: 511\u2013528. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44994,
+                    "infons": {
+                        "title": "Silhouettes - a Graphical aid to the interpretation and validation of cluster-analysis",
+                        "journal": "J Comput Appl Math",
+                        "volume": "20",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Rousseeuw PJ (1987) Silhouettes - a Graphical aid to the interpretation and validation of cluster-analysis. J Comput Appl Math20: 53\u201365. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45151,
+                    "infons": {
+                        "title": "Linking long-term dietary patterns with gut microbial enterotypes",
+                        "journal": "Science",
+                        "volume": "334",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Wu GD, Chen J, Hoffmann C, Bittinger K, Chen YY, et al. (2011) Linking long-term dietary patterns with gut microbial enterotypes. Science334: 105\u2013108. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45350,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Kaufman L, Rousseeuw PJ (1990) Finding groups in data : an introduction to cluster analysis. Hoboken, N.J.: Wiley. xiv, 342.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45478,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Duong T (2011) ks: Kernel smoothing.R package version 1.8.2. http://cran.r-project.org/web/packages/ks/index.html.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45596,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Hennig C (2010) fpc: Flexible procedures for clustering. http://cran.r-project.org/web/packages/fpc/index.html.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45711,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Hennig C, Liao TF (2010) Comparing latent class and dissimilarity based clustering for mixed type variables with application to social stratification. Research Report No. 308. Department of Statistical Science, University College London.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45952,
+                    "infons": {
+                        "title": "Bacterial community variation in human body habitats across space and time",
+                        "journal": "Science",
+                        "volume": "326",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Costello EK, Lauber CL, Hamady M, Fierer N, Gordon JI, et al. (2009) Bacterial community variation in human body habitats across space and time. Science326: 1694\u20131697. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46168,
+                    "infons": {
+                        "title": "Delivery mode shapes the acquisition and structure of the initial microbiota across multiple body habitats in newborns",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "107",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Dominguez-Bello MG, Costello EK, Contreras M, Magris M, Hidalgo G, et al. (2010) Delivery mode shapes the acquisition and structure of the initial microbiota across multiple body habitats in newborns. Proc Natl Acad Sci U S A107: 11971\u201311975. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46459,
+                    "infons": {
+                        "title": "Succession of microbial consortia in the developing infant gut microbiome",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "108",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Koenig JE, Spor A, Scalfone N, Fricker AD, Stombaugh J, et al. (2011) Succession of microbial consortia in the developing infant gut microbiome. Proc Natl Acad Sci U S A108 (Suppl 1) 4578\u20134585. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46701,
+                    "infons": {
+                        "title": "An examination of procedures for determining the number of clusters in a data set",
+                        "journal": "Psychometrika",
+                        "volume": "50",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Milligan GW, Cooper MC (1985) An examination of procedures for determining the number of clusters in a data set. Psychometrika50: 159\u2013179. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46860,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Jain R, Koronios A (2008) Cluster validating techniques in the presence of duplicates. In: Jain LC, Sato-Ilic M, Virvou M, Tsihrintzis GA, Balas VE. et al..., editors. Computational Intelligence Paradigms. Springer Berlin Heidelberg.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47097,
+                    "infons": {
+                        "title": "Gut microbiota composition correlates with diet and health in the elderly",
+                        "journal": "Nature",
+                        "volume": "488",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Claesson MJ, Jeffery IB, Conde S, Power SE, O'Connor EM, et al. (2012) Gut microbiota composition correlates with diet and health in the elderly. Nature488: 178\u2013184. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47292,
+                    "infons": {
+                        "title": "Vaginal microbiome of reproductive-age women",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "108",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Ravel J, Gajer P, Abdo Z, Schneider GM, Koenig SS, et al. (2011) Vaginal microbiome of reproductive-age women. Proc Natl Acad Sci U S A108 (Suppl 1) 4680\u20134687. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47500,
+                    "infons": {
+                        "title": "Experimental and analytical tools for studying the human microbiome",
+                        "journal": "Nat Rev Genet",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Kuczynski J, Lauber CL, Walters WA, Parfrey LW, Clemente JC, et al. (2012) Experimental and analytical tools for studying the human microbiome. Nat Rev Genet13: 47\u201358. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47716,
+                    "infons": {
+                        "title": "Target region selection is a critical determinant of community fingerprints generated by 16S pyrosequencing",
+                        "journal": "PloS ONE",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Kumar PS, Brooker MR, Dowd SE, Camerlengo T (2011) Target region selection is a critical determinant of community fingerprints generated by 16S pyrosequencing. PloS ONE6: e20956. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47943,
+                    "infons": {
+                        "title": "Moving pictures of the human microbiome",
+                        "journal": "Genome Biol",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Caporaso JG, Lauber CL, Costello EK, Berg-Lyons D, Gonzalez A, et al. (2011) Moving pictures of the human microbiome. Genome Biol12: R50. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48129,
+                    "infons": {
+                        "title": "Microbial ecology: human gut microbes associated with obesity",
+                        "journal": "Nature",
+                        "volume": "444",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Ley RE, Turnbaugh PJ, Klein S, Gordon JI (2006) Microbial ecology: human gut microbes associated with obesity. Nature444: 1022\u20131023. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48291,
+                    "infons": {
+                        "title": "A core gut microbiome in obese and lean twins",
+                        "journal": "Nature",
+                        "volume": "457",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Turnbaugh PJ, Hamady M, Yatsunenko T, Cantarel BL, Duncan A, et al. (2009) A core gut microbiome in obese and lean twins. Nature457: 480\u2013484. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48481,
+                    "infons": {
+                        "title": "Postprandial remodeling of the gut microbiota in Burmese pythons",
+                        "journal": "ISME J",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Costello EK, Gordon JI, Secor SM, Knight R (2010) Postprandial remodeling of the gut microbiota in Burmese pythons. ISME J4: 1375\u20131385. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48665,
+                    "infons": {
+                        "title": "Regulation of myocardial ketone body metabolism by the gut microbiota during nutrient deprivation",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "106",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Crawford P, Crowley J, Sambandam N, Muegge B, Costello E, et al. (2009) Regulation of myocardial ketone body metabolism by the gut microbiota during nutrient deprivation. Proc Natl Acad Sci U S A106: 11276\u201311281. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48926,
+                    "infons": {
+                        "title": "Energy-balance studies reveal associations between gut microbes, caloric load, and nutrient absorption in humans",
+                        "journal": "Am J Clin Nutr",
+                        "volume": "94",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Jumpertz R, Le DS, Turnbaugh PJ, Trinidad C, Bogardus C, et al. (2011) Energy-balance studies reveal associations between gut microbes, caloric load, and nutrient absorption in humans. Am J Clin Nutr94: 58\u201365. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

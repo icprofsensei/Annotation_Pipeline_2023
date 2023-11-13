@@ -1,0 +1,1454 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20220803",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC5689185",
+            "inputfile": "../microbiome_corpus_HTML\\PMC5689185.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Normalization of the microbiota in patients after treatment for colonic lesions",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 79,
+                    "infons": {
+                        "section_title_1": "keywords",
+                        "iao_name_1": "keywords section",
+                        "iao_id_1": "IAO:0000630"
+                    },
+                    "text": "Microbiota, Colorectal cancer, Polyps, Treatment, Risk factor",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 148,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Background",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Colorectal cancer is a worldwide health problem. Despite growing evidence that members of the gut microbiota can drive tumorigenesis, little is known about what happens to it after treatment for an adenoma or carcinoma. This study tested the hypothesis that treatment for adenoma or carcinoma alters the abundance of bacterial populations associated with disease to those associated with a normal colon. We tested this hypothesis by sequencing the 16S rRNA genes in the feces of 67 individuals before and after treatment for adenoma (N = 22), advanced adenoma (N = 19), and carcinoma (N = 26).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 759,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Results",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "There were small changes to the bacterial community associated with adenoma or advanced adenoma and large changes associated with carcinoma. The communities from patients with carcinomas changed significantly more than those with adenoma following treatment (P value < 0.001). Although treatment was associated with intrapersonal changes, the change in the abundance of individual OTUs in response to treatment was not consistent within diagnosis groups (P value > 0.05). Because the distribution of OTUs across patients and diagnosis groups was irregular, we used the random forest machine learning algorithm to identify groups of OTUs that could be used to classify pre and post-treatment samples for each of the diagnosis groups. Although the adenoma and carcinoma models could reliably differentiate between the pre- and post-treatment samples (P value < 0.001), the advanced-adenoma model could not (P value = 0.61). Furthermore, there was little overlap between the OTUs that were indicative of each treatment. To determine whether individuals who underwent treatment were more likely to have OTUs associated with normal colons we used a larger cohort that contained individuals with normal colons and those with adenomas, advanced adenomas, and carcinomas. We again built random forest models and measured the change in the positive probability of having one of the three diagnoses to assess whether the post-treatment samples received the same classification as the pre-treatment samples. Samples from patients who had carcinomas changed toward a microbial milieu that resembles the normal colon after treatment (P value < 0.001). Finally, we were unable to detect any significant differences in the microbiota of individuals treated with surgery alone and those treated with chemotherapy or chemotherapy and radiation (P value > 0.05).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2610,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Conclusions",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "By better understanding the response of the microbiota to treatment for adenomas and carcinomas, it is likely that biomarkers will eventually be validated that can be used to quantify the risk of recurrence and the likelihood of survival. Although it was difficult to identify significant differences between pre- and post-treatment samples from patients with adenoma and advanced adenoma, this was not the case for carcinomas. Not only were there large changes in pre- versus post-treatment samples for those with carcinoma, but also these changes were toward a more normal microbiota.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3207,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Electronic supplementary material",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "The online version of this article (doi:10.1186/s40168-017-0366-3) contains supplementary material, which is available to authorized users.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3379,
+                    "infons": {
+                        "section_title_1": "Background",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Colorectal cancer (CRC) is the third most common cause of cancer deaths in the USA [1, 2]. Disease mortality has significantly decreased, predominately due to improvements in screening [2]. Despite these improvements, there are still approximately 50,000 CRC-related deaths per year in the USA [1]. Current estimates indicate that 20\u201330% of those who undergo treatment will experience recurrence and 35% of all patients will die within 5 years [3\u20135]. Identification of methods to assess patients\u2019 risk of recurrence is of great importance to reduce mortality and healthcare costs.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3959,
+                    "infons": {
+                        "section_title_1": "Background",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "There is growing evidence that the gut microbiota is involved in the progression of CRC. Mouse-based studies have identified populations of Bacteroides fragilis, Escherichia coli, and Fusobacterium nucleatum that alter disease progression [6\u201310]. Furthermore, studies that shift the structure of the microbiota through the use of antibiotics or inoculation of germ-free mice with human feces have shown that varying community compositions can result in varied tumor burden [11\u201313]. Collectively, these studies support the hypothesis that the microbiota can alter the amount of inflammation in the colon and with it the rate of tumorigenesis [14].",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteroides fragilis",
+                            "infons": {
+                                "identifier": "NCBI:txid817",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:55:46",
+                                "parent_taxonomic_id": "NCBI:txid816"
+                            },
+                            "id": "957235",
+                            "locations": {
+                                "length": 20,
+                                "offset": 4099
+                            }
+                        },
+                        {
+                            "text": "Escherichia coli",
+                            "infons": {
+                                "identifier": "NCBI:txid562",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:55:46",
+                                "parent_taxonomic_id": "NCBI:txid561"
+                            },
+                            "id": "957236",
+                            "locations": {
+                                "length": 16,
+                                "offset": 4121
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium nucleatum",
+                            "infons": {
+                                "identifier": "NCBI:txid851",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:55:46",
+                                "parent_taxonomic_id": "NCBI:txid848"
+                            },
+                            "id": "957237",
+                            "locations": {
+                                "length": 23,
+                                "offset": 4143
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 4605,
+                    "infons": {
+                        "section_title_1": "Background",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Building upon this evidence, several human studies have identified unique signatures of colonic lesions [15\u201320]. One line of research has identified community-level differences between those bacteria that are found on and adjacent to colonic lesions and have supported a role for B. fragilis, E. coli, and F. nucleatum in tumorigenesis [21\u201323]. Others have proposed feces-based biomarkers that could be used to diagnose the presence of colonic adenomas and carcinomas [24\u201326]. These studies have associated F. nucleatum and other oral pathogens with colonic lesions (adenoma, advanced adenoma, and carcinoma). They have also noted that the loss of bacteria generally thought to produce short-chain fatty acids, which can suppress inflammation, is associated with colonic lesions. This suggests that gut bacteria have a role in tumorigenesis with potential as useful biomarkers for aiding in the early detection of disease [21\u201326].",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:55:53",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "957238",
+                            "locations": {
+                                "length": 8,
+                                "offset": 4796
+                            }
+                        },
+                        {
+                            "text": "B. fragilis",
+                            "infons": {
+                                "identifier": "NCBI:txid817",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:55:54",
+                                "parent_taxonomic_id": "NCBI:txid816"
+                            },
+                            "id": "957239",
+                            "locations": {
+                                "length": 11,
+                                "offset": 4885
+                            }
+                        },
+                        {
+                            "text": "E. coli",
+                            "infons": {
+                                "identifier": "NCBI:txid562",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:55:54",
+                                "parent_taxonomic_id": "NCBI:txid561"
+                            },
+                            "id": "957240",
+                            "locations": {
+                                "length": 7,
+                                "offset": 4898
+                            }
+                        },
+                        {
+                            "text": "F. nucleatum",
+                            "infons": {
+                                "identifier": "NCBI:txid851",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:55:55",
+                                "parent_taxonomic_id": "NCBI:txid848"
+                            },
+                            "id": "957241",
+                            "locations": {
+                                "length": 12,
+                                "offset": 4911
+                            }
+                        },
+                        {
+                            "text": "F. nucleatum",
+                            "infons": {
+                                "identifier": "NCBI:txid851",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:55:57",
+                                "parent_taxonomic_id": "NCBI:txid848"
+                            },
+                            "id": "957242",
+                            "locations": {
+                                "length": 12,
+                                "offset": 5112
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:55:58",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "957243",
+                            "locations": {
+                                "length": 8,
+                                "offset": 5253
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:56:00",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "957244",
+                            "locations": {
+                                "length": 8,
+                                "offset": 5408
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 5535,
+                    "infons": {
+                        "section_title_1": "Background",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Despite advances in understanding the role between the gut microbiota and colonic tumorigenesis, we still do not understand how treatments including resection, chemotherapy, and/or radiation affect the composition of the gut microbiota. If the microbial community drives tumorigenesis then one would hypothesize that treatment to remove a lesion would not only remove the lesion, but also the microbiota that promoted the tumorigenesis and hence the risk of recurrence. To test this hypothesis, we addressed two related questions: does treatment affect the colonic microbiota in a predictable manner? If so, does the treatment alter the community to more closely resemble that of individuals with normal colons?",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6246,
+                    "infons": {
+                        "section_title_1": "Background",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "We answered these questions by sequencing the V4 region of 16S rRNA genes amplified from fecal samples of individuals with adenoma, advanced adenoma, and carcinomas pre- and post-treatment. We used classical community analysis to compare the alpha and beta-diversity of communities pre- and post-treatment. Next, we generated random forest models to identify bacterial populations that were indicative of treatment for each diagnosis group. Finally, we measured the predictive probabilities to assess whether treatment yielded bacterial communities similar to those individuals with normal colons. We found that treatment alters the composition of the gut microbiota and that, for those with carcinomas, the gut microbiota shifted more toward that of a normal colon after treatment. In the individuals with carcinomas, no difference was found by the type of treatment (surgery alone, surgery with chemotherapy, surgery with chemotherapy, and radiation). Understanding how the community responds to these treatments could be a valuable tool for identifying biomarkers to quantify the risk of recurrence and the likelihood of survival.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7379,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Treatment for colonic lesions alters the bacterial community structure",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Within our 67-person cohort, we tested whether the microbiota of patients with adenoma (N = 22), advanced adenoma (N = 19), or carcinoma (N = 26) had any broad differences between pre- and post-treatment samples [Table\u00a01]. None of the individuals in this study had any recorded antibiotic usage that was not associated with surgical treatment of their respective lesion. The structure of the microbial communities of the pre and post-treatment samples differed, as measured by the \u03b8\nYC beta diversity metric [Fig.\u00a01\n\u200ba].a]. We found that the communities obtained pre- and post-treatment among the patients with carcinomas changed significantly more than those patients with adenoma (P value< 0.001). There were no significant differences in the amount of change observed between the patients with adenoma and advanced adenoma or between the patients with advanced adenoma and carcinoma (P value > 0.05). Next, we tested whether there was a consistent direction in the change in the community structure between the pre- and post-treatment samples for each of the diagnosis groups [Fig.\u00a01\n\u200bbb\u2013d]. We only observed a consistent shift in community structure for the patients with carcinoma when using a PERMANOVA test (adenoma P value = 0.999, advanced adenoma P value = 0.945, and carcinoma P value = 0.005). Finally, we measured the number of observed OTUs, Shannon evenness, and Shannon diversity in the pre- and post-treatment samples and did not observe a significant change for any of the diagnosis groups (P value > 0.05) [Additional file\u00a01: Table S1].\n\n\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9007,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Treatment for colonic lesions alters the bacterial community structure",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "\nThe treatment of lesions are not consistent across diagnosis groups. We used two approaches to identify those bacterial populations that change between the two samples for each diagnosis group. First, we sought to identify individual OTUs that could account for the change in overall community structure. However, using a paired Wilcoxon test, we were unable to identify any OTUs that were significantly different in the pre- and post-treatment groups (P value > 0.05). It is likely that high inter-individual variation and the irregular distribution of OTUs across individuals limited the statistical power of the test. We attempted to overcome these problems by using random forest models to identify collections of OTUs that would allow us to differentiate between pre- and post-treatment samples from each of the diagnosis groups. The adenoma and carcinoma models performed well (adenoma AUC range = 0.54 \u20130.83 and carcinoma AUC range = 0.82 \u2013 0.98); however, the model for patients treated for advanced adenomas was not able to reliably differentiate between the pre and post-treatment samples (advanced adenoma AUC range = 0.34 \u2013 0.65). Interestingly, the top 10 most important OTUs by MDA that were used for each model had little overlap with each other [Fig.\u00a02]. Although treatment had an impact on the overall community structure, the effect of treatment was not consistent across patients and diagnosis groups. Both the adenoma and carcioma treatment models had AUCs that were significantly higher than a random model permutation (P value < 0.0001).\n\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10569,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Treatment for colonic lesions alters the bacterial community structure",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "\nPost-treatment samples from patients with carcinoma more closely resemble those of a normal colon. Next, we determined whether treatment changed the microbiota in a way that the post-treatment communities resembled that of patients with normal colons. To test this, we used an expanded cohort of 423 individuals that were diagnosed under the same protocol as having normal colons or colons with adenoma, advanced adenoma, or carcinoma [Table\u00a02]. We then constructed random forest models to classify the study samples, with the three diagnosis groups (adenoma, advanced adenoma, or carcinoma), or having a normal colon. The models performed moderately with CRC being the best (adenoma AUC range = 0.50 \u2013 0.62, advanced adenoma AUC range = 0.53 \u2013 0.67, carcinoma AUC range = 0.71 \u2013 0.82; Additional file\u00a02: Figure S1). The OTUs that were in the top 10% of importance for the adenoma and advanced adenoma models largely overlapped and those OTUs that were used to classify the carcinoma samples were largely distinct from those of the other two models [Fig.\u00a03\n\u200ba].a]. Among the OTUs that were shared across the three models were those populations generally considered beneficial to their host (e.g., Faecalibacterium, Lachnospiraceae, Bacteroides, Dorea, Anaerostipes, and Roseburia) [Fig.\u00a03\n\u200bb].b]. Although many of important OTUs in the top 10% were also included in the model differentiating between patients with normal colons and those with carcinoma, this model also included OTUs affiliated with populations that have previously been associated with carcinoma (Fusobacterium, Porphyromonas, Parvimonas) [24\u201326] [Additional file\u00a03: Figure S2] with some individuals showing a marked decrease in relative abundance [Additional file\u00a04: Figure S3]. Finally, we applied these three models to the pre- and post-treatment samples for each diagnosis group and quantified the change in the positive probability of the model. A decrease in the positive probability would indicate that the microbiota more closely resembled that of a patient with a normal colon. There was no significant change in the positive probability for the adenoma or advanced adenoma groups (P value > 0.05) [Fig.\u00a04]. The positive probability for the pre- and post-treatment samples from patients diagnosed with carcinoma significantly decreased with treatment, suggesting a shift toward a normal microbiota for most individuals (P value = 0.001). Only, 7 of the 26 patients (26.92%) who were diagnosed with a carcinoma had a higher positive probability after treatment; one of those was re-diagnosed with carcinoma on the follow up visit. These results indicate that, although there were changes in the microbiota associated with treatment, those experienced by patients with carcinoma after treatment yielded gut bacterial communities of greater similarity to that of a normal colon.\n\n\n\n",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Faecalibacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid216851",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:57:18",
+                                "parent_taxonomic_id": "NCBI:txid216572"
+                            },
+                            "id": "957245",
+                            "locations": {
+                                "length": 16,
+                                "offset": 11767
+                            }
+                        },
+                        {
+                            "text": "Lachnospiraceae",
+                            "infons": {
+                                "identifier": "NCBI:txid186803",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:57:18",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "957246",
+                            "locations": {
+                                "length": 15,
+                                "offset": 11785
+                            }
+                        },
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:57:18",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "957247",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11802
+                            }
+                        },
+                        {
+                            "text": "Dorea",
+                            "infons": {
+                                "identifier": "NCBI:txid189330",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:57:18",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "957248",
+                            "locations": {
+                                "length": 5,
+                                "offset": 11815
+                            }
+                        },
+                        {
+                            "text": "Anaerostipes",
+                            "infons": {
+                                "identifier": "NCBI:txid207244",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:57:18",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "957249",
+                            "locations": {
+                                "length": 12,
+                                "offset": 11822
+                            }
+                        },
+                        {
+                            "text": "Roseburia",
+                            "infons": {
+                                "identifier": "NCBI:txid841",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:57:18",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "957250",
+                            "locations": {
+                                "length": 9,
+                                "offset": 11840
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid848",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:57:21",
+                                "parent_taxonomic_id": "NCBI:txid203492"
+                            },
+                            "id": "957251",
+                            "locations": {
+                                "length": 13,
+                                "offset": 12134
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas",
+                            "infons": {
+                                "identifier": "NCBI:txid836",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:57:21",
+                                "parent_taxonomic_id": "NCBI:txid171551"
+                            },
+                            "id": "957252",
+                            "locations": {
+                                "length": 13,
+                                "offset": 12150
+                            }
+                        },
+                        {
+                            "text": "Parvimonas",
+                            "infons": {
+                                "identifier": "NCBI:txid543311",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:57:21",
+                                "parent_taxonomic_id": "NCBI:txid1570339"
+                            },
+                            "id": "957253",
+                            "locations": {
+                                "length": 10,
+                                "offset": 12165
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 13426,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Treatment for colonic lesions alters the bacterial community structure",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "\nDifficult to identify effects of specific treatments on the change in the microbiota. The type of treatment that the patients received varied across diagnosis groups. Those with adenomas and advanced adenomas received surgical resection (adenoma, N=4; advanced adenoma, N=4) or polyp removal during colonoscopy (adenoma, N=18; advanced adenoma, N=15) and those with carcinomas received surgical resection (N=12), surgical resection with chemotherapy (N=9), and surgical resection with chemotherapy and radiation (N=5). Regardless of treatment used, there was no significant difference in the effect of these treatments on the number of observed OTUs, Shannon diversity, or Shannon evenness (P value > 0.05). Furthermore, there was not a significant difference in the effect of the treatments on the amount of change in the community structure (P value = 0.375). Finally, the change in the positive probability was not significantly different between any of the treatment groups (P value = 0.375). Due to the relatively small number of samples in each treatment group, it was difficult to make a definitive statement regarding the specific type of treatment on the amount of change in the structure of the microbiota.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14643,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Our study focused on comparing the microbiota of patients diagnosed with adenoma, advanced adenoma, and carcinoma before and after treatment. For all three groups of patients, we observed changes in their microbiota. Some of these changes, specifically for adenoma, may be due to normal temporal variation, however, those with advanced adenoma and carcinoma clearly had large microbiota changes. After treatment, the microbiota of patients with carcinoma changed significantly more than the other groups. This change resulted in communities that more closely resembled those of patients with a normal colon. This may suggest that treatment for carcinoma is not only successful for removing the carcinoma but also at reducing the associated bacterial communities. Understanding the effect of treatment on the microbiota of those diagnosed with carcinomas may have important implications for reducing disease recurrence. It is intriguing that it may be possible to use microbiome-based biomarkers to not only predict the presence of lesions but to also assess the risk of recurrence due to these changes in the microbiota.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15773,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Patients diagnosed with adenoma and advanced adenoma, however, did not experience a shift toward a community structure that resembled those with normal colons. This may be due to the fundamental differences between the features of adenomas and advanced adenomas and carcinoma. Specifically, carcinomas may create an inflammatory milieu that would impact the structure of the community and removal of that stimulus would alter said structure. It is possible that the difference between the microbiota of patients with adenoma and advanced adenoma and those with normal colons is subtle. This is supported by the reduced ability of our models to correctly classify patients with adenomas and advanced adenomas relative to those diagnosed with carcinomas [Additional file\u00a02: Figure S1]. Given the irregular distribution of microbiota across patients in the different diagnosis groups, it is possible that we lacked the statistical power to adequately characterize the change in the communities following treatment.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16784,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "There was a subset of patients (7 of the 26 with carcinomas) who demonstrated an elevated probability of carcinoma after treatment. This may reflect an elevated risk of recurrence. The 26.92% prevalence of increased carcinoma probability from our study is within the expected rate of recurrence (20\u201330% (3, 4)). We hypothesized that these individuals may have had more severe tumors; however, the tumor severity of these seven individuals (1 with stage I, 3 with stage II, and 3 with stage III) was similar to the distribution observed among the other 19 patients. We also hypothesized that we may have sampled these patients later than the rest, and their communities may have reverted to a carcinoma-associated state; however, there was not a statistically significant difference in the length of time between sample collection among those whose probabilities increased (331 (246\u2013358) days) or decreased (364 (301\u2013434) days) (Wilcoxon test; P value = 0.39) (all days data displayed as median (IQR)). Finally, it is possible that these patients may not have responded to treatment as well as the other 19 patients diagnosed with carcinoma and so the microbiota may not have been impacted the same way. Again, further studies looking at the role of the microbiota in recurrence are needed to understand the dynamics following treatment.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18120,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Our final hypothesis was that the specific type of treatment altered the structure of the microbiome. The treatment to remove adenomas and advanced adenomas was either polyp removal or surgical resection whereas it was surgical resection alone or in combination with chemotherapy or with chemotherapy and radiation for individuals with carcinoma. Because chemotherapy and radiation target rapidly growing cells, these treatments would be more likely to cause a turnover of the colonic epithelium driving a more significant change in the structure of the microbiota. Although, we were able to test for an effect across these specific types of treatment, the number of patients in each treatment group was relatively small. Finally, those undergoing surgery would have received antibiotics, and this may be a potential confounder. However, our pre-treatment stool samples were obtained before the surgery and the post-treatment samples were obtained long after any effects due to antibiotic administration on the microbiome would be expected to occur (344 (266\u2013408) days). We also found no difference in the community structure of those that received surgery and those that did not as a treatment for adenoma or advanced adenoma.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19347,
+                    "infons": {
+                        "section_title_1": "Conclusion",
+                        "iao_name_1": "conclusion section",
+                        "iao_id_1": "IAO:0000615"
+                    },
+                    "text": "This study expands upon existing research that has established a role for the microbiota in tumorigenesis and that demonstrated the utility of microbiome-based biomarkers to predict the presence of colonic lesions. We were surprised by the lack of a consistent signal that was associated with treatment of patients with adenomas or advanced adenomas. The lack of a large effect size may be due to differences in the role of bacteria in the formation of adenomas and carcinomas or it could be due to differences in the behaviors and medications within these classes of patients. One of the most exciting of these future directions is the possibility that markers within the microbiota could be used to potentially evaluate the effect of treatment and to predict recurrence for those diagnosed with carcinoma. If such an approach is effective, it might be possible to target the microbiota as part of adjuvant therapy, if the biomarkers identified play a key role in the disease process. Our data provides additional evidence on the importance of the microbiota in tumorigenesis by addressing the recovery of the microbiota after treatment and opens interesting avenues of research into how these changes may affect recurrence.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:58:52",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "957254",
+                            "locations": {
+                                "length": 8,
+                                "offset": 19771
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 20582,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Study design and patient sampling",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Sampling and design have been previously reported in Baxter et al. [24]. Briefly, samples were stored on ice for at least 24 h before freezing. Although we cannot exclude that this sampling protocol may have impacted the gut microbiota composition, all samples were subjected to the same methodology. Study exclusion involved those who had already undergone surgery, radiation, or chemotherapy, had colorectal cancer before a baseline fecal sample could be obtained, had IBD, a known hereditary non-polyposis colorectal cancer, or familial adenomatous polyposis. Samples used to build the models for prediction were collected either prior to a colonoscopy or between 1 and 2 weeks after initial colonoscopy. The bacterial community has been shown to normalize back to a pre-colonoscopy community within this time period [27]. Our study cohort consisted of 67 individuals with an initial sample as described and a follow-up sample obtained between 188 and 546 days after treatment of lesion [Table\u00a01]. Patients were diagnosed by colonoscopic examination and histopathological review of any biopsies taken. Patients were classified as having advanced adenoma if they had an adenoma greater than 1 cm, more than three adenomas of any size, or an adenoma with villous histology. This study was approved by the University of Michigan Institutional Review Board. All study participants provided informed consent, and the study itself conformed to the guidelines set out by the Helsinki Declaration. The original protocol for the study did not provide for tracking patients after the follow-up samples and so it was not possible for us to ascertain their diagnosis after the completion of the study.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22314,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Treatment",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "For this study, treatment refers specifically to the removal of a lesion with or without chemotherapy and radiation. The majority of patients undergoing treatment for adenoma or advanced adenoma were not treated surgically [Table\u00a01] but rather via colonoscopy. All patients diagnosed with carcinomas were treated with at least surgery or a combination of surgery and chemotherapy or surgery, chemotherapy, and radiation. The type of chemotherapy used for patients with CRC included Oxaliplatin, Levicovorin, Folfox, Xeloda, Capecitabine, Avastin, Fluorouracil, and Glucovorin. These were used individually or in combination with others depending on the patient [Table\u00a01]. If an individual was treated with radiation, they were also always treated with chemotherapy. Radiation therapy generally used 18 mV photons for treatment.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23150,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "16S rRNA gene sequencing",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Sequencing was completed as described by Kozich et al. [28]. DNA extraction used the 96-well Soil DNA isolation kit (MO BIO Laboratories) and an epMotion 5075 automated pipetting system (Eppendorf). The V4 variable region was amplified, and the resulting product was split between four sequencing runs with normal, adenoma, and carcinoma evenly represented on each run. Each group was randomly assigned to avoid biases based on sample collection location. The pre and post-treatment samples were sequenced on the same run.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23696,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Sequence processing",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The mothur software package (v1.37.5) was used to process the 16S rRNA gene sequences and has been previously described [28]. The general workflow using mothur included merging paired-end reads into contigs, filtering for low quality contigs, aligning to the SILVA database [29], screening for chimeras using UCHIME [30], classifying with a naive Bayesian classifier using the Ribosomal Database Project (RDP) [31], and clustered into operational taxonomic units (OTUs) using a 97% similarity cutoff with an average neighbor clustering algorithm [32]. The number of sequences for each sample was rarefied to 10523 to minimize the impacts of uneven sampling.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24372,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Model building",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The random forest [33] algorithm was used to create the three models used to classify pre- and post-treatment samples by diagnosis (adenoma, advanced adenoma, or carcinoma) as well as to assess the probability that a sample was more similar to the patient\u2019s original diagnosis or that of a disease-free patient. All models included only OTU data obtained from 16S rRNA sequencing and were processed using the caret (v6.0.76) R package. For each model, we optimized the mtry hyper-parameter, which defines the number of OTUs to investigate at each split before a new division of the data was created with the random forest model [33]. To insure that our optimization did not result in over-fitting of the data, we made 100 different 80/20 (train/test) splits of the data where the same proportion was present within both the whole data set and the 80/20 split. For each of the 100 splits, 20 repeated 10-fold cross validation was performed on the 80% component to optimize the mtry hyper-parameter by maximizing the AUC (area under the curve of the receiver operator characteristic). The resulting model was then tested on the 20% of the data that were held out. A summary of the mtry hyperparameter values that were tried is available in Additional file\u00a01: Table S5. The reported P values for each model relative to a random labeling was assessed by comparing the distribution of the 100 80/20 splits for the correctly labeled data to the distribution of randomly labeled data.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25863,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Model building",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The three diagnosis models were constructed by using the data from Baxter et al. [24], which was censored for the pre-treatment samples of the patients that we had post-treatment samples. The treatment models were then used to quantify the model probability that a patient with an initial diagnosis retained that diagnosis or a disease-free diagnosis.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26214,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Statistical analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The R software package (v3.4.1) was used for all statistical analysis. Comparisons between bacterial community structure utilized PERMANOVA [34] in the vegan package (v2.4.3). Comparisons between probabilities as well as overall differences in the median relative abundance of each OTU between pre- and post-treatment samples utilized a paired Wilcoxon ranked sum test. Comparisons between different treatment for lesions utilized a Kruskal-Wallis test. Where multiple comparison testing was appropriate, a Benjamini-Hochberg (BH) correction was applied [35] and a corrected P value of less than 0.05 was considered significant. The P values reported are those that were BH corrected. Model rank importance was determined by obtaining the median MDA from the 100, 20 repeated 10-fold cross validation and then ranking from largest to smallest MDA.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27081,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Reproducible methods",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "A detailed and reproducible description of how the data were processed and analyzed can be found at https://github.com/SchlossLab/Sze_FollowUps_Microbiome_2017. Raw sequences have been deposited into the NCBI Sequence Read Archive (SRP062005 and SRP096978) and the necessary metadata can be found at https://www.ncbi.nlm.nih.gov/Traces/study/ and searching the respective SRA study accession.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27493,
+                    "infons": {
+                        "section_title_1": "Additional files",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27510,
+                    "infons": {
+                        "section_title_1": "Additional files",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Normalization of the microbiota in patients after treatment for colonic lesions (PDF 31 kb)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27601,
+                    "infons": {
+                        "section_title_1": "Additional files",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Figure S1: ROC curves of the adenoma, advanced adenoma, and carcinoma models. A) Adenoma ROC curve: the light green shaded areas represent the range of values of a 100 different 80/20 splits of the test set data and the dark green line represents the model using 100% of the data set and what was used for subsequent classification. B) Advanced Adenoma ROC curve: the light yellow shaded areas represent the range of values of a 100 different 80/20 splits of the test set data and the dark yellow line represents the model using 100% of the data set and what was used for subsequent classification. C) Carcinoma ROC curve: the light red shaded areas represent the range of values of a 100 different 80/20 splits of the test set data and the dark red line represents the model using 100% of the data set and what was used for subsequent classification. (PDF 92 kb)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28464,
+                    "infons": {
+                        "section_title_1": "Additional files",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Figure S2: Summary of top 10% of important OTUs for the adenoma, advanced adenoma, and carcinoma models. A) MDA of the most important variables in the adenoma model. The dark green point represents the mean and the lighter green points are the value of each of the 100 different runs. B) Summary of important variables in the advanced adenoma model. MDA of the most important variables in the SRN model. The dark yellow point represents the mean and the lighter yellow points are the value of each of the 100 different runs. C) MDA of the most important variables in the carcinoma model. The dark red point represents the mean and the lighter red points are the value of each of the 100 different runs. (PDF 87 kb)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29178,
+                    "infons": {
+                        "section_title_1": "Additional files",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Figure S3: Pre and post-treatment relative abundance of CRC associated OTUs within the carcinoma model. (PDF 6 kb)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29292,
+                    "infons": {
+                        "section_title_1": "Acknowledgements",
+                        "section_title_2": "Funding",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "The authors thank the Great Lakes-New England Early Detection Research Network for providing the fecal samples that were used in this study. We would also like to thank Amanda Elmore for reviewing and correcting code error and providing feedback on manuscript drafts. We would also like to thank Nicholas Lesniak for providing feedback on manuscript drafts.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29672,
+                    "infons": {
+                        "section_title_1": "Acknowledgements",
+                        "section_title_2": "Funding",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "This study was supported by funding from the National Institutes of Health to P. Schloss (R01GM099514, P30DK034933) and to the Early Detection Research Network (U01CA86400).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29845,
+                    "infons": {
+                        "section_title_1": "Authors\u2019 contributions",
+                        "iao_name_1": "author contributions section",
+                        "iao_id_1": "IAO:0000323"
+                    },
+                    "text": "All authors were involved in the conception and design of the study. MAS analyzed the data. NTB processed the samples and analyzed the data. All authors interpreted the data. MAS and PDS wrote the manuscript. All authors reviewed and revised the manuscript. All authors read and approved the final manuscript.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30176,
+                    "infons": {
+                        "section_title_1": "Notes",
+                        "iao_name_1": "notes section",
+                        "iao_id_1": "IAO:0000634"
+                    },
+                    "text": "The University of Michigan Institutional Review Board approved this study, and all subjects provided informed consent. This study conformed to the guidelines of the Helsinki Declaration.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30367,
+                    "infons": {
+                        "section_title_1": "Notes",
+                        "iao_name_1": "notes section",
+                        "iao_id_1": "IAO:0000634"
+                    },
+                    "text": "Not applicable.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30382,
+                    "infons": {
+                        "section_title_1": "Notes",
+                        "iao_name_1": "notes section",
+                        "iao_id_1": "IAO:0000634"
+                    },
+                    "text": "The authors declare that they have no competing interests.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30440,
+                    "infons": {
+                        "section_title_1": "Notes",
+                        "iao_name_1": "notes section",
+                        "iao_id_1": "IAO:0000634"
+                    },
+                    "text": "Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30558,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Electronic supplementary material",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30600,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Availability of data and materials",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30634,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "A detailed and reproducible description of how the data were processed and analyzed can be found at https://github.com/SchlossLab/Sze_FollowUps_Microbiome_2017. Raw sequences have been deposited into the NCBI Sequence Read Archive (SRP062005 and SRP096978) and the necessary metadata can be found at https://www.ncbi.nlm.nih.gov/Traces/study/and searching the respective SRA study accession.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31025,
+                    "infons": {
+                        "journal": "CA: Cancer J Clin. ",
+                        "volume": "66",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Siegel RL, Miller KD, Jemal A. Cancer statistics, 2016. CA: Cancer J Clin. 2016;66:7\u201330. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31152,
+                    "infons": {
+                        "journal": "Clin Colon Rectal Surg. ",
+                        "volume": "22",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Haggar FA, Boushey RP. Colorectal cancer epidemiology: incidence, mortality, survival, and risk factors. Clin Colon Rectal Surg. 2009;22:191\u20137. doi: 10.1055/s-0029-1242458. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31383,
+                    "infons": {
+                        "journal": "Clin Colon Rectal Surg. ",
+                        "volume": "19",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Hellinger MD, Santiago CA. Reoperation for recurrent colorectal cancer. Clin Colon Rectal Surg. 2006;19:228\u201336. doi: 10.1055/s-2006-956445. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31581,
+                    "infons": {
+                        "journal": "Ann Surg Treat Res. ",
+                        "volume": "86",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Ryuk JP, Choi G-S, Park JS, Kim HJ, Park SY, Yoon GS, Jun SH, Kwon YC. Predictive factors and the prognosis of recurrence of colorectal cancer within 2 years after curative resection. Ann Surg Treat Res. 2014;86:143\u201351. doi: 10.4174/astr.2014.86.3.143. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31892,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Howlader N, Noone AM, Krapcho M, Miller D, Bishop K, Kosary CL, Yu M, Ruhl J, Tatalovich Z, Mariotto A, Lewis DR, Chen HS, Feuer EJ, Cronin KA, (eds).SEER Cancer Statistics Review, 1975-2014, National Cancer Institute. Bethesda, MD. https://seer.cancer.gov/csr/1975_2014/.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32167,
+                    "infons": {
+                        "journal": "Proc Natl Acad Sci USA. ",
+                        "volume": "108",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Goodwin AC, Destefano Shields CE, Wu S, Huso DL, Wu X, Murray-Stewart TR, Hacker-Prietz A, Rabizadeh S, Woster PM, Sears CL, Casero RA. Polyamine catabolism contributes to enterotoxigenic Bacteroides fragilis-induced colon tumorigenesis. Proc Natl Acad Sci USA. 2011;108:15354\u20139. doi: 10.1073/pnas.1010203108. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 04:01:18",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "957255",
+                            "locations": {
+                                "length": 11,
+                                "offset": 32358
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 32535,
+                    "infons": {
+                        "journal": "Cell Host Microbe. ",
+                        "volume": "20",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Abed J, Emg\u00e5rd JEM, Zamir G, Faroja M, Almogy G, Grenov A, Sol A, Naor R, Pikarsky E, Atlan KA, Mellul A, Chaushu S, Manson AL, Earl AM, Ou N, Brennan CA, Garrett WS, Bachrach G. Fap2 mediates Fusobacterium nucleatum colorectal adenocarcinoma enrichment by binding to tumor-expressed Gal-GalNAc. Cell Host Microbe. 2016;20:215\u201325. doi: 10.1016/j.chom.2016.07.006. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Fusobacterium nucleatum",
+                            "infons": {
+                                "identifier": "NCBI:txid851",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 04:01:23",
+                                "parent_taxonomic_id": "NCBI:txid848"
+                            },
+                            "id": "957256",
+                            "locations": {
+                                "length": 23,
+                                "offset": 32731
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 32957,
+                    "infons": {
+                        "journal": "Nature Commun. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Arthur JC, Gharaibeh RZ, M\u00fchlbauer M, Perez-Chanona E, Uronis JM, McCafferty J, Fodor AA, Jobin C. Microbial genomic analysis reveals the essential role of inflammation in bacteria-induced colorectal cancer. Nature Commun. 2014;5:4724. doi: 10.1038/ncomms5724. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33276,
+                    "infons": {
+                        "journal": "Cell Host Microbe. ",
+                        "volume": "14",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Kostic AD, Chun E, Robertson L, Glickman JN, Gallini CA, Michaud M, Clancy TE, Chung DC, Lochhead P, Hold GL, El-Omar EM, Brenner D, Fuchs CS, Meyerson M, Garrett WS. Fusobacterium nucleatum potentiates intestinal tumorigenesis and modulates the tumor-immune microenvironment. Cell Host Microbe. 2013;14:207\u201315. doi: 10.1016/j.chom.2013.07.007. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Fusobacterium nucleatum",
+                            "infons": {
+                                "identifier": "NCBI:txid851",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 04:01:31",
+                                "parent_taxonomic_id": "NCBI:txid848"
+                            },
+                            "id": "957257",
+                            "locations": {
+                                "length": 23,
+                                "offset": 33446
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 33679,
+                    "infons": {
+                        "journal": "Nature Med. ",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Wu S, Rhee K-J, Albesiano E, Rabizadeh S, Wu X, Yen H-R, Huso DL, Brancati FL, Wick E, McAllister F, Housseau F, Pardoll DM, Sears CL. A human colonic commensal promotes colon tumorigenesis via activation of T helper type 17 T cell responses. Nature Med. 2009;15:1016\u201322. doi: 10.1038/nm.2015. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34032,
+                    "infons": {
+                        "journal": "mSphere. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Zackular JP, Baxter NT, Chen GY, Schloss PD. Manipulation of the gut microbiota reveals role in colon tumorigenesis. mSphere. 2016;1:1\u201312. doi: 10.1128/mSphere.00001-15. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34261,
+                    "infons": {
+                        "journal": "mBio. ",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Zackular JP, Baxter NT, Iverson KD, Sadler WD, Petrosino JF, Chen GY, Schloss PD. The gut microbiome modulates colon tumorigenesis. mBio. 2013;4:e00692\u201400613. doi: 10.1128/mBio.00692-13. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34507,
+                    "infons": {
+                        "journal": "Microbiome. ",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Baxter NT, Zackular JP, Chen GY, Schloss PD. Structure of the gut microbiome following colonization with human feces determines colonic tumor burden. Microbiome. 2014;2:20. doi: 10.1186/2049-2618-2-20. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34768,
+                    "infons": {
+                        "journal": "mSphere. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Flynn KJ, Baxter NT, Schloss PD. Metabolic and community synergy of oral bacteria in colorectal cancer. mSphere. 2016;1:1\u20136. doi: 10.1128/mSphere.00102-16. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 04:01:46",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "957258",
+                            "locations": {
+                                "length": 8,
+                                "offset": 34845
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 34983,
+                    "infons": {
+                        "journal": "ISME J. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Wang T, Cai G, Qiu Y, Fei N, Zhang M, Pang X, Jia W, Cai S, Zhao L. Structural segregation of gut microbiota between colorectal cancer patients and healthy volunteers. ISME J. 2012;6:320\u20139. doi: 10.1038/ismej.2011.109. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35261,
+                    "infons": {
+                        "journal": "Am J Clin Nutr. ",
+                        "volume": "97",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Chen H-M, Yu Y-N, Wang J-L, Lin Y-W, Kong X, Yang C-Q, Yang L, Liu Z-J, Yuan Y-Z, Liu F, Wu J-X, Zhong L, Fang D-C, Zou W, Fang J-Y. Decreased dietary fiber intake and structural alteration of gut microbiota in patients with advanced colorectal adenoma. Am J Clin Nutr. 2013;97:1044\u201352. doi: 10.3945/ajcn.112.046607. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35618,
+                    "infons": {
+                        "journal": "PloS One. ",
+                        "volume": "e39743",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Chen W, Liu F, Ling Z, Tong X, Xiang C. Human intestinal lumen and mucosa-associated microbiota in patients with colorectal cancer. PloS One. 2012;e39743:7. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35823,
+                    "infons": {
+                        "journal": "Gut Microbes. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Shen XJ, Rawls JF, Randall T, Burcal L, Mpande CN, Jenkins N, Jovov B, Abdo Z, Sandler RS, Keku TO. Molecular characterization of mucosal adherent bacteria and associations with colorectal adenomas. Gut Microbes. 2010;1:138\u201347. doi: 10.4161/gmic.1.3.12360. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 04:02:00",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "957259",
+                            "locations": {
+                                "length": 8,
+                                "offset": 35974
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 36139,
+                    "infons": {
+                        "journal": "Genome Res. ",
+                        "volume": "22",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Kostic AD, Gevers D, Pedamallu CS, Michaud M, Duke F, Earl AM, Ojesina AI, Jung J, Bass AJ, Tabernero J, Baselga J, Liu C, Shivdasani RA, Ogino S, Birren BW, Huttenhower C, Garrett WS, Meyerson M. Genomic analysis identifies association of Fusobacterium with colorectal carcinoma. Genome Res. 2012;22:292\u20138. doi: 10.1101/gr.126573.111. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Fusobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid848",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 04:02:05",
+                                "parent_taxonomic_id": "NCBI:txid203492"
+                            },
+                            "id": "957260",
+                            "locations": {
+                                "length": 13,
+                                "offset": 36383
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 36534,
+                    "infons": {
+                        "journal": "Nat Commun. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Feng Q, Liang S, Jia H, Stadlmayr A, Tang L, Lan Z, Zhang D, Xia H, Xu X, Jie Z, Su L, Li X, Li X, Li J, Xiao L, Huber-Sch\u00f6nauer U, Niederseer D, Xu X, Al-Aama JY, Yang H, Wang J, Kristiansen K, Arumugam M, Tilg H, Datz C, Wang J. Gut microbiome development along the colorectal adenoma-carcinoma sequence. Nat Commun. 2015;6:6528. doi: 10.1038/ncomms7528. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36931,
+                    "infons": {
+                        "journal": "Proc Natl Acad Sci USA. ",
+                        "volume": "111",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Dejea CM, Wick EC, Hechenbleikner EM, White JR, Mark Welch JL, Rossetti BJ, Peterson SN, Snesrud EC, Borisy GG, Lazarev M, Stein E, Vadivelu J, Roslani AC, Malik AA, Wanyiri JW, Goh KL, Thevambiga I, Fu K, Wan F, Llosa N, Housseau F, Romans K, Wu X, McAllister FM, Wu S, Vogelstein B, Kinzler KW, Pardoll DM, Sears CL. Microbiota organization is a distinct feature of proximal colorectal cancers. Proc Natl Acad Sci USA. 2014;111:18321\u20136. doi: 10.1073/pnas.1406199111. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37459,
+                    "infons": {
+                        "journal": "JAMA Oncol. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Mima K, Sukawa Y, Nishihara R, Qian ZR, Yamauchi M, Inamura K, Kim SA, Masuda A, Nowak JA, Nosho K, Kostic AD, Giannakis M, Watanabe H, Bullman S, Milner DA, Harris CC, Giovannucci E, Garraway LA, Freeman GJ, Dranoff G, Chan AT, Garrett WS, Huttenhower C, Fuchs CS, Ogino S. Fusobacterium nucleatum and T cells in colorectal carcinoma. JAMA Oncol. 2015;1:653\u201361. doi: 10.1001/jamaoncol.2015.1377. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Fusobacterium nucleatum",
+                            "infons": {
+                                "identifier": "NCBI:txid851",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 04:02:24",
+                                "parent_taxonomic_id": "NCBI:txid848"
+                            },
+                            "id": "957261",
+                            "locations": {
+                                "length": 23,
+                                "offset": 37738
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 37915,
+                    "infons": {
+                        "journal": "Science (New York) ",
+                        "volume": "338",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Arthur JC, Perez-Chanona E, M\u00fchlbauer M, Tomkovich S, Uronis JM, Fan T-J, Campbell BJ, Abujamel T, Dogan B, Rogers AB, Rhodes JM, Stintzi A, Simpson KW, Hansen JJ, Keku TO, Fodor AA, Jobin C. Intestinal inflammation targets cancer-inducing activity of the microbiota. Science (New York) 2012;338:120\u20133. doi: 10.1126/science.1224820. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38307,
+                    "infons": {
+                        "journal": "Genome Med. ",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Baxter NT, Ruffin MT, Rogers MAM, Schloss PD. Microbiota-based model improves the sensitivity of fecal immunochemical test for detecting colonic lesions. Genome Med. 2016;8:37. doi: 10.1186/s13073-016-0290-3. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38575,
+                    "infons": {
+                        "journal": "Mol Syst Biol. ",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Zeller G, Tap J, Voigt AY, Sunagawa S, Kultima JR, Costea PI, Amiot A, B\u00f6hm J, Brunetti F, Habermann N, Hercog R, Koch M, Luciani A, Mende DR, Schneider MA, Schrotz-King P, Tournigand C, Tran Van Nhieu J, Yamada T, Zimmermann J, Benes V, Kloor M, Ulrich CM, Knebel Doeberitz Mvon, Sobhani I, Bork P. Potential of fecal microbiota for early-stage detection of colorectal cancer. Mol Syst Biol. 2014;10:766. doi: 10.15252/msb.20145645. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39068,
+                    "infons": {
+                        "journal": "Cancer Prev Res (Philadelphia) ",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Zackular JP, Rogers MAM, Ruffin MT, Schloss PD. The human gut microbiome as a screening tool for colorectal cancer. Cancer Prev Res (Philadelphia) 2014;7:1112\u201321. doi: 10.1158/1940-6207.CAPR-14-0129. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39327,
+                    "infons": {
+                        "journal": "PloS ONE. ",
+                        "volume": "e62815",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. O\u2019Brien CL, Allison GE, Grimpen F, Pavli P. Impact of colonoscopy bowel preparation on intestinal microbiota. PloS ONE. 2013;e62815:8. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39510,
+                    "infons": {
+                        "journal": "Appl Environ Microbiol. ",
+                        "volume": "79",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Kozich JJ, Westcott SL, Baxter NT, Highlander SK, Schloss PD. Development of a dual-index sequencing strategy and curation pipeline for analyzing amplicon sequence data on the MiSeq Illumina sequencing platform. Appl Environ Microbiol. 2013;79:5112\u201320. doi: 10.1128/AEM.01043-13. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39849,
+                    "infons": {
+                        "journal": "Nucleic Acids Res. ",
+                        "volume": "35",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Pruesse E, Quast C, Knittel K, Fuchs BM, Ludwig W, Peplies J, Gl\u00f6ckner FO, SILV A. A comprehensive online resource for quality checked and aligned ribosomal RNA sequence data compatible with ARB. Nucleic Acids Res. 2007;35:7188\u201396. doi: 10.1093/nar/gkm864. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40165,
+                    "infons": {
+                        "journal": "Bioinformatics. (Oxford England) ",
+                        "volume": "27",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Edgar RC, Haas BJ, Clemente JC, Quince C, Knight R. UCHIME improves sensitivity and speed of chimera detection. Bioinformatics. (Oxford England) 2011;27:2194\u2013200. doi: 10.1093/bioinformatics/btr381. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40423,
+                    "infons": {
+                        "journal": "Appl Environ Microbiol. ",
+                        "volume": "73",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Wang Q, Garrity GM, Tiedje JM, Cole JR. Naive Bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy. Appl Environ Microbiol. 2007;73:5261\u20137. doi: 10.1128/AEM.00062-07. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40687,
+                    "infons": {
+                        "journal": "Appl Environ Microbiol. ",
+                        "volume": "77",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Schloss PD, Westcott SL. Assessing and improving methods used in operational taxonomic unit-based approaches for 16S rRNA gene sequence analysis. Appl Environ Microbiol. 2011;77:3219\u201326. doi: 10.1128/AEM.02810-10. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40960,
+                    "infons": {
+                        "journal": "Mach Learn. ",
+                        "volume": "45",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Breiman L. Random Forests. Mach Learn. 2001;45:5\u201332. doi: 10.1023/A:1010933404324. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41074,
+                    "infons": {
+                        "journal": "Ecol Monogr. ",
+                        "volume": "83",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Anderson MJ, Walsh DCI. PERMANOVA, ANOSIM, and the Mantel test in the face of heterogeneous dispersions: What null hypothesis are you testing? Ecol Monogr. 2013;83:557\u201374. doi: 10.1890/12-2010.1. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41301,
+                    "infons": {
+                        "journal": "J Royal Stat Soc Ser B Methodol. ",
+                        "volume": "57",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Benjamini Y, Hochberg Y. Controlling the false discovery rate: a practical and powerful approach to multiple testing. J Royal Stat Soc Ser B Methodol. 1995;57:289\u2013300. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

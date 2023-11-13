@@ -1,0 +1,2334 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC4020798",
+            "inputfile": "../microbiome_corpus_HTML\\PMC4020798.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "The Prevalence of Species and Strains in the Human Microbiome: A Resource for Experimental Efforts",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 98,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Experimental efforts to characterize the human microbiota often use bacterial strains that were chosen for historical rather than biological reasons. Here, we report an analysis of 380 whole-genome shotgun samples from 100 subjects from the NIH Human Microbiome Project. By mapping their reads to 1,751 reference genome sequences and analyzing the resulting relative strain abundance in each sample we present metrics and visualizations that can help identify strains of interest for experimentalists. We also show that approximately 14 strains of 10 species account for 80% of the mapped reads from a typical stool sample, indicating that the function of a community may not be irreducibly complex. Some of these strains account for >20% of the sequence reads in a subset of samples but are absent in others, a dichotomy that could underlie biological differences among subjects. These data should serve as an important strain selection resource for the community of researchers who take experimental approaches to studying the human microbiota.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1152,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "A growing number of research groups use wet lab experimental approaches to study bacterial strains from the human microbiota [1]\u2013[5]. Many of the most commonly studied strains have been selected for historical rather than biological reasons, raising the possibility that substantial research effort is being devoted to organisms that are neither associated with disease, nor widely or variably distributed in the human population.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1594,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Several approaches have been used to enumerate the composition of bacterial communities. These include 16 S rRNA sequencing [6]\u2013[12]; methods that utilize protein-coding markers [13]; single-copy, single-marker complements to 16 S such as rpoB\n[14]; and interspace typing [15] and shotgun metagenomic sequencing [16], [17], [9], [10], [18], [8], [19], [20].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1951,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "However, so far no global overview of abundance on the species or strain level has been presented, making it difficult for experimental groups to select strains to study on the basis of abundance data in human subjects. In this study we took advantage of the subset of the samples for which whole-genome shotgun (WGS) metagenomic sequencing was performed, providing an opportunity to determine at the lowest taxonomic level which bacterial strains are broadly distributed among healthy subjects and which ones vary widely from one subject to the next.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2502,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "To study the pattern of strain distribution in the human microbiota and to create a resource to guide strain selection for experimental characterization, we systematically mapped reads from 380 WGS sequencing samples from the Human Microbiome Project (HMP) [9], [10] to complete or draft sequences from 1,751 reference genomes selected by the HMP; 844 of the reference genomes recruited reads from our data set. Our samples, which came from 100 healthy subjects, cover six major sample sites: stool (representing the lower gastrointestinal tract), tongue dorsum (upper surface of the tongue), buccal mucosa (cheek), supragingival plaque (tooth biofilm above the gum line), posterior fornix (the larger recess of the vagina, behind the cervix), and anterior nares (nostrils) as these are the sites with the most samples available. Species of the human microbiota have been studied for decades, and the model species have been chosen based on culturability and genetic tractability, among other characteristics. However, our analysis of whole-genome shotgun metagenomic data from the Human Microbiome Project [9], [21], suggests that the most abundant strains in the microbiome of healthy individuals are highly understudied, suggesting a needed shift in selecting the laboratory strains used for experimental studies of the human microbiota.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3842,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "The methodology and its limitations",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Several methodologies have been developed for the phylogenetic assignment of whole-genome shotgun metagenomic sequence data. These include clade-specific markers to unambiguously assign reads to microbial clades [18], a sequence compositional classifier based on the structured output paradigm [22], a hybrid, rank-specific classifier based on BLAST and Na\u00efve Bayes [23], and a method that combines a NGS aligner with an optimized mapping strategy, appropriate parameters and the removal of genomes with high similarity from the database of reference genomes [24]. Our analysis took advantage of the last of these techniques, which has been evaluated previously and was used to taxonomically classify 22.4 billion 100 bp microbial Illumina reads (after subtraction of the human reads) originating from 380 samples from 6 body sites; this method has a very low percentage of incorrectly classified reads (33% at the strain level and just 0.0003% at the species level) [24]. The WGS metagenomic reads were aligned to a reference genome database containing 1,751 bacterial genomes representing 1,253 species [24]. Overall, 57% of the reads could be mapped to a reference genome, ranging from 33% for the anterior nares to 77% for the posterior fornix.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5147,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "The methodology and its limitations",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The \u2018top random\u2019 mapping strategy of the aligner (in the case of multiple equally high scoring top hits the aligner randomly reports one hit used to map sequencing reads [24]) has two important drawbacks, both of which arise from the uneven taxonomic distribution of reference strains in the reference genome database (i.e., some clades have more sequenced strains than others). First, it has difficulty distinguishing closely related strains of the same species, since reads that map to highly conserved genomic regions are assigned randomly to one of the strains. Second, species with a single strain in the reference database appear more abundant on the strain level than species with multiple strains, since reads are often divided among strains in the latter case. To make the limited but important effect of these drawbacks easy to understand, we ran two of our analyses at the species level in addition to the strain level to facilitate a direct comparison (Figures S5, Figure S6 and Table S2). An obvious limitation of using reference genomes is that the actual strains present in the subjects will often differ from the reference strain. However, the reads will be recruited to the closest genome in the database and the reference genomes have been chosen to be representative of the human microbiome [21], [9], [10]. The reference strains will thus be a great starting point for experimentalists.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6553,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "The methodology and its limitations",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The abundance of the reference strains in each sample was estimated by calculating the product of its breadth (defined as the percent of covered bases over the length of the reference genome) and depth (defined as sum of depths of each covered base divided by the length of the genome) of coverage (Figure 1, Figure S1, Table S1 and Table S4) [8]. Our metric was chosen to represent the probability of a genomic fragment to be sequenced in a sample. The abundance of a strain was divided by the total abundance of that sample to obtain the relative abundance of each strain in each sample. We represent these data as a series of heat maps showing the calculated relative abundance of each reference strain in the samples from our set (Figures S2, S3, S4 and S5). To inspect whether the coverage maps generated by this method show a reasonably even depth across most of the genome, we visually inspected three coverage maps for each of the 30 strains discussed below: one each for the samples in which the strain has the maximum, minimum, and median breadth of coverage (Figure S1B). While the map for the minimum coverage samples is often sparse, the maps for the median coverage samples generally appear even.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7763,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "The methodology and its limitations",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "It is important to emphasize that the breadth of coverage is never 100% (the highest we found was 99.63%), because we are mapping the reads to reference strains whose genome sequences will differ from that of the organism in the sample and serve as a related (but not identical) stand-in in our analyses. Because we do not report strains with a depth of coverage below 1%, the reported relative abundance will differ by at most two orders of magnitude. However, reference strains with a low breadth but high depth of coverage most likely represent genomic fragments that are missing from the reference strains that otherwise best match the actual strains present in the sample and can lead to an overestimate of the number of total strains present in a sample. Conversely, the relative abundance of strains with a high depth and breadth of coverage will likely be underestimated. The number of strains in a sample can also be underestimated. For example, two strains that differ from each other but are both most similar to one strain in the reference genome database will be counted as one strain with the combined abundance of the both strains that are actual present.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8933,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "The methodology and its limitations",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The HMP dataset consists of 18 sample sites, but most of them comprise only a handful of subjects and have been excluded from our analysis. While the analyses described below cover six sample sites that have a minimum of 33 subjects, we have centered our discussion around the stool since, to date, experimental efforts on the human microbiota have focused predominantly on the gut community.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9325,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Whole-genome shotgun data reveal strain-level details obscured by 16 S analysis",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Several groups have reported on the agreement of metagenomic and 16 S data [25], [18], [26]. However, the additional information provided by the whole-genome shotgun (WGS) data as compared to the 16 S data (Figure S7A\u2013G, Table S3) as it pertains to the composition of strains in a sample has not yet been explored quantitatively. Does WGS allow us to determine which specific strains are present in a sample or is this composition so invariable as that it can be deduced from 16 S data? To answer this question, we calculated an average rank order of strain abundance for each 16 S operational taxonomic unit (OTU) in the WGS data and quantified the degree of difference between the observed rank order and the average rank order (Figures 2 and S7H\u2013L). For most genera such as Bacteroides, the rank order of strains within the genus is highly variable among samples, suggesting that a WGS analysis provides much additional information beyond what can be deduced from the 16 S data. For example, 16 of the stool samples have Bacteroides stercoris ATCC 43183 as the most abundant strain in the genus, while another 10 have Bacteroides vulgatus PC510 as the most abundant strain. These two strains share a core set of 2585 genes, while 1192 are unique to B. stercoris ATCC 43183 and 1371 are unique to B. vulgatus PC510 (as compared using the Integral Microbial Genome (IMG) Platform (http://img.jgi.doe.gov/) [27]). Communities dominated by different species of Bacteroides may therefore exhibit functional differences, so the ability to distinguish them using WGS data will likely prove important.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:14",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "32430377",
+                            "locations": {
+                                "length": 11,
+                                "offset": 10102
+                            }
+                        },
+                        {
+                            "text": "Bacteroides stercoris",
+                            "infons": {
+                                "identifier": "NCBI:txid46506",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:17",
+                                "parent_taxonomic_id": "NCBI:txid816"
+                            },
+                            "id": "32430378",
+                            "locations": {
+                                "length": 21,
+                                "offset": 10349
+                            }
+                        },
+                        {
+                            "text": "Bacteroides vulgatus",
+                            "infons": {
+                                "identifier": "NCBI:txid821",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:19",
+                                "parent_taxonomic_id": "NCBI:txid909656"
+                            },
+                            "id": "32430379",
+                            "locations": {
+                                "length": 20,
+                                "offset": 10446
+                            }
+                        },
+                        {
+                            "text": "B. stercoris",
+                            "infons": {
+                                "identifier": "NCBI:txid46506",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:20",
+                                "parent_taxonomic_id": "NCBI:txid816"
+                            },
+                            "id": "32430380",
+                            "locations": {
+                                "length": 12,
+                                "offset": 10577
+                            }
+                        },
+                        {
+                            "text": "B. vulgatus",
+                            "infons": {
+                                "identifier": "NCBI:txid821",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:21",
+                                "parent_taxonomic_id": "NCBI:txid909656"
+                            },
+                            "id": "32430381",
+                            "locations": {
+                                "length": 11,
+                                "offset": 10624
+                            }
+                        },
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:22",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "32430382",
+                            "locations": {
+                                "length": 11,
+                                "offset": 10785
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 11000,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Whole-genome shotgun data reveal strain-level details obscured by 16 S analysis",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Interestingly, for a few genera such as Clostridium, the rank order of strain abundance varies little from sample to sample, suggesting that the Clostridium community composition may be unusually invariant (Figure 2). For these genera, our WGS data provide little additional information since the rank order of strain abundance could be estimated accurately from 16 S data by assuming that it matches the average.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Clostridium",
+                            "infons": {
+                                "identifier": "NCBI:txid1485",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:24",
+                                "parent_taxonomic_id": "NCBI:txid31979"
+                            },
+                            "id": "32430383",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11040
+                            }
+                        },
+                        {
+                            "text": "Clostridium",
+                            "infons": {
+                                "identifier": "NCBI:txid1485",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:25",
+                                "parent_taxonomic_id": "NCBI:txid31979"
+                            },
+                            "id": "32430384",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11145
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 11413,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Strains with an unusually variable distribution pattern",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "One striking result of our analysis is the detection of strains with unusual patterns of distribution, which could make these organisms intriguing candidates for future experimental study. Here, we focus on strains whose levels are unusually variable across our sample set. We used two methods to identify these strains: the first involved constructing a coefficient of variation distribution and identifying its outliers (Figure S8A), and the second sought to find strains whose rank order of abundance across the samples was bimodal (see methods). Any effect such a strain has on host physiology would be prominent in some people and nearly absent in others; thus, strains with highly variable distribution patterns could reveal bases for microbiota-linked variability in the human population (Figures 3, S8B and S9A\u2013B).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12290,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Strains with an unusually variable distribution pattern",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We find that 12 of the 81 stool samples have a high abundance of Prevotella copri DSM 18205. While the distribution pattern of Prevotella was already known to be variable since the high abundance of Prevotella defines one of the recently described \u2018enterotypes\u2019 [28], our data show strikingly that the reference genome of Prevotella copri DSM 18205 recruits sequence reads from the WGS data in strong preference to the other 18 reference genomes of Prevotella represented in our database, suggesting that P. copri DSM 18205 is an ideal starting point for experiments seeking to characterize its properties within the gut community. Other reference strains with highly variable patterns of distribution come from a broad range of phyla, including members of the Bacteroidetes (Bacteroides caccae ATCC 43185, Parabacteroides merdae ATCC 43184) and Firmicutes (Dialister invisus DSM 15470, Eubacterium siraeum DSM 15702) as well as the Actinobacterium Collinsella aerofaciens ATCC 25986, the Verrucomicrobium Akkermansia muciniphila ATCC BAA-835, and the Proteobacterium Burkholderiales bacterium 1_1_47.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Prevotella copri",
+                            "infons": {
+                                "identifier": "NCBI:txid165179",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:39",
+                                "parent_taxonomic_id": "NCBI:txid838"
+                            },
+                            "id": "32430385",
+                            "locations": {
+                                "length": 16,
+                                "offset": 12355
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:39",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "32430386",
+                            "locations": {
+                                "length": 10,
+                                "offset": 12417
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:40",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "32430387",
+                            "locations": {
+                                "length": 10,
+                                "offset": 12489
+                            }
+                        },
+                        {
+                            "text": "Prevotella copri",
+                            "infons": {
+                                "identifier": "NCBI:txid165179",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:41",
+                                "parent_taxonomic_id": "NCBI:txid838"
+                            },
+                            "id": "32430388",
+                            "locations": {
+                                "length": 16,
+                                "offset": 12612
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:43",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "32430389",
+                            "locations": {
+                                "length": 10,
+                                "offset": 12739
+                            }
+                        },
+                        {
+                            "text": "P. copri",
+                            "infons": {
+                                "identifier": "NCBI:txid165179",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:43",
+                                "parent_taxonomic_id": "NCBI:txid838"
+                            },
+                            "id": "32430390",
+                            "locations": {
+                                "length": 8,
+                                "offset": 12795
+                            }
+                        },
+                        {
+                            "text": "Bacteroidetes",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid976",
+                                    "NCBI:txid200643"
+                                ],
+                                "type": [
+                                    "bacteria_phylum",
+                                    "bacteria_class"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:46",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid68336",
+                                    "NCBI:txid976"
+                                ]
+                            },
+                            "id": "32430391",
+                            "locations": {
+                                "length": 13,
+                                "offset": 13051
+                            }
+                        },
+                        {
+                            "text": "Bacteroides caccae",
+                            "infons": {
+                                "identifier": "NCBI:txid47678",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:46",
+                                "parent_taxonomic_id": "NCBI:txid816"
+                            },
+                            "id": "32430392",
+                            "locations": {
+                                "length": 18,
+                                "offset": 13065
+                            }
+                        },
+                        {
+                            "text": "Parabacteroides merdae",
+                            "infons": {
+                                "identifier": "NCBI:txid46503",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:46",
+                                "parent_taxonomic_id": "NCBI:txid375288"
+                            },
+                            "id": "32430393",
+                            "locations": {
+                                "length": 22,
+                                "offset": 13097
+                            }
+                        },
+                        {
+                            "text": "Firmicutes",
+                            "infons": {
+                                "identifier": "NCBI:txid1239",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:47",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "32430394",
+                            "locations": {
+                                "length": 10,
+                                "offset": 13136
+                            }
+                        },
+                        {
+                            "text": "Dialister invisus",
+                            "infons": {
+                                "identifier": "NCBI:txid218538",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:47",
+                                "parent_taxonomic_id": "NCBI:txid39948"
+                            },
+                            "id": "32430395",
+                            "locations": {
+                                "length": 17,
+                                "offset": 13147
+                            }
+                        },
+                        {
+                            "text": "Eubacterium siraeum",
+                            "infons": {
+                                "identifier": "NCBI:txid39492",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:47",
+                                "parent_taxonomic_id": "NCBI:txid552397"
+                            },
+                            "id": "32430396",
+                            "locations": {
+                                "length": 19,
+                                "offset": 13177
+                            }
+                        },
+                        {
+                            "text": "Collinsella aerofaciens",
+                            "infons": {
+                                "identifier": "NCBI:txid74426",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:47",
+                                "parent_taxonomic_id": "NCBI:txid102106"
+                            },
+                            "id": "32430397",
+                            "locations": {
+                                "length": 23,
+                                "offset": 13239
+                            }
+                        },
+                        {
+                            "text": "Verrucomicrobium",
+                            "infons": {
+                                "identifier": "NCBI:txid2735",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:48",
+                                "parent_taxonomic_id": "NCBI:txid203557"
+                            },
+                            "id": "32430398",
+                            "locations": {
+                                "length": 16,
+                                "offset": 13279
+                            }
+                        },
+                        {
+                            "text": "Akkermansia muciniphila",
+                            "infons": {
+                                "identifier": "NCBI:txid239935",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:48",
+                                "parent_taxonomic_id": "NCBI:txid239934"
+                            },
+                            "id": "32430399",
+                            "locations": {
+                                "length": 23,
+                                "offset": 13296
+                            }
+                        },
+                        {
+                            "text": "Burkholderiales bacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1891238",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:21:48",
+                                "parent_taxonomic_id": "NCBI:txid80841"
+                            },
+                            "id": "32430400",
+                            "locations": {
+                                "length": 25,
+                                "offset": 13358
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 13391,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "The minimal microbiome and body site diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "An emerging area of inquiry involves reductionist approaches to studying the function of the microbiota: how many strains are required to construct a minimal microbiome with key attributes of a more complex community [29]? This question is important for many experimental studies of the human microbiota, including those that use germ-free mice to probe the interplay among the microbiota, the host, and the diet [4], [30]\u2013[32].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13865,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "The minimal microbiome and body site diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "As a first step toward answering this question, we calculated the number of strains, in decreasing rank order of abundance, that together comprise 80% of the mapped reads from a sample (Figure 4A\u2013C). Surprisingly, 14 strains account for 80% of the mapped reads in the average gut community, while for the oral communities of the cheek, tongue, and teeth, 12, 16 and 18 strains are needed respectively. As expected, the number is lower for samples from the anterior nares and posterior fornix (4). Among communities from the same body site, the 80% are sometimes few and sometimes many: in stool, samples range from a minimum of 5 to a maximum of 25 strains making up the 80% and in supragingival plaque, the range is 4\u201330 (Figure 5). Even in a community as complex as the gut, just 5 strains account for 50% of the reads in a typical sample (Figure 4C). If the analysis is performed at the species level instead of the strain level, the numbers are even more striking: 7.3 species account for 80% of the mapped reads in the average stool sample, and just 2.8 species account for 50% (Figure S6).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14960,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "The minimal microbiome and body site diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "To determine the degree of variation among samples in their highly abundant strains, we constructed a heat map of strain abundance for the top 80% of mapped reads for each sample in the gut community (Figure 6); other communities are shown in Figure S9C\u2013G. Strikingly, communities dominated by the same genus can differ quite dramatically at the species level. For example, two common configurations of Bacteroides-rich samples are dominated by B. ovatus or B. vulgatus, while rarer configurations feature B. eggerthii, B. cellulosilyticus, B. fragilis, or B. dorei as the most abundant strain (Figure 7). Notably, for a typical pair of Bacteroides species, one-third of the genes in each genome will be unique. Given the heterogeneity of Bacteroides species, a B. vulgatus-dominated community may well be as phenotypically different from a B. ovatus-dominated community as either one is from a Prevotella-dominated community. Since enterotypes are most usefully defined as communities with important phenotypic differences, our results indicate that there may be more enterotypes than are currently recognized, especially within Bacteroides-dominated communities.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "B. ovatus",
+                            "infons": {
+                                "identifier": "NCBI:txid28116",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:14",
+                                "parent_taxonomic_id": "NCBI:txid816"
+                            },
+                            "id": "32430401",
+                            "locations": {
+                                "length": 9,
+                                "offset": 15405
+                            }
+                        },
+                        {
+                            "text": "B. vulgatus",
+                            "infons": {
+                                "identifier": "NCBI:txid821",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:14",
+                                "parent_taxonomic_id": "NCBI:txid909656"
+                            },
+                            "id": "32430402",
+                            "locations": {
+                                "length": 11,
+                                "offset": 15418
+                            }
+                        },
+                        {
+                            "text": "B. eggerthii",
+                            "infons": {
+                                "identifier": "NCBI:txid28111",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:14",
+                                "parent_taxonomic_id": "NCBI:txid816"
+                            },
+                            "id": "32430403",
+                            "locations": {
+                                "length": 12,
+                                "offset": 15466
+                            }
+                        },
+                        {
+                            "text": "B. cellulosilyticus",
+                            "infons": {
+                                "identifier": "NCBI:txid1413",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:21",
+                                "parent_taxonomic_id": "NCBI:txid2837485"
+                            },
+                            "id": "32430404",
+                            "locations": {
+                                "length": 19,
+                                "offset": 15480
+                            }
+                        },
+                        {
+                            "text": "B. fragilis",
+                            "infons": {
+                                "identifier": "NCBI:txid817",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:21",
+                                "parent_taxonomic_id": "NCBI:txid816"
+                            },
+                            "id": "32430405",
+                            "locations": {
+                                "length": 11,
+                                "offset": 15501
+                            }
+                        },
+                        {
+                            "text": "B. dorei",
+                            "infons": {
+                                "identifier": "NCBI:txid357276",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:15",
+                                "parent_taxonomic_id": "NCBI:txid909656"
+                            },
+                            "id": "32430406",
+                            "locations": {
+                                "length": 8,
+                                "offset": 15517
+                            }
+                        },
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:16",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "32430407",
+                            "locations": {
+                                "length": 11,
+                                "offset": 15597
+                            }
+                        },
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:17",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "32430408",
+                            "locations": {
+                                "length": 11,
+                                "offset": 15699
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 16124,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "The minimal microbiome and body site diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Some strains are commonly found among the top 80%. For example, Bacteroides vulgatus ATCC 8482 was in the top 80% of 76.5% of stool samples [33], while four different strains \u2013 Veillonella dispar ATCC 17748, Streptococcus parasanguinis ATCC 15912, Streptococcus salivarius SK126, and Prevotella melaninogenica ATCC 25845 \u2013 were in the top 80% of 100%, 95.8%, 87.3% and 90.1% of tongue dorsum samples, respectively (Figure S9H). Other strains such as Dialister invisus DSM 15470 and Bacteroides finegoldii DSM 17565 are present less commonly, but when present, can dominate a community. Indeed, it appears surprisingly common to have a unique configuration of strains in the top 80%; more than a dozen diverse strains account for >20% of the abundance of just one (Bacteroides plebeius DSM 17135, Eubacterium siraeum DSM 15702, Bacteroides finegoldii DSM 17565, Ruminococcus torques ATCC 27756, Butyrivibrio crossotus DSM 2876, and Bacteroides sp. 4_3_47FAA), two (Eubacterium rectale ATCC 33656, Bacteroides cellulosilyticus DSM 14838, Dialister invisus DSM 15470 and Faecalibacterium prausnitzii M21/2) or three (Alistipes putredinis DSM 17216, Bacteroides caccae ATCC 43185, and Parabacteroides merdae ATCC 43184) out of the 81 samples. In other words, 23 out of 81 samples are dominated by 13 different strains, while the remaining 58 samples have a more even spread of strain abundances, where no one strain is present at >20% abundance.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteroides vulgatus",
+                            "infons": {
+                                "identifier": "NCBI:txid821",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:22",
+                                "parent_taxonomic_id": "NCBI:txid909656"
+                            },
+                            "id": "32430409",
+                            "locations": {
+                                "length": 20,
+                                "offset": 16188
+                            }
+                        },
+                        {
+                            "text": "Veillonella dispar",
+                            "infons": {
+                                "identifier": "NCBI:txid39778",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:24",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "32430410",
+                            "locations": {
+                                "length": 18,
+                                "offset": 16301
+                            }
+                        },
+                        {
+                            "text": "Streptococcus parasanguinis",
+                            "infons": {
+                                "identifier": "NCBI:txid1318",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:24",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "32430411",
+                            "locations": {
+                                "length": 27,
+                                "offset": 16332
+                            }
+                        },
+                        {
+                            "text": "Streptococcus salivarius",
+                            "infons": {
+                                "identifier": "NCBI:txid1304",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:24",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "32430412",
+                            "locations": {
+                                "length": 24,
+                                "offset": 16372
+                            }
+                        },
+                        {
+                            "text": "Prevotella melaninogenica",
+                            "infons": {
+                                "identifier": "NCBI:txid28132",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:24",
+                                "parent_taxonomic_id": "NCBI:txid838"
+                            },
+                            "id": "32430413",
+                            "locations": {
+                                "length": 25,
+                                "offset": 16408
+                            }
+                        },
+                        {
+                            "text": "Dialister invisus",
+                            "infons": {
+                                "identifier": "NCBI:txid218538",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:26",
+                                "parent_taxonomic_id": "NCBI:txid39948"
+                            },
+                            "id": "32430414",
+                            "locations": {
+                                "length": 17,
+                                "offset": 16574
+                            }
+                        },
+                        {
+                            "text": "Bacteroides finegoldii",
+                            "infons": {
+                                "identifier": "NCBI:txid338188",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:27",
+                                "parent_taxonomic_id": "NCBI:txid816"
+                            },
+                            "id": "32430415",
+                            "locations": {
+                                "length": 22,
+                                "offset": 16606
+                            }
+                        },
+                        {
+                            "text": "Bacteroides plebeius",
+                            "infons": {
+                                "identifier": "NCBI:txid310297",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:30",
+                                "parent_taxonomic_id": "NCBI:txid909656"
+                            },
+                            "id": "32430416",
+                            "locations": {
+                                "length": 20,
+                                "offset": 16887
+                            }
+                        },
+                        {
+                            "text": "Eubacterium siraeum",
+                            "infons": {
+                                "identifier": "NCBI:txid39492",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:30",
+                                "parent_taxonomic_id": "NCBI:txid552397"
+                            },
+                            "id": "32430417",
+                            "locations": {
+                                "length": 19,
+                                "offset": 16920
+                            }
+                        },
+                        {
+                            "text": "Bacteroides finegoldii",
+                            "infons": {
+                                "identifier": "NCBI:txid338188",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:30",
+                                "parent_taxonomic_id": "NCBI:txid816"
+                            },
+                            "id": "32430418",
+                            "locations": {
+                                "length": 22,
+                                "offset": 16951
+                            }
+                        },
+                        {
+                            "text": "Ruminococcus torques",
+                            "infons": {
+                                "identifier": "NCBI:txid33039",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:30",
+                                "parent_taxonomic_id": "NCBI:txid2316020"
+                            },
+                            "id": "32430419",
+                            "locations": {
+                                "length": 20,
+                                "offset": 16985
+                            }
+                        },
+                        {
+                            "text": "Butyrivibrio crossotus",
+                            "infons": {
+                                "identifier": "NCBI:txid45851",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:31",
+                                "parent_taxonomic_id": "NCBI:txid830"
+                            },
+                            "id": "32430420",
+                            "locations": {
+                                "length": 22,
+                                "offset": 17018
+                            }
+                        },
+                        {
+                            "text": "Bacteroides sp.",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:31",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "32430421",
+                            "locations": {
+                                "length": 15,
+                                "offset": 17055
+                            }
+                        },
+                        {
+                            "text": "Eubacterium rectale",
+                            "infons": {
+                                "identifier": "NCBI:txid39491",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:31",
+                                "parent_taxonomic_id": "NCBI:txid186928"
+                            },
+                            "id": "32430422",
+                            "locations": {
+                                "length": 19,
+                                "offset": 17087
+                            }
+                        },
+                        {
+                            "text": "Bacteroides cellulosilyticus",
+                            "infons": {
+                                "identifier": "NCBI:txid246787",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:31",
+                                "parent_taxonomic_id": "NCBI:txid816"
+                            },
+                            "id": "32430423",
+                            "locations": {
+                                "length": 28,
+                                "offset": 17120
+                            }
+                        },
+                        {
+                            "text": "Dialister invisus",
+                            "infons": {
+                                "identifier": "NCBI:txid218538",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:32",
+                                "parent_taxonomic_id": "NCBI:txid39948"
+                            },
+                            "id": "32430424",
+                            "locations": {
+                                "length": 17,
+                                "offset": 17160
+                            }
+                        },
+                        {
+                            "text": "Faecalibacterium prausnitzii",
+                            "infons": {
+                                "identifier": "NCBI:txid853",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:32",
+                                "parent_taxonomic_id": "NCBI:txid216851"
+                            },
+                            "id": "32430425",
+                            "locations": {
+                                "length": 28,
+                                "offset": 17192
+                            }
+                        },
+                        {
+                            "text": "Alistipes putredinis",
+                            "infons": {
+                                "identifier": "NCBI:txid28117",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:32",
+                                "parent_taxonomic_id": "NCBI:txid239759"
+                            },
+                            "id": "32430426",
+                            "locations": {
+                                "length": 20,
+                                "offset": 17237
+                            }
+                        },
+                        {
+                            "text": "Bacteroides caccae",
+                            "infons": {
+                                "identifier": "NCBI:txid47678",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:32",
+                                "parent_taxonomic_id": "NCBI:txid816"
+                            },
+                            "id": "32430427",
+                            "locations": {
+                                "length": 18,
+                                "offset": 17270
+                            }
+                        },
+                        {
+                            "text": "Parabacteroides merdae",
+                            "infons": {
+                                "identifier": "NCBI:txid46503",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:32",
+                                "parent_taxonomic_id": "NCBI:txid375288"
+                            },
+                            "id": "32430428",
+                            "locations": {
+                                "length": 22,
+                                "offset": 17305
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 17565,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "The minimal microbiome and body site diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "A strain's abundance is not the ideal proxy for its importance; low-abundance members of a community can play key and very diverse roles in community function and host biology [34], [35]. Indeed, we could find strains that had a consistently low abundance across most of the sample set, indicating that they might play an important role in community function despite their low numbers (Figure S10A\u2013C).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17966,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "The minimal microbiome and body site diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Nevertheless, it is reasonable to assume that the highly abundant strains are key players in community function. The fact that 14 strains can account for 80% of the reads in a sample (a proxy for cell density) suggests that the function of a gut or an oral community may not be irreducibly complex, and that experimental approaches involving synthetic communities of limited size will be highly instructive in discovering interspecies interactions important for community robustness and function [36]\u2013[38].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18472,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "The most broadly distributed species have not been the focus of experimental study",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "A primary goal of the HMP is to enumerate the \u2018normal\u2019 human microbiota in a way that enables future studies of the key reference species, each of which are publicly available from the BEI repository (http://www.beiresources.org). To generate a crude estimate of how well the most broadly distributed species in our samples have been studied, we searched the PubMed database for the number of references that list the genus and species names of each strain in the title or abstract (Figure 8B). Surprisingly, of the 100 most abundant species, only 11 have more than 1000 publications; 64 have 100 or fewer publications. 44 of these 64 make up >1% of an average body site community (Figure 8B), including 13 common species from the gut. These numbers are remarkably small in comparison to the number of publications for common pathogens (Staphylococcus aureus, 73,134; Pseudomonas aeruginosa, 43,883) and model organisms (Bacillus subtilis, 20,362; Escherichia coli, 292,086). Importantly, the most well-studied species in this set had their genomes sequenced prior to the start of the HMP reference genome sequencing effort in 2007 [39], and in each case the number of publications rose quickly thereafter. Our heat maps of strain and species abundance will be a useful resource for guiding experimentalists to the key reference organisms for future study, including those with an unusually broad or variable distribution in the human population.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:57",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "32430429",
+                            "locations": {
+                                "length": 21,
+                                "offset": 19308
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:57",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "32430430",
+                            "locations": {
+                                "length": 22,
+                                "offset": 19340
+                            }
+                        },
+                        {
+                            "text": "Bacillus subtilis",
+                            "infons": {
+                                "identifier": "NCBI:txid1423",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:57",
+                                "parent_taxonomic_id": "NCBI:txid1386"
+                            },
+                            "id": "32430431",
+                            "locations": {
+                                "length": 17,
+                                "offset": 19392
+                            }
+                        },
+                        {
+                            "text": "Escherichia coli",
+                            "infons": {
+                                "identifier": "NCBI:txid562",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:22:57",
+                                "parent_taxonomic_id": "NCBI:txid561"
+                            },
+                            "id": "32430432",
+                            "locations": {
+                                "length": 16,
+                                "offset": 19420
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 20000,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Data processing",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The samples used in this study were part of the HMP project and were collected as previously described [40]. At the time of our analysis only 380 samples were available for the 6 body sites. Sequencing and analytical processing of the 16 S RNA and whole genome shotgun metagenomic data was done as previously described [9], [10]. Alignments to the reference genomes were made using a random top-hit strategy which involves reporting only a single, best hit per query, and in the case of a query having multiple equally strong best hits (i.e. mapping quality 0; [41]), one of those hits was chosen at random. The method also includes optimized parameters enabling accurate taxonomic assignments of WGS reads and a detection cutoff of 1% breadth and 0.01\u00d7 depth of coverage [24]. The database of reference genomes used for taxonomic classification of the WGS reads has undergone a process of removing highly redundant bacterial strains [24]. In summary, i) the complete and draft genomes were categorized on a species level, resulting in categories that range from single strains to many strains per species; ii) For pairs of genomes with over 90% similarity on a genome-wide level based on genome-wide similarity at a pair-wise level, the genome that is longer and provides the most unique sequence was kept; iii) in the case of a large numbers of strains, a slightly relaxed homology (as low as 83%) was used and iv) bacterial strains that were collected from humans as part of the HMP were retained without being subject to redundancy removal, because these strains were deemed informative to profile human-associated microbiomes.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21667,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Data processing",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The breadth (defined as the percentage of covered bases over the length of the reference genome) and depth (defined as the sum of the depths of each covered base divided by the length of the genome) of coverage were calculated based on all alignments of each genome represented in the database using RefCov (http://gmt.genome.wustl.edu/gmt-refcov). To allow for the different number of input base pairs per sample and normalize across samples, the depth of coverage was normalized per 100 million base pair. In short, the average depth of coverage per reference genome was calculated using Refcov by taking the sum of the lengths of all the reads that align to that reference, divided by the total length of that reference. Because a single genome can span many references, the average coverage value was aggregated on a per genome basis. To obtain the normalized value, the total number of bases that mapped to the genome was divided by 100 million and applied to the average depth values as a modifier.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22671,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Data processing",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "All data was analyzed using custom Python, R and Processing scripts and visualized using Processing (http://processing.org) and the ggplot2 R library (graphs, box plots and histograms) [42]. Matrix clustering was performed using Cluster [43] and visualized using TreeView [44].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22948,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Calculating relative abundance based on whole genome shotgun metagenomic data",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The abundance of each strain in each sample was estimated by calculating the product of its breadth and depth of coverage. The abundance of a strain was divided by the total abundance of that sample to obtain the relative abundance of each strain in each sample. Species-level estimates were calculated by taking the sum of the relative abundance of all the strains of a species in a sample.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23416,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Whole-genome shotgun data reveal strain-level details obscured by 16 S analysis",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "For each genus that was represented by 3 or more strains in the whole genome shotgun data, Kendall's coefficient of concordance (W) [45] was calculated using the vegan R package. Kendall's W was used to determine the agreement of samples on the rank order of the strains in the genus with the average rank order of strains in the genus for all the samples. Genera with a significantly high (p<0.01 after multiple testing correction) Kendall's W (>0.8) were considered to be in agreement on the ordering of the strains in the genus.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23947,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Strains with an unusually variable distribution pattern",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Two metrics were used to identify strains that are highly variable among samples: Rainbow strains were defined by calculating the coefficient of variation of the relative abundance across all samples and identifying the strains that are outliers (1.5 times higher than the interquartile range) (Figure S8A). Bimodal strains contain two groups of at least 5 samples that vary over 3 orders of magnitude between the two groups, but vary less than 2 orders of magnitude in their abundance within the group.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24450,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Top 80% by numbers",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "To determine the number of strains that are sufficient to accumulate a certain percentage of total abundance in a sample, the strains were ordered by their abundance and summed until the total constitutes a percentage of the total abundance in the sample. The number of strains was calculated for each sample and each body site allowing for the calculation of the mean and the standard deviation for each target abundance by percentage.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24904,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "PubMed analysis",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "PubMed data was obtained in April 2012. The PubMed database (http://www.ncbi.nlm.nih.gov/pubmed) was queried for the number of articles with the species name (no strain information was used) in either the title or the abstract using the [title/abstract] search tag. To identify the first publication with the species name in the abstract or title, the date of publication [DP] search tag was used with a decade as the date range.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25348,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nGenome coverage plots. (A) Genome coverage for the 30 strains mentioned in the text visualized in a boxplot. The box indicates the 25th\u201375th percentile, and the median coverage is indicated by a horizontal line in the box. The diamond represents the average and the outliers are visualized using dots. The whiskers of the box are the lowest and highest observation of coverage. (B) Read recruitment to the genomes of all the 30 strains mentioned in the text. For each strain, we show a coverage map for three subjects: the stool samples with the maximum, minimum and median coverage. Each peak represents the average coverage for a 100 bp bin both in color and length (on a log scale). All genomes are draft sequences, and consist of 3 contigs (Akkermansia muciniphila ATCC BAA-835, Bacteroides vulgatus ATCC 8482 and Eubacterium rectale ATCC 33656) to 1575 contigs (Bacteroides cellulosilyticus DSM 14838). Here, the contigs from draft genome sequences are ordered by their average coverage (from high to low) as determined from the sample with the maximum coverage.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Akkermansia muciniphila",
+                            "infons": {
+                                "identifier": "NCBI:txid239935",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:24:21",
+                                "parent_taxonomic_id": "NCBI:txid239934"
+                            },
+                            "id": "32430433",
+                            "locations": {
+                                "length": 23,
+                                "offset": 26093
+                            }
+                        },
+                        {
+                            "text": "Bacteroides vulgatus",
+                            "infons": {
+                                "identifier": "NCBI:txid821",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:24:22",
+                                "parent_taxonomic_id": "NCBI:txid909656"
+                            },
+                            "id": "32430434",
+                            "locations": {
+                                "length": 20,
+                                "offset": 26132
+                            }
+                        },
+                        {
+                            "text": "Eubacterium rectale",
+                            "infons": {
+                                "identifier": "NCBI:txid39491",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:24:22",
+                                "parent_taxonomic_id": "NCBI:txid186928"
+                            },
+                            "id": "32430435",
+                            "locations": {
+                                "length": 19,
+                                "offset": 26167
+                            }
+                        },
+                        {
+                            "text": "Bacteroides cellulosilyticus",
+                            "infons": {
+                                "identifier": "NCBI:txid246787",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:24:22",
+                                "parent_taxonomic_id": "NCBI:txid816"
+                            },
+                            "id": "32430436",
+                            "locations": {
+                                "length": 28,
+                                "offset": 26215
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26447,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(PDF)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26452,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S2",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nHeat map of clustered strain abundance in individual body sites. These figures show a heat map representation of the relative abundance of each strain (y-axis) for each sample (x-axis) for the 6 body sites individually as determined by depth X breadth of coverage (see Methods). The abundances are hierarchically clustered using Spearman rank correlation with average linkage.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26838,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S3",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nHeat maps of ordered strain abundance for all body sites combined. A heat map representation of the relative abundance of each strain (y-axis) for each sample (x-axis) for the 6 body sites combined as determined by depth X breadth of coverage (see Methods). The abundances are hierarchically clustered using Spearman rank correlation with average linkage.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27203,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S4",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nHeat maps of ordered strain abundance. Heat map visualization of the relative abundances with the samples ordered by the relative abundance for each strain. Species are listed alphabetically.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27404,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S5",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nHeat maps of ordered species abundance. Heat map representation of the relative abundance of each species ordered by the relative abundance for each species (for each sample the abundances of strains within a species were summed to calculate the species total). Species are listed alphabetically.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27710,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S6",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nTop species by abundance. This line graph shows how many species on average it takes to constitute a percentage of the total abundance in a sample, ranging from 5% to 95%. Strains were summed to calculate the total for each species, and the error bars represent the standard deviation. On average, 74, 154, 90, 92, 277 and 255 species are needed for 100% in the anterior nares, buccal mucosa, posterior fornix, stool, supragingival plaque and tongue dorsum, respectively.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28191,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S7",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\n16 S heat maps and comparison with WGS data. (A\u2013G) These figures show a heat map representation of the relative abundance of each genus (y-axis) for each sample (x-axis) for six body sites, both individually (A\u2013F) and together (G), as determined by 16 S sequence data. The abundances are hierarchically clustered using Spearman rank correlation with average linkage. (H\u2013L) For each genus that was represented by 3 or more species in the whole genome shotgun data, the rank order for each sample was determined and compared to the average rank order of the genus using Kendall's W. The correlations are hierarchically clustered using Spearman rank correlation with average linkage. The overall concordance of all the samples is shown in the far right column. Genera with a high, statistically significant Kendall's W (>0.8) are colored red.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29040,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S8",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nVariability in strain abundance across samples. (A) Distribution of the coefficient of variation (CV) for each strain across the samples for each individual body site. The distribution shows that the variation of the abundances of individual strains is the lowest in tongue dorsum and the highest in the posterior fornix (based on the median), while the distribution is the widest for the stool. The median diversity is indicated by a horizontal line in the box (covering the 25th until the 75th percentile), the diamond represents the average and the outliers are visualized using dots. The whiskers of the box are the lowest and highest observation of variation. The points that make up the distribution are plotted in the color of the body site. The points beyond the whiskers are considered outliers and define the rainbow strains (see methods). (B) Strains that show an unusually variable pattern across multiple samples based on two metrics. The samples are ordered by their relative abundance to show the variable distribution. The strains are color coded to indicate the metric by which they are considered to be unusually variable (red for rainbow strains, blue for bimodal strains, and purple for both metrics).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30271,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S9",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nStrain diversity and top 80% by abundance. (A\u2013B) Sample diversity (alpha diversity) visualized in a boxplot using the Simpson index (A) and the Shannon index (B) for each body site. The median diversity is indicated by a horizontal line in the box (covering the 25th until the 75th percentile), the diamond represents the average and the outliers are visualized using dots. The whiskers of the box are the lowest and highest observation of diversity. The Simpson index equals the probability that two strains taken at random from the data set are the same. A high Simpson index equals low diversity. Here the more common 1\u2014Simpson Index is plotted. The Shannon index quantifies the uncertainty (entropy) in predicting the identity of a strain taken at random from the data set. A low Shannon index indicates low strain diversity. The Shannon index was calculated with e as the base of the logarithm. Low diversity can be caused either by a small number of total strains in the data set or by strain domination of the body site. High diversity indicates either a large number of total strains in the data set or a very even distribution of abundance of strains. (C\u2013G) Heat map visualization of the distribution of abundances of the species that are part of the top 80% in at least one sample in the five remaining body sites (see Figure 6 for stool): (C) anterior nares, (D) buccal mucosa, (E) posterior fornix, (F) supragingival plaque and (G) tongue dorsum. Only abundances of 1% or more are visualized to emphasize the differences in prevalence of the most abundant strains. The values are hierarchically clustered using Spearman rank correlation with average linkage. (H) Strain participation in the top 80%. For all the strains that are in the top 80% in at least one sample in a body site the participation over all the samples is given as a percentage for each body site. The heat map of participation percentages is hierarchically clustered using Spearman rank correlation with average linkage.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32282,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S10",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nStable low abundance strains. To find the strains that are present stably at low abundance, strains were identified that differed by only two orders of magnitude over 90% of the subjects (including subjects where the strain was not present) for each of the six body sites. The upper limit of the relative abundance is 0.01% (A), 0.1% (B) and 1% (C), each excluding the strains found for the preceding condition. No stable low abundance strains were identified for anterior nares and posterior fornix. The stable low abundance strains that were identified are visualized in a heat map of the relative abundances with the subjects ordered by the relative abundance for each strain.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32972,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nRelative abundance of reference strains for all body sites (WGS). The abundance of each reference strain in each sample was estimated by calculating the product of its breadth and depth of coverage. The abundance of a strain was divided by the total abundance of that sample to obtain the relative abundance of each strain in each sample. The relative abundance is presented as a percentage.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33372,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(XLSX)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33378,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S2",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nRelative abundance of species for all body sites (WGS). Species-level estimates were calculated by taking the sum of the relative abundance of all the strains of a species in a sample. The relative abundance is presented as a percentage.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33624,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S3",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nRelative abundance of generas for all body sites (16 S). The 16 S data was generated as previously described [9], [10]. The abundance of an OTU was divided by the total abundance of that sample to obtain the relative abundance of each OTU in each sample. The relative abundance is presented as a percentage.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33940,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S4",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nBreadth and depth of coverage of reference strains for all body sites (WGS). The breadth and depth of coverage used to estimate the abundance of each reference strain in each sample. The breadth (defined as the percentage of covered bases over the length of the reference genome) and depth (defined as the sum of the depths of each covered base divided by the length of the genome) of coverage were calculated based on all alignments of each genome represented in the database using RefCov (http://gmt.genome.wustl.edu/gmt-refcov). The breadth of coverage is presented as a percentage.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34534,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "We thank Tanja Kortemme and members of the Fischbach and Kortemme labs for helpful discussions.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34644,
+                    "infons": {
+                        "title": "Trans locus inhibitors limit concomitant polysaccharide synthesis in the human gut symbiont Bacteroides fragilis",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "107",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Chatzidaki-Livanis M, Weinacht KG, Comstock LE (2010) Trans locus inhibitors limit concomitant polysaccharide synthesis in the human gut symbiont Bacteroides fragilis. Proc Natl Acad Sci U S A107: 11976\u201311980. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteroides fragilis",
+                            "infons": {
+                                "identifier": "NCBI:txid817",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:26:09",
+                                "parent_taxonomic_id": "NCBI:txid816"
+                            },
+                            "id": "32430437",
+                            "locations": {
+                                "length": 20,
+                                "offset": 34793
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 34911,
+                    "infons": {
+                        "title": "Characterizing a model human gut microbiota composed of members of its two dominant bacterial phyla",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "106",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Mahowald MA, Rey FE, Seedorf H, Turnbaugh PJ, Fulton RS, et al. (2009) Characterizing a model human gut microbiota composed of members of its two dominant bacterial phyla. Proc Natl Acad Sci U S A106: 5859\u20135864. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35170,
+                    "infons": {
+                        "title": "A microbial symbiosis factor prevents intestinal inflammatory disease",
+                        "journal": "Nature",
+                        "volume": "453",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Mazmanian SK, Round JL, Kasper DL (2008) A microbial symbiosis factor prevents intestinal inflammatory disease. Nature453: 620\u2013625. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35330,
+                    "infons": {
+                        "title": "Specificity of polysaccharide use in intestinal bacteroides species determines diet-induced microbiota alterations",
+                        "journal": "Cell",
+                        "volume": "141",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Sonnenburg ED, Zheng H, Joglekar P, Higginbottom SK, Firbank SJ, et al. (2010) Specificity of polysaccharide use in intestinal bacteroides species determines diet-induced microbiota alterations. Cell141: 1241\u20131252. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:26:17",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "32430438",
+                            "locations": {
+                                "length": 11,
+                                "offset": 35460
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 35592,
+                    "infons": {
+                        "title": "The Small RNA RteR Inhibits Transfer of the Bacteroides Conjugative Transposon CTnDOT",
+                        "journal": "J Bacteriol",
+                        "volume": "194",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Waters JL, Salyers AA (2012) The Small RNA RteR Inhibits Transfer of the Bacteroides Conjugative Transposon CTnDOT. J Bacteriol194: 5228\u20135236. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:26:19",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "32430439",
+                            "locations": {
+                                "length": 11,
+                                "offset": 35668
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 35782,
+                    "infons": {
+                        "title": "Bacterial community variation in human body habitats across space and time",
+                        "journal": "Science",
+                        "volume": "326",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Costello EK, Lauber CL, Hamady M, Fierer N, Gordon JI, et al. (2009) Bacterial community variation in human body habitats across space and time. Science326: 1694\u20131697. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35997,
+                    "infons": {
+                        "title": "Diversity of the human intestinal microbial flora",
+                        "journal": "Science",
+                        "volume": "308",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Eckburg PB, Bik EM, Bernstein CN, Purdom E, Dethlefsen L, et al. (2005) Diversity of the human intestinal microbial flora. Science308: 1635\u20131638. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36190,
+                    "infons": {
+                        "title": "Metagenomic analysis of the human distal gut microbiome",
+                        "journal": "Science",
+                        "volume": "312",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Gill SR, Pop M, Deboy RT, Eckburg PB, Turnbaugh PJ, et al. (2006) Metagenomic analysis of the human distal gut microbiome. Science312: 1355\u20131359. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36383,
+                    "infons": {
+                        "title": "A framework for human microbiome research",
+                        "journal": "Nature",
+                        "volume": "486",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Human Microbiome Project C (2012) A framework for human microbiome research. Nature486: 215\u2013221. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36527,
+                    "infons": {
+                        "title": "Structure, function and diversity of the healthy human microbiome",
+                        "journal": "Nature",
+                        "volume": "486",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Human Microbiome Project C (2012) Structure, function and diversity of the healthy human microbiome. Nature486: 207\u2013214. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36696,
+                    "infons": {
+                        "title": "Diversity, stability and resilience of the human gut microbiota",
+                        "journal": "Nature",
+                        "volume": "489",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Lozupone CA, Stombaugh JI, Gordon JI, Jansson JK, Knight R (2012) Diversity, stability and resilience of the human gut microbiota. Nature489: 220\u2013230. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36895,
+                    "infons": {
+                        "title": "Phylogenetic structure of the prokaryotic domain: the primary kingdoms",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "74",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Woese CR, Fox GE (1977) Phylogenetic structure of the prokaryotic domain: the primary kingdoms. Proc Natl Acad Sci U S A74: 5088\u20135090. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37078,
+                    "infons": {
+                        "title": "Quantitative phylogenetic assessment of microbial communities in diverse environments",
+                        "journal": "Science",
+                        "volume": "315",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. von Mering C, Hugenholtz P, Raes J, Tringe SG, Doerks T, et al. (2007) Quantitative phylogenetic assessment of microbial communities in diverse environments. Science315: 1126\u20131130. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37288,
+                    "infons": {
+                        "title": "A comparison of rpoB and 16S rRNA as markers in pyrosequencing studies of bacterial diversity",
+                        "journal": "PLoS One",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Vos M, Quince C, Pijl AS, de Hollander M, Kowalchuk GA (2011) A comparison of rpoB and 16S rRNA as markers in pyrosequencing studies of bacterial diversity. PLoS One7: e30600. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37512,
+                    "infons": {
+                        "title": "IS-pro: high-throughput molecular fingerprinting of the intestinal microbiota",
+                        "journal": "FASEB J",
+                        "volume": "24",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Budding AE, Grasman ME, Lin F, Bogaards JA, Soeltan-Kaersenhout DJ, et al. (2010) IS-pro: high-throughput molecular fingerprinting of the intestinal microbiota. FASEB J24: 4556\u20134564. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37724,
+                    "infons": {
+                        "title": "A metagenome-wide association study of gut microbiota in type 2 diabetes",
+                        "journal": "Nature",
+                        "volume": "490",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Qin J, Li Y, Cai Z, Li S, Zhu J, et al. (2012) A metagenome-wide association study of gut microbiota in type 2 diabetes. Nature490: 55\u201360. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37892,
+                    "infons": {
+                        "title": "Genomic variation landscape of the human gut microbiome",
+                        "journal": "Nature",
+                        "volume": "493",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Schloissnig S, Arumugam M, Sunagawa S, Mitreva M, Tap J, et al. (2013) Genomic variation landscape of the human gut microbiome. Nature493: 45\u201350. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38086,
+                    "infons": {
+                        "title": "Metagenomic microbial community profiling using unique clade-specific marker genes",
+                        "journal": "Nature methods",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Segata N, Waldron L, Ballarini A, Narasimhan V, Jousson O, et al. (2012) Metagenomic microbial community profiling using unique clade-specific marker genes. Nature methods9: 811\u2013814. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38317,
+                    "infons": {
+                        "title": "A core gut microbiome in obese and lean twins",
+                        "journal": "Nature",
+                        "volume": "457",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Turnbaugh PJ, Hamady M, Yatsunenko T, Cantarel BL, Duncan A, et al. (2009) A core gut microbiome in obese and lean twins. Nature457: 480\u2013484. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38507,
+                    "infons": {
+                        "title": "Human gut microbiome viewed across age and geography",
+                        "journal": "Nature",
+                        "volume": "486",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Yatsunenko T, Rey FE, Manary MJ, Trehan I, Dominguez-Bello MG, et al. (2012) Human gut microbiome viewed across age and geography. Nature486: 222\u2013227. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38706,
+                    "infons": {
+                        "title": "A catalog of reference genomes from the human microbiome",
+                        "journal": "Science",
+                        "volume": "328",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Nelson KE, Weinstock GM, Highlander SK, Worley KC, Creasy HH, et al. (2010) A catalog of reference genomes from the human microbiome. Science328: 994\u2013999. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38909,
+                    "infons": {
+                        "title": "Taxonomic metagenome sequence assignment with structured output models",
+                        "journal": "Nature methods",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Patil KR, Haider P, Pope PB, Turnbaugh PJ, Morrison M, et al. (2011) Taxonomic metagenome sequence assignment with structured output models. Nature methods8: 191\u2013192. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39124,
+                    "infons": {
+                        "title": "Classifying short genomic fragments from novel lineages using composition and homology",
+                        "journal": "BMC bioinformatics",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Parks DH, MacDonald NJ, Beiko RG (2011) Classifying short genomic fragments from novel lineages using composition and homology. BMC bioinformatics12: 328. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39327,
+                    "infons": {
+                        "title": "Optimizing read mapping to reference genomes to determine composition and species prevalence in microbial communities",
+                        "journal": "PLoS One",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Martin J, Sykes S, Young S, Kota K, Sanka R, et al. (2012) Optimizing read mapping to reference genomes to determine composition and species prevalence in microbial communities. PLoS One7: e36427. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39572,
+                    "infons": {
+                        "title": "Incorporating 16S gene copy number information improves estimates of microbial diversity and abundance",
+                        "journal": "PLoS Computational Biology",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Kembel SW, Wu M, Eisen JA, Green JL (2012) Incorporating 16S gene copy number information improves estimates of microbial diversity and abundance. PLoS Computational Biology8: e1002743. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39806,
+                    "infons": {
+                        "title": "Diet drives convergence in gut microbiome functions across mammalian phylogeny and within humans",
+                        "journal": "Science",
+                        "volume": "332",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Muegge BD, Kuczynski J, Knights D, Clemente JC, Gonzalez A, et al. (2011) Diet drives convergence in gut microbiome functions across mammalian phylogeny and within humans. Science332: 970\u2013974. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40047,
+                    "infons": {
+                        "title": "The integrated microbial genomes system: an expanding comparative analysis resource",
+                        "journal": "Nucleic Acids Res",
+                        "volume": "38",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Markowitz VM, Chen IM, Palaniappan K, Chu K, Szeto E, et al. (2010) The integrated microbial genomes system: an expanding comparative analysis resource. Nucleic Acids Res38: D382\u2013390. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40279,
+                    "infons": {
+                        "title": "Enterotypes of the human gut microbiome",
+                        "journal": "Nature",
+                        "volume": "473",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Arumugam M, Raes J, Pelletier E, Le Paslier D, Yamada T, et al. (2011) Enterotypes of the human gut microbiome. Nature473: 174\u2013180. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40459,
+                    "infons": {
+                        "title": "Beyond the Venn diagram: the hunt for a core microbiome",
+                        "journal": "Environ Microbiol",
+                        "volume": "14",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Shade A, Handelsman J (2011) Beyond the Venn diagram: the hunt for a core microbiome. Environ Microbiol14: 4\u201312. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40601,
+                    "infons": {
+                        "title": "Induction of colonic regulatory T cells by indigenous Clostridium species",
+                        "journal": "Science",
+                        "volume": "331",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Atarashi K, Tanoue T, Shima T, Imaoka A, Kuwahara T, et al. (2011) Induction of colonic regulatory T cells by indigenous Clostridium species. Science331: 337\u2013341. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Clostridium",
+                            "infons": {
+                                "identifier": "NCBI:txid1485",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:27:18",
+                                "parent_taxonomic_id": "NCBI:txid31979"
+                            },
+                            "id": "32430440",
+                            "locations": {
+                                "length": 11,
+                                "offset": 40726
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 40812,
+                    "infons": {
+                        "title": "Predicting a human gut microbiota's response to diet in gnotobiotic mice",
+                        "journal": "Science",
+                        "volume": "333",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Faith JJ, McNulty NP, Rey FE, Gordon JI (2011) Predicting a human gut microbiota's response to diet in gnotobiotic mice. Science333: 101\u2013104. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41002,
+                    "infons": {
+                        "title": "The impact of a consortium of fermented milk strains on the gut microbiome of gnotobiotic mice and monozygotic twins",
+                        "journal": "Sci Transl Med",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. McNulty NP, Yatsunenko T, Hsiao A, Faith JJ, Muegge BD, et al. (2011) The impact of a consortium of fermented milk strains on the gut microbiome of gnotobiotic mice and monozygotic twins. Sci Transl Med3: 106ra106. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41265,
+                    "infons": {
+                        "title": "The Bacteroides of human feces",
+                        "journal": "J Bacteriol",
+                        "volume": "25",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Eggerth AH, Gagnon BH (1933) The Bacteroides of human feces. J Bacteriol25: 389\u2013413. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 10:27:25",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "32430441",
+                            "locations": {
+                                "length": 11,
+                                "offset": 41302
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 41398,
+                    "infons": {
+                        "title": "Incomplete recovery and individualized responses of the human distal gut microbiota to repeated antibiotic perturbation",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "108",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Dethlefsen L, Relman DA (2011) Incomplete recovery and individualized responses of the human distal gut microbiota to repeated antibiotic perturbation. Proc Natl Acad Sci U S A108 Suppl 14554\u20134561. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41644,
+                    "infons": {
+                        "title": "Dissecting the in vivo metabolic potential of two human gut acetogens",
+                        "journal": "J Biol Chem",
+                        "volume": "285",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Rey FE, Faith JJ, Bain J, Muehlbauer MJ, Stevens RD, et al. (2010) Dissecting the in vivo metabolic potential of two human gut acetogens. J Biol Chem285: 22082\u201322090. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41859,
+                    "infons": {
+                        "title": "The application of ecological theory toward an understanding of the human microbiome",
+                        "journal": "Science",
+                        "volume": "336",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "36. Costello EK, Stagaman K, Dethlefsen L, Bohannan BJ, Relman DA (2012) The application of ecological theory toward an understanding of the human microbiome. Science336: 1255\u20131262. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42085,
+                    "infons": {
+                        "title": "Eating for two: how metabolism establishes interspecies interactions in the gut",
+                        "journal": "Cell Host Microbe",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "37. Fischbach MA, Sonnenburg JL (2011) Eating for two: how metabolism establishes interspecies interactions in the gut. Cell Host Microbe10: 336\u2013347. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42279,
+                    "infons": {
+                        "title": "Microbiota-targeted therapies: an ecological perspective",
+                        "journal": "Sci Transl Med",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "38. Lemon KP, Armitage GC, Relman DA, Fischbach MA (2012) Microbiota-targeted therapies: an ecological perspective. Sci Transl Med4: 137rv135. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42466,
+                    "infons": {
+                        "title": "The human microbiome project",
+                        "journal": "Nature",
+                        "volume": "449",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "39. Turnbaugh PJ, Ley RE, Hamady M, Fraser-Liggett CM, Knight R, et al. (2007) The human microbiome project. Nature449: 804\u2013810. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42639,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "40. Aagaard K, Petrosino J, Keitel W, Watson M, Katancik J, et al... (2012) The Human Microbiome Project strategy for comprehensive sampling of the human microbiome and why it matters. FASEB J. [PMC free article] [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42860,
+                    "infons": {
+                        "title": "Mapping short DNA sequencing reads and calling variants using mapping quality scores",
+                        "journal": "Genome Res",
+                        "volume": "18",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "41. Li H, Ruan J, Durbin R (2008) Mapping short DNA sequencing reads and calling variants using mapping quality scores. Genome Res18: 1851\u20131858. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43049,
+                    "infons": {
+                        "volume": "212",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "42. Wickham H (2009) Ggplot2: elegant graphics for data analysis. New York: Springer. viii, 212 p. p . [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43168,
+                    "infons": {
+                        "title": "Open source clustering software",
+                        "journal": "Bioinformatics",
+                        "volume": "20",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "43. de Hoon MJ, Imoto S, Nolan J, Miyano S (2004) Open source clustering software. Bioinformatics20: 1453\u20131454. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43305,
+                    "infons": {
+                        "title": "TreeView: an application to display phylogenetic trees on personal computers",
+                        "journal": "Comput Appl Biosci",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "44. Page RD (1996) TreeView: an application to display phylogenetic trees on personal computers. Comput Appl Biosci12: 357\u2013358. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43458,
+                    "infons": {
+                        "title": "Species associations: The Kendall coefficient of concordance revisited",
+                        "journal": "Journal of Agricultural Biological and Environmental Statistics",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "45. Legendre P (2005) Species associations: The Kendall coefficient of concordance revisited. Journal of Agricultural Biological and Environmental Statistics10: 226\u2013245. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

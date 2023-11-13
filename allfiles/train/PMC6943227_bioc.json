@@ -1,0 +1,1581 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20220803",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC6943227",
+            "inputfile": "../microbiome_corpus_HTML\\PMC6943227.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Fecal microbiota transplantation results in bacterial strain displacement in patients with inflammatory bowel diseases",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacterial strain",
+                            "infons": {
+                                "identifier": "NCBI:txid108010",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 05:38:44",
+                                "parent_taxonomic_id": "NCBI:txid106633"
+                            },
+                            "id": "31924301",
+                            "locations": {
+                                "length": 16,
+                                "offset": 44
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 118,
+                    "infons": {
+                        "section_title_1": "keywords",
+                        "iao_name_1": "keywords section",
+                        "iao_id_1": "IAO:0000630"
+                    },
+                    "text": "fecal microbiota transplantation, inflammatory bowel disease, random forest, shotgun metagenomic sequencing, strain displacement, strain\u2010level identification",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 283,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Fecal microbiota transplantation (FMT), which is thought to have the potential to correct dysbiosis of gut microbiota, has been used to treat inflammatory bowel disease (IBD) for almost a decade. Here, we report an interventional prospective cohort study performed to elucidate the extent of and processes underlying microbiota engraftment in IBD patients after FMT treatment. The cohort included two categories of patients: (a) patients with moderate to severe Crohn\u2019s disease (CD) (Harvey\u2013Bradshaw Index\u00a0\u2265\u00a07, n\u00a0=\u00a011) and (b) patients with ulcerative colitis (UC) (Montreal classification S2 and S3, n\u00a0=\u00a04). All patients were treated with a single FMT (via mid\u2010gut, from healthy donors), and follow\u2010up visits were performed at baseline, 3\u00a0days, 1\u00a0week, and 1\u00a0month after FMT (missing time points included). At each follow\u2010up time point, fecal samples and clinical metadata were collected. For comparative analysis, 10 fecal samples from 10 healthy donors were included to represent the diversity level of normal gut microbiota. Additionally, the metagenomic data of 25 fecal samples from five individuals with metabolic syndrome who underwent autologous FMT treatment were downloaded from a previous published paper to represent fluctuations in microbiota induced during FMT. All fecal samples underwent shotgun metagenomic sequencing. We found that 3\u00a0days after FMT, 11 out of 15 recipients were in remission (three out of four UC recipients; 8 out of 11 CD recipients). Generally, bacterial colonization was observed to be lower in CD recipients than in UC recipients at both species and strain levels. Furthermore, across species, different strains displayed disease\u2010specific displacement advantages under two\u2010disease status. Finally, most post\u2010FMT species (>\u00a080%) could be properly predicted (area under the curve >\u00a085%) using a random forest classification model, with the gut microbiota composition and clinical parameters of pre\u2010FMT recipients acting as factors that contribute to prediction accuracy.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2300,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Here, we profiled gut metagenomes of patients with inflammatory bowel disease before and after fecal microbiota transplantation (FMT) at both species\u2010 and strain\u2010level resolution. We investigated the principles of species engraftment 3\u00a0days after FMT using a randomForest model and identified the top contributable predictors to the accuracy of the model.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2655,
+                    "infons": {
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Inflammatory bowel disease (IBD) is a chronic inflammatory disease characterized by chronic immune\u2010mediated intestinal inflammation and consists mainly of Crohn\u2019s disease (CD) and ulcerative colitis (UC). The etiology of IBD has been proposed to be multifactorial, involving a dysregulated immune response to environmental factors in a genetically susceptible individual 1. Interestingly, given the evidence accumulated in recent years, the gut microbiota is now recognized for playing an important role in IBD. Dysbiosis is a decrease in gut microbial diversity owing to a shift in the balance between commensal and potentially pathogenic microorganisms of the gut microbial ecosystem and has long been characterized as a trait of IBD patients 2, 3. The article by Sunkara et al. explains in detail about how gut microbiota dysbiosis is characterized by a significant reduction of obligate anaerobes and a sharp increase in facultative anaerobes. Release of anti\u2010inflammatory compounds is caused by a decrease in obligate anaerobes which causes increased inflammation 4. Bacteroids\u00a0fragilis and Faecalibracterium\u00a0prausnitzii were considered to have the potential to promote intestinal inflammation through downregulation of Treg cells 5, 6, 7.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3899,
+                    "infons": {
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Fecal microbiota transplantation (FMT) aims to modify the intestinal microbiota composition and function of the recipients by transferring donor fecal suspension into the gastrointestinal tract of a recipient and has become a promising method for manipulating the gut microbiota. Its successful application for the treatment of Clostridium\u00a0difficile infection has inspired people to apply it to IBD patients 8, 9, 10, 11, 12, 13. However, this application is still in its early stages. According to a recent systematic review and meta\u2010analysis, after minimizing publication bias, IBD patients who received FMT had a remission rate of only 36.2%: 22% for UC and 60.5% for CD 14. Moreover, there is a lack of research regarding the efficiency and principles of FMT in treating IBD.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4678,
+                    "infons": {
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Clinical research to date has focused more on UC 11, 12, 13, and there has been insufficient research on the effects of FMT on CD patients, with only a few case reports and small\u2010scale case series reported 15, 16, 17, 18. In addition, the majority of studies conducted so far to investigate the role FMT plays in treating IBD have used 16S rRNA sequencing, which has limited resolution on taxonomic and functional classification of sequences. Contradictory results were often observed at species\u2010level resolution, making it hard to determine the exact role of different bacterial agents. For instance, the abundance of F.\u00a0prausnitzii was found to decrease in one study and to increase in another 19, 20. Thus, it is necessary to be able to appreciate the whole composition of gut microbiota at a strain level. Strain\u2010level variants within microbial species are crucial in determining their functional capacities within the human microbiome, such as interaction with host tissues 21, modulation of immune homeostasis 22, and xenobiotic metabolism 23. Shotgun metagenomic sequencing with the ability to target all DNA material in a sample can give a base pair\u2010level resolution of the genome that makes single nucleotide analysis possible. Additionally, promising machine learning methods could enable the establishment of predictive models to predict the microbiota composition of post\u2010FMT recipients. Recently, Smillie et al. constructed a machine learning model to predict the species profile of post\u2010FMT recipients for 18 C.\u00a0difficile patients and found that bacterial abundance and phylogeny were the strongest determinants of engraftment 24. In our study, we utilize a random forest model to predict the mOTU profile of IBD recipient 3\u00a0days after FMT and identified the variables that contribute most to model prediction accuracy.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6511,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Patient recruitment and donor selection",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Patients aged 19\u201364\u00a0years with moderate to severe CD, as defined by Harvey\u2013Bradshaw Index (HBI) and UC, as defined by Montreal classification, were recruited from the Second Affiliated Hospital of Nanjing Medical University, China, from 2012 to 2014. Exclusion criteria included: (a) patients accompanied with serious diseases, including other intestinal diseases; (b) patients with refractory obstruction symptoms after conservative treatment; and (c) patients who received biological therapies had uncertain clinical response 3\u00a0months before FMT. Clinical metadata of IBD patients\u2014including anthropometric index, clinical parameters, and blood test results\u2014were obtained at each follow\u2010up time point.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7273,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Patient recruitment and donor selection",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Donors were either related (genetically related family members) or unrelated (screened unrelated family members). Donors did not use antibiotics, laxative, or diet pills in the past 3\u00a0months and had no recent gastrointestinal diseases. Donors with any history of illness especially those diseases or conditions potentially associated with specific changes in gut microbiota were excluded. All the donors were assessed by laboratory evaluation and biochemical test. Besides, donor\u2019s family health history, personal psychological health, and living environment were assessed. Detailed standards of patient recruitment and donor screening were previously published 17.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7938,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Stool sample collection and FMT procedure",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The dataset was composed of 10 fecal samples from 10 healthy donors, among which six were FMT donors, and 34 fecal samples from 15 IBD patients. Donor fecal samples were collected prior to FMT in the same batch, and fecal samples from the same healthy donor were collected at the same time point. Stool samples from recipients were collected at baseline, day 3, and day 7 (or day 30) (Fig. \u200b(Fig.1).1). For autologous FMT treatment, 25 additional fecal samples from five metabolic syndrome individuals were obtained from the Vrieze et al. 25 study with follow\u2010up points on day 0 and days 2, 14, 42, and 84 after FMT. In summary, 34 samples were used for the analysis of the allogenic FMT group, 25 for the autologous, and 10 for the healthy group.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8726,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Stool sample collection and FMT procedure",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Fecal samples were obtained from scanned donors and were isolated for microbiota at laboratory. Fecal microbiota from the donor was prepared according to the manual method of filtration, centrifugation, washing, discarding, and resuspension and repeated processes. Purified fresh fecal microbiota suspension was input into patients\u2019 mid\u2010gut by a tube within gastroscope under anesthesia, and the entire procedure should be done within 1\u00a0h.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9165,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Blood test for lymphocyte population",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Blood and stool samples were collected at the same time and were analyzed by flow cytometry (FCM) and laboratory examination, and clinical activity was also assessed at each visit. Inflammation markers we used are C\u2010reactive protein, CD3+, CD19+, (CD3+, CD4+), (CD3+, CD8+), and (CD16+56+). Details were previously published 17.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9529,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Metagenomic sequencing and processing methods",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "DNA extraction and metagenomic sequencing of IBD fecal samples and healthy fecal samples were performed at BGI\u2010Shenzhen, China, following HiSeq 2000 sequencing protocol. Metagenomic sequencing of autologous FMT treatment samples was performed at the Genomics Core Facility of the European Molecular Biology Laboratory, Heidelberg, Germany using HiSeq 2000.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9930,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Metagenomic sequencing and processing methods",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Illumina sequencing reads were quality controlled by trimming low\u2010quality bases (quality score <\u00a020), filtering adapter reads, and removing host\u2010related reads after mapping to the human genome database. The reads quality control procedure was conducted using cOMG with default parameters 26. After quality control, 1\u00a0379\u00a0430\u00a0125 sequences were obtained, with a mean of 31\u00a0350\u00a0685 sequences per sample.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10331,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Microbiota taxonomic profiling",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Species\u2010level quantification of metagenomic sequencing reads was achieved using mOTU software with default parameters. mOTUs is a method that establishes metagenomic operational taxonomic units based on single\u2010copy phylogenetic marker genes. It maps the quality\u2010controlled metagenomic sequencing reads against the m\u2010OTUS.v1.padded database, which is composed of 10 MGs extracted from 3496 prokaryotic reference genomes (download from NCBI) and 263 publicly available metagenomes (from the MetaHIT and HMP projects), and then outputs metagenomic OUT linkage groups (m\u2010OTUS) 27.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10937,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Microbiota taxonomic profiling",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "For strain\u2010level profiling, metaSNV was utilized to process quality\u2010controlled metagenomic sequencing reads. metaSNV is a method that is able to disentangle conspecific strains in metagenomic samples using specific single\u2010site allelic variation (SNVs). It uses a collection of microbial reference genomes in which each species is represented by a single representative genome or gene collection 28. To maintain consistency with previous species profiles, we specified the m\u2010OTUS.v1.padded database as our reference genome or gene collection during this procedure. First, we mapped quality\u2010controlled sequencing reads to the m\u2010OTUS.v1.padded database using bwa and Ngless. Next, we ran qaCompute on each sample to determine the average coverage over each reference in each sample and aggregated the coverage information. We then took advantage of the mpileup tool to compute genomic variation and outputted all the variant positions that met the default\u2010imposed quality criteria. Lastly, we computed per species pairwise distance matrices for the samples.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11991,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Quantification and Statistical analysis",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "All statistical analyses were performed in R using the following packages: vegan, Hmcc, pROC, and randomForest. We conservatively used only the baseline and day 3 time point samples for each patient when conducting all the two\u2010sided statistical tests.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12281,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Diversity comparisons ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The diversity of each gut microbiota community per sample was calculated based on its mOTU profile, referred to as the Shannon index, using the vegan package. The Kruskal\u2013Wallis test was used as a significance test for this multigroup comparison.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12549,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Species\u2010level changes after FMT ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "After species profiling all fecal samples using mOTU, we took only the species with a detected relative abundance of at least 0.001 into account to avoid ambiguous results. In order to determine whether donor microbiota could be transferred to recipients, we divided the microbiota composition of post\u2010FMT recipient into four groups: donor\u2010specific species, recipient\u2010specific species, common species (shared by donor and recipient), and new species (not found in either the donor or the pre\u2010FMT recipient). We quantified these four groups by comparing the gut microbiota mOTU profiles of the pre\u2010FMT recipient, the post\u2010FMT recipient, and the donor. Results were visualized using bar plot with all available follow\u2010up time points.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13312,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Community\u2010level changes after FMT ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Community\u2010level changes in gut microbiota composition between pre\u2010FMT and post\u2010FMT recipients were represented by the Bray\u2013Curtis distance, which was computed using the vegan package after applying a logarithmic transformation to mOTU relative abundance with the function log(x\u00a0+\u00a0x\n0), where x is the original relative abundance of a certain mOTU and x\n0\u00a0=\u00a01e\u20106. The cosine dissimilarity was also used to examine the correlations between gut microbiota compositions pre\u2010FMT and post\u2010FMT, and between post\u2010FMT recipients and donors. Results were displayed using scatter plots.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13921,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Strain\u2010level changes after FMT ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Strain differentiation, which was determined by comparing the presence or absence of donor\u2010specific, recipient\u2010specific, and previously undetected SNVs, was monitored in post\u2010FMT recipients based on the output files of metaSNV. Similar to the process of determining species retention and transplantation, the gut microbiota composition of post\u2010FMT recipients was categorized into three groups: donor\u2010specific strains, recipient\u2010specific strains, and common strains (shared by donor and recipient). We excluded the newly gained strains because that was not of interest here. Quantification of the three groups was determined according to the frequency per filtered SNVs set.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14625,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Species engraftment model ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We sought to investigate whether the microbiota composition of post\u2010FMT recipients could be predicted using advanced machine learning models. We therefore applied the random forest algorithm in R to predict the presence (random forest classification model) and abundance (random forest regression model) of each mOTU in every post\u2010FMT recipient sample. For a dataset comprised of 15 samples and 123 filtered mOTUs, these models are trained on 15\u00a0\u00d7\u00a0127 total instances. The inputs for these predictions are the gut microbiota composition of each pre\u2010FMT patient and their corresponding donor at a species level, along with clinical metadata of the pre\u2010FMT recipient and donor. Random forest is a collection or ensemble of classification and regression trees trained on targeted datasets. It is resistant to overfitting and is considered stable in the presence of outliers. The error rate of the classification of all the test sets is the out\u2010of\u2010bag estimate of the generalization error 29.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15639,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Species engraftment model ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "First, we eliminated the condition of class imbalances by filtering out mOTUs that existed in less than three samples to avoid prediction bias in favor of the majority class. Second, the mtry parameter with the lowest error was picked using the random forest cross\u2010validation (rfcv) function with fivefold cross\u2010validation to avoid overfitting problem. Third, we applied the randomForest function to perform classification of post\u2010FMT recipients across all mOTUs. This resulted in 123 randomForest classification models in total, and we computed the area under the curve (AUC) value for each model. Finally, we chose important features from those models that had good prediction performance (AUC bigger than 0.9).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16352,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Species engraftment model ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "For the regression model, we also accounted for class balance and then used the rfcv function with the same predictors that we used in the classification model to perform prediction.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16534,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Feature importance ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "To minimize the bias caused by different value scale induced by adding phenotype information as predictors, random forest calculates feature importance by removing each feature from the model and measuring the decrease in accuracy (for presence) or the increase in the mean\u2010square error (for abundance). According to these importance scores, we ranked features in decreasing order across models and picked 40 with the highest scores to display.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16997,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Correlations between change in mOTUs and in clinical parameters ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Clinical metadata of patients was collected at baseline and follow\u2010up visits, including physical parameters, inflammation markers, lymphocyte population, blood fat, and immunoglobulin. Blood lymphocytes were analyzed by FCM at later phase, and patients were excluded from the analysis for having been treated with immunomodulators or steroid when presented to our hospital. To avoid the possible bias which might be caused by the non\u2010normality nature of data pairs, we used the rcorr function in the Hmisc package to compute the Spearman rank\u2010order correlation instead of Pearson correlation iterating from each mOTU\u2013clinical index pair. The change in each mOTU was defined as the increase or decrease in its relative abundance 3\u00a0days after FMT treatment compared to baseline. Changes in clinical index were computed based on the absolute score recipients got at baseline and 3\u00a0days after FMT treatment. For multiple comparisons, the Benjamini\u2013Hochberg method was used to adjust the P value to control for false positives. Lastly, we drew a network using Cytoscape based on the pairs with a q\u2010value smaller than 0.05 30.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18181,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Ethical statement",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "This study was carried out in accordance with the recommendations of good clinical research practice, the Ethical Committee of the Second Affiliated Hospital of Nanjing Medical University, and BGI\u2010IRB (BGI\u2010R004\u201005). The protocol was approved by the Ethical Committee of the Second Affiliated Hospital of Nanjing Medical University and BGI\u2010IRB. All subjects gave written informed consent in accordance with the Declaration of Helsinki.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18632,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Bacteria characterization at a species level",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "After profiling sequenced fecal samples using shotgun metagenomics, the Shannon index (alpha diversity of a community) of gut microbiota was measured across IBD recipients. Results showed that the average Shannon index of CD patients was significantly lower than that of healthy controls (P\u2010value\u00a0=\u00a00.0035). In UC patients, although their Shannon index was lower than the average in healthy controls, dysbiosis was not significant (P\u2010value\u00a0=\u00a00.57). Although the result was consistent with previous study 13, it should also be contextualized from the small sample size of UC cohort. Three days after FMT treatment, the average Shannon indexes of both CD and UC recipients had not significantly improved (P\u2010value >\u00a00.01) (Fig. \u200b(Fig.2A).2A). Unexpectedly, CD\u20106, CD\u20107, CD\u20108, and UC\u20102 had a decreased Shannon index.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19494,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Bacteria characterization at a species level",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Among the whole population of the gut microbiota, some bacteria may be more important than others for maintaining a healthy gut environment. For example, 3\u00a0days after FMT treatment, there was a universal increase in Bacteroides that have been shown to exist at lower levels in IBD patients than in healthy donors 31. Some highly individualistic performances were also observed: CD\u20109 gained an abundant amount of Lactobacillus, which was considered to be probiotics, and CD\u20101 had a great decrease in Citrobacter, which was recognized to be pathogenic bacteria (Fig. S2). The amounts of species each recipient gained from their donor after FMT are shown in Fig. S1.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 05:42:23",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "31924302",
+                            "locations": {
+                                "length": 8,
+                                "offset": 19549
+                            }
+                        },
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 05:42:25",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "31924303",
+                            "locations": {
+                                "length": 11,
+                                "offset": 19710
+                            }
+                        },
+                        {
+                            "text": "Lactobacillus",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 05:42:27",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "31924304",
+                            "locations": {
+                                "length": 13,
+                                "offset": 19906
+                            }
+                        },
+                        {
+                            "text": "Citrobacter",
+                            "infons": {
+                                "identifier": "NCBI:txid544",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 05:42:28",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "31924305",
+                            "locations": {
+                                "length": 11,
+                                "offset": 19993
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 05:42:28",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "31924306",
+                            "locations": {
+                                "length": 8,
+                                "offset": 20044
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 20157,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Bacterial engraftment at the species level",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To investigate the extent to which the gut microbiota of recipients could be altered by FMT treatment, we evaluated both the degree and direction of change. Results showed that microbial communities underwent large compositional changes after FMT, and these changes persisted throughout follow\u2010up visits (Fig. \u200b(Fig.22B).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20520,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Bacterial engraftment at the species level",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "On average, post\u2010FMT CD recipients gained 29.4% of mOTUs from donors (n\u00a0=\u00a011, SD\u00a0=\u00a014.4%), while post\u2010FMT UC recipients gained 28.2% of mOTUs from donors (n\u00a0=\u00a04, SD\u00a0=\u00a020%). Our results were analogous to a previous study that found that FMT recipients gained 35% of mOTUs from donors (n\u00a0=\u00a0436, SD\u00a0=\u00a027%) 28.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20826,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Bacterial engraftment at the species level",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "By measuring the distance between donor\u2013recipient pairs using Euclidean distance, we determined the direction of microbiota change. Results varied between different donor\u2013recipient pairs. Out of the four patients that had two follow\u2010up time points, we found that CD\u20109 and UC\u20102 tended to be closer to their donors and further from their pre\u2010FMT status. CD\u20102 showed a slight tendency to return to their initial status, but the disturbance was small enough to be ignored (a shift from 10.628\u201310.57). Surprisingly, CD\u20101 showed an increased distance from both their donor and their pre\u2010FMT status, which could be attributed to environmental factors. Though CD\u20101, CD\u20102, and UC\u20102 all shared the same donor, the direction of their gut flora shift after the treatment varied (Fig. \u200b(Fig.3A).3A). In addition, we explored the abundance consistency of mOTUs of recipients before and after FMT. mOTUs of the recipient post\u2010FMT were highly correlated with mOTUs of the recipient pre\u2010FMT (median cosine similarity of UC patient mOTUs\u00a0=\u00a00.93, CD patients\u00a0=\u00a00.95). More importantly, the results showed that mOTUs of post\u2010FMT recipients had high similarity to mOTUs of their donors (median cosine similarity of UC patient mOTUs\u00a0=\u00a00.95, that of CD patients\u00a0=\u00a00.91) (Fig. \u200b(Fig.33B).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22090,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Bacterial engraftment at the strain level",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To investigate the extent of strain\u2010level changes in our study groups, we monitored SNVs identified at baseline over all available time points. Higher levels of SNVs were observed in UC FMT recipients and CD FMT recipients compared to autologous FMT recipients from a previous paper 25 (P\u00a0=\u00a00.0056 and 0.148, respectively). Moreover, SNVs were found to be higher in UC FMT recipients than in CD FMT recipients (P\u00a0=\u00a00.070; Fig. \u200bFig.44).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22567,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Bacterial engraftment at the strain level",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To investigate whether this increased variation was due to the transfer and establishment of donor microbiota, we followed methods described in a previously published paper 32, defining a set of determinant genomic positions (containing both donor\u2010 and recipient\u2010specific SNVs) and monitoring them over time (Fig. \u200b(Fig.5).5). For the credibility of SNV detection, we chose species with sufficient abundance that were consistently detected in at least one donor\u2013recipient pair. Donor\u2010specific SNVs were most highly retained 3\u00a0days after FMT (UC: 62.8\u00a0\u00b1\u00a025.3% of determinant positions across recipients, CD: 11.4\u00a0\u00b1\u00a010.3%) and were still present 1\u00a0month later (UC: 46.9%, CD: 19.99\u00a0\u00b1\u00a010.1%). This was in contrast with the much lower rates of variation observed at equivalent time points in autologous FMT recipients (9.5\u00a0\u00b1\u00a01.8%) (Fig. S1), showing that the increased variations of gut microbiota in post\u2010FMT patients could be attributed to donor strain transfer instead of temporal variability.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23559,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Bacterial engraftment at the strain level",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Furthermore, marked differences in colonization success were observed between UC and CD recipients who shared a donor (subjects CD\u20101,2,3,8, and UC\u20101,2). Three days after treatment, UC\u20101,2 retained a higher amount of donor\u2010specific SNVs compared to CD\u20101,2,3,8 (48.9%, 44.4%, 11.9%, 3.4%, 1.5%, and 9.3%, respectively). Extensive coexistence of donor and recipient strains (CD: in 44.1\u00a0\u00b1\u00a017.1% of shared species, UC: 21.3\u00a0\u00b1\u00a014.1%) was found in all other recipients and persisted for at least 1\u00a0month. This suggests that novel strains can colonize the gut without replacing the indigenous strain population of the recipient. It appeared that introduced strains were more likely to be established in a new environment if the species was already present, and a pattern of donor strains establishing alongside indigenous strains of the recipient was observed. While the phenomenon of donor strain establishment occurred in both CD and UC recipients, UC patients were more susceptible to external sources of microbiota (Fig. \u200b(Fig.66).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24587,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Bacterial engraftment at the strain level",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Donor strains showed different transferability under different disease status. Donor\u2010specific strains like Ruminococcus\u00a0torques ATCC 27756, Ordoribacter\u00a0splanchinicus DSM 20712, Klebsiella\u00a0pneumoniae 342, Intestinaibacter\u00a0bartlettii DMS 16795, Escherichia\u00a0coli O26:H11 str. 11368, and Erysipelatoclostridium\u00a0ramosum DSM 1402 only exerted strain displacement in CD patients, while donor\u2010specific strains like F.\u00a0prausnitzii SL3/3, Eubacterium\u00a0ventriosum ATCC 27560, Blautia\u00a0obeum A2\u2010162, Bifidobacterium\u00a0longum subsp.infantis ATCC 15697\u00a0=\u00a0JCM 1222\u00a0=\u00a0DSM 20088, Anaerostispes\u00a0hadrus, and Eubacterium\u00a0rectale M104/1 only exerted strain displacement in UC patients (Fig. \u200b(Fig.55).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25264,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Construction of a prediction model for gut microbiota composition of post\u2010FMT patients",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "According to what we have discovered in previous species\u2010level analysis, microbiota of post\u2010FMT recipients are a complex mixture of species from the donor, species from the recipient, and species gained from the environment. We speculated that after accounting for the gut microbiota composition of pre\u2010FMT recipients and donors, along with the corresponding clinical metadata of the recipients, we might be able to predict the post\u2010FMT gut microbiota of the recipients. We, therefore, performed random forest classification and regression analysis, which is nonlinear and can accept categorical and continuous predictors simultaneously from our data 29.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26004,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Construction of a prediction model for gut microbiota composition of post\u2010FMT patients",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To investigate whether species compositions of post\u2010FMT patients\u2014that is, the mOTUs profiles\u2014were predictable, we first examined the presence of each mOTU across post\u2010FMT recipients using the randomForest classification model and computed the average AUC (mean\u00a0=\u00a074.2%, SD\u00a0=\u00a016%). We then utilized a randomForest regression model to test the predictability of abundance of each mOTU (\u03c1\u00a0=\u00a00.478, P\u00a0<\u00a02.2e\u201016). Results indicated that the presence of most (>\u00a080%) species of post\u2010FMT recipients was highly predictable (AUC\u00a0>\u00a085%), while a small portion of species was not. The abundance of mOTUs of post\u2010FMT recipients was moderately predictable (Fig. \u200b(Fig.7A).7A). Our results were poorer than a similar study conducted by Smillie et al. 24 on 19 recurrent C.\u00a0difficile infection patients. One possible explanation for this discrepancy may be that they included other predictors in their model construction in addition to the ones we used: taxonomy, abundance, clinical metadata, sequencing depth, genome statistics, physiology, and resource utilization.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27057,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Construction of a prediction model for gut microbiota composition of post\u2010FMT patients",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The randomForest model also provided an algorithm to rank the contribution of each predictor based on variable importance score. According to our analysis, among the top 40 most important variables (see Materials and methods), the IgA score, T\u2010cell, and Th\u2010cell\u2010induced of the recipients were the top three clinical\u2010related elements. Streptococcus\u00a0anginosus, Bacteroides\u00a0plebeius, Clostridium\u00a0bolteae, Streptococcus\u00a0thermophilus, and X.\u00a0Ruminococcus gnavus were the top five species in the classification model (Fig. \u200b(Fig.7B).7B). In terms of species\u2010related factors, S.\u00a0anginosus was reported to be associated with colorectal cancer and Ruminococcus\u00a0gnavus was found to be linked with a certain type of immunological rejection.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27786,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Clinical outcomes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Out of all 15 patients, 8 out of 11 CD patients and three out of four UC patients were relieved 3\u00a0days after FMT treatment. Clinical improvement was defined as a decrease in the HBI\u00a0>\u00a03 for CD and a decrease in the Mayo score >\u00a03 for UC (Table S1). And there were no severe or obvious adverse events during endoscopic infusion, after FMT, and the short\u2010term follow\u2010ups for those 15 IBD patients.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28198,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Relationship between changes in clinical index and changes in gut microbiota",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Potential antigens in the microflora could have pro\u2010 or anti\u2010inflammatory effects, and it could be argued that by reacting to these antigens, an organism is mounting an autoimmune response; by extension, the chronic mucosal inflammation of IBD could be thought of as an autoimmune disease. Given this perspective, it would make sense to relate the change in clinical parameters to the abundance change of gut microbiota in response to FMT treatment. We established the relationships between the change in clinical indexes and in mOTUs of recipients using Spearman\u2019s correlation. We found that defecation changes were significantly positively correlated with Selenomonas\u00a0artemidis and two unclassified species, and negatively correlated with Enterococcus\u00a0casseliflavus and Prevotella\u00a0bivia. Changes in CD4+/CD8+, which have been identified to be higher in IBD patients than in normal people in previous studies, were significantly positively correlated with Streptococcus.sp. C150, Streptococcus\u00a0infantis, Streptococcus\u00a0parasanguinis, and Streptococcus\u00a0australis, and negatively correlated with changes in Streptococcus\u00a0gordonii and Lactobacillus\u00a0salivarius, a probiotic bacterium that lives in the gastrointestinal tract and has a range of therapeutic properties including suppression of pathogenic bacteria 33. Changes in TSC were significantly positively correlated with changes in B.\u00a0fragilis, which is found in most anaerobic infections and can promote the induction of type 1 T helper (TH1) cells, suppress IL\u201017 production, and improve experimental colitis 34. Additionally, we tested whether the physical characteristics of patients, such as BMI, age, and disease duration, (Table S2) could affect clinical outcomes. Changes in CD4+/CD8+, Th.cell.Induced (counted by FCM), and abdominal pain score were found to significantly negatively correlate with the disease start age of patients (P\u00a0<\u00a00.05), which could reflect disease duration. In addition, changes in CD4+/CD8+ and Th.cell.Induced were significantly negatively correlated with the age of patients (when patients received FMT treatment). Disease duration and the age of patients were also discovered to be important features in the random forest classification model. As a result, we speculated that disease duration and age could be used as stratifying factors for IBD patients in future therapy plans (Fig. \u200b(Fig.77B).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 05:44:12",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "31924307",
+                            "locations": {
+                                "length": 8,
+                                "offset": 29497
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 30659,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Consistent with previous findings, our study found reduced bacterial diversity in CD and UC patients. Strain\u2010level analysis monitored across samples revealed that 3\u00a0days after FMT treatment, a certain amount of species had noticeable strain replacements. Moreover, donor\u2010specific strains belonging to different species demonstrated differentially competitive advantages during the process of displacement, measured by their relative abundance in recipients after FMT. We also observed that same\u2010donor recipients undergo varying degrees of gut microbiome shifts, implying that the FMT treatment effect may be patient\u2010specific, and raising the possibility of patient stratification in clinical application.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31373,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "We also aimed to identify factors that could contribute to the accurate prediction of post\u2010FMT gut microbiota composition of the recipients. The moderate predictability of the classification and regression model suggests that the gut microbiota composition of post\u2010FMT recipients can be recognized not through sequencing methods but through algorithms, indicating a promising future toward FMT precision treatment. In our model, we only take the species composition of the donor and pre\u2010FMT patient, along with clinical indexes of the pre\u2010FMT patient as predictors. There is space left to enhance the resolution of prediction accuracy. Based on previous studies concerning the etiology of IBD, factors like genetic background, nonbacterial components (virome, fungi), metabolites profile, and dietary records have the potential to account for the unexplainable part of our model.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "fungi",
+                            "infons": {
+                                "identifier": "NCBI:txid4751",
+                                "type": "fungi_kingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 05:44:41",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "31924308",
+                            "locations": {
+                                "length": 5,
+                                "offset": 32133
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 32252,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Associations between immunological factors and clinical outcomes provide us with some limited but intriguing perspectives. CD4+/CD8+, TSC, and Th.cell.Induced have been found to be associated with certain bacterial species, implying that bacteria have the potential to affect the adaptive immunity of patients. However, there are many intermediate issues to be dealt with before making a cohesive interpretation of this assumption. Combining the information from functional metagenomes and metabolomics will minimize the gap between gut microbiota and immunological responses of the recipients.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 05:44:45",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "31924309",
+                            "locations": {
+                                "length": 8,
+                                "offset": 32490
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 32846,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "However, the findings of the study have to be seen in the light of some limitations. First, our samples that were collected within a certain region in China limit the generalization ability of our research findings. We could include samples from a greater geographic area or be expanded to a multicountry analysis. Second, the sample size of our cohort is relatively small, especially for UC cohort. Although some interesting findings have been found in our study, a larger sample size could allow us to compute confidence intervals besides P\u2010values in our statistical analysis and dig out more diversified species or strains which differs in abundance before and after FMT. Third, follow\u2010up time points of recipients after FMT in our study are within 1\u00a0month which is a short\u2010term scope. We could lengthen the follow\u2010ups to 6\u00a0months or 1\u00a0year to provide greater explanation regarding the stability of FMT in a mid\u2010term basis in the near future.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33791,
+                    "infons": {
+                        "section_title_1": "Conclusions",
+                        "iao_name_1": "conclusion section",
+                        "iao_id_1": "IAO:0000615"
+                    },
+                    "text": "The present attractive clinical findings are mainly based on our 1\u2010h FMT protocol for providing fresh FMT, which means the time from defecation of stool to deliver purified microbiota to patient\u2019s intestine within 1\u00a0h 35, 36. Another factor contributing to this positive clinical response, according to our experience, might be the criteria of donor screening which is based on young age population, generally cover children and college students under 24\u2010years\u2010old 37.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34270,
+                    "infons": {
+                        "section_title_1": "Conclusions",
+                        "iao_name_1": "conclusion section",
+                        "iao_id_1": "IAO:0000615"
+                    },
+                    "text": "Knowledge related to the mechanism of fecal microbiome transplantation in IBD patients is being accumulated as metagenomic and bioinformatics approaches to the microbiome and microbiome\u2013phenotype association analysis. As our study revealed, microbiota alterations can be reflected at both species level and strain level after FMT. Strain\u2010level identification makes it possible to run toward the development of probiotics. In addition, the possibility of combining microbiota elements with phenotype factors to predict the gut microbiota composition of post\u2010FMT recipients has also been demonstrated. This highlights the value of utilizing advanced machine learning methods in investigating the principles of species engraftment.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34998,
+                    "infons": {
+                        "section_title_1": "Conflict of interest",
+                        "iao_name_1": "conflict of interest section",
+                        "iao_id_1": "IAO:0000616"
+                    },
+                    "text": "The authors declare no conflict of interest.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35062,
+                    "infons": {
+                        "section_title_1": "Author contributions",
+                        "iao_name_1": "author contributions section",
+                        "iao_id_1": "IAO:0000323"
+                    },
+                    "text": "ZJ, MZ, BC, and FZ conceived the study, contributed to methodology, and wrote the manuscript; FZ and HJ revised and edited the manuscript; BC, HW, and QF acquired the data; YZ, XZ, HY, and JW provided with material support; MZ and ZJ contributed software and formally analyzed the data; MZ and ZJ wrote the original draft of the manuscript; FZ and HJ supervised the study.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35454,
+                    "infons": {
+                        "section_title_1": "Supporting information",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nFig. S1. Three days after FMT, recipients who shared a donor gained varied amount of species count.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35576,
+                    "infons": {
+                        "section_title_1": "Supporting information",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nFig. S2. Shift of species\u2019 relative abundance across all recipients before and after FMT.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35666,
+                    "infons": {
+                        "section_title_1": "Supporting information",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nTable S1. Outcomes after FMT treatment.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35706,
+                    "infons": {
+                        "section_title_1": "Supporting information",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nTable S2. Spearman correlation coefficients and P\u2010value between clinical indexes\u2019 change and diseases\u2010associated index.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35826,
+                    "infons": {
+                        "section_title_1": "Supporting information",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\u00a0",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35827,
+                    "infons": {
+                        "section_title_1": "Acknowledgements",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "The work was financially supported by grants from the Macau Technology Development Fund (102/2016/A3), the Shenzhen Municipal Government of China (JSGG20160229172752028, JCYJ20160229172757249), and the National Natural Science Foundation of China (Grant No. 81670606, 81670495).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36121,
+                    "infons": {
+                        "section_title_1": "Data accessibility",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Datasets are in a publicly accessible repository: The quality\u2010controlled sequencing reads are available in the CNGB Nucleotide Sequence Archive (CNSA: https://db.cngb.org/cnsa; accession number CNP0000134).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36345,
+                    "infons": {
+                        "title": "Genetics and pathogenesis of inflammatory bowel disease",
+                        "journal": "Nature",
+                        "volume": "474",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Khor B, Gardet A and Xavier RJ (2011) Genetics and pathogenesis of inflammatory bowel disease. Nature474, 307. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36513,
+                    "infons": {
+                        "title": "The gut microbiota in IBD",
+                        "journal": "Nat Rev Gastroenterol Hepatol",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Manichanh C, Borruel N, Casellas F and Guarner F (2012) The gut microbiota in IBD. Nat Rev Gastroenterol Hepatol9, 599. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36661,
+                    "infons": {
+                        "title": "Dynamics of the human gut microbiome in inflammatory bowel disease",
+                        "journal": "Nat Microbiol",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Halfvarson J, Brislawn CJ, Lamendella R, V\u00e1zquez\u2010Baeza Y, Walters WA, Bramer LM, D'Amato M, Bonfiglio F, McDonald D, Gonzalez Aet al (2017) Dynamics of the human gut microbiome in inflammatory bowel disease. Nat Microbiol2, 17004. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36939,
+                    "infons": {
+                        "title": "Fecal microbiota transplant\u2013a new frontier in inflammatory bowel disease",
+                        "journal": "J Inflamm Res",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Sunkara T, Rawla P, Ofosu A and Gaduputi V (2018) Fecal microbiota transplant\u2013a new frontier in inflammatory bowel disease. J Inflamm Res11, 321. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37132,
+                    "infons": {
+                        "title": "\nFaecalibacterium prausnitzii is an anti\u2010inflammatory commensal bacterium identified by gut microbiota analysis of Crohn disease patients",
+                        "journal": "Proc Natl Acad Sci USA",
+                        "volume": "105",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Sokol H, Pigneur B, Watterlot L, Lakhdari O, Berm\u00fadez\u2010Humar\u00e1n LG, Gratadoux JJ, Blugeon S, Bridonneau C, Furet JP, Corthier Get al (2008) Faecalibacterium prausnitzii is an anti\u2010inflammatory commensal bacterium identified by gut microbiota analysis of Crohn disease patients. Proc Natl Acad Sci USA105, 16731\u201316736. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Faecalibacterium prausnitzii",
+                            "infons": {
+                                "identifier": "NCBI:txid853",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 05:45:39",
+                                "parent_taxonomic_id": "NCBI:txid216851"
+                            },
+                            "id": "31924310",
+                            "locations": {
+                                "length": 28,
+                                "offset": 37273
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 37495,
+                    "infons": {
+                        "title": "An immunomodulatory molecule of symbiotic bacteria directs maturation of the host immune system",
+                        "journal": "Cell",
+                        "volume": "122",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Mazmanian SK, Liu CH, Tzianabos AO and Kasper DL (2005) An immunomodulatory molecule of symbiotic bacteria directs maturation of the host immune system. Cell122, 107\u2013118. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 05:45:43",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "31924311",
+                            "locations": {
+                                "length": 8,
+                                "offset": 37596
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 37694,
+                    "infons": {
+                        "title": "\nFaecalibacterium prausnitzii upregulates regulatory T cells and anti\u2010inflammatory cytokines in treating TNBS\u2010induced colitis",
+                        "journal": "J Crohns Colitis",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Qiu X, Zhang M, Yang X, Hong N and Yu C (2013) Faecalibacterium prausnitzii upregulates regulatory T cells and anti\u2010inflammatory cytokines in treating TNBS\u2010induced colitis. J Crohns Colitis7, e558\u2013e568. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Faecalibacterium prausnitzii",
+                            "infons": {
+                                "identifier": "NCBI:txid853",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 05:45:45",
+                                "parent_taxonomic_id": "NCBI:txid216851"
+                            },
+                            "id": "31924312",
+                            "locations": {
+                                "length": 28,
+                                "offset": 37744
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 37925,
+                    "infons": {
+                        "title": "Reversal of inflammatory bowel disease (IBD) with recurrent faecal microbiota transplants (FMT)",
+                        "journal": "Am J Gastroenterol",
+                        "volume": "106",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Borody T, Torres M, Campbell J, Leis S and Nowak A (2011) Reversal of inflammatory bowel disease (IBD) with recurrent faecal microbiota transplants (FMT). Am J Gastroenterol106, S366. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38128,
+                    "infons": {
+                        "title": "Fecal microbiota transplantation for severe enterocolonic fistulizing Crohn\u2019s disease",
+                        "journal": "World J Gastroenterol",
+                        "volume": "19",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Zhang FM, Wang HG, Wang M, Cui BT, Fan ZN and Ji GZ (2013) Fecal microbiota transplantation for severe enterocolonic fistulizing Crohn\u2019s disease. World J Gastroenterol19, 7213. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38352,
+                    "infons": {
+                        "title": "Fecal microbiota transplant for Crohn disease: a study evaluating safety, efficacy, and microbiome profile",
+                        "journal": "United European Gastroenterol J",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Gutin L, Piceno Y, Fadrosh D, Lynch K, Zydek M, Kassam Z, LaMere B, Terdiman J, Ma A, Somsouk Met al (2019). Fecal microbiota transplant for Crohn disease: a study evaluating safety, efficacy, and microbiome profile. United European Gastroenterol J7, 807\u2013814. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38660,
+                    "infons": {
+                        "title": "Multidonor intensive faecal microbiota transplantation for active ulcerative colitis: a randomised placebo\u2010controlled trial",
+                        "journal": "Lancet",
+                        "volume": "389",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Paramsothy S, Kamm MA, Kaakoush NO, Walsh AJ, van den Bogaerde J, Samuel D, Leong RWL, Connor S, Ng W, Paramsothy Ret al (2017) Multidonor intensive faecal microbiota transplantation for active ulcerative colitis: a randomised placebo\u2010controlled trial. Lancet389, 1218\u20131228. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38964,
+                    "infons": {
+                        "title": "Fecal microbiota transplantation induces remission in patients with active ulcerative colitis in a randomized controlled trial",
+                        "journal": "Gastroenterology",
+                        "volume": "149",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Moayyedi P, Surette MG, Kim PT, Libertucci J, Wolfe M, Onischi C, Armstrong D, Marshall JK, Kassam Z, Reinisch Wet al (2015) Fecal microbiota transplantation induces remission in patients with active ulcerative colitis in a randomized controlled trial. Gastroenterology149, 102\u2013109. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39276,
+                    "infons": {
+                        "title": "Findings from a randomized controlled trial of fecal transplantation for patients with ulcerative colitis",
+                        "journal": "Gastroenterology",
+                        "volume": "149",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Rossen NG, Fuentes S, van der Spek MJ, Tijssen JG, Hartman JH, Duflou A, L\u00f6wenberg M, van den Brink GR, Mathus\u2010Vliegen EM, de Vos WMet al (2015) Findings from a randomized controlled trial of fecal transplantation for patients with ulcerative colitis. Gastroenterology149, 110\u2013118. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39587,
+                    "infons": {
+                        "title": "Fecal microbiota transplantation as therapy for inflammatory bowel disease: a systematic review and meta\u2010analysis",
+                        "journal": "J Crohns Colitis",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Colman RJ and Rubin DT (2014) Fecal microbiota transplantation as therapy for inflammatory bowel disease: a systematic review and meta\u2010analysis. J Crohns Colitis8, 1569\u20131581. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39810,
+                    "infons": {
+                        "title": "Temporal bacterial community dynamics vary among ulcerative colitis patients after fecal microbiota transplantation",
+                        "journal": "Am J Gastroenterol",
+                        "volume": "108",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Angelberger S, Reinisch W, Makristathis A, Lichtenberger C, Dejaco C, Papay P, Novacek G, Trauner M, Loy A and Berry D (2013) Temporal bacterial community dynamics vary among ulcerative colitis patients after fecal microbiota transplantation. Am J Gastroenterol108, 1620. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40111,
+                    "infons": {
+                        "title": "A patient with severe Crohn's colitis responds to faecal Microbiota transplantation",
+                        "journal": "J Crohns Colitis",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Gordon H and Harbord M (2014) A patient with severe Crohn's colitis responds to faecal Microbiota transplantation. J Crohns Colitis8, 256\u2013257. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40283,
+                    "infons": {
+                        "title": "Fecal microbiota transplantation through mid\u2010gut for refractory Crohn's disease: safety, feasibility, and efficacy trial results",
+                        "journal": "J Gastroenterol Hepatol",
+                        "volume": "30",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Cui B, Feng Q, Wang H, Wang M, Peng Z, Li P, Huang G, Liu Z, Wu P, Fan Zet al (2015) Fecal microbiota transplantation through mid\u2010gut for refractory Crohn's disease: safety, feasibility, and efficacy trial results. J Gastroenterol Hepatol30, 51\u201358. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40561,
+                    "infons": {
+                        "title": "Fecal microbial transplant effect on clinical outcomes and fecal microbiome in active Crohn's disease",
+                        "journal": "Inflamm Bowel Dis",
+                        "volume": "21",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Suskind DL, Brittnacher MJ, Wahbeh G, Shaffer ML, Hayden HS, Qin X, Singh N, Damman CJ, Hager KR, Nielson Het al (2015) Fecal microbial transplant effect on clinical outcomes and fecal microbiome in active Crohn's disease. Inflamm Bowel Dis21, 556\u2013563. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40862,
+                    "infons": {
+                        "title": "Molecular\u2010phylogenetic characterization of microbial community imbalances in human inflammatory bowel diseases",
+                        "journal": "Proc Natl Acad Sci USA",
+                        "volume": "104",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Frank DN, Amand ALS, Feldman RA, Boedeker EC, Harpaz N and Pace NR (2007) Molecular\u2010phylogenetic characterization of microbial community imbalances in human inflammatory bowel diseases. Proc Natl Acad Sci USA104, 13780\u201313785. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41136,
+                    "infons": {
+                        "title": "Microbiota of de\u2010novo pediatric IBD: increased Faecalibacterium prausnitzii and reduced bacterial diversity in Crohn's but not in ulcerative colitis",
+                        "journal": "Am J Gastroenterol",
+                        "volume": "107",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Hansen R, Russell RK, Reiff C, Louis P, McIntosh F, Berry SH, Mukhopadhya I, Bisset WM, Barclay AR, Bishop Jet al (2012) Microbiota of de\u2010novo pediatric IBD: increased Faecalibacterium prausnitzii and reduced bacterial diversity in Crohn's but not in ulcerative colitis. Am J Gastroenterol107, 1913. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Faecalibacterium prausnitzii",
+                            "infons": {
+                                "identifier": "NCBI:txid853",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 05:46:28",
+                                "parent_taxonomic_id": "NCBI:txid216851"
+                            },
+                            "id": "31924313",
+                            "locations": {
+                                "length": 28,
+                                "offset": 41308
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 41465,
+                    "infons": {
+                        "title": "Emerging molecular insights into the interaction between probiotics and the host intestinal mucosa",
+                        "journal": "Nat Rev Microbiol",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Bron PA, Van Baarlen P and Kleerebezem M (2012) Emerging molecular insights into the interaction between probiotics and the host intestinal mucosa. Nat Rev Microbiol10, 66. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41667,
+                    "infons": {
+                        "title": "Modulating the innate immune response by combinatorial engineering of endotoxin",
+                        "journal": "Proc Natl Acad Sci USA",
+                        "volume": "110",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Needham BD, Carroll SM, Giles DK, Georgiou G, Whiteley M and Trent MS (2013) Modulating the innate immune response by combinatorial engineering of endotoxin. Proc Natl Acad Sci USA110, 1464\u20131469. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41911,
+                    "infons": {
+                        "title": "The microbial pharmacists within us: a metagenomic view of xenobiotic metabolism",
+                        "journal": "Nat Rev Microbiol",
+                        "volume": "14",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Spanogiannopoulos P, Bess EN, Carmody RN and Turnbaugh PJ (2016) The microbial pharmacists within us: a metagenomic view of xenobiotic metabolism. Nat Rev Microbiol14, 273. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42132,
+                    "infons": {
+                        "title": "Strain tracking reveals the determinants of bacterial engraftment in the human gut following fecal microbiota transplantation",
+                        "journal": "Cell Host Microbe",
+                        "volume": "23",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Smillie CS, Sauk J, Gevers D, Friedman J, Sung J, Youngster I, Hohmann EL, Staley C, Khoruts A, Sadowsky MJet al (2018) Strain tracking reveals the determinants of bacterial engraftment in the human gut following fecal microbiota transplantation. Cell Host Microbe23, 229\u2013240. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42438,
+                    "infons": {
+                        "title": "Transfer of intestinal microbiota from lean donors increases insulin sensitivity in individuals with metabolic syndrome",
+                        "journal": "Gastroenterology",
+                        "volume": "143",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Vrieze A, Van Nood E, Holleman F, Saloj\u00e4rvi J, Kootte RS, Bartelsman JF, Dallinga\u2010Thie GM, Ackermans MT, Serlie MJ, Oozeer Ret al (2012) Transfer of intestinal microbiota from lean donors increases insulin sensitivity in individuals with metabolic syndrome. Gastroenterology143, 913\u2013916. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42755,
+                    "infons": {
+                        "title": "Assessment of the cPAS\u2010based BGISEQ\u2010500 platform for metagenomic sequencing",
+                        "journal": "Gigascience",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Fang C, Zhong H, Lin Y, Chen B, Han M, Ren H, Lu H, Luber JM, Xia M, Li Wet al (2017). Assessment of the cPAS\u2010based BGISEQ\u2010500 platform for metagenomic sequencing. Gigascience7, gix133. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42989,
+                    "infons": {
+                        "title": "Metagenomic species profiling using universal phylogenetic marker genes",
+                        "journal": "Nat Methods",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Sunagawa S, Mende DR, Zeller G, Izquierdo\u2010Carrasco F, Berger SA, Kultima JR, Coelho LP, Arumugam M, Tap J, Nielsen HBet al (2013) Metagenomic species profiling using universal phylogenetic marker genes. Nat Methods10, 1196. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43242,
+                    "infons": {
+                        "title": "metaSNV: a tool for metagenomic strain level analysis",
+                        "journal": "PLoS ONE",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Costea PI, Munch R, Coelho LP, Paoli L, Sunagawa S and Bork P (2017) metaSNV: a tool for metagenomic strain level analysis. PLoS ONE12, e0182392. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43436,
+                    "infons": {
+                        "title": "Classification and regression by randomForest",
+                        "journal": "R News",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Liaw A and Wiener M (2002) Classification and regression by randomForest. R News2, 18\u201322. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43546,
+                    "infons": {
+                        "title": "Cytoscape: a software environment for integrated models of biomolecular interaction networks",
+                        "journal": "Genome Res",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Shannon P, Markiel A, Ozier O, Baliga NS, Wang JT, Ramage D, Amin N, Schwikowski B and Ideker T (2003) Cytoscape: a software environment for integrated models of biomolecular interaction networks. Genome Res13, 2498\u20132504. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43816,
+                    "infons": {
+                        "title": "Lower level of bacteroides in the gut microbiota is associated with inflammatory bowel disease: a meta\u2010analysis",
+                        "journal": "BioMed Res Int",
+                        "volume": "2016",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Zhou Y and Zhi F (2016). Lower level of bacteroides in the gut microbiota is associated with inflammatory bowel disease: a meta\u2010analysis. BioMed Res Int, 2016, 5828959. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 05:46:59",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "31924314",
+                            "locations": {
+                                "length": 11,
+                                "offset": 43860
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 44033,
+                    "infons": {
+                        "title": "Durable coexistence of donor and recipient strains after fecal microbiota transplantation",
+                        "journal": "Science",
+                        "volume": "352",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Li SS, Zhu A, Benes V, Costea PI, Hercog R, Hildebrand F, Huerta\u2010Cepas J, Nieuwdorp M, Saloj\u00e4rvi J, Voigt AYet al (2016) Durable coexistence of donor and recipient strains after fecal microbiota transplantation. Science352, 586\u2013589. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44295,
+                    "infons": {
+                        "title": "Probiotic properties of Lactobacillus salivarius and closely related Lactobacillus species",
+                        "journal": "Future Microbiol",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Neville BA and O\u2019Toole PW (2010) Probiotic properties of Lactobacillus salivarius and closely related Lactobacillus species. Future Microbiol5, 759\u2013774. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Lactobacillus salivarius",
+                            "infons": {
+                                "identifier": "NCBI:txid1624",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 05:47:05",
+                                "parent_taxonomic_id": "NCBI:txid2767887"
+                            },
+                            "id": "31924315",
+                            "locations": {
+                                "length": 24,
+                                "offset": 44356
+                            }
+                        },
+                        {
+                            "text": "Lactobacillus",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 05:47:05",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "31924316",
+                            "locations": {
+                                "length": 13,
+                                "offset": 44401
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 44477,
+                    "infons": {
+                        "title": "A novel strain of Bacteroides fragilis enhances phagocytosis and polarises M1 macrophages",
+                        "journal": "Sci Rep",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Deng H, Li Z, Tan Y, Guo Z, Liu Y, Wang Y, Yuan Y, Yang R, Bi Y, Bai Yet al (2016) A novel strain of Bacteroides fragilis enhances phagocytosis and polarises M1 macrophages. Sci Rep6, 29401. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteroides fragilis",
+                            "infons": {
+                                "identifier": "NCBI:txid817",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 05:47:08",
+                                "parent_taxonomic_id": "NCBI:txid816"
+                            },
+                            "id": "31924317",
+                            "locations": {
+                                "length": 20,
+                                "offset": 44582
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 44716,
+                    "infons": {
+                        "title": "The safety of fecal microbiota transplantation for Crohn\u2019s disease: findings from a long\u2010term study",
+                        "journal": "Adv Ther",
+                        "volume": "35",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Wang H, Cui B, Li Q, Ding X, Li P, Zhang T, Yang X, Ji G and Zhang F (2018) The safety of fecal microbiota transplantation for Crohn\u2019s disease: findings from a long\u2010term study. Adv Ther35, 1935\u20131944. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44964,
+                    "infons": {
+                        "title": "Long\u2010term safety and efficacy of fecal microbiota transplant in active ulcerative colitis",
+                        "journal": "Drug Saf",
+                        "volume": "42",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "36. Ding X, Li Q, Li P, Zhang T, Cui B, Ji G, Lu X and Zhang F (2019) Long\u2010term safety and efficacy of fecal microbiota transplant in active ulcerative colitis. Drug Saf42, 869\u2013880. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45171,
+                    "infons": {
+                        "title": "Evolution of fecal microbiota transplantation in methodology and ethical issues",
+                        "journal": "Curr Opin Pharmacol",
+                        "volume": "49",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "37. Zhang F, Zhang T, Zhu H and Borody TJ (2019) Evolution of fecal microbiota transplantation in methodology and ethical issues. Curr Opin Pharmacol49, 11\u201316. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

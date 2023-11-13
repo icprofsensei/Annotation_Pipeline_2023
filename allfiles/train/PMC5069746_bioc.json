@@ -1,0 +1,1446 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC5069746",
+            "inputfile": "../microbiome_corpus_HTML\\PMC5069746.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "From Sample to Multi-Omics Conclusions in under 48 Hours",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56,
+                    "infons": {
+                        "section_title_1": "keywords",
+                        "iao_name_1": "keywords section",
+                        "iao_id_1": "IAO:0000630"
+                    },
+                    "text": "16S rRNA, microbiome, fermented food, metabolome, molecular networking, rapid response",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 150,
+                    "infons": {
+                        "section_title_1": "ABSTRACT",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Multi-omics methods have greatly advanced our understanding of the biological organism and its microbial associates. However, they are not routinely used in clinical or industrial applications, due to the length of time required to generate and analyze omics data. Here, we applied a novel integrated omics pipeline for the analysis of human and environmental samples in under 48\u00a0h. Human subjects that ferment their own foods provided swab samples from skin, feces, oral cavity, fermented foods, and household surfaces to assess the impact of home food fermentation on their microbial and chemical ecology. These samples were analyzed with 16S rRNA gene sequencing, inferred gene function profiles, and liquid chromatography-tandem mass spectrometry (LC-MS/MS) metabolomics through the Qiita, PICRUSt, and GNPS pipelines, respectively. The human sample microbiomes clustered with the corresponding sample types in the American Gut Project (http://www.americangut.org), and the fermented food samples produced a separate cluster. The microbial communities of the household surfaces were primarily sourced from the fermented foods, and their consumption was associated with increased gut microbial diversity. Untargeted metabolomics revealed that human skin and fermented food samples had separate chemical ecologies and that stool was more similar to fermented foods than to other sample types. Metabolites from the fermented foods, including plant products such as procyanidin and pheophytin, were present in the skin and stool samples of the individuals consuming the foods. Some food metabolites were modified during digestion, and others were detected in stool intact. This study represents a first-of-its-kind analysis of multi-omics data that achieved time intervals matching those of classic microbiological culturing.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1983,
+                    "infons": {
+                        "section_title_1": "ABSTRACT",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "IMPORTANCE Polymicrobial infections are difficult to diagnose due to the challenge in comprehensively cultivating the microbes present. Omics methods, such as 16S rRNA sequencing, metagenomics, and metabolomics, can provide a more complete picture of a microbial community and its metabolite production, without the biases and selectivity of microbial culture. However, these advanced methods have not been applied to clinical or industrial microbiology or other areas where complex microbial dysbioses require immediate intervention. The reason for this is the length of time required to generate and analyze omics data. Here, we describe the development and application of a pipeline for multi-omics data analysis in time frames matching those of the culture-based approaches often used for these applications. This study applied multi-omics methods effectively in clinically relevant time frames and sets a precedent toward their implementation in clinical medicine and industrial microbiology.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2980,
+                    "infons": {
+                        "section_title_1": "INTRODUCTION",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The omics field is expanding rapidly, driven by the plummeting cost of DNA sequencing, the widespread availability of DNA sequencers and mass spectrometers, and the seemingly unlimited breadth of its applications. However, generating, processing, analyzing, and interpreting the data typically takes months and requires substantial technical expertise in large multidisciplinary teams, in part, due to the rapidly evolving nature of the component techniques. The speed of mass spectrometry and nucleic acid sequencing (the tools required to generate omics data) has increased rapidly in the last decade, and they have separately been applied to clinical diagnostics in a targeted fashion. For example, high-throughput sequencing for the detection and typing of single pathogens in complex samples has achieved turnaround times of hours to days (1,\u20135), and mass spectrometry analysis of metabolites has been performed in the clinic and laboratory in essentially real time (6, 7). However, the integration of multi-omics technologies and their application to the microbiome field have not yet achieved time frames compatible with clinical needs in human health, industrial microbiology, or routine laboratory experiments.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4211,
+                    "infons": {
+                        "section_title_1": "INTRODUCTION",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Multi-omics studies of the human microbiome can have enormous impact, providing a more comprehensive picture of a microbial community than a single omics approach on its own (8, 9). These studies have led to an understanding of how microbial communities in our bodies produce metabolites that affect our health and transform the drugs we consume (10,\u201313). One of the first integrated omics analysis related to the human microbiome was by Li et al. (14), who revealed an association between the gut microbiota and host metabolites in a cohort of Chinese subjects by using clone library sequencing and nuclear magnetic resonance. This, and more recent multi-omics studies (15, 16), had multiyear gestation times. Today, when considering the time between receipt of samples with informed consent and statistical conclusions from integrated omics data, these studies still require months to years to complete.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5116,
+                    "infons": {
+                        "section_title_1": "INTRODUCTION",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In order to develop rapid multi-omics pipelines with broad applicability, they must first be tested using subjects and samples that are strongly influenced by their exposure to microbes and microbial chemical products. The subjects in this study are tightly linked to their microbial partners through their active involvement with fermented foods. This mutualistic relationship is believed to have existed since the Paleolithic era (17) and continues around the globe today. Modern human evolution is intertwined with the influence of microbial fermentation processes in the foods we eat and within our own bodies. Depending on the type of food and conditions used during fermentation, different types of microbial communities form, composed of various bacterial and fungal species (18), and the metabolic products of these communities can impact human health (19). Previous studies found that species originating from microbially diverse fermented foods, such as cheese and salami, are able to colonize the gastrointestinal tract (19). Furthermore, with the significant effects of antibiotics and a processed food-based diet on our microbiomes (13, 20, 21), there is an interest in the health benefits of fermented foods as alternatives. Here, we present the results from a simple, robust multi-omics platform integrating analyses of human, environmental, and animal samples in the clinically relevant time frame of less than 48\u00a0h. This pipeline is now possible because of rapid advances in the development of software for the analysis and integration of omics data and standardized protocols that allow streamlined insertion of matched samples into multi-omics pipelines. We demonstrate how individuals commonly exposed to fermented foods show influences of these microbes on and in their bodies.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6914,
+                    "infons": {
+                        "section_title_1": "RESULTS AND DISCUSSION",
+                        "section_title_2": "General description of the 48-h analysis and multi-omics pipeline. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Samples were collected by seven volunteers (two families and two individuals, designated households 1 to 4) who regularly prepare and eat fermented foods (specifics of the fermented foods are presented in Table\u00a0S1 in the supplemental material) and who were recruited to the American Gut Project (AGP; http://www.americangut.org) via word-of-mouth through the Second Annual San Diego Fermentation Festival in San Diego, CA. The AGP is an IRB-approved citizen science project comprising more than 7,000 samples from more than 6,500 individuals. Consenting participants received an AGP sampling kit after they gave consent and took a survey online, and the data were stored in a secure database. The deidentified metadata were then immediately downloaded into a file formatted for use in Qiita (https://qiita.ucsd.edu/). Due to the infrastructure surrounding the process, participant consent and sample-associated metadata were obtained before the samples arrived in the laboratory, facilitating immediate preparation for sample processing upon arrival. Notably, the metadata can be used for both 16S rRNA gene sequencing and metabolomics analyses, further streamlining the multi-omics approach. Samples were collected by cotton swab and subjected to DNA and metabolite extraction to describe the composition and activity of the corresponding microbial communities. Samples were subjected to a streamlined, high-throughput process involving preparation for 16S rRNA gene (variable region 4 [V4]) sequencing via the Earth Microbiome Project protocols (22, 23) and for liquid chromatography-tandem mass spectrometry (LC-MS/MS) (24). The first description of both the microbial communities and molecules, including alpha and beta diversity, and specific effects of fermented foods on the microbial and chemical ecology of the subjects, occurred within 48\u00a0h after samples were delivered to the laboratory (Fig.\u00a01). Computational resources, including the Barnacle cluster available through the UCSD center for microbiome innovation connected to the Comet supercomputer located at the San Diego Supercomputer Center, allowed >50 central processing unit (CPU) h of processing in <11\u00a0h of wall time (note that some of the component steps are not parallelized), giving results back to the researchers fast enough to interpret the data in a timely manner.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9345,
+                    "infons": {
+                        "section_title_1": "RESULTS AND DISCUSSION",
+                        "section_title_2": "Table\u00a0S1\u00a0",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Specific fermented foods produced and consumed in the households. Download Table\u00a0S1, DOCX file, 0.04 MB.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9458,
+                    "infons": {
+                        "section_title_1": "RESULTS AND DISCUSSION",
+                        "section_title_2": "Table\u00a0S1\u00a0",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "There are four main components that enabled the development of this rapid multi-omics pipeline and its implementation in less than 48 h (Fig.\u00a01). First, subjects easily and efficiently enrolled themselves as part of an already existing, IRB-approved project (the AGP), enabling the use of on-the-spot informed consent and standardized metadata collection. Second, the protocols used to collect metadata and process samples have been extensively benchmarked and standardized (http://www.earthmicrobiome.org/emp-standard-protocols/), allowing rapid assimilation with existing datasets and facilitating meaningful comparisons with other cohorts. Third, community analysis infrastructures, including Qiita, the microbial analysis infrastructure that houses microbiome analysis tools, and GNPS, a crowdsourced analysis infrastructure and public metabolomics knowledge repository (http://gnps.ucsd.edu), allowed rapid data processing and interpretation. And fourth, the servers that host Qiita and GNPS are linked, enabling normalization, processing, and cross-platform analysis of multi-omics data in an integrated fashion. Both these analysis platforms enable rapid comparisons to existing data in the public domain and are publicly available, facilitating data upload and analysis from any sequencer or tandem mass spectrometer, so long as the file formats are compatible. Linking the two platforms limits the need to move gigabytes or terabytes of data, making local analysis on one\u2019s own computer and integration with existing knowledge possible, rather than needing to download public data and new data to a personal computer first (e.g., the AGP data repository contains over 216 million reads). Tools available through this pipeline and utilized in this study include operational taxonomic unit (OTU) clustering of reads and generation of tables for multivariate statistical analysis of microbiome data, including alpha diversity, principle component analysis (PCoA) visualization through EMPeror, cluster significance testing with analysis of similarity (ANOSIM), and others. This pipeline also allows immediate integration of data with the data in the AGP repository to visualize the relationships of samples with a large reference data set, which can provide context to the microbiome data generated. Metabolomics tools include library searching of the GNPS libraries (the largest currently available in the mass spectrometry field) (25), molecular network visualization to allow metabolite tracking, and metabolome abundance matrix generation to allow similar multivariate statistical analysis, including PCoA and EMPeror-based visualization of sample relationships.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12130,
+                    "infons": {
+                        "section_title_1": "RESULTS AND DISCUSSION",
+                        "section_title_2": "Microbiome relationships. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Bacterial marker gene sequencing revealed rich microbial communities in most fermented food samples as judged by Faith\u2019s phylogenetic diversity (PD) metric (26), a biodiversity measure incorporating phylogenetic differences between the taxa present in a sample. The three most diverse samples were pickles, beet kvass, and port wine (PD values of 23.0, 16.6, and 16.2, respectively), while dairy kefir and \u201csymbiotic colony of bacteria and yeast\u201d (SCOBY) samples were the least diverse (average PD values of 2.21 and 1.91, respectively). The average PD of all fermented foods in the data set was 9.89, compared to 21.6, 11.9, and 18.5 for human skin, oral, and fecal samples, respectively. Surface microbiomes were also rich, with an average PD of 11.5. The unweighted UniFrac matrix (27) visualized via principle component analysis (PCoA) using EMPeror clustered the samples closely by type (ANOSIM R statistic = 0.477, P = 0.001; see Fig.\u00a0S1 in the supplemental material), and the human sample types matched their corresponding AGP sample types (Fig.\u00a02a). While mouth, stool, and right and left hand samples each formed relatively tight clusters, as expected (28), fermented food and indoor surface samples formed a looser cluster together, largely distinct from human sample clusters, although a few food and surface samples clustered near hand and fecal samples (Fig.\u00a02a). Combining these samples with a subset of the AGP cohort revealed that there was an increase in gut bacterial diversity that correlated with an increase in fermented food consumption (R2 = 0.034, P = 0.02373) (Fig.\u00a02b). Nonparametric Kruskal-Wallis tests corrected for multiple comparisons (false discovery rate [FDR]) identified 219 OTUs differing significantly in relative abundance across sample types. No OTU was significantly higher in fermented food samples than in any other sample type, though several were higher (FDR corrected P < 0.05) in stool (including OTUs classified as Blautia, Varibaculum, Bacteroides, Peptoniphilus, and Corynebacterium), hand (Corynebacterium, Staphylococcus, Neisseria, Haemophilus, and Rothia), and mouth (Prevotella, Neisseria, Lautropia, and Leptotrichia) samples. SourceTracker (29) analysis revealed that the microbial communities of items on or in which fermented foods were prepared (i.e., from surfaces, such as cutting boards, to containers, such as fermenters) were largely sourced from the foods and specific to the location in which the foods were prepared. Except for one household, where small percentages (9 to 30%) of hand microbial communities were sourced from food, no obvious patterns linked microbial source communities to human skin, mouth, or fecal microbiomes (Fig.\u00a02c).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:21:40",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "27323490",
+                            "locations": {
+                                "length": 8,
+                                "offset": 12557
+                            }
+                        },
+                        {
+                            "text": "Blautia",
+                            "infons": {
+                                "identifier": "NCBI:txid572511",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:21:58",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "27323491",
+                            "locations": {
+                                "length": 7,
+                                "offset": 14092
+                            }
+                        },
+                        {
+                            "text": "Varibaculum",
+                            "infons": {
+                                "identifier": "NCBI:txid184869",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:21:58",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "27323492",
+                            "locations": {
+                                "length": 11,
+                                "offset": 14101
+                            }
+                        },
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:21:58",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "27323493",
+                            "locations": {
+                                "length": 11,
+                                "offset": 14114
+                            }
+                        },
+                        {
+                            "text": "Peptoniphilus",
+                            "infons": {
+                                "identifier": "NCBI:txid162289",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:21:58",
+                                "parent_taxonomic_id": "NCBI:txid1570339"
+                            },
+                            "id": "27323494",
+                            "locations": {
+                                "length": 13,
+                                "offset": 14127
+                            }
+                        },
+                        {
+                            "text": "Corynebacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1716",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:21:58",
+                                "parent_taxonomic_id": "NCBI:txid1653"
+                            },
+                            "id": "27323495",
+                            "locations": {
+                                "length": 15,
+                                "offset": 14146
+                            }
+                        },
+                        {
+                            "text": "Corynebacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1716",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:21:59",
+                                "parent_taxonomic_id": "NCBI:txid1653"
+                            },
+                            "id": "27323496",
+                            "locations": {
+                                "length": 15,
+                                "offset": 14169
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:21:59",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "27323497",
+                            "locations": {
+                                "length": 14,
+                                "offset": 14187
+                            }
+                        },
+                        {
+                            "text": "Neisseria",
+                            "infons": {
+                                "identifier": "NCBI:txid482",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:21:59",
+                                "parent_taxonomic_id": "NCBI:txid481"
+                            },
+                            "id": "27323498",
+                            "locations": {
+                                "length": 9,
+                                "offset": 14203
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:21:59",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "27323499",
+                            "locations": {
+                                "length": 11,
+                                "offset": 14214
+                            }
+                        },
+                        {
+                            "text": "Rothia",
+                            "infons": {
+                                "identifier": "NCBI:txid32207",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:21:59",
+                                "parent_taxonomic_id": "NCBI:txid1268"
+                            },
+                            "id": "27323500",
+                            "locations": {
+                                "length": 6,
+                                "offset": 14231
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:21:59",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "27323501",
+                            "locations": {
+                                "length": 10,
+                                "offset": 14250
+                            }
+                        },
+                        {
+                            "text": "Neisseria",
+                            "infons": {
+                                "identifier": "NCBI:txid482",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:21:59",
+                                "parent_taxonomic_id": "NCBI:txid481"
+                            },
+                            "id": "27323502",
+                            "locations": {
+                                "length": 9,
+                                "offset": 14263
+                            }
+                        },
+                        {
+                            "text": "Lautropia",
+                            "infons": {
+                                "identifier": "NCBI:txid47670",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:21:59",
+                                "parent_taxonomic_id": "NCBI:txid119060"
+                            },
+                            "id": "27323503",
+                            "locations": {
+                                "length": 9,
+                                "offset": 14274
+                            }
+                        },
+                        {
+                            "text": "Leptotrichia",
+                            "infons": {
+                                "identifier": "NCBI:txid32067",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:21:59",
+                                "parent_taxonomic_id": "NCBI:txid1129771"
+                            },
+                            "id": "27323504",
+                            "locations": {
+                                "length": 12,
+                                "offset": 14289
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 14864,
+                    "infons": {
+                        "section_title_1": "RESULTS AND DISCUSSION",
+                        "section_title_2": "Figure\u00a0S1\u00a0",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "PCoA plot of 16S rRNA marker gene sequencing data from food, human, and environmental samples collected in this study. Download Figure\u00a0S1, PDF file, 0.1 MB.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15030,
+                    "infons": {
+                        "section_title_1": "RESULTS AND DISCUSSION",
+                        "section_title_2": "Figure\u00a0S1\u00a0",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "PICRUSt metagenome predictions revealed a slightly dissimilar clustering pattern to that observed with 16S marker gene sequencing data based on sample type when the Bray-Curtis distance metric was applied to the BIOM table containing KEGG pathways. While fermented food and surface samples still formed a loose cluster, with body types more tightly clustered, oral samples clustered close to fecal samples based on KEGG pathways but not 16S marker gene data (Fig.\u00a02d). Nonparametric Kruskal-Wallis tests corrected for multiple comparisons (FDR) identified 119 KEGG pathways differing significantly across sample types. KEGG pathways that were significantly higher (FDR-corrected P value of <0.05) in fermented foods than on surfaces included aminosugar and nucleotide sugar metabolism, starch and sucrose metabolism, galactose metabolism, RNA transport, glycolysis/gluconeogenesis, and methane metabolism; KEGG pathways that were significantly higher on surface samples than in food samples included bacterial secretion systems, phenylalanine metabolism, fluorobenzoate degradation, aminobenzoate degradation, glycan biosynthesis and metabolism, tryptophan metabolism, and caprolactam degradation. Several KEGG pathways were also differentially abundant between fermented foods and stool or mouth samples. For example, aminobenzoate degradation, retinol metabolism, naphthalene degradation, ethylbenzene degradation, tyrosine metabolism, and butanoate metabolism pathways were all significantly higher (FDR-corrected P value of <0.05) in fermented food samples than in stool samples, while glycosaminoglycan degradation, other glycan degradation, methane metabolism, transcription machinery, sporulation, sphingolipid metabolism, and sporulation pathways were significantly higher in stool samples than in fermented food samples. In mouth samples, n-glycan biosynthesis, translation factors and proteins, amino acid-related proteins, and lipopolysaccharide biosynthesis and biosynthesis proteins were significantly (FDR-corrected P value of <0.05) higher than in fermented food samples. Conversely, chloroalkane degradation, ethylbenzene degradation, aminobenzoate degradation, tyrosine metabolism, bisphenol degradation, naphthalene degradation, benzoate degradation, xylene degradation, butanoate metabolism, and several other pathways were significantly higher in fermented food samples than in mouth samples.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17442,
+                    "infons": {
+                        "section_title_1": "RESULTS AND DISCUSSION",
+                        "section_title_2": "Metabolome relationships. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "PCoA of Bray-Curtis distances for the presence/absence of metabolites by sample showed that skin and mouth samples were distinct from other sample types and that fermented food samples clustered with biofilm samples from their containers (Fig.\u00a03). Stool samples, however, were mixed with other sample types, unlike the tight clustering seen using the 16S rRNA sequencing data (Fig.\u00a03; see also Fig.\u00a0S1 in the supplemental material). These clustering relationships showed that the chemistry of fermented foods and their associated human and environmental samples was more variable than the microbial profiles among sample types, likely due to the dynamic nature of metabolite production from microbial communities and the direct input of the foods themselves in stool chemistry.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18245,
+                    "infons": {
+                        "section_title_1": "RESULTS AND DISCUSSION",
+                        "section_title_2": "Metabolome relationships. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Of the 7,425 unique MS/MS spectra detected, 100 were matched to reference libraries using GNPS molecular networking (30, 31). This 1.3% match rate is similar to the 1.8% match rates for all metabolomics data in GNPS (32). Most spectral matches were plant natural products associated with the fermented foods, including flavonoids, lipids, and plant sterols. Other, non-plant-related molecules were observed, including cholesterol and its derivatives on skin and avobenzone, an active ingredient in sunscreen. Gingerol, the spicy flavorant in the ginger root (Zingiber officinale), was found in samples of fermented foods and the indoor surfaces of two households. Similarly, the spicy pepper plant (Piper nigrum) alkaloid piperine was found in fermented food, stool, indoor surface, and skin samples. The metabolite polanrazine B, isolated from Leptosphaeria maculans, a fungal pathogen of canola and rapeseed plants (Brassica spp.) (44), was prevalent in two of the four households sampled, including in food and stool samples. Spectral matching also identified the flavonoid procyanidin B2 (m/z 579.149), an antioxidant associated with many plants, such as apples, beans, grapes, and tea, and molecular networking detected an altered form with an additional pentose sugar (neutral loss of m/z 132.04 [33] [Fig. 4a]). Procyanidin B2 was present in the biofilm, fermented food, indoor surface, human skin, and stool samples. This metabolite was present in all sample types from a single subject, including the foods the person ate, surfaces in the household, the person\u2019s body, and stool (Fig.\u00a04b). Although fermented foods from all four households contained procyanidin B2, only two of them had this molecule in their stool, indicating differential metabolism in different individuals. The modified form of procyanidin (m/z 711.189) was found in the same sample types except stool, suggesting that consumption of this metabolite from a fermented food resulted in removal of the sugar or the absorption of the molecule as it passed the digestive tract. Pheophytin A, chlorophyll a without its metal ion, was only detected in samples of fermented foods of vegetable origin (except beer), their containers, and stool, indicating that this molecule remained intact through digestion (Fig. 4a and \u200bandb).b). Related metabolites, including bacteriopheophytin and pyropheophytin, were detected only in kimchi (Fig. 4a). In sum, analysis of metabolites from human samples revealed molecules from fermented foods modified by human or microbial enzymes, molecules produced by organisms pathogenic for components of the fermented food, molecules from fermented food that passed completely through the volunteers\u2019 digestive tracts without alteration, and differential metabolism of fermented food metabolites in different people.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Leptosphaeria maculans",
+                            "infons": {
+                                "identifier": "NCBI:txid5022",
+                                "type": "fungi_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:22:49",
+                                "parent_taxonomic_id": "NCBI:txid220671"
+                            },
+                            "id": "27323505",
+                            "locations": {
+                                "length": 22,
+                                "offset": 19090
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 21063,
+                    "infons": {
+                        "section_title_1": "RESULTS AND DISCUSSION",
+                        "section_title_2": "Microbiome and metabolome integration. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Using Procrustes analysis (34) to get an integrated look at metabolome and microbiome relationships, we mapped the principal coordinate analysis matrices of the 16S rRNA data to the metabolomics data. The overall patterns matched, except that two samples (kombucha and pickles) clustered with fecal microbiome samples in the microbiome space but with other fermented foods in the metabolomics space (Fig.\u00a05). These results underscore that microbial communities and their activities are environment specific and that the metabolite output of the sample type is consistent with the microbial community that produced it.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21719,
+                    "infons": {
+                        "section_title_1": "RESULTS AND DISCUSSION",
+                        "section_title_2": "Conclusions. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Rather than multi-omics analysis being an arduous and highly technical procedure, this study demonstrates that it can be performed on a rapid time scale with a small team of people (six authors of the manuscript contributed to data analysis). A major advantage to this pipeline is the ability to compare data to large data repositories, such as the AGP and GNPS, for sample relationships and metabolite identification. This more easily facilitates the identification of microbiome dysbiosis or metabolome changes that indicate disease. Context is required in any clinical or industrial application of multi-omics data, to better determine how the current structure of a microbial community compares to previous states or sample types, enabling diagnosis of an active dysbiosis. The present study focused on fermented foods and their effects on the people who prepared and consumed them. These foods are of enormous medical importance given that yogurt, a fermented food, is the single food most correlated epidemiologically with weight loss in the U.S. population (35), and they are of economic importance due to the billions of dollars per year that fermented foods contribute to the economy. Although this sample cohort did not require rapid data analysis, such as that required in a medical emergency or the potential loss of a large industrial fermentation, this study shows that consent could be obtained, samples collected, and data generated on microbiome-related samples collected from people located up to 100 miles away from the laboratory in a time frame matching that of classic microbiological culturing of common pathogens (approximately 2\u00a0days). The ability to do rapid-response multi-omics analysis and systems biology will have far reaching implications, from monitoring industrial fermentation processes, to guiding oil and gas drilling and fracking decisions, to providing rapid molecular analysis for patient care in infectious diseases and guiding the use of microbiome-based therapies, such as fecal microbiota transplant (FMT) (36) and probiotics. The combination of standardized protocols for subject recruitment and consent, sample collection, metadata capture, DNA sequencing, mass spectrometry, molecular networking, and data analysis and visualization now puts this technology in the hands of a broad spectrum of users. Broader and more rapid use of multi-omics methods will begin a sea change towards their implementation in clinical medicine.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "A major",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid51574",
+                                    "NCBI:txid2587384"
+                                ],
+                                "type": [
+                                    "fungi_species",
+                                    "fungi_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:23:22",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid5104",
+                                    "NCBI:txid389487"
+                                ]
+                            },
+                            "id": "27323506",
+                            "locations": {
+                                "length": 7,
+                                "offset": 21962
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 24204,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Participant recruitment and sample collection. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "For the first application of the pipeline, we chose a situation that, while time sensitive, was not necessary for clinical decisions. All participants are members of a local fermenter\u2019s club and ferment at home or operate a fermented food business; they learned about the study through the fermenter\u2019s club. Participants willing to sample their own bodies, their fermented foods, and the surfaces that their foods are prepared on or in (i.e., kitchen counters, cutting boards, and fermenters) consented to be a part of the American Gut Project (AGP), the largest crowd-sourced, crowd-funded citizen science project in existence today. A total of seven people (two families and two individuals, designated households 1 to 4) received barcoded, dual-headed sterile cotton sampling swabs (BD Swube; Becton, Dickinson and Company, Franklin Lakes, NJ) and were instructed to sample their skin (right and left hands), mouths, stool, their fermented foods, and the surfaces touched by those foods. Some participants chose to sample alternative body sites (i.e., vagina and forehead), and one participant sampled the mouth of a pet cat. The food samples collected included beer, port wine, pickled cucumbers, pickled jalapenos, cottage cheese, curtido, kefir, kimchi, sauerkraut, miso, beet kvass, and fermented soda (see Table\u00a0S1 in the supplemental material). The surface samples collected included cutting boards, countertops, refrigerator surfaces, skillets, kegerator parts, and fermentor parts. Samples were collected by subjects on 25, 26, and 27 January 2016, with the first sample in the data set collected at 8:05\u00a0a.m. on 25\u00a0January and the last sample in the data set collected at 12:05\u00a0p.m. on 27\u00a0January, for a total of 61 samples. Samples from six participants were delivered by hand to the laboratory, while one participant mailed their samples to the laboratory via overnight priority mail (FedEx). All samples were received in the laboratory by 1:07\u00a0p.m. on 27\u00a0January 2016 (Fig.\u00a01). Upon arrival, one swab head from each dual-headed swab was immediately placed into a MoBio PowerSoil DNA extraction kit bead plate (MoBio, Inc., Carlsbad, CA) for bacterial DNA extraction. The second swab head was stored overnight at \u221220\u00b0C before preparation for metabolomics analysis using mass spectrometry.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26574,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Bacterial DNA extraction and generation of 16S rRNA V4 amplicons. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Bacterial genomic DNA extraction, 16S rRNA gene variable region 4 (V4) amplicon generation, and amplicon preparation for sequencing were performed according to protocols benchmarked for the Earth Microbiome Project (EMP) that can be found on the EMP website (http://www.earthmicrobiome.org/emp-standard-protocols/). Briefly, bacterial genomic DNA was extracted from samples using the PowerMag DNA isolation kit optimized for KingFisher (Mo Bio Laboratories, Carlsbad, CA), and then the V4 region of the 16S rRNA gene was amplified in triplicate from each sample and combined as follows. The PCR mixtures contained 13\u00a0\u00b5l Mo Bio PCR water, 10\u00a0\u00b5l 5 Prime HotMasterMix, 0.5\u00a0\u00b5l each of the barcoded forward and reverse primers (515f and 806rB; 10 \u00b5M final concentration), and 1.0 \u00b5l genomic DNA. The reaction mixtures were held at 94\u00b0C for 3\u00a0min (denaturation), with amplification proceeding for 35 cycles at 94\u00b0C for 45\u00a0s, 50\u00b0C for 60\u00a0s, and 72\u00b0C for 90\u00a0s, followed by a final extension for 10\u00a0min at 72\u00b0C. After amplification, the DNA concentration was quantified using PicoGreen double-stranded DNA (dsDNA) reagent in 10\u00a0mM Tris buffer (pH\u00a08.0). A composite sample for sequencing was created by combining equimolar ratios of amplicons from the individual samples, followed by ethanol precipitation to remove any remaining contaminants and PCR artifacts.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27991,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "16S rRNA marker gene sequencing. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Pooled amplicons were sequenced at the Institute for Genomic Medicine at the University of California, San Diego, using the Illumina MiSeq platform. The library concentration was measured using the HiSens Qubit dsDNA HS assay kit (Thermo Fisher Scientific). A total of 6\u00a0pM of 16S library combined with 0.9\u00a0pM (15%) PhiX sequencing control version 3 was sequenced with 150-bp paired-end (PE) reads on an Illumina MiSeq sequencing system using a MiSeq reagent kit version 2 (300 cycle). Fastq files for reads 1 and 2 and the index read were generated using the BCL-to-FASTQ file converter bcl2fastq version 2.17.1.14 (Illumina, Inc.).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28657,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "16S rRNA marker gene data analysis. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Sequencing data were prepared and analyzed using the online tool Qiita (https://qiita.microbio.me) and the QIIME pipeline (37) version 1.9. Illumina read 1 was quality filtered and demultiplexed according to the QIIME default parameters, as follows: no ambiguous bases allowed, only one bar code mismatch allowed, and a minimum required Phred quality score of 3. Quality filtering resulted in 6,830,655 high-quality reads, with the average number of sequences per sample being 84,329. Quality-filtered sequences were clustered using the closed-reference OTU picking workflow against the August 2013 release of the Greengenes database (DeSantis et al. [38]), with a sequence identity of 97% and sortmeRNA (39) as the underlying clustering algorithm. After OTU picking, 5 samples (forehead, water, vaginal, fermented grape soda, and fermenter inner wall samples) were removed from the data set because they had sequence counts lower than the rarefaction cutoff (2,053 sequences per sample); thus, a total of 54 microbiome samples were included in downstream analyses.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29758,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "16S rRNA marker gene data analysis. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The AGP team has identified a group of bacterial bloom sequences that increase during sample transit back to the laboratory, and in order to avoid a study bias, those sequences were filtered out of the data (code available at https://github.com/biocore/American-Gut/blob/master/ipynb/primary-processing/02-filter_sequences_for_blooms.md). To facilitate direct comparisons and reduce study bias between data obtained from the fermentation cohort and the AGP cohort, fermentation cohort stool sample data were also filtered for blooms.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30291,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "16S rRNA marker gene data analysis. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Five of the seven fecal samples from the fermentation cohort passed quality and sequencing depth filtering. The bacterial diversity levels observed in these five samples were compared to those in a subset of 122 randomly selected fecal samples from other AGP participants of a similar age group for whom data on the frequency of fermented food intake were available. Alpha diversity (measured as Faith\u2019s phylogenetic diversity [26]) was calculated for each sample from a rarefied OTU table of 2,053 sequences per sample. Barplots were generated in R (https://www.r-project.org/) to visualize the distribution of diversity values across the various groups, and a linear regression model was fitted to the AGP portion of the data.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31019,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "16S rRNA marker gene data analysis. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We used SourceTracker (29), a tool that uses a Bayesian model jointly with Gibbs sampling to quantify the amount of taxa that a set of source environments contributes to a sink environment, to determine the proportions of human and surface microbes that were sourced from fermented food microbiomes. Fermented food samples were designated \u201csources,\u201d while human and surface samples were designated \u201csinks.\u201d",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31425,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "16S rRNA marker gene data analysis. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Statistical analyses were applied to determine the significance of groups by sample type on the PCoA plot (ANOSIM, 999 Monte Carlo permutations) and to identify OTUs with significantly different relative abundances (Kruskal-Wallis, 999 Monte Carlo permutations) across sample groups. Nonparametric tests were used to appropriately deal with microbiome data, which were not normally distributed. The significance cutoff for P\u00a0values (ANOSIM) and FDR-corrected P\u00a0values (Kruskal-Wallis) was set at 0.05.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31926,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "16S rRNA marker gene data analysis. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "PICRUSt metagenome predictions were performed using the Galaxy implementation of PICRUSt 1.0.0 (40). The resulting BIOM table was then categorized by KEGG pathways (i.e., KEGG Orthology groups [KOs] were placed into functional categories). All eukaryote-specific pathways were removed from the table, and the table was rarefied to 572,338. The Bray-Curtis distance metric was then applied and visualized using EMPeror (34). A Kruskall-Wallis test with 999 Monte Carlo permutations was applied to determine significant differences in KEGG pathway abundances between groups of samples.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32509,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Metabolomics data analysis. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The metabolomics data for this project are available under MassIVE data set ID MSV000079485 at http://gnps.ucsd.edu. To generate metabolomes, the swabs were added to a solution of 70% methanol in water and allowed to extract for 2 h at room temperature. The methanol extract was then dried down in a centrifugal evaporator and redissolved in 100% methanol. Samples were transferred into 2-ml vials with inserts and diluted 1:2. MS analysis was performed on a QExactive (Thermo Scientific) mass spectrometer with a heated electrospray ionization (HESI-II) probe source, controlled by Xcalibur 3.0 software. MS spectra were acquired in positive ion mode over a mass range of 100 to 1,500\u00a0m/z. An external calibration with Pierce LTQ Velos electrospray ionization (ESI) positive ion calibration solution (Thermo Scientific) was performed prior to data acquisition, with an error rate of less than 1\u00a0ppm. The following probe settings were used for flow aspiration and ionization: spray voltage of 3,500\u00a0V, sheath gas (N2) pressure of 53\u00a0lb/in2, auxiliary gas (N2) pressure of 14\u00a0lb/in2, ion source temperature of 270\u00b0C, S-lens radio frequency (RF) level of 50\u00a0Hz, and auxiliary gas heater temperature at 440\u00b0C. Data acquisition parameters were as follows. Minutes 0 to 0.5 were sent to waste. Minutes 0.5 to 12 were recorded with data-dependent MS/MS acquisition mode. Full scan at MS1 level was performed with resolution of 35,000 in profile mode. The 10 most intense ions with 1\u00a0m/z isolation window per MS1 scan were selected and subjected to normalized collision-induced dissociation with 30\u00a0eV. MS2 scans were performed at 17,500 resolution with maximum injection time of 60\u00a0ms in profile mode. The MS/MS active exclusion parameter was set to 5.0\u00a0s. The injected samples were chromatographically separated using a Vanquish ultrahigh-performance liquid chromatography (UHPLC) instrument (Thermo Scientific) controlled by Thermo SII for Xcalibur software (Thermo Scientific), with a 30- by 2.1-mm, 2.6\u00a0\u00b5M, C18, 100-\u00c5 Kinetex chromatography column (Phenomenex) with 40\u00b0C column temperature, 0.5\u00a0ml/min flow rate, mobile phase A consisting of 99.9% water (LC-MS grade; J.T. Baker)\u20130.1% formic acid (Fisher Scientific, Optima LC/MS), and mobile phase B consisting of 99.9% acetonitrile (LC-MS grade; J.T. Baker)\u20130.1% formic acid (Fisher Scientific, Optima LC/MS), using the following gradient: 0 to 1\u00a0min, 5% B; 1 to 8\u00a0min, 100% B; 8 to 10.9\u00a0min, 100% B; 10.9 to 11\u00a0min, 5% A; and 11 to 12\u00a0min, 5% B. Raw data files were converted to the .mzXML format using ProteoWizard (http://proteowizard.sourceforge.net/) and uploaded to the GNPS-MassIVE mass spectrometry database. The list of annotations from the search can be found at http://gnps.ucsd.edu/ProteoSAFe/result.jsp?task=efc4f1031f73471cbdfddcde0cc181a6&view=view_all_annotations_DB.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35370,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Metabolomics data analysis. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Molecular networking was performed to identify spectra shared between different sample types and to identify known molecules in the data set. All annotations are at level 2 according to the proposed minimum standards in metabolomics (41). The molecular networking parameters were as follows: a minimum matched-peak threshold of 4, a cosine similarity score cutoff of 0.65, a minimum cluster size of 2, and a parent and ion tolerance of 0.5\u00a0Da. GNPS library search parameters were the same except that a cosine threshold of 0.7 was used. A feature table of metabolite presence and absence in each sample was generated from GNPS spectral alignments and downloaded. Similarity of metabolomes was determined using the Bray-Curtis distance metric, projected with principal coordinate analysis and visualized with EMPeror (Fig.\u00a01) through the in-house tool ClusterApp. Molecular networks were visualized and mined using the Cytoscape software (42).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36312,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "16S-metabolomics multivariate comparisons. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Using the OTU table and the metabolite table, we generated a distance matrix for each, using unweighted UniFrac for 16S and Bray-Curtis for the metabolomics. We performed principal coordinate analysis on the two matrices separately and used Procrustes analysis as implemented in QIIME 1.9.1 to rotate, translate, and scale the matrices. The resulting transformed matrices were plotted using EMPeror (34).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36759,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Microarray data accession numbers. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Mapping files and preprocessed data for human samples are available at https://qiita.ucsd.edu under Qiita study identification number (ID) 10317 (AGP), and sequences are publicly available in EMBL-EBI (accession number ERP012803) under accession numbers ERS1048817, ERS1048818, ERS1048819, ERS1048820, ERS1048821, ERS1048822, ERS1048823, ERS1048824, ERS1048825, ERS1048826, ERS1048827, ERS1048828, ERS1048829, ERS1048832, ERS1048833, ERS1048834, ERS1048835, ERS1048836, ERS1048837, ERS1048838, ERS1048839, ERS1048840, ERS1048841, ERS1048842, ERS1048843, ERS1048844, and ERS1048845. Mapping files and preprocessed data for food, environment, and cat samples are available at https://qiita.ucsd.edu under Qiita study ID 10395, and sequences are publicly available in EMBL-EBI (accession number ERP015077). The 16S amplicon analyses outlined in this paper were conducted using the Knight laboratory\u2019s supercomputer Barnacle, using 26 CPU hours.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37735,
+                    "infons": {
+                        "section_title_1": "ACKNOWLEDGMENTS",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "We acknowledge the Sloan foundation for funding the work on metabolomics and the microbiome of the human habitat and the development of strategies to integrate GNPS and Qiita, NIJ for support for the use of metabolomics as a way to determine lifestyle signature analysis, Lee Stein for supporting the development of the rapid response microbiome program. The National Science Foundation award 1341698 and the Extreme Science and Engineering Discovery Environment (XSEDE, grant no. ACI-1053575 [43]) contributed computational resources. Nonfinancial or indirect financial support was provided by the San Diego Fermentation Festival sponsors, American Gut Project for providing data prior to publication, and Kristen Jepsen at the Institute for Genomic Medicine Genomics Center for support for the sequencing.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38557,
+                    "infons": {
+                        "title": "Comparative genome sequencing for discovery of novel polymorphisms in Bacillus anthracis",
+                        "journal": "Science",
+                        "volume": "296",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Read TD, Salzberg SL, Pop M, Shumway M, Umayam L, Jiang L, Holtzapple E, Busch JD, Smith KL, Schupp JM, Solomon D, Keim P, Fraser CM. 2002. Comparative genome sequencing for discovery of novel polymorphisms in Bacillus anthracis. Science296:2028\u20132033. doi:10.1126/science.1071837. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacillus anthracis",
+                            "infons": {
+                                "identifier": "NCBI:txid1392",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:26:30",
+                                "parent_taxonomic_id": "NCBI:txid1386"
+                            },
+                            "id": "27323507",
+                            "locations": {
+                                "length": 18,
+                                "offset": 38770
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 38887,
+                    "infons": {
+                        "title": "Prospective genomic characterization of the German enterohemorrhagic Escherichia coli O104:H4 outbreak by rapid next generation sequencing technology",
+                        "journal": "PLoS One",
+                        "volume": "6",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Mellmann A, Harmsen D, Cummings CA, Zentz EB, Leopold SR, Rico A, Prior K, Szczepanowski R, Ji Y, Zhang W, McLaughlin SF, Henkhaus JK, Leopold B, Bielaszewska M, Prager R, Brzoska PM, Moore RL, Guenther S, Rothberg JM, Karch H. 2011. Prospective genomic characterization of the German enterohemorrhagic Escherichia coli O104:H4 outbreak by rapid next generation sequencing technology. PLoS One6:e22751. doi:10.1371/journal.pone.0022751. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Escherichia coli",
+                            "infons": {
+                                "identifier": "NCBI:txid562",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:26:35",
+                                "parent_taxonomic_id": "NCBI:txid561"
+                            },
+                            "id": "27323508",
+                            "locations": {
+                                "length": 16,
+                                "offset": 39193
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 39382,
+                    "infons": {
+                        "title": "A cloud-compatible bioinformatics pipeline for ultrarapid pathogen identification from next-generation sequencing of clinical samples",
+                        "journal": "Genome Res",
+                        "volume": "24",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Naccache SN, Federman S, Veeraraghavan N, Zaharia M, Lee D, Samayoa E, Bouquet J, Greninger AL, Luk K-C, Enge B, Wadford DA, Messenger SL, Genrich GL, Pellegrino K, Grard G, Leroy E, Schneider BS, Fair JN, Mart\u00ednez MA, Isa P, Crump JA, DeRisi JL, Sittler T, Hackett J, Miller S, Chiu CY. 2014. A cloud-compatible bioinformatics pipeline for ultrarapid pathogen identification from next-generation sequencing of clinical samples. Genome Res24:1180\u20131192. doi:10.1101/gr.171934.113. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39920,
+                    "infons": {
+                        "title": "Rapid metagenomic identification of viral pathogens in clinical samples by real-time nanopore sequencing analysis",
+                        "journal": "Genome Med",
+                        "volume": "7",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Greninger AL, Naccache SN, Federman S, Yu G, Mbala P, Bres V, Stryke D, Bouquet J, Somasekar S, Linnen JM, Dodd R, Mulembakani P, Schneider BS, Muyembe-Tamfum J-J, Stramer SL, Chiu CY. 2015. Rapid metagenomic identification of viral pathogens in clinical samples by real-time nanopore sequencing analysis. Genome Med7:99. doi:10.1186/s13073-015-0220-9. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40331,
+                    "infons": {
+                        "title": "Real-time, portable genome sequencing for Ebola surveillance",
+                        "journal": "Nature",
+                        "volume": "530",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Quick J, Loman NJ, Duraffour S, Simpson JT, Severi E, Cowley L, Bore JA, Koundouno R, Dudas G, Mikhail A, Ou\u00e9draogo N, Afrough B, Bah A, Baum JHJ, Becker-Ziaja B, Boettcher JP, Cabeza-Cabrerizo M, Camino-S\u00e1nchez \u00c1, Carter LL, Doerrbecker J, Enkirch T, Dorival IG, Hetzelt N, Hinzmann J, Holm T, Kafetzopoulou LE, Koropogui M, Kosgey A, Kuisma E, Logue CH, Mazzarelli A, Meisel S, Mertens M, Michel J, Ngabo D, Nitzsche K, Pallasch E, Patrono LV, Portmann J, Repits JG, Rickett NY, Sachse A, Singethan K, Vitoriano I, Yemanaberhan RL, Zekeng EG, Racine T, Bello A, Sall AA, Faye O, et al.. 2016. Real-time, portable genome sequencing for Ebola surveillance. Nature530:228\u2013232. doi:10.1038/nature16996. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41090,
+                    "infons": {
+                        "title": "Intraoperative tissue identification using rapid evaporative ionization mass spectrometry",
+                        "journal": "Sci Transl Med",
+                        "volume": "5",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Balog J, Sasi-Szab\u00f3 L, Kinross J, Lewis MR, Muirhead LJ, Veselkov K, Mirnezami R, Dezs\u0151 B, Damjanovich L, Darzi A, Nicholson JK, Tak\u00e1ts Z. 2013. Intraoperative tissue identification using rapid evaporative ionization mass spectrometry. Sci Transl Med5:194ra93. doi:10.1126/scitranslmed.3005623. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41424,
+                    "infons": {
+                        "title": "Real-time metabolomics on living microorganisms using ambient electrospray ionization flow-probe",
+                        "journal": "Anal Chem",
+                        "volume": "85",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Hsu C-C, Elnaggar MS, Peng Y, Fang J, Sanchez LM, Mascuch SJ, M\u00f8ller KA, Alazzeh EK, Pikula J, Quinn RA, Zeng Y, Wolfe BE, Dutton RJ, Gerwick L, Zhang L, Liu X, M\u00e5nsson M, Dorrestein PC. 2013. Real-time metabolomics on living microorganisms using ambient electrospray ionization flow-probe. Anal Chem85:7014\u20137018. doi:10.1021/ac401613x. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41819,
+                    "infons": {
+                        "title": "From meta-omics to causality: experimental models for human microbiome research",
+                        "journal": "Microbiome",
+                        "volume": "1",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Fritz JV, Desai MS, Shah P, Schneider JG, Wilmes P. 2013. From meta-omics to causality: experimental models for human microbiome research. Microbiome1:14. doi:10.1186/2049-2618-1-14. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42060,
+                    "infons": {
+                        "title": "Sequencing and beyond: integrating molecular \u201comics\u201d for microbial community profiling",
+                        "journal": "Nat Rev Microbiol",
+                        "volume": "13",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Franzosa EA, Hsu T, Sirota-Madi A, Shafquat A, Abu-Ali G, Morgan XC, Huttenhower C. 2015. Sequencing and beyond: integrating molecular \u201comics\u201d for microbial community profiling. Nat Rev Microbiol13:360\u2013372. doi:10.1038/nrmicro3451. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42350,
+                    "infons": {
+                        "title": "Gut flora metabolism of phosphatidylcholine promotes cardiovascular disease",
+                        "journal": "Nature",
+                        "volume": "472",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Wang Z, Klipfell E, Bennett BJ, Koeth R, Levison BS, Dugar B, Feldstein AE, Britt EB, Fu X, Chung Y-M, Wu Y, Schauer P, Smith JD, Allayee H, Tang WH, DiDonato JA, Lusis AJ, Hazen SL. 2011. Gut flora metabolism of phosphatidylcholine promotes cardiovascular disease. Nature472:57\u201363. doi:10.1038/nature09922. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42717,
+                    "infons": {
+                        "title": "Intestinal microbiota metabolism of L-carnitine, a nutrient in red meat, promotes atherosclerosis",
+                        "journal": "Nat Med",
+                        "volume": "19",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Koeth RA, Wang Z, Levison BS, Buffa JA, Org E, Sheehy BT, Britt EB, Fu X, Wu Y, Li L, Smith JD, DiDonato JA, Chen J, Li H, Wu GD, Lewis JD, Warrier M, Brown JM, Krauss RM, Tang WH, Bushman FD, Lusis AJ, Hazen SL. 2013. Intestinal microbiota metabolism of L-carnitine, a nutrient in red meat, promotes atherosclerosis. Nat Med19:576\u2013585. doi:10.1038/nm.3145. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43134,
+                    "infons": {
+                        "title": "Predicting and manipulating cardiac drug inactivation by the human gut bacterium Eggerthella lenta",
+                        "journal": "Science",
+                        "volume": "341",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Haiser HJ, Gootenberg DB, Chatman K, Sirasani G, Balskus EP, Turnbaugh PJ. 2013. Predicting and manipulating cardiac drug inactivation by the human gut bacterium Eggerthella lenta. Science341:295\u2013298. doi:10.1126/science.1235872. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Eggerthella lenta",
+                            "infons": {
+                                "identifier": "NCBI:txid84112",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:27:24",
+                                "parent_taxonomic_id": "NCBI:txid84111"
+                            },
+                            "id": "27323509",
+                            "locations": {
+                                "length": 17,
+                                "offset": 43300
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 43423,
+                    "infons": {
+                        "title": "Xenobiotics shape the physiology and gene expression of the active human gut microbiome",
+                        "journal": "Cell",
+                        "volume": "152",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Maurice CF, Haiser HJ, Turnbaugh PJ. 2013. Xenobiotics shape the physiology and gene expression of the active human gut microbiome. Cell152:39\u201350. doi:10.1016/j.cell.2012.10.052. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43661,
+                    "infons": {
+                        "title": "Symbiotic gut microbes modulate human metabolic phenotypes",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "105",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Li M, Wang B, Zhang M, Rantalainen M, Wang S, Zhou H, Zhang Y, Shen J, Pang X, Wei H, Chen Y, Lu H, Zuo J, Su M, Qiu Y, Jia W, Xiao C, Smith LM, Yang S, Holmes E, Tang H, Zhao G, Nicholson JK, Li L, Zhao L. 2008. Symbiotic gut microbes modulate human metabolic phenotypes. Proc Natl Acad Sci U S A105:2117\u20132122. doi:10.1073/pnas.0712038105. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44061,
+                    "infons": {
+                        "title": "Gut microbiomes of Malawian twin pairs discordant for kwashiorkor",
+                        "journal": "Science",
+                        "volume": "339",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Smith MI, Yatsunenko T, Manary MJ, Trehan I, Mkakosya R, Cheng J, Kau AL, Rich SS, Concannon P, Mychaleckyj JC, Liu J, Houpt E, Li JV, Holmes E, Nicholson J, Knights D, Ursell LK, Knight R, Gordon JI. 2013. Gut microbiomes of Malawian twin pairs discordant for kwashiorkor. Science339:548\u2013554. doi:10.1126/science.1229000. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44443,
+                    "infons": {
+                        "title": "Gut microbiota from twins discordant for obesity modulate metabolism in mice",
+                        "journal": "Science",
+                        "volume": "341",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Ridaura VK, Faith JJ, Rey FE, Cheng J, Duncan AE, Kau AL, Griffin NW, Lombard V, Henrissat B, Bain JR, Muehlbauer MJ, Ilkayeva O, Semenkovich CF, Funai K, Hayashi DK, Lyle BJ, Martini MC, Ursell LK, Clemente JC, Van Treuren W. 2013. Gut microbiota from twins discordant for obesity modulate metabolism in miceScience341:1241214. doi:10.1126/science.1241214. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44860,
+                    "infons": {
+                        "journal": "Ancient wine: the search for the origin of viticulture",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. McGovern PE.2003. Ancient wine: the search for the origin of viticulture. Princeton University Press, Princeton, NJ. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44997,
+                    "infons": {
+                        "title": "Fermented foods as experimentally tractable microbial ecosystems",
+                        "journal": "Cell",
+                        "volume": "161",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Wolfe BE, Dutton RJ. 2015. Fermented foods as experimentally tractable microbial ecosystems. Cell161:49\u201355. doi:10.1016/j.cell.2015.02.034. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45177,
+                    "infons": {
+                        "title": "Impact of microbial transformation of food on health\u2014from fermented foods to fermentation in the gastro-intestinal tract",
+                        "journal": "Curr Opin Biotechnol",
+                        "volume": "22",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Van Hylckama Vlieg JE, Veiga P, Zhang C, Derrien M, Zhao L. 2011. Impact of microbial transformation of food on health\u2014from fermented foods to fermentation in the gastro-intestinal tract. Curr Opin Biotechnol22:211\u2013219. doi:10.1016/j.copbio.2010.12.004. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45471,
+                    "infons": {
+                        "title": "Diet rapidly and reproducibly alters the human gut microbiome",
+                        "journal": "Nature",
+                        "volume": "505",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. David LA, Maurice CF, Carmody RN, Gootenberg DB, Button JE, Wolfe BE, Ling AV, Devlin AS, Varma Y, Fischbach MA, Biddinger SB, Dutton RJ, Turnbaugh PJ. 2014. Diet rapidly and reproducibly alters the human gut microbiome. Nature505:559\u2013563. doi:10.1038/nature12820. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45795,
+                    "infons": {
+                        "title": "The effect of diet on the human gut microbiome: a metagenomic analysis in humanized gnotobiotic mice",
+                        "journal": "Sci Transl Med",
+                        "volume": "1",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Turnbaugh PJ, Ridaura VK, Faith JJ, Rey FE, Knight R, Gordon JI. 2009. The effect of diet on the human gut microbiome: a metagenomic analysis in humanized gnotobiotic mice. Sci Transl Med1:6ra14. doi:10.1126/scitranslmed.3000322. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46084,
+                    "infons": {
+                        "title": "Ultra-high-throughput microbial community analysis on the Illumina HiSeq and MiSeq platforms",
+                        "journal": "ISME J",
+                        "volume": "6",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Caporaso JG, Lauber CL, Walters WA, Berg-Lyons D, Huntley J, Fierer N, Owens SM, Betley J, Fraser L, Bauer M, Gormley N, Gilbert JA, Smith G, Knight R. 2012. Ultra-high-throughput microbial community analysis on the Illumina HiSeq and MiSeq platforms. ISME J6:1621\u20131624. doi:10.1038/ismej.2012.8. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46440,
+                    "infons": {
+                        "title": "Unlocking the potential of metagenomics through replicated experimental design",
+                        "journal": "Nat Biotechnol",
+                        "volume": "30",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Knight R, Jansson J, Field D, Fierer N, Desai N, Fuhrman JA, Hugenholtz P, van der Lelie D, Meyer F, Stevens R, Bailey MJ, Gordon JI, Kowalchuk GA, Gilbert JA. 2012. Unlocking the potential of metagenomics through replicated experimental design. Nat Biotechnol30:513\u2013520. doi:10.1038/nbt.2235. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46793,
+                    "infons": {
+                        "title": "Molecular cartography of the human skin surface in 3D",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "112",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Bouslimani A, Porto C, Rath CM, Wang M, Guo Y, Gonzalez A, Berg-Lyon D, Ackermann G, Moeller Christensen GJ, Nakatsuji T, Zhang L, Borkowski AW, Meehan MJ, Dorrestein K, Gallo RL, Bandeira N, Knight R, Alexandrov T, Dorrestein PC. 2015. Molecular cartography of the human skin surface in 3D. Proc Natl Acad Sci U S A112:E2120\u2013E2129. doi:10.1073/pnas.1424409112. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47214,
+                    "infons": {
+                        "title": "Mass spectral databases for LC/MS and GC/MS-based metabolomics: state of the field and future prospects",
+                        "journal": "Trends Analyt Chem",
+                        "volume": "78",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Vinaixa M, Schymanski EL, Neumann S, Navarro M, Salek RM, Yanes O. 2016. Mass spectral databases for LC/MS and GC/MS-based metabolomics: state of the field and future prospects. Trends Analyt Chem78:23\u201335. doi:10.1016/j.trac.2015.09.005. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47483,
+                    "infons": {
+                        "title": "Conservation evaluation and phylogenetic diversity",
+                        "journal": "Biol Conserv",
+                        "volume": "61",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Faith DP.1992. Conservation evaluation and phylogenetic diversity. Biol Conserv61:1\u201310. doi:10.1016/0006-3207(92)91201-3. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47636,
+                    "infons": {
+                        "title": "UniFrac: a new phylogenetic method for comparing microbial communities",
+                        "journal": "Appl Environ Microbiol",
+                        "volume": "71",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Lozupone C, Knight R. 2005. UniFrac: a new phylogenetic method for comparing microbial communities. Appl Environ Microbiol71:8228\u20138235. doi:10.1128/AEM.71.12.8228-8235.2005. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47869,
+                    "infons": {
+                        "title": "Structure, function and diversity of the healthy human microbiome",
+                        "journal": "Nature",
+                        "volume": "486",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Human Microbiome Project Consortium. 2012. Structure, function and diversity of the healthy human microbiome. Nature486:207\u2013214. doi:10.1038/nature11234. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48082,
+                    "infons": {
+                        "title": "Bayesian community-wide culture-independent microbial source tracking",
+                        "journal": "Nat Methods",
+                        "volume": "8",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Knights D, Kuczynski J, Charlson ES, Zaneveld J, Mozer MC, Collman RG, Bushman FD, Knight R, Kelley ST. 2011. Bayesian community-wide culture-independent microbial source tracking. Nat Methods8:761\u2013763. doi:10.1038/nmeth.1650. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48368,
+                    "infons": {
+                        "title": "Mass spectral molecular networking of living microbial colonies",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "109",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Watrous J, Roach P, Alexandrov T, Heath BS, Yang JY, Kersten RD, van der Voort M, Pogliano K, Gross H, Raaijmakers JM, Moore BS, Laskin J, Bandeira N, Dorrestein PC. 2012. Mass spectral molecular networking of living microbial colonies. Proc Natl Acad Sci U S A109:E1743\u2013E1752. doi:10.1073/pnas.1203689109. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48734,
+                    "infons": {
+                        "title": "Molecular networking as a dereplication strategy",
+                        "journal": "J Nat Prod",
+                        "volume": "76",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Yang JY, Sanchez LM, Rath CM, Liu X, Boudreau PD, Bruns N, Glukhov E, Wodtke A, de Felicio R, Fenner A, Wong WR, Linington RG, Zhang L, Debonsi HM, Gerwick WH, Dorrestein PC. 2013. Molecular networking as a dereplication strategy. J Nat Prod76:1686\u20131699. doi:10.1021/np400413s. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49071,
+                    "infons": {
+                        "title": "Illuminating the dark matter in metabolomics",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "112",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Da Silva RR, Dorrestein PC, Quinn RA. 2015. Illuminating the dark matter in metabolomics. Proc Natl Acad Sci U S A112:12549\u201312550. doi:10.1073/pnas.1516878112. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49290,
+                    "infons": {
+                        "title": "Profiling and quantification of isoflavonoids in kudzu dietary supplements by high-performance liquid chromatography and electrospray ionization tandem mass spectrometry",
+                        "journal": "J Agric Food Chem",
+                        "volume": "51",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Prasain JK, Jones K, Kirk M, Wilson L, Smith-Johnson M, Weaver C, Barnes S. 2003. Profiling and quantification of isoflavonoids in kudzu dietary supplements by high-performance liquid chromatography and electrospray ionization tandem mass spectrometry. J Agric Food Chem51:4213\u20134218. doi:10.1021/jf030174a. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49637,
+                    "infons": {
+                        "title": "EMPeror: a tool for visualizing high-throughput microbial community data",
+                        "journal": "Gigascience",
+                        "volume": "2",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. V\u00e1zquez-Baeza Y, Pirrung M, Gonzalez A, Knight R. 2013. EMPeror: a tool for visualizing high-throughput microbial community data. Gigascience2:16. doi:10.1186/2047-217X-2-16. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49871,
+                    "infons": {
+                        "title": "Changes in diet and lifestyle and long-term weight gain in women and men",
+                        "journal": "N Engl J Med",
+                        "volume": "364",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Mozaffarian D, Hao T, Rimm EB, Willett WC, Hu FB. 2011. Changes in diet and lifestyle and long-term weight gain in women and men. N Engl J Med364:2392\u20132404. doi:10.1056/NEJMoa1014296. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50114,
+                    "infons": {
+                        "title": "Fecal microbiota transplantation as novel therapy in gastroenterology: a systematic review",
+                        "journal": "World J Gastroenterol",
+                        "volume": "21",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "36. Rossen NG, MacDonald JK, de Vries EM, D\u2019Haens GR, de Vos WM, Zoetendal EG, Ponsioen CY. 2015. Fecal microbiota transplantation as novel therapy in gastroenterology: a systematic review. World J Gastroenterol21:5359\u20135371. doi:10.3748/wjg.v21.i17.5359. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50424,
+                    "infons": {
+                        "title": "QIIME allows analysis of high-throughput community sequencing data",
+                        "journal": "Nat Methods",
+                        "volume": "7",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "37. Caporaso JG, Kuczynski J, Stombaugh J, Bittinger K, Bushman FD, Costello EK, Fierer N, Pe\u00f1a AG, Goodrich JK, Gordon JI, Huttley GA, Kelley ST, Knights D, Koenig JE, Ley RE, Lozupone CA, McDonald D, Muegge BD, Pirrung M, Reeder J, Sevinsky JR, Turnbaugh PJ, Walters WA, Widmann J, Yatsunenko T, Zaneveld J, Knight R. 2010. QIIME allows analysis of high-throughput community sequencing data. Nat Methods7:335\u2013336. doi:10.1038/nmeth.f.303. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50920,
+                    "infons": {
+                        "title": "Greengenes, a chimera-checked 16S rRNA gene database and workbench compatible with ARB",
+                        "journal": "Appl Environ Microbiol",
+                        "volume": "72",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "38. DeSantis TZ, Hugenholtz P, Larsen N, Rojas M, Brodie EL, Keller K, Huber T, Dalevi D, Hu P, Andersen GL. 2006. Greengenes, a chimera-checked 16S rRNA gene database and workbench compatible with ARB. Appl Environ Microbiol72:5069\u20135072. doi:10.1128/AEM.03006-05. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51240,
+                    "infons": {
+                        "title": "SortMeRNA: fast and accurate filtering of ribosomal RNAs in metatranscriptomic data",
+                        "journal": "Bioinformatics",
+                        "volume": "28",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "39. Kopylova E, No\u00e9 L, Touzet H. 2012. SortMeRNA: fast and accurate filtering of ribosomal RNAs in metatranscriptomic data. Bioinformatics28:3211\u20133217. doi:10.1093/bioinformatics/bts611. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51463,
+                    "infons": {
+                        "title": "Predictive functional profiling of microbial communities using 16S rRNA marker gene sequences",
+                        "journal": "Nat Biotechnol",
+                        "volume": "31",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "40. Langille MG, Zaneveld J, Caporaso JG, McDonald D, Knights D, Reyes JA, Clemente JC, Burkepile DE, Vega Thurber RL, Knight R, Beiko RG, Huttenhower C. 2013. Predictive functional profiling of microbial communities using 16S rRNA marker gene sequences. Nat Biotechnol31:814\u2013821. doi:10.1038/nbt.2676. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51821,
+                    "infons": {
+                        "title": "Proposed minimum reporting standards for chemical analysis: Chemical Analysis Working Group (CAWG) metabolomics Standards Initiative (MSI)",
+                        "journal": "Metabolomics",
+                        "volume": "3",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "41. Sumner LW, Amberg A, Barrett D, Beale MH, Beger R, Daykin CA, Fan TW-M, Fiehn O, Goodacre R, Griffin JL, Hankemeier T, Hardy N, Harnly J, Higashi R, Kopka J, Lane AN, Lindon JC, Marriott P, Nicholls AW, Reily MD, Thaden JJ, Viant MR. 2007. Proposed minimum reporting standards for chemical analysis: Chemical Analysis Working Group (CAWG) metabolomics Standards Initiative (MSI). Metabolomics3:211\u2013221. doi:10.1007/s11306-007-0082-2. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52314,
+                    "infons": {
+                        "title": "Cytoscape: a software environment for integrated models of biomolecular interaction networks",
+                        "journal": "Genome Res",
+                        "volume": "13",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "42. Shannon P, Markiel A, Ozier O, Baliga NS, Wang JT, Ramage D, Amin N, Schwikowski B, Ideker T. 2003. Cytoscape: a software environment for integrated models of biomolecular interaction networks. Genome Res13:2498\u20132504. doi:10.1101/gr.1239303. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52615,
+                    "infons": {
+                        "title": "XSEDE: accelerating scientific discovery",
+                        "journal": "Comput Sci Eng",
+                        "volume": "16",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "43. Towns J, Cockerill T, Dahan M, Foster I, Gaither K, Grimshaw A, Hazlewood V, Lathrop S, Lifka D, Peterson GD, Roskies R, Scott JR, Wilkens-Diehr N. 2014. XSEDE: accelerating scientific discovery. Comput Sci Eng16:62\u201374. doi:10.1109/MCSE.2014.80. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52892,
+                    "infons": {
+                        "title": "Pathways of infection of Brassica napus roots by Leptosphaeria maculans",
+                        "journal": "New Phytol",
+                        "volume": "176",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "44. Sprague SJ, Watt M, Kirkegaard JA, Howlett BJ. 2007. Pathways of infection of Brassica napus roots by Leptosphaeria maculans. New Phytol176:211\u2013222. doi:10.1111/j.1469-8137.2007.02156.x. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Leptosphaeria maculans",
+                            "infons": {
+                                "identifier": "NCBI:txid5022",
+                                "type": "fungi_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 04:29:15",
+                                "parent_taxonomic_id": "NCBI:txid220671"
+                            },
+                            "id": "27323510",
+                            "locations": {
+                                "length": 22,
+                                "offset": 52998
+                            }
+                        }
+                    ],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

@@ -1,0 +1,1211 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC6540989",
+            "inputfile": "../microbiome_corpus_HTML\\PMC6540989.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Identifying Host Genetic Variants Associated with Microbiome Composition by Testing Multiple Beta Diversity Matrices",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 116,
+                    "infons": {
+                        "section_title_1": "keywords",
+                        "iao_name_1": "keywords section",
+                        "iao_id_1": "IAO:0000630"
+                    },
+                    "text": "Microbiome, Genome-wide association study, Host genetics, Tail probabilities, Skewness, Kurtosis",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 220,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Objectives:",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Host genetics have been recently reported to affect human microbiome composition. We previously developed a statistical framework, microbiomeGWAS, to identify host genetic variants associated with microbiome composition by testing a distance matrix. However, statistical power depends on the choice of a microbiome distance matrix. To achieve more robust statistical power, we aim to extend microbiomeGWAS to test the association with many distance matrices, which are defined based on multilevel taxa abundances and phylogenetic information.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 781,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Methods:",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "The main challenge is to accurately and rapidly evaluate the significance for millions of SNPs. We propose methods for approximating p values by correcting for the multiple testing introduced by testing many distance matrices and by correcting for the skewness and kurtosis of score statistics.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1083,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Results:",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "The accuracy of p value approximation was verified by simulations. We applied our method to a set of 147 lung cancer patients with 16S rRNA microbiome profiles from nonmalignant lung tissues. We show that correcting for skewness and kurtosis eliminated dramatic deviations in the quantile-quantile plot.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1394,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Conclusion:",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "We developed computationally efficient methods for identifying host genetic variants associated with microbiome composition by testing many distance matrices. The algorithms are implemented in the package microbiomeGWAS (https://github.com/lsncibb/microbiomeGWAS).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1669,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The human microbiota is the collection of microbes inhabiting the human body, including bacteria, archaea, and fungi. Advances in high-throughput sequencing [1] and bioinformatic analysis [2\u20134] allow the characterization of the microbiota\u2019s collective genome (the microbiome), including composition and diversity. Microbiome profiles can be generated rather efficiently by sequencing 16S rRNA gene amplicons. Differences in such human microbiome profiles have been reported to be associated with health conditions: the fecal microbiome with obesity [5, 6], colorectal cancer [7, 8], breast cancer [9], and inflammatory bowel disease [10]; the oral microbiome with pancreatic [11], oral, and gastrointestinal cancers [12]. Thus, identifying and understanding factors that affect microbiome composition and diversity is crucial for elucidating the etiology of human complex diseases and opportunities for prevention.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 00:10:35",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "665818",
+                            "locations": {
+                                "length": 8,
+                                "offset": 1757
+                            }
+                        },
+                        {
+                            "text": "archaea",
+                            "infons": {
+                                "identifier": "NCBI:txid2157",
+                                "type": "archaea_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 00:10:35",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "665819",
+                            "locations": {
+                                "length": 7,
+                                "offset": 1767
+                            }
+                        },
+                        {
+                            "text": "fungi",
+                            "infons": {
+                                "identifier": "NCBI:txid4751",
+                                "type": "fungi_kingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 00:10:35",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "665820",
+                            "locations": {
+                                "length": 5,
+                                "offset": 1780
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 2595,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Evidence suggests that microbiome composition at a specific body site may be shaped by host genetics. As an example, genetic loci have been reported to be associated with the relative abundance (RA) of specific taxa of the gut microbiome based on linkage studies in mice [13, 14] and based on association studies in humans [15]. Interestingly, Knights et al. [16] reported that a risk single-nucleotide polymorphism (SNP) for inflammatory bowel disease located in NOD2 was associated with the RA of Enterobacteriaceae in the human gut microbiome, providing an interesting hypothesis that the genetic locus affects the risk of inflammatory bowel disease by affecting the gut microbiome. Blekhman et al. [15] performed genetic studies across body sites in the Human Microbiome Project data and found that host genetic variants associated with microbiome composition were enriched in immunity-related pathways. In addition, a large-scale twin study suggested a strong genetic component for human gut microbiome [17]. These studies imply that identifying host genetic variants associated with microbiome composition has the potential to explain variability of human microbiome composition and to elucidate biological mechanisms for genetic associations with complex diseases.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Enterobacteriaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid543",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 00:10:49",
+                                "parent_taxonomic_id": "NCBI:txid91347"
+                            },
+                            "id": "665821",
+                            "locations": {
+                                "length": 18,
+                                "offset": 3094
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 3866,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In a microbiome genome-wide association study (GWAS), one may test the genetic association using alpha diversity metrics or RA of each taxon as phenotype. Because a microbiota functions as a community, one important analysis is testing genetic associations with beta diversity, that is, with a pairwise distance matrix defined based on 16S rRNA sequence data. At a truly associated SNP, microbiome distances are generally smaller for pairs of subjects with more similar genotypic values, i.e., the microbiome distance is positively associated with the genetic distance across subject pairs. Microbiome distances can be defined in different ways, based on phylogenetic tree information or on each taxon\u2019s abundance information. Bray-Curtis dissimilarity [18], Kullback-Leibler divergence, UniFrac [19\u201321], and generalized UniFrac (GUniFrac) distance [22] are widely used beta-diversity metrics.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4759,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "We have recently developed a statistical framework, microbiomeGWAS [23], for identifying host genetic variants associated with microbiome composition using a single distance matrix. Previous reports and our empirical data [23] suggest that the power to identify associated genetic loci depends on which distance matrix is employed. As an example, based on a lung tissue microbiome GWAS study, a lung cancer risk SNP rs401681 located on chromosome 5p15.33 (CLPTM1L) was ambiguously associated with unweighted UniFrac distance matrix with p = 0.056 and more clearly with weighted UniFrac distance matrix with p = 0.005. This problem has been well realized in microbiome data analysis. Frequently, associations in nongenetic studies (e.g., case-control studies) are tested using multiple distance matrices, and the most significant association is reported without explicitly accounting for multiple testing, which obviously causes an inflated type-I error rate. MiRKAT [24], a recently developed method for testing associations between microbiome composition and a trait (quantitative or binary), has the option for testing many distance matrices. However, MiRKAT relies on permutations to evaluate significance and thus is not feasible for analyzing millions of SNPs in GWAS.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6032,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In this article, we extend our previous analytic framework, microbiomeGWAS [23], to test the association with many microbiome distance matrices. The overall test statistic is defined as the strongest association (measured as the p value of each score statistic) across all tested distance matrices. We calculate the significance by correcting for the multiple testing imposed by testing many distance matrices. Importantly, we show that the skewness and kurtosis of each score statistic make the p-value approximation based on the asymptotic normal assumption too liberal, which is addressed by explicitly correcting for skewness and kurtosis of score statistics. The accuracy of the approximations is verified by extensive simulations. These theoretic investigations allow us to develop algorithms for efficiently analyzing genome-wide SNP markers in a GWAS study without relying on computationally intensive permutations. The algorithms are implemented in the software package microbiomeGWAS (https://github.com/lsncibb/microbiomeGWAS). The computational complexity depends on the number of subjects, the number of SNPs, and the number of micro-biome distance matrices. It takes microbiomeGWAS about 12 h to analyze data in a GWAS with 2,000 subjects, 500,000 SNPs, and 14 microbiome distance matrices using a single core.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7356,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "We applied our methods to nonmalignant lung tissue samples in the Environment And Genetics in Lung cancer Etiology (EAGLE) study [25]. We show that correcting for skewness and kurtosis eliminated dramatic deviations in the quantile-quantile (QQ) plot based on asymptotic approximations.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7642,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "A Score Statistic for a Single Microbiome Distance Matrix",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Suppose that we have a set of N subjects genotyped with SNP arrays. For simplicity, we consider 1 SNP with minor allele frequency (MAF) f. Let gi represent the number of minor alleles for subject i. We assume that the 16S rRNA gene has been sequenced for all microbiome samples of a specific body site. We first consider one beta diversity distance matrix D = (dij). If the SNP is associated with the distance matrix, then the microbiome distances tend to be smaller for pairs of subjects when they have identical genotypic values at the SNP (fig.1). Statistically speaking, we need to test whether the pairwise microbiome distance is positively associated with the genetic distance across subject pairs, which was described in our previous paper [23]. Here, we briefly summarize the score statistic for readers\u2019 convenience.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8531,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "A Score Statistic for a Single Microbiome Distance Matrix",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Let Gij = | gi \u2013 gj| be the genetic distance. We assume dij=\u03b1 + \u03b2Gij+ \u03b5ij for all pairs of subjects. The scores static for testing H0: \u03b2 = 0 vs. \u03b2 > 0 is delivered by minimizing \u03a3i < j(dij \u2212 \u03b1 \u2212 \u03b2Gij)2:\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8734,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "A Score Statistic for a Single Microbiome Distance Matrix",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Under H0: \u03b2 = 0, The variance of S conditioning on D was derived as\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8802,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "A Score Statistic for a Single Microbiome Distance Matrix",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The variance-scaled score statistic Z = S/\u03c3 ~ N (0, 1) asymptotically. Note that the variance \u03c32 = var0(S|D) is calculated conditioning on the distance matrix D; thus, it does not depend on the assumption of the distribution for pairwise distances. This makes the null distribution \u2018nonparametric\u2019 to the microbiome pairwise distances, an important statistical property previously studied extensively for quantitative trait loci mapping studies based on human families [26].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9276,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "A Score Statistic for a Single Microbiome Distance Matrix",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "This framework can also adjust for covariates, e.g., principal component scores derived based on genotypes. Let Xi = (xi1, \u2026, xiv) denote the v covariates for the i-th subject. We assume dij=\u03b1+\u03b2Gij+\u2211vt=1wt|xit\u2212xjt|+\u03b5ij. We estimate (w\u02c61,\u2026,w\u02c6v) under H0: \u03b2 = 0 and define residue d\u2032ij=dij\u2212\u03b1\u02c6\u2212\u2211vt=1w\u02c6t|xit\u2212xjt|. It is easy to verify that the score equation for \u03b2 ecaluated at H0: \u03b2 = 0 is S\u2032=\u2211i<jd\u2032ijGij. Let D\u2032 be the residue distance matrix with (D\u2032)ij=d\u2032ij. We can similarly derive the conditional variance Var0(and S\u2032|D\u2032) and the normalized score static\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9832,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Testing Association for Multiple Microbiome Distance Matrices",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We now consider K distance matrices (D1, \u2026, DK), where Dk is a N \u00d7 N matrix with (Dk)ij = dk, ij. We are interested in testing whether the SNP is associated with any of the K microbiome distance matrices. For each distance matrix Dk, we denote the score equation as Sk, its variance as \u03c32k=var0(Sk|Dk) and the score statistic as Zk = Sk/\u03c3k. The overall statistic for testing the global null hypothesis that none of the K distance matrices is associated with the SNP is defined as\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10373,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Testing Association for Multiple Microbiome Distance Matrices",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We aim to derive an accurate approximation to the significance for a threshold b:\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10455,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Testing Association for Multiple Microbiome Distance Matrices",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "To proceed, we first derive the correlation matrix for (Z1, \u2026, Zk) under H0: \u03b21 = \u2026 = \u03b2K = 0. For two distance matrices indexed by (s, t), we derive the correlation \u03c1st = cor0(Zs, Zt|Ds, Dt) in the Appendix:\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10663,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Testing Association for Multiple Microbiome Distance Matrices",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Here, \u03bc(Ds) is specified in equation 3, \u03b8(Ds) is specified in equation 4, and \u03c9(Ds, Dt) and \u03c0(Ds, Dt) are specified in the Appendix. It is easy to verify that, as the sample size N is large,\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10854,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Testing Association for Multiple Microbiome Distance Matrices",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Numerical calculations suggest that the approximation is very accurate when sample size N \u2265 50. Importantly, \u03c10st depends only on the distance matrices but not the MAF of the SNP (fig. 2a). Thus, we only need to calculate \u03c10st once and use it for all SNPs in the genome.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11124,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Testing Association for Multiple Microbiome Distance Matrices",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Let\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11128,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Testing Association for Multiple Microbiome Distance Matrices",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Assuming that (Z1, \u2026, ZK) follows a multivariate normal distribution with correlation matrix \u2211, the significance P0(max1 \u2264 k \u2264 K\nZk > b) can be calculated using the function pmvnorm in the R package mvtnorm [27, 28].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11344,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Improve the p-Value Approximation by Correcting for Skewness and Kurtosis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "In our recent work [23], we showed that the score statistic Zt had positive skewness \u03b3k=E0(S3k|Dk)/\u03c33k and kurtosis \u03bak=E0(S4k|Dk)/\u03c34k\u22123 because of the dependence in the pairwise distances. The skewness and kurtosis make the score statistic Zk have a long tail, which leads to a liberal p-value approximation based on the asymptotic distribution N(0, 1), particularly for small p values. We developed an approximation to the tail probability P0(Zk > b) as\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11872,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Improve the p-Value Approximation by Correcting for Skewness and Kurtosis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "For a given SNP in one study, the skewness \u03b3k and kurtosis \u03bak may vary substantially across microbiome distance matrices. As an empirical example, for 100 microbiome samples randomly selected from the American Gut Project (AGP), skewness and kurtosis are quite different (table 1) for Zu(based on unweighted UniFrac distance matrix) and Zw (based on weighted UniFrac distance matrix). According to equation 9, the p value P(Zu > b) may be very different from P(Zw > b) for a large value of b. As numeric example, P(Zu > 8) = 1.2 \u00d7 10\u20139 and P(Zw > 8) = 5.6 \u00d7 10\u20139.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12435,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Improve the p-Value Approximation by Correcting for Skewness and Kurtosis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The numerical examples in table 1 suggest that, given (Z1,\u2026,ZK) corresponding to K distance matrices, defining T0 = max1 \u2264 k \u2264 K\nZk as the overall statistic is not appropriate because the test values are not directly comparable due to the different null distributions characterized by skewness and kurtosis. Instead, we first calculate the significance pt by correcting for the specific skewness \u03b3t and kurtosis \u03bat using equation 9 and derive the normal quantile qt = \u03a6(1 \u2013 pt). The overall statistic is then defined as\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12955,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Improve the p-Value Approximation by Correcting for Skewness and Kurtosis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Importantly, the skewness and kurtosis correction in equation 9 has appreciable impact only on the tail of the marginal distribution of each Zt; thus, it has negligible impact on the correlation between two statistics, i.e., cor0(qs, qt) \u2248 cor0(Zs, Zt), as is demonstrated in numerical examples in figure 2 d. Under the assumption that (q1, \u2026, qK) follows a multivariate normal distribution with correlation matrix \u03a3, we can use the function pnvtnorm in the R package mvtnorm to calculate the significance P0(max1 \u2264 t \u2264 t \u2264 K\nqt > b).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13489,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Efficient Approximation of p Values for Genome-Wide Analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Calculating P0 (max1 \u2264 t \u2264 K\nqt > b) for millions of SNPs in GWAS using the R package mvtnorm is computationally intensive. To address the issue, we propose a hybrid, computationally efficient strategy, which relies on the observation that the correlation matrix \u2211 defined in equation 8 is approximately constant for SNPs of different MAF. Thus, we simulate M = 106 random vectors (zm1, \u2026, zmK) for m = 1, \u2026, M according to N(0, \u03a3) and define Qm = max1 \u2264 t \u2264 k zmt. Then P0(max1 \u2264 t \u2264 t \u2264 K\nqt > b) is approximated by P\u02c6=#{Qm>b}/M. For SNPs with \u2265 10\u20134, P\u02c6 is accurate with relative error\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14138,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Efficient Approximation of p Values for Genome-Wide Analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "For SNPs with p < 10\u20134, we use mvtnorm to calculate P0(max1 \u2264 t \u2264 K\nqt > b) to refine the approximation. The number of SNPs in this category may range from 100 to 1,000, depending on how many SNPs are tested in total and the number of truly associated SNPs. Typically, it takes a few minutes to evaluate the significance for all SNPs in the GWAS.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14484,
+                    "infons": {
+                        "section_title_1": "Simulations",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We performed simulations to investigate the type-I error rate of the overall statistics T0 (not adjusted for skewness and kurtosis) and T1 (adjusted for skewness and kurtosis). We performed simulations using sample size N = 100, 200, 500, and 1,000. The MAF of the SNP was chosen as 20 and 50%. To make simulations realistic, we used the fecal microbiome samples with the 16S rRNA V4 region sequences from the AGP. All data were downloaded from the AGP website (https://github.com/biocore/American-Gut). Samples were excluded from our analysis if they had less than 10,000 sequence reads or had a self-reported history of antibiotic usage within 1 month. After quality control, 1,879 subjects remained. All samples were rarefied to have 10,000 reads.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15245,
+                    "infons": {
+                        "section_title_1": "Simulations",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Our simulations used 14 microbiome distance matrices, including weighted and unweighted UniFrac distance matrices calculated using QIIME [2] and 12 distance matrices based on RA of taxa at different levels (species, genus, family, order, class, and phylum). As an example, let Xi = (xi1, \u2026, xin) denote the RA of n taxa for subject i at the phylum level. For a subject pair (i, j), we calculate the Euclidean distance\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15663,
+                    "infons": {
+                        "section_title_1": "Simulations",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The Euclidean distance is dominated by the most abundant taxon and is not robust. Thus, we define a rank-based distance metric. For each k, let rik be the rank of xik in {x1k, \u2026, xNk} across N subjects. The rank-based distance is calculated as \u2211nk=1|rik\u2212rjk|. The 14 distance matrices are denoted as Du (unweighted UniFrac), Dw (weighted UniFrac), DEs (Euclidean distance at species level), DEg (genus level), DEf (family level), DEo (order level), DEc (class level), DEp (phylum level), DRs (rank-based distance at species level), DRg (genus level), DRf (family level), DRo (order level), DRc (class level), and DRp (phylum level).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16295,
+                    "infons": {
+                        "section_title_1": "Simulations",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "For each setting, the type-I error rates were evaluated based on 107 simulations under H0. The simulations were done by randomly simulating genotypes given MAF while independent of 14 distance matrices. The type-I error rates are summarized in table 2. T0, the overall statistic not adjusted for skewness and kurtosis, had unacceptably high type-I error rates, particularly when the level \u03b1 was small or the sample size was small. On the other hand, T1, the overall statistic adjusted for skewness and kurtosis, had an acceptable type-I error. As a numerical example, for \u03b1 = 10\u20136, MAF = 0.2, and sample size 100, the empirical type-I error rate of T0 was 3.4 \u00d7 10\u20134, a 340-fold inflation compared to the specified level \u03b1 = 10\u20136. As comparison, the empirical type-I error rate of T1 was 7.0 \u00d7 10\u20137 (s.e. = 3.2 \u00d7 10\u20137), which is consistent with the specified level \u03b1 = 10\u20136. As sample size increased, the type-I error rate of T0 tended to more accurate. However, even with 1,000 samples, T0 had a type-I error 1.8 \u00d7 10\u20135, an 18-fold inflation. This set of simulations demonstrates the necessity and accuracy of the p-value approximation based on skewness and kurtosis correction.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17474,
+                    "infons": {
+                        "section_title_1": "GWAS of Microbiome Diversity in Adjacent Normal Lung Tissues",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We applied our method to a set of lung cancer patient samples in the EAGLE study [25] with both genome-wide genetic data [31] and microbiome data from adjacent, noncancer tissues. The microbiome data were obtained by sequencing 16S rRNA V3-V4 region amplicons on the Illumina MiSeq sequencing platform. Details for data quality control were presented in previous paper [23]. After quality control, 147 samples with at least 1,000 high-quality sequence reads were left for genetic association analysis. We tested associations for 383,262 common, autosomal SNPs with MAF \u2265 10%.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18109,
+                    "infons": {
+                        "section_title_1": "GWAS of Microbiome Diversity in Adjacent Normal Lung Tissues",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Similar to the simulation study, we used 14 distance matrices for association analysis: unweighted and weighted UniFrac distance matrices, Euclidean distance matrices for six levels (species, genus, family, order, class, and phylum), and rank-based distance matrices for the same six levels. We calculated the correlation for each pair of score statistics cor(Zi, Zj), as reported in figure 3. The six score statistics based on Euclidean distance matrices were highly correlated. The six score statistics based on rank distance matrices were also highly correlated. However, the score statistics had low correlation between Euclidean and rank-based distance matrices. The score statistics based on UniFrac distance matrices were not highly correlated with those based on distance matrices calculated based on taxa RA.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18926,
+                    "infons": {
+                        "section_title_1": "GWAS of Microbiome Diversity in Adjacent Normal Lung Tissues",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We tested genetic associations for 383,262 SNPs using both T0 and T1. The QQ plot for T0 dramatically deviated from the global null hypothesis (fig. 4), suggesting a systematic bias when evaluating p values. The QQ plot for T1 did not deviate from the global null hypothesis (fig. 4), which is expected given the small sample size. These results suggest that our methods for adjusting skewness and kurtosis can produce accurate p values even for studies with small sample sizes. The top SNP rs1334079 had p < 10\u20139 based on T0, but its significance dropped to 1.7 \u00d7 10\u20136 based on T1, suggesting the huge impact of skewness and kurtosis when evaluating small p values.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19592,
+                    "infons": {
+                        "section_title_1": "GWAS of Microbiome Diversity in Adjacent Normal Lung Tissues",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We did not identify SNPs achieving genome-wide significance, primarily because of the small sample size. Table 3 presents the results for the top four SNPs (each from four genetic loci) with p < 10\u20135. For each SNP, we report the score statistic values (after adjusting for skewness and kurtosis) for the 14 distance matrices. The strongest association may come from different distance matrices, indicating the importance of testing multiple distance matrices for associations. These results are based on a small study and need to be replicated in future study to establish biological significance.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20189,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In this paper, we develop a statistical method for identifying host genetic variants associated with human microbiome composition by testing multiple microbiome distance matrices. We define the overall statistic as the strongest association across tested distance matrices, adjusted for multiple testing. The complexity of calculating statistics is N2 \u00d7 K \u00d7 L, where N is the sample size, K is the number of microbiome distance matrices, and L is the number of SNPs in GWAS. It is computationally infeasible to perform permutations to derive significance for a large-scale GWAS. Thus, the primary challenge is to evaluate the significance. Our method for efficiently and accurately evaluating significance relies on two theoretical investigations. First, we corrected the score statistics for their skewness and kurtosis, and we found that the corrected score statistics follow a multivariate distribution under the null hypothesis. Second, we demonstrated that the correlation matrix of the score statistics is numerically constant for SNPs with different MAF; thus, we only need to calculate the correlation matrix once and use it for all SNPs. The accuracy of the method was verified by large-scale simulations.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21413,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "We applied the method to the EAGLE lung microbiome GWAS with 147 samples. As expected, we did not identify genome-wide significant SNPs because of limited statistical power. Using this empirical example, we show that correcting for the skewness and kurtosis of score statistics, induced by the dependence of pairwise distances, is crucial for evaluating significance. The p-value approximation based on the asymptotic theory gives a liberal p value, particularly for small p values and when sample size is small. Importantly, our method eliminated the deviation in the QQ plot.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21990,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Currently, our method was developed for genotyped SNPs. We are working to extend the method to handle imputed SNPs by modelling the imputation uncertainty, which will allow convenient meta-analysis in the future. Another extension will be to test genetic interaction with microbiome composition for many distance matrices. This extension may be valuable for alterations of the microbiome not only by genetics but also by environmental factors such as smoking, diets, and medications. Finally, we point out that we have used the strongest association T1 = max1 \u2264 t \u2264 t K\nqt in equation 10 as the overall statistic, as was also used in MiRKAT [24]. This statistic is optimal only when associations are driven by one single matrix. Where multiple distance matrices are independently associated with a SNP, many other statistics may be used to achieve a robust statistical power when the true alternative hypothesis is unknown. These statistics include weighted sum statistic, rank truncated product method (RTP) [32], adaptive RTP (ARTP) [33, 34], and truncated product method (TPM) [32]. However, computationally expensive permutations are required to evaluate significance for these more complex statistics.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23196,
+                    "infons": {
+                        "section_title_1": "Acknowledgements",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "This study utilized the high-performance computational capabilities of the Biowulf Linux cluster at the National Institutes of Health, Bethesda, MD (http://biowulf.nih.gov). The project was supported by the NIH Intramural Research program. The authors thank Dr. Mitchell H. Gail from the National Cancer Institute for valuable suggestions to the project.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23566,
+                    "infons": {
+                        "section_title_1": "Appendix",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "We calculate \u03c112 = cor0 (Z1, Z2|D1, D2) under H0, where Dk (k = 1, 2) is a given distance matrix, Zk is the score statistic correspond ing to Dk. Because\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23728,
+                    "infons": {
+                        "section_title_1": "Appendix",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "When (i, j, m, n) are distinct, cov (Gij, Gmn) = 0 because Gij =|gi \u2013 gi| and Gmn = |gm \u2013 gn| are independent. Based on this observation, one can verify that\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23886,
+                    "infons": {
+                        "section_title_1": "Appendix",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Here,\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23892,
+                    "infons": {
+                        "section_title_1": "Appendix",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Next, we calculate var(Gij) and cov(Gij, Gik). Let ft = P(gi = t) with f0 + f1 + f2 = 1. Tedious but straightforward calculations lead to the following results:\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24053,
+                    "infons": {
+                        "section_title_1": "Appendix",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Combining A1\u2013A6 proves equation 6 in the main text.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24104,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Disclosure Statement",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24133,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "The authors declare no conflict of interest.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24177,
+                    "infons": {
+                        "title": "Sequencing technologies \u2013 the next generation",
+                        "journal": "Nat Rev Genet",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Metzker ML: Sequencing technologies \u2013 the next generation. Nat Rev Genet2010; 11: 31\u201346. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24304,
+                    "infons": {
+                        "title": "QIIME allows analysis of high-throughput community sequencing data",
+                        "journal": "Nat Methods",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Caporaso JG, Kuczynski J, Stombaugh J, Bittinger K, Bushman FD, Costello EK, Fierer N, Pena AG, Goodrich JK, Gordon JI, Huttley GA, Kelley ST, Knights D, Koenig JE, Ley RE, Lozupone CA, McDonald D, Muegge BD, Pirrung M, Reeder J, Sevinsky JR, Turnbaugh PJ, Walters WA, Widmann J, Yatsunenko T, Zaneveld J, Knight R: QIIME allows analysis of high-throughput community sequencing data. Nat Methods2010; 7: 335\u2013336. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24764,
+                    "infons": {
+                        "title": "UCHIME improves sensitivity and speed of chimera detection",
+                        "journal": "Bioinformatics",
+                        "volume": "27",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Edgar RC, Haas BJ, Clemente JC, Quince C, Knight R: UCHIME improves sensitivity and speed of chimera detection. Bioinformatics2011; 27: 2194\u20132200. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24958,
+                    "infons": {
+                        "title": "Quality-filtering vastly improves diversity estimates from Illumina amplicon sequencing",
+                        "journal": "Nat Methods",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Bokulich NA, Subramanian S, Faith JJ, Gevers D, Gordon JI, Knight R, Mills DA, Caporaso JG: Quality-filtering vastly improves diversity estimates from Illumina amplicon sequencing. Nat Methods2013; 10: 57\u201359. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25214,
+                    "infons": {
+                        "title": "A core gut microbiome in obese and lean twins",
+                        "journal": "Nature",
+                        "volume": "457",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Turnbaugh PJ, Hamady M, Yatsunenko T, Cantarel BL, Duncan A, Ley RE, Sogin ML, Jones WJ, Roe BA, Affourtit JP, Egholm M, Henrissat B, Heath AC, Knight R, Gordon JI: A core gut microbiome in obese and lean twins. Nature2009; 457: 480\u2013484. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25499,
+                    "infons": {
+                        "title": "Gut check: testing a role for the intestinal microbiome in human obesity",
+                        "journal": "Sci Transl Med",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Flier JS, Mekalanos JJ: Gut check: testing a role for the intestinal microbiome in human obesity. Sci Transl Med2009; 1: 6ps7. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25654,
+                    "infons": {
+                        "title": "Human gut microbiome and risk for colorectal cancer",
+                        "journal": "J Natl Cancer Inst",
+                        "volume": "105",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Ahn J, Sinha R, Pei Z, Dominianni C, Wu J, Shi J, Goedert JJ, Hayes RB, Yang L: Human gut microbiome and risk for colorectal cancer. J Natl Cancer Inst2013; 105: 1907\u20131911. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25874,
+                    "infons": {
+                        "title": "Diversity and composition of the adult fecal microbiome associated with history of cesarean birth or appendectomy: analysis of the American Gut Project",
+                        "journal": "EBioMedicine",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Goedert JJ, Hua X, Yu G, Shi J: Diversity and composition of the adult fecal microbiome associated with history of cesarean birth or appendectomy: analysis of the American Gut Project. EBioMedicine2014; 1: 167\u2013172. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26136,
+                    "infons": {
+                        "title": "Investigation of the association between the fecal microbiota and breast cancer in post-menopausal women: a population-based case-control pilot study",
+                        "journal": "J Natl Cancer Inst",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Goedert JJ, Jones G, Hua X, Xu X, Yu G, Flores R, Falk RT, Gail MH, Shi J, Ravel J, Feigelson SH: Investigation of the association between the fecal microbiota and breast cancer in post-menopausal women: a population-based case-control pilot study. J Natl Cancer Inst2015; 1: 107: djv147. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26472,
+                    "infons": {
+                        "title": "Low counts of Faecalibacterium prausnitzii in colitis microbiota",
+                        "journal": "Inflamm Bowel Dis",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Sokol H, Seksik P, Furet JP, Firmesse O, Nion-Larmurier I, Beaugerie L, Cosnes J, Corthier G, Marteau P, Dore J: Low counts of Faecalibacterium prausnitzii in colitis microbiota. Inflamm Bowel Dis2009; 15: 1183\u20131189. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Faecalibacterium prausnitzii",
+                            "infons": {
+                                "identifier": "NCBI:txid853",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 00:15:49",
+                                "parent_taxonomic_id": "NCBI:txid216851"
+                            },
+                            "id": "665822",
+                            "locations": {
+                                "length": 28,
+                                "offset": 26603
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26718,
+                    "infons": {
+                        "title": "Variations of oral microbiota are associated with pancreatic diseases including pancreatic cancer",
+                        "journal": "Gut",
+                        "volume": "61",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Farrell JJ, Zhang L, Zhou H, Chia D, Elashoff D, Akin D, Paster BJ, Joshipura K, Wong DT: Variations of oral microbiota are associated with pancreatic diseases including pancreatic cancer. Gut2012; 61: 582\u2013588. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26977,
+                    "infons": {
+                        "title": "Oral microbiome and oral and gastrointestinal cancer risk",
+                        "journal": "Cancer Causes Control",
+                        "volume": "23",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Ahn J, Chen CY, Hayes RB: Oral microbiome and oral and gastrointestinal cancer risk. Cancer Causes Control2012; 23: 399\u2013404. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27150,
+                    "infons": {
+                        "title": "Murine gut microbiota is defined by host genetics and modulates variation of metabolic traits",
+                        "journal": "PLoS One",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. McKnite AM, Perez-Munoz ME, Lu L, Williams EG, Brewer S, Andreux PA, Bastiaansen JWM, Wang XS, Kachman SD, Auwerx J, Williams RW, Benson AK, Peterson DA, Ciobanu DC: Murine gut microbiota is defined by host genetics and modulates variation of metabolic traits. PLoS One2012; 7: e39191. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27484,
+                    "infons": {
+                        "title": "Individuality in gut microbiota composition is a complex polygenic trait shaped by multiple environmental and host genetic factors",
+                        "journal": "Proc Natl Acad Sci USA",
+                        "volume": "107",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Benson AK, Kelly SA, Legge R, Ma F, Low SJ, Kim J, Zhang M, Oh PL, Nehrenberg D, Hua K, Kachman SD, Moriyama EN, Walter J, Peterson DA, Pomp D: Individuality in gut microbiota composition is a complex polygenic trait shaped by multiple environmental and host genetic factors. Proc Natl Acad Sci USA2010; 107: 18933\u201318938. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27854,
+                    "infons": {
+                        "title": "Host genetic variation impacts microbiome composition across human body sites",
+                        "journal": "Genome Biol",
+                        "volume": "16",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Blekhman R, Goodrich JK, Huang K, Sun Q, Bukowski R, Bell JT, Spector TD, Keinan A, Ley RE, Gevers D, Clark AG: Host genetic variation impacts microbiome composition across human body sites. Genome Biol2015; 16: 191. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28119,
+                    "infons": {
+                        "title": "Complex host genetics influence the microbiome in inflammatory bowel disease",
+                        "journal": "Genome Med",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Knights D, Silverberg MS, Weersma RK, Gevers D, Dijkstra G, Huang H, Tyler AD, van Sommeren S, Imhann F, Stempak JM, Huang H, Vangay P, Al-Ghalith GA, Russell C, Sauk J, Knight J, Daly MJ, Huttenhower C, Xavier RJ: Complex host genetics influence the microbiome in inflammatory bowel disease. Genome Med2014; 6: 107. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28484,
+                    "infons": {
+                        "title": "Human genetics shape the gut microbiome",
+                        "journal": "Cell",
+                        "volume": "159",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Goodrich JK, Waters JL, Poole AC, Sutter JL, Koren O, Blekhman R, Beaumont M, Van Treuren W, Knight R, Bell JT, Spector TD, Clark AG, Ley RE: Human genetics shape the gut microbiome. Cell2014; 159: 789\u2013799. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28739,
+                    "infons": {
+                        "title": "An ordination of upland forest communities of southern Wisconsin",
+                        "journal": "Ecol Monogr",
+                        "volume": "27",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Bray JR, Curtis T: An ordination of upland forest communities of southern Wisconsin. Ecol Monogr1957; 27: 325\u2013349. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28874,
+                    "infons": {
+                        "title": "UniFrac: a new phylogenetic method for comparing microbial communities",
+                        "journal": "Appl Environ Microbiol",
+                        "volume": "71",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Lozupone C, Knight R: UniFrac: a new phylogenetic method for comparing microbial communities. Appl Environ Microbiol2005; 71: 8228\u20138235. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29059,
+                    "infons": {
+                        "title": "Quantitative and qualitative beta diversity measures lead to different insights into factors that structure microbial communities",
+                        "journal": "Appl Environ Microbiol",
+                        "volume": "73",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Lozupone CA, Hamady M, Kelley ST, Knight R: Quantitative and qualitative beta diversity measures lead to different insights into factors that structure microbial communities. Appl Environ Microbiol2007; 73: 1576\u20131585. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29325,
+                    "infons": {
+                        "title": "UniFrac \u2013 an online tool for comparing microbial community diversity in a phylogenetic context",
+                        "journal": "BMC Bioinformatics",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Lozupone C, Hamady M, Knight R: UniFrac \u2013 an online tool for comparing microbial community diversity in a phylogenetic context. BMC Bioinformatics2006; 7: 371. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29533,
+                    "infons": {
+                        "title": "Associating microbiome composition with environmental covariates using generalized UniFrac distances",
+                        "journal": "Bioinformatics",
+                        "volume": "28",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Chen J, Bittinger K, Charlson ES, Hoffmann C, Lewis J, Wu GD, Collman RG, Bushman FD, Li H: Associating microbiome composition with environmental covariates using generalized UniFrac distances. Bioinformatics2012; 28: 2106\u20132113. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29810,
+                    "infons": {
+                        "title": "MicrobiomeGWAS: a tool for identifying host genetic variants associated with microbiome composition",
+                        "journal": "BioRxiv",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Hua X, Song L, Yu G, Goedert J, Abnet C, Landi M, Shi J: MicrobiomeGWAS: a tool for identifying host genetic variants associated with microbiome composition. BioRxiv, 2015, DOI: 10.1101/031187. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30035,
+                    "infons": {
+                        "title": "Testing in microbiome-profiling studies with MiRKAT, the Microbiome Regression-Based Kernel Association Test",
+                        "journal": "Am J Hum Genet",
+                        "volume": "96",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Zhao N, Chen J, Carroll IM, Ringel-Kulka T, Epstein MP, Zhou H, Zhou JJ, Ringel Y, Li H, Wu MC: Testing in microbiome-profiling studies with MiRKAT, the Microbiome Regression-Based Kernel Association Test. Am J Hum Genet2015; 96: 797\u2013807. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30322,
+                    "infons": {
+                        "title": "Environment And Genetics in Lung cancer Etiology (EAGLE) study: an integrative population-based case-control study of lung cancer",
+                        "journal": "BMC Public Health",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Landi MT, Consonni D, Rotunno M, Bergen AW, Goldstein AM, Lubin JH, Goldin L, Alavanja M, Morgan G, Subar AF, Linnoila I, Previdi F, Corno M, Rubagotti M, Marinelli B, Albetti B, Colombi A, Tucker M, Wacholder S, Pesatori AC, Caporaso NE, Bertazzi PA: Environment And Genetics in Lung cancer Etiology (EAGLE) study: an integrative population-based case-control study of lung cancer. BMC Public Health2008; 8: 203. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30784,
+                    "infons": {
+                        "title": "Mapping quantitative trait loci in oligogenic models",
+                        "journal": "Biostatistics",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Tang HK, Siegmund D: Mapping quantitative trait loci in oligogenic models. Biostatistics2001; 2: 147\u2013162. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30919,
+                    "infons": {
+                        "title": "Numerical computation of multivariate normal probabilities",
+                        "journal": "J Comput Graph Stat",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Genz A: Numerical computation of multivariate normal probabilities. J Comput Graph Stat1992; 1: 10. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31039,
+                    "infons": {
+                        "title": "Comparison of methods for the computation of multivariate normal probabilities",
+                        "journal": "Comput Sci Stat",
+                        "volume": "25",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Genz A: Comparison of methods for the computation of multivariate normal probabilities. Comput Sci Stat1993; 25: 400\u2013405. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31181,
+                    "infons": {
+                        "title": "The maximum of a function of a Markov chain and application to linkage analysis",
+                        "journal": "Adv Appl Probab",
+                        "volume": "31",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Tu IP, Siegmund D: The maximum of a function of a Markov chain and application to linkage analysis. Adv Appl Probab1999; 31: 510\u2013531. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31335,
+                    "infons": {
+                        "journal": "Sequential Analysis: Tests and Confidence Intervals",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Siegmund D: Sequential Analysis: Tests and Confidence Intervals. New York, Springer, 1985. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31446,
+                    "infons": {
+                        "title": "A genome-wide association study of lung cancer identifies a region of chromosome 5p15 associated with risk for adenocarcinoma",
+                        "journal": "Am J Hum Genet",
+                        "volume": "85",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Landi MT, Chatterjee N, Yu K, et al.: A genome-wide association study of lung cancer identifies a region of chromosome 5p15 associated with risk for adenocarcinoma. Am J Hum Genet2009; 85: 679\u2013691. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31692,
+                    "infons": {
+                        "title": "Combining p values in large-scale genomics experiments",
+                        "journal": "Pharm Stat",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Zaykin DV, Zhivotovsky LA, Czika W, Shao S, Wolfinger RD: Combining p values in large-scale genomics experiments. Pharm Stat2007; 6: 217\u2013226. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31882,
+                    "infons": {
+                        "title": "Pathway analysis by adaptive combination of P-values",
+                        "journal": "Genet Epidemiol",
+                        "volume": "33",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Yu K, Li Q, Bergen AW, Pfeiffer RM, Rosenberg PS, Caporaso N, Kraft P, Chatterjee N: Pathway analysis by adaptive combination of P-values. Genet Epidemiol2009; 33: 700\u2013709. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32103,
+                    "infons": {
+                        "title": "Efficient computation of significance levels for multiple associations in large studies of correlated data, including genomewide association studies",
+                        "journal": "Am J Hum Genet",
+                        "volume": "75",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Dudbridge F, Koeleman BP: Efficient computation of significance levels for multiple associations in large studies of correlated data, including genomewide association studies. Am J Hum Genet2004; 75: 424\u2013435. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

@@ -1,0 +1,3194 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC5443090",
+            "inputfile": "../microbiome_corpus_HTML\\PMC5443090.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Changes in vaginal community state types reflect major shifts in the microbiome",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 79,
+                    "infons": {
+                        "section_title_1": "ABSTRACT",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "\nBackground: Recent studies of various human microbiome habitats have revealed thousands of bacterial species and the existence of large variation in communities of microorganisms in the same habitats across individual human subjects. Previous efforts to summarize this diversity, notably in the human gut and vagina, have categorized microbiome profiles by clustering them into community state types (CSTs). The functional relevance of specific CSTs has not been established.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 563,
+                    "infons": {
+                        "section_title_1": "ABSTRACT",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "\nObjective: We investigate whether CSTs can be used to assess dynamics in the microbiome.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 652,
+                    "infons": {
+                        "section_title_1": "ABSTRACT",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "\nDesign: We conduct a re-analysis of five sequencing-based microbiome surveys derived from vaginal samples with repeated measures.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 782,
+                    "infons": {
+                        "section_title_1": "ABSTRACT",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "\nResults: We observe that detection of a CST transition is largely insensitive to choices in methods for normalization or clustering. We find that healthy subjects persist in a CST for two to three weeks or more on average, while those with evidence of dysbiosis tend to change more often. Changes in CST can be gradual or occur over less than one day. Upcoming CST changes and switches to high-risk CSTs can be predicted with high accuracy in certain scenarios. Finally, we observe that presence of Gardnerella vaginalis is a strong predictor of an upcoming CST change.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Gardnerella vaginalis",
+                            "infons": {
+                                "identifier": "NCBI:txid2702",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:58:19",
+                                "parent_taxonomic_id": "NCBI:txid2701"
+                            },
+                            "id": "40935282",
+                            "locations": {
+                                "length": 21,
+                                "offset": 1282
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 1352,
+                    "infons": {
+                        "section_title_1": "ABSTRACT",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "\nConclusion: Overall, our results show that the CST concept is useful for studying microbiome dynamics.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1455,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The human microbiome consists of many microorganism communities that reside in various body habitats. While the presence of human microbiomes has been documented for several decades, there has been a recent surge of research linking the microbiome with human health and disease. This growth in microbiome-related knowledge has been facilitated primarily by next-generation sequencing; specifically, sequencing of 16S ribosomal RNA enables quantification of relative abundance of the different species residing in these environments. As microbiome profiling has revealed large variation among individuals and over time, efforts have been made to categorize or cluster microbiome profiles into a small number of community state types (CSTs).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2206,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Previous studies have used CSTs to summarize the microbial communities observed in the human vagina and the human gut. Vagitypes [1] are widely used as prototypes in the interpretation of vaginal microbiome data,[1\u20136] while enterotypes are somewhat more controversial [7] as prototypes for the gut microbiome.[8,9] Despite their common usage, it is not well established whether CSTs indeed represent fundamental biological states and whether they can provide valuable clinical information.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2695,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In this paper we investigate the stability of CSTs across different datasets and their predictive ability especially with respect to microbial shifts. We concentrate on CSTs since they offer a reduction in data complexity that has the potential to facilitate subsequent analysis and discovery, and they also simplify the interpretation of high-dimensional data for possible clinical decision support. Establishing their utility in diagnostics and discovery has potential benefits for microbiome research.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3199,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "A variety of normalization methods have been suggested for microbiome sequence counts data, and there are many options for clustering procedures for defining CSTs. Choices in normalization and clustering methods can lead to artifacts when evaluating specific datasets with respect to CSTs. Though CSTs have been used in the literature, they have not been evaluated rigorously, either statistically or clinically.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3611,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "CSTs have the potential to be useful clinically, especially for assessment of bacterial vaginosis (BV), the most common cause of vaginitis. A single species often dominates the vaginal microbiome, which has implications for vaginal health. For example, Lactobacillus species are often a majority among bacteria; they consume glycogen from the epithelium and produce lactic acid, thereby lowering the pH of the vagina and preventing colonization by pathogens. Among lactobacilli, Lactobacillus iners is considered among the least protective in part because it is associated with a higher pH and can co-occur with BV-associated bacteria.[10,11] Species such as Gardnerella vaginalis,[12\u201315] Sneathia amnii,[16,17] BVAB1,[18] and other non-lactobacilli are associated with dysbiosis. BV is generally characterized by low levels of Lactobacillus spp. and/or an increase in Gram-negative anaerobes. BV is highly recurrent, with recurrence occurring in up to 60% of subjects within one year. Moreover, up to 84% of women may have a shift in vaginal microbiota associated with BV without clinical symptoms.[19] Given the polymicrobial nature of BV infection, we investigate if changes in vaginal microbial composition over time may be used to predict BV infection or recurrence by indicating upcoming shifts to high-risk states. Changes in the microbial community composition may be precursors to changes in health, and may provide more etiologic information regarding prognosis.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Lactobacillus",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:58:41",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "40935283",
+                            "locations": {
+                                "length": 13,
+                                "offset": 3864
+                            }
+                        },
+                        {
+                            "text": "Lactobacillus iners",
+                            "infons": {
+                                "identifier": "NCBI:txid147802",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:58:42",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935285",
+                            "locations": {
+                                "length": 19,
+                                "offset": 4090
+                            }
+                        },
+                        {
+                            "text": "Gardnerella",
+                            "infons": {
+                                "identifier": "NCBI:txid2701",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:58:44",
+                                "parent_taxonomic_id": "NCBI:txid31953"
+                            },
+                            "id": "40935286",
+                            "locations": {
+                                "length": 11,
+                                "offset": 4270
+                            }
+                        },
+                        {
+                            "text": "Sneathia",
+                            "infons": {
+                                "identifier": "NCBI:txid168808",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:58:44",
+                                "parent_taxonomic_id": "NCBI:txid1129771"
+                            },
+                            "id": "40935287",
+                            "locations": {
+                                "length": 8,
+                                "offset": 4300
+                            }
+                        },
+                        {
+                            "text": "Lactobacillus spp.",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:58:45",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "40935288",
+                            "locations": {
+                                "length": 18,
+                                "offset": 4439
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 5083,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In this work we provide an in-depth analysis of CSTs of the vaginal microbiome to assess their predictive value. Rather than assessing which CST method is best at reflecting clinical data, we first demonstrate that detecting major shifts in the microbiome as indicated by CST transitions is largely independent of the CST definition method. We then evaluate whether there is a similarity across datasets in patterns that are suggestive of mechanisms for shifts in microbial flora, and whether CSTs can be used as a tool to discover mechanisms involved in such shifts. Specifically, we analyze the time scales of CST transitions, the expected persistence of a particular CST, the frequency of transitions between CSTs, the relationship of CST with changes in Nugent score and pH, the ability to predict CST transitions, and the bacteria that may be harbingers of CST transitions. Our findings demonstrate that vaginal CSTs are predictive of changes in the future bacterial environment.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:58:59",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "40935289",
+                            "locations": {
+                                "length": 8,
+                                "offset": 5910
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 6067,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Data sources",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We used five datasets that have two or more longitudinal vaginal samples per subject for this analysis. Four of the datasets are derived from amplicon-based surveys and one is based on whole metagenome shotgun sequencing (WMGSS). The studies employed different protocols and include varying amounts of clinical data so that a pooled analysis is not possible.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6458,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Data sources",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The amplicon-based datasets were generated by 454 pyrosequencing while the WMGSS data was generated by Illumina sequencing. The datasets will be referred to as: ravel,[2] gajer,[3] chaban,[20] hmp,[21] and vahmp,[22] where the names correspond to prefixes in the data structures in the R code. The R code and output are in Supplemental Files 1\u20136, and the data except for the vahmp data are in Supplemental File 7. Sources and characteristics of the datasets are contained in Table 1. All studies included non-pregnant healthy women of reproductive age; two of the datasets also included women with diagnoses of BV. Each dataset includes species-level assignments of reads based on alignment to a reference database.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7174,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Data sources",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The ravel dataset comprises data collected daily over two menstrual cycles obtained from 25 women of reproductive age via self-sampling, yielding a total of 1657 samples. Of the 25 women, 15 were diagnosed with symptomatic BV according to the Amsel criteria [23] and self-reported symptoms, six were diagnosed with asymptomatic BV, and four received no diagnosis throughout the course of the study. We exclude from our analysis data from time points for which sequence information is not available, including 10 samples from eight subjects at times corresponding to diagnoses of symptomatic BV and 21 samples from 13 subjects at times corresponding to diagnoses of asymptomatic BV. We considered samples to be consecutive for evaluating CST changes if they were collected one day apart.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7960,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Data sources",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The gajer dataset comprises data from 32 women who self-sampled twice weekly for 16\u00a0weeks as part of a douching cessation study.[24] Women were of reproductive age, healthy and not pregnant throughout the study. Each woman reported that she had used douching products in the two months prior to the study, and that she had a regular menstrual cycle. Use of douching products was continued through the first four weeks, and stopped for the remaining 12\u00a0weeks. We considered samples to be consecutive for evaluating CST changes if there were six days or less between collections.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8537,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Data sources",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The chaban dataset comprises data from clinician-collected samples from 27 women. Microbial sequence data are available for two to four samples per subject collected weekly. Exclusion criteria included pregnancy, autoimmune conditions, use of hormonal contraceptives, use of antibiotic or antifungal medications, and irregular menstrual cycles.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8881,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Data sources",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The hmp dataset comprises data from two or three clinician-collected samples from 63 women separated by 1\u201311\u00a0months. Volunteers were between 18 and 40\u00a0years of age, and had passed a screening that included exclusion criteria for pregnancy, high or low body mass, oral health, drug use, and history of cancer. The sequence data were processed using MetaPhlAn2 [25] to generate relative abundances of taxa at different levels of resolution. For this study, we used only species-level proportions.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9375,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Data sources",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The vahmp dataset comprises data from two clinician-collected samples from 141 women separated by 1\u201331\u00a0months. Pregnant subjects were excluded. Of 282 samples, 90 (31.9%) were associated with a diagnosis of BV by the Amsel criteria at the time of collection. The remaining samples were not associated with any diagnosis.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9695,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Data analysis",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Unless otherwise noted, analysis was performed and visualizations created using the R language and environment for statistical computing,[27] including packages Biobase,[28] compositions,[29] DESeq2,[30] edgeR,[31] entropy,[32] expm,[33] ggplot2,[34] gridExtra,[35] knitr,[36] markovchain,[37] mcc,[38] msm,[39] phyloseq,[40] pROC,[41] randomForest,[42] reshape2,[43] rgl,[44] rglwidget,[45] and sigclust2.[46]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10118,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Identifying community state types",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "CSTs are usually defined using hierarchical clustering based on a dissimilarity measure.[3,10,20] For each dataset, we used pairwise Bray\u2013Curtis (BC) dissimilarities as the input to clustering; the profiles consisted of taxa proportions for each sample. As in previous studies of the vaginal microbiome where samples were clustered into five CSTs,[3,10,20] we used Ward\u2019s method for hierarchical clustering which creates clusters that result in the smallest increase in total within-cluster variance, measured as the sum-of-squared Euclidean distances between points.[47]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10729,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Identifying community state types",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Scree plots for the within-cluster distances (Supplemental File 2) indicate that the distances drop noticeably after 4\u20135 clusters. However, for none of the datasets does the scree plot have a sharp bend in the curve denoting a clear indication of the number of naturally-occurring clusters.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11019,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Characteristic taxa of CSTs ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "\nFigure 1 summarizes the CST assignments for each of the datasets; Table 2 summarizes CST assignments and compares them to the CSTs identified in [3,10]. Roman numerals are used to denote the CSTs defined in [3,10] and Arabic numerals are used to denote the CSTs based on our clustering.\n\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11336,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Characteristic taxa of CSTs ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Most CSTs are characterized by a single predominant bacterium. CST 1 contains samples that are mostly comprised of L. crispatus and few other bacteria. This CST, common to all datasets, would traditionally be considered low risk because of the protective role of L. crispatus and low diversity. Samples assigned to CST 3 contain mostly L. iners.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "L. crispatus",
+                            "infons": {
+                                "identifier": "NCBI:txid47770",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:46",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935290",
+                            "locations": {
+                                "length": 12,
+                                "offset": 11451
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:47",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "40935291",
+                            "locations": {
+                                "length": 8,
+                                "offset": 11478
+                            }
+                        },
+                        {
+                            "text": "L. crispatus",
+                            "infons": {
+                                "identifier": "NCBI:txid47770",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:48",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935292",
+                            "locations": {
+                                "length": 12,
+                                "offset": 11599
+                            }
+                        },
+                        {
+                            "text": "L. iners",
+                            "infons": {
+                                "identifier": "NCBI:txid147802",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:49",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935293",
+                            "locations": {
+                                "length": 8,
+                                "offset": 11672
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 11681,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Characteristic taxa of CSTs ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The ravel and vahmp datasets were the only datasets with samples from subjects receiving a diagnosis of BV, and have unique CSTs. For these datasets, the CST with the most samples is CST 6, characterized by G. vaginalis. The ravel dataset has a CST associated with the presence of G. vaginalis and L. iners (CST 9), and the vahmp dataset has a CST associated with BVAB1 (CST 7).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "G. vaginalis",
+                            "infons": {
+                                "identifier": "NCBI:txid2702",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:51",
+                                "parent_taxonomic_id": "NCBI:txid2701"
+                            },
+                            "id": "40935294",
+                            "locations": {
+                                "length": 12,
+                                "offset": 11888
+                            }
+                        },
+                        {
+                            "text": "G. vaginalis",
+                            "infons": {
+                                "identifier": "NCBI:txid2702",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:52",
+                                "parent_taxonomic_id": "NCBI:txid2701"
+                            },
+                            "id": "40935295",
+                            "locations": {
+                                "length": 12,
+                                "offset": 11962
+                            }
+                        },
+                        {
+                            "text": "L. iners",
+                            "infons": {
+                                "identifier": "NCBI:txid147802",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:52",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935296",
+                            "locations": {
+                                "length": 8,
+                                "offset": 11979
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 12059,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Characteristic taxa of CSTs ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Other bacteria that are common in certain CSTs but not others across the datasets include L. jensenii, L. gasseri, Atopobium, Bifidobacterium, Fusobacterium, and S. agalactiae (Group B Streptococcus \u2013 GBS).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:53",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "40935297",
+                            "locations": {
+                                "length": 8,
+                                "offset": 12065
+                            }
+                        },
+                        {
+                            "text": "L. jensenii",
+                            "infons": {
+                                "identifier": "NCBI:txid109790",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:53",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935298",
+                            "locations": {
+                                "length": 11,
+                                "offset": 12149
+                            }
+                        },
+                        {
+                            "text": "L. gasseri",
+                            "infons": {
+                                "identifier": "NCBI:txid1596",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:53",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935299",
+                            "locations": {
+                                "length": 10,
+                                "offset": 12162
+                            }
+                        },
+                        {
+                            "text": "Atopobium",
+                            "infons": {
+                                "identifier": "NCBI:txid1380",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:53",
+                                "parent_taxonomic_id": "NCBI:txid1643824"
+                            },
+                            "id": "40935300",
+                            "locations": {
+                                "length": 9,
+                                "offset": 12174
+                            }
+                        },
+                        {
+                            "text": "Bifidobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1678",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:53",
+                                "parent_taxonomic_id": "NCBI:txid31953"
+                            },
+                            "id": "40935301",
+                            "locations": {
+                                "length": 15,
+                                "offset": 12185
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid848",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:53",
+                                "parent_taxonomic_id": "NCBI:txid203492"
+                            },
+                            "id": "40935302",
+                            "locations": {
+                                "length": 13,
+                                "offset": 12202
+                            }
+                        },
+                        {
+                            "text": "S. agalactiae",
+                            "infons": {
+                                "identifier": "NCBI:txid1311",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:54",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "40935303",
+                            "locations": {
+                                "length": 13,
+                                "offset": 12221
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:54",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "40935304",
+                            "locations": {
+                                "length": 13,
+                                "offset": 12244
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 12265,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Characteristic taxa of CSTs ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Many samples are assigned to CSTs that are not characterized by the lactobacilli that are traditionally associated with vaginal health (L. crispatus and L. gasseri). At the same time, relatively few samples are associated with a diagnosis of BV. Microbiome profiles such as these could contain leading indicators of dysbiosis.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "L. crispatus",
+                            "infons": {
+                                "identifier": "NCBI:txid47770",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:55",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935306",
+                            "locations": {
+                                "length": 12,
+                                "offset": 12400
+                            }
+                        },
+                        {
+                            "text": "L. gasseri",
+                            "infons": {
+                                "identifier": "NCBI:txid1596",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:55",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935307",
+                            "locations": {
+                                "length": 10,
+                                "offset": 12418
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 12591,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Agreement with previously-defined CSTs ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The gajer dataset [3] included CST assignments. We compared our CST assignments to those in the original study.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12741,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Agreement with previously-defined CSTs ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Ravel et al. [10] first identified five CSTs that are distinguishable by whether they are dominated by lactobacilli and the Lactobacillus species present. The CSTs were dominated by L. crispatus in I, L. gasseri in II, L. iners in III, no Lactobacillus species in IV, and L. jensenii in V. In a longitudinal study, Gajer et al. [3] assigned samples from subjects to CSTs characterized by L. crispatus dominance for I, L. gasseri dominance for II, L. iners dominance for III, presence of L. crispatus and/or L. iners but no dominance for IV-A, and very little lactobacilli for IV-B.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Lactobacillus",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:59",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "40935309",
+                            "locations": {
+                                "length": 13,
+                                "offset": 12865
+                            }
+                        },
+                        {
+                            "text": "L. crispatus",
+                            "infons": {
+                                "identifier": "NCBI:txid47770",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 22:59:59",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935310",
+                            "locations": {
+                                "length": 12,
+                                "offset": 12923
+                            }
+                        },
+                        {
+                            "text": "L. gasseri",
+                            "infons": {
+                                "identifier": "NCBI:txid1596",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:00:00",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935311",
+                            "locations": {
+                                "length": 10,
+                                "offset": 12942
+                            }
+                        },
+                        {
+                            "text": "L. iners",
+                            "infons": {
+                                "identifier": "NCBI:txid147802",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:00:00",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935312",
+                            "locations": {
+                                "length": 8,
+                                "offset": 12960
+                            }
+                        },
+                        {
+                            "text": "Lactobacillus",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:00:00",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "40935313",
+                            "locations": {
+                                "length": 13,
+                                "offset": 12980
+                            }
+                        },
+                        {
+                            "text": "L. jensenii",
+                            "infons": {
+                                "identifier": "NCBI:txid109790",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:00:00",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935314",
+                            "locations": {
+                                "length": 11,
+                                "offset": 13013
+                            }
+                        },
+                        {
+                            "text": "L. crispatus",
+                            "infons": {
+                                "identifier": "NCBI:txid47770",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:00:01",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935315",
+                            "locations": {
+                                "length": 12,
+                                "offset": 13129
+                            }
+                        },
+                        {
+                            "text": "L. gasseri",
+                            "infons": {
+                                "identifier": "NCBI:txid1596",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:00:02",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935316",
+                            "locations": {
+                                "length": 10,
+                                "offset": 13159
+                            }
+                        },
+                        {
+                            "text": "L. iners",
+                            "infons": {
+                                "identifier": "NCBI:txid147802",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:00:02",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935317",
+                            "locations": {
+                                "length": 8,
+                                "offset": 13188
+                            }
+                        },
+                        {
+                            "text": "L. crispatus",
+                            "infons": {
+                                "identifier": "NCBI:txid47770",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:00:02",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935318",
+                            "locations": {
+                                "length": 12,
+                                "offset": 13228
+                            }
+                        },
+                        {
+                            "text": "L. iners",
+                            "infons": {
+                                "identifier": "NCBI:txid147802",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:00:03",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935319",
+                            "locations": {
+                                "length": 8,
+                                "offset": 13248
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 13322,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Agreement with previously-defined CSTs ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Our CST assignments for the gajer data have 92.6% agreement with the CSTs assigned in the original publication.[3] The discrepancies are in our assignment of samples to CSTs originally assigned to CST III, CST IV-A and CST IV-B (Supplemental File 2).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13572,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Agreement across CST definition methods ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We investigated how different choices for normalization and clustering for defining CSTs would affect the detection of a change in CST. We considered five methods: hierarchical clustering using BC dissimilarities, hierarchical clustering using Jensen\u2013Shannon divergences of counts normalized using DESeq2,[30] hierarchical clustering using Jensen\u2013Shannon divergences of proportions, a method based on the predominant taxon in each sample, and hierarchical clustering using the biological coefficient of variation (BCV) [48] (Supplemental Files 1 and 3). When data were normalized using DESeq2, a pseudo-count of 1 was added to the number of bacterial reads for each taxon. The method based on the predominant taxon assigns a CST to a sample based on the taxon for which the most reads were observed, provided that it comprises at least 30% of the sample; otherwise, no CST is assigned.[1] BCV measures dissimilarity while accounting for overdispersion.[49]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14568,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Agreement across CST definition methods ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "\nTable 3 summarizes the agreement among different CST assignment methods in identifying CST changes for the gajer data. The entry in each column indicates the proportion of transitions agreeing or disagreeing with the CST transitions reported by Gajer et al. [3]. The agreement is 78\u201392% across the different methods for defining CSTs (obtained by adding the diagonal elements for each CST method in Table 3). The method using BC dissimilarities agreed the most. Identifying the \u2018best\u2019 method is not possible because there is no ground truth for CST assignment. The analyses discussed in the remainder of the paper are based on BC dissimilarities.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15216,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "The time scale and persistence of community state types",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Longitudinal data can provide insight into the frequency of CST transitions, the length of time between transitions, and the expected amount of time that a subject remains in a particular CST. Differences in persistence based on CST have been observed but not quantified.[3,5,50,51]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15553,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "CST transitions can occur on short time scales ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "For the gajer dataset, Figure 2(a) contains a plot of the BC dissimilarities between microbiome profiles and the microbiome profile after the next CST change as a function of the number of days until the next CST change. Dissimilarities are normalized by subject by subtracting the mean and dividing by the standard deviation. The mean and standard deviation for five-day bins are plotted. If CST transitions occurred gradually, we would expect the average distance and the standard deviation to decrease as the day of a change approaches, indicating that samples make consistent movements towards the profile assigned to the new CST. In the figure we see that while there may be a slight trend to decreasing distance to the new CST over the 10\u201320\u00a0days preceding a transition, the variance in distance actually increases as a CST change approaches. Similar results are seen for the ravel dataset (Supplemental File 4). These results suggest that CST changes can reflect either abrupt shifts in microbiome profiles over less than a week or that they can reflect gradual changes, but not one or the other exclusively.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16716,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Frequency of CST transitions depends on the current CST ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We fit continuous-time Markov chain models to derive per-day CST transition rates and the expected time spent in each state before leaving for another state (persistence) for the daily (ravel), twice-weekly (gajer), and weekly sampled (chaban) data.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17021,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Frequency of CST transitions depends on the current CST ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Throughout this section we report point estimates and 95% confidence intervals. Note that the confidence intervals for transition probabilities are calculated based on the log of the intensities, and therefore may not be symmetric about the point estimate.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17277,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Frequency of CST transitions depends on the current CST ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "\nPersistence refers to the tendency of a subject\u2019s samples to remain in a CST. For the gajer data, the probability of remaining in a given state over the course of a week is 0.38 (0.22,0.50) for CST 4-A and at least 0.72 (0.61,0.79) for other CSTs (Figure 2(b)). High probabilities for remaining in the current state are seen for the chaban dataset, ranging from 0.60 (0.11,0.89) for CST 4-A to an observed absorbing state for CST 8. For the ravel dataset, which included several women diagnosed with BV, the probabilities for remaining in a given state over the course of a week were lower, and ranged between 0.38 (0.31,0.44) for CST 9 to 0.48 for CSTs 3, 5, and 6 ((0.37,0.55), (0.25,0.63), (0.37,0.55)).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17984,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Frequency of CST transitions depends on the current CST ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The expected number of days remaining in the current CST depends on the CST. For most CSTs, subjects spend one to three weeks in a given state. CST 6 for the ravel dataset, characterized by a mix of L. iners and G. vaginalis, had an expected persistence of 4.1\u00a0\u00b1\u00a00.80\u00a0days. Other CSTs in that dataset have expected sojourn times of approximately one week. For the healthy cohorts in the gajer and chaban datasets, the expected sojourn times are more than two weeks with one exception in each dataset. CST 4-A in the gajer and chaban datasets, characterized by high diversity, have expected persistences of 6.8\u00a0\u00b1\u00a02.7\u00a0days and 13.9\u00a0\u00b1\u00a019.4\u00a0days, respectively.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "L. iners",
+                            "infons": {
+                                "identifier": "NCBI:txid147802",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:00:48",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935321",
+                            "locations": {
+                                "length": 8,
+                                "offset": 18183
+                            }
+                        },
+                        {
+                            "text": "G. vaginalis",
+                            "infons": {
+                                "identifier": "NCBI:txid2702",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:00:48",
+                                "parent_taxonomic_id": "NCBI:txid2701"
+                            },
+                            "id": "40935322",
+                            "locations": {
+                                "length": 12,
+                                "offset": 18196
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 18640,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Frequency of CST transitions depends on the current CST ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Across the three datasets, the probability of transition to a CST 3 characterized by L. iners was among the highest transition probabilities. For the ravel dataset, the highest probabilities of transition were among CSTs 3, 6, and 9, which are characterized by L. iners and G. vaginalis. The weekly transition probabilities are between 0.15 (0.11,0.21) and 0.33 (0.26,0.38) for these CSTs. For the gajer dataset, the highest transition probabilities were for transitions to CST 3 (up to 0.21 (0.12,0.36)), characterized by L. iners, and from CST 3 and CST 4-A to high-risk CST 4-B (0.12 (0.080,0.17) and 0.16 (0.083,0.30)), characterized by A. vaginae. For the chaban dataset, the highest transition probabilities were for transitions to CST 3 (up to 0.35 (0.09,0.76)) and from CST 3 to low-risk CST 1 (0.21 (0.067,0.46)), characterized by L. crispatus. Across the three datasets, the transition probabilities to CST 3 were lowest for low-risk CSTs 2, 5, and 1 which are characterized by L. gasseri, L. jensenii, and L. crispatus, respectively (Supplemental File 4).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "L. iners",
+                            "infons": {
+                                "identifier": "NCBI:txid147802",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:00:53",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935323",
+                            "locations": {
+                                "length": 8,
+                                "offset": 18725
+                            }
+                        },
+                        {
+                            "text": "L. iners",
+                            "infons": {
+                                "identifier": "NCBI:txid147802",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:00:55",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935324",
+                            "locations": {
+                                "length": 8,
+                                "offset": 18901
+                            }
+                        },
+                        {
+                            "text": "G. vaginalis",
+                            "infons": {
+                                "identifier": "NCBI:txid2702",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:00:55",
+                                "parent_taxonomic_id": "NCBI:txid2701"
+                            },
+                            "id": "40935325",
+                            "locations": {
+                                "length": 12,
+                                "offset": 18914
+                            }
+                        },
+                        {
+                            "text": "L. iners",
+                            "infons": {
+                                "identifier": "NCBI:txid147802",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:00:57",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935326",
+                            "locations": {
+                                "length": 8,
+                                "offset": 19163
+                            }
+                        },
+                        {
+                            "text": "A. vaginae",
+                            "infons": {
+                                "identifier": "NCBI:txid82135",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:00:58",
+                                "parent_taxonomic_id": "NCBI:txid2767327"
+                            },
+                            "id": "40935327",
+                            "locations": {
+                                "length": 10,
+                                "offset": 19281
+                            }
+                        },
+                        {
+                            "text": "L. crispatus",
+                            "infons": {
+                                "identifier": "NCBI:txid47770",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:01:00",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935328",
+                            "locations": {
+                                "length": 12,
+                                "offset": 19480
+                            }
+                        },
+                        {
+                            "text": "L. gasseri",
+                            "infons": {
+                                "identifier": "NCBI:txid1596",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:01:02",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935329",
+                            "locations": {
+                                "length": 10,
+                                "offset": 19628
+                            }
+                        },
+                        {
+                            "text": "L. jensenii",
+                            "infons": {
+                                "identifier": "NCBI:txid109790",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:01:02",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935330",
+                            "locations": {
+                                "length": 11,
+                                "offset": 19640
+                            }
+                        },
+                        {
+                            "text": "L. crispatus",
+                            "infons": {
+                                "identifier": "NCBI:txid47770",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:01:02",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935331",
+                            "locations": {
+                                "length": 12,
+                                "offset": 19657
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 19706,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Frequency of CST transitions depends on the current CST ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The ravel dataset includes an indication of days on which BV medication was taken. Among samples corresponding to a woman\u2019s first day of treatment, three women were in CST 3, three were in CST 6, and seven were in CST 9 before medication began. Eleven of the samples collected after medication stopped were in CST 3 (characterized by L. iners), one transitioned to CST 9 (characterized by L. iners and G. vaginalis), and one transitioned to CST 1 (characterized by L. crispatus). We fit a continuous-time Markov chain for the ravel data with BV medication as a covariate for transitions from CST 6 to 3 and from CST 9 to 3. For samples corresponding to medication days, the probabilities of transitioning to (lower-risk) CST 3 were higher (0.19 (0.055,0.88) versus 0.014 (0.0082,0.033) and 0.65 (0.40,0.86) versus 0.073 (0.054,0.099) for one-day transitions.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "L. iners",
+                            "infons": {
+                                "identifier": "NCBI:txid147802",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:01:06",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935332",
+                            "locations": {
+                                "length": 8,
+                                "offset": 20040
+                            }
+                        },
+                        {
+                            "text": "L. iners",
+                            "infons": {
+                                "identifier": "NCBI:txid147802",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:01:07",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935333",
+                            "locations": {
+                                "length": 8,
+                                "offset": 20095
+                            }
+                        },
+                        {
+                            "text": "G. vaginalis",
+                            "infons": {
+                                "identifier": "NCBI:txid2702",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:01:07",
+                                "parent_taxonomic_id": "NCBI:txid2701"
+                            },
+                            "id": "40935334",
+                            "locations": {
+                                "length": 12,
+                                "offset": 20108
+                            }
+                        },
+                        {
+                            "text": "L. crispatus",
+                            "infons": {
+                                "identifier": "NCBI:txid47770",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:01:08",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935335",
+                            "locations": {
+                                "length": 12,
+                                "offset": 20171
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 20564,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Dynamic modeling of community state types, Nugent scores, and pH",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Dynamic models can characterize the actual flow of influence between various variables and can be used to forecast outcomes at any given time in the future. A natural tool for learning dynamic models, and handling both uncertainty and complexity, is provided by dynamic Bayesian networks (DBNs).[52] This framework enables modeling of high-dimensional processes with complex dependencies that are expressed as an interpretable network topology. DBNs naturally deal with missing data, using exact inference for small topologies, and a variety of approximate methods for large topologies. In our analysis, we used the structured proportional jump process (SCUP) [53] modeling framework which combines ideas from the fields of proportional hazard models [54] and continuous-time DBNs and allows for efficient modeling of non-homogeneous multi-component processes.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21488,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Dynamic modeling of community state types, Nugent scores, and pH",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Briefly, the SCUP modeling framework defines, for an outcome i, the probability of transition from state  at time t to state  at time , where  tends to 0, as:\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21647,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Dynamic modeling of community state types, Nugent scores, and pH",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "where the first factor on the right-hand side is the non-negative, time-dependent baseline rate; and the second factor considers the structural context of outcome i and expresses the effect that the joint state of its parents () and the features (x) has on the transition rate using the weight vector . An expectation maximization (EM) procedure is employed to estimate the model parameters from point observations and partially observed data; for more details, see [53]. We estimated each parameter\u2019s 95% confidence interval as \u00b11.96 times (because  for ) the standard deviation of the estimated parameter, computed using 250 bootstrap iterations. P-values were computed via Wald tests and FDR-adjusted to account for multiple hypothesis testing.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22394,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Dynamic modeling of community state types, Nugent scores, and pH",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We used SCUP (Matlab implementation) for modeling the dynamics of CST risk level, pH and Nugent score and their dependence on age, ethnicity, BV medication, and menses. High-risk CSTs are those associated with high Nugent scores and diagnosis of BV. The high-risk CSTs are CSTs 6 and 9 in the ravel data and CST 4-B in the gajer data. The remaining CSTs were labeled low risk. pH values were discretized to binary states, using a cutoff of 4.5, up to which vaginal pH is considered normal. Nugent scores, currently the diagnostic gold standard for BV,[55,56] are calculated using Gram staining of a clinical sample. Lower Nugent scores (<4) are the result of high numbers of Lactobacillus spp. and high Nugent scores (>6) occur when there are little or no Lactobacillus spp. present. Diagnosis of BV in samples with intermediate (4\u20136) levels of Lactobacillus spp. requires the presence of clue cells.[55] To improve numerical stability, we normalized continuous features to have zero mean and standard deviation of one. We further expanded categorical features into a collection of indicators.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Lactobacillus spp.",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:01:34",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "40935336",
+                            "locations": {
+                                "length": 18,
+                                "offset": 23069
+                            }
+                        },
+                        {
+                            "text": "Lactobacillus spp.",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:01:35",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "40935337",
+                            "locations": {
+                                "length": 18,
+                                "offset": 23150
+                            }
+                        },
+                        {
+                            "text": "Lactobacillus spp.",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:01:35",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "40935338",
+                            "locations": {
+                                "length": 18,
+                                "offset": 23239
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 23487,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Dynamic modeling of community state types, Nugent scores, and pH",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "For the ravel data, we constructed models using two static features, age and ethnicity, two dynamic features whose values can change over time, BV medication and menses, and two sets of two outcomes that we wished to forecast, CST risk level and pH or Nugent score (Figure 3(a)). The gajer data did not include pH measurements, or information on BV medication and menses. Consequently, the constructed models considered only two features, age and race/ethnicity, and one set of two outcomes, CST and Nugent score (Figure 3(b)).\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24015,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Modeling results for community state type, Nugent score, and pH ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Using the models above, SCUP was employed to understand the influence of features on outcome transitions as well as to determine outcome-outcome dependencies; the inferred effects and effect differences for each pair of outcome states are shown in Figure 4. As expected, in both ravel models, BV medication significantly increased the rate of transition from high- to low-risk CST (p-values of 0.01 and , for the pH and Nugent score models, respectively), favoring the high- to low-risk transition over the opposite one (p-values of 0.005 and ). Menses (but not BV medication) significantly affected pH level transitions, decreasing high to low pH rate (p-value\u00a0=\u00a00.02) and preferring low to high over high to low pH transition (p-value\u00a0=\u00a00.02). In addition, race/ethnicity had a significant effect on the transition rate from low to medium Nugent score (p-value\u00a0=\u00a00.035), but the overall effect on the low  medium transition was not significantly different from 0, indicating that race/ethnicity, on its own, does not drive Nugent score to either level. The estimated effect of the remaining features, though in some cases large, had a large sampling variance and was not statistically significant.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25279,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Modeling results for community state type, Nugent score, and pH ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "In all models, an outcome had a significant effect on the transition rates of the other one, typically stronger than that of the features. Specifically, high pH significantly increased the low- to high-risk CST transition rate compared to the high- to low-risk transition (p-value\u00a0=\u00a00.02; Figure 4, top row) and high-risk CST had an even stronger effect on low  high pH transition (p-value\u00a0=\u00a00.002). This is perhaps expected as high-risk CSTs contain less lactic acid-secreting bacteria. For the ravel data, high-risk CST increased the transition rates to a higher Nugent score (p-values of 0.005 and  for low  medium and medium  high Nugent score transitions, respectively); and medium and high Nugent scores drove CST to high-risk level stronger than the other way around (p-values of 0.062 and , respectively). Similar trends for the interdependencies between CST risk level and Nugent score were observed for the gajer data though, typically, these were associated with less significant p-values.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:01:57",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "40935339",
+                            "locations": {
+                                "length": 8,
+                                "offset": 25757
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26279,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Assessing the most likely models ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To further characterize the relationships between outcomes, we constructed four dynamic models that cover all possible relationships between each pair of outcomes (Figure 3) and calculated the out-of-sample log likelihoods of each subject using a leave-one-out approach (hence penalizing models for a greater number of parameters is unnecessary). To test the hypothesis that the observed difference in sums of out of sample log likelihoods between models is greater than 0, we repeatedly selected a random subset of subjects, switched between each subject\u2019s log likelihoods in the two models and computed the fraction of iterations in which the observed difference is lower; we then corrected for multiple hypothesis testing, using Benjamini-Hochberg\u2019s FDR method.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27076,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Assessing the most likely models ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "For all dynamic models, summation of the log likelihoods showed that the bidirectional dependency model, model 1, was most likely, followed by the unidirectional model 2, then model 3, and finally model 4, with no direct influence between outcomes (Figure 5). Notably, for both ravel and gajer Nugent score models, model 1 obtained significantly greater log likelihoods than the corresponding model 3 and 4 (p-values of 0.004,; and , , respectively); but its advantage over model 2 was not statistically significant. These results, and CST trajectories of subjects (Supplemental File 3), seem to indicate a strong relationship between CST and Nugent score, where CST changes are accompanied by changes in Nugent score, but there may be changes in Nugent score for which there is no CST change.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27870,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Outcome variable trajectories ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "SCUP modeling enables predicting trajectories of outcome variables, from the static and dynamic features and an initial outcome configuration; two examples of such trajectories are shown in Figure 6. Clearly, the two dynamic features have a strong effect on the predicted trajectories, with BV medication more strongly affecting CST risk level and menses having a greater impact on pH levels.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28293,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Predicting changes in community state type",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "In this section we investigate the ability to predict future CST changes and study the relationships between specific bacteria and major shifts in microbiome composition. We assess the ability to predict CST changes and CST risk level with fixed-time modeling methods. This is done using two large datasets, ravel and gajer, and across varying time horizons. Second, we evaluate the ability to predict an upcoming CST change in all five datasets. Finally, we analyze which bacteria are indicative of upcoming CST changes.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:02:21",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "40935340",
+                            "locations": {
+                                "length": 8,
+                                "offset": 28411
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:02:24",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "40935341",
+                            "locations": {
+                                "length": 8,
+                                "offset": 28766
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 28856,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Predicting an upcoming CST change ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "A random forest (RF) [57] was used to evaluate the ability to predict an upcoming CST change based on current microbiome profile and clinical information. To address class imbalance, class weights were employed with each class weighted by the other\u2019s prevalence. We compared predictions at the sampled intervals (ravel: daily; gajer: twice-weekly) to a seven-day prediction horizon. We further assessed predictions made by assigning randomly selected samples to the test set (practically, using out-of-bag predictions) to predictions made when samples from an entire trajectory of a subject were assigned to the test set. Prediction accuracy was evaluated using area under the receiver operating characteristic (ROC) curve (AUC), where a higher AUC reflects better prediction accuracy, as well as sensitivity at 80% specificity.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29718,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Predicting an upcoming CST change ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Random forest out-of-bag predictions for individual samples obtained AUC values of 0.72\u20130.86 and sensitivity of 44\u201373% at 80% specificity (Figure 7(a) and 7(b), left column; and Supplemental File 8). Adding clinical information had a negligible effect on the prediction accuracy (data not shown). Perhaps surprisingly, CST changes at a seven-day horizon were more accurately forecasted compared to one or three/four-day horizon, most notably for the ravel dataset. This may be partly due to the greater number of such CST changes available for training in the former case (25% vs. 14% and 19% vs. 14% for the ravel and it gajer datasets, respectively).\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30371,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Predicting an upcoming CST change ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "When trained repeatedly on all but a single subject, RF models exhibited poorer performance (Figure 7(b), right column; and Supplemental File 8). This low prediction capability reflects the larger inter-person variation compared to intra-person variation. Here, again, clinical information did not improve prediction accuracy; and the accuracy of predicting CST changes at a seven-day horizon is comparable to the shorter horizons.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30802,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Predicting CST risk level ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "As noted above, we identified ravel\u2019s CSTs 6 and 9 and gajer\u2019s CST 4-B as high risk CSTs and trained RF models on the relative microbial abundances to predict CST risk level at one, three/four and seven-day prediction horizons, splitting the data by either samples or subjects. The inferred models, for all learning scenarios, obtained high AUCs and sensitivity values (Figure 7 and Supplemental File 8), with the lowest performing model being ravel\u2019s seven-day horizon, obtaining an AUC of 0.85 and sensitivity of 80% at 80% specificity.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31366,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Prediction horizon and CST change prediction accuracy ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "\nTable 4 contains the AUC for prediction of an upcoming CST change for each of the five datasets using random forests and the sensitivity at 80% specificity. At a specificity of 80%, the sensitivity is approximately 50% when the prediction horizon is less than four days. The prediction performance degrades as the prediction horizon increases, but the accuracy remains above 50% for many choices of specificity across the datasets. The better-than-random accuracy for prediction horizons >30\u00a0days for both subjects changing CST and those remaining in their current CST could be an indication that subjects have a CST to which they tend to return or remain despite various environmental perturbations.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32122,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Bacteria indicative of upcoming CST changes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Two approaches were used to detect taxa/OTUs that were present in different levels between samples corresponding to CST changes and those corresponding to remaining in the same CST:\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32347,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Bacteria indicative of upcoming CST changes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "A test of differences in abundance based on the Benjamini\u2013Hochberg correction [58] with the following modifications. Prior to the tests, the taxa/OTUs are given an ordering based on hierarchical clustering of the proportions using the Manhattan metric and Ward\u2019s criteria. Taxa/OTUs found in at least five samples were included. To maximize power to detect differences in abundances by exploiting correlations in outcomes of related taxa, we employed a two-stage hidden Markov model (HMM) as proposed by Sun and Cai [59] to obtain z-statistics for differences in abundance. For finite sample sizes, z-statistics can demonstrate skew, even under the null,[60] and so we first computed highly accurate p-values for the relationship between abundance and CST transitions by performing 1 million permutations for each feature. One tailed p-values were then converted to z-statistics using the inverse quantile normal transformation, and then used for the HMM group-level FDR procedure as implemented in R.[61]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33352,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Bacteria indicative of upcoming CST changes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The method implemented in Linear Discriminant Analysis Effect Size\u00a0(LEfSe).[62] The software applies a Kruskal\u2013Wallis test, a non-parametric test, and then linear discriminant analysis to evaluate effect size.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33561,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Bacteria indicative of upcoming CST changes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "In each dataset except for the gajer dataset, the presence of G. vaginalis is strongly associated with an upcoming CST change. For the ravel and vahmp datasets, this observation may reflect treatment for BV in these cohorts. Figure 8 depicts results for the ravel dataset from LEfSe.\n",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "G. vaginalis",
+                            "infons": {
+                                "identifier": "NCBI:txid2702",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:05",
+                                "parent_taxonomic_id": "NCBI:txid2701"
+                            },
+                            "id": "40935342",
+                            "locations": {
+                                "length": 12,
+                                "offset": 33623
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 33845,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Bacteria indicative of upcoming CST changes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "A clear pattern for lactobacilli and CST changes does not emerge across the datasets. For several Lactobacillus species, they were associated with CST transitions in one dataset while being associated with remaining in the same CST for another. L. iners is associated with an upcoming CST change only in the ravel dataset. L. crisipatus is associated with remaining in the current CST in the ravel dataset, but is strongly associated with an upcoming change in the gajer dataset. L. gasseri is associated with an upcoming CST change for the ravel but is a predictor for remaining in the current CST for the gajer, hmp, and vahmp datasets. The presence of L. jensenii is associated with CST changes in the ravel dataset, but is associated with remaining in the same state in the hmp and vahmp datasets.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Lactobacillus",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:08",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "40935344",
+                            "locations": {
+                                "length": 13,
+                                "offset": 33943
+                            }
+                        },
+                        {
+                            "text": "L. iners",
+                            "infons": {
+                                "identifier": "NCBI:txid147802",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:10",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935345",
+                            "locations": {
+                                "length": 8,
+                                "offset": 34090
+                            }
+                        },
+                        {
+                            "text": "L. gasseri",
+                            "infons": {
+                                "identifier": "NCBI:txid1596",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:12",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935346",
+                            "locations": {
+                                "length": 10,
+                                "offset": 34325
+                            }
+                        },
+                        {
+                            "text": "L. jensenii",
+                            "infons": {
+                                "identifier": "NCBI:txid109790",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:14",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935347",
+                            "locations": {
+                                "length": 11,
+                                "offset": 34500
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 34646,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Bacteria indicative of upcoming CST changes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "There is also disagreement across datasets for the roles of the less-prevalent community members. Atopobium spp. are associated with remaining in a CST for the ravel and gajer datasets, but is associated with CST changes in the hmp dataset. Anaerococcus spp. are associated with CST changes in the ravel and gajer datasets, but associated with remaining in the same CST for the vahmp dataset. Mobiluncus spp. are associated with CST changes in the chaban and vahmp datasets, but with remaining in the same CST in the ravel dataset.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Atopobium spp.",
+                            "infons": {
+                                "identifier": "NCBI:txid1380",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:16",
+                                "parent_taxonomic_id": "NCBI:txid1643824"
+                            },
+                            "id": "40935348",
+                            "locations": {
+                                "length": 14,
+                                "offset": 34744
+                            }
+                        },
+                        {
+                            "text": "Anaerococcus spp.",
+                            "infons": {
+                                "identifier": "NCBI:txid165779",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:17",
+                                "parent_taxonomic_id": "NCBI:txid1570339"
+                            },
+                            "id": "40935349",
+                            "locations": {
+                                "length": 17,
+                                "offset": 34887
+                            }
+                        },
+                        {
+                            "text": "Mobiluncus spp.",
+                            "infons": {
+                                "identifier": "NCBI:txid2050",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:18",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "40935350",
+                            "locations": {
+                                "length": 15,
+                                "offset": 35039
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 35177,
+                    "infons": {
+                        "section_title_1": "Discussion and conclusions",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319",
+                        "iao_name_2": "conclusion section",
+                        "iao_id_2": "IAO:0000615"
+                    },
+                    "text": "We conducted a secondary analysis of five surveys of the vaginal microbiome with repeated measurements. Because of the differences in subject cohorts and sample processing protocols, a meta-analysis with pooled data was not feasible. However, several interesting patterns emerged.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35483,
+                    "infons": {
+                        "section_title_1": "Discussion and conclusions",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319",
+                        "iao_name_2": "conclusion section",
+                        "iao_id_2": "IAO:0000615"
+                    },
+                    "text": "Detection of major shifts in the microbiome is largely independent of the choice of methods for calculating CSTs. It was not our goal to determine the best method for defining CSTs by aligning CSTs with clinical data. The question of which method(s) for calculating CSTs best matches data is ill-posed, as the \u2018best\u2019 clustering of data may not produce the most informative dynamic models.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35871,
+                    "infons": {
+                        "section_title_1": "Discussion and conclusions",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319",
+                        "iao_name_2": "conclusion section",
+                        "iao_id_2": "IAO:0000615"
+                    },
+                    "text": "We observed that healthy subjects tend to persist in a CST for two to three weeks or more while those in high-risk CSTs tend to change CST more frequently, often in response to medication. Both SCUP dynamic modeling and Markov chain modeling confirmed that administration of BV medication is associated with transition from high-risk to low-risk CSTs.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36222,
+                    "infons": {
+                        "section_title_1": "Discussion and conclusions",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319",
+                        "iao_name_2": "conclusion section",
+                        "iao_id_2": "IAO:0000615"
+                    },
+                    "text": "Most CST transitions were to and between CSTs associated with dysbiosis marked by high diversity and infection-causing bacteria. The observed short persistence in states characterized by G. vaginalis in our Markov chain models was validated by the detection of G. vaginalis as a predictor of CST change in nearly every dataset. Our analysis of CST transitions after the administration of BV medication provides evidence that colonization by L. iners represents a transition state indicating an upcoming shift to a high-risk state and/or a state that subjects enter on a path to recovery from BV.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:30",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "40935351",
+                            "locations": {
+                                "length": 8,
+                                "offset": 36341
+                            }
+                        },
+                        {
+                            "text": "G. vaginalis",
+                            "infons": {
+                                "identifier": "NCBI:txid2702",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:30",
+                                "parent_taxonomic_id": "NCBI:txid2701"
+                            },
+                            "id": "40935352",
+                            "locations": {
+                                "length": 12,
+                                "offset": 36409
+                            }
+                        },
+                        {
+                            "text": "G. vaginalis",
+                            "infons": {
+                                "identifier": "NCBI:txid2702",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:31",
+                                "parent_taxonomic_id": "NCBI:txid2701"
+                            },
+                            "id": "40935353",
+                            "locations": {
+                                "length": 12,
+                                "offset": 36483
+                            }
+                        },
+                        {
+                            "text": "L. iners",
+                            "infons": {
+                                "identifier": "NCBI:txid147802",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:33",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935354",
+                            "locations": {
+                                "length": 8,
+                                "offset": 36663
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 36817,
+                    "infons": {
+                        "section_title_1": "Discussion and conclusions",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319",
+                        "iao_name_2": "conclusion section",
+                        "iao_id_2": "IAO:0000615"
+                    },
+                    "text": "Microbiome changes can be gradual shifts evolving over one week or dramatic shifts occurring over less than one day. We can predict an upcoming shift with accuracy that is much better than guessing with repeated samples with a frequency of at least twice-weekly.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37079,
+                    "infons": {
+                        "section_title_1": "Discussion and conclusions",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319",
+                        "iao_name_2": "conclusion section",
+                        "iao_id_2": "IAO:0000615"
+                    },
+                    "text": "Trajectory modeling indicates that CST changes precede changes in pH and Nugent score. Only two of the datasets considered here had sufficient measurements per subject to perform trajectory modeling. There is a lack of dense longitudinal measurements of the vaginal microbiome with accompanying clinical information. Experiments would ideally account for factors that can affect bacterial growth and/or pH, such as hormone levels, clothing, antibiotic/antifungal use, diet, douching practices, and presence of semen. More sophisticated dynamic modeling would be possible if a measurement of biomass were also added.[63]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37698,
+                    "infons": {
+                        "section_title_1": "Discussion and conclusions",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319",
+                        "iao_name_2": "conclusion section",
+                        "iao_id_2": "IAO:0000615"
+                    },
+                    "text": "In several subjects, CST transitions were associated with changes in Nugent score, but there were several changes in Nugent score with no CST transition. A likely explanation for this relationship is that higher Nugent scores are possible even when Lactobacillus spp. are present, but the sample is dominated by a species not considered when determining the Nugent score, such as GBS. Since Nugent scores are determined only by counting amounts of Lactobacillus spp., Garddnerella/Bacteroides, and other curved Gram-negative rods (i.e. bacilli), a sample dominated by bacteria of other morphology (e.g. cocci or vibrio) will be in CST 4-A. Over time, the Nugent score would detect changes in bacilli measured by the test, but would not capture variability or stability of species that are not bacilli and might contribute to BV pathology.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Lactobacillus spp.",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:44",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "40935355",
+                            "locations": {
+                                "length": 18,
+                                "offset": 37947
+                            }
+                        },
+                        {
+                            "text": "Lactobacillus spp",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:45",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "40935356",
+                            "locations": {
+                                "length": 17,
+                                "offset": 38146
+                            }
+                        },
+                        {
+                            "text": "bacilli",
+                            "infons": {
+                                "identifier": "NCBI:txid91061",
+                                "type": "bacteria_class",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:46",
+                                "parent_taxonomic_id": "NCBI:txid1239"
+                            },
+                            "id": "40935357",
+                            "locations": {
+                                "length": 7,
+                                "offset": 38234
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:46",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "40935358",
+                            "locations": {
+                                "length": 8,
+                                "offset": 38266
+                            }
+                        },
+                        {
+                            "text": "vibrio",
+                            "infons": {
+                                "identifier": "NCBI:txid662",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:47",
+                                "parent_taxonomic_id": "NCBI:txid641"
+                            },
+                            "id": "40935359",
+                            "locations": {
+                                "length": 6,
+                                "offset": 38310
+                            }
+                        },
+                        {
+                            "text": "bacilli",
+                            "infons": {
+                                "identifier": "NCBI:txid91061",
+                                "type": "bacteria_class",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:47",
+                                "parent_taxonomic_id": "NCBI:txid1239"
+                            },
+                            "id": "40935360",
+                            "locations": {
+                                "length": 7,
+                                "offset": 38390
+                            }
+                        },
+                        {
+                            "text": "bacilli",
+                            "infons": {
+                                "identifier": "NCBI:txid91061",
+                                "type": "bacteria_class",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:48",
+                                "parent_taxonomic_id": "NCBI:txid1239"
+                            },
+                            "id": "40935361",
+                            "locations": {
+                                "length": 7,
+                                "offset": 38491
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 38536,
+                    "infons": {
+                        "section_title_1": "Discussion and conclusions",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319",
+                        "iao_name_2": "conclusion section",
+                        "iao_id_2": "IAO:0000615"
+                    },
+                    "text": "We observed a strong relationship between menses and vaginal pH. A \u2018healthy\u2019 vaginal pH is 3.5\u20134.5 and the pH of blood is approximately 7.4, so we would expect a higher pH during menses. Menses are much more frequent than diagnoses of BV in most women, so we hypothesize that changes in bacterial composition are more likely a cause of dysbiosis and a higher pH is an effect. This notion agrees with the clinical practice of evaluating samples for clue cells for subjects with an intermediate pH and/or Nugent score.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39052,
+                    "infons": {
+                        "section_title_1": "Discussion and conclusions",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319",
+                        "iao_name_2": "conclusion section",
+                        "iao_id_2": "IAO:0000615"
+                    },
+                    "text": "Limitations of this analysis include the use of only tagged sequence data and resolution of taxa to the species level at most. Recent investigations have demonstrated clade-specific effects of bacteria on vaginal health.[13,14] Also, our analysis does not describe a natural history of bacterial communities, as subjects in some cohorts underwent various forms of treatment. For example, the gajer dataset is based on a douching cessation study, and several of the subjects in the ravel and vahmp datasets were treated for BV.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:03:56",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "40935362",
+                            "locations": {
+                                "length": 8,
+                                "offset": 39245
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 39578,
+                    "infons": {
+                        "section_title_1": "Discussion and conclusions",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319",
+                        "iao_name_2": "conclusion section",
+                        "iao_id_2": "IAO:0000615"
+                    },
+                    "text": "This study demonstrates that CSTs provide a coherent description of vaginal microbiome dynamics. Our results indicate that CSTs may be useful for clinical and scientific settings.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39757,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "The authors wish to thank additional members of the SAMSI working group Discovering Complex Human Health Patterns in Microbiome Data and members of the Vaginal Microbiome Consortium (http://vmc.vcu.edu) for initial thoughts and suggestions as well as Omer Weissbrod and Tal El-Hay for SCUP support and advice.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40081,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation nor the Centers for Disease Control and Prevention.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40319,
+                    "infons": {
+                        "section_title_1": "Disclosure statement",
+                        "iao_name_1": "disclosure section",
+                        "iao_id_1": ""
+                    },
+                    "text": "No potential conflict of interest was reported by the authors.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40401,
+                    "infons": {
+                        "section_title_1": "Supplemental data",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Supplemental data for this article can be accessed here.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40474,
+                    "infons": {
+                        "journal": "Clin Lab Med. ",
+                        "volume": "34",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Huang B, Fettweis JM, Brooks JP. The changing landscape of the vaginal microbiome. Clin Lab Med. 2014;34(4):747\u201315. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40644,
+                    "infons": {
+                        "journal": "Microbiome. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Ravel J, Brotman RM, Gajer P. Daily temporal dynamics of vaginal microbiota before, during and after episodes of bacterial vaginosis. Microbiome. 2013;1(1):29. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40848,
+                    "infons": {
+                        "journal": "Sci Transl Med. ",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Gajer P, Brotman RM, Bai G. Temporal dynamics of the human vaginal microbiota. Sci Transl Med. 2012 May 2;4(132):132ra52. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41014,
+                    "infons": {
+                        "journal": "PLos One. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Srinivasan S, Liu C, Mitchell CM. Temporal variability of human vaginal bacteria and relationship with bacterial vaginosis. PLos One. 2010;5(4):e10197. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:04:11",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "40935363",
+                            "locations": {
+                                "length": 8,
+                                "offset": 41086
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 41210,
+                    "infons": {
+                        "journal": "Sci Rep. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "MacIntyre DA, Chandiramani M, Lee YS. The vaginal microbiome during pregnancy and the postpartum period in a European population. Sci Rep. 2015;5 [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41400,
+                    "infons": {
+                        "journal": "Proc Natl Acad Sci U S A. ",
+                        "volume": "112",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "DiGiulio DB, Callahan BJ, McMurdie PJ. Temporal and spatial variation of the human microbiota during pregnancy. Proc Natl Acad Sci U S A. 2015 Sep 1;112(35):11060\u201311065. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41614,
+                    "infons": {
+                        "journal": "Cell Host Microbe. ",
+                        "volume": "16",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Knights D, Ward TL, McKinlay CE. Rethinking \u201centerotypes\u201d Cell Host Microbe. 2014;16(4):433\u2013437. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41755,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "473",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Arumugam M, Raes J, Pelletier E. Enterotypes of the human gut microbiome. Nature. 2011;473(7346):174\u2013180. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41905,
+                    "infons": {
+                        "journal": "Science. ",
+                        "volume": "334",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Wu GD, Chen J, Hoffmann C. Linking long-term dietary patterns with gut microbial enterotypes. Science. 2011;334:105\u2013108. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42070,
+                    "infons": {
+                        "journal": "Proc Natl Acad Sci U S A. ",
+                        "volume": "108",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Ravel J, Gajer P, Abdo Z. Vaginal microbiome of reproductive-age women. Proc Natl Acad Sci U S A. 2011 Mar 15;108(Suppl 1):4680\u20134687. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42248,
+                    "infons": {
+                        "journal": "Microbiology. ",
+                        "volume": "160",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Fettweis JM, Brooks JP, Serrano MG, Vaginal Microbiome Consortium Differences in vaginal microbiome in African American women versus women of European ancestry. Microbiology. 2014;160(10):2272\u20132282. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42491,
+                    "infons": {
+                        "journal": "Am J Obstet Gynecol. ",
+                        "volume": "69",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Gardner HL, Dukes CD. Haemophilus vaginalis vaginitis. a newly defined specific infection previously classified nonspecific vaginitis. Am J Obstet Gynecol. 1955;69(5):962\u2013976. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Haemophilus vaginalis",
+                            "infons": {
+                                "identifier": "NCBI:txid2702",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:04:23",
+                                "parent_taxonomic_id": "NCBI:txid2701"
+                            },
+                            "id": "40935364",
+                            "locations": {
+                                "length": 21,
+                                "offset": 42513
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 42692,
+                    "infons": {
+                        "journal": "Diagn Microbiol Infect Dis. ",
+                        "volume": "84",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Schuyler JA, Mordechai E, Adelson ME. Identification of intrinsically metronidazole-resistant clades of gardnerella vaginalis. Diagn Microbiol Infect Dis. 2016;84(1):1\u20133. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "gardnerella vaginalis",
+                            "infons": {
+                                "identifier": "NCBI:txid2702",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:04:25",
+                                "parent_taxonomic_id": "NCBI:txid2701"
+                            },
+                            "id": "40935365",
+                            "locations": {
+                                "length": 21,
+                                "offset": 42796
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 42888,
+                    "infons": {
+                        "journal": "Anaerobe. ",
+                        "volume": "36",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Castro J, Cerca N. Bv and non-BV associated gardnerella vaginalis establish similar synergistic interactions with other BV-associated microorganisms in dual-species biofilms. Anaerobe. 2015;36:56\u201359. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "gardnerella vaginalis",
+                            "infons": {
+                                "identifier": "NCBI:txid2702",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:04:26",
+                                "parent_taxonomic_id": "NCBI:txid2701"
+                            },
+                            "id": "40935366",
+                            "locations": {
+                                "length": 21,
+                                "offset": 42932
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 43113,
+                    "infons": {
+                        "journal": "J Clin Microbiol. ",
+                        "volume": "54",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Hilbert DW, Smith WL, Chadwick SG. Development and validation of a highly accurate quantitative real-time PCR assay for diagnosis of bacterial vaginosis. J Clin Microbiol. 2016 Apr;54(4):1017\u20131024. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43355,
+                    "infons": {
+                        "journal": "PLoS One. ",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "DiGiulio DB, Romero R, Amogan HP. Microbial prevalence, diversity and abundance in amniotic fluid during preterm labor: a molecular and culture-based investigation. PLoS One. 2008;3(8):e3056. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43591,
+                    "infons": {
+                        "journal": "BMC Genom. ",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Harwich MD, Jr, Serrano MG, Fettweis JM. Genomic sequence analysis and characterization of sneathia amnii sp. nov. BMC Genom. 2012 Dec 17;13(Suppl 8) Epub. 2012. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "sneathia amnii",
+                            "infons": {
+                                "identifier": "NCBI:txid187101",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:04:31",
+                                "parent_taxonomic_id": "NCBI:txid168808"
+                            },
+                            "id": "40935367",
+                            "locations": {
+                                "length": 14,
+                                "offset": 43682
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 43797,
+                    "infons": {
+                        "journal": "N Engl J Med. ",
+                        "volume": "353",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Fredricks DN, Fiedler TL, Marrazzo JM. Molecular identification of bacteria associated with bacterial vaginosis. N Engl J Med. 1899\u20131911;353(18):2005. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:04:33",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "40935368",
+                            "locations": {
+                                "length": 8,
+                                "offset": 43864
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 43973,
+                    "infons": {
+                        "journal": "J Infect Dis. ",
+                        "volume": "193",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Bradshaw CS, Morton AN, Hocking J. High recurrence rates of bacterial vaginosis over the course of 12 months after oral metronidazole therapy and factors associated with recurrence. J Infect Dis. 2006 Jun 1;193(11):1478\u20131486. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44224,
+                    "infons": {
+                        "journal": "Microbiome. ",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Chaban B, Links MG, Jayaprakash TP. Characterization of the vaginal microbiota of healthy canadian women through the menstrual cycle. Microbiome. 2014;2(1):1. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44427,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "486",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "The Human Microbiome Consortium Structure, function and diversity of the healthy human microbiome. Nature. 2012;486:207\u2013214. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44596,
+                    "infons": {
+                        "journal": "Nat Prec. ",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Fettweis JM, Alves JP, Borzelleca JF. The vaginal microbiome: disease, genetics and the environment. Nat Prec. 2011 doi: 10.1038/npre.2011.5150.2. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44770,
+                    "infons": {
+                        "journal": "Am J Med. ",
+                        "volume": "74",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Amsel R, Totten PA, Spiegel CA. Nonspecific vaginitis: diagnostic criteria and microbial and epidemiologic associations. Am J Med. 1983;74(1):14\u201322. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44944,
+                    "infons": {
+                        "journal": "Am J Obstet Gynecol. ",
+                        "volume": "198",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Brotman RM, Ghanem KG, Klebanoff MA. The effect of vaginal douching cessation on bacterial vaginosis: a pilot study. Am J Obstet Gynecol. 2008;198(6) [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45138,
+                    "infons": {
+                        "journal": "Nat Methods. ",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Truong DT, Franzosa EA, Tickle TL. Metaphlan2 for enhanced metagenomic taxonomic profiling. Nat Methods. 2015;12:902\u2013903. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45285,
+                    "infons": {
+                        "journal": "BMC Microbiol. ",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Brooks JP, Edwards DJ, Harwich MD., Jr The truth about metagenomics: quantifying and counteracting bias in 16s rRNA studies. BMC Microbiol. 2015;15:66. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45481,
+                    "infons": {
+                        "journal": "R: a language and environment for statistical computing.",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "R Core Team . R: a language and environment for statistical computing. 2015. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45574,
+                    "infons": {
+                        "journal": "Nat Meth. ",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Huber W, Carey VJ, Gentleman R. Orchestrating high-throughput genomic analysis with bioconductor. Nat Meth. 2015;12(2):115\u2013121. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45746,
+                    "infons": {
+                        "journal": "R Environment. ",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Van Den Boogaart KG, Tolosana R, Bren M. Compositions: compositional data analysis. R Environment. 2014 https://cran.r\u2013project.org/web/packages/compositions/index.html Available from:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45929,
+                    "infons": {
+                        "journal": "Genome Biol. ",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Love MI, Huber W, Anders S. Moderated estimation of fold change and dispersion for RNA-Seq data with DESeq2. Genome Biol. 2014;15:550. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46108,
+                    "infons": {
+                        "journal": "Bioinformatics. ",
+                        "volume": "26",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Robinson MD, McCarthy DJ, Smyth GK. edgeR: a bioconductor package for differential expression analysis of digital gene expression data. Bioinformatics. 2010;26:139\u2013140. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46321,
+                    "infons": {
+                        "journal": "R Environment. ",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Hausser J, Strimmer K. Entropy: estimation of entropy, mutual information and related quantities. R Environment. 2014 https://cran.r\u2013project.org/web/packages/entropy/index.html Available from:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46513,
+                    "infons": {
+                        "journal": "R Environment. ",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Goulet V, Dutang C, Maechler M. expm: matrix exponential. R Environment. 2015 http://CRAN.R\u2013project.org/package=expm Available from:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46645,
+                    "infons": {
+                        "journal": "ggplot2: elegant graphics for data analysis.",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Wickham H. ggplot2: elegant graphics for data analysis. New York (NY): Springer; 2009. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46748,
+                    "infons": {
+                        "journal": "R Environment. ",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Baptiste A, Antonov A. gridExtra: miscellaneous functions for \u201cgrid\u201d graphics. R Environment. 2015 https://cran.r\u2013project.org/web/packages/gridExtra/index.html Available from:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46923,
+                    "infons": {
+                        "journal": "R Environment. ",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Xie Y. knitr: a general-purpose package for dynamic report generation in R. R Environment. 2016 https://cran.r\u2013project.org/web/packages/knitr/index.html Available from:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47091,
+                    "infons": {
+                        "journal": "R Environment. ",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Spedicado GA, Kang TS. markovchain: discrete time Markov chains made easy. R Environment. 2015 https://cran.rstudio.com/web/packages/markovchain/index.html Available from:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47262,
+                    "infons": {
+                        "journal": "R Environment. ",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Zhou YH. mcc: moment corrected correlation. R Environment. 2014 https://cran.r\u2013project.org/web/packages/mcc/index.html Available from:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47396,
+                    "infons": {
+                        "journal": "J Stat Softw. ",
+                        "volume": "38",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Jackson CH. Multi-state models for panel data: the msm package for R. J Stat Softw. 2011;38(8):1\u201329. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47513,
+                    "infons": {
+                        "journal": "PLoS One. ",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "McMurdie PJ, Holmes S. phyloseq: an R package for reproducible interactive analysis and graphics of microbiome census data. PLoS One. 2013;8:4. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47701,
+                    "infons": {
+                        "journal": "BMC Bioinf. ",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Robin X, Turck N, Hainard A. pROC: an open-source package for R and S+ to analyze and compare ROC curves. BMC Bioinf. 2011;12(1):1. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47877,
+                    "infons": {
+                        "journal": "R News. ",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Liaw A, Wiener M. Classification and regression by randomForest. R News. 2002;2:18\u201322. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47980,
+                    "infons": {
+                        "journal": "J Stat Softw. ",
+                        "volume": "21",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Wickham H. Reshaping data with the reshape package. J Stat Softw. 2007;21:1\u201320. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48076,
+                    "infons": {
+                        "journal": "R Environment. ",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Adler D, Murdoch D. rgl: 3D visualization device system (OpenGL) R Environment. 2012 http://cran.r\u2013project.org/web/packages/rgl/index.html Available from:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48230,
+                    "infons": {
+                        "journal": "R Environment. ",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Murdoch D. rglwidget: \u2018rgl\u2019 in \u2018htmlwidgets\u2019 framework. R Environment. 2015 https://cran.r\u2013project.org/web/packages/rglwidget/index.html Available from:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48382,
+                    "infons": {
+                        "journal": "R Environment. ",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Kimes P. sigclust2: statistical significance of clustering. R Environment. 2016 https://github.com/pkimes/sigclust2 Available from:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48513,
+                    "infons": {
+                        "journal": "J Am Stat Assoc. ",
+                        "volume": "58",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Ward JH., Jr. Hierarchical grouping to optimize an objective function. J Am Stat Assoc. 1963;58(301):236\u2013244. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48639,
+                    "infons": {
+                        "journal": "Nucl Acids Res. ",
+                        "volume": "40",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "McCarthy DJ, Chen Y, Smyth GK. Differential expression analysis of multifactor RNA-Seq experiments with respect to biological variation. Nucl Acids Res. 2012 May;40(10):4288\u20134297. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48863,
+                    "infons": {
+                        "journal": "Ann Appl Stat. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Witten DM. Classification and clustering of sequencing data using a Poisson model. Ann Appl Stat. 2011;5:2493\u20132518. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48995,
+                    "infons": {
+                        "journal": "Microbiome. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Macklaim JM, Fernandes AD, Di Bella JM. Comparative meta-RNA-seq of the vaginal microbiota and differential expression by lactobacillus iners in health and dysbiosis. Microbiome. 2013;1(1):1. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "lactobacillus iners",
+                            "infons": {
+                                "identifier": "NCBI:txid147802",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:05:13",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935369",
+                            "locations": {
+                                "length": 19,
+                                "offset": 49117
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 49231,
+                    "infons": {
+                        "journal": "PLoS One. ",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Lambert JA, John S, Sobel JD. Longitudinal analysis of vaginal microbiome dynamics in women with recurrent bacterial vaginosis: recognition of the conversion process. PLoS One. 2013;8(12):e82599. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49471,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Nodelman U, Shelton CR, Koller D. Continuous time Bayesian networks. Proceedings of the Eighteenth Conference on Uncertainty in Artificial Intelligence; Alberta; 2002 August 1\u20134; Morgan Kaufmann Publishers Inc; 2002. pp. 378\u2013387. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49717,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "El-Hay T, Weissbros O, Eban E. Structured proportional jump processes. The 30th Conference on Uncertainty in Artificial Intelligence (UAI); 2014. pp. 172\u2013181. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49892,
+                    "infons": {
+                        "journal": "J Roy Stat Soc Ser B. ",
+                        "volume": "34",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Cox DR. Regression models and life-tables. J Roy Stat Soc Ser B. 1972;34:187\u2013220. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49990,
+                    "infons": {
+                        "journal": "J Clin Microbiol. ",
+                        "volume": "29",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Nugent RP, Krohn MA, Hillier SL. Reliability of diagnosing bacterial vaginosis is improved by a standardized method of gram stain interpretation. J Clin Microbiol. 1991;29:297\u2013301. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50215,
+                    "infons": {
+                        "journal": "J Clin Microbiol. ",
+                        "volume": "43",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Sha BE, Chen HY, Wang QJ. Utility of Amsel criteria, Nugent score, and quantitative PCR for gardnerella vaginalis, mycoplasma hominis, and lactobacillus spp. for diagnosis of bacterial vaginosis in human immunodeficiency virus-infected women. J Clin Microbiol. 2005 Sep;43(9):4607\u20134612. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "gardnerella vaginalis",
+                            "infons": {
+                                "identifier": "NCBI:txid2702",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:05:23",
+                                "parent_taxonomic_id": "NCBI:txid2701"
+                            },
+                            "id": "40935370",
+                            "locations": {
+                                "length": 21,
+                                "offset": 50307
+                            }
+                        },
+                        {
+                            "text": "mycoplasma hominis",
+                            "infons": {
+                                "identifier": "NCBI:txid2098",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:05:23",
+                                "parent_taxonomic_id": "NCBI:txid2093"
+                            },
+                            "id": "40935371",
+                            "locations": {
+                                "length": 18,
+                                "offset": 50330
+                            }
+                        },
+                        {
+                            "text": "lactobacillus spp.",
+                            "infons": {
+                                "identifier": "NCBI:txid1203033",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 23:05:23",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "40935372",
+                            "locations": {
+                                "length": 18,
+                                "offset": 50354
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 50546,
+                    "infons": {
+                        "journal": "Mach Learn. ",
+                        "volume": "45",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Breiman L. Random forests. Mach Learn. 2001;45(1):5\u201332. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50618,
+                    "infons": {
+                        "journal": "J Roy Stat Soc Ser B (Methodol) ",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Benjamini Y, Hochberg Y. Controlling the false discovery rate: a practical and powerful approach to multiple testing. J Roy Stat Soc Ser B (Methodol) 1995:289\u2013300. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50798,
+                    "infons": {
+                        "journal": "J Roy Stat Soc Ser B (Stat Methodol) ",
+                        "volume": "71",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Sun W, Cai T. Large-scale multiple testing under dependence. J Roy Stat Soc Ser B (Stat Methodol) 2009;71:393\u2013424. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50929,
+                    "infons": {
+                        "journal": "Biostatistics. ",
+                        "volume": "16",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Zhou Y-H, Wright FA. Hypothesis testing at the extremes: fast and robust association for high-throughput data. Biostatistics. 2015;16:611\u2013625. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51116,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Zhou YH, Brooks JP, Wang X. A hidden Markov model-based two-stage design for biomarker detection and application to microbiome research. 2015 doi: 10.1007/s12561-017-9187-y. https://link.springer.com/article/10.1007/s12561-017-9187-y [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51405,
+                    "infons": {
+                        "journal": "Genome Biol. ",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Segata N, Izard J, Waldron L. Metagenomic biomarker discovery and explanation. Genome Biol. 2011;12(6):R60. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51557,
+                    "infons": {
+                        "journal": "FEBS Lett. ",
+                        "volume": "588",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Gerber GK. The dynamic microbiome. FEBS Lett. 2014;588(22):4131\u20134139. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

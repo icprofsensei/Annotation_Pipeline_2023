@@ -1,0 +1,623 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC5609526",
+            "inputfile": "../microbiome_corpus_HTML\\PMC5609526.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Evaluation of ddRADseq for reduced representation metagenome sequencing",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 71,
+                    "infons": {
+                        "section_title_1": "keywords",
+                        "iao_name_1": "keywords section",
+                        "iao_id_1": "IAO:0000630"
+                    },
+                    "text": "Human gut microbial communities, ddRADseq, Double digest restriction site associated DNA sequencing, Metagenome-wide association studies",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 215,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Background",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Profiling of microbial communities via metagenomic shotgun sequencing has enabled researches to gain unprecedented insight into microbial community structure and the functional roles of community members. This study describes a method and basic analysis for a metagenomic adaptation of the double digest restriction site associated DNA sequencing (ddRADseq) protocol for reduced representation metagenome profiling.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 648,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Methods",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "This technique takes advantage of the sequence specificity of restriction endonucleases to construct an Illumina-compatible sequencing library containing DNA fragments that are between a pair of restriction sites located within close proximity. This results in a reduced sequencing library with coverage breadth that can be tuned by size selection. We assessed the performance of the metagenomic ddRADseq approach by applying the full method to human stool samples and generating sequence data.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1149,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Results",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "The ddRADseq data yields a similar estimate of community taxonomic profile as obtained from shotgun metagenome sequencing of the same human stool samples. No obvious bias with respect to genomic G + C content and the estimated relative species abundance was detected.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1423,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Discussion",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Although ddRADseq does introduce some bias in taxonomic representation, the bias is likely to be small relative to DNA extraction bias. ddRADseq appears feasible and could have value as a tool for metagenome-wide association studies.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1666,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "\u2018Who is doing what\u2019 is the ultimate open question in microbiome studies. Shotgun metagenomics is often applied to gain knowledge of functional roles for bacteria in microbial communities, where the data can be used to predict protein encoding genes and enzymatic pathways present in the community, sometimes leading to testable hypotheses for microbial function. Advances in DNA sequencing technology and computing have dramatically accelerated the development of sequence-based metagenomics, which has been proposed by many scientists as a means to characterize the function of microbes in microbiomes (Handelsman, 2004; Simon & Daniel, 2011). Nevertheless, studies seeking to link microbial community phenotype to genes in the metagenome, e.g.\u00a0metagenome-wide association studies (MGWAS) can require large numbers of samples to be processed. As a result, MGWAS on genetically diverse samples such as mammalian faeces and soil remain difficult or intractable, due to the prohibitive cost of shotgun metagenome sequencing to adequate depth.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 01:43:59",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "776086",
+                            "locations": {
+                                "length": 8,
+                                "offset": 1819
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 2718,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Here, we investigate the potential of reduced representation sequencing to be used for low-cost metagenome profiling. We describe a metagenomic adaptation of ddRADseq (Peterson et al., 2012), a method for genotyping by sequencing studies of large and complex individual genomes (e.g.\u00a0plants). This approach takes advantage of the sequence specificity of restriction endonucleases, where the genomic DNA is first fragmented by restriction digestion to construct a set of sequences that are flanked by the targeted restriction sites. This results in a sequencing library with complexity that is reduced roughly in proportion to the density of the restriction enzyme cut-sites, with a complexity that is tunable via fragment size selection. The design of this approach also includes a dual-index combinatorial barcoding approach allowing samples to be multiplexed in a single sequencing run. We demonstrate the method on human stool samples and compare the recovered taxonomic profiles to those obtained by standard metagenome shotgun sequencing on the same samples.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3781,
+                    "infons": {
+                        "section_title_1": "Materials & Methods",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Ethical approval for this study was obtained from the University of Technology Sydney Human Research Ethics Committee (Approval number: UTS HREC REF NO. 2014000448).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3965,
+                    "infons": {
+                        "section_title_1": "Materials & Methods",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Three healthy adult stool samples were collected and the DNA extracted using an UltraClean Microbial DNA isolation kit (MO BIO Laboratories). The ddRADseq metagenome libraries were generated following the original ddRADseq protocol (Peterson et al., 2012), which uses a double restriction digest followed by size selection to construct a library containing only a defined subset of the total genomic DNA, with fine-scale control of library complexity available via size selection. Combinations of commercially available restriction enzymes were computationally evaluated for cut site density and other properties in a set of reference genomes chosen to reflect a wide range of G + C content. The evaluation suggested a short list of optimal enzyme combinations, and the combination of NlaIII and HpyCH4IV (New England BioLabs) was selected for their properties of buffer compatibility, insensitivity to dam methylation, overhang incompatibility, and heat sensitivity. This combination of restriction enzymes was predicted to minimise bias in the representation of individual species within the metagenomic community. The protocol employed a dual index approach for sample barcoding where each adapter carries a sample barcode compatible with standard Illumina multiplexing index reads (Fig. 1). Finally, a variable length region containing randomly synthesised nucleotides is included immediately downstream of the read priming site, to improve cluster calling and offer the potential to identify PCR duplicates via unique molecular identifiers (Kivioja et al., 2011). The full list of adapters designed and used in this study is outlined in the Supplementary Information.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5637,
+                    "infons": {
+                        "section_title_1": "Materials & Methods",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "To generate the ddRADseq libraries, 50 ng of DNA from each sample was used in a restriction double digest following the reaction conditions recommended by the enzyme manufacturer. A total of 5U of both enzymes were used in the reaction and subsequently heat inactivated following the manufacturer\u2019s instructions. A generous molar ratio of 1:40 (digested DNA: sequencing adapters) was then used for sequencing adapter ligation, which ensured an excess of adapters for ligation. Amplification of the adapter-ligated fragments was then carried out using the Illumina standard P5 and P7 flowcell oligo primers. The three sequencing libraries were then pooled with equal volume and size selected for approximately 500\u2013600 bp fragments with SPRIselect beads (Beckman Coulter) using a 0.5\u00d7/0.6\u00d7\u00a0double-sided clean-up. Shotgun metagenomic libraries were prepared from separate aliquots of sample DNA using the Illumina Nextera DNA kit. Sequencing of those samples were done with half a lane of the Illumina HiSeq 2500 in rapid PE250 mode. Details of the library construction protocol are given in the Supplementary Information.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6756,
+                    "infons": {
+                        "section_title_1": "Materials & Methods",
+                        "section_title_2": "Quality assurance of sequencing data and availability of data",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The quality of sequence data was examined using FastQC (Andrews, 2010). Reads were also checked for the presence of the sequenced portion of the restriction enzyme recognition site (NlaIII: CATG, HpyCH4IV: CGT) starting at position 0\u20133 in the read depending on the phasing of the barcode adapter associated with each sample. Shotgun sequence data are available from the NCBI Short Read Archive, project accession SRP100899, containing two datasets per sample.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7276,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We present a full method for sample preparation using the double digest restriction site associated DNA sequencing (ddRADseq) technique. Paired-end Illumina sequencing was carried out on both shotgun and ddRADseq libraries for three human gut microbiome samples. As a pilot study with only three samples, there is insufficient statistical power to evaluate associations between phenotype and microbiome genotype in these samples. Instead, we evaluate the extent to which ddRADseq yields a similar estimate of community taxonomic profile as that obtained from shotgun metagenome sequencing of the same samples. If the ddRADseq is strongly biased against (or in favour of) some taxonomic groups it might reduce (or increase) power to detect associations between phenotype and the protein coding genes in the genomes of that group. Both the shotgun and ddRADseq reads were taxonomically profiled using MetaPhlAn (Segata et al., 2012), which counts reads matching to clade-specific protein-coding marker genes in order to estimate taxon abundance from metagenomic read data. The taxonomic profile between individuals was different on both the genus and species levels, consistent with the inter-individual variation that is typically observed in human microbiome studies. Highly similar, but not identical, taxonomic profiles were observed between the shotgun-sequenced and ddRADseq metagenome libraries. Hierarchical clustering using the Manhattan distance showed that ddRADseq samples cluster closely with their matching shotgun samples (Fig.\u00a02). These results suggest that the representation of protein coding genes in ddRADseq metagenomes may be uniform enough to support association studies.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8968,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To assess whether the restriction enzyme pair used in this study created a reduced representation library that was biased by genomic G + C content we plotted the estimated relative abundance of each taxonomic group with respect to the genomic G + C content of a reference genome from that taxonomic group. As can be seen in Fig. 3, if an association exists between genomic G + C and relative abundance in our ddRADseq libraries, it is not visually apparent. We refrain from reporting Spearman correlations on this dataset, as such correlation tests have well known problems on compositional data (Lovell et al., 2015).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9586,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Changes in the human microbiota have been associated with complex disease. The gut microbiota, for example, has been linked to conditions such as irritable bowel syndrome and inflammatory bowel disease. Major research efforts are now underway to move beyond taxonomic associations to discover and describe the genetic basis for these microbiome-associated diseases. Although shotgun metagenomics is one way to carry out those analyses, it can be prohibitively expensive in some situations. Therefore, reduced representation techniques such as ddRADseq may provide a useful means to enable large-scale studies within a fixed research budget. A metagenomic adaptation of the traditional ddRADseq protocol is feasible in principle, yet no data has previously been reported for such an application to real microbiome samples. Here we presented a preliminary analysis of the data and showed that metagenome profiling with ddRADseq appears to be feasible. Taxon relative abundances estimated from clade-specific marker genes are similar but not identical to estimates from shotgun metagenomic data, implying that protein coding gene profiles from ddRADseq would likewise be similar to those obtained with shotgun metagenomics. The potential savings that could be obtained by the use of ddRADseq instead of shotgun metagenomics depends on several factors, including read length, community complexity, and the chosen degree of complexity reduction. To understand the potential cost savings, consider a set of high complexity samples (e.g. soil) to be sequenced on the highest output Illumina instruments, currently the NovaSeq 6000, which yield paired end 150 nt reads on fragments about 400 bp long. Assuming size-selection has been tuned to generate ddRADseq fragments about 300 nt long, with fragment start sites separated in the genomes by about 30,000 bp on average, this would represent a complexity reduction of 99%. A study which aims to associate markers with some phenotypic or other sample data would then in principle require 99% less data to find an association of equivalent statistical significance. In this example, 100 times as many samples could be processed with ddRADseq over shotgun metagenome sequencing, with equal statistical power and at equal cost in sequencing (though library preparation costs would increase). The trade-off is that phenotypic features are associated to markers, for example the abundance of individual ddRADseq fragments or single nucleotide variants within those fragments, rather than the potentially causal genotypic features themselves. Nevertheless, such markers may still be highly useful as they could provide a lead for further investigation of the features of genomes containing those markers. Therefore, when combined with careful fragment size selection, ddRADseq profiling could have value as a cost effective means to generate metagenomic profiles for use with metagenome-wide association studies and as a complementary tool for surveillance of microbial ecosystems, tracking differences across environments, treatments or time scale.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12671,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Even if enzyme choice leads to some bias in metagenomic ddRADseq libraries, other sources of bias may be more significant. For example, DNA extraction efficiency for individual community members can depend heavily on features such as the cell wall architecture of those organisms, leading to extreme bias in the extracted DNA and final sequencing library (Frostegard et al., 1999; Morgan, Darling & Eisen, 2010). The biases introduced by ddRADseq may be small in comparison to those introduced by DNA extraction. Sensitivity of restriction enzymes to methylation and other poorly understood DNA modifications maybe another factor contributing towards the observed differences in detection. The cleavage of target DNA may be blocked, or impaired, when a particular base in the enzyme\u2019s recognition site is modified. Future work to test this could explore the use of enzymes that have the same recognition site (isoschizomers), but with different methylation sensitivity, to identify modified bases through changes in the efficiency of restriction digest. Metagenomic ddRADseq will also be affected by biases that are commonly seen in single organism RADseq experiments including polymorphism in restriction site, mutation leading to novel restriction sites and heterogeneity in base composition across or between genomes (Andrews et al., 2014; Andrews & Luikart, 2014; Arnold et al., 2013; DaCosta & Sorenson, 2014; Lowry et al., 2017; McCluskey & Postlethwait, 2015; Puritz et al., 2014).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14159,
+                    "infons": {
+                        "section_title_1": "Conclusions",
+                        "iao_name_1": "conclusion section",
+                        "iao_id_1": "IAO:0000615"
+                    },
+                    "text": "This study presents a proof of concept for adopting double digest restriction site associated DNA sequencing (ddRADseq) against microbiome dataset. The generated sequencing results and analysis demonstrate: (1) the feasibility of adopting the ddRADseq profiling technique on complex microbiome samples; (2) the ability of this new technique to generate a reduced representation of a complex microbial community, and with taxon relative abundances that are similar to the community profile from shotgun metagenome sequencing of the same samples; (3) the reduced representation generated by the enzymes used in the ddRADseq method does not exhibit an obvious bias with respect to G + C content of genomes in the sample, which will support the wider application of such technique against other environmentally relevant samples. The method and data presented here may be of value to the research community, because the technique promises to enable metagenome-wide association studies in systems where it was previously intractable due to scale or complexity.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15224,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "We would like to acknowledge the Centre for Digestive Diseases in Sydney, NSW, Australia for their assistance with fecal sample collection and for helpful discussions.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15406,
+                    "infons": {
+                        "section_title_1": "Additional Information and Declarations",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326",
+                        "iao_name_2": "disclosure section",
+                        "iao_id_2": ""
+                    },
+                    "text": "The authors declare there are no competing interests.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15498,
+                    "infons": {
+                        "section_title_1": "Additional Information and Declarations",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326",
+                        "iao_name_2": "disclosure section",
+                        "iao_id_2": ""
+                    },
+                    "text": "Michael Y. Liu performed the experiments, analyzed the data, wrote the paper, prepared figures and/or tables, reviewed drafts of the paper.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15637,
+                    "infons": {
+                        "section_title_1": "Additional Information and Declarations",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326",
+                        "iao_name_2": "disclosure section",
+                        "iao_id_2": ""
+                    },
+                    "text": "Paul Worden, Leigh G. Monahan and Catherine M. Burke performed the experiments, reviewed drafts of the paper.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15746,
+                    "infons": {
+                        "section_title_1": "Additional Information and Declarations",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326",
+                        "iao_name_2": "disclosure section",
+                        "iao_id_2": ""
+                    },
+                    "text": "Matthew Z. DeMaere analyzed the data, reviewed drafts of the paper.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15813,
+                    "infons": {
+                        "section_title_1": "Additional Information and Declarations",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326",
+                        "iao_name_2": "disclosure section",
+                        "iao_id_2": ""
+                    },
+                    "text": "Steven P. Djordjevic contributed reagents/materials/analysis tools, reviewed drafts of the paper.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15910,
+                    "infons": {
+                        "section_title_1": "Additional Information and Declarations",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326",
+                        "iao_name_2": "disclosure section",
+                        "iao_id_2": ""
+                    },
+                    "text": "Ian G. Charles conceived and designed the experiments, contributed reagents/materials/analysis tools, reviewed drafts of the paper.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16041,
+                    "infons": {
+                        "section_title_1": "Additional Information and Declarations",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326",
+                        "iao_name_2": "disclosure section",
+                        "iao_id_2": ""
+                    },
+                    "text": "Aaron E. Darling conceived and designed the experiments, analyzed the data, contributed reagents/materials/analysis tools, wrote the paper, prepared figures and/or tables, reviewed drafts of the paper.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16242,
+                    "infons": {
+                        "section_title_1": "Additional Information and Declarations",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326",
+                        "iao_name_2": "disclosure section",
+                        "iao_id_2": ""
+                    },
+                    "text": "The following information was supplied relating to ethical approvals (i.e., approving body and any reference numbers):",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16360,
+                    "infons": {
+                        "section_title_1": "Additional Information and Declarations",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326",
+                        "iao_name_2": "disclosure section",
+                        "iao_id_2": ""
+                    },
+                    "text": "The following information was supplied regarding the deposition of DNA sequences:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16441,
+                    "infons": {
+                        "section_title_1": "Additional Information and Declarations",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326",
+                        "iao_name_2": "disclosure section",
+                        "iao_id_2": ""
+                    },
+                    "text": "Shotgun sequence data are available from the NCBI Short Read Archive, project accession SRP100899, containing two datasets per sample.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16575,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Andrews (2010) Andrews S. 2010. FastQC: a quality control tool for high throughput sequence data. https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16741,
+                    "infons": {
+                        "journal": "Molecular Ecology. ",
+                        "volume": "23",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Andrews et al. (2014) Andrews KR, Hohenlohe PA, Miller MR, Hand BK, Seeb JE, Luikart G. Trade-offs and utility of alternative RADseq methods: reply to Puritz et al. Molecular Ecology. 2014;23:5943\u20135946. doi: 10.1111/mec.12964. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17004,
+                    "infons": {
+                        "journal": "Molecular Ecology. ",
+                        "volume": "23",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Andrews & Luikart (2014) Andrews KR, Luikart G. Recent novel approaches for population genomics data analysis. Molecular Ecology. 2014;23:1661\u20131667. doi: 10.1111/mec.12686. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17213,
+                    "infons": {
+                        "journal": "Molecular Ecology. ",
+                        "volume": "22",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Arnold et al. (2013) Arnold B, Corbett-Detig RB, Hartl D, Bomblies K. RADseq underestimates diversity and introduces genealogical biases due to nonrandom haplotype sampling. Molecular Ecology. 2013;22:3179\u20133190. doi: 10.1111/mec.12276. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17485,
+                    "infons": {
+                        "journal": "PLOS ONE. ",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "DaCosta & Sorenson (2014) DaCosta JM, Sorenson MD. Amplification biases and consistent recovery of loci in a double-digest RAD-seq protocol. PLOS ONE. 2014;9:e106713. doi: 10.1371/journal.pone.0106713. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17742,
+                    "infons": {
+                        "journal": "Applied and Environmental Microbiology. ",
+                        "volume": "65",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Frostegard et al. (1999) Frostegard A, Courtois S, Ramisse V, Clerc S, Bernillon D, Le Gall F, Jeannin P, Nesme X, Simonet P. Quantification of bias related to the extraction of DNA directly from soils. Applied and Environmental Microbiology. 1999;65:5409\u20135420. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18048,
+                    "infons": {
+                        "journal": "Microbiology and Molecular Biology Reviews. ",
+                        "volume": "68",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Handelsman (2004) Handelsman J. Metagenomics: application of genomics to uncultured microorganisms. Microbiology and Molecular Biology Reviews. 2004;68:669\u2013685. doi: 10.1128/MMBR.68.4.669-685.2004. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18301,
+                    "infons": {
+                        "journal": "Nature Methods. ",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Kivioja et al. (2011) Kivioja T, Vaharautio A, Karlsson K, Bonke M, Enge M, Linnarsson S, Taipale J. Counting absolute numbers of molecules using unique molecular identifiers. Nature Methods. 2011;9:72\u201374. doi: 10.1038/nmeth.1778. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18568,
+                    "infons": {
+                        "journal": "PLOS Computational Biology. ",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Lovell et al. (2015) Lovell D, Pawlowsky-Glahn V, Egozcue JJ, Marguerat S, Bahler J. Proportionality: a valid alternative to correlation for relative data. PLOS Computational Biology. 2015;11:e1004075. doi: 10.1371/journal.pcbi.1004075. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18860,
+                    "infons": {
+                        "journal": "Molecular Ecology Resources. ",
+                        "volume": "17",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Lowry et al. (2017) Lowry DB, Hoban S, Kelley JL, Lotterhos KE, Reed LK, Antolin MF, Storfer A. Breaking RAD: an evaluation of the utility of restriction site-associated DNA sequencing for genome scans of adaptation. Molecular Ecology Resources. 2017;17:142\u2013152. doi: 10.1111/1755-0998.12635. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19208,
+                    "infons": {
+                        "journal": "Molecular Biology and Evolution. ",
+                        "volume": "32",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "McCluskey & Postlethwait (2015) McCluskey BM, Postlethwait JH. Phylogeny of zebrafish, a \u201cmodel species\u201d, within Danio, a \u201cmodel genus\u201d Molecular Biology and Evolution. 2015;32:635\u2013652. doi: 10.1093/molbev/msu325. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19477,
+                    "infons": {
+                        "journal": "PLOS ONE. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Morgan, Darling & Eisen (2010) Morgan JL, Darling AE, Eisen JA. Metagenomic sequencing of an in vitro-simulated microbial community. PLOS ONE. 2010;5:e10209. doi: 10.1371/journal.pone.0010209. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19725,
+                    "infons": {
+                        "journal": "PLOS ONE. ",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Peterson et al. (2012) Peterson BK, Weber JN, Kay EH, Fisher HS, Hoekstra HE. Double digest RADseq: an inexpensive method for de novo SNP discovery and genotyping in model and non-model species. PLOS ONE. 2012;7:e37135. doi: 10.1371/journal.pone.0037135. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20035,
+                    "infons": {
+                        "journal": "Molecular Ecology. ",
+                        "volume": "23",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Puritz et al. (2014) Puritz JB, Matz MV, Toonen RJ, Weber JN, Bolnick DI, Bird CE. Demystifying the RAD fad. Molecular Ecology. 2014;23:5937\u20135942. doi: 10.1111/mec.12965. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20242,
+                    "infons": {
+                        "journal": "Nature Methods. ",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Segata et al. (2012) Segata N, Waldron L, Ballarini A, Narasimhan V, Jousson O, Huttenhower C. Metagenomic microbial community profiling using unique clade-specific marker genes. Nature Methods. 2012;9:811\u2013814. doi: 10.1038/nmeth.2066. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20533,
+                    "infons": {
+                        "journal": "Applied and Environmental Microbiology. ",
+                        "volume": "77",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Simon & Daniel (2011) Simon C, Daniel R. Metagenomic analyses: past and future trends. Applied and Environmental Microbiology. 2011;77:1153\u20131161. doi: 10.1128/AEM.02345-10. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

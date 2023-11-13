@@ -1,0 +1,1103 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC4653211",
+            "inputfile": "../microbiome_corpus_HTML\\PMC4653211.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Library preparation methodology can influence genomic and functional predictions in human microbiome research",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 109,
+                    "infons": {
+                        "section_title_1": "keywords",
+                        "iao_name_1": "keywords section",
+                        "iao_id_1": "IAO:0000630"
+                    },
+                    "text": "microbiome, genomics, sequencing",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 149,
+                    "infons": {
+                        "section_title_1": "Significance",
+                        "iao_name_1": "highlights section",
+                        "iao_id_1": ""
+                    },
+                    "text": "The field of microbiome research is moving from 16S rDNA gene sequencing to metagenomic sequencing of complete communities, which clearly gives a more comprehensive genomic and functional representation of the organisms present. Here we describe, quantify, and compare biases associated with four currently available next-generation sequencing library preparation methods using a synthetic DNA mock community and an extraction spike-in control of microbial cells. Our study highlights a critical need for consistency in protocols and data analysis procedures, especially when attempting to interpret human microbiome data for human health.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 800,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Observations from human microbiome studies are often conflicting or inconclusive. Many factors likely contribute to these issues including small cohort sizes, sample collection, and handling and processing differences. The field of microbiome research is moving from 16S rDNA gene sequencing to a more comprehensive genomic and functional representation through whole-genome sequencing (WGS) of complete communities. Here we performed quantitative and qualitative analyses comparing WGS metagenomic data from human stool specimens using the Illumina Nextera XT and Illumina TruSeq DNA PCR-free kits, and the KAPA Biosystems Hyper Prep PCR and PCR-free systems. Significant differences in taxonomy are observed among the four different next-generation sequencing library preparations using a DNA mock community and a cell control of known concentration. We also revealed biases in error profiles, duplication rates, and loss of reads representing organisms that have a high %G+C content that can significantly impact results. As with all methods, the use of benchmarking controls has revealed critical differences among methods that impact sequencing results and later would impact study interpretation. We recommend that the community adopt PCR-free\u2013based approaches to reduce PCR bias that affects calculations of abundance and to improve assemblies for accurate taxonomic assignment. Furthermore, the inclusion of a known-input cell spike-in control provides accurate quantitation of organisms in clinical samples.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2324,
+                    "infons": {
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316",
+                        "iao_name_2": "materials section",
+                        "iao_id_2": "IAO:0000633"
+                    },
+                    "text": "Next-generation sequencing (NGS) of microbial genomes and metagenomes is now widely used in various applications including forensic genetics, clinical diagnostics, pathogen outbreaks, and infectious disease surveillance. Since the publication of the first human microbiome study in 2006 (1), there has been an explosion of human microbiome studies for both healthy and disease conditions; the great majority of these studies now routinely use NGS technologies. Several recent articles have raised alarm about a lack of data robustness and reproducibility among published 16S rDNA and whole-genome sequencing (WGS) metagenomic studies between sequencing runs and laboratory cores (2\u20135). Finucane et al. (6), for example, compared several obesity microbiome publications and suggested that no simple taxonomic signature could be found and that several groups did not agree about the microbiome association with body mass index. A similar picture evolves in the analysis of microbiome samples of nonalcoholic fatty liver disease, for which conflicting microbial signatures exist (7). In addition, experimental variation remains a significant hurdle in many published studies. For example, researchers recently published evidence of variation in 16S rDNA gene profiling from microbiome specimens processed using several nucleic acid extraction protocols (8, 9). Franzosa et al. (10, 11) further revealed the impact of sample collection on the stability of the metagenome and metatranscriptome of stool specimens.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3832,
+                    "infons": {
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316",
+                        "iao_name_2": "materials section",
+                        "iao_id_2": "IAO:0000633"
+                    },
+                    "text": "Improvements and development of novel chemistries and sequencing technologies have provided the scientific community with tools to obtain high-resolution measurements from microbiome samples, with advances in NGS technology resulting in several library preparation products currently available on the market. Rapid development of new library chemistries and approaches provide novel low-cycle PCR and PCR-free tools, as well as chemical and physical shearing approaches, that can be used to analyze the microbiome. However, these tools may introduce unanticipated artifacts in the data. In the current study we focus on this major essential upstream step of human microbiome analysis\u2014library preparation. We comprehensively assess NGS library preparation platforms by comparing the three major platforms, Illumina TruSeq DNA PCR-free (TSF), Illumina Nextera XT (XT), and Kapa Hyper Prep (KF) [both Kapa Hyper Prep PCR (KP) and PCR-free (KF)] in a controlled setting of identical samples, equipment, and handlers. In addition, we further assessed the three major platforms using a set of longitudinal stool specimens collected following amoxicillin treatment. Analysis of these samples on the aforementioned platforms provides additional insight into potential bias of primary specimens compared with a synthetic mock community.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5159,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Sequencing, Assembly, and Annotation Statistics of Mock Community and Stool Samples. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To determine the impact of the XT, KP, KF, and TSF library preparation methods on microbiome community quantitation, we generated two independent libraries from each of five DNA samples (the mock community and four clinical samples) for each library chemistry. To maintain unbiased comparison among different libraries, postsequencing quality analysis and annotation were based on equivalent numbers of raw reads. For taxonomy profiling, 4.85 million paired-end reads (minimal yield among the samples) were used for all the samples. For assembly, ORF prediction, and functional annotation, where additional depth was desired, 11 million paired-end raw reads were used for the analysis (Dataset S1, Table S1). Two stool sample libraries generated by TSF did not reach sufficient coverage. The two technical replicates for these two samples were pooled together to achieve 11 million raw reads. XT libraries generated an average of 28% low-quality reads, a duplication rate of 1.38%, and a contig N50 length of 10,727 bp. Sequence data generated from KP libraries had an average of 6.41% low-quality reads, a duplication rate of 1.29%, and a contig N50 length of 30,814 bp. Libraries generated using the KF approach resulted in sequence data with an average of 15.39% low-quality reads, a duplication rate of 0.07%, and an N50 of 32,864 bp. Last, sequence data produced from TSF libraries resulted in an average of 15.41% low-quality reads, a duplication rate of 0.04%, and an N50 of 45,707 bp (Dataset S1, Table S1). In summary, the TSF libraries produced the longest contigs; KP produced the largest total contig length; and XT libraries resulted in significantly shorter individual contig length and total contig length (Fig. S1 and Dataset S1, Table S1).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7007,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Impact of the Library Preparation Method on Taxonomic Abundance and Functional Predictions. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To assess the impact of the library preparation method on metagenomic shotgun sequencing data, measurements of taxonomic relative abundance were calculated for the mock DNA community [Biodefense and Emerging Infections Research Resources Repository (BEI Resources) HM-276D] (Dataset S1, Table S2) across the four different protocols. Hierarchical clustering of the four libraries based on the relative genome abundance (RGA) profiles of the constituent microbes revealed two major groups: XT and KF in one group and KP and TSF in the other (Fig. 1). Unexpectedly, cluster analysis indicates that KF matches more closely with XT than with TSF, pairing a PCR-free sample more closely to a PCR-amplified sample than to another PCR-free sample and suggesting that the low-cycle PCR amplification step did not result in any bias. Cluster analysis also illustrated closer grouping between platforms rather than within platforms, as demonstrated closer clustering between XT and KF and between KP and TSF, rather than between XT and TSF or between KF and KP, indicating that library chemistry does not equate with clustering similarity. Using one-way ANOVA analysis to compare the relative abundance measurements of the members of the mock community across the four mock-community libraries revealed significant variation based on library preparation (Dataset S1, Table S3). Among the largest variations were the relative abundances of Helicobacter pylori, Streptococcus pneumoniae, Deinococcus radiodurans, and Pseudomonas aeruginosa with SDs from 1.16\u20131.61% or \u223c4,000\u20136,000 reads. Furthermore, there were no correlations across library protocols between organism abundance in the mock community and variation based on RGA.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Helicobacter pylori",
+                            "infons": {
+                                "identifier": "NCBI:txid210",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:15:54",
+                                "parent_taxonomic_id": "NCBI:txid209"
+                            },
+                            "id": "1089356",
+                            "locations": {
+                                "length": 19,
+                                "offset": 8436
+                            }
+                        },
+                        {
+                            "text": "Streptococcus pneumoniae",
+                            "infons": {
+                                "identifier": "NCBI:txid1313",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:15:54",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "1089357",
+                            "locations": {
+                                "length": 24,
+                                "offset": 8457
+                            }
+                        },
+                        {
+                            "text": "Deinococcus radiodurans",
+                            "infons": {
+                                "identifier": "NCBI:txid1299",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:15:54",
+                                "parent_taxonomic_id": "NCBI:txid1298"
+                            },
+                            "id": "1089358",
+                            "locations": {
+                                "length": 23,
+                                "offset": 8483
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:15:54",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "1089359",
+                            "locations": {
+                                "length": 22,
+                                "offset": 8512
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 8816,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Impact of the Library Preparation Method on Taxonomic Abundance and Functional Predictions. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To examine how library preparation impacts functional annotation, we analyzed genes that can be recovered from the assembled sequences, which is the basis for predicting the function and pathway landscape of metagenomes (Dataset S1, Table S4). Here, two ORFs sets, predicted ORFs from the assembled scaffolds and true ORFs called from the complete mock reference genomes, are compared using cd-hit-2d at \u226598% sequence identity over 95% of the length of predicted ORFs to find matched ORFs between these two sets (Fig. S2). Because predicted ORFs tend to be more fragmented, multiple predicted ORFs may be aligned to a single true ORF. Overall, around 96% of true ORFs were recovered by 95% of predicted ORFs for the 20 strains in the mock community across four libraries; XT showed slightly but notably worse performance than the other libraries. XT data also resulted in more fragmented ORFs than did KP, KF, and TSF. Most of the 20 individual strains demonstrate a pattern very similar to the combined data from the 20 strains. Among the 20 mock genomes, Clostridium beijerinckii exhibited more significant differences between XT and other libraries: XT resulted in approximately fivefold more unmapped ORFs (840 vs. \u223c140), approximately threefold more missing genes (237 vs. \u223c60), and a 20% higher fragmentation ratio (1.23% vs. 1.03%) than the other libraries. This analysis agrees with our observations regarding the assembly status and genome coverage. We did not identify significant differences in functional annotation between KP, KF, and TSF in all 20 mock genomes. For the remaining 19 community organisms, XT performed as well as KP, KF, and TSF.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Clostridium beijerinckii",
+                            "infons": {
+                                "identifier": "NCBI:txid1520",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:16:12",
+                                "parent_taxonomic_id": "NCBI:txid1485"
+                            },
+                            "id": "1089360",
+                            "locations": {
+                                "length": 24,
+                                "offset": 9873
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 10474,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Impact of Library Procedure on Quantitative Assessment of Clinical Stool Samples. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "RGA measurements for a longitudinal study were analyzed to examine the impact of the selected library preparation approaches on clinical stool samples. The clinical samples originated from an ongoing research project to determine the impact of antibiotic selection on the microbiome. Samples were collected from the participant before (day 0) and following amoxicillin treatment (days 3 and 7 and week 8). Because genomic libraries prepared from real human microbiome samples contain greater microbial complexity than the mock community, the inclusion of these samples may help determine the degree to which the four library protocols impact any downstream analyses. Libraries were prepared in duplicate from the extracted stool DNAs using the XT, TSF, KF, and KP protocols as described above.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11349,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Impact of Library Procedure on Quantitative Assessment of Clinical Stool Samples. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Precision analysis for clinical stool sample replicates demonstrate little variation between technical replicates, with an average R2 = 0.999 (Dataset S1, Table S5). The RGA profiles, based on rank order analysis, show a high degree of correlation among library preparations, with an average R2 = \u223c0.97 (Dataset S1, Table S6). To determine if specific library preparation methods introduce quantitative variation based on RGA measurements at the species/strain level, a one-way ANOVA analysis was performed on the day 0 clinical stool sample. Data revealed significant variation in the representation of the abundance of 25 microbial species/strains (P value of 0.01; Dataset S1, Table S7). A one-way ANOVA analysis based on a P value of 0.01 with standard Bonferroni correction was applied to the data from the day 3, day 7, and week 8 postantibiotic time points to assess quantitative variation introduced by kit-specific library preparations. The data revealed statistically significant variation in the representation of the abundance of 27 organisms in the day 3 sample, 8 organisms in the day 7 sample, and 36 organisms in the week 8 sample. To examine if a significant difference in measured sample diversity exists based on library preparation protocol, we performed a Shannon index analysis of the clinical specimens before and after antibiotic treatment (Fig. S3) (12). There was no significant impact in measured diversity.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12783,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Impact of Library Procedure on Qualitative Assessment of Clinical Stool Samples. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To examine whether the observed quantitative variation introduced by individual library preparation methods impacts the qualitative assessment of the microbiome, we performed a Bayesian temporal analysis for all time points within individual library preparations (13). We observed changes in response to the antibiotic treatment in 233 microbial species/strains based on a P value of 0.01 in the XT libraries following antibiotic administration (Dataset S1, Table S8). We observed similar changes following antibiotic administration in 234 microbiome species/strains in the KP libraries, 235 microbial species/strains in the KF libraries, and 243 microbial species/strains in the TSF libraries (Dataset S1, Tables S9\u2013S11). Venn diagram analysis was used to identify common microbial species/strains that were significantly modulated following the administration of antibiotic. Our analysis revealed 217 microbial species/strains were identified in all library preparations as significantly modulated following antibiotic selection (Fig. S4). Species/strains not uniformly identified across all of the four library preparation approaches tended to represent organisms with a percentage RGA of <0.00001.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14065,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Percent G+C Bin and Genome Coverage Mapping Analysis. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Previously published studies report a potential bias in the %G+C in XT libraries sequenced on the Roche 454 Titanium platform (14) and on the MiSeq platform (15). Using the mock community, we analyzed the relative measurements of species abundance for each library protocol with respect to %G+C. Consistent with the cluster analysis of the mock community, XT and KF have a similar pattern of higher representation of organisms with a low %G+C and a corresponding lower representation of organisms with a high %G+C, as marked by yellow and red boxes, respectively, in Fig. S5. To examine the possible relationship between read coverage and genome %G+C by method, we calculated both the %G+C of the bin and the mean read-depth coverage (from nonoverlapping 10-kbp windows across the genome) (Fig. 2B). Coverage patterns are very comparable across methods, with equivalent region-specific depth spikes and valleys. Examination of sequences underlying the most extreme spikes per genome revealed repetitive genomic elements. This analysis is consistent with recent observations that the annotated 16S rRNA gene copy number of many organisms is incorrect (16). Of note, the Rhodobacter sphaeroides coverage plots show large stretches of increased coverage at the end of the circle plots (Fig. 2A). These regions correspond to the boundaries and regions of plasmids found in this organism, suggesting that these plasmids are multicopy. Similar evaluations were made for Escherichia coli and C. beijerinckii (Figs. S6 and S7). To examine read depth coverage biases, we simulated the sequencing of each genome to an average read depth ranging from 0.1\u201320 and calculated the expected proportion of the genome expected to have at least one read when sequenced at that depth. Although the specific effect seems to vary slightly from genome to genome, there is a general trend for TSF, KP, and KF preparation methods to behave nearly identically, whereas XT requires a deeper average sequencing depth to capture an equivalent fraction of the genome with reads.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Rhodobacter sphaeroides",
+                            "infons": {
+                                "identifier": "NCBI:txid1063",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:17:13",
+                                "parent_taxonomic_id": "NCBI:txid1653176"
+                            },
+                            "id": "1089361",
+                            "locations": {
+                                "length": 23,
+                                "offset": 15234
+                            }
+                        },
+                        {
+                            "text": "Escherichia coli",
+                            "infons": {
+                                "identifier": "NCBI:txid562",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:17:16",
+                                "parent_taxonomic_id": "NCBI:txid561"
+                            },
+                            "id": "1089362",
+                            "locations": {
+                                "length": 16,
+                                "offset": 15529
+                            }
+                        },
+                        {
+                            "text": "C. beijerinckii",
+                            "infons": {
+                                "identifier": "NCBI:txid1520",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:17:16",
+                                "parent_taxonomic_id": "NCBI:txid1485"
+                            },
+                            "id": "1089363",
+                            "locations": {
+                                "length": 15,
+                                "offset": 15550
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 16167,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "qPCR Determination of XT and KP Bias After Library Preparation. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "qPCR was used to quantitate accurately the 20 species within the mock-community DNA sample. Three genes unique to each of the 20 members of the mock community were identified and used to develop organism-specific qPCR assays (Dataset S1, Table S12). Genomic DNAs were used to optimize reaction conditions and to establish a standard curve for quantitation of strain-specific DNA concentrations within the mock-community DNA and to serve as a positive control. When possible we used at least two independent qPCR measurements and corresponding primer-specific standard curves to determine percent composition for each organism in the mock community. The percent delta between RGA from the sequencing data generated from the four library preparations and the average qPCR quantification measurements demonstrates the impact of library strategy and sequencing on the accurate representation of individual mock-community organisms (Table 1). We observed over- and underrepresentation of strain DNAs, with a deviation of 2.0% or more or of \u22122.0% or less, compared with qPCR measurements, for mock-community organisms in all the library strategies tested based on RGA (10/20 XT; 12/20 KF; 7/20 KP; and 7/20 TSF). To determine if the bias should be attributed to library preparation or downstream clustering/sequencing, qPCR was performed on the XT and KP library preparations using strain-specific primers for representative organisms in the mock community. Direct comparison of qPCR measurements of the mock-community DNA and the XT library revealed an underrepresentation of \u22651.9% in two (D. radiodurans and R. sphaeroides) of the three organisms with high (\u226560%) G+C content, and in the KP library R. sphaeroides and Propionibacterium\nacnes were underrepresented by \u223c4% (Table 2). To determine which library protocol had the greatest similarity to the starting DNA composition of the mock community, we computed a Pearson correlation matrix between samples (Dataset S1, Table S13). We observed that the qPCR measurements of the mock-community DNA were more similar to the generated libraries than to the resulting sequencing data. Specifically, the mock-community DNA had greater similarity with the XT library (0.58) than did the KP library (0.20).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "D. radiodurans",
+                            "infons": {
+                                "identifier": "NCBI:txid1299",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:17:43",
+                                "parent_taxonomic_id": "NCBI:txid1298"
+                            },
+                            "id": "1089364",
+                            "locations": {
+                                "length": 14,
+                                "offset": 17751
+                            }
+                        },
+                        {
+                            "text": "R. sphaeroides",
+                            "infons": {
+                                "identifier": "NCBI:txid1063",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:17:43",
+                                "parent_taxonomic_id": "NCBI:txid1653176"
+                            },
+                            "id": "1089365",
+                            "locations": {
+                                "length": 14,
+                                "offset": 17771
+                            }
+                        },
+                        {
+                            "text": "R. sphaeroides",
+                            "infons": {
+                                "identifier": "NCBI:txid1063",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:17:44",
+                                "parent_taxonomic_id": "NCBI:txid1653176"
+                            },
+                            "id": "1089366",
+                            "locations": {
+                                "length": 14,
+                                "offset": 17862
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 18477,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "qPCR Determination of Raw Mapped Reads in Relation to Genomic Units. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To evaluate further the accuracy of the XT approach and to calculate the correlation between raw mapped reads, RGA, and genomic units (GU), qPCR was performed on a stool sample spiked with cells of Shewanella oneidensis, as described above. Cells were spiked into three stool samples at a known concentration and processed through our specimen total DNA extraction pipeline; libraries were prepared using the XT approach and were sequenced to determine the correlation to DNA input, mapped reads, RGA estimates, and GU. The total number of mapped 125-nt reads generated in each of the spiked and control stool specimens ranged from 11.7 \u00d7 106 to 12.4 \u00d7 106. In parallel, total DNA extracted from each spiked stool specimen was processed by qPCR to quantitate the amount of S. oneidensis DNA in the sample before library preparation and sequencing. Data revealed that S. oneidensis represented 2.21\u20133.14% of the total extracted DNA in samples as determined by the equation: number of copies = [amount of DNA (in nanograms) * 6.022 \u00d7 1023] / [length (in base pairs) * 1 \u00d7 109 * 650] (Table 3). qPCR analysis indicates that S. oneidensis DNA is present at \u223c5 \u00d7 103 GU per nanogram of total extracted spiked specimen DNA. The percentage of reads uniquely mapped to S. oneidensis from the total mapped reads strongly agreed with the calculated percent RGA. We calculated the number of mapped reads that correlate to one GU for a 4.9-Mb genome, based on calculated GU, total mapped reads, unique reads mapped to S. oneidensis, and the amount of library loaded for clustering. We estimate that 33\u201340 125-bp reads represent one S. oneidensis GU as determined by the equation: reads to GU = [(number of S. oneidensis mapped reads per GU) * percent of sequenced library]. We propose, based on these calculations and calibration standards, an estimation of approximately eight 125-nt mapped reads per genome size (in million base pairs) per 10 \u00d7 106 reads, which equates to 1 GU.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Shewanella oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:17:53",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089367",
+                            "locations": {
+                                "length": 21,
+                                "offset": 18675
+                            }
+                        },
+                        {
+                            "text": "S. oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:18:00",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089368",
+                            "locations": {
+                                "length": 13,
+                                "offset": 19250
+                            }
+                        },
+                        {
+                            "text": "S. oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:18:01",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089369",
+                            "locations": {
+                                "length": 13,
+                                "offset": 19344
+                            }
+                        },
+                        {
+                            "text": "S. oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:18:05",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089370",
+                            "locations": {
+                                "length": 13,
+                                "offset": 19598
+                            }
+                        },
+                        {
+                            "text": "S. oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:18:07",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089371",
+                            "locations": {
+                                "length": 13,
+                                "offset": 19738
+                            }
+                        },
+                        {
+                            "text": "S. oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:18:11",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089372",
+                            "locations": {
+                                "length": 13,
+                                "offset": 19983
+                            }
+                        },
+                        {
+                            "text": "S. oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:18:12",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089373",
+                            "locations": {
+                                "length": 13,
+                                "offset": 20097
+                            }
+                        },
+                        {
+                            "text": "S. oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:18:13",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089374",
+                            "locations": {
+                                "length": 13,
+                                "offset": 20171
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 20514,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "At the beginning of the NIH Roadmap Initiative Human Microbiome Project (HMP), there were no standards for human sampling, sample handling, DNA extraction, DNA sequencing, or data analysis. Eight years since the beginning of the HMP, and despite efforts by many investigators to set standards for many aspects of microbiome research, great variability in approach, methodology, results, and interpretation are routinely reported. These inconsistencies have resulted in significant misinterpretation of data and confusion in the field. DNA sequence generation is fundamental to all metagenome projects; however, although there has been benchmarking for 16S rDNA sequencing, there has been no benchmarking of NGS platforms or library preparation methods for metagenomic sequencing using established controls. Here we quantified the biases associated with four available library preparation methods for the Illumina HiSeq 2500 (Version 4 reagents) platform using a publicly available synthetic DNA mock community (BEI Resources HM-276D) and a DNA extraction spike-in control of S. oneidensis cells. The Illumina HiSeq platform was selected because the technology is estimated to account for the majority of all microbiome WGS studies that currently are under way. We also performed a qualitative comparison of a WGS metagenomic analysis of stool specimens using several library methods. Two of the methods were PCR-free: TruSeq DNA PCR-Free (TSF) and Kapa PCR Free (KF), and two include PCR amplification steps: Nextera XT (XT) and Kapa PCR (KP). Quantitative PCR (qPCR) was also used to validate the mock-community and library preparations.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "S. oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:18:29",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089375",
+                            "locations": {
+                                "length": 13,
+                                "offset": 21589
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 22162,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "From our analysis it is evident that each method has advantages and disadvantages. Both PCR-free methods generated very long contig N50s (150\u2013178 kb) for the mock-community DNA, low duplication rates, and low numbers of low-quality reads. The PCR-based systems had much higher duplication and error rates, but the KF libraries also had a high contig N50 (\u223c142 kb) for the mock-community DNA. The XT libraries had the poorest performance, with 28% low-quality reads, 1.4% duplication rate, and a contig N50 of 35 kb for the mock-community DNA. Comparison of contig N50s for the clinical specimens showed that the TSF had the longest average contig N50s: 12.9 kb compared with 4.2 kb for XT, 3.5 kb for KF, and 2.9 kb for KP. RGA calculations of the mock-community control demonstrated an average RGA SD of <1% across all library preparations in 16 of 20 (80%) of mock-community organisms (Table 1). Direct comparison of RGA data with the qPCR measurements of the input mock-community DNA did demonstrate over- and underrepresentation of strain DNAs with a deviation of 2.0% or more or 2.0% or less compared with qPCR measurements for mock-community organisms in all the library strategies tested based on RGA (10/20 for XT; 12/20 for KF; 7/20 for KP; 7/20 for TSF). Direct comparison by qPCR of the XT and KP mock-community libraries with the pure mock-community DNA demonstrates that the XT library has greater similarity to the original starting sample than the KP library (Dataset S1, Table S13). The level of quantitative variability of RGA compared with qPCR measurements is extremely interesting and alarming. Numerous publications report a change in abundance of \u223c0.1% as significant. Although statistically significant based on study design, the biological significance/relevance of a reported \u223c0.1% change in abundance in microbiome studies may be questioned. Our observations and other reports indicate that multiple factors can influence sequencing accuracy and quantitation and also account for chemistry-to-chemistry variability using the same template DNA molecule. Previous reports have demonstrated the introduction of significant bias based on genome amplification enzymes (17). Furthermore, the level of genome fragmentation can bias flowcell clustering efficiency, with smaller DNA fragments clustering more efficiently than longer fragments. This difference in clustering efficiency may explain the RGA deviation between XT tagmentation- and Covaris fragmentation-based libraries. Furthermore, the variability in the efficiency of platform-specific polymerase enzymes and in enzymatic performance in DNA with high %G+C content is well known. Given the multiple influential variables (i.e., DNA fragmentation, library amplification, and size selection, among others), we strongly suggest the inclusion of a calibration control for microbiome studies.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25030,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "To correlate mapped sequence reads to GUs, we compared the qPCR measurement of DNA from S. oneidensis cells as a control spiked into three stool samples to the RGA generated from sequence analysis. Our analysis revealed a strong correlation between the percent of S. oneidensis DNA in the total extracted stool sample (2.21%, 2.45%, and 3.14% in technical replicates) and the corresponding RGA (3%, 2.8%, and 1.7%). We are able to estimate the number of raw mapped reads equating to a GU. The calculated number of S. oneidensis GUs in the DNA mixture is \u223c5 \u00d7 103. S. oneidensis DNA represents \u223c2\u20133% of the total extracted DNA, based on qPCR measurements. Using the same ratio of S. oneidensis DNA to total extracted DNA, we calculate that in stool DNA [assuming an average genome size of 1.5\u20134 Mb (18, 19)] there are \u223c2.32 \u00d7 105 to 6.18 \u00d7 105 GU per nanogram of DNA. We calculate a range of 41\u201371 (average \u223c43) 125-nt reads equate to one GU, based on the total number of reads and number of mapped reads. Assuming average genome sizes of 1.5, 3.9 Mb, 4.9 Mb, and 5.5 Mb, we estimate that 19, 50, 62 and 73 125-nt reads correlate to one GU, respectively. With these calculations we can begin to estimate the actual number of GUs per nanogram of DNA per milligram of specimen and establish an individual\u2019s personalized microbiome baseline per organism. Our analysis indicates that both PCR and PCR-free based systems can introduce bias into the downstream analysis. PCR-free systems offer the ability to increase contig length without the potential bias that PCR-based systems may introduce. The KF systems appear to be the best solution for specimens in which \u223c500 ng of high-quality DNA is available for library preparation. For metagenomic samples, a PCR-free system potentially would give the user the ability to measure considerably more potential GUs [\u223c1.68 \u00d7 108 GUs; GU number of copies = (1,000 ng * 6.022 \u00d7 1023)/(5.5 Mb * 1 \u00d7 109 * 650)].",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "S. oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:19:11",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089376",
+                            "locations": {
+                                "length": 13,
+                                "offset": 25118
+                            }
+                        },
+                        {
+                            "text": "S. oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:19:13",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089377",
+                            "locations": {
+                                "length": 13,
+                                "offset": 25294
+                            }
+                        },
+                        {
+                            "text": "S. oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:19:16",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089378",
+                            "locations": {
+                                "length": 13,
+                                "offset": 25544
+                            }
+                        },
+                        {
+                            "text": "S. oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:19:17",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089379",
+                            "locations": {
+                                "length": 13,
+                                "offset": 25594
+                            }
+                        },
+                        {
+                            "text": "S. oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:19:19",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089380",
+                            "locations": {
+                                "length": 13,
+                                "offset": 25709
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26977,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "By comparing four different NGS library preparations using a DNA mock community and a cell spike-in control of known concentration, we have revealed biases in error profiles, duplication rates, and loss of reads in organisms with a high %G+C; these biases can impact metagenomic results significantly. We also have identified methods that can provide high contig N50s that may better predict single genome assemblies within metagenomic samples. As with all methods, the use of benchmarking controls has revealed critical differences between methods that impact sequencing results and later would impact study interpretation. Standardization to one system is not feasible, because technology continues to advance, amounts and availability of microbiome samples are highly variable, and scientific budgets are constrained. We propose standardization based on sample type and material abundance and the inclusion of a cell spike-in for DNA extraction controls. In the majority of cases, stool specimens provide sufficient material (i.e., \u223c250\u2013500 ng of DNA or more) to use in a PCR-free system. We propose that the community use PCR-free\u2013based approaches (such as Kapa Hyper Prep PCR-free and TruSeq DNA PCR-free) to reduce PCR bias in calculations of abundance and to improve assemblies for accurate taxonomic assignment. Furthermore, the inclusion of a cell spike-in control will permit a more accurate quantitation of organisms based on a known input value. In the case of precious, low-abundance material, we propose the use of a low-cycle (three to five cycles) PCR-based approach in parallel with the cell spike-in control. These findings suggest that, until standardized platforms and practices are adopted, the microbiome community will be at risk of over-interpreting datasets, generating conflicting results, and hindering progress in the field.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28829,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Mock-Community DNA and Cell Lysis Controls. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "A mock microbial community DNA sample, composed of a mixture 20 microbial genomic DNAs that vary in genome size (1.6\u20136.2 Mb) and G+C content (32\u201369%), was obtained from BEI Resources (HM-276D; even, high-concentration v5.1H) (Dataset S1, Table S2). For cell lysis control, cells of the S. oneidensis strain MR-1 were grown from a single colony for 18 h in Lysogeny Broth (10 g tryptone, 10 NaCl, 10 g yeast extract per liter) at 37 \u00b0C; then the culture was adjusted to an OD600 of 1.0, which equals 6.6 \u00d7 109 cells/mL. Cell counts per OD600 were determined previously by quadruplicate counts of independent cultures using a Petroff\u2013Hausser cell-counting chamber.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "S. oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:20:02",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089381",
+                            "locations": {
+                                "length": 13,
+                                "offset": 29115
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 29556,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Human Subject Enrollment and Sampling. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "A 22-y-old healthy female gave informed consent for the study. The subject received a 7-d course of amoxicillin (day 1 through day 7 of the study) and donated fecal samples on days 0 (before antibiotic therapy), 3, and 7 and at week 8 after receiving the antibiotic. Specimens were immediately frozen at \u221280 \u00b0C until use [as described in Human Microbiome Project v12.0 protocol (20)]. This study was approved by the Institutional Review Board of the University of California, San Diego.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30081,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Sample Preparation Platforms. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Nextera XT libraries were prepared manually following the manufacturer\u2019s protocol (15031942) (Illumina). Briefly, samples were normalized to 0.2 ng/\u00b5L DNA material per library using a Quant-iT PicoGreen assay system (Q33120; Life Technologies) on an AF2200 plate reader (Eppendorf) and then were fragmented and tagged via tagmentation. Amplification was performed by Veriti 96-well PCR (Applied Biosystems) followed by AMPure XP bead cleanup (A63880l; Beckman Coulter). Two technical replicates were generated for each biological sample, resulting in 10 XT-generated libraries. Kapa Hyper Prep libraries were prepared manually following the manufacturer\u2019s protocol (KK8504l; Kapa Biosystems). Samples were normalized to either 1 \u00b5g or 1 ng, and DNA was sheared by sonication with a Covaris LE220. Adapters were ligated, and double solid-phase reversible immobilization (SPRI) size selection was performed using SPRI beads from Beckman Coulter (B23318). Samples starting with 1 ng of input DNA were amplified with a 12-cycle PCR and cleaned up with AMPure beads. Samples with a starting input of 1 \u00b5g of DNA were processed without PCR amplification. Two technical replicates were generated for each biological sample, resulting in 10 KP and 10 KF libraries, i.e., a total of 20 Kapa libraries. Illumina TruSeq DNA PCR-Free libraries were prepared manually following the manufacturer\u2019s protocol for Illumina TruSeq DNA PCR-Free (15036187; Illumina) with minor modifications. Briefly, samples were normalized to 1 \u00b5g DNA and sheared by sonication with a Covaris LE220. AMPure XP beads were used for cleanup and size selection, and adapters then were ligated. Fragment sizes for all libraries were measured using a Labchip GX Touch Hi Sens, and qPCR was performed on a QuantsStudio 6 Flex Real-Time PCR System (Applied Biosystems) with the Kapa library quantification kit. Two technical replicates were generated for each biological sample, resulting in 10 TSF libraries. Sequencing was performed on an Illumina HiSeq 2500 using V4 reagents.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32148,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "qPCR Primers and Quantitation Assays. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "qPCR plates were prepared using 1:10 dilutions of a combined stock of forward and reverse primers at a final concentration of 1.25 \u03bcM (Invitrogen) (Dataset S1, Table S12). Three species-specific primers were designed for each of the 20 mock-community organisms. The final reaction concentration of all primers was 0.125 \u03bcM. Individual pure genomic DNAs that were component members of the mock community were used to create a standard curve to quantify the strain-specific makeup of the mock community and to establish a melting-curve profile. All qPCR reactions using purified or mock-community DNAs were interrogated by melting-curve analysis for amplification artifacts. Purified S. oneidensis genomic DNA also was used to quantify the composition of S. oneidensis in spiked specimens. Organism-specific, specimen, and mock-community genomic DNAs were diluted to 2 ng/\u00b5L and then were serially diluted to 0.02 pg/\u03bcl. The designated amount of each DNA sample then was combined with 5.5 \u03bcL of 2\u00d7 SYBR Green Master Mix (Kapa Biosystems) to a total reaction volume of 11 \u03bcL per well. Thermal cycling conditions used were 96 \u00b0C for 3 min followed by 35 cycles of 96 \u00b0C for 30 s, 58 \u00b0C for 30 s, and 72 \u00b0C for 20 s. A final melting-curve cycle was performed starting at 95\u00b0 for 15 s, 58\u00b0 for 1 min, and 95 \u00b0C for 15 s. All qPCR reactions were run on the Applied Biosystems QuantStudio 6 system. Median threshold cycle (Ct) values for qPCR duplicate reactions were calculated. Organisms with multiple unique targets were analyzed for quantitative correlation. Calculations were performed using the Applied Biosystems QuantStudio 6 Flex software (Applied Biosystems).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "S. oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:20:47",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089382",
+                            "locations": {
+                                "length": 13,
+                                "offset": 32830
+                            }
+                        },
+                        {
+                            "text": "S. oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:20:48",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089383",
+                            "locations": {
+                                "length": 13,
+                                "offset": 32901
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 33847,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "We thank Dr. Orianna Bretschger (J. Craig Venter Institute) for her kind donation of S. oneidensis bacteria.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "S. oneidensis",
+                            "infons": {
+                                "identifier": "NCBI:txid70863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:21:01",
+                                "parent_taxonomic_id": "NCBI:txid22"
+                            },
+                            "id": "1089384",
+                            "locations": {
+                                "length": 13,
+                                "offset": 33932
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 06:21:01",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "1089385",
+                            "locations": {
+                                "length": 8,
+                                "offset": 33946
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 33970,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "The authors declare no conflict of interest.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34023,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Data deposition: The sequences reported in this paper have been deposited in the National Center for Biotechnology Information BioProject database, www.ncbi.nlm.nih.gov/bioproject (project ID PRJNA298489).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34228,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "This article contains supporting information online at www.pnas.org/lookup/suppl/doi:10.1073/pnas.1519288112/-/DCSupplemental.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34354,
+                    "infons": {
+                        "journal": "Science. ",
+                        "volume": "312",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Gill SR, et al. Metagenomic analysis of the human distal gut microbiome. Science. 2006;312(5778):1355\u20131359. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34519,
+                    "infons": {
+                        "journal": "Eur J Clin Invest. ",
+                        "volume": "42",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Flores R, et al. Assessment of the human faecal microbiota: II. Reproducibility and associations of 16S rRNA pyrosequences. Eur J Clin Invest. 2012;42(8):855\u2013863. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34729,
+                    "infons": {
+                        "journal": "J Microbiol. ",
+                        "volume": "52",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Kim M, Yu Z. Variations in 16S rRNA-based microbiome profiling between pyrosequencing runs and between pyrosequencing facilities. J Microbiol. 2014;52(5):355\u2013365. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34920,
+                    "infons": {
+                        "journal": "Microbiome. ",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Ravel J, Wommack KE. All hail reproducibility in microbiome research. Microbiome. 2014;2(1):8. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35062,
+                    "infons": {
+                        "journal": "Environ Microbiol. ",
+                        "volume": "17",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Schmidt TS, Matias Rodrigues JF, von Mering C. Limits to robustness and reproducibility in the demarcation of operational taxonomic units. Environ Microbiol. 2015;17(5):1689\u20131706. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35270,
+                    "infons": {
+                        "journal": "PLoS One. ",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Finucane MM, Sharpton TJ, Laurent TJ, Pollard KS. A taxonomic signature of obesity in the microbiome? Getting to the guts of the matter. PLoS One. 2014;9(1):e84689. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35482,
+                    "infons": {
+                        "journal": "Hepatol Int. ",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. van Best N, Jansen PL, Rensen SS. The gut microbiota of nonalcoholic fatty liver disease: Current methods and their interpretation. Hepatol Int. 2015;9(3):406\u2013415. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35693,
+                    "infons": {
+                        "journal": "Front Microbiol. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Wagner Mackenzie B, Waite DW, Taylor MW. Evaluating variation in human gut microbiota profiles due to DNA extraction method and inter-subject differences. Front Microbiol. 2015;6:130. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35924,
+                    "infons": {
+                        "journal": "FEMS Microbiol Lett. ",
+                        "volume": "245",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. DeSantis TZ, Stone CE, Murray SR, Moberg JP, Andersen GL. Rapid quantification and taxonomic classification of environmental DNA from both prokaryotic and eukaryotic origins using a microarray. FEMS Microbiol Lett. 2005;245(2):271\u2013278. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36188,
+                    "infons": {
+                        "journal": "Nat Rev Microbiol. ",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Franzosa EA, et al. Sequencing and beyond: Integrating molecular \u2018omics\u2019 for microbial community profiling. Nat Rev Microbiol. 2015;13(6):360\u2013372. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36383,
+                    "infons": {
+                        "journal": "Proc Natl Acad Sci USA. ",
+                        "volume": "111",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Franzosa EA, et al. Relating the metatranscriptome and metagenome of the human gut. Proc Natl Acad Sci USA. 2014;111(22):E2329\u2013E2338. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36565,
+                    "infons": {
+                        "journal": "Appl Environ Microbiol. ",
+                        "volume": "65",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Eichner CA, Erb RW, Timmis KN, Wagner-D\u00f6bler I. Thermal gradient gel electrophoresis analysis of bioprotection from pollutant shocks in the activated sludge microbial community. Appl Environ Microbiol. 1999;65(1):102\u2013109. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36835,
+                    "infons": {
+                        "journal": "BMC Bioinformatics. ",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Aryee MJ, Guti\u00e9rrez-Pabello JA, Kramnik I, Maiti T, Quackenbush J. An improved empirical bayes approach to estimating differential gene expression in microarray time-course data: BETR (Bayesian Estimation of Temporal Regulation) BMC Bioinformatics. 2009;10:409. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37145,
+                    "infons": {
+                        "journal": "Appl Environ Microbiol. ",
+                        "volume": "77",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. DeAngelis KM, et al. PCR amplification-independent methods for detection of microbial communities by the high-density microarray PhyloChip. Appl Environ Microbiol. 2011;77(18):6313\u20136322. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37380,
+                    "infons": {
+                        "journal": "PLoS One. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Xia LC, Cram JA, Chen T, Fuhrman JA, Sun F. Accurate genome relative abundance estimation based on shotgun metagenomic reads. PLoS One. 2011;6(12):e27992. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37583,
+                    "infons": {
+                        "journal": "BMC Microbiol. ",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Brooks JP, et al. Vaginal Microbiome Consortium The truth about metagenomics: Quantifying and counteracting bias in 16S rRNA studies. BMC Microbiol. 2015;15:66. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37792,
+                    "infons": {
+                        "journal": "PLoS One. ",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Probst AJ, Weinmaier T, DeSantis TZ, Santo Domingo JW, Ashbolt N. New perspectives on microbial community distortion after whole-genome amplification. PLoS One. 2015;10(5):e0124158. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38022,
+                    "infons": {
+                        "journal": "Genome Biol. ",
+                        "volume": "16",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Nayfach S, Pollard KS. Average genome size estimation improves comparative metagenomics and sheds light on the functional ecology of the human microbiome. Genome Biol. 2015;16:51. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38250,
+                    "infons": {
+                        "journal": "Genome Biol. ",
+                        "volume": "16",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Manor O, Borenstein E. MUSiCC: A marker genes based framework for metagenomic normalization and accurate profiling of gene abundances in the microbiome. Genome Biol. 2015;16:53. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38476,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "486",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Human Microbiome Project Consortium A framework for human microbiome research. Nature. 2012;486(7402):215\u2013221. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

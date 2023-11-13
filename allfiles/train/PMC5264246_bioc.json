@@ -1,0 +1,1233 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20220803",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC5264246",
+            "inputfile": "../microbiome_corpus_HTML\\PMC5264246.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Balance Trees Reveal Microbial Niche Differentiation",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52,
+                    "infons": {
+                        "section_title_1": "keywords",
+                        "iao_name_1": "keywords section",
+                        "iao_id_1": "IAO:0000630"
+                    },
+                    "text": "Aitchison geometry, balance trees, compositionality, cystic fibrosis, niche, soil microbiology",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 154,
+                    "infons": {
+                        "section_title_1": "ABSTRACT",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Advances in sequencing technologies have enabled novel insights into microbial niche differentiation, from analyzing environmental samples to understanding human diseases and informing dietary studies. However, identifying the microbial taxa that differentiate these samples can be challenging. These issues stem from the compositional nature of 16S rRNA gene data (or, more generally, taxon or functional gene data); the changes in the relative abundance of one taxon influence the apparent abundances of the others. Here we acknowledge that inferring properties of individual bacteria is a difficult problem and instead introduce the concept of balances to infer meaningful properties of subcommunities, rather than properties of individual species. We show that balances can yield insights about niche differentiation across multiple microbial environments, including soil environments and lung sputum. These techniques have the potential to reshape how we carry out future ecological analyses aimed at revealing differences in relative taxonomic abundances across different samples.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 14:29:55",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "34329019",
+                            "locations": {
+                                "length": 8,
+                                "offset": 732
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 1248,
+                    "infons": {
+                        "section_title_1": "ABSTRACT",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "IMPORTANCE By explicitly accounting for the compositional nature of 16S rRNA gene data through the concept of balances, balance trees yield novel biological insights into niche differentiation. The software to perform this analysis is available under an open-source license and can be obtained at https://github.com/biocore/gneiss.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1579,
+                    "infons": {
+                        "section_title_1": "ABSTRACT",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Author Video: An author video summary of this article is available.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1646,
+                    "infons": {
+                        "section_title_1": "INTRODUCTION",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The ultimate goal for many microbial ecologists is to fully characterize niches of microbial organisms and understand interactions among taxa. An understanding of how microbial communities are affected by environmental conditions might yield insights into microbial interactions and their role in macroecological processes, such as nitrogen fixation (1) and acidification (2). However, despite the extraordinary increase in available data brought about by advances in DNA sequencing, characterizing niche differentiation in microbes remains an outstanding problem, partly due to the difficulty of correctly interpreting compositional data. Broadly speaking, a compositional data set is represented by relative abundances, or proportions, that individually carry no meaning for the absolute abundance of a specific feature (i.e., 20% of 100 and 20% of 10,000 are very different absolute abundances). The constraints associated with compositional data are well known but unfortunately often neglected in microbial ecology, leading to conflicting interpretations and irreproducible analyses (3, 4).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2753,
+                    "infons": {
+                        "section_title_1": "INTRODUCTION",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "We illustrate an example of this problem in Fig.\u00a01. In this scenario, there are two species, \u201cRed\u201d and \u201cBlue.\u201d At the first time point, there are 100 Red individuals and 100 Blue individuals (Fig.\u00a01a). At the next time point, the number of Red individuals doubles, yielding 200 Red individuals, and the proportions of Red and Blue individuals become two-thirds and one-third, respectively (Fig.\u00a01b). Suppose that we do not know the true total number of individuals in the given environment and can only make inferences about the observed proportions, a common scenario in microbial ecology, where absolute quantification is rarely performed. In Fig.\u00a01b, the community has the exact same proportions at time 1 and time 2 as those in Fig.\u00a01a; however, instead of the Red individuals doubling at the second time point, the number of Blue individuals is halved (Fig.\u00a01c).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3620,
+                    "infons": {
+                        "section_title_1": "INTRODUCTION",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "This is the problem with compositionality; based on proportions alone, it is impossible to determine whether the growth or decline of any individual species has truly occurred (5), and the inherent feature of one change in abundance driving abundance changes in another species violates assumptions of independence. Analyses that rely on such assumptions, as many statistical approaches do, are thus prone to misinterpretation. For example, traditional correlation metrics, such as Pearson and Spearman metrics, can be misleading when estimating microbe-microbe correlations (6,\u20139). As a result, it becomes a major challenge to specify types of interactions between microbes, such as parasitism, competition, predation, or mutualism, as shown in correlation studies of oral, fecal, and vaginal samples from the Human Microbiome Project (6, 10). Even-more-advanced correlation-detection techniques, such as SparCC (3) and SPIEC-EASI (5), struggle with this and typically require additional assumptions, such as sparse operational taxonomic unit (OTU) correlations (i.e., few OTUs are actually correlated with each other). Furthermore, interpreting the resulting network is a major challenge, making it difficult to differentiate between true ecological relationships and random processes (10).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4912,
+                    "infons": {
+                        "section_title_1": "INTRODUCTION",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The compositionality problem is also problematic for statistically detecting differentially abundant microbes across environments or between groups; consequently, it is a major barrier to reliably drawing conclusions about realized microbial niches using community sequencing data. Conventional statistical tools, such as the t\u00a0test and Mann-Whitney test, can incorrectly identify nearly 100% of the taxa present in samples to be significantly different across environments (see Fig.\u00a0S1 in the supplemental material), and univariate tests, such as t\u00a0tests and zero-inflated Gaussian (ZIG)-based methods (11), have been shown to mislabel microbes as significantly different across sample groups up to 60% of the time (12). More-advanced tools for differential abundance detection, such as analysis of compositions of microbiomes (ANCOM) (12), are typically designed to control for false-positives and reliably detect differentially abundant species, but they require multiple assumptions (i.e., the number of changing microbes across environments is small) and may require complex parameter tuning. To help overcome these issues of compositionality, we explore using the concept of balances by moving away from inferring changes of individual species to instead inferring changes of microbial subcommunities to study the niche differentiation of microbial communities.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6279,
+                    "infons": {
+                        "section_title_1": "INTRODUCTION",
+                        "section_title_2": "FIG\u00a0S1\u00a0",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "(a) False-discovery rate (FDR) of a t\u00a0test used on proportions in the presence of 1 blooming species in a uniform population; (b) false-discovery rate of a Mann-Whitney U\u00a0test on proportion; (c) false-discovery rate of a t\u00a0test on balances with the tree shown in panel e; (d) false-discovery rate of a t\u00a0test on balances with the tree shown in panel g; (e) distribution of t\u00a0test P\u00a0values on proportions; (f) tree with 1,000 tips used for the balance test, with the blooming species being \u00d71; (g) different tree used for the balance test, where the blooming species was placed on the bottom of the tree. Download FIG\u00a0S1, PDF file, 0.2 MB.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6924,
+                    "infons": {
+                        "section_title_1": "CONCEPT",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633"
+                    },
+                    "text": "Balances were first introduced as an exploratory technique in geology (13, 14). Fundamentally, they overcome the problem of inferring changes in abundance from compositional data by sidestepping it and by instead inferring changes in the balance between particular subsets of the community. To understand the concept, let us revisit the scenario in Fig.\u00a01a and \u200bandb.b. Instead of examining proportion changes, we can investigate the balance between Red and Blue individuals by taking the log ratio of Red and Blue counts (Fig.\u00a01c). By looking at the balance of these two species, we avoid incorrectly attempting to infer absolute increases or decreases in their abundances. Instead, we can focus on the balance of the Red and Blue individuals and directly infer the transition of dominance between these species.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7744,
+                    "infons": {
+                        "section_title_1": "CONCEPT",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633"
+                    },
+                    "text": "These balances can also be useful for understanding species distributions across different covariates, a key proximate goal of microbial ecology and one that is both crucial to the larger goal of niche characterization and heavily impacted by problems inherent in compositionality. In Fig.\u00a01d, the Red individuals tend to exist at the low-pH end of the spectrum, while the Blue individuals tend to exist at the high-pH end of the spectrum. A single balance can capture information about the transition from a high relative abundance of Red individuals in low-pH environments to a high relative abundance of Blue individuals in high-pH environments. In low-pH environments, the balance is positive, since there are proportionally more Red individuals than Blue individuals. When the Red and Blue individuals are present in roughly equal proportions, the balance is roughly zero, representing a turning point, transitioning from a Red species-dominated community to a Blue species-dominated community. As the pH increases, the balances become increasingly negative, since there are more Blue individuals than Red individuals. This balance effectively encodes the niche separation of Red and Blue individuals across the pH gradient.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8973,
+                    "infons": {
+                        "section_title_1": "CONCEPT",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633"
+                    },
+                    "text": "This idea of balances can be extended to multiple dimensions\u2014and to more than two taxa\u2014using bifurcating trees. A bifurcating tree can be built relating microbial taxa to each other by using any criterion, and balances can be calculated on the internal nodes of the tree from the geometric means of the corresponding subtrees. The appropriate criterion to build a tree depends on the question at hand. A phylogenetic tree could be used to investigate evolutionary relationships of microbes (15, 16), or hierarchical clustering of environmental variables could be used to explore environmental niches of microbes. To gain more intuition about this, consider Fig.\u00a01e, in which there are five species and 11 individuals. The four balances (internal nodes in the tree) are calculated by taking the log ratio of geometric means of subtrees, also known as the isometric log ratio (ILR) transform. The full equation to calculate balances for a single sample is as follows:\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9939,
+                    "infons": {
+                        "section_title_1": "CONCEPT",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633"
+                    },
+                    "text": "It is also important to note that some of the balances do not impact each other. For instance, the changes in b4 do not impact the changes in b3, just because these balances do not share any common tips. This is crucial, because this property allows us to ignore some of the variance of the balances toward the tips of the tree and to focus on the balances closer to the root of the tree. These balances toward the root of tree capture the most information, since they contain a significant proportion of tree tips. As a result, these high-level balances have the potential to explain large shifts in these microbial communities. The choice of the tree can allow for analysts to embed prior knowledge into the structure of the tree to test for these large community shifts.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10712,
+                    "infons": {
+                        "section_title_1": "CONCEPT",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633"
+                    },
+                    "text": "Here, we will discuss two studies from which novel insights were gained from this application. While many compositionally aware tools that are designed to identify microbial interactions and abundance fluctuations are available, we will refrain from benchmarking balances against these tools, as balances answer a conceptually different question. These analyses are not restricted to analyzing ratios of individual OTUs and can easily be extended to analyze ratios of subcommunities.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11195,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Case study 1: balances of pH-driven subcommunities in soils. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "In this study (17), 88 soil samples were collected from North and South America, along with many edaphic measurements. The study reported that there was a strong correlation between pH and species richness, suggesting that pH was a strong driver behind fluctuations in soil microbial communities. Acidobacteria were found to be negatively correlated with pH and Actinobacteria and Bacteroidetes to be positively correlated with pH, while alpha-, beta-, and gammaproteobacteria were not correlated with pH at all. These correlation analyses are a little misleading, since the pH was correlated with each of the phyla independently. The problem with this approach is that it does not account for all of the other phyla; as with the argument made for the experiment represented in Fig.\u00a01b, the change in a single phylum might also be explained by correlated changes in all of the other phyla. Here, the negative correlation between Acidobacteria abundance and pH might also be caused by the positive correlation between Bacteroidetes abundance and pH. Additionally, we cannot determine whether the alpha-, beta-, and gammaproteobacteria are correlated with pH or not. Another possibility is that these three phyla are positively correlated with pH but that Acidobacteria abundance is not correlated with pH. However, Bacteroidetes may be so strongly correlated with pH that Acidobacteria appear to be negatively correlated with pH and the other three phyla to not be correlated with pH at all. This scenario is one of the infinite possible underlying relationships that can explain these observed correlations.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Acidobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid57723",
+                                    "NCBI:txid204432"
+                                ],
+                                "type": [
+                                    "bacteria_phylum",
+                                    "bacteria_class"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 14:31:56",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid2",
+                                    "NCBI:txid57723"
+                                ]
+                            },
+                            "id": "34329020",
+                            "locations": {
+                                "length": 13,
+                                "offset": 11492
+                            }
+                        },
+                        {
+                            "text": "Actinobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid1760",
+                                    "NCBI:txid201174"
+                                ],
+                                "type": [
+                                    "bacteria_class",
+                                    "bacteria_phylum"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 14:31:57",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid201174",
+                                    "NCBI:txid1783272"
+                                ]
+                            },
+                            "id": "34329021",
+                            "locations": {
+                                "length": 14,
+                                "offset": 11557
+                            }
+                        },
+                        {
+                            "text": "Bacteroidetes",
+                            "infons": {
+                                "identifier": "NCBI:txid200643",
+                                "type": "bacteria_class",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 14:32:11",
+                                "parent_taxonomic_id": "NCBI:txid976"
+                            },
+                            "id": "34329022",
+                            "locations": {
+                                "length": 13,
+                                "offset": 11576
+                            }
+                        },
+                        {
+                            "text": "gammaproteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1236",
+                                "type": "bacteria_class",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 14:31:58",
+                                "parent_taxonomic_id": "NCBI:txid1224"
+                            },
+                            "id": "34329023",
+                            "locations": {
+                                "length": 19,
+                                "offset": 11652
+                            }
+                        },
+                        {
+                            "text": "Acidobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid204432",
+                                "type": "bacteria_class",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 14:32:11",
+                                "parent_taxonomic_id": "NCBI:txid57723"
+                            },
+                            "id": "34329024",
+                            "locations": {
+                                "length": 13,
+                                "offset": 12124
+                            }
+                        },
+                        {
+                            "text": "Bacteroidetes",
+                            "infons": {
+                                "identifier": "NCBI:txid200643",
+                                "type": "bacteria_class",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 14:32:11",
+                                "parent_taxonomic_id": "NCBI:txid976"
+                            },
+                            "id": "34329025",
+                            "locations": {
+                                "length": 13,
+                                "offset": 12212
+                            }
+                        },
+                        {
+                            "text": "gammaproteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1236",
+                                "type": "bacteria_class",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 14:32:06",
+                                "parent_taxonomic_id": "NCBI:txid1224"
+                            },
+                            "id": "34329026",
+                            "locations": {
+                                "length": 19,
+                                "offset": 12309
+                            }
+                        },
+                        {
+                            "text": "Acidobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid204432",
+                                "type": "bacteria_class",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 14:32:11",
+                                "parent_taxonomic_id": "NCBI:txid57723"
+                            },
+                            "id": "34329027",
+                            "locations": {
+                                "length": 13,
+                                "offset": 12449
+                            }
+                        },
+                        {
+                            "text": "Bacteroidetes",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid976",
+                                    "NCBI:txid200643"
+                                ],
+                                "type": [
+                                    "bacteria_phylum",
+                                    "bacteria_class"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 14:32:08",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid68336",
+                                    "NCBI:txid976"
+                                ]
+                            },
+                            "id": "34329028",
+                            "locations": {
+                                "length": 13,
+                                "offset": 12509
+                            }
+                        },
+                        {
+                            "text": "Acidobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid204432",
+                                "type": "bacteria_class",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 14:32:11",
+                                "parent_taxonomic_id": "NCBI:txid57723"
+                            },
+                            "id": "34329029",
+                            "locations": {
+                                "length": 13,
+                                "offset": 12566
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 12870,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Case study 1: balances of pH-driven subcommunities in soils. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "At a first glance, uncovering the true correlations correctly appears to be a hopeless cause. This is where balances become useful. Rather than attempting to correlate individual phyla against pH, we grouped OTUs together according to their difference in mean pHs (Fig.\u00a02a) and investigated how these balances of groups change with respect to pH (see Materials and Methods on hierarchical clustering). This circumvented the dependence issue noted previously. We do not need to worry about subgroups within the left and right subtrees of a balance influencing each other, due to the independence property shown in Fig. 1e and \u200bandff.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13502,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Case study 1: balances of pH-driven subcommunities in soils. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The balance concept proves to be a very powerful technique for investigating how these groups of organisms change relative to each other as pH increases. Recall the cartoon example in Fig.\u00a01d. If there are two distinct unimodal species distributions, the balance pivots from being weighted by Red individuals in low pH to being weighted by Blue individuals in high pH. The same phenomenon occurs here, except that there are multiple species on the left end of the balance and multiple species on the right end of the balance.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14027,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Case study 1: balances of pH-driven subcommunities in soils. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "As shown in Fig.\u00a02b, there is a well-defined trend of low-pH OTUs (3.8 < mean pH < 6.6) gradually being overtaken by high-pH OTUs (6.7 < mean pH < 8.2) as the pH increases, forming a nice linear trend defined by the top balance in the tree shown in Fig.\u00a02a. If we were to sort the samples by their mean pHs and the OTUs by their mean pHs (see equation\u00a03 in Materials and Methods), a well-defined band pattern appears. Here, it is clear that OTUs with a mean pH less than 3 rarely have nonzero counts above 8. Likewise, OTUs that have a mean pH of more than 8 rarely have nonzero counts below 3. If we tie in this band pattern in Fig.\u00a02c together with the balance-versus-pH trends shown in Fig.\u00a02b, we obtain a very different interpretation from that of the original study. OTUs tend to be observed in very specific pH ranges but not commonly observed outside these ranges. This ties together with some concepts in niche theory: OTUs are more suited to live within a designated range of pHs, and if they are placed outside this pH range, they are outcompeted by other organisms who are more suited to live within the given pH range.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15158,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Case study 1: balances of pH-driven subcommunities in soils. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "These patterns were completely missed when we looked only at the phylum level in the original study. In fact, based on the calculated mean pH values for each OTU, it was observed that OTUs from all of the phyla mentioned in the study were widely distributed across the pH gradient (see Table S1 in the supplemental material). As an extreme example, OTUs from the family Bradyrhizobiaceae were observed to be present at both ends of the spectrum; some were present at pH values as low as 5.36, while others were present at a pH value as high as 6.75. These are astronomical differences, considering that 95% of the OTUs have a mean pH that falls between this range. This provides additional justification for building a tree based on mean pH rather than bacterial phylogeny.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bradyrhizobiaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid41294",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 14:32:46",
+                                "parent_taxonomic_id": "NCBI:txid356"
+                            },
+                            "id": "34329030",
+                            "locations": {
+                                "length": 17,
+                                "offset": 15528
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 15931,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "TABLE S1 ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Table of OTUs, their taxonomies, and the mean of the environmental pH values in which they were observed. Download TABLE S1, XLSX file, 0.1 MB.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16083,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "TABLE S1 ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Finally, these balances can be used to build predictive models. Using ordinary least-squares analyses on the calculated balances, the entire microbial community profile can be predicted using pH alone with an R2 of 0.35. This means that pH alone explains over 35% of the total variation in entire soil microbial communities across North and South America. The resulting fit can be transformed back to proportions to yield the predicted proportions (Fig.\u00a02d). From this heatmap, the key patterns, such as the band pattern apparent in Fig.\u00a02c, are still retained. There are many published regression techniques that attempt to use microbial abundances to predict covariates, such as the postmortem interval (18) or body mass index (19). This approach is the first of its kind to attempt to address the reverse problem: to predict entire microbial community distribution based on environmental variables. These predictions were enabled by the powerful fundamental properties of balances.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17067,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Case study 2: balances of pH-driven subcommunities in a lung sputum culture microcosm. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "In this study, lung sputum samples were collected from 16 cystic fibrosis (CF) patients. These sputum samples were then grown in a capillary tube culture system (Winogradsky cystic fibrosis system) that mimics the conditions of a lung bronchiole (20). These samples were placed into separate tubes, and the pH of the media was adjusted from 5 to 8.5 at intervals of 0.5 to determine how the microbial community changed with respect to pH. After growth in the capillary tubes, the communities were assessed using 16S rRNA gene amplicon sequencing.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17700,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Case study 2: balances of pH-driven subcommunities in a lung sputum culture microcosm. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "One of the difficulties in this study was characterizing pathogenic bacteria. Early on in this case study, the only significant finding discovered was that patients had different lung sputum microbiomes (Fig.\u00a03a). It was hypothesized that there was a subcommunity of low-pH organisms and a subcommunity of high-pH organisms that periodically appeared and disappeared in CF lung sputum. However, these changes could not be detected using available statistics, likely due to the compositionality problem. Since the different CF patients had idiosyncratic lung communities, they ended up having different OTUs responding across the laboratory pH gradient, yielding insufficient statistical power to detect changes in any given OTU. As a result, when these lung sputum communities were placed into different media and studied, it was not clear exactly what organisms were a part of this low-pH or high-pH subcommunity.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 14:33:11",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "34329031",
+                            "locations": {
+                                "length": 8,
+                                "offset": 17768
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 18614,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Case study 2: balances of pH-driven subcommunities in a lung sputum culture microcosm. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Balances are a natural solution to this problem. In addition to probing for patterns similar to those observed in the previous study, balances are well adapted as a transformation for standard statistical analyses. Since Euclidean operations directly translate into perturbation and powering operations on proportions (21, 22), many of the publicly available statistical tools can be applied directly to balances. For this study, we opted to use linear mixed-effects models to test for pH differences while simultaneously accounting for all of the differences between lung microbiomes across CF patients. Based on prior analyses with pH in soils, the tree was built using the exact same strategy (see Materials and Methods). Significant balances from testing for pH were determined with a P\u00a0value cutoff at 0.05 after Bonferroni correction.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19454,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Case study 2: balances of pH-driven subcommunities in a lung sputum culture microcosm. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "A heatmap relating pH to OTU abundances across these samples does not yield clear trends (Fig.\u00a03a), but even though we do not see a clear pattern in the heatmap with the balance approach, we can still observe niche differentiation across the pH gradient. In Fig.\u00a03b, y0 represents the log ratio of all of the high-pH OTUs (7.6 < mean pH < 8.12) over all of the low-pH OTUs (5.4 < mean pH < 7.4). As the pH of the samples increases, the balance increases, likely because the low-pH OTUs are becoming increasingly less abundant than the high-pH OTUs (P\u00a0value = 7.5 \u00d7 10\u221246). The same pattern is even more apparent in y1 (Fig.\u00a03c). The low-pH OTUs (5.4 < mean pH < 6.4) become increasingly less abundant than high-pH OTUs (6.5 < mean pH < 7.4) as the sample pH increases (P\u00a0value = 2.25 \u00d7 10\u221267). When Bonferroni multiple-hypothesis correction was applied to these tests, the P\u00a0values were rounded down to zero. While these patterns were not obvious when looking at the raw proportions, the balance tree approach shows very well defined trends among groups of OTUs. This can be done because even though individual OTUs may be sporadically distributed across the original samples, OTUs that thrive in similar pH niches grouped together on the environmental balance tree. It is clear from Fig.\u00a03b and \u200bandcc that there is a transition from low-pH organisms to high-pH organisms along the pH gradient. Even though the CF patients do not have the same lung microbiomes, they contain OTUs that behave the same with respect to pH. This pattern would not have been nearly as apparent without clustering the OTUs by mean pH and accounting for the patient effects in the linear mixed-effects models.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21141,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In this study, we have demonstrated the benefits of applying balances to infer niche differentiation in microbes. In the first case study, we outlined the challenge of performing correlations of OTUs versus environmental variables and showed how balances can capture information about species turnover across the pH gradient, which allowed us to build a model to predict microbial proportions based on pH alone. In the second case study, we identified the challenges of studying individual OTUs due to similar niches being occupied by drastically different OTUs across different patients. Balances coupled with linear mixed-effects models allowed us to obtain more statistically robust results, which were also more informative with respect to the differences in distribution of microbes across environmental niches.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21967,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "There are numerous additional benefits of analyzing species balances instead of individual species counts. First, balances are known to be scale invariant, so balance trees naturally correct for differences in sequencing depth without requiring rarefaction (see Text\u00a0S1 in the supplemental material) and avoid many of the limitations associated with this procedure (23). Second, balances are subcompositionally coherent, which means that changes in nonoverlapping subcommunities do not impact each other. For instance, in Fig.\u00a01e and \u200bandf,f, the Purple population triples, balances, and changes because the organisms explicitly contain the Purple species. In contrast to proportions, the balance b3 does not change between these two scenarios because it does not relate to the Purple species (in fact, it accounts only for the Red and Green species). This is not the case when observing the raw proportions, from which it appears as though everything is changing, even though the Purple species is the only changing species. This phenomenon has previously been noted (12) and can lead to extremely high false-positivity rates with some standard statistical techniques, such as Pearson correlations or t\u00a0tests on proportions. More discussion about this issue can be found in Fig.\u00a0S1. Third, arithmetic operations on balances directly translate into perturbation and powering operations on proportions (21, 22), which can capture information about relative growth and decay of species. This ultimately opens the door for applying standard statistical techniques, such as multiple linear regression (24) and linear mixed-effects model nested-design statistics, directly to balances, providing additional justification for the analyses performed in the case studies. We have shown this in the two case studies. Finally, balances are permutation invariant. Species can be sorted in any order deemed appropriate. Along the same lines, these species can be rearranged into any arbitrary grouping represented as a bifurcating tree. These trees can be built to address the questions at hand, whether it be studying species turnover across pH gradients or even uncovering the relationships between phylogenetic clades. In fact, balances can be thought of as being utilized as an ordination technique, since every bifurcating tree forms an orthonormal basis in the Aitchison simplex (13).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24345,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "section_title_2": "TEXT\u00a0S1\u00a0",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Equation demonstrating the scale invariance property of balances. Download TEXT\u00a0S1, DOCX file, 0.1 MB.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24455,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "section_title_2": "TEXT\u00a0S1\u00a0",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Although the concept of balances does not address questions about properties of individual bacteria, it does answer higher-level questions concerning interactions among groups of organisms, which are arguably much more interesting from an ecological point of view. These questions can be based either on the phylogenetic tree of the bacterial community or on environmental clustering. There is still room for improvement on utilizing balances. For example, the issue of zeroes still remains, because the logarithm of zero is undefined. Currently, the common approach is to add a pseudocount (25). However, an appropriate tree choice can mitigate this issue, because the zeroes can be explicitly aggregated in some scenarios (Fig.\u00a0S2 and\u00a0S3). Along the same lines, issues can arise from low-coverage samples. If sampling is not saturated, many OTUs have low read counts, and the balances toward the tips of the trees can be highly volatile. This is because the absolute change between one or two reads may be small for low-abundance OTUs, but this will lead to large changes in log ratios, which lead to spurious signals at the tips of the tree. As a rule of thumb, balances toward the root of the tree are more trustworthy than those at the tips of the tree.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 14:34:29",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "34329032",
+                            "locations": {
+                                "length": 8,
+                                "offset": 24546
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 25713,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "section_title_2": "FIG\u00a0S2\u00a0",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "(a) Density plots of 4 unimodal species distributions, with all proportions below 0.0001 rounded down to zero; (b) balances from the unimodal species distributions; (c) tree used to guide the balance calculations. Download FIG\u00a0S2, PDF file, 0.1 MB.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25968,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "section_title_2": "FIG\u00a0S3\u00a0",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "(a to d) Different high-level balances versus pH in the 88 soils study; (e) same tree as that shown in Fig.\u00a02b with some of the internal nodes labeled. Download FIG\u00a0S3, PDF file, 0.1 MB.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26161,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "section_title_2": "FIG\u00a0S3\u00a0",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "The balance approach will be key for analyzing functional roles of OTUs. It is known that in environments like the human gut, people share very few OTUs with each other but have roughly the same proportions of functional genes (26). This suggests that there is substantial functional redundancy across OTUs, which has been observed previously in time series studies in the context of infection (27); in other words, in these microbial communities, many players might be sporadically distributed across similar niches. This phenomenon might explain the sparse nature of 16S relative abundance data and why similar environments, such as human guts, share few common OTUs. Such distributions pose tremendous challenges to analyses based around identifying the niche occupancy of individual OTUs. By instead permitting the statistical comparisons to be performed across nested groups of OTUs with similar distributions, it becomes possible to robustly identify patterns of niche differentiation without requiring sufficient information to be present in the abundances of each individual taxon. Identifying common functional roles of potentially diverse organisms and analyzing the balances between these groups might significantly simplify analyses in future amplicon studies. The ability to construct such trees would enable rapid characterizations of environmental niches and the corresponding functional roles of the microbes occupying in these niches.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27612,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "section_title_2": "FIG\u00a0S3\u00a0",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "All in all, balance trees are an extremely powerful tool for analyzing relative abundances and uncovering patterns associated with niche differentiation, while avoiding the issues associated with compositionality and enabling the application of conventional statistical tools. This will ultimately open the door for extensive mining of ecologically relevant patterns.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27979,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The core functions required to perform the balance basis calculations, the tree visualization tools, and statistical analyses can be found in https://github.com/biocore/gneiss. The IPython notebooks used to carry out all of the analyses can be found in the gneiss repository. All code has been extensively unit tested and documented.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28333,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The core compositional statistics and tree data structures were are part of scikit-bio 0.4.1 and beyond. The hierarchical clustering was performed using SciPy. Pandas and BIOM (23) were used to store and manipulate the OTU tables and the metadata files. Seaborn, matplotlib, and ETE (24) were used for the visualizations.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28654,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The isometric log ratio transform is an isomorphism (i.e., a function) that can map proportions to balances one-to-one (21). These balances can be calculated as shown in equation\u00a01. Alternatively, they can be calculated using a linear transformation with an orthonormal basis e.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28932,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "This orthonormal basis can be calculated as follows:\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28985,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The mean pH used for the 2 case studies was calculated as follows:\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29052,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The linear regression on balances and linear mixed-effects models on balances were implemented in gneiss under the ordinary least-squares (OLS) and mixed functions, and the case study analyses can also be found in the IPython notebooks in the ipynb folder in 88soils.ipynb (case study 1) and cfstudy.ipynb (case study 2), respectively. In case study 1, only OTUs that had more than 100 reads in the entire study were considered. In case study 2, only OTUs that had more than 500 reads were considered.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29553,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The WinCF system was used according to the methods in reference 17, except only the pH dye medium variable was used. The medium was buffered at 0.5 unit of pH from 5 to 8.5 using calculated proportions of phosphate buffer and NaOH or HCl. Sputum samples were collected from CF patients after expectoration or induced expectoration of sputum according to UCSD IRB-approved project 081500 and were inoculated in triplicate into capillary tubes containing the eight different-pH buffered media. These eight sets of tubes in triplicate from 18 patients were then incubated at 37\u00b0C for 48\u00a0h. The medium was then removed, bacterial DNA was extracted, and variable region 4 of the 16S rRNA gene was amplified and sequenced on the Illumina MiSeq platform using Earth Microbiome Project-benchmarked protocols (25, 26). Data were processed using Qiita, and OTUs were calculated using closed reference clustering at the 97% identity cutoff for both the 88 soils and the CF study.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30521,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Data availability. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Data for case study 1 were retrieved from Qiita (study identifier 103 [https://qiita.ucsd.edu/study/description/103]), as were data for case study 2 (study identifier 10511).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30714,
+                    "infons": {
+                        "section_title_1": "ACKNOWLEDGMENTS",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "We first acknowledge Jonathan Friedman for the original idea of applying balances to analyze microbial communities. We also acknowledge Justin Silverman and Lawrence David, in addition to Liam Toran, Tomasz Kosciolek, and Amnon Amir, for their insights and discussion on balances. In addition, we are grateful for the input from Christian Lauber and Noah Fierer concerning case study 1. Finally, we thank all of the scikit-bio developers, especially Jorge Ca\u00f1ardo Alastuey, Evan Bolyen, Jai Rideout, and Greg Caporaso, for reviewing the compositional statistics submodule in scikit-bio.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31315,
+                    "infons": {
+                        "section_title_1": "ACKNOWLEDGMENTS",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "J.T.M. was funded by NSF grant GRFP DGE-1144086 and NSF grant IGERT 1144807 under the IQ Biology program at the University of Colorado Boulder. R.A.Q. was funded under the Cystic Fibrosis Research Innovation Award from Vertex Pharmaceuticals. This work was funded under Alfred P. Sloan Foundation grants G-2015-13933 and G-2015-13979 and National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK) grant P01DK078669.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31744,
+                    "infons": {
+                        "section_title_1": "ACKNOWLEDGMENTS",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "J.T.M. led the software development, benchmarking, and manuscript writing and developed the idea of applying regression to balances. J.S. contributed the idea of applying linear mixed-effects models to balances and named the software package. R.A.Q. collected the CF lung sputum samples. D.M., A.G., J.A.N.-M., and Y.V.-B. reviewed the code in Gneiss. M.L. reviewed the mathematical notation. All authors wrote and proofread the manuscript.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32184,
+                    "infons": {
+                        "title": "Towards an ecological understanding of biological nitrogen fixation",
+                        "journal": "Biogeochemistry",
+                        "volume": "57\u201358",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Vitousek PM, Cassman K, Cleveland C, Crews T, Field CB, Grimm NB, Howarth RW, Marino R, Martinelli L, Rastetter EB, Sprent JI. 2002. Towards an ecological understanding of biological nitrogen fixation. Biogeochemistry57\u201358:1\u201345. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32442,
+                    "infons": {
+                        "title": "Microbial acidification and pH effects on trace element release from sewage sludge",
+                        "journal": "Environ Pollut",
+                        "volume": "132",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Qureshi S, Richards BK, Steenhuis TS, McBride MB, Baveye P, Dousset S. 2004. Microbial acidification and pH effects on trace element release from sewage sludge. Environ Pollut132:61\u201371. doi:10.1016/j.envpol.2004.03.024. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32701,
+                    "infons": {
+                        "title": "It\u2019s all relative: analyzing microbiome data as compositions",
+                        "journal": "Ann Epidemiol",
+                        "volume": "26",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Gloor GB, Wu JR, Pawlowsky-Glahn V, Egozcue JJ. 2016. It\u2019s all relative: analyzing microbiome data as compositions. Ann Epidemiol26:322\u2013329. doi:10.1016/j.annepidem.2016.03.003. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32918,
+                    "infons": {
+                        "title": "Compositional data analysis of the Microbiome: fundamentals, tools, and challenges",
+                        "journal": "Ann Epidemiol",
+                        "volume": "26",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Tsilimigras MCB, Fodor AA. 2016. Compositional data analysis of the Microbiome: fundamentals, tools, and challenges. Ann Epidemiol26:330\u2013335. doi:10.1016/j.annepidem.2016.03.002. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33136,
+                    "infons": {
+                        "title": "Caution! Compositions! Can constraints on omics data lead analyses astray?",
+                        "journal": "CSIRO",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Lovell D, Muller W, Taylor J, Zwart A, Helliwell C. 2010. Caution! Compositions! Can constraints on omics data lead analyses astray?CSIRO1\u201344. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33298,
+                    "infons": {
+                        "title": "Inferring correlation networks from genomic survey data",
+                        "journal": "PLoS Comput Biol",
+                        "volume": "8",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Friedman J, Alm EJ. 2012. Inferring correlation networks from genomic survey data. PLoS Comput Biol8:e1002687. doi:10.1371/journal.pcbi.1002687. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33501,
+                    "infons": {
+                        "title": "Proportionality: a valid alternative to correlation for relative data",
+                        "journal": "PLoS Comput Biol",
+                        "volume": "11",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Lovell D, Pawlowsky-Glahn V, Egozcue JJ, Marguerat S, B\u00e4hler J. 2015. Proportionality: a valid alternative to correlation for relative data. PLoS Comput Biol11:e1004075. doi:10.1371/journal.pcbi.1004075. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33763,
+                    "infons": {
+                        "title": "Sparse and compositionally robust inference of microbial ecological networks",
+                        "journal": "PLoS Comput Biol",
+                        "volume": "11",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Kurtz ZD, M\u00fcller CL, Miraldi ER, Littman DR. 2015. Sparse and compositionally robust inference of microbial ecological networks. PLoS Comput Biol11:e1004226. doi:10.1371/journal.pcbi.1004226. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34013,
+                    "infons": {
+                        "title": "Effects of library size variance, sparsity, and compositionality on the analysis of microbiome data",
+                        "journal": "PeerJ PrePrints",
+                        "volume": "3",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Weiss SJ, Xu Z, Amir A, Peddada S, Bittinger K, Gonzalez A, Lozupone C, Zaneveld JR, Vazquez-Baeza Y, Birmingham A, Knight R. 2015. Effects of library size variance, sparsity, and compositionality on the analysis of microbiome data. PeerJ PrePrints3:e1408. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34289,
+                    "infons": {
+                        "title": "Microbial interactions: from networks to models",
+                        "journal": "Nat Rev Microbiol",
+                        "volume": "10",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Faust K, Raes J. 2012. Microbial interactions: from networks to models. Nat Rev Microbiol10:538\u2013550. doi:10.1038/nrmicro2832. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34455,
+                    "infons": {
+                        "title": "Robust methods for differential abundance analysis in marker gene surveys",
+                        "journal": "Nat Methods",
+                        "volume": "116",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Paulson JN, Stine OC, Bravo HC, Pop M. 2016. Robust methods for differential abundance analysis in marker gene surveys. Nat Methods116:1477\u20131490. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34621,
+                    "infons": {
+                        "title": "Analysis of composition of microbiomes: a novel method for studying microbial composition",
+                        "journal": "Microb Ecol Health Dis",
+                        "volume": "26",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Mandal S, Van Treuren W, White RA, Eggesb\u00f8 M, Knight R, Peddada SD. 2015. Analysis of composition of microbiomes: a novel method for studying microbial composition. Microb Ecol Health Dis26:27663. doi:10.3402/mehd.v26.27663. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34905,
+                    "infons": {
+                        "title": "Groups of parts and their balances in compositional data analysis",
+                        "journal": "Math Geol",
+                        "volume": "37",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Egozcue JJ.2005. Groups of parts and their balances in compositional data analysis. Math Geol37:795\u2013828. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35030,
+                    "infons": {
+                        "title": "Exploring compositional data with the CoDa-dendrogram",
+                        "journal": "Austrian J Stat",
+                        "volume": "40",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Pawlowsky-Glahn V, Egozcue JJ. 2011. Exploring compositional data with the CoDa-dendrogram. Austrian J Stat40:103\u2013113. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35169,
+                    "infons": {
+                        "title": "A phylogenetic transform enhances analysis of compositional microbiota data",
+                        "journal": "bioRxiv",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Silverman JD, Washburne A, Mukherjee S, David LA. 2016. A phylogenetic transform enhances analysis of compositional microbiota data. bioRxivhttps://doi.org/10.1101/072413. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35389,
+                    "infons": {
+                        "title": "Phylogenetic factorization of compositional data",
+                        "journal": "bioRxiv",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Washburne AD, Silverman JD, Leff JW, Bennett DJ, Darcy JL, Mukherjee S, Fierer N, David LA. 2016. Phylogenetic factorization of compositional data. bioRxivhttps://doi.org/10.1101/074112. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35624,
+                    "infons": {
+                        "title": "Pyrosequencing-based assessment of soil pH as a predictor of soil bacterial community structure at the continental scale",
+                        "journal": "Appl Environ Microbiol",
+                        "volume": "75",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Lauber CL, Hamady M, Knight R, Fierer N. 2009. Pyrosequencing-based assessment of soil pH as a predictor of soil bacterial community structure at the continental scale. Appl Environ Microbiol75:5111\u20135120. doi:10.1128/AEM.00335-09. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35914,
+                    "infons": {
+                        "title": "Microbial community assembly and metabolic function during mammalian corpse decomposition",
+                        "journal": "Science",
+                        "volume": "351",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Metcalf JL, Xu ZZ, Weiss S, Lax S, Van TW, Hyde ER, Song SJ, Amir A, Larsen P, Sangwan N, Haarmann D, Humphrey GC, Ackermann G, Thompson LR, Lauber C, Bibat A, Nicholas C, Gebert MJ, Petrosino JF, Reed SC, Gilbert JA, Lynne AM, Bucheli SR, Carter DO, Knight R. 2016. Microbial community assembly and metabolic function during mammalian corpse decomposition. Science351:158\u2013162. doi:10.1126/science.aad2646. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36361,
+                    "infons": {
+                        "title": "Regression analysis for microbiome compositional data",
+                        "journal": "Ann Appl Stat",
+                        "volume": "10",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Shi P, Zhang A, Li H. 2016. Regression analysis for microbiome compositional data. Ann Appl Stat10:1019\u20131040. doi:10.1214/16-AOAS928. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36526,
+                    "infons": {
+                        "title": "A Winogradsky-based culture system shows an association between microbial fermentation and cystic fibrosis exacerbation",
+                        "journal": "ISME J",
+                        "volume": "9",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Quinn RA, Whiteson K, Lim Y, Salamon P, Bailey B, Mienardi S, Sanchez SE, Blake D, Conrad D, Rohwer F. 2015. A Winogradsky-based culture system shows an association between microbial fermentation and cystic fibrosis exacerbation. ISME J9:1024\u20131038. doi:10.1038/ismej.2014.234. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36862,
+                    "infons": {
+                        "title": "Isometric logratio transformations for compositional data analysis",
+                        "journal": "Math Geol",
+                        "volume": "35",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Egozcue JJ, Barcel C. 2003. Isometric logratio transformations for compositional data analysis. Math Geol35:279\u2013300. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36999,
+                    "infons": {
+                        "journal": "Modeling and analysis of compositional data",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Pawlowsky-Glahn V, Egozcue JJ, Tolosana-Delgado R. 2015. Modeling and analysis of compositional data. Wiley, Chichester, United Kingdom. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37156,
+                    "infons": {
+                        "title": "Waste not, want not: why rarefying microbiome data is inadmissible",
+                        "journal": "PLoS Comput Biol",
+                        "volume": "10",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. McMurdie PJ, Holmes S. 2014. Waste not, want not: why rarefying microbiome data is inadmissible. PLoS Comput Biol10:e1003531. doi:10.1371/journal.pcbi.1003531. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37375,
+                    "infons": {
+                        "title": "Simplicial regression. The normal model",
+                        "journal": "J App Prob Stat",
+                        "volume": "6",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Egozcue JJ, Pawlowsky-Glahn V, Hron K, Filzmoser P. 2012. Simplicial regression. The normal model. J App Prob Stat6:87\u2013108. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37519,
+                    "infons": {
+                        "title": "Dealing with zeros and missing values in compositional data sets using nonparametric imputation",
+                        "journal": "Math Geol",
+                        "volume": "35",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Mart\u00edn-Fern\u00e1ndez JA, Barcel\u00f3-Vidal C, Pawlowsky-Glahn V. 2003. Dealing with zeros and missing values in compositional data sets using nonparametric imputation. Math Geol35:253\u2013278. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37720,
+                    "infons": {
+                        "title": "Structure, function and diversity of the healthy human microbiome",
+                        "journal": "Nature",
+                        "volume": "486",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Human Microbiome Project Consortium 2012. Structure, function and diversity of the healthy human microbiome. Nature486:207\u2013214. doi:10.1038/nature11234. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37932,
+                    "infons": {
+                        "title": "Host lifestyle affects human microbiota on daily timescales",
+                        "journal": "Genome Biol",
+                        "volume": "15",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. David LA, Materna AC, Friedman J, Campos-Baptista MI, Blackburn MC, Perrotta A, Erdman SE, Alm EJ. 2014. Host lifestyle affects human microbiota on daily timescales. Genome Biol15:R89. doi:10.1186/gb-2014-15-7-r89. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

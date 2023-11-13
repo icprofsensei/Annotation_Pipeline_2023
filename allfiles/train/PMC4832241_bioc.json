@@ -1,0 +1,2304 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC4832241",
+            "inputfile": "../microbiome_corpus_HTML\\PMC4832241.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Tongue Coating and the Salivary Microbial Communities Vary in Children with Halitosis",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 85,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Halitosis is a common symptom mainly caused by microbial activities in the oral cavity. Here, we used 16S rRNA gene pyrosequencing and metagenomic sequencing to examine oral microbial compositions and their functional variations in children with halitosis. We found that the tongue coating of subjects with halitosis had greater bacterial richness than those of healthy subjects. The relative abundance and prevalence of Leptotrichia wadei and Peptostreptococcus stomatis were higher in tongue coating samples from children with halitosis than those from children without halitosis; Prevotella shahii had higher relative abundance and prevalence in saliva samples from children with halitosis. We present the first comprehensive evaluation of the co-occurrence networks of saliva and tongue coating communities under healthy and halitosis conditions, and investigated patterns of significant differences between these communities. Moreover, we observed that bacterial genes associated with responses to infectious diseases and terpenoid and polyketide metabolism were enriched in subjects with halitosis, but not in healthy subjects. Hydrogen sulphide (H2S)-related metabolic pathways suggested that there was higher microbial production and less usage of H2S in subjects with halitosis. Thus, the mechanism of halitosis was implied for the first time via metagenomic sequencing.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Leptotrichia wadei",
+                            "infons": {
+                                "identifier": "NCBI:txid157687",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:29",
+                                "parent_taxonomic_id": "NCBI:txid32067"
+                            },
+                            "id": "16814748",
+                            "locations": {
+                                "length": 18,
+                                "offset": 506
+                            }
+                        },
+                        {
+                            "text": "Peptostreptococcus stomatis",
+                            "infons": {
+                                "identifier": "NCBI:txid341694",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:29",
+                                "parent_taxonomic_id": "NCBI:txid1257"
+                            },
+                            "id": "16814749",
+                            "locations": {
+                                "length": 27,
+                                "offset": 529
+                            }
+                        },
+                        {
+                            "text": "Prevotella shahii",
+                            "infons": {
+                                "identifier": "NCBI:txid228603",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:30",
+                                "parent_taxonomic_id": "NCBI:txid838"
+                            },
+                            "id": "16814750",
+                            "locations": {
+                                "length": 17,
+                                "offset": 668
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 1472,
+                    "infons": {
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316",
+                        "iao_name_2": "materials section",
+                        "iao_id_2": "IAO:0000633"
+                    },
+                    "text": "Halitosis (also called oral malodour) is a condition characterized by foul-smelling or offensive odours emanating from the mouth or breath. This condition causes substantial personal discomfort and social limitations1. Studies indicate that 15\u201335% of adults2,3,4 and 14.5\u201340.9% of children5,6,7 worldwide suffer from halitosis. Owing to its high prevalence and negative social impact, halitosis has been ranked as the third most common reason for dental visits, after dental caries and periodontal disease8. Halitosis is a multifactorial condition; the factors involved vary according to the source of the malodour. Approximately 90% of halitosis cases are associated with intraoral conditions9, such as tongue coating, gingival and periodontal diseases, deep carious lesions, peri-implant diseases, exposed necrotic pulps or retention of food debris10,11. Extraoral halitosis is usually associated with respiratory diseases, gastrointestinal disorders or metabolic disorders8.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2449,
+                    "infons": {
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316",
+                        "iao_name_2": "materials section",
+                        "iao_id_2": "IAO:0000633"
+                    },
+                    "text": "It is well accepted that the main cause of oral malodour is microbial degradation of cysteine, methionine, tryptophan, arginine and lysine into odiferous volatile sulphur compounds (VSCs) in the oral cavity1. VSCs in the oral cavity primarily comprise hydrogen sulphide (H2S), methyl mercaptan (CH3SH) and dimethyl sulphide [(CH3)2S]12. Historically, microbiological studies of halitosis used culture-based methods to detect pathogens. Several anaerobic bacteria and spirochetes, including Bacteroides spp., Centipeda periodontii, Eubacterium spp., Fusobacterium nucleatum, Fusobacterium periodonticum, Selenomonas artemidis, Treponema denticola, Peptostreptococcus anaerobius, Porphyromonas endodontalis, Porphyromonas gingivalis, Prevotella intermedia, Prevotella loescheii and Solobacterium moorei, have been identified as active producers of VSCs9,13,14,15,16. However, these and similar studies have excluded numerous as-yet-uncultured taxa owing to cultivation limitations. Now, because of the increased capabilities of next-generation sequencing (NGS)17 technology, studies of microbes in halitosis have shifted towards evaluating microbial communities that include uncultured taxa. For instance, Yang et al. used 16S rRNA gene pyrosequencing to identify links between the oral microbiome and halitosis18, thereby providing comprehensive insight into the micro-ecological changes associated with halitosis. Nevertheless, to the best of our knowledge, previous studies of halitosis using NGS methods have focused mainly on adults. Surprisingly, little is known regarding the microbial communities that are associated with halitosis in children who have no other confounders; specifically, little is known about the gene compositions, functional significance and genetic variabilities of these microbial communities.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:55",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16814751",
+                            "locations": {
+                                "length": 8,
+                                "offset": 2903
+                            }
+                        },
+                        {
+                            "text": "spirochetes",
+                            "infons": {
+                                "identifier": "NCBI:txid136",
+                                "type": "bacteria_order",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:55",
+                                "parent_taxonomic_id": "NCBI:txid203692"
+                            },
+                            "id": "16814752",
+                            "locations": {
+                                "length": 11,
+                                "offset": 2916
+                            }
+                        },
+                        {
+                            "text": "Bacteroides spp",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:55",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "16814753",
+                            "locations": {
+                                "length": 15,
+                                "offset": 2939
+                            }
+                        },
+                        {
+                            "text": "Centipeda periodontii",
+                            "infons": {
+                                "identifier": "NCBI:txid82203",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:55",
+                                "parent_taxonomic_id": "NCBI:txid82202"
+                            },
+                            "id": "16814754",
+                            "locations": {
+                                "length": 21,
+                                "offset": 2957
+                            }
+                        },
+                        {
+                            "text": "Eubacterium spp",
+                            "infons": {
+                                "identifier": "NCBI:txid1730",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:55",
+                                "parent_taxonomic_id": "NCBI:txid186806"
+                            },
+                            "id": "16814755",
+                            "locations": {
+                                "length": 15,
+                                "offset": 2980
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium nucleatum",
+                            "infons": {
+                                "identifier": "NCBI:txid851",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:55",
+                                "parent_taxonomic_id": "NCBI:txid848"
+                            },
+                            "id": "16814756",
+                            "locations": {
+                                "length": 23,
+                                "offset": 2998
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium periodonticum",
+                            "infons": {
+                                "identifier": "NCBI:txid860",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:55",
+                                "parent_taxonomic_id": "NCBI:txid848"
+                            },
+                            "id": "16814757",
+                            "locations": {
+                                "length": 27,
+                                "offset": 3023
+                            }
+                        },
+                        {
+                            "text": "Selenomonas artemidis",
+                            "infons": {
+                                "identifier": "NCBI:txid671224",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:55",
+                                "parent_taxonomic_id": "NCBI:txid970"
+                            },
+                            "id": "16814758",
+                            "locations": {
+                                "length": 21,
+                                "offset": 3052
+                            }
+                        },
+                        {
+                            "text": "Treponema denticola",
+                            "infons": {
+                                "identifier": "NCBI:txid158",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:55",
+                                "parent_taxonomic_id": "NCBI:txid157"
+                            },
+                            "id": "16814759",
+                            "locations": {
+                                "length": 19,
+                                "offset": 3075
+                            }
+                        },
+                        {
+                            "text": "Peptostreptococcus anaerobius",
+                            "infons": {
+                                "identifier": "NCBI:txid1261",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:55",
+                                "parent_taxonomic_id": "NCBI:txid1257"
+                            },
+                            "id": "16814760",
+                            "locations": {
+                                "length": 29,
+                                "offset": 3096
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas endodontalis",
+                            "infons": {
+                                "identifier": "NCBI:txid28124",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:55",
+                                "parent_taxonomic_id": "NCBI:txid836"
+                            },
+                            "id": "16814761",
+                            "locations": {
+                                "length": 26,
+                                "offset": 3127
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas gingivalis",
+                            "infons": {
+                                "identifier": "NCBI:txid837",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:55",
+                                "parent_taxonomic_id": "NCBI:txid836"
+                            },
+                            "id": "16814762",
+                            "locations": {
+                                "length": 24,
+                                "offset": 3155
+                            }
+                        },
+                        {
+                            "text": "Prevotella intermedia",
+                            "infons": {
+                                "identifier": "NCBI:txid28131",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:55",
+                                "parent_taxonomic_id": "NCBI:txid838"
+                            },
+                            "id": "16814763",
+                            "locations": {
+                                "length": 21,
+                                "offset": 3181
+                            }
+                        },
+                        {
+                            "text": "Prevotella loescheii",
+                            "infons": {
+                                "identifier": "NCBI:txid840",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:55",
+                                "parent_taxonomic_id": "NCBI:txid838"
+                            },
+                            "id": "16814764",
+                            "locations": {
+                                "length": 20,
+                                "offset": 3204
+                            }
+                        },
+                        {
+                            "text": "Solobacterium moorei",
+                            "infons": {
+                                "identifier": "NCBI:txid102148",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:09:56",
+                                "parent_taxonomic_id": "NCBI:txid123375"
+                            },
+                            "id": "16814765",
+                            "locations": {
+                                "length": 20,
+                                "offset": 3229
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 4270,
+                    "infons": {
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316",
+                        "iao_name_2": "materials section",
+                        "iao_id_2": "IAO:0000633"
+                    },
+                    "text": "In this study, we collected tongue coating and saliva samples from children with and without halitosis and analyzed the microbial communities in these samples and functional variations among these communities using 16S rRNA gene pyrosequencing and metagenomics. We sampled from the dorsum of the tongue because it is known to retain large quantities of microorganisms, exfoliated cells and as a result of its large and papillary surface area, it is well regarded as a major source of VSCs. Saliva, as a representative of the overall oral microbial population, is also associated with halitosis; in consideration of its host-friendly sampling accessibility, it was also collected in this study. Because children rarely have periodontal disease or systemic diseases, they are good candidates for studying halitosis. This study aimed to increase our understanding of the impact of oral microbes on halitosis in children.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5187,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Halitosis tongue coating samples with a higher microbial richness than healthy samples",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We performed oral examinations on 170 children ranging in age from 4 to 5 years old. The 10 subjects with the highest VSC concentrations were selected as the halitosis group. Children with normal VSC concentrations were considered \u201chealthy\u201d subjects in this study; ten of these subjects were randomly chosen as the healthy group (see Methods). The demographics and characteristics of the subjects are shown in Table S1. Tongue coating and saliva samples were collected from these 20 subjects and analysed using 454 pyrosequencing. One subject was excluded from the study (both tongue coating and saliva samples) owing to poor sequencing reads from his tongue coating sample. Thus, 38 samples remained. After processing with Mothur, we obtained a total of 394,697 final sequence reads with an average of 10,387 \u00b1 1,907 reads per sample (Table S2). The 38 samples included a total of 1,436 operational taxonomic units (OTUs) at a 97% similarity cut-off, with 66\u2013266 OTUs per sample. The rarefaction curves approached asymptotes for most samples (Fig. S2). In total, 12 phyla, 75 genera and 140 species were detected; the predominant taxa were similar to the taxa reported in previous studies19,20 and are shown in Fig. S3.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6500,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Halitosis tongue coating samples with a higher microbial richness than healthy samples",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The \u03b1 diversity indices (observed OTUs, CatchAll, and Chao1) were calculated from 7,180 reads (Table S3). They were significantly higher in the halitosis tongue coating samples than in the healthy tongue coating samples (P\u2009<\u20090.05; Fig. 1A), but they showed no significant difference between the healthy and halitosis saliva samples (P\u2009>\u20090.05; Fig. 1B). Phylogenetic community analysis based on the weighted UniFrac distance metric was used to examine the overall bacterial community composition of each group. The weighted UniFrac distance showed no difference between healthy and halitosis samples (tongue coating or saliva) (P\u2009>\u20090.05; Fig. S4), which is consistent with a previous study18.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7191,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "OTUs with different relative abundances and prevalences between healthy and halitosis samples",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Next, we identified taxa that were responsible for the overall community differences between the healthy and halitosis samples. The relative abundances of 8 OTUs were significantly higher in the halitosis tongue coating samples (Fig. 2A). Notably, Leptotrichia wadei (OTU398) and Peptostreptococcus stomatis (OTU135) were detected in all of the halitosis tongue coating samples and were significantly more prevalent than in the healthy samples (Fig. 2B). The relative abundances of 9 OTUs differed significantly between the healthy and halitosis saliva samples; four of these OTUs (L. wadei (OTU398), Prevotella shahii (OTU283), TM7 genus incertae sedis (OTU199) and Solobacterium moorei (OTU30)) were also more abundant in the halitosis tongue coating samples (Fig. 2A,C). Only P. shahii (OTU283) was more prevalent in the halitosis saliva samples (Fig. 2D).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Leptotrichia wadei",
+                            "infons": {
+                                "identifier": "NCBI:txid157687",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:10:45",
+                                "parent_taxonomic_id": "NCBI:txid32067"
+                            },
+                            "id": "16814766",
+                            "locations": {
+                                "length": 18,
+                                "offset": 7439
+                            }
+                        },
+                        {
+                            "text": "Peptostreptococcus stomatis",
+                            "infons": {
+                                "identifier": "NCBI:txid341694",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:10:45",
+                                "parent_taxonomic_id": "NCBI:txid1257"
+                            },
+                            "id": "16814767",
+                            "locations": {
+                                "length": 27,
+                                "offset": 7471
+                            }
+                        },
+                        {
+                            "text": "L. wadei",
+                            "infons": {
+                                "identifier": "NCBI:txid157687",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:10:48",
+                                "parent_taxonomic_id": "NCBI:txid32067"
+                            },
+                            "id": "16814768",
+                            "locations": {
+                                "length": 8,
+                                "offset": 7772
+                            }
+                        },
+                        {
+                            "text": "Prevotella shahii",
+                            "infons": {
+                                "identifier": "NCBI:txid228603",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:10:48",
+                                "parent_taxonomic_id": "NCBI:txid838"
+                            },
+                            "id": "16814769",
+                            "locations": {
+                                "length": 17,
+                                "offset": 7792
+                            }
+                        },
+                        {
+                            "text": "incertae sedis",
+                            "infons": {
+                                "identifier": "NCBI:txid522254",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:10:48",
+                                "parent_taxonomic_id": "NCBI:txid49928"
+                            },
+                            "id": "16814770",
+                            "locations": {
+                                "length": 14,
+                                "offset": 7830
+                            }
+                        },
+                        {
+                            "text": "Solobacterium moorei",
+                            "infons": {
+                                "identifier": "NCBI:txid102148",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:10:48",
+                                "parent_taxonomic_id": "NCBI:txid123375"
+                            },
+                            "id": "16814771",
+                            "locations": {
+                                "length": 20,
+                                "offset": 7858
+                            }
+                        },
+                        {
+                            "text": "P. shahii",
+                            "infons": {
+                                "identifier": "NCBI:txid228603",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:10:50",
+                                "parent_taxonomic_id": "NCBI:txid838"
+                            },
+                            "id": "16814772",
+                            "locations": {
+                                "length": 9,
+                                "offset": 7970
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 8143,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "OTUs with different relative abundances and prevalences between healthy and halitosis samples",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Principal component analysis (PCA) was implemented to assess discrepancies based on OTUs with different relative abundances (Fig. S5). Based on the PCA plot, we found that there was a tendency to form two clusters, a tight healthy cluster (Fig. S5, blue squares) and a disperse halitosis cluster (Fig. S5, red triangles), in both the tongue coating and saliva samples. Interestingly, two healthy samples (Fig. S5, blue squares marked with 4 and 5) fell within the halitosis cluster, indicating that these individuals may be at risk of halitosis.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8688,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Distinct patterns in the co-occurrence networks of saliva and tongue coating communities under healthy and halitosis conditions",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "By calculating and then visualizing the Pearson\u2019s correlation coefficients for all of the OTUs in the healthy tongue coating and saliva samples, we generated a co-occurrence network of 924 OTUs with 3,907 edges. Nodes with more than 30 linkages (edges) were selected as hub nodes (Fig. 3). These correlations are divided into inter-group correlations (namely, correlations of OTUs between tongue coating and saliva), and intra-group correlations (namely, correlations of OTUs within tongue coating samples and of OTUs within saliva samples). Twenty-five saliva nodes together with only 2 tongue coating nodes were found in the healthy inter-group module; all of the correlations were positive (Fig. 3A). The two tongue coating nodes were both from the Capnocytophaga genus. Using the same method, twenty-three tongue coating nodes and 4 saliva nodes were found with 39 positive and 21 negative correlations in the halitosis inter-group module (Fig. 3B). Most of the halitosis hub tongue coating nodes were from the genera Actinomyces, Capnocytophaga, Leptotrichia, Fusobacterium and Prevotella, which have been previously associated with halitosis14,15,18,21,22,23. The characteristics of the hub nodes are shown in Table S4. The same patterns could be found in intra-group modules as well (Fig. 3C,D). These results suggested distinct patterns in the correlations of saliva and tongue coating communities under healthy and halitosis conditions.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Capnocytophaga genus",
+                            "infons": {
+                                "identifier": "NCBI:txid1016",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:11:08",
+                                "parent_taxonomic_id": "NCBI:txid49546"
+                            },
+                            "id": "16814773",
+                            "locations": {
+                                "length": 20,
+                                "offset": 9440
+                            }
+                        },
+                        {
+                            "text": "Actinomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:11:11",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "16814774",
+                            "locations": {
+                                "length": 11,
+                                "offset": 9710
+                            }
+                        },
+                        {
+                            "text": "Capnocytophaga",
+                            "infons": {
+                                "identifier": "NCBI:txid1016",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:11:11",
+                                "parent_taxonomic_id": "NCBI:txid49546"
+                            },
+                            "id": "16814775",
+                            "locations": {
+                                "length": 14,
+                                "offset": 9723
+                            }
+                        },
+                        {
+                            "text": "Leptotrichia",
+                            "infons": {
+                                "identifier": "NCBI:txid32067",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:11:11",
+                                "parent_taxonomic_id": "NCBI:txid1129771"
+                            },
+                            "id": "16814776",
+                            "locations": {
+                                "length": 12,
+                                "offset": 9739
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid848",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:11:11",
+                                "parent_taxonomic_id": "NCBI:txid203492"
+                            },
+                            "id": "16814777",
+                            "locations": {
+                                "length": 13,
+                                "offset": 9753
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:11:11",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "16814778",
+                            "locations": {
+                                "length": 10,
+                                "offset": 9771
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 10260,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Variations in functional gene abundances of the H2S metabolic process between halitosis and healthy microbiomes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We generated 30.3\u2009Gb of quality-filtered paired-end (PE) reads from four pooled metagenomic samples. Mapping of the reads to the human genome showed a low human DNA presence (<10%) in the tongue coating samples and a relatively high (>50%) human DNA presence in the saliva samples (Table S5). The reads were assembled into scaffolds, and 585,327 non-redundant genes were predicted within the assembled scaffolds (Table S6). By comparing the genes between the halitosis and healthy samples (Fig. 4) and between the tongue coating and saliva samples (Fig. S7), we found that most of the genes were shared by different samples. This gene set provided us with the ability to search for functions associated with halitosis.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11089,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Variations in functional gene abundances of the H2S metabolic process between halitosis and healthy microbiomes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We searched for genes with differences in relative abundance between halitosis and healthy samples of >5-fold and with P-values for these differences of <0.001 in the DEGexp results24. There were 72,818 such genes in the tongue coating samples (38,428 (52.77%) were more abundant in the halitosis sample and 34,390 (47.23%) were more abundant in the healthy sample) (Fig. 5A) and 64,940 genes in the saliva samples (41,703 (64.22%) were more abundant in the halitosis sample and 23,237 (35.78%) were more abundant in the healthy sample) (Fig. 5B). The genes were then functionally annotated using the KEGG and eggNOG databases. Functional categories and genes in KEGG/eggNOG were counted (Figs S8 and S9), and KEGG ontology (KO) enrichment was analysed (Table S7). Interestingly, the groups \u201cinfectious diseases: bacterial\u201d and \u201cmetabolism of terpenoids and polyketides\u201d were enriched in the halitosis samples (both tongue coating and saliva samples), but not in the healthy samples (Fig. 5C). We suggest that microbial genes involved in infectious diseases might be relevant to halitosis. Terpenoids and polyketides are secondary metabolites produced by bacteria; they are structurally complex compounds involved in cell defence and communication. The involvement of these metabolites in halitosis was not previously suspected and warrants further investigation.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12452,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Variations in functional gene abundances of the H2S metabolic process between halitosis and healthy microbiomes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Additionally, the genes we assembled were mapped to the sulphur, cysteine and methionine metabolic pathways to explore hydrogen sulphide-related functional variations between halitosis and healthy microbiomes. We defined genes with relative abundance differences of >2-fold as differentially abundant genes. Previous studies have indicated that bacteria produce H2S in two ways: reduction of sulphate and desulphydration of cysteine and methionine25. Sulphate reduction is mediated by the enzymes encoded by the cysNC, cysN, cysD, cysC, cysH, cysJ, cysI, aprA and sir genes. Of these, cysC was more abundant in the halitosis tongue coating samples, whereas sir was less abundant in the halitosis saliva samples; no variations in the other genes were detected (Fig. 6, Table S8). The desulphydration process includes (1) reverse transsulphuration pathway activation via cystathionine \u03b2-synthase (encoded by cbs), cystathionine \u03b3-lyase and homocysteine desulphydrase (encoded by mccB), which converts homocysteine (an essential intermediate in methionine oxidation and cysteine synthesis) into cystathionine, cysteine, pyruvate, ammonia, and H2S; and (2) cysteine transamination by aminotransferases (encoded by aspB, aspC, and yhdR) to yield 3-mercaptopyruvate, which is further metabolized by 3-mercaptopyruvate sulphurtransferase (encoded by sseA) and thiosulphate sulphurtransferase (encoded by sseA and glpE) to release sulphur26,27. Our study showed that cbs, aspB, yhdR, sseA and glpE were more abundant in the halitosis groups. Additionally, cysM, which encodes cysteine synthase B and catalyses the H2S-to-cysteine conversion in prokaryotes, was less abundant in the halitosis samples (Fig. 6, Table S8). This might result in higher H2S levels in the oral cavity compared with healthy subjects. To further clarify the bacterial contribution to the functional variations, we searched NCBI Bacterial Gene Database by using gene names (e.g., cysC) and their descriptions (e.g., adenylylsulfate kinase), and then computed the intersection part with the Kraken taxonomic profile. The candidate species are shown in the Table S9.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:11:40",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16814779",
+                            "locations": {
+                                "length": 8,
+                                "offset": 12797
+                            }
+                        },
+                        {
+                            "text": "ammonia",
+                            "infons": {
+                                "identifier": "NCBI:txid32003",
+                                "type": "bacteria_order",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:11:48",
+                                "parent_taxonomic_id": "NCBI:txid28216"
+                            },
+                            "id": "16814780",
+                            "locations": {
+                                "length": 7,
+                                "offset": 13579
+                            }
+                        },
+                        {
+                            "text": "prokaryotes",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:11:54",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16814781",
+                            "locations": {
+                                "length": 11,
+                                "offset": 14088
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 14582,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "The human body harbours enormous quantities of microbes that reside in distinct habitats28. The oral cavity is one of the most important and complicated habitats in our body and supports diverse microbial communities which could be related to oral health or diseases. Previous evidences have shown that microbiome differences are often seen at the disease sites, for example, supragingival plaque for caries20 and subgingival plaque for periodontitis29. In studies on halitosis, tongue coating has been widely used, while saliva is also used when researchers focus on epidemiological characteristics in their studies20,30. In this research, our data on richness showed that differences were visible in tongue coating but not saliva (Fig. 1), which is consistent with the above view. Indeed, the presence of deep fissures in the tongue provides an environment with low oxygen levels, i.e., a relatively anaerobic niche, making halitosis-associated pathogens more likely to colonise.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15573,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Previous studies have found a number of halitosis-associated bacteria using different methods13,15,18,21,31. Some of our results agree with those of previous studies. For example, S. moorei is a Gram-positive bacterium that can convert cysteine into hydrogen sulphide32; it has been previously recognized as a pathogenic bacterium15,16,31. S. moorei (OTU30) was significantly more abundant in the halitosis samples compared to healthy samples (Fig. 2A,C), indicating an association with halitosis. Takeshita et al. found increased abundances of Leptotrichia in persons with oral malodour33, and Yang et al. reported that L. wadei was positively correlated with H2S concentrations18. Notably, we detected L. wadei (OTU398) in all of the halitosis tongue-coating samples but in only 10% of the healthy samples (Fig. 2B). This bacterium also showed a higher relative abundance in halitosis tongue coating samples (Fig. 2A). Thus, we inferred that L. wadei may be involved in halitosis. Persson et al. reported that periodontitis pathogens, such as Po. gingivalis, Pr. intermedia, T. forsythensis, F. nucleatum and Tr. denticola, have the capacity to produce VSCs in vitro14. These pathogens have also been recognized to have a positive correlation with oral malodour in vivo22,34,35. However, we found no differences in the abundances of any of these periodontitis pathogens between the healthy and halitosis groups. There are many possible reasons for this inconsistency. First, our study focused on preschool-aged children, whereas most other studies have focused on adults. Children rarely have periodontal diseases or systemic diseases and are all nonsmokers, thereby providing favourable conditions for a better understanding of halitosis-associated microbiota. Ling et al. reported that the diversity of the salivary microbiota in children was greater than in adults, indicating that oral cavity bacterial flora are dynamic and change during life20,36. Moreover, the prevalence of halitosis differs among races owing to diet, environment and host genetics16. Second, most previous studies have utilized culture-dependent methods or focused on only a small panel of anaerobic bacteria. However, approximately 600 bacterial species are present in the oral cavity, 35% of which cannot be cultivated at present37. In contrast to these conventional methods, we used 16S rRNA gene pyrosequencing, a culture-independent method that can provide a broad view of the oral microbiota. Finally, in contrast to most previous studies, we used a gas chromatograph to test for halitosis. Although this method is time-consuming and complicated, it can distinguish among the 3 common sulphur compounds associated with halitosis and thus is suitable for a research environment38.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:12:10",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16814782",
+                            "locations": {
+                                "length": 8,
+                                "offset": 15634
+                            }
+                        },
+                        {
+                            "text": "S. moorei",
+                            "infons": {
+                                "identifier": "NCBI:txid102148",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:12:12",
+                                "parent_taxonomic_id": "NCBI:txid123375"
+                            },
+                            "id": "16814783",
+                            "locations": {
+                                "length": 9,
+                                "offset": 15753
+                            }
+                        },
+                        {
+                            "text": "Gram-positive bacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1086441",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:12:12",
+                                "parent_taxonomic_id": "NCBI:txid53420"
+                            },
+                            "id": "16814784",
+                            "locations": {
+                                "length": 23,
+                                "offset": 15768
+                            }
+                        },
+                        {
+                            "text": "S. moorei",
+                            "infons": {
+                                "identifier": "NCBI:txid102148",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:12:14",
+                                "parent_taxonomic_id": "NCBI:txid123375"
+                            },
+                            "id": "16814785",
+                            "locations": {
+                                "length": 9,
+                                "offset": 15913
+                            }
+                        },
+                        {
+                            "text": "Leptotrichia",
+                            "infons": {
+                                "identifier": "NCBI:txid32067",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:12:16",
+                                "parent_taxonomic_id": "NCBI:txid1129771"
+                            },
+                            "id": "16814786",
+                            "locations": {
+                                "length": 12,
+                                "offset": 16118
+                            }
+                        },
+                        {
+                            "text": "L. wadei",
+                            "infons": {
+                                "identifier": "NCBI:txid157687",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:12:17",
+                                "parent_taxonomic_id": "NCBI:txid32067"
+                            },
+                            "id": "16814787",
+                            "locations": {
+                                "length": 8,
+                                "offset": 16194
+                            }
+                        },
+                        {
+                            "text": "L. wadei",
+                            "infons": {
+                                "identifier": "NCBI:txid157687",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:12:18",
+                                "parent_taxonomic_id": "NCBI:txid32067"
+                            },
+                            "id": "16814788",
+                            "locations": {
+                                "length": 8,
+                                "offset": 16277
+                            }
+                        },
+                        {
+                            "text": "L. wadei",
+                            "infons": {
+                                "identifier": "NCBI:txid157687",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:12:20",
+                                "parent_taxonomic_id": "NCBI:txid32067"
+                            },
+                            "id": "16814789",
+                            "locations": {
+                                "length": 8,
+                                "offset": 16517
+                            }
+                        },
+                        {
+                            "text": "T. forsythensis",
+                            "infons": {
+                                "identifier": "NCBI:txid28112",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:12:22",
+                                "parent_taxonomic_id": "NCBI:txid195950"
+                            },
+                            "id": "16814790",
+                            "locations": {
+                                "length": 15,
+                                "offset": 16650
+                            }
+                        },
+                        {
+                            "text": "F. nucleatum",
+                            "infons": {
+                                "identifier": "NCBI:txid851",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:12:22",
+                                "parent_taxonomic_id": "NCBI:txid848"
+                            },
+                            "id": "16814791",
+                            "locations": {
+                                "length": 12,
+                                "offset": 16667
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:12:33",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16814792",
+                            "locations": {
+                                "length": 8,
+                                "offset": 17751
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 18336,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Instead of being caused by a single pathogen, halitosis may be caused by poly-microbial mutual effects39, in which microorganisms interact in a synergistic or opposing manner. We identified healthy and halitosis-associated modules of hub OTUs (Fig. 3). Twenty-five saliva nodes in inter-group correlations (twenty-six saliva nodes in intra-group correlations) and only 2 tongue coating nodes were identified as hub taxa in the healthy module, suggesting that saliva plays a more important role than tongue coating in maintaining microbial balance under healthy conditions (Fig. 3A,C). By contrast, this balance was disrupted in the halitosis module. Negative correlations were detected, which indicates that opposing relationships or colonization resistance may exist between species (Fig. 3B,D)40. The number of tongue coating hub nodes turned out to far exceed the number of saliva nodes. These changes between healthy and halitosis modules suggest that community interactions display different patterns in healthy and halitosis subjects. Furthermore, the predominant hub OTUs switched from saliva to tongue coating, indicating a role reversal.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19482,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Despite inter-individual variability, we detected several OTUs that were present in most of the tongue coating samples (Fig. 7). We defined these OTUs as the \u201ccore microbiome\u201d of tongue coatings, thus representing the normal flora of this oral site (Fig. 7, green-coloured shape). Most of the species within the core microbiome of the tongue coating biofilm were Gram-negative anaerobic bacteria. These species are the most adaptable to the tongue coating environment. Similar definitions of core microbiomes in the healthy (TH) and halitosis (TD) tongue coatings were also determined (Fig. 7, blue and orange shapes). Within the TD core microbiome, L. wadei (OTU398), P. stomatis (OTU135) and P. shahii (OTU283) were candidate halitosis pathogens, as discussed above (Fig. 2A,B). Taxonomic analysis was also performed with the metagenomic sequencing data using a relatively new method called \u201cKraken\u201d, which is an ultrafast and highly accurate program for assigning taxonomic labels41. The metagenomic taxa were then compared with the Human Oral Microbiome Database (HOMD)37,42 at the genus and species levels, as HOMD is considered a powerful oral microbiome reference and contains more than 600 prokaryote species. We identified 605 genera and 1,274 species, including more than 196 genera and 708 species in HOMD. The number of species we identified is consistent with Jenkinson\u2019s view that the estimated species number might turn out to be higher (~1200) than that in the database43. Therefore, metagenomic sequencing helps identify a microbiota that is broader than the current database.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:12:56",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16814793",
+                            "locations": {
+                                "length": 8,
+                                "offset": 19869
+                            }
+                        },
+                        {
+                            "text": "L. wadei",
+                            "infons": {
+                                "identifier": "NCBI:txid157687",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:12:59",
+                                "parent_taxonomic_id": "NCBI:txid32067"
+                            },
+                            "id": "16814794",
+                            "locations": {
+                                "length": 8,
+                                "offset": 20132
+                            }
+                        },
+                        {
+                            "text": "P. stomatis",
+                            "infons": {
+                                "identifier": "NCBI:txid341694",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:12:59",
+                                "parent_taxonomic_id": "NCBI:txid1257"
+                            },
+                            "id": "16814795",
+                            "locations": {
+                                "length": 11,
+                                "offset": 20151
+                            }
+                        },
+                        {
+                            "text": "P. shahii",
+                            "infons": {
+                                "identifier": "NCBI:txid228603",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:13:00",
+                                "parent_taxonomic_id": "NCBI:txid838"
+                            },
+                            "id": "16814796",
+                            "locations": {
+                                "length": 9,
+                                "offset": 20176
+                            }
+                        },
+                        {
+                            "text": "prokaryote",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:13:05",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16814797",
+                            "locations": {
+                                "length": 10,
+                                "offset": 20680
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 21075,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Of the three major VSCs involved with oral malodour, (CH3)2S is the main contributor to extra-oral halitosis44, whereas CH3SH is more pathogenic than H2S in halitosis and is associated with periodontal disease10,12. Therefore, we mainly focused on H2S in the present study. We attempted to identify candidate halitosis pathogens using 16S rRNA gene pyrosequencing; however, the most differentially abundant OTUs lacked evidence of H2S production in vitro (Fig. 2). We thus inferred that the pathogenesis of halitosis might be due to cooperative poly-microbial interactions rather than the effect of a single pathogen. Belda-Ferre et al. first used metagenomic approach in oral samples45, which could provide a convenient method for comprehensively studying poly-microbial interactions with functional information. By analysing the H2S metabolic process in the metagenomic data, we revealed functional differences between the halitosis and healthy microbiomes. As expected, there were significant increases in the abundances of the cbs, aspB, yhdR, sseA and glpE genes, which are involved in the reverse transsulphuration pathway and in the cysteine transamination pathway, which converts amino acids into H2S26,27. This result is consistent with previous studies showing that microbial degradation of methionine and cysteine in the oral cavity is the main cause of halitosis8,46. Moreover, the reduced abundance of cysM in our study might represent reduced conversion of H2S during cysteine metabolism in prokaryotes, resulting in lower usage of H2S. The higher production and lower use could contribute to excessive H2S concentrations and, hence, halitosis. In our study, few differences were found in most of the VSC pathway genes. Some of these genes might be present at equal frequencies but differentially expressed; metatranscriptomics are required to identify such differences.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "prokaryotes",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:13:25",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16814798",
+                            "locations": {
+                                "length": 11,
+                                "offset": 22580
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 22959,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In summary, this study explored microbial composition and function in preschool-aged children with and without halitosis. The study identified several OTUs that differed significantly in relative abundance and frequency of detection, thereby providing a list of candidate halitosis-associated pathogens. Moreover, this study offered the first comprehensive evaluation of co-occurrence networks of saliva and tongue coating communities under healthy and halitosis conditions and investigated significantly different patterns. Additionally, an H2S-related pathway was constructed to analyse the pathogenesis of halitosis. However, the aetiology of halitosis is more complex than expected, and further experiments are required to gain a better understanding of the condition.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23731,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Ethics statement",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "This project was approved by the Ethics Committee of the Peking University School and Hospital of Stomatology (PKUSSIRB-2012062). All the experiments were performed in accordance with relevant guidelines and regulations. All the subjects\u2019 guardians provided written informed consent for participation.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24055,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Enrolment criteria",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We performed oral examinations on 170 children from YaYuncun No. 2 Kindergarten, Beijing, China (aged 4\u20135 years). OralChromaTM (CHM-1, ABILIT Corporation, Japan) was used to measure concentrations of H2S, CH3SH, and (CH3)2S in the breath after calibration by the manufacturer. Each child was examined using OralChromaTM 3 times, and the average values were used as criteria for diagnosis. The normal reference values of H2S, CH3SH and (CH3)2S were 1.50\u2009ng 10\u2009ml\u22121, 0.50\u2009ng 10\u2009ml\u22121, and 0.20\u2009ng 10\u2009ml\u22121, respectively47. A child was considered to have halitosis if any of these three compounds had an above-normal value. The 10 subjects with the highest VSC concentrations were selected as the halitosis group. Children with normal VSCs concentrations were considered \u201chealthy\u201d subjects; ten of these subjects were randomly chosen as the healthy group. None of these subjects presented with the common cold, respiratory diseases, digestive diseases or systemic diseases and none had taken antibiotics in the three months prior to the study. Decayed, missing, and filled teeth (dmft), tongue coating area (TCA), tongue coating thickness (TCT), gingival index (GI), debris index-simplified (DI-S), and saliva pH were also examined. All of the examinations and diagnoses were performed by one experienced dentist.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25381,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Sample collection",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Tongue coating and saliva samples were collected from the 20 subjects. To collect tongue coating samples, a sterile toothbrush was used to gently scrape the tongue dorsum from the vallate papilla area to the front tongue border. The toothbrush was then swirled in a 50-ml centrifuge tube containing 10\u2009ml of TE (50\u2009mM Tris-HCl and 1\u2009mM EDTA; pH 7.6). A total of 1\u2009ml of paraffin gum-stimulated saliva was collected in an empty 5-ml sterile Eppendorf tube. All samples were immediately frozen at \u221220\u00b0C and stored at \u221280\u00b0C prior to DNA extraction.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25943,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "DNA extraction, PCR amplification and 454 pyrosequencing ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "DNA was extracted using a TIANamp Bacteria DNA Kit (Tiangen Biotech, Beijing, China) following the manufacturer\u2019s instructions. DNA purity was evaluated based on A260/A280 ratio using a NanoDrop 8000 Spectrophotometer (Thermo Fisher Scientific, USA). DNA integrity was verified by agarose gel electrophoresis. A negative control containing only buffer was included during DNA extraction and quantification. DNA samples were stored at \u221220\u00b0C prior to use.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:14:01",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16814799",
+                            "locations": {
+                                "length": 8,
+                                "offset": 25977
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26453,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "DNA extraction, PCR amplification and 454 pyrosequencing ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Amplicon libraries of the 16S rRNA gene V1-V3 hypervariable regions were generated using the universal primers 27F (5\u2032-AGAGTTTGATCCTGGCTCAG-3\u2032) and 534R (5\u2032-TTACCGCGGCTGCTGGCAC-3\u2032)19. PCR was performed as described in the manual for the GS FLX Amplicon DNA library preparation method (Roche, Mannheim, Germany). The cycling conditions were as follows: initial denaturation at 94\u2009\u00b0C for 3\u2009min; 30 cycles of denaturation at 94\u2009\u00b0C for 30\u2009s, annealing at 57\u2009\u00b0C for 45\u2009s, and extension at 72\u2009\u00b0C for 1\u2009min; and a final extension at 72\u2009\u00b0C for 2\u2009min. A DNA isolation negative control and a PCR control without template were included. The results of the PCR amplification were assessed by electrophoresis of a 1% agarose gel. The 16S rRNA gene PCR amplicons were sequenced with a 454 GS FLX Titanium system (454 Life Sciences, Branford, CT, USA) at the BGI Institute (Shenzhen, China).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27329,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "454 sequence data processing ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Sequence data were processed using Mothur48. The sequences were demultiplexed using a unique barcode assigned to each sample. The sequences were filtered according to quality scores using the sliding window approach, in which sequences are trimmed when the average quality score over a 50-nt sliding window drops below 30. A maximum of one barcode mismatch and two primer mismatches were allowed. Sequences >200\u2009nt in length were retained. The sequences were further denoised using a single-linkage algorithm, and chimaeric sequences were removed using the UCHIME algorithm in Mothur. Unique sequences were taxonomically assigned with the RDP classifier49 using a bootstrapping algorithm. The bootstrapping threshold was 0.8; bootstrap values below 0.8 were assigned as \u201cunclassified\u201d. Unique tags were pre-clustered using a pseudo-single linkage algorithm to diminish errors caused by pyrosequencing. Sequences were clustered using the average neighbour algorithm for operational taxonomic unit (OTU) analysis with a 3% dissimilarity cut-off50. OTUs were assigned a taxonomy based on the consensus taxonomic assignment for the majority of sequences within that OTU. If a consensus taxonomy assignment was not possible at the species level, then the OTU was assigned at the lowest possible taxonomic level.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28664,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "454 sequence data processing ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Rarefaction curves were generated with Mothur to test the current sequencing depth. Observed OTUs, CatchAll, and Chao1 were used to estimate the \u03b1 diversity. The communities were compared based on phylogenetic distances using the weighted UniFrac metric to represent \u03b2 diversity51. A Venn diagram was constructed to describe the core microbiome, healthy subject-associated species and halitosis-associated species. The relative abundances and prevalences of OTUs and different species were calculated.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29165,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Statistical analysis ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The independent Student\u2019s t-test and AMOVA were applied to evaluate \u03b1 and \u03b2 diversity. The Wilcoxon rank-sum test and Fisher\u2019s exact test were used to examine relative abundance and prevalence, respectively. P\u2009<\u20090.05 indicated statistical significance. Principal component analysis (PCA) was performed based on OTUs with different relative abundances. Pearson\u2019s correlation coefficients (PCC) were calculated between the OTUs in healthy tongue coating and saliva samples and between the OTUs in halitosis tongue coating and saliva samples40; the permutation test was then used to examine the significance of the PCC values (P\u2009<\u20090.01 was considered statistically significant). Co-occurrence networks were generated using Cytoscape (version 3.3.1). Student\u2019s t-test, the Wilcoxon rank-sum test, Fisher\u2019s exact test, Pearson\u2019s correlation coefficients and the permutation test were performed using R (version 2.15.3).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30100,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "DNA library construction and metagenomic sequencing ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We first pre-evaluated human DNA from each sample using a qPCR method described in a previous report by Wang52. We found that human DNA contaminations of samples within the same group had similar proportions, indicating similar proportions of the microbial DNA in the samples of each group. Therefore, we pooled equimolar genomic DNA from each sample from each group to create new samples. In doing this, we created a total of four metagenomic samples. The quantity and quality of the metagenomic DNA were measured using a NanoDrop 2000 spectrophotometer (Thermo Fisher Scientific, USA) and by agarose gel electrophoresis (0.8%, 120\u2009V), respectively. Next, DNA libraries were constructed according to the standard protocol provided by the manufacturer (Illumina, USA). Quality control of the libraries was performed on a StepOne Plus Real-Time PCR system (ABI, USA) prior to sequencing. The four libraries were sequenced in one lane using an Illumina HiSeq 2500 instrument (Illumina, USA) with 2\u2009\u00d7150 base pair (bp) paired-end (PE) sequencing. Library construction and sequencing were conducted at BerryGenomics (Beijing, China).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31281,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Quality control of reads and human contamination evaluation ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We performed quality control of the sequencing data as follows: (1) reads containing more than 3% N bases were removed, (2) reads containing more than 50% bases with low quality (<3) were removed. Then, clean reads that mapped to the human genome (hg19) were filtered from each sample using Bowtie 2 with default parameters53.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31667,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Taxonomic analysis ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "All clean reads were aligned to the NCBI bacteria, archaebacteria and virus genome database using Kraken41 with default parameters. After achieving a taxonomy profiling table, we compared the taxa to the Human Oral Microbiome Database (HOMD)37,42 at the genus and species levels.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:15:02",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16814800",
+                            "locations": {
+                                "length": 8,
+                                "offset": 31708
+                            }
+                        },
+                        {
+                            "text": "archaebacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2157",
+                                "type": "archaea_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:15:02",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16814801",
+                            "locations": {
+                                "length": 14,
+                                "offset": 31718
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 31965,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "De novo assembly and gene prediction ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "All microbial PE reads were assembled by SOAPdenovo with default parameters54. The MetaGeneMark gene prediction tool was used with default parameters to predict genes in the assembled scaffolds55. The predicted open reading frames (ORFs) were compared against the NCBI non-redundant56 sequence database using BLAT with default parameters.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32340,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Functional analysis ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We calculated the relative abundances of genes and then calculated the relative abundance ratios between the halitosis and healthy samples. DEGexp, a method in the DEGseq package24, was also used to select genes that differed between the halitosis and healthy samples, although this approach has mainly been used for RNA-seq data. DEGexp was used here because it could correct inexact relative abundance ratios caused by samples with very low abundance. Genes with relative abundance differences of >5-fold and with P-values\u2009<\u20090.001 in the DEGexp results were functionally annotated using the Kyoto Encyclopedia of Genes and Genomes (KEGG) bioinformatics database (8th KEGG release, December 2014)57 and the eggNOG 4.0 database58. Functional categories and genes in KEGG/eggNOG were counted. Differential genes were subjected to KEGG Ontology (KO) enrichment analysis, and enriched P-values were calculated according to the hypergeometric test (P\u2009<\u20090.05 was considered statistically significant). Furthermore, genes that mapped to the sulphur metabolic pathway and to the cysteine and methionine metabolic pathway were analysed. Hydrogen sulphide-related genes were used to construct an H2S metabolic map. We defined genes with relative abundance ratios of >2 as differentially abundant genes in the H2S metabolic analysis. To determine taxonomic origins of these genes, we searched the NCBI Bacterial Gene Database by using gene names and gene descriptions, followed by computing the intersection with the Kraken taxonomic profile.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33892,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Functional analysis ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The sequencing data from this study have been submitted to Sequence Read Archive (http://www.ncbi.nlm.nih.gov/sra/) under accession SRX831098 and SRX831194 for 16S rRNA gene pyrosequencing and metagenomic sequencing.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34108,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Functional analysis ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "This manuscript was edited for English language usage, grammar, spelling and punctuation by native English-speaking editors at NPG Language Editing. For a certificate, please see: https://languageediting.nature.com/, key: B460-76A7-2AE1-22C2-A220.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34355,
+                    "infons": {
+                        "section_title_1": "Additional Information",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "How to cite this article: Ren, W. et al. Tongue Coating and the Salivary Microbial Communities Vary in Children with Halitosis. Sci. Rep. 6, 24481; doi: 10.1038/srep24481 (2016).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34555,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "This work was supported by the National Natural Science Foundation of China (81200762 & 81301475), academic collaboration fund to T.X., the Peking University School of Stomatology (PKUSS20130210), the Scientific Research Foundation for Returned Overseas Chinese Scholars, State Education Ministry, and the Metagenopolis grant ANR-11-DPBS-0001.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34913,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Author Contributions W.R. and Z.X. conducted experiments, analysed the data and wrote the main part of the manuscript. Z.C.W. processed sequencing data and performed analysis of microbial co-occurrence network. Qun, Z., X.N.L. and S.G.Z. recruited volunteers and collected samples. H.Z. performed analysis of microbial co-occurrence network. Qian, Z. and Y.F.Z. participated in sample collection and revision of the manuscript. L.S.Z., C.Y.W. and N.Q. did part of comparative metagenomic analysis. N.Q., S.D.E., Y.H.L. and X.S.H. revised the manuscript. T.C. provided algorithms and revised the manuscript. T.X. and F.C. conceived the study and revised the manuscript.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35590,
+                    "infons": {
+                        "title": "Halitosis: the multidisciplinary approach",
+                        "journal": "International journal of oral science",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Bollen C. M. & Beikler T.Halitosis: the multidisciplinary approach. International journal of oral science4, 55\u201363, doi: 10.1038/ijos.2012.39 (2012). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35804,
+                    "infons": {
+                        "title": "Prevalence of halitosis in the population of the city of Bern, Switzerland: a study comparing self-reported and clinical data",
+                        "journal": "European journal of oral sciences",
+                        "volume": "117",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Bornstein M. M., Kislig K., Hoti B. B., Seemann R. & Lussi A.Prevalence of halitosis in the population of the city of Bern, Switzerland: a study comparing self-reported and clinical data. European journal of oral sciences117, 261\u2013267, doi: 10.1111/j.1600-0722.2009.00630.x (2009). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36121,
+                    "infons": {
+                        "title": "Oral malodor-related parameters in the Chinese general population",
+                        "journal": "Journal of clinical periodontology",
+                        "volume": "33",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Liu X. N.et al.. Oral malodor-related parameters in the Chinese general population. Journal of clinical periodontology33, 31\u201336, doi: 10.1111/j.1600-051X.2005.00862.x (2006). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36332,
+                    "infons": {
+                        "title": "Oral malodour and its association with age and sex in a general population in Brazil",
+                        "journal": "Oral diseases",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Nadanovsky P., Carvalho L. B. & Ponce de Leon A.Oral malodour and its association with age and sex in a general population in Brazil. Oral diseases13, 105\u2013109, doi: 10.1111/j.1601-0825.2006.01257.x (2007). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36574,
+                    "infons": {
+                        "title": "Prevalence of breath malodour in 7\u201311-year-old children living in Middle Anatolia, Turkey",
+                        "journal": "Community dental health",
+                        "volume": "25",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Nalcaci R., Dulgergil T., Oba A. A. & Gelgor I. E.Prevalence of breath malodour in 7\u201311-year-old children living in Middle Anatolia, Turkey. Community dental health25, 173\u2013177 (2008). [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36783,
+                    "infons": {
+                        "title": "Prevalence of oral malodour and its relationship with oral parameters in Indian children aged 7\u201315 years",
+                        "journal": "European archives of paediatric dentistry: official journal of the European Academy of Paediatric Dentistry",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Patil P. S., Pujar P., Poornima S. & Subbareddy V. V.Prevalence of oral malodour and its relationship with oral parameters in Indian children aged 7\u201315 years. European archives of paediatric dentistry: official journal of the European Academy of Paediatric Dentistry15, 251\u2013258, doi: 10.1007/s40368-014-0109-0 (2014). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37137,
+                    "infons": {
+                        "title": "Prevalence of halitosis in children considering oral hygiene, gender and age",
+                        "journal": "International journal of dental hygiene",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Villa A.et al.. Prevalence of halitosis in children considering oral hygiene, gender and age. International journal of dental hygiene12, 208\u2013212, doi: 10.1111/idh.12077 (2014). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37350,
+                    "infons": {
+                        "title": "Halitology (breath odour: aetiopathogenesis and management)",
+                        "journal": "Oral diseases",
+                        "volume": "18",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Scully C. & Greenman J.Halitology (breath odour: aetiopathogenesis and management). Oral diseases18, 333\u2013345, doi: 10.1111/j.1601-0825.2011.01890.x (2012). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37542,
+                    "infons": {
+                        "title": "Topographic distribution of bacteria associated with oral malodour on the tongue",
+                        "journal": "Archives of oral biology",
+                        "volume": "53",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Allaker R. P.et al.. Topographic distribution of bacteria associated with oral malodour on the tongue. Archives of oral biology53 Suppl 1, S8\u2013S12, doi: 10.1016/S0003-9969(08)70003-7 (2008). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:16:01",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16814802",
+                            "locations": {
+                                "length": 8,
+                                "offset": 37591
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 37768,
+                    "infons": {
+                        "title": "Volatile sulfur compounds in mouth air from clinically healthy subjects and patients with periodontal disease",
+                        "journal": "Journal of periodontal research",
+                        "volume": "27",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Yaegaki K. & Sanada K.Volatile sulfur compounds in mouth air from clinically healthy subjects and patients with periodontal disease. Journal of periodontal research27, 233\u2013238 (1992). [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37977,
+                    "infons": {
+                        "title": "Biochemical and clinical factors influencing oral malodor in periodontal patients",
+                        "journal": "Journal of periodontology",
+                        "volume": "63",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Yaegaki K. & Sanada K.Biochemical and clinical factors influencing oral malodor in periodontal patients. Journal of periodontology63, 783\u2013789, doi: 10.1902/jop.1992.63.9.783 (1992). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38195,
+                    "infons": {
+                        "title": "Relationship between halitosis and periodontal disease - associated oral bacteria in tongue coatings",
+                        "journal": "International journal of dental hygiene",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Amou T., Hinode D., Yoshioka M. & Grenier D.Relationship between halitosis and periodontal disease - associated oral bacteria in tongue coatings. International journal of dental hygiene12, 145\u2013151, doi: 10.1111/idh.12046 (2014). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:16:08",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16814803",
+                            "locations": {
+                                "length": 8,
+                                "offset": 38312
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 38460,
+                    "infons": {
+                        "title": "Microbiological culture analysis of the tongue anaerobic microflora in subjects with and without halitosis",
+                        "journal": "Oral diseases",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Donaldson A. C.et al.. Microbiological culture analysis of the tongue anaerobic microflora in subjects with and without halitosis. Oral diseases11 Suppl 1, 61\u201363, doi: 10.1111/j.1601-0825.2005.01094.x (2005). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38705,
+                    "infons": {
+                        "title": "The formation of hydrogen sulfide and methyl mercaptan by oral bacteria",
+                        "journal": "Oral microbiology and immunology",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Persson S., Edlund M. B., Claesson R. & Carlsson J.The formation of hydrogen sulfide and methyl mercaptan by oral bacteria. Oral microbiology and immunology5, 195\u2013201 (1990). [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:16:13",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16814804",
+                            "locations": {
+                                "length": 8,
+                                "offset": 38819
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 38905,
+                    "infons": {
+                        "title": "Hydrogen sulfide-producing bacteria in tongue biofilm and their relationship with oral malodour",
+                        "journal": "Journal of medical microbiology",
+                        "volume": "54",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Washio J., Sato T., Koseki T. & Takahashi N.Hydrogen sulfide-producing bacteria in tongue biofilm and their relationship with oral malodour. Journal of medical microbiology54, 889\u2013895, doi: 10.1099/jmm.0.46118-0 (2005). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:16:15",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16814805",
+                            "locations": {
+                                "length": 8,
+                                "offset": 38976
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 39161,
+                    "infons": {
+                        "title": "Characterization and prevalence of Solobacterium moorei associated with oral halitosis",
+                        "journal": "Journal of breath research",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Haraszthy V. I.et al.. Characterization and prevalence of Solobacterium moorei associated with oral halitosis. Journal of breath research2, doi: Artn 017002, doi 10.1088/1752-7155/2/1/017002 (2008). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Solobacterium moorei",
+                            "infons": {
+                                "identifier": "NCBI:txid102148",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:16:17",
+                                "parent_taxonomic_id": "NCBI:txid123375"
+                            },
+                            "id": "16814806",
+                            "locations": {
+                                "length": 20,
+                                "offset": 39219
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 39396,
+                    "infons": {
+                        "title": "Microbial co-occurrence relationships in the human microbiome",
+                        "journal": "PLos computational biology",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Faust K.et al.. Microbial co-occurrence relationships in the human microbiome. PLos computational biology8, e1002606, doi: 10.1371/journal.pcbi.1002606 (2012). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39611,
+                    "infons": {
+                        "title": "Microbial basis of oral malodor development in humans",
+                        "journal": "Journal of dental research",
+                        "volume": "92",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Yang F.et al.. Microbial basis of oral malodor development in humans. Journal of dental research92, 1106\u20131112, doi: 10.1177/0022034513507065 (2013). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39796,
+                    "infons": {
+                        "title": "Plaque bacterial microbiome diversity in children younger than 30 months with or without caries prior to eruption of second primary molars",
+                        "journal": "Plos One",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Xu H.et al.. Plaque bacterial microbiome diversity in children younger than 30 months with or without caries prior to eruption of second primary molars. Plos One9, e89269, doi: 10.1371/journal.pone.0089269 (2014). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40065,
+                    "infons": {
+                        "title": "Pyrosequencing Analysis of the Salivary Microbiota of Healthy Chinese Children and Adults",
+                        "journal": "Microb Ecol",
+                        "volume": "65",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Ling Z. X., Liu X., Wang Y. Z., Li L. J. & Xiang C.Pyrosequencing Analysis of the Salivary Microbiota of Healthy Chinese Children and Adults. Microb Ecol65, 487\u2013495, doi: 10.1007/s00248-012-0123-x (2013). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40306,
+                    "infons": {
+                        "title": "Molecular identification of bacteria on the tongue dorsum of subjects with and without halitosis",
+                        "journal": "Oral diseases",
+                        "volume": "14",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Riggio M. P.et al.. Molecular identification of bacteria on the tongue dorsum of subjects with and without halitosis. Oral diseases14, 251\u2013258, doi: 10.1111/j.1601-0825.2007.01371.x (2008). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:16:29",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16814807",
+                            "locations": {
+                                "length": 8,
+                                "offset": 40354
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 40532,
+                    "infons": {
+                        "title": "Discrimination of the oral microbiota associated with high hydrogen sulfide and methyl mercaptan production",
+                        "journal": "Scientific Reports",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Takeshita T.et al.. Discrimination of the oral microbiota associated with high hydrogen sulfide and methyl mercaptan production. Scientific Reports2, 215, doi: 10.1038/srep00215 (2012). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40773,
+                    "infons": {
+                        "title": "Role of Microorganisms in Production of Oral Malodor",
+                        "journal": "Oral Surgery Oral Medicine Oral Pathology Oral Radiology and Endodontics",
+                        "volume": "34",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Mcnamara T. F., Alexande Jf & Lee M.Role of Microorganisms in Production of Oral Malodor. Oral Surgery Oral Medicine Oral Pathology Oral Radiology and Endodontics34, 41-&, doi: 10.1016/0030-4220(72)90271-X (1972). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41023,
+                    "infons": {
+                        "title": "DEGseq: an R package for identifying differentially expressed genes from RNA-seq data",
+                        "journal": "Bioinformatics",
+                        "volume": "26",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Wang L., Feng Z., Wang X., Wang X. & Zhang X.DEGseq: an R package for identifying differentially expressed genes from RNA-seq data. Bioinformatics26, 136\u2013138, doi: 10.1093/bioinformatics/btp612 (2010). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41261,
+                    "infons": {
+                        "title": "Production of volatile sulfur compounds by microorganisms",
+                        "journal": "Annual review of microbiology",
+                        "volume": "26",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Kadota H. & Ishida Y.Production of volatile sulfur compounds by microorganisms. Annual review of microbiology26, 127\u2013138, doi: 10.1146/annurev.mi.26.100172.001015 (1972). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41468,
+                    "infons": {
+                        "title": "Microbial diversity in saliva of oral squamous cell carcinoma",
+                        "journal": "FEMS immunology and medical microbiology",
+                        "volume": "61",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Pushalkar S.et al.. Microbial diversity in saliva of oral squamous cell carcinoma. FEMS immunology and medical microbiology61, 269\u2013277, doi: 10.1111/j.1574-695X.2010.00773.x (2011). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41705,
+                    "infons": {
+                        "title": "Sulfur amino acid metabolism: pathways for production and removal of homocysteine and cysteine",
+                        "journal": "Annual review of nutrition",
+                        "volume": "24",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Stipanuk M. H.Sulfur amino acid metabolism: pathways for production and removal of homocysteine and cysteine. Annual review of nutrition24, 539\u2013577, doi: 10.1146/annurev.nutr.24.012003.132418 (2004). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41941,
+                    "infons": {
+                        "title": "Human Microbiome Project, C. Structure, function and diversity of the healthy human microbiome",
+                        "journal": "Nature",
+                        "volume": "486",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Human Microbiome Project, C. Structure, function and diversity of the healthy human microbiome. Nature486, 207\u2013214, doi: 10.1038/nature11234 (2012). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42145,
+                    "infons": {
+                        "title": "The subgingival microbiome in health and periodontitis and its relationship with community biomass and inflammation",
+                        "journal": "The ISME journal",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Abusleme L.et al.. The subgingival microbiome in health and periodontitis and its relationship with community biomass and inflammation. The ISME journal7, 1016\u20131025, doi: 10.1038/ismej.2012.174 (2013). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42402,
+                    "infons": {
+                        "title": "Microbial geography of the oral cavity",
+                        "journal": "Journal of dental research",
+                        "volume": "92",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Simon-Soro A.et al.. Microbial geography of the oral cavity. Journal of dental research92, 616\u2013621, doi: 10.1177/0022034513488119 (2013). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42576,
+                    "infons": {
+                        "title": "Diversity of bacterial populations on the tongue dorsa of patients with halitosis and healthy patients",
+                        "journal": "Journal of clinical microbiology",
+                        "volume": "41",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Kazor C. E.et al.. Diversity of bacterial populations on the tongue dorsa of patients with halitosis and healthy patients. Journal of clinical microbiology41, 558\u2013563 (2003). [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42795,
+                    "infons": {
+                        "title": "Characterization of volatile sulfur compound production by Solobacterium moorei",
+                        "journal": "Archives of oral biology",
+                        "volume": "57",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Tanabe S. & Grenier D.Characterization of volatile sulfur compound production by Solobacterium moorei. Archives of oral biology57, 1639\u20131643, doi: 10.1016/j.archoralbio.2012.09.011 (2012). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Solobacterium moorei",
+                            "infons": {
+                                "identifier": "NCBI:txid102148",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:16:54",
+                                "parent_taxonomic_id": "NCBI:txid123375"
+                            },
+                            "id": "16814808",
+                            "locations": {
+                                "length": 20,
+                                "offset": 42876
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 43020,
+                    "infons": {
+                        "title": "Relationship between oral malodor and the global composition of indigenous bacterial populations in saliva",
+                        "journal": "Applied and environmental microbiology",
+                        "volume": "76",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Takeshita T.et al.. Relationship between oral malodor and the global composition of indigenous bacterial populations in saliva. Applied and environmental microbiology76, 2806\u20132814, doi: 10.1128/AEM.02304-09 (2010). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43290,
+                    "infons": {
+                        "title": "Contribution of periodontal pathogens on tongue dorsa analyzed with real-time PCR to oral malodor",
+                        "journal": "Microbes and infection/Institut Pasteur",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Tanaka M.et al.. Contribution of periodontal pathogens on tongue dorsa analyzed with real-time PCR to oral malodor. Microbes and infection/Institut Pasteur6, 1078\u20131083, doi: 10.1016/j.micinf.2004.05.021 (2004). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43537,
+                    "infons": {
+                        "title": "The relationship between physiologic halitosis and periodontopathic bacteria of the tongue and gingival sulcus",
+                        "journal": "Odontology/the Society of the Nippon Dental University",
+                        "volume": "98",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Yasukawa T., Ohmori M. & Sato S.The relationship between physiologic halitosis and periodontopathic bacteria of the tongue and gingival sulcus. Odontology/the Society of the Nippon Dental University98, 44\u201351, doi: 10.1007/s10266-009-0114-7 (2010). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 14:17:01",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16814809",
+                            "locations": {
+                                "length": 8,
+                                "offset": 43637
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 43821,
+                    "infons": {
+                        "title": "Oral cavity contains distinct niches with dynamic microbial communities",
+                        "journal": "Environmental microbiology",
+                        "volume": "17",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Xu X.et al.. Oral cavity contains distinct niches with dynamic microbial communities. Environmental microbiology17, 699\u2013710 (2015). [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43978,
+                    "infons": {
+                        "title": "The Human Oral Microbiome Database: a web accessible resource for investigating oral microbe taxonomic and genomic information",
+                        "journal": "Database: the journal of biological databases and curation",
+                        "volume": "2010",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Chen T.et al.. The Human Oral Microbiome Database: a web accessible resource for investigating oral microbe taxonomic and genomic information. Database: the journal of biological databases and curation2010, baq013, doi: 10.1093/database/baq013 (2010). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44285,
+                    "infons": {
+                        "title": "Instrumental assessment of halitosis for the general dental practitioner",
+                        "journal": "Journal of breath research",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Laleman I., Dadamio J., De Geest S., Dekeyser C. & Quirynen M.Instrumental assessment of halitosis for the general dental practitioner. Journal of breath research8, 017103, doi: 10.1088/1752-7155/8/1/017103 (2014). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44536,
+                    "infons": {
+                        "title": "Solving the etiology of dental caries",
+                        "journal": "Trends Microbiol",
+                        "volume": "23",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Simon-Soro A. & Mira A.Solving the etiology of dental caries. Trends Microbiol23, 76\u201382, doi: 10.1016/j.tim.2014.10.010 (2015). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44700,
+                    "infons": {
+                        "title": "Spatial heterogeneity and co-occurrence patterns of human mucosal-associated intestinal microbiota",
+                        "journal": "The ISME journal",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Zhang Z.et al.. Spatial heterogeneity and co-occurrence patterns of human mucosal-associated intestinal microbiota. The ISME journal8, 881\u2013893, doi: 10.1038/ismej.2013.185 (2014). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44935,
+                    "infons": {
+                        "title": "Kraken: ultrafast metagenomic sequence classification using exact alignments",
+                        "journal": "Genome biology",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Wood D. E. & Salzberg S. L.Kraken: ultrafast metagenomic sequence classification using exact alignments. Genome biology15, R46, doi: 10.1186/gb-2014-15-3-r46 (2014). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45156,
+                    "infons": {
+                        "title": "The human oral microbiome",
+                        "journal": "Journal of bacteriology",
+                        "volume": "192",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Dewhirst F. E.et al.. The human oral microbiome. Journal of bacteriology192, 5002\u20135017, doi: 10.1128/JB.00542-10 (2010). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45332,
+                    "infons": {
+                        "title": "Beyond the oral microbiome",
+                        "journal": "Environmental microbiology",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Jenkinson H. F.Beyond the oral microbiome. Environmental microbiology13, 3077\u20133087 (2011). [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45448,
+                    "infons": {
+                        "title": "Intra- and extra-oral halitosis: finding of a new form of extra-oral blood-borne halitosis caused by dimethyl sulphide",
+                        "journal": "Journal of clinical periodontology",
+                        "volume": "34",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Tangerman A. & Winkel E. G.Intra- and extra-oral halitosis: finding of a new form of extra-oral blood-borne halitosis caused by dimethyl sulphide. Journal of clinical periodontology34, 748\u2013755, doi: 10.1111/j.1600-051X.2007.01116.x (2007). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45724,
+                    "infons": {
+                        "title": "The oral metagenome in health and disease",
+                        "journal": "The ISME journal",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Belda-Ferre P.et al.. The oral metagenome in health and disease. The ISME journal6, 46\u201356, doi: 10.1038/ismej.2011.85 (2012). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45905,
+                    "infons": {
+                        "title": "Review: In vitro biofilm models for studying oral malodour",
+                        "journal": "Flavour Frag J",
+                        "volume": "28",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Greenman J., Saad S., Hewett K., Thorn R. M. S. & Reynolds D. M.Review: In vitro biofilm models for studying oral malodour. Flavour Frag J28, 212\u2013222, doi: 10.1002/Ffj.3151 (2013). [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46113,
+                    "infons": {
+                        "title": "Daily variation of oral malodour and related factors in community-dwelling elderly Thai",
+                        "journal": "Gerodontology",
+                        "volume": "29",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Samnieng P., Ueno M., Shinada K., Zaitsu T. & Kawaguchi Y.Daily variation of oral malodour and related factors in community-dwelling elderly Thai. Gerodontology29, E964\u2013E971, doi: 10.1111/j.1741-2358.2011.00593.x (2012). [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46370,
+                    "infons": {
+                        "title": "Introducing mothur: open-source, platform-independent, community-supported software for describing and comparing microbial communities",
+                        "journal": "Applied and environmental microbiology",
+                        "volume": "75",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Schloss P. D.et al.. Introducing mothur: open-source, platform-independent, community-supported software for describing and comparing microbial communities. Applied and environmental microbiology75, 7537\u20137541, doi: 10.1128/AEM.01541-09 (2009). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46669,
+                    "infons": {
+                        "title": "Naive Bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy",
+                        "journal": "Applied and environmental microbiology",
+                        "volume": "73",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Wang Q., Garrity G. M., Tiedje J. M. & Cole J. R.Naive Bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy. Applied and environmental microbiology73, 5261\u20135267, doi: 10.1128/AEM.00062-07 (2007). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46958,
+                    "infons": {
+                        "title": "Assessing and improving methods used in operational taxonomic unit-based approaches for 16S rRNA gene sequence analysis",
+                        "journal": "Applied and environmental microbiology",
+                        "volume": "77",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Schloss P. D. & Westcott S. L.Assessing and improving methods used in operational taxonomic unit-based approaches for 16S rRNA gene sequence analysis. Applied and environmental microbiology77, 3219\u20133226, doi: 10.1128/AEM.02810-10 (2011). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47251,
+                    "infons": {
+                        "title": "UniFrac: a new phylogenetic method for comparing microbial communities",
+                        "journal": "Applied and environmental microbiology",
+                        "volume": "71",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Lozupone C. & Knight R.UniFrac: a new phylogenetic method for comparing microbial communities. Applied and environmental microbiology71, 8228\u20138235, doi: 10.1128/AEM.71.12.8228-8235.2005 (2005). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47500,
+                    "infons": {
+                        "title": "Metagenomic sequencing reveals microbiota and its functional potential associated with periodontal disease",
+                        "journal": "Scientific Reports",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Wang J.et al.. Metagenomic sequencing reveals microbiota and its functional potential associated with periodontal disease. Scientific Reports3, 1843, doi: 10.1038/srep01843 (2013). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47736,
+                    "infons": {
+                        "title": "Fast gapped-read alignment with Bowtie 2",
+                        "journal": "Nature methods",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Langmead B. & Salzberg S. L.Fast gapped-read alignment with Bowtie 2. Nature methods9, 357\u2013359, doi: 10.1038/nmeth.1923 (2012). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47919,
+                    "infons": {
+                        "title": "Bacterial diversity in the oral cavity of 10 healthy individuals",
+                        "journal": "The ISME journal",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Bik E. M.et al.. Bacterial diversity in the oral cavity of 10 healthy individuals. The ISME journal4, 962\u2013974, doi: 10.1038/ismej.2010.30 (2010). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48120,
+                    "infons": {
+                        "title": "Ab initio gene identification in metagenomic sequences",
+                        "journal": "Nucleic acids research",
+                        "volume": "38",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Zhu W., Lomsadze A. & Borodovsky M.Ab initio gene identification in metagenomic sequences. Nucleic acids research38, e132, doi: 10.1093/nar/gkq275 (2010). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48330,
+                    "infons": {
+                        "title": "Kraken: a set of tools for quality control and analysis of high-throughput sequence data",
+                        "journal": "Methods",
+                        "volume": "63",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Davis M. P., van Dongen S., Abreu-Goodger C., Bartonicek N. & Enright A. J.Kraken: a set of tools for quality control and analysis of high-throughput sequence data. Methods63, 41\u201349, doi: 10.1016/j.ymeth.2013.06.027 (2013). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48609,
+                    "infons": {
+                        "title": "KEGG for linking genomes to life and the environment",
+                        "journal": "Nucleic acids research",
+                        "volume": "36",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Kanehisa M.et al.. KEGG for linking genomes to life and the environment. Nucleic acids research36, D480\u2013484, doi: 10.1093/nar/gkm882 (2008). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48805,
+                    "infons": {
+                        "title": "eggNOG v4.0: nested orthology inference across 3686 organisms",
+                        "journal": "Nucleic acids research",
+                        "volume": "42",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Powell S.et al.. eggNOG v4.0: nested orthology inference across 3686 organisms. Nucleic acids research42, D231\u2013239, doi: 10.1093/nar/gkt1253 (2014). [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

@@ -1,0 +1,1377 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC5115166",
+            "inputfile": "../microbiome_corpus_HTML\\PMC5115166.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Microbial profiling of dental plaque from mechanically ventilated patients",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 74,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Micro-organisms isolated from the oral cavity may translocate to the lower airways during mechanical ventilation (MV) leading to ventilator-associated pneumonia (VAP). Changes within the dental plaque microbiome during MV have been documented previously, primarily using culture-based techniques. The aim of this study was to use community profiling by high throughput sequencing to comprehensively analyse suggested microbial changes within dental plaque during MV. Bacterial 16S rDNA gene sequences were obtained from 38 samples of dental plaque sampled from 13 mechanically ventilated patients and sequenced using the Illumina platform. Sequences were processed using Mothur, applying a 97\u2009% gene similarity cut-off for bacterial species level identifications. A significant \u2018microbial shift\u2019 occurred in the microbial community of dental plaque during MV for nine out of 13 patients. Following extubation, or removal of the endotracheal tube that facilitates ventilation, sampling revealed a decrease in the relative abundance of potential respiratory pathogens and a compositional change towards a more predominantly (in terms of abundance) oral microbiota including Prevotella spp., and streptococci. The results highlight the need to better understand microbial shifts in the oral microbiome in the development of strategies to reduce VAP, and may have implications for the development of other forms of pneumonia such as community-acquired infection.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Prevotella spp",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:40:12",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "29625323",
+                            "locations": {
+                                "length": 14,
+                                "offset": 1246
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 1540,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Mapping the oral microbiome has been a developing task for molecular microbiologists over the past decade (Wade, 2013a). Since the introduction of Sanger sequencing, technological evolution has allowed in-depth analysis of whole microbial communities and of individual species genomes (Lazarevic et al., 2009; Perkins et al., 2010). The oral cavity is colonized with an array of micro-organisms including bacteria, fungi and viruses, and currently over 800 bacterial species have been identified via culture-independent approaches (Avila et al., 2009; Dewhirst et al., 2010; Liu et al., 2012; Wade, 2013b; Wang et al., 2013; Zaura, 2012). The use of contemporary DNA-based technologies facilitates identification of uncultured, dormant and dying cells that are unable to replicate even on the most tailored media. In this way, the diversity of microbial species within the oral cavity of healthy individuals is increasingly well characterized. The microbiome of a range of oral niches has also been analysed, including the mucosal membranes, the cheeks and tongue and scrapings of dental plaque (Dewhirst et al., 2010; Liu et al., 2012). Several species within the polymicrobial biofilm of dental plaque have been associated with oral diseases including periodontitis and dental caries, and are increasingly linked with systemic infections and disorders. Analysis of dental plaque from patients with a particular illness, condition or hospitalized state could provide insight into the involvement of the oral microbiota in such systemic diseases (Gomes-Filho et al., 2010).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:40:19",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "29625325",
+                            "locations": {
+                                "length": 8,
+                                "offset": 1945
+                            }
+                        },
+                        {
+                            "text": "fungi",
+                            "infons": {
+                                "identifier": "NCBI:txid4751",
+                                "type": "fungi_kingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:40:19",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "29625326",
+                            "locations": {
+                                "length": 5,
+                                "offset": 1955
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 3125,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Although there are many shared species, different sites within the oral cavity have a characteristic and often unique microbial composition, relating to the different biological and physical properties of each site (Dewhirst et al., 2010; Xu et al., 2015). There is a large surface area provided by teeth for colonization and maturation of plaque. Areas with lowered oxygen potentials, such as the interproximal spaces of teeth and in deep periodontal pockets, are frequently colonized by large numbers of predominantly anaerobic species (Jefferson, 2004; Faran Ali & Tanwir, 2012). The difference in the microbial composition at different sites emphasizes the adaptability of the microbiome to specific surroundings. There is a natural progression in plaque development to maturation, with initial colonization by \u2018pioneer\u2019 bacteria including Streptococcus and Lactobacillus species, and subsequently combinations of anaerobic species such as Prevotella, Veillonella and Porphyromonas are detected (Kolenbrander et al., 2005; Peyyala & Ebersole, 2013; Xie et al., 2010).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:40:42",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "29625327",
+                            "locations": {
+                                "length": 8,
+                                "offset": 3950
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:40:42",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "29625328",
+                            "locations": {
+                                "length": 13,
+                                "offset": 3969
+                            }
+                        },
+                        {
+                            "text": "Lactobacillus",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:40:42",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "29625329",
+                            "locations": {
+                                "length": 13,
+                                "offset": 3987
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:40:42",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "29625330",
+                            "locations": {
+                                "length": 10,
+                                "offset": 4069
+                            }
+                        },
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:40:42",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "29625331",
+                            "locations": {
+                                "length": 11,
+                                "offset": 4081
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas",
+                            "infons": {
+                                "identifier": "NCBI:txid836",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:40:42",
+                                "parent_taxonomic_id": "NCBI:txid171551"
+                            },
+                            "id": "29625332",
+                            "locations": {
+                                "length": 13,
+                                "offset": 4097
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 4196,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The majority of critically ill patients require mechanical ventilation (MV) to facilitate survival. An endotracheal tube provides the interface between the patient and the ventilator and following insertion of the endotracheal tube (ETT; intubation) alterations can occur in the oral microenvironment and oral microbiome. These have been hypothesized to facilitate the colonization and proliferation of both respiratory and other potentially exploitative pathogens in oral and pulmonary niches (Berry et al., 2011; Perkins et al., 2010; Scannapieco et al., 1992; Zuanazzi et al., 2010). The mechanisms underlying this \u2018microbial shift\u2019 are not clear, but may, in part, be due to the physical presence of the ETT, which affects plaque clearance, saliva flow and mucosal drying, in addition to the interventions and medications related to the management of the underlying condition during critical illness.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5100,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Given the limitations of traditional microbiological culture, the aim of this current study was to use molecular community profiling to comprehensively analyse, on a longitudinal basis, the microbiome of dental plaque in patients undergoing MV. The use of high-throughput sequencing platforms in this way allows the investigation of a microbiome without placing specific focus or bias towards certain genera of pathogens and provides a more representative profile of the community.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5581,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Clinical study criteria and patient demographics",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Ethical approval was obtained from National Research Ethics Service (NRES) within the Research Ethics Committee (REC), Wales (Ref: 13/WA/0039). Mechanically ventilated patients at a single University Hospital critical care unit were eligible for inclusion in the study if they were aged >18 years, had >8 original teeth and an expected survival of >24\u200ah. Informed consent for participation in the study was obtained from the next of kin and patients reconsented if they regained capacity following recovery from critical illness. The number of decayed, missing and filled teeth (DMFT score) was used as an indication of previous general health status and oral hygiene (Becker et al., 2007) and was determined by a dental practitioner. Standard oral care was performed following a critical care mouth assessment to determine level and frequency (every 6\u201312\u200ah oral care) of oral care required. Ventilator-associated pneumonia (VAP) was diagnosed using the existing clinical pulmonary infection score (CPIS) score (with a score >6), with aetiology confirmed by blood cultures and quantitative microbiological culture (>103\u2009c.f.u. ml\u2212\u20091) of the lower airways samples [bronchoalveolar lavage (BAL)/non-directed bronchoalveolar lavage (NBL)] (Estella & \u00c1lvarez-Lerma, 2011; Hellyer et al., 2015; Kalanuria et al., 2014; Pugin et al., 1991; Zilberberg & Shorr, 2010). Antibiotics were prescribed at clinicians\u2019 discretion and further stewardship was provided by a three-times-weekly wardround with clinical microbiologists.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7152,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Samples for bacterial community profiling",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "A total of 38 samples of dental plaque were collected from 13 mechanically ventilated patients using paper points (size 40, QED) for Illumina sequencing (Research and Testing Laboratory). Dental plaque samples were collated according to the time of MV and, when possible, grouped into the following categories: ETT intubation (start), midpoint, end and/or admission to ward. Dental plaque was collected using paper points (size 40, QED), with a total of six paper points used per sample (three supragingival, three subgingival) and stored in transport medium (TM). Both supragingival and subgingival dental plaque samples were collected and pooled. The composition of dental plaque can differ between these two sites, and such, pooled dental plaque was used to represent the entire community. The TM composition was as described by Syed & Loesche (1972).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8047,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "DNA extraction from dental plaque samples stored at 4\u2009\u00b0C",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Total bacterial DNA from subgingival and supragingival dental plaque pooled for a single patient was extracted using a Qiagen kit (DNA extraction kit Yeast/Bac). All incubation steps were extended to 1\u200ah to maximize DNA elution. To efficiently lyse the bacteria, resuspended plaque in lysis solution was transferred to a pathogen-lysis tube (Qiagen) for a 1\u200amin bead-beating step (shaking speed 3450 oscillations min\u2212\u20091; Mini-bead beater, Biospec products).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:41:29",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "29625333",
+                            "locations": {
+                                "length": 8,
+                                "offset": 8300
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 8560,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Gel electrophoresis with 16S rRNA gene PCR bacterial primers",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "To confirm the presence of DNA and visualize the amplicons before the sample was submitted for Illumina sequencing, the extracted DNA was subjected to PCR using the primer pair of 27f (GTGCTGCAGAGAGTTTGATCCTGGCTCAG) and 1492r (CACGGATCCTACGGGTACCTTGTTACGACTT) (Eurofins MWG Operon) to amplify bacterial 16S rRNA genes (Dalwai et al., 2007; Zuanazzi et al., 2010). PCR thermal cycling parameters consisted of an initial denaturation step of 95\u2009\u00b0C for 1\u200amin, followed by 26 cycles of 94\u2009\u00b0C for 45\u200as, 50\u2009\u00b0C for 45\u200as and 72\u2009\u00b0C for 90\u200as (Thermocycler, G-Storm). A final single cycle extension step of 72\u2009\u00b0C for 15\u200amin was also included.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9251,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Species-specific PCR of Pseudomonas aeruginosa from pooled dental plaque",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Extracted DNA from dental plaque samples with culture-positive Pseudomonas aeruginosa isolation was subject to species-specific PCR targeting the ecfX gene using the primers ECF1 (5\u2032-ATGGATGAGCGCTTCCGTG-3\u2032), and ECF2 (5\u2032-TCATCCTTCGCCTCCCTG-3\u2032) (Lavenir et al., 2007). PCR cycling conditions were as follows: there was an initial denaturation step of 95\u2009\u00b0C followed by 35 cycles of 94\u2009\u00b0C for 45\u200as, 58.4\u2009\u00b0C for 45\u200as and 72\u2009\u00b0C for 1\u200amin ending with 5\u200amin at 72\u2009\u00b0C.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:41:39",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "29625334",
+                            "locations": {
+                                "length": 22,
+                                "offset": 9314
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 9784,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Preparation for MiSeq sequencing",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Amplicons were stabilized in a DNA elution reagent (Qiagen). Amplicon sequencing using the Illumina MiSeq bacterial primers (28F: GAGTTTGATCNTGGCTCAG and 388R: TGCTGCCTCCCGTAGGAGT) was performed by Research and Testing Laboratory (Austin, Texas, USA) to generate multiple sequences of 250\u200abp overlapping at the V4 region of the 16S rRNA gene.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10158,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Phylogenetic identification and data analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Data analysis from the raw sequences generated from the Illumina platform was performed using Mothur (Schloss et al., 2009) and used to quality check, pre-process, align and join sequences to obtain a total number of sequences in each sample. Sequences were scanned for errors by a series of error command checks. To analyse the microbial communities of samples, Mothur was used to cluster the data according to operational taxonomic units (OTUs), to a species level of 97\u2009% similarity (sequence data <\u200997\u2009% confirmation were not identified in this study). Singletons and any OTUs which were not found more than 10 times in any sample were collated into OTU_singletons and OTU_rare phylotypes, respectively, to maintain normalization and to minimize artefacts. The raw data output from Mothur (phylogenetic data) was analysed using a combination of statistical programs R-script (R Development Core Team 2008), stamp (Parks & Beiko, 2010), SPSS V20 and Microsoft Excel. The two methods used in this study to compare the similarity between each sample were Jaccard's index of similarity and the Bray\u2013Curtis distance measure (measure of dissimilarity) (Lozupone & Knight, 2005; Wang et al., 2013). The terms \u2018non-oral\u2019 and \u2018potential respiratory pathogens\u2019 were employed to describe those micro-organisms not generally isolated from or considered part of the oral microbiome. Weighted Unifrac distance matrices were analysed in R using non-metric multidimensional scaling ordination and the shared OTU file was used to determine the number of times that an OTU was observed in multiple samples and for multivariate analysis in R. OTU taxonomies (from phylum to genus) were determined using the RDP MultiClassifier script to generate the RDP taxonomy (Wang et al., 2007) while species level taxonomies of the OTUs were determined using the USEARCH algorithm combined with the cultured representatives from the RDP database (Edgar, 2010). Alpha and beta indices were calculated from these datasets with Mothur and R using the Vegan package.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12239,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Sequencing data details and patient demographics",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "In total, 1\u2009911\u2009760 sequence reads (before quality control) were determined from 38 samples of pooled supragingival and subgingival dental plaque from 13 mechanically ventilated patients. OTUs were subsampled to the lowest read count of 1016, which retained 97\u2009% of all OTU counts; and the mean and median read lengths were 310 and 339\u200abp, respectively. The criteria for patients to be included in this study were as follows: >18\u200ayears old, >8 teeth, >24\u200ah life expectancy, and anticipated duration of MV >24\u200ah. The patient demographics are summarized in Table 1. A total of eight male and five female subjects with an age range between 18 and 75\u200ayears were included. The DMFT scores for 10/13 patients were >10. A total of 6/13 patients were diagnosed with VAP. An additional two patients were admitted with pre-existing respiratory disorders, as shown in Table 1. Out of a total of nine patients exhibiting potential respiratory pathogens within their dental plaque community during ETT intubation, five were treated with antibiotics >48\u200ah after ETT intubation, and three patients were treated with antibiotics from the beginning of ETT intubation.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13444,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "OTU analysis of dental plaque collected from MV patients",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Clustering analysis was performed to provide an overview of the level of similarity within all dental plaque samples. Fig. 1 shows the clustering results using Jaccard's index of similarity and the Bray\u2013Curtis distance methods of analysis. The figures show that the majority of samples form a tight cluster (multiple overlapping lines connecting samples) with a minority of samples falling outside the tightly clustered group. Analysis of the data generated from pooled dental plaque samples was carried out using the three following criteria: prevalence of non-oral pathogens, the most abundant species during MV and, finally, the grouping of dental plaque samples to four time points.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14186,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "OTU analysis of dental plaque collected from MV patients",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "A total of five bacterial phyla were represented during this study of 13 patients (Fig. 2). Over 50\u2009% of all organisms identified belonged to the Firmicutes phyla. Furthermore, over 100 bacterial species belonging to a total of 40 different genera were identified. Of the 40 genera identified within this group of patients, six represented species not generally considered to be usual members of the dental plaque community, including Enterococcus and Staphylococcus species. The four most frequently occurring microbial species within the 38 dental plaque samples were Staphylococcus aureus present in 68\u2009%, Streptococcus pseudopneumoniae (66\u2009%), Enterococcus faecalis (37\u2009%) and Escherichia coli/Shigella flexneri (32\u2009%). These microbial species were the four most commonly isolated within the 38 samples of dental plaque, but not necessarily the most abundant.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Firmicutes",
+                            "infons": {
+                                "identifier": "NCBI:txid1239",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:42:35",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "29625335",
+                            "locations": {
+                                "length": 10,
+                                "offset": 14332
+                            }
+                        },
+                        {
+                            "text": "Enterococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1350",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:42:38",
+                                "parent_taxonomic_id": "NCBI:txid81852"
+                            },
+                            "id": "29625336",
+                            "locations": {
+                                "length": 12,
+                                "offset": 14621
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:42:38",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "29625337",
+                            "locations": {
+                                "length": 14,
+                                "offset": 14638
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:42:39",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "29625338",
+                            "locations": {
+                                "length": 21,
+                                "offset": 14756
+                            }
+                        },
+                        {
+                            "text": "Streptococcus pseudopneumoniae",
+                            "infons": {
+                                "identifier": "NCBI:txid257758",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:42:40",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "29625339",
+                            "locations": {
+                                "length": 30,
+                                "offset": 14795
+                            }
+                        },
+                        {
+                            "text": "Enterococcus faecalis",
+                            "infons": {
+                                "identifier": "NCBI:txid1351",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:42:40",
+                                "parent_taxonomic_id": "NCBI:txid1350"
+                            },
+                            "id": "29625340",
+                            "locations": {
+                                "length": 21,
+                                "offset": 14834
+                            }
+                        },
+                        {
+                            "text": "Escherichia",
+                            "infons": {
+                                "identifier": "NCBI:txid561",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:42:40",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "29625341",
+                            "locations": {
+                                "length": 11,
+                                "offset": 14867
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 15049,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Microbial changes within the community of dental plaque during MV",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To determine whether \u2018microbial shifts\u2019 occurred during MV, and to ascertain the extent thereof, the dental plaque community at ETT-insertion (time point 1) was analysed and compared for each patient with that at subsequent time points. In the majority of cases, sample 1 was collected shortly after (\u2009<\u200912\u200ah) intubation to reflect the dental plaque community at the time of initiation of MV. The number of identified OTU sequences was used as a direct measure of species abundance. Fig. 3 shows the five most abundant microbial species within dental plaque at the first time point (insertion of ETT, introduction of MV) comparing prevalence of oral species and potential respiratory pathogens. Both potential respiratory pathogens and oral micro-organisms are represented. The stacked bar graph compares the five most abundant species per patient (with the largest bar representing the most abundant species). The occurrence of multiple bands in oral commensal genera such as Streptococcus, Veillonella and Prevotella indicated their presence in multiple patients. A total of seven patients were colonized with potential respiratory pathogens from within 12\u200ah of the onset of MV. When present, potential pathogens were amongst the most predominant micro-organisms as illustrated by larger bars on the graph.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:42:53",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "29625342",
+                            "locations": {
+                                "length": 13,
+                                "offset": 16026
+                            }
+                        },
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:42:53",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "29625343",
+                            "locations": {
+                                "length": 11,
+                                "offset": 16041
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:42:53",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "29625344",
+                            "locations": {
+                                "length": 10,
+                                "offset": 16057
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 16422,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Microbial changes within the community of dental plaque during MV",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Overall, analysing a proportion of the most abundant species in the plaque of each patient highlights a large degree of variability in bacterial composition of the dental plaque with large numbers of respiratory pathogens isolated at early stage intubation (7 out of the 13 patients profiled during MV).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16725,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Microbial changes within the community of dental plaque during MV",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Further analysis of the 10 most abundant species at each sampling time point relating to MV highlights that longitudinal changes in the composition of the dental plaque occurred. As shown in Fig. 4, dental plaque samples were grouped according to stage of MV for comparative analysis revealing that a shift in the composition of dental plaque was evident between the stages of MV. Dental plaque samples obtained at the start and midpoint of MV showed a high prevalence of bacteria not frequently identified in the oral cavity, also demonstrated in the heat map (Fig. 5). Veillonella are regarded as frequent members and a key component of dental plaque, and this was confirmed by the present study with Veillonella species present within the top three most abundant microbial species during the entirety of MV and into the recovery period. Escherichia coli/Shigella flexneri and Staphylococcus aureus persisted as abundant members of the dental plaque biofilm into the recovery period. Non-metric multidimensional scaling (NMDS) coupled with t-tests were used to analyse the level of similarity between sample types using non-parametric relationships (Fig. 6). Each sample was furthermore assigned coordinates based on weighted Unifrac (phylogenetic community distance measure) analysis to generate a scatter plot. Although there were overlapping components, statistically the communities were shown to change during MV. Pairwise comparisons using t-tests with pooled sd were performed to compare each of the time point groups. P value adjustment was performed using the FDR Benjamini\u2013Hochberg (BH) method, to control the false discovery rate when performing multiple comparisons. The parameters used were Unifrac against time, to determine whether time point communities were statistically different. The differences in the plaque compositions at the start and midpoint were shown to be statistically significant, P\u2009=\u20090.0033. Furthermore, the differences in the communities between the start and end (ETT-extubation sampling) were also significantly different (P\u2009=\u20090.0403), with a P value of P\u2009=\u20096.3\u2009\u00d7\u200910\u2212\u20095 when comparing the communities between midpoint and end of MV.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:43:06",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "29625345",
+                            "locations": {
+                                "length": 8,
+                                "offset": 17197
+                            }
+                        },
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:43:08",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "29625346",
+                            "locations": {
+                                "length": 11,
+                                "offset": 17296
+                            }
+                        },
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:43:09",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "29625347",
+                            "locations": {
+                                "length": 11,
+                                "offset": 17428
+                            }
+                        },
+                        {
+                            "text": "Escherichia",
+                            "infons": {
+                                "identifier": "NCBI:txid561",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:43:11",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "29625348",
+                            "locations": {
+                                "length": 11,
+                                "offset": 17565
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:43:11",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "29625349",
+                            "locations": {
+                                "length": 21,
+                                "offset": 17604
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 18896,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Microbial changes within the community of dental plaque during MV",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "In addition to significant species changes and the introduction of many non-oral pathogens during MV, the relative abundance of respiratory pathogens was shown to change during MV (Table 2, Figs 4, \u200b,55 and \u200band6).6). Table 2 shows the relative variation in abundance for all non-oral bacteria found within the dental plaque during ventilation. Inclusion of non-oral pathogens to the plaque community was demonstrated for all 13 patients. However, for four patients these micro-organisms were detected only in low numbers. The dental plaque microbiome for the remaining nine patients was shown to change to include relatively increased numbers of non-oral pathogens, with eight patients showing notable increases in the abundance of potential respiratory pathogens during MV.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:43:28",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "29625350",
+                            "locations": {
+                                "length": 8,
+                                "offset": 19181
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 19671,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Microbial changes within the community of dental plaque during MV",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Although previous literature (Luyt et al., 2014) and adjoining studies within our laboratories (Study Ref: 13/WA/0039) have isolated Pseudomonas aeruginosa by cultural methods within the dental plaque of mechanically ventilated patients, this species was not identified using the culture-independent approaches performed within this study. A total of six from 38 samples analysed within this study were microbial culture positive for Pseudomonas aeruginosa. Following species-specific PCR of these dental plaque samples, five out of six were positive for Pseudomonas aeruginosa, as shown in Fig. 7. This suggests that although Pseudomonas aeruginosa can be isolated from the dental plaque community using microbial culture, this result may be due to the fact that members of this genus are well adapted to grow on culture media and are over-represented when using culture-based approaches. Although significant numbers of respiratory pathogens were detected, culture-independent analysis did not detect any Pseudomonas aeruginosa from mechanically ventilated patients within this study.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:43:35",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "29625351",
+                            "locations": {
+                                "length": 22,
+                                "offset": 19804
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:43:38",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "29625352",
+                            "locations": {
+                                "length": 22,
+                                "offset": 20105
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:43:39",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "29625353",
+                            "locations": {
+                                "length": 22,
+                                "offset": 20226
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:43:40",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "29625354",
+                            "locations": {
+                                "length": 22,
+                                "offset": 20298
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:43:44",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "29625355",
+                            "locations": {
+                                "length": 22,
+                                "offset": 20678
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 20757,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Analysis of dental plaque communities post ETT extubation",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The final part of the study was to elucidate whether the communities of dental plaque at the beginning of intubation (start) were similar to those of samples collected post-extubation (ward) (Fig. 8). There were similarities between these two groups of dental plaque, initially suggesting that the microbial shift does not necessarily revert back to normal oral microbiota upon extubation. Furthermore, patients (patients 3, 9 and 13) were shown to be colonized with respiratory pathogens, namely Escherichia coli/Shigella flexneri, Staphylococcus aureus and/or Streptococcus pseudopneumoniae, in the post-ETT extubation period, as shown in Table 2. There was no significant difference between these groups. A pairwise t-test measuring the weighted Unifrac against the datasets indicated a lack of significance (P\u2009=\u20090.1945), furthermore highlighting the occurrence of both oral and respiratory organisms in both start- and ward-designated samples. However there was a noticeable decrease in the occurrence and abundance of potential respiratory pathogens, especially Gram-negative respiratory pathogens such as Escherichia coli. The dental plaque communities may not revert back to levels found in the initial samples; however, 50\u2009% of the most abundant species in post-ETT samples were frequent members of the oral microbiota such as streptococci, lactobacilli and Veillonella species, with a decrease in respiratory pathogens. This can be seen in Fig. 8, by visually comparing the distribution of oral organisms and respiratory pathogens. Staphylococcus aureus was present only in low numbers in mechanically ventilated patients at the start of MV; however, this species was detected during MV (Fig. 3) and during the recovery period (Fig. 8).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Escherichia",
+                            "infons": {
+                                "identifier": "NCBI:txid561",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:43:50",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "29625356",
+                            "locations": {
+                                "length": 11,
+                                "offset": 21254
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:43:50",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "29625357",
+                            "locations": {
+                                "length": 21,
+                                "offset": 21290
+                            }
+                        },
+                        {
+                            "text": "Streptococcus pseudopneumoniae",
+                            "infons": {
+                                "identifier": "NCBI:txid257758",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:43:50",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "29625358",
+                            "locations": {
+                                "length": 30,
+                                "offset": 21319
+                            }
+                        },
+                        {
+                            "text": "Escherichia coli",
+                            "infons": {
+                                "identifier": "NCBI:txid562",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:43:56",
+                                "parent_taxonomic_id": "NCBI:txid561"
+                            },
+                            "id": "29625359",
+                            "locations": {
+                                "length": 16,
+                                "offset": 21868
+                            }
+                        },
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:43:59",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "29625362",
+                            "locations": {
+                                "length": 11,
+                                "offset": 22123
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:44:01",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "29625363",
+                            "locations": {
+                                "length": 21,
+                                "offset": 22298
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 22559,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "To our knowledge, this is the first time that molecular community profiling has been used to characterize the changes that occur in dental plaque during and after MV. This study examined the dental plaque microbiome at multiple stages during MV and into the recovery period. An average of three dental plaque samples were collected per patient covering four different time points, with the patient demographics summarized in Table 2. Longitudinal analysis of the polymicrobial dental plaque community in this way revealed that there were significant differences in bacterial composition at discrete stages of MV. Next-generation sequencing-based applications such as community profiling allow simultaneous detection of micro-organisms and the generation of species quantitative data (Zaura, 2012). During this study, MiSeq Illumina sequencing provided comprehensive microbial profiles for mechanically ventilated patients and highlighted increases in relevant pathogens within dental plaque of ventilated patients. These findings confirmed and considerably extended those of culture-based studies that have previously demonstrated microbial shifts, which may facilitate the development of secondary respiratory infections such as VAP (Mori et al., 2006; Zuanazzi et al., 2010). In this context, it has been proposed that the placement of the ETT may actually facilitate a change in the biochemical composition of the oral cavity (Cairns et al., 2011). The microbial changes demonstrated that several non-oral genera can co-exist in the dynamic, ever-changing biofilm that is dental plaque.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24158,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Interestingly, Pseudomonas aeruginosa was not identified within the dental plaque of mechanically ventilated patients using the culture-independent method within this study, but was identified in four out of 13 patients via microbial culture. Previous studies have suggested Pseudomonas aeruginosa to be a predominant colonizer of dental plaque during MV and a causative pathogen of VAP (Parker et al., 2008; Raad et al., 2011; Tarquinio et al., 2014). Current microbiological analysis relies on cost effective, readily available and reproducible microbial culture. Pseudomonas aeruginosa is a rapid colonizer on nutritional media and can effectively outcompete the growth of other microbial species perhaps inaccurately presenting as a predominant species in this setting. The composition of dental plaque is extremely diverse with many species regarded as currently uncultivable, reinforcing the potential for Pseudomonas aeruginosa to out-compete and be over-represented on microbiological media. Although, as explained, Pseudomonas aeruginosa is considered an opportunistic pathogen of the oral cavity within mechanically ventilated patients, further high-throughput studies could elucidate the true extent of Pseudomonas aeruginosa within dental plaque during MV to determine whether Pseudomonas aeruginosa should still be considered the predominant bacterium in this context compared with Streptococcus pneumoniae, Staphylococcus aureus and Gram-negative species such as Escherichia coli.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:44:20",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "29625364",
+                            "locations": {
+                                "length": 22,
+                                "offset": 24173
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:44:23",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "29625365",
+                            "locations": {
+                                "length": 22,
+                                "offset": 24433
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:44:26",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "29625366",
+                            "locations": {
+                                "length": 22,
+                                "offset": 24724
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:44:30",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "29625367",
+                            "locations": {
+                                "length": 22,
+                                "offset": 25070
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:44:31",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "29625368",
+                            "locations": {
+                                "length": 22,
+                                "offset": 25182
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:44:32",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "29625369",
+                            "locations": {
+                                "length": 22,
+                                "offset": 25372
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:44:33",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "29625370",
+                            "locations": {
+                                "length": 22,
+                                "offset": 25447
+                            }
+                        },
+                        {
+                            "text": "Streptococcus pneumoniae",
+                            "infons": {
+                                "identifier": "NCBI:txid1313",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:44:34",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "29625371",
+                            "locations": {
+                                "length": 24,
+                                "offset": 25553
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:44:34",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "29625372",
+                            "locations": {
+                                "length": 21,
+                                "offset": 25579
+                            }
+                        },
+                        {
+                            "text": "Escherichia coli",
+                            "infons": {
+                                "identifier": "NCBI:txid562",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:44:34",
+                                "parent_taxonomic_id": "NCBI:txid561"
+                            },
+                            "id": "29625373",
+                            "locations": {
+                                "length": 16,
+                                "offset": 25635
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 25652,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "\nSachdev et al. (2013), and other groups have reported that the amount of dental plaque in hospitalized and ventilated patients increases (Jones et al., 2011) with an accompanying increase in gingival inflammation. The latter is a marker of host immune activity in response to the elevated plaque levels and can highlight the importance of plaque scoring in critical care medicine (Wise & Williams, 2013). Oral hygiene, predominantly tooth brushing, can be effective in disrupting the plaque biofilm; however, small amounts of potentially pathogenic biomass firmly attached to the enamel surface are likely to remain (Alhazzani et al., 2013).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26294,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Several organisms, predominantly Gram-negative bacilli, which may enter the oral cavity, have the ability to exploit early plaque colonizers such as streptococci which have attached to the surface of the tooth (Perkins et al., 2010). Proteins within saliva aid the attachment of early pioneer organisms including streptococci and have a key role in oral microbial homeostasis (Hojo et al., 2009). Therefore, any alteration in saliva production or composition may contribute to changes in microbial composition within dental plaque. Non-oral organisms, from several genera, are rapid formers of resistant biofilms (Fux et al., 2005) and are relatively efficient in competing with resident members of the microbiome following changes in oral homeostasis, and may significantly affect the biofilm composition (Marsh, 2003, 2006). Furthermore, this may add to changes in the microenvironment of the oral cavity within intubated patients. The insertion of the ETT, coupled with the immunocompromised status of many critically ill patients, and administered antibiotics and drugs, may all contribute to the initial changes at the proteome level of saliva.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacilli",
+                            "infons": {
+                                "identifier": "NCBI:txid91061",
+                                "type": "bacteria_class",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:44:42",
+                                "parent_taxonomic_id": "NCBI:txid1239"
+                            },
+                            "id": "29625374",
+                            "locations": {
+                                "length": 7,
+                                "offset": 26341
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 27443,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Dental plaque is known to be diverse and dynamic with microbial members responding and adapting to their microenvironment (Hojo et al., 2009; Robinson et al., 2006). Within this study, a total of 40 genera were identified, ranging from frequently identified and studied genera such as streptococci, to less obvious organisms such as Tannerella spp. and Oscillibacter spp., some of which lesser known genera have been revealed in similar community profiling studies (Galimanas et al., 2014). Haemophilus influenzae, an organism associated with respiratory infection, was also isolated within the dental plaque of mechanically ventilated patients. Although an opportunistic pathogen, Haemophilus influenzae is a common commensal of the nasopharynx (King, 2012). Physical alterations (such as the insertion of ETTs) may influence microbial detachments and translocation within the upper and lower respiratory system. The dynamics and influence of dental plaque may in fact be underestimated and the biomass of dental plaque can be a significant contributing factor to several oral and systemic infections, such as VAP. The microbial shift occurred in a high proportion of mechanically ventilated patients, and at least one pathogen was isolated in the dental plaque of all 13 patients tested in this study. Streptococcus pseudopneumoniae has also been suggested as an early onset VAP causative pathogen, alongside Staphylococcus aureus and Gram-negative bacilli (Kalanuria et al., 2014). Enterococcus faecalis, an opportunistic pathogen identified within the four most frequently occurring species in dental plaque during MV, has the ability to integrate into the polymicrobial dental oral biofilm in situ (Al-Ahmad et al., 2010). Enterococcus faecalis, although not commonly regarded as a member of the oral microbiota in health, may be isolated from the oral cavity in some individuals and is interestingly frequently isolated from secondary endodontic infections (Al-Ahmad et al., 2009).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Tannerella spp.",
+                            "infons": {
+                                "identifier": "NCBI:txid195950",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:44:58",
+                                "parent_taxonomic_id": "NCBI:txid2005525"
+                            },
+                            "id": "29625378",
+                            "locations": {
+                                "length": 15,
+                                "offset": 27776
+                            }
+                        },
+                        {
+                            "text": "Oscillibacter spp",
+                            "infons": {
+                                "identifier": "NCBI:txid459786",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:44:58",
+                                "parent_taxonomic_id": "NCBI:txid216572"
+                            },
+                            "id": "29625379",
+                            "locations": {
+                                "length": 17,
+                                "offset": 27796
+                            }
+                        },
+                        {
+                            "text": "Haemophilus influenzae",
+                            "infons": {
+                                "identifier": "NCBI:txid727",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:44:59",
+                                "parent_taxonomic_id": "NCBI:txid724"
+                            },
+                            "id": "29625380",
+                            "locations": {
+                                "length": 22,
+                                "offset": 27934
+                            }
+                        },
+                        {
+                            "text": "Haemophilus influenzae",
+                            "infons": {
+                                "identifier": "NCBI:txid727",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:45:01",
+                                "parent_taxonomic_id": "NCBI:txid724"
+                            },
+                            "id": "29625381",
+                            "locations": {
+                                "length": 22,
+                                "offset": 28125
+                            }
+                        },
+                        {
+                            "text": "Streptococcus pseudopneumoniae",
+                            "infons": {
+                                "identifier": "NCBI:txid257758",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:45:08",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "29625382",
+                            "locations": {
+                                "length": 30,
+                                "offset": 28747
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:45:09",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "29625383",
+                            "locations": {
+                                "length": 21,
+                                "offset": 28854
+                            }
+                        },
+                        {
+                            "text": "bacilli",
+                            "infons": {
+                                "identifier": "NCBI:txid91061",
+                                "type": "bacteria_class",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:45:09",
+                                "parent_taxonomic_id": "NCBI:txid1239"
+                            },
+                            "id": "29625384",
+                            "locations": {
+                                "length": 7,
+                                "offset": 28894
+                            }
+                        },
+                        {
+                            "text": "Enterococcus faecalis",
+                            "infons": {
+                                "identifier": "NCBI:txid1351",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:45:09",
+                                "parent_taxonomic_id": "NCBI:txid1350"
+                            },
+                            "id": "29625385",
+                            "locations": {
+                                "length": 21,
+                                "offset": 28928
+                            }
+                        },
+                        {
+                            "text": "Enterococcus faecalis",
+                            "infons": {
+                                "identifier": "NCBI:txid1351",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:45:12",
+                                "parent_taxonomic_id": "NCBI:txid1350"
+                            },
+                            "id": "29625386",
+                            "locations": {
+                                "length": 21,
+                                "offset": 29171
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 29430,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Antimicrobial mouthwashes, such as chlorhexidine, used as a preventative strategy for VAP have generated conflicting reports within current literature, as to their efficacy in improving patient outcomes with regard to secondary infection (Bellissimo-Rodrigues et al., 2009; Jones, 1997; Klompas et al., 2014). Previous reports indicate that low concentrations of chlorhexidine may have effects largely against native oral biofilm species, particularly after initial plaque removal via brushing (Zanatta et al., 2007). Other studies including a trial reported by Scannapieco et al. (2009) suggest activity of chlorhexidine against Staphylococcus aureus, and highlight the need to evaluate whether this and similar antimicrobials are effective against the biofilm consortia of intubated patients, which in this study are shown to be predominantly colonized by putative and opportunistic pathogens.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:45:21",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "29625387",
+                            "locations": {
+                                "length": 21,
+                                "offset": 30060
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 30325,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Dental plaque analysis post ETT extubation revealed a decrease in respiratory pathogens for many patients comprehensively analysed, and the community begins to revert back to that of predominantly oral organisms. However, potential pathogens were isolated from dental plaque obtained during patient recovery from critical illness, suggesting that once these organisms establish within the biofilm, they may be hard to eliminate completely. This may be related to the continued relatively immunocompromised state of the patient during the post critical illness phase (Frazier & Hall, 2008). Future studies could analyse the dental plaque microbiome of a larger patient sample size to statistically reflect the community of critical care patients at pre-defined time points during MV.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31107,
+                    "infons": {
+                        "section_title_1": "Conclusion",
+                        "iao_name_1": "conclusion section",
+                        "iao_id_1": "IAO:0000615"
+                    },
+                    "text": "This study employed molecular community profiling to characterize the plaque microbiome of patients during and after MV. A microbial shift in the composition of dental plaque was demonstrated with the incorporation of several potential respiratory pathogens including Staphylococcus aureus, Streptococcus pseudopneumoniae and Escherichia coli. Interestingly, and in contrast to previous cultural studies, Pseudomonas aeruginosa was not represented in the molecular analysis. Both the prevalence and abundance of potential respiratory pathogens were shown to decrease following extubation. However, some of these microbial species could still be identified at low levels within the community, and may therefore serve as a reservoir for infection in the longer term. To our knowledge this is the first report of the comprehensive characterization of dental plaque in this patient group. A better understanding of the compositional changes with dental plaque will usefully inform interventional strategies to reduce the incidence of VAP.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:45:35",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "29625388",
+                            "locations": {
+                                "length": 21,
+                                "offset": 31375
+                            }
+                        },
+                        {
+                            "text": "Streptococcus pseudopneumoniae",
+                            "infons": {
+                                "identifier": "NCBI:txid257758",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:45:35",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "29625389",
+                            "locations": {
+                                "length": 30,
+                                "offset": 31398
+                            }
+                        },
+                        {
+                            "text": "Escherichia coli",
+                            "infons": {
+                                "identifier": "NCBI:txid562",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:45:35",
+                                "parent_taxonomic_id": "NCBI:txid561"
+                            },
+                            "id": "29625390",
+                            "locations": {
+                                "length": 16,
+                                "offset": 31433
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 07:45:36",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "29625391",
+                            "locations": {
+                                "length": 22,
+                                "offset": 31512
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 32151,
+                    "infons": {
+                        "section_title_1": "Acknowledgements",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32285,
+                    "infons": {
+                        "section_title_1": "Acknowledgements",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "We gratefully acknowledge the research unit within critical care at the University Hospital of Wales, Cardiff for their continued support both during the clinical study and during the data analysis. In addition, we would like to thank Research and Testing, Austin, Texas for the DNA sequencing of dental plaque samples and associated information. This work was completed utilizing School funds (PhD Studentship, K.\u2009M.\u2009S.). This work was performed at Cardiff Dental School, Cardiff University \u2013 using School funds (PhD Studentship). D.\u2009W.\u2009W. received royalties from Churchill Livingstone (for book written on Oral Microbiology). M.\u2009P.\u2009W. consulted for Bard and Merck (Advisory Boards); was employed by the National Institute for Social Care and Health Research Academic Health Science Collaboration (research fellowship); received royalties from Wiley Publishing (book chapters); received support for travel from the International Symposium on Intensive Care and Emergency Medicine, Eli Lilly, British Thoracic Society, and Intensive Care Society; received a loan of electrical impedance tomography equipment for research from CareFusion; and received gift of oral care products for research from Sage products. The remaining authors have disclosed that they do not have any potential conflicts of interest.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}
