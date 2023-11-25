@@ -1,0 +1,1969 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC5578044",
+            "inputfile": "../microbiome_corpus_HTML\\PMC5578044.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "A Different Microbiome Gene Repertoire in the Airways of Cystic Fibrosis Patients with Severe Lung Disease",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 106,
+                    "infons": {
+                        "section_title_1": "keywords",
+                        "iao_name_1": "keywords section",
+                        "iao_id_1": "IAO:0000630"
+                    },
+                    "text": "cystic fibrosis, lung disease, lung microbiome, shotgun metagenomics, bioinformatics, metabolic pathways, virulence genes",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 235,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "In recent years, next-generation sequencing (NGS) was employed to decipher the structure and composition of the microbiota of the airways in cystic fibrosis (CF) patients. However, little is still known about the overall gene functions harbored by the resident microbial populations and which specific genes are associated with various stages of CF lung disease. In the present study, we aimed to identify the microbial gene repertoire of CF microbiota in twelve patients with severe and normal/mild lung disease by performing sputum shotgun metagenome sequencing. The abundance of metabolic pathways encoded by microbes inhabiting CF airways was reconstructed from the metagenome. We identified a set of metabolic pathways differently distributed in patients with different pulmonary function; namely, pathways related to bacterial chemotaxis and flagellar assembly, as well as genes encoding efflux-mediated antibiotic resistance mechanisms and virulence-related genes. The results indicated that the microbiome of CF patients with low pulmonary function is enriched in virulence-related genes and in genes encoding efflux-mediated antibiotic resistance mechanisms. Overall, the microbiome of severely affected adults with CF seems to encode different mechanisms for the facilitation of microbial colonization and persistence in the lung, consistent with the characteristics of multidrug-resistant microbial communities that are commonly observed in patients with severe lung disease.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1729,
+                    "infons": {
+                        "section_title_1": "1. Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Subjects affected by cystic fibrosis (CF) experience a progressive loss of pulmonary functions accompanied by an increased burden of chronic infections. The respiratory microbial composition is particularly relevant for patients with CF. In fact, bacterial lung infections reduce life expectancy in patients with CF (the median predicted survival age is equal to 41.6, as reported in the Cystic Fibrosis Foundation Patient Registry [1]), and represent the primary cause of morbidity and mortality in CF patients [2]. In the last decade, the emergence of high-throughput sequencing approaches, coupled with the development of new bioinformatics pipelines designed to cope with metagenomics data, has revolutionized the study of complex bacterial communities such as the airway microbiota of CF patients, thereby improving our understanding of this largely unknown \u201cmicrobial black-box\u201d. This understanding of how a bacterial community changes over time and over the course of CF disease progression has revealed a different bacterial community structure upon pulmonary exacerbations (such as a reduced bacterial diversity and an increasingly conserved community composition) coupled with a decline in pulmonary health, antibiotic treatment, and patient age [3,4,5,6,7,8,9,10,11]. No overall changes in total bacterial density with exacerbation was observed [12], suggesting that shifts in the relative abundance of bacterial community members, rather than changes in total bacterial density, are more likely to be associated with alterations in clinical state [12].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3308,
+                    "infons": {
+                        "section_title_1": "1. Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In previous studies [13,14], we provided new insights into the features of the bacterial communities of patients with CF, improving our current knowledge about the airway microbiota composition and polymicrobial interactions in patients following a severe decline in lung function and with different lung disease statuses (normal/mild vs. moderate vs. severe). Although the description of taxonomic groups colonizing the airways of CF patients has helped in the understanding of how bacterial species change during disease progression, the overall gene content harbored by these communities remains largely unknown. Since metabolic and functional features of a microbial species are the dominant factors determining its ability to survive in a given environment (e.g., CF patients\u2019 lungs) [15], untargeted metagenomic approaches may provide deep insights into the microbial CF lung metagenome, permitting the identification of gene sets involved in functional pathways associated with a worsening clinical condition [16]. ",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4330,
+                    "infons": {
+                        "section_title_1": "1. Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In the present study, we performed a deep metagenomic investigation to probe the lung microbiome of twelve CF patients with mild (Forced expiratory volume in one second (FEV1) > 70%) and severe (FEV1 < 40%) lung disease. We aimed to investigate whether patients with different disease severities may indeed have a different representation of \u201ckeystone genes\u201d in their lung microbiota. To the best of our knowledge, only a few works have already inspected the CF microbiome through shotgun metagenomes, and most of them are case reports on a limited number of patients [17,18] or on specific metabolic functions [19]. Moving away from taxonomic inventories towards a better understanding of CF microbiome genes opens a new avenue for the identification of the microbial gene repertoire associated with CF lung disease.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5147,
+                    "infons": {
+                        "section_title_1": "2. Results",
+                        "section_title_2": "2.1. Clinical Characteristics of Enrolled Patients and Culture-Based Diagnostic Microbiology",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The clinical status of the individual subjects is reported in Table 1. The study cohort includes twelve patients (aged 18\u201346 years; median = 28) with CF who were in stable clinical conditions, without any pulmonary exacerbation and not undergoing antibiotic therapy (i.v. or oral) in the previous four weeks before specimen collection. The normal/mild (FEV1\u2009 > 70% predicted) and severe (FEV1\u2009 <\u2009 40% predicted) groups also differed in the extent of repeated antibiotic exposure and in their mean age being equal to (mean \u00b1 standard error) 25.33 \u00b1 2.216 and 33.83 \u00b1 3.146 years in the normal/mild and the severe group, respectively (two-tailed t-test; p value = 0.0313). In addition, the severe group tended to receive more uniform antimicrobial agents by the inhalation of aerosolised antibiotics during maintenance therapy, such as aerolized colistimethate and azithromycin, with respect to the normal/mild group (Table 1). Traditional culture-based diagnostic microbiology revealed the presence of Pseudomonas aeruginosa and Staphylococcus aureus, being the dominant bacterial species in patients with severe and mild respiratory function, respectively (Table S1). Other minor taxa were Achromobacter xylosoxidans, Rothia mucilaginosa, Veillonella parvula, Stenotrophomonas maltophilia, Gemella sanguinis and Escherichia coli.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:02:27",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "574415",
+                            "locations": {
+                                "length": 22,
+                                "offset": 6148
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:02:27",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "574416",
+                            "locations": {
+                                "length": 21,
+                                "offset": 6175
+                            }
+                        },
+                        {
+                            "text": "Achromobacter xylosoxidans",
+                            "infons": {
+                                "identifier": "NCBI:txid85698",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:02:29",
+                                "parent_taxonomic_id": "NCBI:txid222"
+                            },
+                            "id": "574417",
+                            "locations": {
+                                "length": 26,
+                                "offset": 6337
+                            }
+                        },
+                        {
+                            "text": "Rothia mucilaginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid43675",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:02:29",
+                                "parent_taxonomic_id": "NCBI:txid32207"
+                            },
+                            "id": "574418",
+                            "locations": {
+                                "length": 19,
+                                "offset": 6365
+                            }
+                        },
+                        {
+                            "text": "Veillonella parvula",
+                            "infons": {
+                                "identifier": "NCBI:txid29466",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:02:29",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "574419",
+                            "locations": {
+                                "length": 19,
+                                "offset": 6386
+                            }
+                        },
+                        {
+                            "text": "Stenotrophomonas maltophilia",
+                            "infons": {
+                                "identifier": "NCBI:txid40324",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:02:29",
+                                "parent_taxonomic_id": "NCBI:txid40323"
+                            },
+                            "id": "574420",
+                            "locations": {
+                                "length": 28,
+                                "offset": 6407
+                            }
+                        },
+                        {
+                            "text": "Gemella sanguinis",
+                            "infons": {
+                                "identifier": "NCBI:txid84135",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:02:29",
+                                "parent_taxonomic_id": "NCBI:txid1378"
+                            },
+                            "id": "574421",
+                            "locations": {
+                                "length": 17,
+                                "offset": 6437
+                            }
+                        },
+                        {
+                            "text": "Escherichia coli",
+                            "infons": {
+                                "identifier": "NCBI:txid562",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:02:29",
+                                "parent_taxonomic_id": "NCBI:txid561"
+                            },
+                            "id": "574422",
+                            "locations": {
+                                "length": 16,
+                                "offset": 6459
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 6578,
+                    "infons": {
+                        "section_title_1": "2. Results",
+                        "section_title_2": "2.2. Metabolic Community Structure between Patient Groups",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Sequencing yielded > 15 M paired-end sequences for each sample, with 1\u20135% of them being of putative microbial origin (the remaining being human DNA). This confirmed that human contamination still represents a considerable drawback in the metagenomic analysis of human sputum samples, as already reported in other metagenomics studies [20,21]. From 12 samples, a total of 5.4 M microbial sequences (mean \u00b1 standard error per sample, 453,824 \u00b1 41,349) were included in the analysis (Table S2). The HMP Unified Metabolic Analysis Network (HUMAnN) analysis revealed 47 pathways which were differently distributed across all samples (Figure S1). The principal component analysis (PCA) analysis on metabolic and regulatory data (Figure 1) explained almost 80% of the total variance reporting a distinct sample distribution for normal/mild and severe patient groups. ",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7495,
+                    "infons": {
+                        "section_title_1": "2. Results",
+                        "section_title_2": "2.2. Metabolic Community Structure between Patient Groups",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "In particular, the separation of normal/mild samples from severe samples was largely driven by 6 pathways: biotin metabolism (Ko:00780), geraniol degradation (Ko:00281), bacterial chemotaxis (Ko:02030), valine leucine and isoleucine degradation (Ko:00280), the bacterial secretion system (Ko:03070), and flagellar assembly (Ko:02040). The Kruskal\u2013Wallis one-way analysis of variance confirmed this result with five out of six previously identified pathways displaying higher values in the severe group patients compared to the normal/mild ones (Figure 2). Overall, 31 pathways were equally distributed between the two groups considered (Figures S2 and S3), whereas 16 pathways were differentially distributed in the two groups, being found mainly in patients with normal/mild (5 pathways) and severe disease (11 pathways), respectively (Figure 2).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8342,
+                    "infons": {
+                        "section_title_1": "2. Results",
+                        "section_title_2": "2.3. Metagenomic Functional Differences Suggest Distinct Ecological Roles within the Cystic Fibrosis Microbiome",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "In order to establish a set of gene putatively available in CF lung communities, metagenomic reads were assembled into contigs. We were able to assemble an average of 1655 contigs (s.e. 526) per sample (N50 values ranging from 645 to 1655) (Figure S4 and Table S2). The gene-calling step predicted a mean of 5014 open reading frames (ORFs) with a standard error of 1266. The functional potential harbored by microbiomes was inferred, predicting gene functions by homology using the evolutionary genealogy of genes: non-supervised orthologous groups (eggNOG) database (Figure 3). ",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9032,
+                    "infons": {
+                        "section_title_1": "2. Results",
+                        "section_title_2": "2.3. Metagenomic Functional Differences Suggest Distinct Ecological Roles within the Cystic Fibrosis Microbiome",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Both patient groups showed a massive presence of transporter proteins, with the severe group reporting higher values than the normal/mild group. The Transporter Classification Database (TCDB) analysis highlighted the possible presence of antibiotic resistance proteins indicating an imbalanced distribution of the multidrug resistance efflux pumps of the ATP-binding cassette (ABC) and resistance\u2013nodulation\u2013cell division (RND) super-families between the two groups of patients. In particular, patients with severe disease showed a high presence of both ABC and RND super-families members (Figure S5), thus suggesting the presence of efflux-mediated antibiotic resistance mechanisms. Virulence protein counts were normalized using the total number of ORFs predicted in each sample. Virulence (and virulence-related) factors displaying a significant difference between groups (two-tailed Student\u2019s t-test p-value \u2264 0.05, alpha = 0.05) are shown in Figure 4 (individual values for each patient are reported in Figures S6 and S7). ",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10060,
+                    "infons": {
+                        "section_title_1": "2. Results",
+                        "section_title_2": "2.3. Metagenomic Functional Differences Suggest Distinct Ecological Roles within the Cystic Fibrosis Microbiome",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "A larger presence of virulence factors was found in patients with severe disease, with antibiotic resistance as the third most abundant category. The Resfams analysis [22] suggests that the microbes in CF airways encode a diverse set of antibiotic resistance mechanisms; among them, the multidrug resistance efflux pumps are the most represented (Figure 5). Overall, 17 out of 18 antibiotic resistance categories showed higher values in patients with severe disease, with 8 of them reporting significant differences. As expected, efflux mediated systems were the most abundant categories, all reporting higher values for severe patients than for normal/mild ones (Figure 5 and Figure S8). Our results are supported by culture-based analysis, which reveals the presence of multi-drug resistant bacteria in the severe group (Table S1).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:03:16",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "574423",
+                            "locations": {
+                                "length": 8,
+                                "offset": 10853
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 10893,
+                    "infons": {
+                        "section_title_1": "2. Results",
+                        "section_title_2": "2.4. Relationship between Functional Potential and Taxonomic Microbial Composition",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To further characterize the airway microbiome of CF patients, the correlation between the taxonomic and functional structure of the microbial community was examined. The dissimilarity of the taxonomic community was significantly correlated with the functional community dissimilarity (Mantel test with Pearson correlation coefficient and 1000 permutations; p-values < 0.05), implying a relation between the species distribution patterns and the functional distribution of the whole airway community. Otherwise, the metabolic pathway distribution (Kyoto Encyclopedia of Genes and Genomes (KEGG) analysis) was poorly correlated with other features, reporting significant correlations only with antibiotic resistance gene distribution and taxonomic structure (Table S3). ",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11743,
+                    "infons": {
+                        "section_title_1": "2. Results",
+                        "section_title_2": "2.4. Relationship between Functional Potential and Taxonomic Microbial Composition",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To further identify the driving forces for the taxonomic distribution, the relative influence of functional genes, metabolic pathway distribution, virulence factors, and antibiotic resistance genes were rendered by using boosted tree models on principal components derived from each feature. Principal components with an eigenvalue > 1 in total accounted for more than 85% of the total variance and were therefore chosen for training boosted regression trees (Table S4). In boosted tree models, measures of relative influence quantify the importance of a given predictor; the variables that have a weak effect on prediction therefore have, by extension, scarcely an influence on the variable that the model tries to predict [23]. Therefore, factors that have a minimal relative influence in predicting the abundance of a given taxon are poorly connected with the distribution of that taxon. Although the use of orthogonal composite variables (as reported in the method section) reduced type I errors, the contribution of each original variable cannot be inferred directly. To partially overcome this limitation, the most dominant variables contributing to each component (top-50% eigenvalues of K, E, A, and V) were reported in Table S4. ",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12981,
+                    "infons": {
+                        "section_title_1": "2. Results",
+                        "section_title_2": "2.4. Relationship between Functional Potential and Taxonomic Microbial Composition",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Based on the results reported in this study, the metabolic pathway distribution inferred with KEGG (K) was the major factor able to predict the microbial taxonomic structure, whereas the gene distribution obtained with eggNOG (E) had little influence on the whole community, affecting only the distribution of a limited number of species (Figure 6).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13330,
+                    "infons": {
+                        "section_title_1": "2. Results",
+                        "section_title_2": "2.4. Relationship between Functional Potential and Taxonomic Microbial Composition",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Surprisingly, antibiotic resistance genes (A) were related to three bacterial species only: Achromobacter xylosoxidans, Fusobacterium periodonticum, and an unclassified member of the Bordetella genus. A. xylosoxidans strains, intrinsically resistant to many classes of antimicrobial agents, have been associated with CF [24,25], as well as F. periodonticum, which has been reported to increase its presence during exacerbation [26]. Conversely, virulence factors (V) (mainly comprising genes previously identified in pathogenicity islands, virulence proteins, and antibiotic resistance genes Figure S7 and Figure 4) were not related to any particular species reporting the lowest values of relative influence.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Achromobacter xylosoxidans",
+                            "infons": {
+                                "identifier": "NCBI:txid85698",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:03:44",
+                                "parent_taxonomic_id": "NCBI:txid222"
+                            },
+                            "id": "574424",
+                            "locations": {
+                                "length": 26,
+                                "offset": 13422
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium periodonticum",
+                            "infons": {
+                                "identifier": "NCBI:txid860",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:03:44",
+                                "parent_taxonomic_id": "NCBI:txid848"
+                            },
+                            "id": "574425",
+                            "locations": {
+                                "length": 27,
+                                "offset": 13450
+                            }
+                        },
+                        {
+                            "text": "Bordetella genus",
+                            "infons": {
+                                "identifier": "NCBI:txid517",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:03:45",
+                                "parent_taxonomic_id": "NCBI:txid506"
+                            },
+                            "id": "574426",
+                            "locations": {
+                                "length": 16,
+                                "offset": 13513
+                            }
+                        },
+                        {
+                            "text": "A. xylosoxidans",
+                            "infons": {
+                                "identifier": "NCBI:txid85698",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:03:45",
+                                "parent_taxonomic_id": "NCBI:txid222"
+                            },
+                            "id": "574427",
+                            "locations": {
+                                "length": 15,
+                                "offset": 13531
+                            }
+                        },
+                        {
+                            "text": "F. periodonticum",
+                            "infons": {
+                                "identifier": "NCBI:txid860",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:03:47",
+                                "parent_taxonomic_id": "NCBI:txid848"
+                            },
+                            "id": "574428",
+                            "locations": {
+                                "length": 16,
+                                "offset": 13670
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 14039,
+                    "infons": {
+                        "section_title_1": "3. Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In an endeavor to better understand the complexity of CF microbiomes in patients with high/low pulmonary function, we performed a metagenomics investigation of the bacterial communities in the airways of patients with CF focusing on the identification of a set of functional features associated with different lung disease statuses in the present study.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14405,
+                    "infons": {
+                        "section_title_1": "3. Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Sputum specimens, which represent by far the most widely used sample to access the airway microbiota of CF disease [27,28,29,30], were collected from twelve patients with CF. As recently indicated by Dickson and colleagues [31], although use of sputum can introduce an additional risk of upper airway contamination, the presence of oropharyngeal microbiota does not obscure the meaningful microbial signal in sputum which is correlated with established indices of lung health. To date, in CF metagenomics, published studies have focused on the sputum derived from CF patients [17,32,33,34]. The shotgun metagenomics approach, which provides the gene catalogue of the microbial community, allows an insight into some functional features to be gained (e.g., the presence of metabolic pathways and potential antibiotic resistance genes), in addition to accurate species-level taxonomic assignments.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15300,
+                    "infons": {
+                        "section_title_1": "3. Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In the first metagenomic study performed by Willner and colleagues [33], the airways of diseased and non-diseased individuals showed a potentially different microbial community metabolism (inferred from the recovered gene catalogue of the microbiome), suggesting that the community metabolism is dynamic and variable among patients differing in their health status. In the present work, the abundances of metabolic pathways encoded by microbes inhabiting CF airways of patients with high/low pulmonary function were reconstructed from the metagenome. The metabolic pathway distribution described in this work was in accordance with the one described in other studies [19,32], with pathways related to amino acid catabolism, nucleotide metabolism, and stress responses reporting high values in both normal/mild and severe patients. Several pathways were uniformly distributed among patients, regardless of their clinical condition, reflecting a large set of core functions typical of host-associated microbes. Indeed, according to the previous studies mentioned above [19,32], there was little variation in the metagenome pathway distribution, with sixteen pathways only reporting different abundance values between the two groups of patients inspected here. Interestingly, we identified a set of metabolic pathways correlated with the worsening of patients\u2019 clinical conditions; in particular, two pathways, the bacterial chemotaxis pathway (Ko:02030) and the flagellar assembly pathway (Ko:02040), were reported as clinically relevant according to previous works [35,36,37,38,39]. Indeed, one pathway was associated with Pseudomonas aeruginosa lung infection (bacterial chemotaxis pathway), whereas the second (flagellar assembly pathway) was classified as a potent mediator of virulence in Gram-negative bacteria such as P. aeruginosa strains. Moreover, the motB gene (a component of the flagellar assembly pathway) is known to aid bacterial chemotaxis and flagellar assembly; also, its product (a membrane protein, flagellar motor protein) was recognized as a potential novel vaccine target in Vibrio cholerae [40]. We can hypothesize that the difference in the representation of the above-mentioned pathways (Ko:02030 and Ko:02040) could rely on both P. aeruginosa strain differences (between the two disease groups) as well as on the presence of other bacteria in the CF microbiome which carry the same gene sets. The presence of P. aeruginosa and other Gram-negative strains that could be responsible for the appearance of these pathways were also revealed by cultivation methods analysis, as reported in Figure S9. However, the limited number of patients analyzed in our study does not allow for definitive, statistically-based conclusion on this issue.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:04:21",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "574429",
+                            "locations": {
+                                "length": 22,
+                                "offset": 16922
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:04:23",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "574430",
+                            "locations": {
+                                "length": 8,
+                                "offset": 17106
+                            }
+                        },
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:04:23",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "574431",
+                            "locations": {
+                                "length": 13,
+                                "offset": 17123
+                            }
+                        },
+                        {
+                            "text": "Vibrio cholerae",
+                            "infons": {
+                                "identifier": "NCBI:txid666",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:04:27",
+                                "parent_taxonomic_id": "NCBI:txid662"
+                            },
+                            "id": "574432",
+                            "locations": {
+                                "length": 15,
+                                "offset": 17397
+                            }
+                        },
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:04:28",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "574433",
+                            "locations": {
+                                "length": 13,
+                                "offset": 17555
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:04:29",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "574434",
+                            "locations": {
+                                "length": 8,
+                                "offset": 17657
+                            }
+                        },
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:04:31",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "574435",
+                            "locations": {
+                                "length": 13,
+                                "offset": 17735
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 18060,
+                    "infons": {
+                        "section_title_1": "3. Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In addition to microbial genes involved in metabolic metabolism, genes involved in antibiotic resistance are also powerful indicators of the microbial community\u2019s adaptation to the CF lung [17]. Indeed, the top-50% KEGG pathways (reported in Table S4) were mainly involved in the metabolism of amino acids and nucleotides and may be linked to bacterial proliferation and adaptation in the lungs. An increased presence of genes involved in both nucleotide and amino acid metabolism may, in fact, indicate a huge presence of both types of molecules which, in turn, may come from neutrophil extracellular traps, bacterial biofilms and the action of human and bacterial proteases [32,41,42,43,44]. Moreover, a large number of genes classified with eggNOG belonged to the transporter families. Their further analysis by using the Transporter Classification Database (TCDB) permitted us to identify a massive presence of families connected with antibiotic resistance mechanisms, especially in patients with severe lung disease. The presence of genes related to antibiotic resistance mechanisms was confirmed by the Hidden Markov model (HMM) (Resfams), which accurately predicts new resistance functions from sequence alone [22]. The efflux-mediated system, which represents the widespread drug resistance mechanism common to many microorganisms, was the most represented gene function. Interestingly, the presence of P. aeruginosa and Staphylococcus aureus was not related to the differential abundance of antibiotic resistance genes and virulence factors. Indeed, virulence and resistance genes have been found to be spread throughout the whole CF bacterial community and are poorly related to the presence of single taxa, suggesting that the emergence of these mechanisms should be attributed to a particular clinical condition (normal/mild or severe lung disease) of CF patients. In fact, significant differences in the percentage of total Antibiotic Resistance (AR) functions encoded in microbial genomes between normal/mild and severe groups were found. Overall, there was a significant AR mechanism enrichment in patients with severe lung disease due to several years of exposure to antimicrobial drugs. It is well known that several antimicrobial agents and complex regimens are used for prophylaxis, eradication, treatment of exacerbations, and chronic suppressive therapy [45,46], paving the way for the emergence and spreading of AR mechanisms throughout the lung microbial community. In particular, oral, intravenous, and inhaled antibiotic courses are often frequent and prolonged, especially with increasing age and declining pulmonary status [47] as those characterizing the patients with severe lung disease. As underlined by Zhao and colleagues [28], an antibiotic administered closer to the time of sampling would be expected to have a greater impact on the microbial community than that same antibiotic would have when administered at a longer interval from the sampling time. Even if, on the date of sampling and in the 30 days before sample collection, antibiotic administration through an IV route was not given to our patients, we can hypothesize that patients with severe lung disease, having an average higher age than those from the normal/mild group, experienced several years of exposure to antimicrobial drugs, leading to periodic selection for an AR microbiota and resulting in a higher frequency and diversity of AR genes in their lung microbiota. The depth and diversity of AR genes uncovered by metagenomic studies in CF patients with different disease statuses brings to light the need for new strategies to combat antibiotic-resistant pathogens [48]. As reported by King and colleagues [49], the metagenomic profiles of human microbiota are becoming increasingly characterized, and growing data suggests that imbalances of the microbiota could lead to a disease status [50].",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:04:50",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "574436",
+                            "locations": {
+                                "length": 13,
+                                "offset": 19471
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:04:50",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "574437",
+                            "locations": {
+                                "length": 21,
+                                "offset": 19489
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 21962,
+                    "infons": {
+                        "section_title_1": "4. Materials and Methods ",
+                        "section_title_2": "4.1. Ethics Statement",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The study was approved by the Ethics Committees of Children\u2019s Hospital and Research Institute Bambino Ges\u00f9 (Rome, Italy), Cystic Fibrosis Center, Anna Meyer Children\u2019s University Hospital (Florence, Italy) and G. Gaslini Institute (University of Genoa, Genoa, Italy) (Prot. N. 681 CM of 2 November 2012; Prot. N. 85 of 27 February 2014; Prot. N. FCC 2012 Partner 4-IGG of 18 September 2012). Informed written consent was given by all adult subjects before enrollment in the study. All sputum specimens were produced voluntarily. All procedures were performed in agreement with the \u201cGuidelines of the European Convention on Human Rights and Biomedicine for Research in Children\u201d and the Ethics Committee of the three CF Centers involved. All measures were obtained and processed ensuring patient data protection and confidentiality. ",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22840,
+                    "infons": {
+                        "section_title_1": "4. Materials and Methods ",
+                        "section_title_2": "4.2. Patients",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Twelve patients with CF (aged 18\u201346 years), older than six years, were enrolled in the study between September 2012 and April 2013. The cohort consisted of clinically stable patients without any pulmonary exacerbation and who were not undergoing antibiotic therapy (i.v. or oral) in the previous four weeks before specimen collection [51,52]. Patients were treated according to the current standards of care [53] with at least four microbiological controls per year [54]. At each visit, clinical data collection and microbiological status (colonizing pathogens with available cultivation protocols) were performed according to the European CF Society standards of care [55]. Forced expiratory volume in one second as a percentage of predicted (%FEV1) is a key outcome of the monitoring of lung function in CF [56]. All enrolled patients had an absence of an acute pulmonary exacerbation. Patients were classified into two groups, \u201cnormal/mild\u201d (FEV1 > 70%) and \u201csevere\u201d (FEV1 < 40%), by estimating their average annual FEV1 value on the basis of multiple spirometric measurements over the two years before their enrollment. FEV1 values were measured according to the American Thoracic Society (ATS) and the European Respiratory Society (ERS) standards [57,58]. The lower limit of age for subjects with \u201cnormal/mild\u201d disease was 15 years old, while that of subjects with severe disease was 25 years old. The study was approved by the Ethics Committees of Children\u2019s Hospital and Research Institute Bambino Ges\u00f9 (Rome, Italy), Cystic Fibrosis Center, Anna Meyer Children\u2019s University Hospital (Florence, Italy) and G. Gaslini Institute (University of Genoa, Genoa, Italy), as stated in the ethical statement. The demographic and clinical characteristics of patients are reported in Table 1. The number of exacerbations (as defined by a cluster of symptoms and signs as previously indicated [51,52]) was determined in the five years before the enrollment. ",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24806,
+                    "infons": {
+                        "section_title_1": "4. Materials and Methods ",
+                        "section_title_2": "4.3. Sample Processing",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The microbiome analysis was performed on sputum samples. Upon expectoration, CF sputum samples were immediately treated for 15 min with Sputolysin (Calbiochem, La Jolla, CA, USA) in accordance with the manufacturer\u2019s instructions and split into aliquots for culture and molecular analyses. Aliquots for culturable analysis were immediately examined, and the remaining aliquots were frozen and stored at \u221280 \u00b0C for subsequent DNA extraction and metagenomic analysis. Bacterial detection and identification were performed as previously reported [13]. The microbiological status of the individual subjects is reported in Table S2.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25455,
+                    "infons": {
+                        "section_title_1": "4. Materials and Methods ",
+                        "section_title_2": "4.4. DNA Extraction Procedures and Sequencing",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "About 400 \u00b5l aliquots of frozen sputum were subjected to genomic DNA extraction using acetyl trimethylammonium bromide (CTAB) protocol, according to the procedure previously reported [59]. Sample aliquots were spun at 10,000\u00d7 g to pellet cellular material. After the removal of the supernatant, cell pellets were re-suspended in 567 \u03bcL of autoclaved and 0.2 filtered TE pH 8 and incubated for 1 h at 37 \u00b0C with 30 \u03bcL 10% sodium dodecyl sulfate (SDS) and 3 \u03bcL 20 mg/mL Proteinase K (Sigma-Aldrich, St. Louis, MO, USA). Samples were then incubated for 10 min with 100 \u03bcL of 5 M NaCl prepared with sterile water and 80 \u03bcL of CTAB/NaCl solution (4.1 g NaCl, 10 g CTAB in 100 mL sterile water). Following incubation, extracts were purified using phenol chloroform extraction, and DNA was recovered by isopropanol precipitation. Pelleted DNA was washed twice with cold 70% ethanol, allowed to air dry, and re-suspended in 30 \u03bcL of sterile water. Quantity and integrity of DNA extracted were assessed by Qubit 2.0 fluorometer (Invitrogen, Life technologies) and gel electrophoresis, respectively. Library preparation and DNA sequencing were performed following the standard pipelines for Illumina HiSeq 2000, PE100 sequencing (Beijing Genomics Institute, BGI, Shenzhen, Guangdong, China), as described in Supplementary Information S1. Raw sequence data reported in this study have been deposited in the National Center for Biotechnology Information (NCBI) \u201cSequence Read Archive\u201d (SRA) under the project accession PRJNA316056. ",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27020,
+                    "infons": {
+                        "section_title_1": "4. Materials and Methods ",
+                        "section_title_2": "4.5. Bioinformatic Analyses",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Sequence quality was ensured by trimming reads using StreamingTrim 1.0 [60], with a quality cutoff of 20. Bowtie2 [61] was used to screen out human-derived sequences from metagenomic data with the latest version of the human genome available in the NCBI database (GRCh38) as reference. Sequences displaying a concordant alignment (a mate pair that aligns with the expected relative mate orientation and with the expected range of distances between mates) against the human genomes were then removed from all subsequent analyses. Metabolic and regulatory patterns were estimated using HUMAnN [62] and considered only those pathways with a coverage value \u2265 80%, whereas the taxonomic microbial community composition was assessed using MetaPhlAn2 [63]. Reads were assembled into contigs using the SPAdes microbial assembler [64] with automatic k-mer length selection. To establish an airway microbiome gene catalog [65], we first removed contigs smaller than 500bp and then used MetaGeneMark [66] to predict open reading frames (ORFs). Translated protein sequences obtained from assembled contigs were classified using Hmmer [67] with the eggNOG [68] database trained on bacterial sequences (bactNOG). Each protein was classified according to its best hit with an e-value lower than 0.001 as suggested in [69]. Proteins classified as transporters were further inspected using Basic Local Alignment Search Tool (BLAST) against the Transporter Classification Database (TCDB) [70] to obtain a more detailed classification. Similarly, the MvirDB [71] database was used to inspect the distribution of virulence factors among our samples. We classified each sequence based on its BLAST best hit with an e-value lower than 1 \u00d7 10\u221220 in order to minimize the number of alignments that could be found by chance. Proteins that did not match any reference sequence were excluded from the analysis. Finally, predicted proteins were screened for antibiotic resistance activity based on the workflow described in [22] and validated for the Resfams database. ",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29088,
+                    "infons": {
+                        "section_title_1": "4. Materials and Methods ",
+                        "section_title_2": "4.6. Statistical Analyses",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "All statistical analyses were implemented in R (R Core Team (2015), version 3.2.3, R Foundation for Statistical Computing, Vienna, Austria) with the help of various packages. The distribution of metabolic pathways was assessed using the principal component analysis (PCA) on normalized data using the \u201crda\u201d function of the vegan package version 2.3.2 [72]. The 20 metabolic pathways that varied greatly between normal/mild and severe groups were selected through the similarity of the percentages analysis (\u201csimper\u201d function) and used for PCA analysis (vegan 2.3.2). The Kruskal\u2013Wallis one-way analysis of variance was used to test whether the metabolic and regulatory pathways of different patient groups originated from distinct distributions using the \u201cKruskal\u201d function of the agricolae package (version 1.2.3). The distribution of ortholog genes, virulence factors, and antibiotic resistance mechanisms was normalized by the total number of open reading frames (ORFs) detected for each sample, and the differences between normal/mild and severe groups were assessed using the two-tailed Student\u2019s t-test for each category (\u201ct.test\u201d function). The correlation between two dissimilarity matrices, obtained from metagenomics data such as the metabolic pathway or gene distribution, was assessed by using the Mantel test (vegan 2.3.2) as reported in other studies [73,74]. Basically, each table was transformed into a dissimilarity matrix using the \u201cBray\u2013Curtis\u201d dissimilarity index. By doing so, all dissimilarity matrices were reduced to the same rank, making it possible to use the Mantel test to inspect the correlation between them. The influence of gene patterns, metabolic modules distribution, virulence factors, and antibiotic-resistance genes on the taxonomic microbial composition was evaluated using \u201cboosted regression tree\u201d models [23] with 5000 trees, 10-fold cross-validation, and three-way interactions (gbm package version 2.1.1). Testing multiple individual variables assumed to be correlated with each other may inflate type I errors due to the high number of comparisons made [75]. To reduce the number of comparisons, and therefore to minimize the number of false positive correlations [75], orthogonal composite variables were derived from principal component analysis (PCA) for each factor explored, retaining only those components with an eigenvalue > 1. The derived variables were used for training boosted regression trees, minimizing the number of comparisons and, thus, reducing potential type I errors. A hierarchical cluster analysis was performed based on the average linkage method with \u201cPearson\u2019s distance\u201d metrics (\u201chclust\u201d function). All graphical representations of data were performed using the ggplot2 package version 2.0.0 [76]. To minimize the type I errors in multiple comparisons, p-values where adjusted using a false discovery rate (FDR).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31997,
+                    "infons": {
+                        "section_title_1": "5. Conclusions",
+                        "iao_name_1": "conclusion section",
+                        "iao_id_1": "IAO:0000615"
+                    },
+                    "text": "Our results highlight that different pulmonary conditions in patients with CF co-occur with a different microbiome gene repertoire. In particular, an imbalanced distribution of virulence factors along with AR genes and metabolic pathways has been found. Understanding the role of the CF airway microbiome and detecting microbiome genes associated with lower lung function are key challenges for the delivery of new potential biomarkers for the management of bacterial infection in CF patients and the improvement of health care treatment. Our study was limited to twelve subjects; therefore, a larger scale study is needed to more completely characterize the spectrum of microbiome changes associated with the decreasing of pulmonary function. Longitudinal metagenomic analysis, which we plan to evaluate in ongoing studies, may help in understanding imbalances down to the single gene level, possibly helping to find new therapeutic strategies for targeting personalized disease phenotypes.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33002,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "This study was supported by Italian Grants funded by the Italian Cystic Fibrosis Research Foundation (FFC) (http://www.fibrosicisticaricerca.it/) to Annamaria Bevivino (Research Project number FFC#14/2015 (with the contribution of \u201cDelegazione FFC di Latina\u201d, \u201cLatteria Montello Nonno Nanni\u201d, and \u201cGruppo di Sostegno FFC Valle Scrivia Alessandria\u201d), and partially supported by MIUR \u201cFuturo in Ricerca\u201d RBFR13EWWI_001 to Nicola Segata. Giovanni Bacci was supported by a postdoctoral fellowship by Italian Cystic Fibrosis Research Foundation. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript. The authors greatly acknowledge the Italian Cystic Fibrosis Research Foundation (FCC) for its support and administrative tasks, and Ricciotti Gabriella and Campana Silvia for their technical support.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33883,
+                    "infons": {
+                        "section_title_1": "Supplementary Materials",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Supplementary materials can be found at www.mdpi.com/1422-0067/18/8/1654/s1.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33982,
+                    "infons": {
+                        "section_title_1": "Author Contributions",
+                        "iao_name_1": "author contributions section",
+                        "iao_id_1": "IAO:0000323"
+                    },
+                    "text": "Annamaria Bevivino conceived and designed the experiments, supervised analyses, interpreted data, and drafted the manuscript. Alessio Mengoni supervised analyses, interpreted data, and drafted the manuscript. Giovanni Bacci carried out bioinformatic analyses, statistically evaluated the results and wrote the manuscript. Vincenzina Lucidi, Ersilia Fiscarelli, Giovanni Taccetti, Alessandra De Alessandri, Vanessa Tuccio, Patrizia Morelli and Daniela Dolce collected and processed the clinical specimens, and provided clinical expertise for the discussion of the results. Patrizia Paganin performed DNA extraction. Nicola Segata provided bioinformatics expertise and critically revised the manuscript. All authors read, reviewed, and approved the final version to be published.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34779,
+                    "infons": {
+                        "section_title_1": "Conflicts of Interest",
+                        "iao_name_1": "conflict of interest section",
+                        "iao_id_1": "IAO:0000616"
+                    },
+                    "text": "The authors declare no conflict of interest. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34970,
+                    "infons": {
+                        "journal": "Patient Registry Annual Data Report 2015.",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Cystic Fibrosis Foundation . Patient Registry Annual Data Report 2015. Cystic Fibrosis Foundation; Bethesda, MD, USA: 2016. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35123,
+                    "infons": {
+                        "journal": "Am. J. Respir. Crit. Care Med. ",
+                        "volume": "168",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Gibson R.L., Burns J.L., Ramsey B.W. Pathophysiology and Management of Pulmonary Infections in Cystic Fibrosis. Am. J. Respir. Crit. Care Med. 2003;168:918\u2013951. doi: 10.1164/rccm.200304-505SO. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35355,
+                    "infons": {
+                        "journal": "Clin. Microbiol. Rev. ",
+                        "volume": "23",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Lipuma J.J. The changing microbial epidemiology in cystic fibrosis. Clin. Microbiol. Rev. 2010;23:299\u2013323. doi: 10.1128/CMR.00068-09. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35547,
+                    "infons": {
+                        "journal": "Ann. Am. Thorac. Soc. ",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Carmody L.A., Zhao J., Schloss P.D., Petrosino J.F., Murray S., Young V.B., Li J.Z., LiPuma J.J. Changes in cystic fibrosis airway microbiota at pulmonary exacerbation. Ann. Am. Thorac. Soc. 2013;10:179\u2013187. doi: 10.1513/AnnalsATS.201211-107OC. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35850,
+                    "infons": {
+                        "journal": "Sci. Rep. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Coburn B., Wang P.W., Diaz Caballero J., Clark S.T., Brahma V., Donaldson S., Zhang Y., Surendra A., Gong Y., Elizabeth Tullis D., et al. Lung microbiota across age and disease stage in cystic fibrosis. Sci. Rep. 2015;5:10241. doi: 10.1038/srep10241. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36159,
+                    "infons": {
+                        "journal": "PLoS ONE. ",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Hogan D.A., Willger S.D., Dolben E.L., Hampton T.H., Stanton B.A., Morrison H.G., Sogin M.L., Czum J., Ashare A. Analysis of lung microbiota in bronchoalveolar lavage, protected brush and sputum samples from subjects with mild-to-moderate cystic fibrosis lung disease. PLoS ONE. 2016;11:e0149998. doi: 10.1371/journal.pone.0149998. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36549,
+                    "infons": {
+                        "journal": "Thorax. ",
+                        "volume": "70",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Rogers G.B., Shaw D., Marsh R.L., Carroll M.P., Serisier D.J., Bruce K.D. Respiratory microbiota: addressing clinical questions, informing clinical practice. Thorax. 2015;70:74\u201381. doi: 10.1136/thoraxjnl-2014-205826. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36824,
+                    "infons": {
+                        "journal": "ISME J. ",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Cuthbertson L., Rogers G.B., Walker A.W., Oliver A., Green L.E., Daniels T.W.V., Carroll M.P., Parkhill J., Bruce K.D., van der Gast C.J. Respiratory microbiota resistance and resilience to pulmonary exacerbation and subsequent antimicrobial intervention. ISME J. 2015;10:1081\u20131091. doi: 10.1038/ismej.2015.198. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37194,
+                    "infons": {
+                        "journal": "PLoS ONE. ",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Maughan H., Wang P.W., Diaz Caballero J., Fung P., Gong Y., Donaldson S.L., Yuan L., Keshavjee S., Zhang Y., Yau Y.C.W., et al. Analysis of the cystic fibrosis lung microbiota via serial Illumina sequencing of bacterial 16S rRNA hypervariable regions. PLoS ONE. 2012;7:e45791. doi: 10.1371/journal.pone.0045791. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37564,
+                    "infons": {
+                        "journal": "Clin. Chest Med. ",
+                        "volume": "37",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Huang Y.J., LiPuma J.J. The Microbiome in Cystic Fibrosis. Clin. Chest Med. 2016;37:59\u201367. doi: 10.1016/j.ccm.2015.10.003. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37746,
+                    "infons": {
+                        "journal": "Ann. Am. Thorac. Soc. ",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Surette M.G. The cystic fibrosis lung microbiome. Ann. Am. Thorac. Soc. 2014;11:61\u201365. doi: 10.1513/AnnalsATS.201306-159MG. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37910,
+                    "infons": {
+                        "journal": "Microbiome. ",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Carmody L.A., Zhao J., Kalikin L.M., LeBar W., Simon R.H., Venkataraman A., Schmidt T.M., Abdo Z., Schloss P.D., LiPuma J.J. The daily dynamics of cystic fibrosis airway microbiota during clinical stability and at exacerbation. Microbiome. 2015;3:12. doi: 10.1186/s40168-015-0074-9. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38252,
+                    "infons": {
+                        "journal": "PLoS ONE. ",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Paganin P., Fiscarelli E.V., Tuccio V., Chiancianesi M., Bacci G., Morelli P., Dolce D., Dalmastri C., de Alessandri A., Lucidi V., et al. Changes in cystic fibrosis airway microbial community associated with a severe decline in lung function. PLoS ONE. 2015;10:e0124348. doi: 10.1371/journal.pone.0124348. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38618,
+                    "infons": {
+                        "journal": "PLoS ONE. ",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Bacci G., Paganin P., Lopez L., Vanni C., Dalmastri C., Cantale C., Daddiego L., Perrotta G., Dolce D., Morelli P., et al. Pyrosequencing unveils cystic fibrosis lung microbiome differences associated with a severe lung function decline. PLoS ONE. 2016;11:e0156807. doi: 10.1371/journal.pone.0156807. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38978,
+                    "infons": {
+                        "journal": "Microbiome. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Narayanamurthy V., Sweetnam J.M., Denner D.R., Chen L.W., Naureckas E.T., Laxman B., White S.R. The metabolic footprint of the airway bacterial community in cystic fibrosis. Microbiome. 2017;5:67. doi: 10.1186/s40168-017-0289-z. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39266,
+                    "infons": {
+                        "journal": "Cell Metab. ",
+                        "volume": "20",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Sharon G., Garg N., Debelius J., Knight R., Dorrestein P.C., Mazmanian S.K. Specialized metabolites from the microbiome in health and disease. Cell Metab. 2014;20:719\u2013730. doi: 10.1016/j.cmet.2014.10.016. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39530,
+                    "infons": {
+                        "journal": "J. Clin. Microbiol. ",
+                        "volume": "52",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Lim Y.W., Evangelista J.S., Schmieder R., Bailey B., Haynes M., Furlan M., Maughan H., Edwards R., Rohwer F., Conrad D. Clinical insights from metagenomic analysis of sputum samples from patients with cystic fibrosis. J. Clin. Microbiol. 2014;52:425\u2013437. doi: 10.1128/JCM.02204-13. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39871,
+                    "infons": {
+                        "journal": "Am. J. Respir. Cell Mol. Biol. ",
+                        "volume": "46",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Willner D., Haynes M.R., Furlan M., Hanson N., Kirby B., Lim Y.W., Rainey P.B., Schmieder R., Youle M., Conrad D., et al. Case studies of the spatial heterogeneity of DNA viruses in the cystic fibrosis lung. Am. J. Respir. Cell Mol. Biol. 2012;46:127\u2013131. doi: 10.1165/rcmb.2011-0253OC. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40217,
+                    "infons": {
+                        "journal": "ISME J. ",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Whiteson K.L., Meinardi S., Lim Y.W., Schmieder R., Maughan H., Quinn R., Blake D.R., Conrad D., Rohwer F. Breath gas metabolites and bacterial metagenomes from cystic fibrosis airways indicate active pH neutral 2,3-butanedione fermentation. ISME J. 2014;8:1247\u20131258. doi: 10.1038/ismej.2013.229. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40573,
+                    "infons": {
+                        "journal": "ERJ Open Res. ",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Losada P.M., Chouvarine P., Dorda M., Hedtfeld S., Mielke S., Schulz A., Wiehlmann L., T\u00fcmmler B. The cystic fibrosis lower airways microbial metagenome. ERJ Open Res. 2016;2:00096-2015. doi: 10.1016/S1569-1993(16)30337-X. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40855,
+                    "infons": {
+                        "journal": "J. Cyst. Fibros. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Dhooghe B., No\u00ebl S., Huaux F., Leal T., Diaz Caballero J., Clark S.T., Coburn B., Zhang Y., Wang P.W., Donaldson S.L., et al. Sputum DNA sequencing in cystic fibrosis: Non-invasive access to the lung microbiome and to pathogen details. J. Cyst. Fibros. 2014;5:20. doi: 10.1186/s40168-017-0234-1. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41210,
+                    "infons": {
+                        "journal": "ISME J. ",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Gibson M.K., Forsberg K.J., Dantas G. Improved annotation of antibiotic resistance determinants reveals microbial resistomes cluster by ecology. ISME J. 2014;9:1\u201310. doi: 10.1038/ismej.2014.106. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41464,
+                    "infons": {
+                        "journal": "J. Anim. Ecol. ",
+                        "volume": "77",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Elith J., Leathwick J.R., Hastie T. A working guide to boosted regression trees. J. Anim. Ecol. 2008;77:802\u2013813. doi: 10.1111/j.1365-2656.2008.01390.x. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41656,
+                    "infons": {
+                        "journal": "Eur. J. Clin. Microbiol. Infect. Dis. ",
+                        "volume": "30",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Lambiase A., Catania M.R., Del Pezzo M., Rossano F., Terlizzi V., Sepe A., Raia V. Achromobacter xylosoxidans respiratory tract infection in cystic fibrosis patients. Eur. J. Clin. Microbiol. Infect. Dis. 2011;30:973\u2013980. doi: 10.1007/s10096-011-1182-5. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Achromobacter xylosoxidans",
+                            "infons": {
+                                "identifier": "NCBI:txid85698",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:09:00",
+                                "parent_taxonomic_id": "NCBI:txid222"
+                            },
+                            "id": "574438",
+                            "locations": {
+                                "length": 26,
+                                "offset": 41743
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 41969,
+                    "infons": {
+                        "journal": "J. Cyst. Fibros. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. De Baets F., Schelstraete P., van Daele S., Haerynck F., Vaneechoutte M. Achromobacter xylosoxidans in cystic fibrosis: Prevalence and clinical relevance. J. Cyst. Fibros. 2007;6:75\u201378. doi: 10.1016/j.jcf.2006.05.011. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Achromobacter xylosoxidans",
+                            "infons": {
+                                "identifier": "NCBI:txid85698",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:09:03",
+                                "parent_taxonomic_id": "NCBI:txid222"
+                            },
+                            "id": "574439",
+                            "locations": {
+                                "length": 26,
+                                "offset": 42046
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 42227,
+                    "infons": {
+                        "journal": "Clin. Microbiol. Infect. ",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Worlitzsch D., Rintelen C., B\u00f6hm K., Wollschl\u00e4ger B., Merkel N., Borneff-Lipp M., D\u00f6ring G. Antibiotic-resistant obligate anaerobes during exacerbations of cystic fibrosis patients. Clin. Microbiol. Infect. 2009;15:454\u2013460. doi: 10.1111/j.1469-0691.2008.02659.x. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42530,
+                    "infons": {
+                        "journal": "PLoS ONE. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Cox M.J., Allgaier M., Taylor B., Baek M.S., Huang Y.J., Daly R.A., Karaoz U., Andersen G.L., Brown R., Fujimura K.E., et al. Airway microbiota and pathogen abundance in age-stratified cystic fibrosis patients. PLoS ONE. 2010;5:e11044. doi: 10.1371/journal.pone.0011044. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42860,
+                    "infons": {
+                        "journal": "Sci. Rep. ",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Zhao J., Murray S., Lipuma J.J. Modeling the impact of antibiotic exposure on human microbiota. Sci. Rep. 2014;4:4345. doi: 10.1038/srep04345. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43062,
+                    "infons": {
+                        "journal": "Proc. Natl. Acad. Sci. USA. ",
+                        "volume": "109",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Zhao J., Schloss P.D., Kalikin L.M., Carmody L.A., Foster B.K., Petrosino J.F., Cavalcoli J.D., VanDevanter D.R., Murray S., Li J.Z., et al. Decade-long bacterial community dynamics in cystic fibrosis airways. Proc. Natl. Acad. Sci. USA. 2012;109:5809\u20135814. doi: 10.1073/pnas.1120577109. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43409,
+                    "infons": {
+                        "journal": "Thorax. ",
+                        "volume": "68",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Rogers G.B., van der Gast C.J., Cuthbertson L., Thomson S.K., Bruce K.D., Martin M.L., Serisier D.J. Clinical measures of disease in adult non-CF bronchiectasis correlate with airway microbiota composition. Thorax. 2013;68:731\u2013737. doi: 10.1136/thoraxjnl-2012-203105. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43717,
+                    "infons": {
+                        "journal": "Annu. Rev. Physiol. ",
+                        "volume": "78",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Dickson R.P., Erb-Downward J.R., Martinez F.J., Huffnagle G.B. The Microbiome and the respiratory tract. Annu. Rev. Physiol. 2016;78:481\u2013504. doi: 10.1146/annurev-physiol-021115-105238. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43962,
+                    "infons": {
+                        "journal": "MBio. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Quinn R.A., Lim Y.W., Maughan H., Conrad D., Rohwer F., Whiteson K.L. Biogeochemical forces shape the composition and physiology of polymicrobial communities in the cystic fibrosis lung. MBio. 2014;5 doi: 10.1128/mBio.00956-13. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44249,
+                    "infons": {
+                        "journal": "PLoS ONE. ",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Willner D., Furlan M., Haynes M., Schmieder R., Angly F.E., Silva J., Tammadoni S., Nosrat B., Conrad D., Rohwer F. Metagenomic analysis of respiratory tract DNA viral communities in cystic fibrosis and non-cystic fibrosis individuals. PLoS ONE. 2009;4:e7370. doi: 10.1371/journal.pone.0007370. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44603,
+                    "infons": {
+                        "journal": "J. Cyst. Fibros. ",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Lim Y.W., Schmieder R., Haynes M., Willner D., Furlan M., Youle M., Abbott K., Edwards R., Evangelista J., Conrad D., et al. Metagenomics and metatranscriptomics: Windows on CF-associated viral and microbial communities. J. Cyst. Fibros. 2013;12:154\u2013164. doi: 10.1016/j.jcf.2012.07.009. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44949,
+                    "infons": {
+                        "journal": "Infect. Immun. ",
+                        "volume": "58",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Nelson J.W., Tredgett M.W., Sheehan J.K., Thornton D.J., Notman D., Govan J.R. Mucinophilic and chemotactic properties of Pseudomonas aeruginosa in relation to pulmonary colonization in cystic fibrosis. Infect. Immun. 1990;58:1489\u20131495. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:09:35",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "574440",
+                            "locations": {
+                                "length": 22,
+                                "offset": 45075
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 45234,
+                    "infons": {
+                        "journal": "Infect. Immun. ",
+                        "volume": "66",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "36. Feldman M., Bryan R., Rajan S., Scheffler L., Brunnert S., Tang H., Prince A. Role of flagella in pathogenesis of Pseudomonas aeruginosa pulmonary infection. Infect. Immun. 1998;66:43\u201351. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:09:39",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "574441",
+                            "locations": {
+                                "length": 22,
+                                "offset": 45352
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 45470,
+                    "infons": {
+                        "journal": "Proc. Natl. Acad. Sci. USA. ",
+                        "volume": "101",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "37. Wolfgang M.C., Jyot J., Goodman A.L., Ramphal R., Lory S. Pseudomonas aeruginosa regulates flagellin expression as part of a global response to airway fluid from cystic fibrosis patients. Proc. Natl. Acad. Sci. USA. 2004;101:6664\u20136668. doi: 10.1073/pnas.0307553101. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:09:40",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "574442",
+                            "locations": {
+                                "length": 22,
+                                "offset": 45532
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 45795,
+                    "infons": {
+                        "journal": "Infect. Immun. ",
+                        "volume": "50",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "38. Luzar M.A., Thomassen M.J., Montie T.C. Flagella and motility alterations in Pseudomonas aeruginosa strains from patients with cystic fibrosis: Relationship to patient clinical condition. Infect. Immun. 1985;50:577\u2013582. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:09:44",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "574443",
+                            "locations": {
+                                "length": 22,
+                                "offset": 45876
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 46063,
+                    "infons": {
+                        "journal": "Mol. Microbiol. ",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "39. Deretic V., Govan J.R.W., Konyecsni W.M., Martin D.W. Mucoid Pseudomonas aeruginosa in cystic fibrosis: Mutations in the muc loci affect transcription of the algR and algD genes in response to environmental stimuli. Mol. Microbiol. 1990;4:189\u2013196. doi: 10.1111/j.1365-2958.1990.tb00586.x. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:09:46",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "574444",
+                            "locations": {
+                                "length": 22,
+                                "offset": 46128
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 46392,
+                    "infons": {
+                        "journal": "Genomics. ",
+                        "volume": "103",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "40. Chawley P., Samal H.B., Prava J., Suar M., Mahapatra R.K. Comparative genomics study for identification of drug and vaccine targets in Vibrio cholerae: MurA ligase as a case study. Genomics. 2014;103:83\u201393. doi: 10.1016/j.ygeno.2013.12.002. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Vibrio",
+                            "infons": {
+                                "identifier": "NCBI:txid662",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:09:50",
+                                "parent_taxonomic_id": "NCBI:txid641"
+                            },
+                            "id": "574445",
+                            "locations": {
+                                "length": 6,
+                                "offset": 46531
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 46673,
+                    "infons": {
+                        "journal": "Paediatr. Respir. Rev. ",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "41. Rubin B.K. Mucus structure and properties in cystic fibrosis. Paediatr. Respir. Rev. 2007;8:4\u20137. doi: 10.1016/j.prrv.2007.02.004. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46843,
+                    "infons": {
+                        "journal": "Science. ",
+                        "volume": "303",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "42. Brinkmann V., Reichard U., Goosmann C., Fauler B., Uhlemann Y., Weiss D.S., Weinrauch Y., Zychlinsky A. Neutrophil extracellular traps kill bacteria. Science. 2004;303:1532\u20131535. doi: 10.1126/science.1092385. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 23:09:55",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "574446",
+                            "locations": {
+                                "length": 8,
+                                "offset": 46987
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 47092,
+                    "infons": {
+                        "journal": "Science. ",
+                        "volume": "295",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "43. Whitchurch C.B., Tolker-Nielsen T., Ragas P.C., Mattick J.S. Extracellular DNA required for bacterial biofilm formation. Science. 2002;295:1487. doi: 10.1126/science.295.5559.1487. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47313,
+                    "infons": {
+                        "journal": "Int. J. Biochem. Cell Biol. ",
+                        "volume": "40",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "44. Voynow J.A., Fischer B.M., Zheng S. Proteases and cystic fibrosis. Int. J. Biochem. Cell Biol. 2008;40:1238\u20131245. doi: 10.1016/j.biocel.2008.03.003. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47521,
+                    "infons": {
+                        "journal": "J. Cyst. Fibros. ",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "45. Doring G., Flume P., Heijerman H., Elborn J.S., Consensus Study Group Treatment of lung infection in patients with cystic fibrosis: Current and future strategies. J. Cyst. Fibros. 2012;11:461\u2013479. doi: 10.1016/j.jcf.2012.10.004. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47790,
+                    "infons": {
+                        "journal": "J. Cyst. Fibros. ",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "46. Doring G., Hoiby N., Consensus Study Group Early intervention and prevention of lung disease in cystic fibrosis: A European consensus. J. Cyst. Fibros. 2004;3:67\u201391. doi: 10.1016/j.jcf.2004.03.008. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48028,
+                    "infons": {
+                        "journal": "J. Cyst. Fibros. ",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "47. Chavez A., Mian A., Scurlock A.M., Blackall D., Com G. Antibiotic hypersensitivity in CF: Drug-induced life-threatening hemolytic anemia in a pediatric patient. J. Cyst. Fibros. 2010;9:433\u2013438. doi: 10.1016/j.jcf.2010.08.010. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48294,
+                    "infons": {
+                        "journal": "Front. Microbiol. ",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "48. Pehrsson E.C., Forsberg K.J., Gibson M.K., Ahmadi S., Dantas G. Novel resistance functions uncovered using functional metagenomic investigations of resistance reservoirs. Front. Microbiol. 2013;4 doi: 10.3389/fmicb.2013.00145. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48580,
+                    "infons": {
+                        "journal": "PLoS ONE. ",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "49. King P., Pham L.K., Waltz S., Sphar D., Yamamoto R.T., Conrad D., Taplitz R., Torriani F., Forsyth R.A. Longitudinal metagenomic analysis of hospital air identifies clinically relevant microbes. PLoS ONE. 2016;11 doi: 10.1371/journal.pone.0160124. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48887,
+                    "infons": {
+                        "journal": "J. Clin. Invest. ",
+                        "volume": "124",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "50. Blaser M.J. The microbiome revolution. J. Clin. Invest. 2014;124:4162\u20134165. doi: 10.1172/JCI78366. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49045,
+                    "infons": {
+                        "journal": "N. Engl. J. Med. ",
+                        "volume": "331",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "51. Fuchs H.J., Borowitz D.S., Christiansen D.H., Morris E.M., Nash M.L., Ramsey B.W., Rosenstein B.J., Smith A.L., Wohl M.E. Effect of aerosolized recombinant human DNase on exacerbations of respiratory symptoms and on pulmonary function in patients with cystic fibrosis. The Pulmozyme Study Group. N. Engl. J. Med. 1994;331:637\u2013642. doi: 10.1056/NEJM199409083311003. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49450,
+                    "infons": {
+                        "journal": "N. Engl. J. Med. ",
+                        "volume": "340",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "52. Ramsey B.W., Pepe M.S., Quan J.M., Otto K.L., Montgomery A.B., Williams-Warren J., Vasiljev-K M., Borowitz D., Bowman C.M., Marshall B.C., et al. Intermittent administration of inhaled tobramycin in patients with cystic fibrosis. Cystic Fibrosis Inhaled Tobramycin Study Group. N. Engl. J. Med. 1999;340:23\u201330. doi: 10.1056/NEJM199901073400104. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49835,
+                    "infons": {
+                        "journal": "J. Cyst. Fibros. ",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "53. Kerem E., Conway S., Elborn S., Heijerman H., Committee C. others Standards of care for patients with cystic fibrosis: A European consensus. J. Cyst. Fibros. 2005;4:7\u201326. doi: 10.1016/j.jcf.2004.12.002. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50078,
+                    "infons": {
+                        "journal": "Am. J. Respir. Crit. Care Med. ",
+                        "volume": "180",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "54. Flume P.A., Mogayzel P.J., Robinson K.A., Goss C.H., Rosenblatt R.L., Kuhn R.J., Marshall B.C., Bujan J., Downs A., Finder J., et al. Cystic fibrosis pulmonary guidelines: Treatment of pulmonary exacerbations. Am. J. Respir. Crit. Care Med. 2009;180:802\u2013808. doi: 10.1164/rccm.200812-1845PP. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50410,
+                    "infons": {
+                        "journal": "J. Cyst. Fibros. ",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "55. Smyth A.R., Bell S.C., Bojcin S., Bryon M., Duff A., Flume P., Kashirskaya N., Munck A., Ratjen F., Schwarzenberg S.J., et al. European cystic fibrosis society standards of care: Best practice guidelines. J. Cyst. Fibros. 2014;13:S23\u2013S42. doi: 10.1016/j.jcf.2014.03.010. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50721,
+                    "infons": {
+                        "journal": "Thorax. ",
+                        "volume": "67",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "56. Taylor-Robinson D., Whitehead M., Diderichsen F., Olesen H.V., Pressler T., Smyth R.L., Diggle P. Understanding the natural progression in %FEV1 decline in patients with cystic fibrosis: A longitudinal study. Thorax. 2012;67:860\u2013866. doi: 10.1136/thoraxjnl-2011-200953. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51050,
+                    "infons": {
+                        "journal": "Am. J. Respir. Crit. Care Med. ",
+                        "volume": "176",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "57. Flume P.A., O\u2019Sullivan B.P., Robinson K.A., Goss C.H., Mogayzel P., Jr., Willey-Courand D.B., Bujan J., Finder J., Lester M. Cystic Fibrosis Pulmonary Guidelines: Chronic Medications for Maintenance of Lung Health. Am. J. Respir. Crit. Care Med. 2007;176:957\u2013969. doi: 10.1164/rccm.200705-664OC. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51386,
+                    "infons": {
+                        "journal": "Eur. Respir. J. ",
+                        "volume": "26",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "58. Miller M.R., Hankinson J., Brusasco V., Burgos F., Casaburi R., Coates A., Crapo R., Enright P., van der Grinten C.P.M., Gustafsson P., et al. Standardisation of spirometry. Eur. Respir. J. 2005;26:319\u2013338. doi: 10.1183/09031936.05.00034805. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51668,
+                    "infons": {
+                        "journal": "PLoS ONE. ",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "59. Willner D., Daly J., Whiley D., Grimwood K., Wainwright C.E., Hugenholtz P. Comparison of DNA extraction methods for microbial community profiling with an application to pediatric bronchoalveolar lavage samples. PLoS ONE. 2012;7:e34605. doi: 10.1371/journal.pone.0034605. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51999,
+                    "infons": {
+                        "journal": "Mol. Ecol. Resour. ",
+                        "volume": "14",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "60. Bacci G., Bazzicalupo M., Benedetti A., Mengoni A. StreamingTrim 1.0: A Java software for dynamic trimming of 16S rRNA sequence data from metagenetic studies. Mol. Ecol. Resour. 2014;14:426\u2013434. doi: 10.1111/1755-0998.12187. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52264,
+                    "infons": {
+                        "journal": "Nat. Methods. ",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "61. Langmead B., Salzberg S.L. Fast gapped-read alignment with Bowtie 2. Nat. Methods. 2012;9:357\u2013359. doi: 10.1038/nmeth.1923. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52447,
+                    "infons": {
+                        "journal": "PLoS Comput. Biol. ",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "62. Abubucker S., Segata N., Goll J., Schubert A.M., Izard J., Cantarel B.L., Rodriguez-Mueller B., Zucker J., Thiagarajan M., Henrissat B., et al. Metabolic reconstruction for metagenomic data and its application to the human microbiome. PLoS Comput. Biol. 2012;8:e1002358. doi: 10.1371/journal.pcbi.1002358. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52812,
+                    "infons": {
+                        "journal": "Nat. Methods. ",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "63. Truong D.T., Franzosa E.A., Tickle T.L., Scholz M., Weingart G., Pasolli E., Tett A., Huttenhower C., Segata N. MetaPhlAn2 for enhanced metagenomic taxonomic profiling. Nat. Methods. 2015;12:902\u2013903. doi: 10.1038/nmeth.3589. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53077,
+                    "infons": {
+                        "journal": "J. Comput. Biol. ",
+                        "volume": "19",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "64. Bankevich A., Nurk S., Antipov D., Gurevich A.A., Dvorkin M., Kulikov A.S., Lesin V.M., Nikolenko S.I., Pham S., Prjibelski A.D., et al. SPAdes: A new genome assembly algorithm and its applications to single-cell sequencing. J. Comput. Biol. 2012;19:455\u2013477. doi: 10.1089/cmb.2012.0021. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53423,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "464",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "65. Qin J., Li R., Raes J., Arumugam M., Burgdorf K.S., Manichanh C., Nielsen T., Pons N., Levenez F., Yamada T., et al. A human gut microbial gene catalogue established by metagenomic sequencing. Nature. 2010;464:59\u201365. doi: 10.1038/nature08821. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53725,
+                    "infons": {
+                        "journal": "Nucleic Acids Res. ",
+                        "volume": "38",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "66. Zhu W., Lomsadze A., Borodovsky M. Ab initio gene identification in metagenomic sequences. Nucleic Acids Res. 2010;38:e132. doi: 10.1093/nar/gkq275. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53933,
+                    "infons": {
+                        "journal": "PLoS Comput. Biol. ",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "67. Eddy S.R. Accelerated Profile HMM Searches. PLoS Comput. Biol. 2011;7:e1002195. doi: 10.1371/journal.pcbi.1002195. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54107,
+                    "infons": {
+                        "journal": "Nucleic Acids Res. ",
+                        "volume": "40",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "68. Powell S., Szklarczyk D., Trachana K., Roth A., Kuhn M., Muller J., Arnold R., Rattei T., Letunic I., Doerks T., et al. eggNOG v3.0: Orthologous groups covering 1133 organisms at 41 different taxonomic ranges. Nucleic Acids Res. 2012;40:D284\u2013D289. doi: 10.1093/nar/gkr1060. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54440,
+                    "infons": {
+                        "journal": "Curr. Protoc. Bioinform. ",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "69. Pearson W.R. An introduction to sequence similarity (\u201chomology\u201d) searching. Curr. Protoc. Bioinform. 2013 doi: 10.1002/0471250953.bi0301s42. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54640,
+                    "infons": {
+                        "journal": "Nucleic Acids Res. ",
+                        "volume": "42",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "70. Saier M.H., Reddy V.S., Tamang D.G., V\u00e4stermark A. The transporter classification database. Nucleic Acids Res. 2014;42:D251\u2013D258. doi: 10.1093/nar/gkt1097. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54855,
+                    "infons": {
+                        "journal": "Nucleic Acids Res. ",
+                        "volume": "35",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "71. Zhou C.E., Smith J., Lam M., Zemla A., Dyer M.D., Slezak T. MvirDB\u2014A microbial database of protein toxins, virulence factors and antibiotic resistance genes for bio-defence applications. Nucleic Acids Res. 2007;35:D391\u2013D394. doi: 10.1093/nar/gkl791. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55164,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "72. Oksanen J., Blanchet F., Kindt R., Legendre P., Minchin P., O\u2019Hara R., Simpson G., Solymos P., Stevens M.H.H., Wagner H. Vegan: Community ecology package. 2013 R package version 2.0\u201310. Available online: http://CRAN.R-project.org/package=vegan.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55412,
+                    "infons": {
+                        "journal": "ISME J. ",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "73. Kuang J., Huang L., He Z., Chen L., Hua Z., Jia P., Li S., Liu J., Li J., Zhou J., et al. Predicting taxonomic and functional structure of microbial communities in acid mine drainage. ISME J. 2016;10:1527\u20131539. doi: 10.1038/ismej.2015.201. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55711,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "457",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "74. Turnbaugh P.J., Hamady M., Yatsunenko T., Cantarel B.L., Duncan A., Ley R.E., Sogin M.L., Jones W.J., Roe B.A., Affourtit J.P., et al. A core gut microbiome in obese and lean twins. Nature. 2009;457:480\u2013484. doi: 10.1038/nature07540. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56004,
+                    "infons": {
+                        "journal": "Proc. Natl. Acad. Sci. USA. ",
+                        "volume": "104",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "75. John R., Dalling J.W., Harms K.E., Yavitt J.B., Stallard R.F., Mirabello M., Hubbell S.P., Valencia R., Navarrete H., Vallejo M., et al. Soil nutrients influence spatial distributions of tropical tree species. Proc. Natl. Acad. Sci. USA. 2007;104:864\u2013869. doi: 10.1073/pnas.0604666104. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56349,
+                    "infons": {
+                        "journal": "Ggplot2: Elegant Graphics for Data Analysis.",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "76. Wickham H. Ggplot2: Elegant Graphics for Data Analysis. Springer; New York, NY, USA: 2009. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

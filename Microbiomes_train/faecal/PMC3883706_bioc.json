@@ -1,0 +1,1494 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC3883706",
+            "inputfile": "../microbiome_corpus_HTML\\PMC3883706.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Functional metagenomic profiling of intestinal microbiome in extreme ageing",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 75,
+                    "infons": {
+                        "section_title_1": "keywords",
+                        "iao_name_1": "keywords section",
+                        "iao_id_1": "IAO:0000630"
+                    },
+                    "text": "centenarians, extreme-aging, gut microbiome",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 126,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Age-related alterations in human gut microbiota composition have been thoroughly described, but a detailed functional description of the intestinal bacterial coding capacity is still missing. In order to elucidate the contribution of the gut metagenome to the complex mosaic of human longevity, we applied shotgun sequencing to total fecal bacterial DNA in a selection of samples belonging to a well-characterized human ageing cohort. The age-related trajectory of the human gut microbiome was characterized by loss of genes for shortchain fatty acid production and an overall decrease in the saccharolytic potential, while proteolytic functions were more abundant than in the intestinal metagenome of younger adults. This altered functional profile was associated with a relevant enrichment in \u201cpathobionts\u201d, i.e. opportunistic pro-inflammatory bacteria generally present in the adult gut ecosystem in low numbers. Finally, as a signature for long life we identified 116 microbial genes that significantly correlated with ageing. Collectively, our data emphasize the relationship between intestinal bacteria and human metabolism, by detailing the modifications in the gut microbiota as a consequence of and/or promoter of the physiological changes occurring in the human host upon ageing.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:30:01",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "27426381",
+                            "locations": {
+                                "length": 8,
+                                "offset": 972
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:30:04",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "27426382",
+                            "locations": {
+                                "length": 8,
+                                "offset": 1226
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 1423,
+                    "infons": {
+                        "section_title_1": "INTRODUCTION",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Ageing is a complex multifactorial process with a major impact on the human body [1]. The ageing process seriously affects the human gut microbiota in particular, because it is accompanied by changes in the physiology of the gastrointestinal tract and associated immune system, as well as by changes in diet and lifestyle [2,3]. The adult-like profile of the human intestinal microbiota is stably maintained over time in healthy adults [4,5], defining an essentially mutualistic scenario whereby, in return for a guaranteed nutrient supply, the gut microbiota provides numerous fundamental functions to the host, including vitamin and metabolite supply and colonization resistance against pathogens [6]. The pathophysiology of the ageing process can ultimately compromise this homeostasis with a subject-specific timing, depending on the individual physiological status, diet, lifestyle and frailty [7-13].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2341,
+                    "infons": {
+                        "section_title_1": "INTRODUCTION",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Changes in microbiota composition in older people have been connected to immunosenescence and inflammaging [14-17]. An important factor which affects the gut microbiota in ageing is diet [18]. A very recent study highlighted the impact of the habitual diet on the gut microbiota of elderly people, demonstrating diet-driven alterations in varying rates of health decline upon ageing [19]. In that study, a reduced coding capacity for producing short-chain fatty acids in frail subjects correlated with lower levels of butyrate, acetate and propionate in the fecal metabolome. However, the functional aspects of the intestinal microbial community and their relation with the ageing process are not frequently investigated. Indeed, the majority of recent studies focussing on the relationship between ageing and the gut microbiota used a 16S rDNA amplicon sequencing approach, which reflects the phylogenetic structure of the microbiota but does not provide information pertaining to function. Even if microbiota compositional information allows a large number of deductions to be inferred, a metagenomics approach is ultimately required, because it provides a view of community structure in terms of species richness and distribution, as well as the functional (metabolic) potential of the community metagenome [20].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3656,
+                    "infons": {
+                        "section_title_1": "INTRODUCTION",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In order to explore the age-related changes of the human gut microbiome, we applied Illumina shotgun sequencing to 9 fecal samples, whose microbiota composition was reported in a previous study [8], including centenarians, individuals at the upper extremity of the human lifespan [21]. We hypothesized that centenarians represent a valuable opportunity for increasing the temporal resolution of microbiota-ageing interactions. The particular physiology and the general inflammatory status of centenarians make these individuals very different from the rest of the population, including in terms of gut microbiota composition [8]. In a very recent study, the metabolomic profile of centenarians was also characterized, allowing the identification of some urine metabotypes which were strongly connected with extreme ageing and some intestinal microbiota elements [22]. In the present pilot work, by determining the centenarian gut microbiome we propose a wide functional description of the human gut microbiota upon ageing.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4678,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Meta-analysis of gut microbiota functionality, taxonomy and urine metabotypes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We previously reported substantial inter-individual variability in the fecal microbiota composition of 64 older people, comprising 21 centenarians, 22 elderly subjects genetically unrelated to the centenarians, and 21 offspring of the centenarians [8]. A group of 20 young adults had also been included as a control. Furthermore, the metabolic phenotype of the subjects was recently characterized by 1H-NMR and mass spectrometry analysis of plasma and urine [22].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5225,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Meta-analysis of gut microbiota functionality, taxonomy and urine metabotypes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To investigate functional differences in the gut microbiome across the age groups studied and to characterize the metabolic trajectory of human intestinal microbiota upon ageing, we analyzed a subset of these samples: 3 centenarians, aged 99 to 102 years (mean 100.7), 5 elderly people, including 3 offspring of the centenarians, aged 59 to 75 years (mean 66.4), and one 38-year-old adult, as a young control. All the subjects were of Caucasian (Italian) ethnicity and resided in Emilia Romagna, a region in Northern Italy.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5748,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Meta-analysis of gut microbiota functionality, taxonomy and urine metabotypes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Firstly, in order to prove that the selected samples were representatives of the entire cohort they were drawn from, we performed a multivariate analysis on the previous HITChip results for the subjects selected for this study [8] (Figure \u200b(Figure1a)1a) and described their urine metabolic profiles applying Projection on Latent Structures \u2013 Discriminant Analysis (PLS-DA) on the 1H-NMR spectra [22] (Figure \u200b(Figure1b).1b). Both analyses showed that centenarians widely differed from the other subjects.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6252,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Meta-analysis of gut microbiota functionality, taxonomy and urine metabotypes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "By Illumina shotgun sequencing of the fecal microbial DNA from the selected individuals, we generated a total of 214.6 million paired-end reads, with an average of 23.841 million (\u00b1 0.067 SD) reads per subject. Shotgun sequences were processed using the MetaPhlAn pipeline and a multivariate analysis of the taxonomic results was carried out (Figure S1). By using the genus coordinates of the taxonomic PCoA and their mean contribution in the groups, two node graphs, respectively for centenarians and 70-year-old subjects, were obtained. Figure \u200bFigure22 thus shows the gut microbiota fingerprints at the genus level in centenarians and elderly. In the center of the resulting graphs were positioned the genus-nodes that were equally abundant in all the samples while the other areas of the graph contained genus-nodes present at different relative abundance across the subjects. Thus the data indicate that the genera Escherichia and Ruminococcus were over-represented in centenarians, whereas Faecalibacterium, Eubacterium and Bifidobacterium were more abundant in the elderly.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Escherichia",
+                            "infons": {
+                                "identifier": "NCBI:txid561",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:31:11",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "27426383",
+                            "locations": {
+                                "length": 11,
+                                "offset": 7172
+                            }
+                        },
+                        {
+                            "text": "Ruminococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1263",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:31:11",
+                                "parent_taxonomic_id": "NCBI:txid216572"
+                            },
+                            "id": "27426384",
+                            "locations": {
+                                "length": 12,
+                                "offset": 7188
+                            }
+                        },
+                        {
+                            "text": "Faecalibacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid216851",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:31:12",
+                                "parent_taxonomic_id": "NCBI:txid216572"
+                            },
+                            "id": "27426385",
+                            "locations": {
+                                "length": 16,
+                                "offset": 7248
+                            }
+                        },
+                        {
+                            "text": "Eubacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1730",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:31:12",
+                                "parent_taxonomic_id": "NCBI:txid186806"
+                            },
+                            "id": "27426386",
+                            "locations": {
+                                "length": 11,
+                                "offset": 7266
+                            }
+                        },
+                        {
+                            "text": "Bifidobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1678",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:31:12",
+                                "parent_taxonomic_id": "NCBI:txid31953"
+                            },
+                            "id": "27426387",
+                            "locations": {
+                                "length": 15,
+                                "offset": 7282
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 7332,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Meta-analysis of gut microbiota functionality, taxonomy and urine metabotypes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Functional characterization of the shotgun sequence reads in the KEGG database was carried out by using MetaCV pipeline. Hierarchical Ward-linkage clustering based on the Pearson correlation of the normalized number of mapped reads per gene function at KEGG Orthology (KO) level showed a clear separation between centenarians (C1-C3) and the other subjects (E1-E5 and A1; Figure \u200bFigure3a).3a). When examining the functional gene distribution at high levels of the KEGG database, we identified clusters of specific genes which were characteristic of the ageing groups, even if the relative abundance of functions was distributed in a similar way across all subjects (Figure \u200b(Figure3a3a).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8020,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Meta-analysis of gut microbiota functionality, taxonomy and urine metabotypes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Procrustes analysis of the functional gene profiles and the microbiota \u03b2-diversity or Euclidean distances of urine metabotypes was used to co-illustrate the data (Figure \u200b(Figure3b).3b). In both cases, the separation between centenarians and the other subjects occurred along the first axis. The RV coefficient obtained by co-inertia analysis between the same paired datasets, highlighted the association between the taxonomic and functional datasets (RV = 0.794), in despite of the functional and urine metabonomic results, which appeared to be not related to each other (RV = 0.380).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8605,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Relation between the functional structure of the gut microbiota and ageing",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We applied the metaCV procedure for achieving a functional characterization of the fecal microbiota at different levels of KEGG classification. Alpha-diversity was computed at KO level using the Simpson index and was not significantly different between the age groups (centenarians, 0.904 \u00b1 0.010; the elderly, 0.892 \u00b1 0.061). PCoA based on Euclidean distances of functional gene profiles at KO level showed an age-related resolution (Figure \u200b(Figure4a).4a). In particular, the first axis, which represented 82.5% of the data variability, described most of the ageing-related differences (Kendall's tau coefficient = \u22120.778, p value = 0.002, Figure \u200bFigure4b).4b). For this reason, we used PCo1 to assess the functional potential of the gut microbiome upon ageing. In particular, we focused our attention on the genes involved in amino acid and carbohydrate metabolisms, core genes in metabolism, in order to obtain an ordination of the pathways along PCo1. Each point of the resulting graph corresponded to the average of the coordinates of the KO genes involved in the same KEGG pathway, and the intervals coincided with the standard error of the mean (SEM; Figure \u200bFigure4c).4c). In this way, we built a sort of ranking of KEGG pathways, where negative values of PCo1 coordinates were related with ageing. We observed a polarization of the pathways related to amino acid metabolism in the extremities of the axis, and a more dense localization at positive values of PCo1 coordinates for the pathways involved in carbohydrate metabolism. In particular, the metabolism of two aromatic amino acids, tryptophan and phenylalanine, was closely associated with ageing, followed by the metabolism of other amino acids, such as tyrosine, valine and lysine. Conversely, the metabolism of other amino acids and several carbohydrates, such as glucose, galactose, histidine, pyruvate and butanoate was related to high positive values of PCo1. Notably, the last two pathways are strictly connected with short-chain fatty acid (SCFA) production.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10712,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Functional signature of extreme ageing in the intestinal core microbiome",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Since we aimed at highlighting alterations within the core microbiome structure associated with ageing, we first filtered out all the KO genes which possessed a significant (p value < 0.05) positive correlation with the proportional abundance of Escherichia, a pathobiont that is prevalent in the centenarian gut. The filtered genes were further analyzed for their correlation with subject age (p value < 0.05). The resulting 116 KO genes are listed in Supplementary Table 1, with annotated functions.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Escherichia",
+                            "infons": {
+                                "identifier": "NCBI:txid561",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:31:53",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "27426388",
+                            "locations": {
+                                "length": 11,
+                                "offset": 10958
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 11285,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In the present study we characterized the gut microbiota metagenome of extreme longevity individuals, elderly people and a young adult by Illumina shotgun sequencing. The subjects chosen typify a bigger cohort whose members had been well characterized for gut microbiota composition as well as for urine and serum metabolites[8, 22]. Here we focused on the functional aspects of the gut microbiota, in order to investigate ageing-related changes of the microbiome structure and function. Confirming Biagi et al. (2010) [8], multivariate analysis of the taxonomic dataset showed an overall increase in Proteobacteria and a re-arrangement in Firmicutes in centenarians, whereas 70-year-old elderly people maintained a gut microbiota profile very similar to the one shown by the young adult. The Procrustes analysis highlighted the relationships between taxonomic and functional datasets, showing a clear separation between centenarians and younger subjects with respect to both microbiome structure and functionality. Shotgun sequencing analysis revealed important modifications in microbiota functions in centenarians, allowing us to define an aged-type microbiome characterized by a specific functional complement different from the one present in younger subjects. As a result of taxonomic rearrangements in the gut microbiota composition, the changes in microbiome structure we detected as a function of aging allowed us to shed some light on the mechanisms associated with bacterial community change accompanying the overall ageing process.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:32:03",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "27426389",
+                            "locations": {
+                                "length": 14,
+                                "offset": 11886
+                            }
+                        },
+                        {
+                            "text": "Firmicutes",
+                            "infons": {
+                                "identifier": "NCBI:txid1239",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:32:03",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "27426390",
+                            "locations": {
+                                "length": 10,
+                                "offset": 11925
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 12838,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Examining the KO gene abundance we identified a cluster including all the centenarian subjects, separated from the clustered younger subjects. While at high level of KEGG assignments the functional structure of the microbiota was present in both clusters without significant differences, the distribution of genes at KO levels followed an age-related tendency. Among these, we observed an age-related increased abundance of genes involved in the tryptophan metabolism pathway (ko00380). This evidence is in agreement with the reduction of tryptophan found in serum of centenarians [22], although we cannot directly infer causality. Linking together the two observations, we advance the hypothesis that the potential increase of consumption of tryptophan by the gut microbiota affects its bioavailability within the host. A recent study showed patients with inflammatory diseases to have a significant depletion of serum levels of tryptophan compared to control population [23] and Huang et al. demonstrated a clear relationship between reduced serum tryptophan levels and an increase of immune activation [24]. In addition, the decrease of the serum level of tryptophan was associated with cognitive deficit in senile dementias [25-27], and Noristani et al. demonstrated that high triptophan diet lead to a reduction of the plaque pathology in Alzheimer's disease in mouse [28]. It is thus tempting to speculate that a microbiota-dependent reduction of tryptophan can nurture inflammaging in centenarians and could worsen the conditions of the patients affected by cognitive deficit. Furthermore, our study revealed that the altered abundance of genes involved in phenylalanine metabolism (ko00360) and tyrosine metabolism (ko00350) was related with ageing. This evidence supports the proposal of two metabolites (phenylacetylglutamine (PAG) and p-cresol-sulfate (PCS)), as markers in urine of extreme ageing [22]. Indeed, it has been extensively demonstrated that PAG and PCS derive from microbial metabolism of aromatic amino acids, including tyrosine and phenylalanine [29]. Short-chain fatty acids \u2013 mainly acetate, butyrate and proprionate \u2013 are microbiota-derived metabolites that are fundamental for the human health and wellbeing. They represent a source of energy for the gastrointestinal epithelium, stimulators for the release of mucins, immune modulators, and promoters of the integrity of the epithelial barrier [30,31]. Primarily, SCFAs are produced by bacterial fermentation of dietary polysaccharides which reach the colon undigested. This process relies on the presence of a glycophilic bacterial community in the colon, and also on other bacterial groups acting in concert with these primary degraders [19,32,33]. It has been demonstrated that a reduced dietary intake of carbohydrates causes decreased numbers of butyrate and butyrate-producing bacteria such as Roseburia and Eubacterium [34], highlighting the importance of carbohydrate availability in the large intestine for the maintenance of a fibrolytic SCFA-producing microbial community. In relation to this, our data showed a loss of genes involved in SCFA production and an overall decrease in the saccharolytic potential as a function of aging. In particular, in the extremely aged-type microbiome we observed a decrease in starch and sucrose metabolism (ko00500), pyruvate metabolism (ko00620), galactose metabolism (ko00052) and glycolysis/gluconeogenesis (ko00010), accompanied by a concomitant loss of fibrolytic microorganisms belonging to the Eubacterium, Bifidobacterium and Faecalibacterium genera. Notably, pyruvate and butanoate metabolism, which showed an inverse association with aging, are described in KEGG database as pathways containing genes involved in SCFA production. Our data showed an overall rearrangement in the aged-type microbiome of the pathways involved in the production of SCFA via proteolytic fermentation. In particular, genes involved in lysine degradation (ko00310), implicated in butyrate and acetate production, were more abundant in centenarians, while elderly and adults were enriched in genes responsible for the metabolism of glutamate, aspartate and alanine (ko00250), which in turn are involved in the production of acetate, butyrate and propionate, respectively [35]. Nevertheless, the aged-type microbiome was characterized by an overall increase in proteolytic functions, as suggested also by the degradation of the branched-chain amino acids, valine, leucine and isoleucine (ko00280), which was strictly connected with the microbial metagenome of centenarians. Notably, the first catabolic intermediates of valine, isoleucine and leucine are the precursors of the branched-chain fatty acids that are involved in the cell membrane biosynthesis of inflammation-promoting Gram-negative bacteria [36,37]. Interestingly, the increased abundance of proteolytic functions in the aged-type microbiome is accompanied by lower lysine, valine, leucine and isoleucine biosynthetic capability (ko00290; ko00300). All these molecules are essential amino acids, with the respective biosynthetic pathways completely lacking in mammals. In particular, lysine plays an essential role in many cellular process, including the functionality of the pyruvate dehydrogenase complex [38,39]. Reduction in the microbiota production of essential amino acids as part of aging could thus have a primary role in compromising the overall nutritional state of elderly subjects, leading to sarcopenia.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:32:44",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "27426391",
+                            "locations": {
+                                "length": 8,
+                                "offset": 15702
+                            }
+                        },
+                        {
+                            "text": "Roseburia",
+                            "infons": {
+                                "identifier": "NCBI:txid841",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:32:44",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "27426392",
+                            "locations": {
+                                "length": 9,
+                                "offset": 15719
+                            }
+                        },
+                        {
+                            "text": "Eubacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1730",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:32:44",
+                                "parent_taxonomic_id": "NCBI:txid186806"
+                            },
+                            "id": "27426393",
+                            "locations": {
+                                "length": 11,
+                                "offset": 15733
+                            }
+                        },
+                        {
+                            "text": "Eubacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1730",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:32:51",
+                                "parent_taxonomic_id": "NCBI:txid186806"
+                            },
+                            "id": "27426394",
+                            "locations": {
+                                "length": 11,
+                                "offset": 16367
+                            }
+                        },
+                        {
+                            "text": "Bifidobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1678",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:32:51",
+                                "parent_taxonomic_id": "NCBI:txid31953"
+                            },
+                            "id": "27426395",
+                            "locations": {
+                                "length": 15,
+                                "offset": 16380
+                            }
+                        },
+                        {
+                            "text": "Faecalibacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid216851",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:32:51",
+                                "parent_taxonomic_id": "NCBI:txid216572"
+                            },
+                            "id": "27426396",
+                            "locations": {
+                                "length": 16,
+                                "offset": 16400
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:33:04",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "27426397",
+                            "locations": {
+                                "length": 8,
+                                "offset": 17647
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 18332,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In summary the proteolytic potential of the gut microbiota appeared to be enhanced upon ageing, even if there are changes of substrate, and a clear loss of genes involved in the metabolism of carbohydrates in the aged-type microbiota was observed. Furthermore, we found an age-related reduction of the abundance of genes in pathways involved in SCFA production. Based on differential abundance, the aged-type microbiota is structurally and functionally compromised, moving from a saccharolytic to a putrefactive metabolism. It is noteworthy that these microbiome alterations concord with the enrichment of genes belonging to pathobionts. Pathobionts are minor microbiota opportunists able to thrive in inflamed conditions, sustaining and nurturing the physiological inflammation [14]. We therefore postulate that pathobiont overgrowth can nurture a sort of pro-inflammatory loop which could worsen the health status of aged people. We can also hypothesize that in centenarians \u2013the extreme limit of human life span \u2013 some readjustments take place within the core mutualistic microbiome functions that serve to offset detrimental activities associated with pathobiont overgrowth. In order to shed some light on this, we focused our analysis on the core microbiome changes occurring in centenarians. According to our findings, 116 genes usually present in different metagenome project databases [40-43], reflect the rearrangement of the core metabolic potential of the centenarian intestinal microbial ecosystem. This raises the question of whether these specific changes in the structure of the mutualistic counterpart of the gut microbiome reflect a new mutualistic configuration, responding to a microbiota-host adaptation process co-evolved to support the extreme limits of human lifespan.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20123,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "It is important to note that in this pilot study the functional characterization of a small number of samples, representative of a bigger cohort, allowed us to investigate the functional potential of the gut microbiota, which clearly needs further validation by increasing the sample number. Furthermore, since the subjects belong to a limited geographic area (Emilia Romagna region), and are thus similar in lifestyle and habitual dietary patterns, these data also need confirmation across populations with different environmental conditions and genetic background. Nevertheless, our microbiome study of extreme ageing contributes to assess a more inclusive portrayal of the role of the intestinal bacterial counterpart in the pathophysiology of the ageing process. An ongoing project (www.nu-age.eu) will also include analysis of different dietary regimes in the ageing human population, to allow searching for correlations between gut microbiota composition and functionality, physiological and immunological parameters, metabonomic profiles and diet.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21177,
+                    "infons": {
+                        "section_title_1": "METHODS",
+                        "section_title_2": "Sample collection",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The study employed 9 fecal samples collected for the study of Biagi et al. (2010) [8]. We utilized the same fecal genomic DNA used for previous analysis and which had been stored at \u221220\u00b0C.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21389,
+                    "infons": {
+                        "section_title_1": "METHODS",
+                        "section_title_2": "Basic bioinformatic and statistical analysis of the metadata",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Phylogenetic profiles of HITChip array data were retrieved from the study of Biagi et al. (2010) [8]. The dataset was analyzed in R version 3.0.0 (www.cran.org), using the R package \u201cVegan\u201d [44], in order to obtain a Principal Coordinates Analysis (PCoA) based on Euclidean distances.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21733,
+                    "infons": {
+                        "section_title_1": "METHODS",
+                        "section_title_2": "Basic bioinformatic and statistical analysis of the metadata",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Urine metabotypes of 8 out of 9 individuals involved in our study (2 centenarians, 5 elderly people and 1 adult) had been previously characterized by 1H-NMR profiling NMR(Bruker Avance III 600 MHz, Bruker Biospin, Rheinstetten, Germany) [22]. The resulting spectra were analyzed in the present study using the packages \u201cChemoSpec\u201d [45] and \u201cVegan\u201d [44]. Projection on Latent Structures \u2013 Discriminant Analysis (PLS-DA) plot was carried out with SIMCA software (version 13.0, Umetrics AB, Umea, Sweden).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22235,
+                    "infons": {
+                        "section_title_1": "METHODS",
+                        "section_title_2": "Basic bioinformatic and statistical analysis of the metadata",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The phylogenetic characterization of the shotgun sequences was achieved at different levels of taxonomy by using MetaPhlAn with default parameters [46]. Statistical analysis was carried out using R. MetaPhlan result files were read into R, and matrices containing the relative abundances of taxa at phylum and genus level for each sample were constructed. Abundance analysis, multivariate statistical analysis, including PCoA, were computed using Cytoscape [47], R Bioconductor package \u201cMade4\u201d [48], and the R packages \u201cstats\u201d and \u201cVegan\u201d [44].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22779,
+                    "infons": {
+                        "section_title_1": "METHODS",
+                        "section_title_2": "Basic bioinformatic and statistical analysis of the metadata",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Integration of the data by Procrustes and Co-inertia analyses was achieved using the functions \u201cprocrustes\u201d and \u201ccia\u201d of \u201cVegan\u201d [44] and \u201cMade4\u201d [48] packages, respectively. The coefficient RV of Co-inertia Analysis describes the global similarity between datasets: the closer this value is to 1, the greater is the similarity.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23107,
+                    "infons": {
+                        "section_title_1": "METHODS",
+                        "section_title_2": "Gut microbiome functional characterization: bioinformatic and statistical analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "In order to functionally annotate the data, the shotgun reads first had to be quality filtered to remove low quality and human sequences. This step was achieved by using the human sequence removal pipeline and the WGS read processing procedure of the Human Microbiome Project (HMP) [41]. The obtained reads were locally assigned for functionality at different levels of the KEGG database [49], using the Metagenome Composition Vector (MetaCV), with default parameters. This tool consists of a composition algorithm which allows classification of very short reads into functional groups [50]. The resulting table consists of a matrix, with sample IDs in the columns and annotations at different levels of KEGG database in the rows. The file produced was loaded into R and then filtered for the abundances at first and then for KEGG Orthology (KO) level of KEGG classification.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24064,
+                    "infons": {
+                        "section_title_1": "METHODS",
+                        "section_title_2": "Gut microbiome functional characterization: bioinformatic and statistical analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "PCoA using Euclidean distances based on KO gene dataset was performed with the package \u201cVegan\u201d of R [44] and used also for Procrustes analysis. The function \u201cscores\u201d of \u201cVegan\u201d was used to retrieve the coordinates of the samples and KEGG KO genes in the PCoA. The values obtained were used to perform observations about their ordination along the axes. Kendall correlation test was achieved using function \u201ccor.test\u201d of the package \u201cstats\u201d of R. When appropriate, p values were adjusted for multiple comparison using the Benjamini-Hochberg correction. Sequences were also assembled using meta-velvet [51] and the resulting contigs were uploaded in MG-RAST [52] under the project ID 2558.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24751,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "We thank Ian B Jeffery for advice on bioinformatics and biostatistics. Research in PWOT's laboratory is supported by Science Foundation Ireland through a CSET award to the Alimentary Pharmabiotic Centre, and by a Department of Agriculture, Fisheries, Food and Marine award to ELDERMET. Research in CF's laboratory is supported by the European Union's Seventh Framework Programme (FP7/2007-2011) under grant agreement n. 259679 (IDEAL).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25201,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "The authors of this manuscript have no conflict of interest to declare.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25281,
+                    "infons": {
+                        "journal": "J Appl Physiol. ",
+                        "volume": "95",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Weinert BT, Timiras PS. Invited review: Theories of aging. J Appl Physiol. 2003;95:1706\u20131716. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25410,
+                    "infons": {
+                        "journal": "Gut. ",
+                        "volume": "38",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Lovat LB. Age related changes in gut physiology and nutritional status. Gut. 1996;38:306\u2013309. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25548,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "474",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Kau AL, Ahern PP, Griffin NW, Goodman AL, Gordon JI. Human nutrition, the gut microbiome and the immune system. Nature. 2011;474:327\u2013336. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25730,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "489",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Lozupone CA, Stombaugh JI, Gordon JI, Jansson JK, Knight R. Diversity, stability and resilience of the human gut microbiota. Nature. 2012;489:220\u2013230. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25925,
+                    "infons": {
+                        "journal": "Science. ",
+                        "volume": "333",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Faith JJ, McNulty NP, Rey FE, Gordon JI. Predicting a human gut microbiota's response to diet in gnotobiotic mice. Science. 2011;333:101\u2013104. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26111,
+                    "infons": {
+                        "journal": "Gastroenterology. ",
+                        "volume": "136",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Neish AS. Microbes in gastrointestinal health and disease. Gastroenterology. 2009;136:65\u201380. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26248,
+                    "infons": {
+                        "journal": "Age.",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Biagi E, Candela M, Fairweather-Tait Tait, Franceschi C, Brigidi P. Age. Vol. 34. Dordr: 2012. Aging of the human metaorganism: the microbial counterpart; pp. 247\u2013267. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26460,
+                    "infons": {
+                        "journal": "PLoS One. ",
+                        "volume": "5",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Biagi E, Nylund L, Candela M, Ostan R, Bucci L, Pini E, Nikk\u00efla J, Monti D, Satokari R, Franceschi C, Brigidi P, De Vos W. Through ageing, and beyond: gut microbiota and inflammatory status in seniors and centenarians. PLoS One. 2010;5:e10667. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "L Pini",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid687951",
+                                    "NCBI:txid1932930"
+                                ],
+                                "type": [
+                                    "fungi_species",
+                                    "fungi_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:34:43",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid687950",
+                                    "NCBI:txid47830"
+                                ]
+                            },
+                            "id": "27426398",
+                            "locations": {
+                                "length": 6,
+                                "offset": 26505
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26748,
+                    "infons": {
+                        "journal": "Proc Natl Acad Sci U S A. ",
+                        "volume": "1",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Claesson MJ, Cusack S, O'Sullivan O, Greene-Diniz Diniz, de Weerd H, Flannery E, Marchesi JR, Falush D, Dinan T, Fitzgerald G, Stanton C, van Sinderen D, O'Connor M, Harnedy N, O'Connor K, Henry C, et al. Composition, variability, and temporal stability of the intestinal microbiota of the elderly. Proc Natl Acad Sci U S A. 2011;1(108 Suppl):4586\u20134591. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27146,
+                    "infons": {
+                        "journal": "Appl Environ Microbiol. ",
+                        "volume": "70",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Bartosch S, Fite A, Macfarlane GT, McMurdo ME. Characterization of bacterial communities in feces from healthy elderly volunteers and hospitalized elderly patients by using real-time PCR and effects of antibiotic treatment on the fecal microbiota. Appl Environ Microbiol. 2004;70:3575\u20133581. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27481,
+                    "infons": {
+                        "journal": "Appl Environ Microbiol. ",
+                        "volume": "70",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Woodmansey EJ, McMurdo ME, Macfarlane GT, Macfarlane S. Comparison of compositions and metabolic activities of fecal microbiotas in young adults and in antibiotictreated and non-antibiotic-treated elderly subjects. Appl Environ Microbiol. 2004;70:6113\u20136122. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27783,
+                    "infons": {
+                        "journal": "Appl Environ Microbiol. ",
+                        "volume": "72",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Mueller S, Saunier K, Hanisch C, Norin E, Alm L, Midtvedt T, Cresci A, Silvi S, Orpianesi C, Verdenelli MC, Clavel T, Koebnick C, Zunft HJ, Dor\u00e9 J, Blaut M. Differences in fecal microbiota in different European study populations in relation to age, gender, and country: a cross-sectional study. Appl Environ Microbiol. 2006;72:1027\u20131033. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28165,
+                    "infons": {
+                        "journal": "Environ Microbiol. ",
+                        "volume": "11",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Rajili\u0107-Stojanovi\u0107 M, Heilig HG, Molenaar D, Kajander K, Surakka A, Smidt H, de Vos WM. Development and application of the human intestinal tract chip, a phylogenetic microarray: analysis of universally conserved phylotypes in the abundant microbiota of young and elderly adults. Environ Microbiol. 2009;11:1736\u20131751. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28527,
+                    "infons": {
+                        "journal": "Pharmacol Res. ",
+                        "volume": "69",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Biagi E, Candela M, Turroni S, Garagnani P, Franceschi C, Brigidi P. Ageing and gut microbes: perspectives for health maintenance and longevity. Pharmacol Res. 2013;69:11\u201320. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28727,
+                    "infons": {
+                        "journal": "Curr Top Microbiol Immunol. ",
+                        "volume": "358",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Cheng J, Palva AM, de Vos WM, Satokari R. Contribution of the intestinal microbiota to human health: from birth to 100 years of age. Curr Top Microbiol Immunol. 2013;358:323\u2013346. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28931,
+                    "infons": {
+                        "journal": "Curr Opin Clin Nutr Metab Care. ",
+                        "volume": "16",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Cevenini E, Monti D, Franceschi C. Inflamm-ageing. Curr Opin Clin Nutr Metab Care. 2013;16:14\u201320. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29054,
+                    "infons": {
+                        "journal": "Ann N Y Acad Sci. ",
+                        "volume": "908",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Franceschi C, Bonaf\u00e8 M, Valensin S, Olivieri F, De Luca M, Ottaviani E, De Benedictis G. Inflamm-aging. An evolutionary perspective on immunosenescence. Ann N Y Acad Sci. 2000;908:244\u2013254. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29268,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "486",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Yatsunenko T, Rey FE, Manary MJ, Trehan I, Dominguez-Bello Bello, Contreras M, Magris M, Hidalgo G, Baldassano RN, Anokhin AP, Heath AC, Warner B, Reeder J, Kuczynski J, Caporaso JG, et al. Human gut microbiome viewed across age and geography. Nature. 2012;486:222\u2013227. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29582,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "488",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Claesson MJ, Jeffery IB, Conde S, Power SE, O'Connor EM, Cusack S, Harris HM, Coakley M, Lakshminarayanan B, O'Sullivan O, Fitzgerald GF, Deane J, O'Connor M, Harnedy N, O'Connor K, O'Mahony D, et al. Gut microbiota composition correlates with diet and health in the elderly. Nature. 2012;488:178\u2013284. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29909,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "455",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Hugenholtz P, Tyson GW. Microbiology: metagenomics. Nature. 2008;455:481\u2013483. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30012,
+                    "infons": {
+                        "journal": "Aging.",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Franceschi C, Motta L, Valensin S, Rapisarda R, Franzone A, Berardelli M, Motta M, Monti D, Bonaf\u00e8 M, Ferrucci L, Deiana L, Pes GM, Carru C, Desole MS, Barbi C, Sartoni G, et al. Aging. Vol. 12. Milano: 2000. Do men and women follow different trajectories to reach extreme longevity? Italian Multicenter Study on Centenarians (IMUSCE) pp. 77\u201384. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30383,
+                    "infons": {
+                        "journal": "PLoS One. ",
+                        "volume": "8",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Collino S, Montoliu I, Martin FP, Scherer M, Mari D, Salvioli S, Bucci L, Ostan R, Monti D, Biagi E, Brigidi P, Franceschi C, Rezzi S. Metabolic signatures of extreme longevity in northern Italian centenarians reveal a complex remodeling of lipids, amino acids, and gut microbiota metabolism. PLoS One. 2013;8:e56564. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30745,
+                    "infons": {
+                        "journal": "Inflamm Bowel Dis. ",
+                        "volume": "18",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Gupta NK, Thaker AI, Kanuri N, Riehl TE, Rowley CW, Stenson WF, Ciorba MA. Serum analysis of tryptophan catabolism pathway: correlation with Crohn's disease activity. Inflamm Bowel Dis. 2012;18:1214\u20131220. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30994,
+                    "infons": {
+                        "journal": "Br J Cancer. ",
+                        "volume": "86",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Huang A, Fuchs D, Widner B, Glover C, Henderson DC, Allen-Mersh TG. Serum tryptophan decrease correlates with immune activation and impaired quality of life in colorectal cancer. Br J Cancer. 2002;86:1691\u20131696. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31249,
+                    "infons": {
+                        "journal": "Psychol Med. ",
+                        "volume": "16",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Thomas DE, Chung-A-On KO, Dickerson JW, Tidmarsh SF, Shaw DM. Tryptophan and nutritional status of patients with senile dementia. Psychol Med. 1986;16:297\u2013305. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31434,
+                    "infons": {
+                        "journal": "Adv Exp Med Biol. ",
+                        "volume": "467",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Widner B, Leblhuber F, Walli J, Tilz GP, Demel U, Fuchs D. Degradation of tryptophan in neurodegenerative disorders. Adv Exp Med Biol. 1999;467:133\u2013138. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31612,
+                    "infons": {
+                        "journal": "Am J Psychiatry. ",
+                        "volume": "157",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Porter RJ, Lunn BS, Walker LL, Gray JM, Ballard CG, O'Brien JT. Cognitive deficit induced by acute tryptophan depletion in patients with Alzheimer's disease. Am J Psychiatry. 2000;157:638\u2013640. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31830,
+                    "infons": {
+                        "journal": "Aging Cell. ",
+                        "volume": "11",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Noristani HN, Verkhratsky A, Rodr\u00edguez JJ. High tryptophan diet reduces CA1 intraneuronal \u03b2-amyloid in the triple transgenic mouse model of Alzheimer's disease. Aging Cell. 2012;11:810\u2013822. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32045,
+                    "infons": {
+                        "journal": "Microb Ecol. ",
+                        "volume": "33",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Smith EA, Macfarlane GT. Formation of Phenolic and Indolic Compounds by Anaerobic Bacteria in the Human Large Intestine. Microb Ecol. 1997;33:180\u2013188. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:35:53",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "27426399",
+                            "locations": {
+                                "length": 8,
+                                "offset": 32127
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 32221,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "489",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Tremaroli V, B\u00e4ckhed F. Functional interactions between the gut microbiota and host metabolism. Nature. 2012;489:242\u2013249. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32368,
+                    "infons": {
+                        "journal": "FEMS Microbiol Lett. ",
+                        "volume": "217",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Pryde SE, Duncan SH, Hold GL, Stewart CS, Flint HJ. The microbiology of butyrate formation in the human colon. FEMS Microbiol Lett. 2002;217:133\u2013139. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32543,
+                    "infons": {
+                        "journal": "Nat Rev Microbiol. ",
+                        "volume": "10",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Koropatkin NM, Cameron EA, Martens EC. How glycan metabolism shapes the human gut microbiota. Nat Rev Microbiol. 2012;10:323\u2013335. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32717,
+                    "infons": {
+                        "journal": "FEMS Microbiol Lett. ",
+                        "volume": "254",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Chassard C, Bernalier-Donadille A. H2 and acetate transfers during xylan fermentation between a butyrate-producing xylanolytic species and hydrogenotrophic microorganisms from the human gut. FEMS Microbiol Lett. 2006;254:116\u2013122. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32972,
+                    "infons": {
+                        "journal": "Appl Environ Microbiol. ",
+                        "volume": "73",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Duncan SH, Belenguer A, Holtrop G, Johnstone AM, Flint HJ, Lobley GE. Reduced dietary intake of carbohydrates by obese subjects results in decreased concentrations of butyrate and butyrate-producing bacteria in feces. Appl Environ Microbiol. 2007;73:1073\u20131078. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:36:07",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "27426400",
+                            "locations": {
+                                "length": 8,
+                                "offset": 33171
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 33277,
+                    "infons": {
+                        "journal": "Anaerobe. ",
+                        "volume": "3",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Smith EA, Macfarlane GT. Dissimilatory amino Acid metabolism in human colonic bacteria. Anaerobe. 1997;3:327\u2013337. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Dissimilatory",
+                            "infons": {
+                                "identifier": "NCBI:txid28221",
+                                "type": "bacteria_class",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:36:08",
+                                "parent_taxonomic_id": "NCBI:txid68525"
+                            },
+                            "id": "27426401",
+                            "locations": {
+                                "length": 13,
+                                "offset": 33302
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:36:09",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "27426402",
+                            "locations": {
+                                "length": 8,
+                                "offset": 33355
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 33416,
+                    "infons": {
+                        "journal": "J Appl Microbiol. ",
+                        "volume": "96",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Beck HC, Hansen AM, Lauritsen FR. Catabolism of leucine to branched-chain fatty acids in Staphylococcus xylosus. J Appl Microbiol. 2004;96:1185\u20131193. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Staphylococcus xylosus",
+                            "infons": {
+                                "identifier": "NCBI:txid1288",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:36:11",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "27426403",
+                            "locations": {
+                                "length": 22,
+                                "offset": 33505
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 33591,
+                    "infons": {
+                        "journal": "Microbiol Rev. ",
+                        "volume": "55",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Kaneda T. Iso- and anteiso-fatty acids in bacteria: biosynthesis, function, and taxonomic significance. Microbiol Rev. 1991 Jun;55:288\u2013302. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33775,
+                    "infons": {
+                        "journal": "Pharmacol Rep. ",
+                        "volume": "63",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Gor\u0105ca A, Huk-Kolega Kolega, Piechota A, Kleniewska P, Ciejka E, Skibska B. Lipoic acid \u2013 biological activity and therapeutic potential. Pharmacol Rep. 2011;63:849\u2013858. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33969,
+                    "infons": {
+                        "journal": "Biochemistry. ",
+                        "volume": "39",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Jones DD, Stott KM, Howard MJ, Perham RN. Restricted motion of the lipoyl-lysine swinging arm in the pyruvate dehydrogenase complex of Escherichia coli. Biochemistry. 2000;39:8448\u20138459. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Escherichia coli",
+                            "infons": {
+                                "identifier": "NCBI:txid562",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:36:19",
+                                "parent_taxonomic_id": "NCBI:txid561"
+                            },
+                            "id": "27426404",
+                            "locations": {
+                                "length": 16,
+                                "offset": 34104
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 34180,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "464",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Qin J, Li R, Raes J, Arumugam M, Burgdorf KS, Manichanh C, Nielsen T, Pons N, Levenez F, Yamada T, Mende DR, Li J, Xu J, Li S, Li D, Cao J, et al. A human gut microbial gene catalogue established by metagenomic sequencing. Nature. 2010;464:59\u201365. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34471,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "449",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Turnbaugh PJ, Ley RE, Hamady M, Fraser-Liggett Liggett, Knight R, Gordon JI. The human microbiome project. Nature. 2007;449:804\u2013810. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34648,
+                    "infons": {
+                        "journal": "DNA Res. ",
+                        "volume": "14",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Kurokawa K, Itoh T, Kuwahara T, Oshima K, Toh H, Toyoda A, Takami H, Morita H, Sharma VK, Srivastava TP, Taylor TD, Noguchi H, Mori H, Ogura Y, Ehrlich DS, Itoh K, et al. Comparative metagenomics revealed commonly enriched gene sets in human gut microbiomes. DNA Res. 2007;14:169\u2013181. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "H Mori",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid574780"
+                                ],
+                                "type": [
+                                    "fungi_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:36:30",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid707780"
+                                ]
+                            },
+                            "id": "27426405",
+                            "locations": {
+                                "length": 6,
+                                "offset": 34772
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 34977,
+                    "infons": {
+                        "journal": "Appl Environ Microbiol. ",
+                        "volume": "64",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Cavin JF, Dartois V, Divi\u00e8s C. Gene cloning, transcriptional analysis, purification, and characterization of phenolic acid decarboxylase from Bacillus subtilis. Appl Environ Microbiol. 1998;64:1466\u20131471. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacillus subtilis",
+                            "infons": {
+                                "identifier": "NCBI:txid1423",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 03:36:35",
+                                "parent_taxonomic_id": "NCBI:txid1386"
+                            },
+                            "id": "27426406",
+                            "locations": {
+                                "length": 17,
+                                "offset": 35119
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 35225,
+                    "infons": {
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Oksanen J, Blanchet FG, Kindt R, Legendre P, Minchin PR, O'Hara RB, Simpson GL, Solymos P, Stevens MHH, Wagner H. 2013. vegan: Community Ecology. Package. R package version 2.0-7.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35404,
+                    "infons": {
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Hanson BA. ChemoSpec: Exploratory Chemometrics for Spectroscopy. 2013 R package version 1.60-4. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35516,
+                    "infons": {
+                        "journal": "Nat Methods. ",
+                        "volume": "9",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Segata N, Waldron L, Ballarini A, Narasimhan V, Jousson O, Huttenhower C. Metagenomic microbial community profiling using unique clade-specific marker genes. Nat Methods. 2012;9:811\u2013814. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35747,
+                    "infons": {
+                        "journal": "Bioinformatics. ",
+                        "volume": "27",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Smoot ME, Ono K, Ruscheinski J, Wang PL, Ideker T. Cytoscape 2.8: new features for data integration and network visualization. Bioinformatics. 2011;27:431\u2013432. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35951,
+                    "infons": {
+                        "journal": "Bioinformatics. ",
+                        "volume": "21",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Culhane AC, Thioulouse J, Perriere G, Higgins DG. MADE4: an R package for multivariate analysis of gene expression data. Bioinformatics. 2005;21:2789\u20132790. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36132,
+                    "infons": {
+                        "journal": "Yeast. ",
+                        "volume": "17",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Wixon J, Kell D. The Kyoto encyclopedia of genes and genomes--KEGG. Yeast. 2000;17:48\u201355. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36266,
+                    "infons": {
+                        "journal": "Nucleic Acids Res. ",
+                        "volume": "41",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Liu J, Wang H, Yang H, Zhang Y, Wang J, Zhao F, Qi J. Composition-based classification of short metagenomic sequences elucidates the landscapes of taxonomic and functional enrichment of microorganisms. Nucleic Acids Res. 2013;41:e3. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36543,
+                    "infons": {
+                        "journal": "Nucleic Acids Res. ",
+                        "volume": "40",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Namiki T, Hachiya T, Tanaka H, Sakakibara Y. MetaVelvet: an extension of Velvet assembler to de novo metagenome assembly from short sequence reads. Nucleic Acids Res. 2012;40:e155. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36768,
+                    "infons": {
+                        "journal": "BMC Bioinformatics. ",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Meyer F, Paarmann D, D'Souza M, Olson R, Glass EM, Kubal M, Paczian T, Rodriguez A, Stevens R, Wilke A, Wilkening J, Edwards RA. The metagenomics RAST server \u2013 a public resource for the automatic phylogenetic and functional analysis of metagenomes. BMC Bioinformatics. 2008:386. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

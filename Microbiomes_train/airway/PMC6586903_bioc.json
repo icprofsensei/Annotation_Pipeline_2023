@@ -1,0 +1,2822 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC6586903",
+            "inputfile": "../microbiome_corpus_HTML\\PMC6586903.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Establishing microbial composition measurement standards with reference frames",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 78,
+                    "infons": {
+                        "section_title_1": "keywords",
+                        "iao_name_1": "keywords section",
+                        "iao_id_1": "IAO:0000630"
+                    },
+                    "text": "Computational biology and bioinformatics, Metagenomics, Microbiome, Applied mathematics",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 173,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Differential abundance analysis is controversial throughout microbiome research. Gold standard approaches require laborious measurements of total microbial load, or absolute number of microorganisms, to accurately determine taxonomic shifts. Therefore, most studies rely on relative abundance data. Here, we demonstrate common pitfalls in comparing relative abundance across samples and identify two solutions that reveal microbial changes without the need to estimate total microbial load. We define the notion of \u201creference frames\u201d, which provide deep intuition about the compositional nature of microbiome data. In an oral time series experiment, reference frames alleviate false positives and produce consistent results on both raw and cell-count normalized data. Furthermore, reference frames identify consistent, differentially abundant microbes previously undetected in two independent published datasets from subjects with atopic dermatitis. These methods allow reassessment of published relative abundance data to reveal reproducible microbial changes from standard sequencing output without the need for new assays.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1306,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Next-generation sequencing data used to study the microbiome is inherently compositional and provides information in the form of relative abundances, independent of the total microbial load of the original sample. Numerous analytical approaches including rarefaction1, median2, and quantile normalization2,3 have been proposed for comparing compositional samples. However, these analytical solutions cannot control false discovery rates4,5, and their application contributes to lack of reproducibility among microbiome studies6\u20138. Here we illustrate mathematical challenges in analyzing compositional microbiome data from DNA sequence reads, and define the concept of \u201creference frames\u201d for inferring changes in abundance.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2040,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "To illustrate the pitfalls of inferring changes in abundance among samples using relative abundance data, consider the following example (Fig.\u00a01). Samples from a population containing only two taxa (orange and blue) are collected pre- and post-treatment. Before treatment, the two taxa occur in equal proportions. After treatment, the orange taxon is twice as abundant as the blue taxon. It is tempting to conclude that orange increased and blue decreased.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2496,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "However, many different scenarios could lead to the same observation. For example, the orange taxon could quadruple and the blue taxon only double. The orange taxon could remain constant, and the blue taxon halve. Or the orange taxon could halve, but the blue taxon could decrease four-fold. Because we only observe relative abundance data, we cannot differentiate among these outcomes, which have markedly different biological significance. Infinite different outcomes produce the same 2:1 ratio of orange to blue, greatly complicating the generation of a meaningful null hypothesis and therefore yielding misleading p-values, as has been previously established9\u201311.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3163,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Multiple processing steps are required to generate microbiome sequencing data. Samples are collected from a much larger population (e.g., fecal material from the gut, or water sample from the ocean). From these samples, a subsample is used for DNA extraction (e.g., a swab from a fecal sample, or an aliquot of a water sample). Even if the same amount of sample is extracted throughout an experiment, many DNA extraction kits are optimized for efficiency and can become saturated, complicating direct correlations of DNA yield and microbial load. A subsample of the extracted DNA is then used as input for PCR, a subset of the resulting amplicon is pooled into a library, and a subset of the library is sequenced.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3876,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "By the time quality-filtered sequencing data are obtained, the sequences reflect only a small subset of the population and are not an accurate representation of the microbial load in the original sample12. Analyzing relative abundance data with inappropriate statistical tools can yield up to 100% false discovery rates13,14. Therefore, in addition to relative abundance data, quantitative information about total microbial load is necessary to determine which microbes are changing.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4359,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Multiple approaches at each level of sample processing have been proposed to quantify the total microbial load from environmental samples. Adding a known amount of reference DNA as an internal standard has been used to extrapolate the amount of starting nucleic material15,16. Normalization by this method is complicated due to the calibration challenges of choosing the proper amount of internal standard16. At the post-extraction level, quantitative PCR (qPCR) of genomic DNA with universal primers against the 16S rRNA gene has been deployed to estimate total microbial load17. However, it is impossible to prevent primer bias, resulting in uneven amplification of rRNA genes across species, and the DNA extraction method can influence microbial composition18\u201320. Further, quantification by both spike-in and qPCR is performed on multiple subsets of the original sample.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5232,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Quantifying microbial load by flow cytometry is performed on the original sample, and is agnostic to nucleotide sequences. One recent study reported that adding quantitative information obtained by flow cytometry dramatically improved interpretation of 16S rRNA gene amplicon sequencing data12. However, flow cytometry requires expensive, relatively low-throughput equipment, and often can only estimate the cell concentration rather than the total microbial load.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5696,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The total microbial load of an environmental sample is one dimension of measurement among the hundreds to thousands of dimensions measured by microbial relative abundances. If the absolute abundance of one taxon and the relative abundance of all taxa is known, it is feasible to compute the absolute abundance of all taxa. As such, considerable information rests in relative abundances, and important insights can be gleaned without costly microbial quantification methods. Below we describe two methods to evaluate relative differential abundance independent of microbial load information.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6286,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Ratios circumvent bias without microbial load quantification",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Computing changes in abundance from compositional data introduces a bias due to the lack of total microbial load (Fig.\u00a01 approach#1). Simulated data in Fig.\u00a01b shows how different biases (i.e., ratios between total microbial loads) can cause either false-positives or false-negatives. By simply comparing the ratio of taxa between samples, the bias constant introduced by unknown microbial load cancels out. Taking the logarithm of this ratio (log-ratio) enforces symmetry around zero, giving equal weight to relative increases and relative decreases9,10.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6908,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "A novel approach to rank differential abundance",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Comparing ratios of taxa can circumvent the bias introduced by unknown microbial loads. However, choosing taxa for comparison from the thousands in a given sample set can be challenging. Here we provide a way to rank microbes that are changing the most relative to each other. The term \u201cdifferential\u201d refers to the logarithm of the fold change in abundance of a taxa between two conditions. With microbial load information, one can calculate absolute differentials. Microbiome sequencing datasets provide relative abundances, and thus can only infer relative differentials.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7528,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "A novel approach to rank differential abundance",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The ranks of relative differentials are identical to the ranks of absolute differentials (Fig.\u00a01d). However, because of the bias described above, we cannot infer if a microbe has changed based on rank alone, and therefore a coefficient of zero does not imply that the microbe has not changed abundance.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7830,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "A novel approach to rank differential abundance",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Relative differentials can be estimated directly using multinomial regression, which has been proposed previously to handle sampling zeros21\u201324. The coefficients from multinomial regression analysis can be ranked to determine which taxa are changing the most between samples. We refer to this ranking procedure as differential ranking (DR).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8170,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Reference frames in compositional data analysis",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Analyzing compositional data requires a choice of reference frames for inferring changes in abundance. By \u201creference frame\u201d, we draw on the concept from physics where velocity is measured relative to another moving object. As microbial populations change, we can constrain our inferences to how microbial populations change relative to reference frames given by other microbial populations. The denominator in a log-ratio determines the reference frame for inferring changes. In DR, the differential abundance of each taxon serve as a reference to each other when they are ranked numerically. To demonstrate these principles, we confirm the utility of employing reference frames in biological datasets.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8919,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "DR reveals differentially abundant microbes in saliva",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We demonstrate the utility of DR in a sample set with dramatic differences in total microbial load. Unstimulated saliva samples were collected before and after brushing teeth (n\u2009=\u200932), and processed in parallel for microbial load quantification with flow cytometry and 16S rRNA gene amplicon sequencing. Importantly, participants were asked to provide unstimulated saliva for exactly 5\u2009min. As a result, we obtained a proxy for the total microbial load by taking into account salivary flow rate. As expected, the total microbial load significantly decreased after brushing teeth (Fig.\u00a02a).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9561,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "DR reveals differentially abundant microbes in saliva",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We performed paired t-tests to evaluate the change in abundance of each taxon before and after brushing teeth using either relative or absolute abundance data (microbial load multiplied by 16S copy number-corrected relative abundances) (Fig.\u00a02c). Applying t-tests to the relative data had a high false-positive rate, as seen by the disagreements between the relative and absolute t-statistics (Spearman r\u2009=\u20090.53). Further, there was no correlation in p-value distribution between the relative and absolute abundance data (Spearman r\u2009=\u20090.09), highlighting issues when the null hypothesis is not consistent between the relative abundances and the absolute abundances.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10226,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "DR reveals differentially abundant microbes in saliva",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Alternatively, evaluating the ratio between Actinomyces and the remaining taxa produced identical t-statistics and p-values between the relative and absolute abundance data (Spearman r\u2009=\u20091.0). Ratio-based analyses are unaffected by microbial load (Eq. (3) in methods) and result in identical interpretations as one obtains from costly and rate-limiting flow-cytometry measurements.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Actinomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:32",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "987575",
+                            "locations": {
+                                "length": 11,
+                                "offset": 10270
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 10607,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "DR reveals differentially abundant microbes in saliva",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "From the DR analysis (Fig.\u00a02c), we can identify which taxa are changing the most relative to each other. Here, we highlight Actinomyces and Haemophilus species, which have very different ranks. Actinomyces tend to have low ranks and Haemophilus have high ranks. The difference in ranks between these taxa correctly suggests that Haemophilus taxa are more prevalent relative to other taxa before brushing, and Actinomyces taxa are more prevalent relative to other taxa after brushing. From the t-test results on relative abundances it appears that Actinomyces significantly increased (t-statistic\u2009=\u20093.74, p-value\u2009=\u20090.002) after brushing teeth and that Haemophilus significantly decreased (t-statistic\u2009=\u2009\u22123.67, p-value\u2009=\u20090.002). However, absolute abundance data revealed that only Haemophilus significantly decreased (t-statistic\u2009=\u2009\u22122.155, p-value\u2009=\u20090.0478) (Fig.\u00a02d).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Actinomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:37",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "987576",
+                            "locations": {
+                                "length": 11,
+                                "offset": 10731
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:37",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "987577",
+                            "locations": {
+                                "length": 11,
+                                "offset": 10747
+                            }
+                        },
+                        {
+                            "text": "Actinomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:37",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "987578",
+                            "locations": {
+                                "length": 11,
+                                "offset": 10801
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:38",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "987579",
+                            "locations": {
+                                "length": 11,
+                                "offset": 10840
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:39",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "987580",
+                            "locations": {
+                                "length": 11,
+                                "offset": 10936
+                            }
+                        },
+                        {
+                            "text": "Actinomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:39",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "987581",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11016
+                            }
+                        },
+                        {
+                            "text": "Actinomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:41",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "987582",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11154
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:42",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "987583",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11258
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:43",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "987584",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11386
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 11473,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "DR reveals differentially abundant microbes in saliva",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The log-ratio of Actinomyces and Haemophilus between the relative and the absolute abundance data is identical. While we cannot observe the decrease of Haemophilus or the consistency of Actinomyces abundance, with the log-ratio of their relative abundance we can observe the interaction between these two taxa and the increase of Actinomyces relative to Haemophilus after brushing teeth (t-statistic\u2009=\u20095.289, p-value\u2009=\u20099.07\u2009\u00d7\u200910\u22125).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Actinomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:43",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "987585",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11490
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:44",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "987586",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11506
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:45",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "987587",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11625
+                            }
+                        },
+                        {
+                            "text": "Actinomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:45",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "987588",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11659
+                            }
+                        },
+                        {
+                            "text": "Actinomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:47",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "987589",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11803
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:47",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "987590",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11827
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 11905,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "DR reveals differentially abundant microbes in saliva",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "These results are consistent with our knowledge about oral biogeography. Haemophilus is typically found on the periphery of oral biofilms and was likely removed from the biofilm during the brushing process, whereas Actinomyces is generally found on the surface of the tooth and acts as an anchor for biofilm attachment25. Importantly, this experiment demonstrates the potential fallibility of relying on relative abundance; it is incorrect to conclude that Actinomyces increases after tooth brushing despite the increase in relative abundance. As demonstrated by flow cytometry, total microbial load decreases, and while both Haemophilus and Actinomyces decrease, Haemophilus decreases more.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:48",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "987591",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11978
+                            }
+                        },
+                        {
+                            "text": "Actinomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:50",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "987592",
+                            "locations": {
+                                "length": 11,
+                                "offset": 12120
+                            }
+                        },
+                        {
+                            "text": "Actinomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:52",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "987593",
+                            "locations": {
+                                "length": 11,
+                                "offset": 12362
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:54",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "987594",
+                            "locations": {
+                                "length": 11,
+                                "offset": 12531
+                            }
+                        },
+                        {
+                            "text": "Actinomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:54",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "987595",
+                            "locations": {
+                                "length": 11,
+                                "offset": 12547
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:54",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "987596",
+                            "locations": {
+                                "length": 11,
+                                "offset": 12569
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 12596,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "DR reveals differentially abundant microbes in saliva",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To investigate how other compositional methods perform, we ran ANCOM and ALDEx2 on the same dataset (Fig.\u00a02e). ALDEx2 did not identify any of the microbes to be changing, which contradicts flow-cytometry measurements that show there is a large decrease in the microbial community after tooth brushing. ANCOM identified multiple significantly changing microbes. One of these detected microbes was Veillonella, which conflicts with absolute abundances suggesting that Veillonella is not significantly changing (t-statistic\u2009=\u20091.04, p-value\u2009=\u20090.315). The false-positive detected by ANCOM likely arose due to their choice of reference frame (Supplementary Fig.\u00a01).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:28:59",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "987597",
+                            "locations": {
+                                "length": 11,
+                                "offset": 12992
+                            }
+                        },
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:00",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "987598",
+                            "locations": {
+                                "length": 11,
+                                "offset": 13062
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 13255,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Elucidating interkingdom changes in atopic dermatitis using DR",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The tooth brushing example provides ground truth for using log-ratios and DR, but many clinically relevant microbiome questions involve less obvious differences. Using data from patients with atopic dermatitis (AD), an important skin disease, we demonstrate how viewing relative abundances alone can produce false negatives.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13641,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Elucidating interkingdom changes in atopic dermatitis using DR",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "AD has a complex etiology. Many microbiome studies performed using next-generation sequencing have focused on bacterial changes associated with AD, especially the pathogen Staphylococcus aureus. The yeast genus Malassezia has also been implicated in AD, although conflicting results have been published as to which Malassezia species are involved and whether they are more or less prevalent in AD26. A recent shotgun metagenomic study examined the skin microbiome over time during an AD flare and recovery. The authors observed a decrease in Staphylococcus aureus relative abundance in the healthy, recovered skin (non-lesioned) compared to AD flare (lesion), but no significant changes in the relative abundance of Malassezia species over time in these AD patients27.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:07",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "987599",
+                            "locations": {
+                                "length": 21,
+                                "offset": 13813
+                            }
+                        },
+                        {
+                            "text": "Malassezia",
+                            "infons": {
+                                "identifier": "NCBI:txid55193",
+                                "type": "fungi_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:07",
+                                "parent_taxonomic_id": "NCBI:txid742845"
+                            },
+                            "id": "987600",
+                            "locations": {
+                                "length": 10,
+                                "offset": 13852
+                            }
+                        },
+                        {
+                            "text": "Malassezia",
+                            "infons": {
+                                "identifier": "NCBI:txid55193",
+                                "type": "fungi_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:08",
+                                "parent_taxonomic_id": "NCBI:txid742845"
+                            },
+                            "id": "987601",
+                            "locations": {
+                                "length": 10,
+                                "offset": 13956
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:11",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "987602",
+                            "locations": {
+                                "length": 21,
+                                "offset": 14183
+                            }
+                        },
+                        {
+                            "text": "Malassezia",
+                            "infons": {
+                                "identifier": "NCBI:txid55193",
+                                "type": "fungi_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:13",
+                                "parent_taxonomic_id": "NCBI:txid742845"
+                            },
+                            "id": "987603",
+                            "locations": {
+                                "length": 10,
+                                "offset": 14357
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 14409,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Elucidating interkingdom changes in atopic dermatitis using DR",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Applying compositonal methods to this dataset revealed new insights. Observing the DR results (Fig.\u00a03a), it is apparent that, compared to lesioned skin, S. aureus is one of the taxa to decrease the most relative to all other microbes in the non-lesioned sites, followed by S. epidermidis, and M. globosa. Consistent with the analysis of relative abundance in Fig.\u00a03b, the ratio of S. aureus: P. acnes was significantly increased in flare (t-statistic\u2009=\u20093.397, p-value\u2009=\u20093.02\u2009\u00d7\u200910\u22123) and correlated with SCORAD score, a clinical assessment of AD severity (Pearson\u2009=\u20090.603, p-value\u2009=\u20093.516\u2009\u00d7\u200910\u22126). Contrary to previous findings, both S. epidermidis: P. acnes and M. globosa: P. acnes were also significantly increased in lesioned skin (t-statistic\u2009=\u20094.2297, p-value\u2009=\u20094.53\u2009\u00d7\u200910\u22124, and t-statistic\u2009=\u20094.297, p-value\u2009=\u20093.889\u2009\u00d7\u200910\u22124, respectively) and correlated with SCORAD score (Pearson r\u2009=\u20090.464, p-value\u2009=\u20096.975\u2009\u00d7\u200910\u22124, and Pearson r\u2009=\u20090.668, p-value\u2009=\u20091.125\u2009\u00d7\u200910\u22127, respectively) (Fig.\u00a03c).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:15",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "987604",
+                            "locations": {
+                                "length": 9,
+                                "offset": 14562
+                            }
+                        },
+                        {
+                            "text": "S. epidermidis",
+                            "infons": {
+                                "identifier": "NCBI:txid1282",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:17",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "987605",
+                            "locations": {
+                                "length": 14,
+                                "offset": 14682
+                            }
+                        },
+                        {
+                            "text": "M. globosa",
+                            "infons": {
+                                "identifier": "NCBI:txid47863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:24",
+                                "parent_taxonomic_id": "NCBI:txid1873"
+                            },
+                            "id": "987606",
+                            "locations": {
+                                "length": 10,
+                                "offset": 14702
+                            }
+                        },
+                        {
+                            "text": "P. acnes",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid1747"
+                                ],
+                                "type": [
+                                    "bacteria_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:18",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid1912216"
+                                ]
+                            },
+                            "id": "987607",
+                            "locations": {
+                                "length": 8,
+                                "offset": 14801
+                            }
+                        },
+                        {
+                            "text": "P. acnes",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid1747"
+                                ],
+                                "type": [
+                                    "bacteria_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:21",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid1912216"
+                                ]
+                            },
+                            "id": "987608",
+                            "locations": {
+                                "length": 8,
+                                "offset": 15058
+                            }
+                        },
+                        {
+                            "text": "P. acnes",
+                            "infons": {
+                                "identifier": "NCBI:txid1747",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:24",
+                                "parent_taxonomic_id": "NCBI:txid1912216"
+                            },
+                            "id": "987609",
+                            "locations": {
+                                "length": 8,
+                                "offset": 15083
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 15400,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Elucidating interkingdom changes in atopic dermatitis using DR",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To validate this observation, we analyzed shotgun data from an independent AD dataset28. In this dataset, the relative abundance of M. globosa significantly increased between lesioned and non-lesioned skin (Fig.\u00a03e, t-statistic\u2009=\u20094.135, p-value\u2009=\u20090.0001). But the ratio of M. globosa: P. acnes increased even more dramatically in lesioned skin (t-statistic\u2009=\u20097.298, p-value\u2009=\u20099.729\u2009\u00d7\u200910\u22129) (Fig.\u00a03d). These results are congruent with a previous report that M. globosa was cultivated more successfully from lesioned versus non-lesioned sites in AD29. Thus, DR analysis can identify novel, clinically significant microbial changes, which can be validated across cohorts by choosing insightful reference frames.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "M. globosa",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid47863",
+                                    "NCBI:txid76773",
+                                    "NCBI:txid201231"
+                                ],
+                                "type": [
+                                    "bacteria_species",
+                                    "fungi_species",
+                                    "fungi_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:25",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid1873",
+                                    "NCBI:txid55193",
+                                    "NCBI:txid34429"
+                                ]
+                            },
+                            "id": "987610",
+                            "locations": {
+                                "length": 10,
+                                "offset": 15532
+                            }
+                        },
+                        {
+                            "text": "P. acnes",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid1747"
+                                ],
+                                "type": [
+                                    "bacteria_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:27",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid1912216"
+                                ]
+                            },
+                            "id": "987611",
+                            "locations": {
+                                "length": 8,
+                                "offset": 15685
+                            }
+                        },
+                        {
+                            "text": "M. globosa",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid47863",
+                                    "NCBI:txid76773",
+                                    "NCBI:txid201231"
+                                ],
+                                "type": [
+                                    "bacteria_species",
+                                    "fungi_species",
+                                    "fungi_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:29",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid1873",
+                                    "NCBI:txid55193",
+                                    "NCBI:txid34429"
+                                ]
+                            },
+                            "id": "987612",
+                            "locations": {
+                                "length": 10,
+                                "offset": 15857
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 16108,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "DR across environmental gradients in the Central Park soils",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Differential ranks can also be learned for continuously valued data. We demonstrate this with data from the Central Park soil experiment30, which contains more than 1000 samples and 30,000 taxa sampled across pH and nitrogen gradients. The largest factor driving diversity was pH, and Washburne et al.31 showed that there were lineages of microbes associated with nitrogen when pH was accounted for. Here we applied multinomial linear regression to estimate microbial DR along both nitrogen and pH gradients (Fig.\u00a04).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16684,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "DR across environmental gradients in the Central Park soils",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Of the top five and bottom five ranked microbes in the nitrogen and pH gradients, only four microbes were annotated. The top fourth and fifth microbe that is associated with acidic environments was a putative match against Candidatus Solibacter and Telmatobacter, which has been found to grow in a pH range of 3.5\u2013632,33. The top microbe most associated with high pH was Chryseolinea, which has been shown to grow between pH range of 5\u201310. The top third microbe associated with low nitrogen concentration was a putative match against Gemmatimonas, which is a known nitrogen reducer34.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Solibacter",
+                            "infons": {
+                                "identifier": "NCBI:txid332162",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:41",
+                                "parent_taxonomic_id": "NCBI:txid332161"
+                            },
+                            "id": "987613",
+                            "locations": {
+                                "length": 10,
+                                "offset": 16918
+                            }
+                        },
+                        {
+                            "text": "Telmatobacter",
+                            "infons": {
+                                "identifier": "NCBI:txid1078829",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:41",
+                                "parent_taxonomic_id": "NCBI:txid204434"
+                            },
+                            "id": "987614",
+                            "locations": {
+                                "length": 13,
+                                "offset": 16933
+                            }
+                        },
+                        {
+                            "text": "Chryseolinea",
+                            "infons": {
+                                "identifier": "NCBI:txid1433993",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:42",
+                                "parent_taxonomic_id": "NCBI:txid2762286"
+                            },
+                            "id": "987615",
+                            "locations": {
+                                "length": 12,
+                                "offset": 17055
+                            }
+                        },
+                        {
+                            "text": "Gemmatimonas",
+                            "infons": {
+                                "identifier": "NCBI:txid173479",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:29:44",
+                                "parent_taxonomic_id": "NCBI:txid219687"
+                            },
+                            "id": "987616",
+                            "locations": {
+                                "length": 12,
+                                "offset": 17218
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 17268,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "DR across environmental gradients in the Central Park soils",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The multinomial regression was able to appropriately identify which organisms were most associated with low pH, high pH, and nitrogen. However, even amongst the highly ranked organisms there is a major lack of functional annotations. Having the appropriate rankings in place may provide new insights into these organisms and guide experimental validation.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17623,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Adding information about absolute microbial load between samples can highlight issues inherent in compositional data analysis. However, there are multiple practical and technical challenges in quantifying microbial load. For example, skin swabs are often difficult to use in flow cytometry due to very low microbial load and difficulty in transferring intact cells from swabs into liquid solution. Furthermore, skin samples are notoriously sensitive to 16S rRNA gene primer choice making qPCR quantification challenging35. Similarly, for historically collected samples that exist only as DNA in a freezer or as sequences in a database, flow cytometry approaches to determine absolute microbial load are not feasible.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18349,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "However, absolute abundances of a community are only one degree of freedom; in a community of N species, N\u00a0\u2013\u00a01 degrees of freedom exist in the relative abundances. By using flow cytometry to quantify total microbial load, we validated these analytical tools in 16S rRNA gene amplicon sequencing data from unstimulated saliva. We found evidence of false-positives when looking exclusively at changes in relative abundance before and after brushing teeth. By evaluating the ratio of Actinomyces: Haemophilus, we reached an identical conclusion to our absolute abundance data without the need for microbial load quantification. The consistency of our results rests in the use of ratios defining reference frames for inferring compositional changes.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:30:03",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "987617",
+                            "locations": {
+                                "length": 11,
+                                "offset": 18843
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 19094,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Furthermore, we highlighted an example of a false-negative in previously generated shotgun metagenomic data from the skin of individuals with AD. We were able to reproduce the findings that S. aureus, and to a lesser extent S. epidermidis, are differentially abundant in AD lesions. Additionally, using log-ratios and differential ranking, we were also able to show a more subtle but statistically significant change in M. globosa abundance in AD lesions. This same result was obtained in two independent metagenomic studies of AD patients and agrees with previous cultivation-based work quantifying increased colony forming units of M. globosa in AD lesions.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:30:08",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "987618",
+                            "locations": {
+                                "length": 9,
+                                "offset": 19284
+                            }
+                        },
+                        {
+                            "text": "S. epidermidis",
+                            "infons": {
+                                "identifier": "NCBI:txid1282",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:30:08",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "987619",
+                            "locations": {
+                                "length": 14,
+                                "offset": 19318
+                            }
+                        },
+                        {
+                            "text": "M. globosa",
+                            "infons": {
+                                "identifier": "NCBI:txid47863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:30:13",
+                                "parent_taxonomic_id": "NCBI:txid1873"
+                            },
+                            "id": "987620",
+                            "locations": {
+                                "length": 10,
+                                "offset": 19514
+                            }
+                        },
+                        {
+                            "text": "M. globosa",
+                            "infons": {
+                                "identifier": "NCBI:txid47863",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:30:13",
+                                "parent_taxonomic_id": "NCBI:txid1873"
+                            },
+                            "id": "987621",
+                            "locations": {
+                                "length": 10,
+                                "offset": 19728
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 19753,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Consistency between inferences made based on relative and absolute abundance data is crucial, because in many circumstances it is not possible or practical to estimate total microbial load. The seeming contradiction between absolute and relative abundances does not invalidate data from the existing 100,000+ experiments utilizing 16S rRNA gene amplicon or metagenomic sequencing36,37. Importantly, these techniques are not limited to next-generation microbiome sequencing, but can be applied to any experiments involving compositional data (e.g., metabolomics, proteomics, etc.).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20333,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Although various methods of multinomial-based models have been developed21\u201324, the interpretation of the resulting model requires care. A zero valued coefficient does not imply that the corresponding species abundance has not changed, due to the total microbial load bias as discussed in Fig.\u00a01. DR provides a novel means to correctly interpret the coefficients of these models. By ranking the coefficients we can determine which taxa have changed the most relative to each other. This subtle distinction acknowledges the limits of compositional data analysis, and as demonstrated above can have dramatic impacts on data interpretation.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20969,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "While there are widespread misconceptions concerning how to interpret microbial abundances, we have shown that misinterpretations stem from a misunderstanding of the reference frame used in analysis. Ongoing efforts at the NIH and EMBL-EBI have already stored petabytes of multi-omics datasets ready to be re-analyzed, and databases, such as Qiita and gcMeta, contain curated data and metadata from hundreds of thousands of samples36,37. There is much promise for resolving outstanding controversies by re-analyzing these datasets using reference frames to make stable inferences of compositional change.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21573,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Cancelling out bias in compostional data",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The change between two samples containing compositions (e.g., absolute abundances of D microbes) A\u2009=\u2009(a1, ..., aD) and B\u2009=\u2009(b1, ..., bD), can be computed as follows",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21784,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Cancelling out bias in compostional data",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "If we are only able to measure relative abundances, as is the case with next-generation amplicon sequencing, we can only estimate the proportion pai for species i in the sample A (i.e., pai=aiNa). Estimating the true abundance can be done via a1=Napa1, where Na is the total abundance of sample A. To estimate the true change,",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22110,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Cancelling out bias in compostional data",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "To determine if species i abundance has changed between samples A and B, we test to see if aibi=1. However, as shown above, we cannot perform this test, since the results of this test would be confounded by the total biomass bias NANB.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22345,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Cancelling out bias in compostional data",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "In many cases the total biomass cannot be estimated, so any techniques to identify important species will need to alleviate this bias. One alternative is to use ratios. If we choose species D to be the reference species, it is clear that the total biomass cancels as follows",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22619,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Cancelling out bias in compostional data",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Another alternative is to use ranks. Ranks have been shown to be context of microbiome studies38,39 and have been commonly employed to study species richness in the context of ecology40. Since the bias is applied uniformly across the differential, it will not affect the ordering of the species. Hence, ranks are agnostic to the total biomass bias.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22967,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Cancelling out bias in compostional data",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Because of the equivalence of ranks between absolute and relative data, it is possible to identify the species that are increasing or decreasing the most. This means that the following statements hold",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23167,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Cancelling out bias in compostional data",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The ranks are connected to the log-ratios, the differences between ranks will yield differences in log-ratios given by",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23285,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Cancelling out bias in compostional data",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "These ranks are still relative; a microbe that is detected to be increasing the most could still be decreasing in absolute abundance. For instance, in the tooth brushing example, ranks identified specific genera of Actinomyces to be increasing the fastest, but all of the microbes are depleted, suggesting that Actinomyces is just decreasing much less than the other microbes.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Actinomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:30:57",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "987622",
+                            "locations": {
+                                "length": 11,
+                                "offset": 23500
+                            }
+                        },
+                        {
+                            "text": "Actinomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:30:58",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "987623",
+                            "locations": {
+                                "length": 11,
+                                "offset": 23596
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 23661,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Cancelling out bias in compostional data",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "This differential is also commonly referred to as a perturbation in the context of the compositional literature10. It is important to note that this does not justify applying rank-based statistical methods, such as Spearman correlation or Kruskal\u2013Wallis, to relative abundance data since these tests do not satisfy scale invariance41,42.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23998,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Cancelling out bias in compostional data",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Both the log-ratios and the differential ranking techniques satisfy scale invariance, meaning that both of these techniques are agnostic to the total microbial load. This concept is critical when analyzing relative abundance data, since this is one step closer to maintaining consistent conclusions between the original environment and the observed sequences.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24357,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "False discovery rates in relative differential abundance",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Attempting to estimate absolute log-fold differentials from relative abundances can result in either false-positives (FP) or false-negatives (FN) depending on the distribution of true differential abundance. Whether FNs or FPs are observed depending on a nonlinear relationship involving the true (unobserved) differential abundance. To demonstrate this, let \u03b4=(\u03b41,\u2026,\u03b4D)=(log(a1b1),\u2026,log(aDbD)) denote the absolute differential of the D species between two conditions, A and B. Further, let \u03b4\u02c6=(\u03b4\u02c61,\u2026,\u03b4\u02c6D)=(log(a1\u2215NAb1\u2215NB),\u2026,log(aD\u2215NAbD\u2215NB)) represent the relative differentials from compositional data. By definition, we know the following is true",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25061,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "False discovery rates in relative differential abundance",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "If log(NANB)>0, then that will mean that for every microbe i, \u03b4i>\u03b4\u02c6i. This implies that there is increased microbial load in A compared to B, and that this increase will give rise to FNs. This is because the overall community increase will not be captured from the relative abundance data.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25350,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "False discovery rates in relative differential abundance",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "In contrast, if log(NANB)<0, then for every microbe i, \u03b4i<\u03b4\u02c6i. This means that there is a decrease in the absolute microbial load in A compared to B. This decline in the total community will not be captured from the relative abundances, and some of the species will be detected to be increasing, giving rise to FPs. An example of this was shown in the saliva microbiota study (Fig.\u00a02).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25735,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Multinomial regression",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "To perform the differential ranking (DR) analysis, we used multinomial regression. Multinomial regression and related count regression models are commonly used in the context of microbiome analysis. Here, we use the multinomial regression model since these models can reliably estimate the means and can be easily reinterpreted in the context of compositional data analysis.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26131,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Multinomial regression",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Counts from the multinomial regression can be formulated using additive log-ratio transformation (alr) in the following generative model",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26267,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Multinomial regression",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The inverse alr function is commonly used in the context of compositional data, given as follows",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26363,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Multinomial regression",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "This is also referred to as a degenerate softmax function, which is commonly used in the context of neural networks. This function is isomorphic between RD\u22121 and SD (the space of proportions), so this will ward against identifiability issues when estimating these model parameters. The alr function is defined as",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26675,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Multinomial regression",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The models were estimated using a maximum a posteriori priori (MAP) estimation using stochastic gradient descent.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26788,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Multinomial regression",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Multinomial regression was implemented using Tensorflow43 and can be found in https://github.com/biocore/songbird.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26902,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Interpreting ranks",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Supplementary Fig.\u00a02 outlines how to draw hypotheses using the proposed ranking procedure. First the relative differentials need to be computed, preferably using a count-based regression model such as the multinomial regression described above. As noted in the introduction, the coefficients can be represented as centered log ratio (clr) coordinates as follows",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27281,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Interpreting ranks",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The other possibility is to identify candidate differentially abundant microbes. To this end, one can construct rank plots (e.g., Figs.\u00a02b and \u200band3a).3a). The rank plots show the ordering of all of the taxa with respect to how much they are associated with a particular metadata covariate, and specific taxa can be highlighted to show their ranks as positions on the rank plot. From the ranks, one can focus on taxa that have very high ranks or very low ranks, since those are the ones that are increasing/decreasing the most relative to each other, and are likely to be important contributors.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27876,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Interpreting ranks",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "These ranks can also help inform which taxa can be used for a suitable reference frame since the difference between the relative differentials can approximate the effect size that those two microbes will have. As a result, microbes that have very different ranks can be suitable candidates for a log-ratio test. An ideal reference microbe is present across most samples, since this will allow the denominator in a log-ratio to be defined. This was one of the reasons why Actinomyces and P. acnes were chosen as reference microbes in the case studies. Furthermore, if a microbe is anticipated to be stable across experimental conditions, this could provide additional motivation to select that microbe as the reference microbe.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Actinomyces",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:31:54",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "987624",
+                            "locations": {
+                                "length": 11,
+                                "offset": 28347
+                            }
+                        },
+                        {
+                            "text": "P. acnes",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid1747"
+                                ],
+                                "type": [
+                                    "bacteria_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:31:54",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid1912216"
+                                ]
+                            },
+                            "id": "987625",
+                            "locations": {
+                                "length": 8,
+                                "offset": 28363
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 28602,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Interpreting ranks",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Zeros will remain to be problematic when comparing log-ratios of taxa among conditions\u2014the procedure used here was to treat zeros as missing data and drop them from the analysis. However, this approach may not be optimal, for instance if two microbes never occur together in the same sample, but one microbe has a very high rank, and the other microbe has a very low rank. The two microbes may have significant explanatory power, but it will not be possible to perform a log-ratio test without imputing the zeros. In scenarios such as this, it may be more appropriate to utilize presence/absence procedures.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29209,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Interpreting ranks",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "While the above procedures provide some recommendations on how to pick an appropriate reference frame, picking a reference frame for hypothesis testing is still an outstanding challenge. Since a reference frame can be defined as the average of a set of microbes, there are 2N possible reference frames for N microbes. Rivera\u2013Pinto proposed one approach towards finding an optimal reference frame44; however, this solution maybe suboptimal. Furthermore, it is not clear what properties an optimal reference frame should satisfy, or how false discoveries could be controlled. More theoretical work will need to be done in order to understand statistical properties of these reference frames.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29898,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Simulated benchmarks comparing ANCOM2, ALDEx2, and DR",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We used simulated data to benchmark DR to the output of ALDEx245 and ANCOM46. Details can be found in the simulation-benchmarks ipynb at https://github.com/knightlab-analyses/reference-frames. Here, we compared the linear mixed effects model in ANCOM2, the t-test in ALDEx2 and ranked multinomial regression coefficients in DR. ALDEx2 determined taxa were significant if the FDR corrected p-value fell below 0.05. A taxon was determined to be significant by ANCOM if it passed the 0.9 cutoff.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30443,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Simulated benchmarks comparing ANCOM2, ALDEx2, and DR",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "ALDEx2 and the proposed multinomial regression for DR in this paper use nearly identical models concerning categorical metadata. The major difference is the choice of priors; our model uses a normal prior whereas ALDEx2 uses a Dirichilet prior. As a result, the coefficients from ALDEx2 and the multinomial regression are nearly identical (Supplementary Fig.\u00a01), suggesting that the same ranking procedure can also be applied to the ALDEx2 output. However, ALDEx2 can only handle a single categorical covariate at a time, whereas the multinomial regression proposed can handle multiple covariates, including continuously valued covariates, as shown in the Central Park soils dataset (Fig.\u00a04).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31135,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Simulated benchmarks comparing ANCOM2, ALDEx2, and DR",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "It is important to note that the hypothesis tests that ANCOM and ALDEx2 use may not be consistent with the absolute differentials. Under perfect conditions when the absolute differentials are centered around zero (Supplementary Fig.\u00a01a\u2013d), both ANCOM and ALDEx2 correctly infer that microbes with a differential close to zero are likely not changing.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31485,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Simulated benchmarks comparing ANCOM2, ALDEx2, and DR",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "However, if the center\u00a0of mass changes and the average microbe is now decreasing on average \u22122 log fold (Supplementary Fig.\u00a01e\u2013h), both ALDEx2 and ANCOM will incorrectly infer that microbes changing \u22122 log fold are not changing. In this example, the center of mass reference frame is inappropriate, and leads to predictions that microbes are not changing when they are actually changing on an absolute scale. This highlights difficulties when attempting to link information from relative data to absolute data using hypothesis tests. The hypothesis tests that ALDEx2 and ANCOM perform here are not necessarily incorrect, but could be misleading in situations where microbial load differs dramatically among conditions.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32203,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Interpreting relative differentials through balances",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Balances are ratios of taxa, or groups of taxa, that were previously presented as a valid approach to analyzing compositional data14. If we examine the model parameters \u03b2k\u2208RD\u22121, we reinterpret the quantities given by alr\u22121(\u03b2k) as relative differentials as discussed in Fig.\u00a01. It is also worthwhile to note the connection between \u03b2k and balances. Since \u03b2k is expressed in alr coordinates, there is also a direct connection to ilr coordinates, meaning that \u03b2k can also be transformed into balances. More explicitly, the ilr coordinates of these coefficients can be computed as follows",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32838,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Interpreting relative differentials through balances",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The resulting coefficients are represented as coordinates given by the orthonormal basis \u03a8. An example of such a basis can be dervied from bifurcating trees discussed in Morton et al.14, Silverman et al.47, and Washburne et al.31 This can allow for relative changes in abundances as given by alr\u22121(\u03b2k) to inform which balances are changing in ancestral states given by the tree. The multinomial regression serves as an alternative means to compute regression coefficients discussed in PhILR, Phylofactor and Gneiss, while avoiding issues with imputation and zeros.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33402,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Saliva microbiota study",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Nine volunteers provided unstimulated saliva so that salivary flow rate could be measured according to a standardized protocol48. Briefly, individuals were asked to allow saliva to flow for exactly five minutes through a disposable funnel (Simport, SIM F490-2) into a sterile, 15\u2009mL conical tube preloaded with 2\u2009mL sterile glycerol for bacterial preservation. Participants were asked to provide samples before brushing and after brushing teeth in the morning and in the evening. Samples were inverted several times to mix with the glycerol and stored at \u221220\u2009\u00b0C immediately after collection. This study was approved by an Institutional Review Board (IRB# 150275) and written informed consent was acquired before sample collection",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34154,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Saliva microbiota study",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Unstimulated saliva samples were thawed on ice and aliquots were diluted tenfold with sterile, 1x PBS. To remove human cells and salivary debris, samples were filtered using a sterile 5\u2009\u03bcm syringe filter (Sartorius Stedim Biotech GmbH). 5\u2009\u03bcl 20x SYBR green (SYBRTM Green I Nucleic Acid Gel Stain, Invitrogen) was added to 1\u2009mL of the microbial suspension (0.1x final concentration) and incubated in the dark for 15\u2009min at 37\u2009\u00b0C. Finally, 50\u2009\u03bcl AccuCount Fluorescent Particles (Spherotech, ACFP-70-10) were added for assessment of microbial load. Samples were processed on a SH800 Cell Sorter (Sony Biotechnology) using a 100\u2009\u03bcm chip with the threshold set on FL1 at 0.06%, and gain settings as follows; FSC\u2009=\u20094, BSC\u2009=\u200925%, FL1\u2009=\u200943%, FL4\u2009=\u200950%. The gating strategy was adapted from Vandeputte et al.12 Briefly, fluorescent microbial cells were gated from background on a FL1-Fl4 density plot. Aggregates were excluded by taking the linear fraction on a plot of FL1-height versus FL1-area as previously described49, and remaining background was removed by eliminating large events detected on a FSC-BSC density plot (Supplementary Fig.\u00a03). Negative controls (sterile PBS stained identically to samples) were run between each sample set to exclude cross-contamination. Settings were identical among all samples.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35463,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Saliva microbiota study",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "DNA extraction and 16S rRNA amplicon sequencing were done using Earth Microbiome Project (EMP) standard protocols (http://www.earthmicrobiome.org/protocols-and-standards/16s). Five hundred microliter of unstimulated saliva was used for gDNA extraction with MagAttract PowerSoil DNA Kit (QIAGEN) as previously described50. Amplicon PCR was performed on the V4 region of the 16S rRNA gene using the primer pair 515f to 806r with Golay error-correcting barcodes on the reverse primer. Two hundred forty nanogram of each amplicon was pooled and purified with the MO BIO UltraClean PCR cleanup kit and sequenced on the Illumina MiSeq sequencing platform.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36112,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Saliva microbiota study",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Demultiplexed fastq files were processed using QIIME2 (https://qiime2.org)51. Deblur was used to denoise the sequences52. Taxonomy was assigned and 16S rRNA gene copy number-corrected using RDP classifier53 then collapsed to the genus-level. All taxa reported in the manuscript were validated using the NCBI BLAST database54. Absolute abundances were estimated by multiplying the total cell-count estimated by flow cytometry by the copy number-corrected microbial proportions from sequencing as outlined above.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36622,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Saliva microbiota study",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "For differential abundance testing (Fig.\u00a02e), ALDEx2 determined taxa were significant if the FDR corrected p-value fell below 0.05. A taxon was determined to be significant by ANCOM if it passed the 0.6 cutoff. Songbird was used to perform multinomial regression and the repository can be found here: https://github.com/mortonjt/songbird. Paired t-tests were performed to evaluate the differences before and after brushing teeth. All log-ratios that were evaluated to either positive or negative infinity were dropped prior to statistical analysis.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37170,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Analyzing the Central Park soils study with reference frames",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Data from Ramirez et al.30 were retrieved from Qiita55 (https://qiita.ucsd.edu/study/description/2104). Amplicon sequence variants that appeared in less than 24 samples were filtered out, reducing the number of analyzed taxa to 30, 248 taxa. This filtering criteria was chosen to ensure that each of the six covariates had at least four samples to fit against. The following multinomial linear model was estimated",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37643,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Shotgun metagenome studies",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We used supplementary data from Byrd et al.27 and Leung et al.28. The provided relative abundances were compared to log-ratios of given taxa from the raw count data. Paired t-tests were performed to evaluate the differences between lesion and non-lesion skin samples. All log-ratios that were evaluated to either positive or negative infinity were dropped prior to statistical analysis. These numerical issues occur when particular microbes are not observed, and we treat them as missing data, respectively.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38176,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Reporting summary",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Further information on research design is available in the\u00a0Nature Research Reporting Summary linked to this article.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38309,
+                    "infons": {
+                        "section_title_1": "Supplementary information",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38335,
+                    "infons": {
+                        "section_title_1": "Acknowledgements",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "We would like to thank Huang Lin and Shyamal Peddada for running ANCOM2 on the oral microbiome study and providing the R scripts. We\u2019d also like to acknowledge Cara Magnabosco for her insights on soil microbes in the Central Park soils study and Doris Vandeputte for her feedback on the absolute quantification normalization. J.T.M. was funded by NSF grant GRFP DGE-1144086. C.M. was funded by NIDCR F31 Fellowship 1F31DE028478. This work was funded in part by a Seed grant from the Center of Microbiome Innovation, UC San Diego.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38880,
+                    "infons": {
+                        "section_title_1": "Author contributions",
+                        "iao_name_1": "author contributions section",
+                        "iao_id_1": "IAO:0000323"
+                    },
+                    "text": "J.T.M. led the data analysis and developed the idea of ranking differentials. C.M. collected saliva samples, performed flow cytometry and sequencing, and provided biological context behind oral microbial biofilms and atopic dermatitis. A.W. contributed the idea of reference frames. J.S. contributed the concept of bias due to total biomass differences. L.S.Z. processed the shotgun data for atopic dermatitis and provided background knowledge for atopic dermatitis. A.E. provided background knowledge behind oral microbial biofilms. K.Z. and R.K. provided insights on biological validation. All authors wrote and proofread the manuscript.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39539,
+                    "infons": {
+                        "section_title_1": "Data availability",
+                        "iao_name_1": "availability section",
+                        "iao_id_1": "IAO:0000611"
+                    },
+                    "text": "The sequences and biom tables56 from the saliva microbiota study can be found on Qiita (http://qiita.microbio.me)55 under study ID 11896 and at EBI under ERP111447.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39720,
+                    "infons": {
+                        "section_title_1": "Code availability",
+                        "iao_name_1": "availability section",
+                        "iao_id_1": "IAO:0000611"
+                    },
+                    "text": "All analyses can be found under https://github.com/knightlab-analyses/reference-frames",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39823,
+                    "infons": {
+                        "section_title_1": "Competing interests",
+                        "iao_name_1": "conflict of interest section",
+                        "iao_id_1": "IAO:0000616"
+                    },
+                    "text": "The authors declare no competing interests.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39885,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Peer review information:\nNature Communications thanks Nathan Olson and Olivier Thas for their contribution to the peer review of this work. Peer reviewer reports are available.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40070,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Publisher\u2019s note: Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40206,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "These authors contributed equally: James T. Morton, Clarisse Marotz",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40273,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "These authors jointly supervised this work: Karsten Zengler, Rob Knight",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40344,
+                    "infons": {
+                        "section_title_1": "Supplementary information",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Supplementary Information accompanies this paper at 10.1038/s41467-019-10656-5.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40423,
+                    "infons": {
+                        "journal": "Peer J. ",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Weiss SJ, et al. Effects of library size variance, sparsity, and compositionality on the analysis of microbiome data. Peer J. 2015;3:e1408. doi: 10.7717/peerj.1408. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40628,
+                    "infons": {
+                        "journal": "Genome Biol. ",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Love MI, Huber W, Anders S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome Biol. 2014;15:550. doi: 10.1186/s13059-014-0550-8. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40853,
+                    "infons": {
+                        "journal": "Nat. Methods. ",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Paulson JN, Stine OC, Bravo HC, Pop M. Differential abundance analysis for microbial marker-gene surveys. Nat. Methods. 2013;10:1200\u20131202. doi: 10.1038/nmeth.2658. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41075,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Russel, J. et al. Datest: a framework for choosing differential abundance or expression method. Preprint at bioRxiv\u00a010.1101/241802v 1241802 (2018).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41225,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Hawinkel, S., Mattiello, F., Bijnens, L. & Thas, O. A broken promise: microbiome differential abundance methods do not control the false discovery rate. Brief. Bioinform. 20, 210\u2013221\u00a0(2017). [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41427,
+                    "infons": {
+                        "journal": "Microbiome. ",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Fernandes AD, et al. Unifying the analysis of high-throughput sequencing datasets: characterizing rna-seq, 16s rrna gene sequencing and selective growth experiments by compositional data analysis. Microbiome. 2014;2:15. doi: 10.1186/2049-2618-2-15. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41734,
+                    "infons": {
+                        "journal": "Ann. Epidemiol. ",
+                        "volume": "26",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Gloor GB, Wu JR, Pawlowsky-Glahn V, Egozcue JJ. It\u2019s all relative: analyzing microbiome data as compositions. Ann. Epidemiol. 2015;26:322\u2013329. doi: 10.1016/j.annepidem.2016.03.003. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41954,
+                    "infons": {
+                        "journal": "Front. Microbiol. ",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Gloor GB, Macklaim JM, Pawlowsky-Glahn V, Egozcue JJ. Microbiome datasets are compositional: and this is not optional. Front. Microbiol. 2017;8:2224. doi: 10.3389/fmicb.2017.02224. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42193,
+                    "infons": {
+                        "journal": "Journal of the Royal Statistical Society: Series B (Methodological) ",
+                        "volume": "44",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Aitchison J. The Statistical Analysis of Compositional Data. Journal of the Royal Statistical Society: Series B (Methodological) 1982;44(2):139\u2013160. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42361,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Pawlowsky-Glahn, V., Egozcue, J. J. & Tolosana-Delgado, R.\u00a0Modeling and Analysis of Compositional Data\u00a0(John Wiley & Sons, 2015).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42494,
+                    "infons": {
+                        "journal": "BMC Genom. ",
+                        "volume": "19",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Kumar MS, et al. Analysis and correction of compositional bias in sparse sequencing count data. BMC Genom. 2018;19:799. doi: 10.1186/s12864-018-5160-5. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42705,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "551",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Vandeputte D, et al. Quantitative microbiome profiling links gut community variation to microbial load. Nature. 2017;551:507\u2013511. doi: 10.1038/nature24460. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42901,
+                    "infons": {
+                        "journal": "Microb. Ecol. Health Dis. ",
+                        "volume": "26",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Mandal S, et al. Analysis of composition of microbiomes: a novel method for studying microbial composition. Microb. Ecol. Health Dis. 2015;26:27663. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43098,
+                    "infons": {
+                        "journal": "mSystems. ",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Morton JT, et al. Balance trees reveal microbial niche differentiation. mSystems. 2017;2:e00162\u201316. doi: 10.1128/mSystems.00162-16. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43289,
+                    "infons": {
+                        "journal": "Soil. Biol. Biochem. ",
+                        "volume": "96",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Smets W, et al. A method for simultaneous measurement of soil bacterial abundances and community composition via 16s rrna gene sequencing. Soil. Biol. Biochem. 2016;96:145\u2013151. doi: 10.1016/j.soilbio.2016.02.003. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43533,
+                    "infons": {
+                        "journal": "Microbiome. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Tkacz A, Hortala M, Poole PS. Absolute quantitation of microbiota abundance in environmental samples. Microbiome. 2018;6:110. doi: 10.1186/s40168-018-0491-7. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43750,
+                    "infons": {
+                        "journal": "Microbiology. ",
+                        "volume": "148",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Nadkarni MA, Martin FE, Jacques NA, Hunter N. Determination of bacterial load by real-time pcr using a broad-range (universal) probe and primers set. Microbiology. 2002;148:257\u2013266. doi: 10.1099/00221287-148-1-257. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44005,
+                    "infons": {
+                        "journal": "Open Microbiol. ",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Rubin BE, et al. Dna extraction protocols cause differences in 16s rrna amplicon sequencing efficiency but not in community profile composition or structure. Open Microbiol. 2014;3:910\u2013921. doi: 10.1002/mbo3.216. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44277,
+                    "infons": {
+                        "journal": "Front. Microbiol. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Wagner Mackenzie B, Waite DW, Taylor MW. Evaluating variation in human gut microbiota profiles due to dna extraction method and inter-subject differences. Front. Microbiol. 2015;6:130. doi: 10.3389/fmicb.2015.00130. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44552,
+                    "infons": {
+                        "journal": "PLoS One. ",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Yuan S, Cohen DB, Ravel J, Abdo Z, Forney LJ. Evaluation of methods for the extraction and purification of dna from the human microbiome. PLoS One. 2012;7:e33865. doi: 10.1371/journal.pone.0033865. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44809,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Silverman, J. D., Durand, H., Bloom, R. J., Mukherjee, S. & David, L. A. Dynamic linear models guide design and analysis of microbiota studies within artificial human guts. Microbiome6, 202 (2018). [PMC free article] [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45038,
+                    "infons": {
+                        "journal": "Bioinformatics. ",
+                        "volume": "34",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. \u00c4ij\u00f6 T, M\u00fcller CL, Bonneau R. Temporal probabilistic modeling of bacterial compositions derived from 16s rrna sequencing. Bioinformatics. 2017;34:372\u2013380. doi: 10.1093/bioinformatics/btx549. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45288,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Grantham, N. S., Reich, B. J., Borer, E. T. & Gross, K. Mimix: A bayesian mixed-effects model for microbiome data from designed experiments. Preprint at bioRxiv\u00a0https://arxiv.org/abs/1703.07747 (2017).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45493,
+                    "infons": {
+                        "journal": "Biometrics. ",
+                        "volume": "69",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Xia F, Chen J, Fung WK, Li H. A logistic normal multinomial regression model for microbiome compositional data analysis. Biometrics. 2013;69:1053\u20131063. doi: 10.1111/biom.12079. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45710,
+                    "infons": {
+                        "journal": "Proc. Natl Acad. Sci. USA. ",
+                        "volume": "113",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Welch JLM, Rossetti BJ, Rieken CW, Dewhirst FE, Borisy GG. Biogeography of a human oral microbiome at the micron scale. Proc. Natl Acad. Sci. USA. 2016;113:E791\u2013E800. doi: 10.1073/pnas.1522149113. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45966,
+                    "infons": {
+                        "journal": "J. Clin. Med. Res. ",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Glatz M, Bosshard PP, Hoetzenecker W, Schmid-Grendelmeier P. The role of malassezia spp. in atopic dermatitis. J. Clin. Med. Res. 2015;4:1217\u20131228. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "malassezia spp.",
+                            "infons": {
+                                "identifier": "NCBI:txid55193",
+                                "type": "fungi_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:35:11",
+                                "parent_taxonomic_id": "NCBI:txid742845"
+                            },
+                            "id": "987626",
+                            "locations": {
+                                "length": 15,
+                                "offset": 46043
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 46162,
+                    "infons": {
+                        "journal": "Science Translational Medicine. ",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Byrd Allyson L., Deming Clay, Cassidy Sara K. B., Harrison Oliver J., Ng Weng-Ian, Conlan Sean, Belkaid Yasmine, Segre Julia A., Kong Heidi H. Staphylococcus aureus and Staphylococcus epidermidis strain diversity underlying pediatric atopic dermatitis. Science Translational Medicine. 2017;9(397):eaal4651. doi: 10.1126/scitranslmed.aal4651. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:35:14",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "987627",
+                            "locations": {
+                                "length": 21,
+                                "offset": 46309
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus epidermidis",
+                            "infons": {
+                                "identifier": "NCBI:txid1282",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:35:14",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "987628",
+                            "locations": {
+                                "length": 26,
+                                "offset": 46335
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 46563,
+                    "infons": {
+                        "journal": "Science Translational Medicine. ",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Leung Donald Y. M., Calatroni Agustin, Zaramela Livia S., LeBeau Petra K., Dyjack Nathan, Brar Kanwaljit, David Gloria, Johnson Keli, Leung Susan, Ramirez-Gama Marco, Liang Bo, Rios Cydney, Montgomery Michael T., Richers Brittany N., Hall Clifton F., Norquest Kathryn A., Jung John, Bronova Irina, Kreimer Simion, Conover Talbot C., Crumrine Debra, Cole Robert N., Elias Peter, Zengler Karsten, Seibold Max A., Berdyshev Evgeny, Goleva Elena. The nonlesional skin surface distinguishes atopic dermatitis with food allergy as a unique endotype. Science Translational Medicine. 2019;11(480):eaav2685. doi: 10.1126/scitranslmed.aav2685. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47237,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Falk, M. H. S., Linder, M. T., Johansson, C. & others. The prevalence of malassezia yeasts in patients with atopic dermatitis, seborrhoeic dermatitis and healthy controls. Acta Derm. Venereol.85, 17\u201323 (2005). [PubMed]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "malassezia",
+                            "infons": {
+                                "identifier": "NCBI:txid55193",
+                                "type": "fungi_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:35:25",
+                                "parent_taxonomic_id": "NCBI:txid742845"
+                            },
+                            "id": "987629",
+                            "locations": {
+                                "length": 10,
+                                "offset": 47314
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 47459,
+                    "infons": {
+                        "journal": "Proc. R. Soc. B. ",
+                        "volume": "281",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Ramirez KS, et al. Biogeographic patterns in below-ground diversity in new york city\u2019s central park are similar to those observed globally. Proc. R. Soc. B. 2014;281:20141988. doi: 10.1098/rspb.2014.1988. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47723,
+                    "infons": {
+                        "journal": "Peer J. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Washburne AD, et al. Phylogenetic factorization of compositional data yields lineage-level associations in microbiome datasets. Peer J. 2017;5:e2969. doi: 10.7717/peerj.2969. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47957,
+                    "infons": {
+                        "journal": "Appl. Environ. Microbiol. ",
+                        "volume": "75",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Ward NL, et al. Three genomes from the phylum acidobacteria provide insight into the lifestyles of these microorganisms in soils. Appl. Environ. Microbiol. 2009;75:2046\u20132056. doi: 10.1128/AEM.02294-08. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "acidobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid57723",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:35:32",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "987630",
+                            "locations": {
+                                "length": 13,
+                                "offset": 48007
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 48218,
+                    "infons": {
+                        "journal": "Int. J. Syst. Evol. Microbiol. ",
+                        "volume": "62",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Pankratov TA, Kirsanova LA, Kaparullina EN, Kevbrin VV, Dedysh SN. Telmatobacter bradus gen. nov., sp. nov., a cellulolytic facultative anaerobe from subdivision 1 of the acidobacteria, and emended description of acidobacterium capsulatum kishimoto et al. 1991. Int. J. Syst. Evol. Microbiol. 2012;62:430\u2013437. doi: 10.1099/ijs.0.029629-0. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Telmatobacter bradus",
+                            "infons": {
+                                "identifier": "NCBI:txid474953",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:35:35",
+                                "parent_taxonomic_id": "NCBI:txid1078829"
+                            },
+                            "id": "987631",
+                            "locations": {
+                                "length": 20,
+                                "offset": 48289
+                            }
+                        },
+                        {
+                            "text": "acidobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid57723",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:35:36",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "987632",
+                            "locations": {
+                                "length": 13,
+                                "offset": 48393
+                            }
+                        },
+                        {
+                            "text": "acidobacterium capsulatum",
+                            "infons": {
+                                "identifier": "NCBI:txid33075",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:35:36",
+                                "parent_taxonomic_id": "NCBI:txid33973"
+                            },
+                            "id": "987633",
+                            "locations": {
+                                "length": 25,
+                                "offset": 48435
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 48597,
+                    "infons": {
+                        "journal": "Int. J. Syst. Evol. Microbiol. ",
+                        "volume": "58",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Fahrbach M, et al. Steroidobacter denitrificans gen. nov., sp. nov., a steroidal hormone-degrading gammaproteobacterium. Int. J. Syst. Evol. Microbiol. 2008;58:2215\u20132223. doi: 10.1099/ijs.0.65342-0. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Steroidobacter denitrificans",
+                            "infons": {
+                                "identifier": "NCBI:txid465721",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 03:35:38",
+                                "parent_taxonomic_id": "NCBI:txid469322"
+                            },
+                            "id": "987634",
+                            "locations": {
+                                "length": 28,
+                                "offset": 48620
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 48836,
+                    "infons": {
+                        "journal": "J. Invest. Dermatol. ",
+                        "volume": "136",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Meisel JS, et al. Skin microbiome surveys are strongly influenced by experimental design. J. Invest. Dermatol. 2016;136:947\u2013956. doi: 10.1016/j.jid.2016.01.016. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49056,
+                    "infons": {
+                        "journal": "Nucleic Acids Research. ",
+                        "volume": "47",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "36. Shi Wenyu, Qi Heyuan, Sun Qinglan, Fan Guomei, Liu Shuangjiang, Wang Jun, Zhu Baoli, Liu Hongwei, Zhao Fangqing, Wang Xiaochen, Hu Xiaoxuan, Li Wei, Liu Jia, Tian Ye, Wu Linhuan, Ma Juncai. gcMeta: a Global Catalogue of Metagenomics platform to support the archiving, standardization and analysis of microbiome data. Nucleic Acids Research. 2018;47(D1):D637\u2013D648. doi: 10.1093/nar/gky1008. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49505,
+                    "infons": {
+                        "journal": "Nat. Methods. ",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "37. Gonzalez A, et al. Qiita: rapid, web-enabled microbiome meta-analysis. Nat. Methods. 2018;15:796\u2013798. doi: 10.1038/s41592-018-0141-9. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49698,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "38. Holmes, S. et al. Visualization and statistical comparisons of microbial communities using R packages on phylochip data.\u00a0In Pac. Symp. on Biocomp. 142\u201353 (NIH Public Access, 2011). [PMC free article] [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49910,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "39. Callahan, B. J., Sankaran, K., Fukuyama, J. A., McMurdie, P. J. & Holmes, S. P. Bioconductor workflow for microbiome data analysis: from raw reads to community analyses. F1000Res.5,\u00a01492 (2016). [PMC free article] [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50136,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "40. Magurran, A. E. Ecological diversity and its measurement (Princeton university press, Princeton, New Jersey, 1988).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50255,
+                    "infons": {
+                        "journal": "PLoS Comput. Biol. ",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "41. Friedman J, Alm EJ. Inferring correlation networks from genomic survey data. PLoS Comput. Biol. 2012;8:e1002687. doi: 10.1371/journal.pcbi.1002687. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50462,
+                    "infons": {
+                        "journal": "CSIRO. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "42. Lovell D, Taylor J, Zwart A, Helliwell C. Caution! compositions! can constraints on omics data lead analyses astray. CSIRO. 2010;1:44. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50617,
+                    "infons": {
+                        "journal": "OSDI. ",
+                        "volume": "16",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "43. Abadi M, et al. Tensorflow: a system for large-scale machine learning. OSDI. 2016;16:265\u2013283. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50731,
+                    "infons": {
+                        "journal": "mSystems. ",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "44. Rivera-Pinto J, et al. Balances: a new perspective for microbiome analysis. mSystems. 2018;3:e00053\u201318. doi: 10.1128/mSystems.00053-18. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50926,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "45. Gloor, G. Aldex2: Anova-like differential expression tool for compositional data. ALDEX manual modular20, 1\u201311\u00a0https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0067019 (2015).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51122,
+                    "infons": {
+                        "journal": "Biostatistics. ",
+                        "volume": "18",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "46. Kaul A, Davidov O, Peddada SD. Structural zeros in high-dimensional data with applications to microbiome studies. Biostatistics. 2017;18:422\u2013433. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51316,
+                    "infons": {
+                        "journal": "eLife. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "47. Silverman JD, Washburne AD, Mukherjee S, David LA. A phylogenetic transform enhances analysis of compositional microbiota data. eLife. 2017;6:e21887. doi: 10.7554/eLife.21887. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51551,
+                    "infons": {
+                        "journal": "J. Am. Dent. Assoc. ",
+                        "volume": "139",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "48. Navazesh M, Kumar SKS, University of Southern California School of Dentistry.. Measuring salivary flow: challenges and opportunities. J. Am. Dent. Assoc. 2008;139:35S\u201340S. doi: 10.14219/jada.archive.2008.0353. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51801,
+                    "infons": {
+                        "journal": "ISME. ",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "49. Props R, et al. Absolute quantification of microbial taxon abundances. ISME. 2017;11:584. doi: 10.1038/ismej.2016.117. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51979,
+                    "infons": {
+                        "journal": "Biotechniques. ",
+                        "volume": "62",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "50. Marotz C, et al. DNA extraction for streamlined metagenomics of diverse environmental samples. Biotechniques. 2017;62:290\u2013293. doi: 10.2144/000114559. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52170,
+                    "infons": {
+                        "journal": "Nat. Methods. ",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "51. Caporaso JG, et al. QIIME allows analysis of high-throughput community sequencing data. Nat. Methods. 2010;7:335\u2013336. doi: 10.1038/nmeth.f.303. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52373,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "52. Amir, A. et al. Deblur rapidly resolves Single-Nucleotide community sequence patterns. mSystems2, 00191\u201316 (2017). [PMC free article] [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52519,
+                    "infons": {
+                        "journal": "Appl. Environ. Microbiol. ",
+                        "volume": "73",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "53. Wang Q, Garrity GM, Tiedje JM, Cole JR. Naive bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy. Appl. Environ. Microbiol. 2007;73:5261\u20135267. doi: 10.1128/AEM.00062-07. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52788,
+                    "infons": {
+                        "journal": "Bioinformatics. ",
+                        "volume": "24",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "54. Morgulis A, et al. Database indexing for production megablast searches. Bioinformatics. 2008;24:1757\u20131764. doi: 10.1093/bioinformatics/btn322. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52990,
+                    "infons": {
+                        "journal": "Nat. Methods. ",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "55. Gonzalez A, et al. Qiita: rapid, web-enabled microbiome meta-analysis. Nat. Methods. 2018;15:796\u2013798. doi: 10.1038/s41592-018-0141-9. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53183,
+                    "infons": {
+                        "journal": "Gigascience. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "56. McDonald D, et al. The biological observation matrix (BIOM) format or: how I learned to stop worrying and love the ome-ome. Gigascience. 2012;1:7. doi: 10.1186/2047-217X-1-7. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

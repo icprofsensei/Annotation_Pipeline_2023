@@ -1,0 +1,1713 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC4938407",
+            "inputfile": "../microbiome_corpus_HTML\\PMC4938407.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "GUTSS: An Alignment-Free Sequence Comparison Method for Use in Human Intestinal Microbiome and Fecal Microbiota Transplantation Analysis",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 136,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Background",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Comparative analysis of gut microbiomes in clinical studies of human diseases typically rely on identification and quantification of species or genes. In addition to exploring specific functional characteristics of the microbiome and potential significance of species diversity or expansion, microbiome similarity is also calculated to study change in response to therapies directed at altering the microbiome. Established ecological measures of similarity can be constructed from species abundances, however methods for calculating these commonly used ecological measures of similarity directly from whole genome shotgun (WGS) metagenomic sequence are lacking.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 815,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Results",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "We present an alignment-free method for calculating similarity of WGS metagenomic sequences that is analogous to the Bray\u2013Curtis index for species, implemented by the General Utility for Testing Sequence Similarity (GUTSS) software application. This method was applied to intestinal microbiomes of healthy young children to measure developmental changes toward an adult microbiome during the first 3 years of life. We also calculate similarity of donor and recipient microbiomes to measure establishment, or engraftment, of donor microbiota in fecal microbiota transplantation (FMT) studies focused on mild to moderate Crohn's disease. We show how a relative index of similarity to donor can be calculated as a measure of change in a patient's microbiome toward that of the donor in response to FMT.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1621,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Conclusion",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Because clinical efficacy of the transplant procedure cannot be fully evaluated without analysis methods to quantify actual FMT engraftment, we developed a method for detecting change in the gut microbiome that is independent of species identification and database bias, sensitive to changes in relative abundance of the microbial constituents, and can be formulated as an index for correlating engraftment success with clinical measures of disease. More generally, this method may be applied to clinical evaluation of human microbiomes and provide potential diagnostic determination of individuals who may be candidates for specific therapies directed at alteration of the microbiome.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2316,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Research studies seeking to establish the potential role of the gut microbiome in human disease have been greatly aided by advances in sequencing technologies and the parallel development of sequence analysis methods. Standard methods of microbiome analysis have relied upon identification of species as a basis for inferring characteristics of the microbiome that may be associated with disease. The interpersonal variability of bacterial species in the human gut microbiome suggests that the gene or functional complement of the microbial community may be more relevant than species alone when analyzing differences in the microbiome associated with disease[1]. In addition to identifying compositional patterns of microbial communities or the complement of metabolic functions to correlate characteristics of microbiomes with disease, there is also value in determining ecological resemblance through quantitative measures such as similarity or dissimilarity (\u03b2-diversity). Similarity or difference measures have been widely discussed in the fields of ecology, biology and biogeography[2] and are often derived from species counts or relative abundance[3, 4]. The UniFrac[5] distance is derived from phylogenetic tree branch lengths between species, sometimes weighted by species abundances, based on the concept that closely-related organisms may share functional characteristics in common. Because similarity and dissimilarity measures are typically calculated from species abundance estimates, they are biased by the methods used to identify species and estimate abundances.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3908,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "A widely used method of identifying and quantifying species or operational taxonomic units (OTUs) is targeted amplicon, 16S rRNA gene sequencing[6, 7]. Benefits of this approach are that the 16S rRNA gene is universal in bacteria, representation of the 16S rRNA gene sequence in GenBank is extensive, sequencing a short (~1500 bp) region is relatively inexpensive, and common use of the same target gene across multiple studies increases accuracy in meta-analysis[8]. Although its variable regions can be used to distinguish taxa it provides uneven resolution of the taxonomic spectrum, and variation in copy number of this gene influences abundance estimates, among other limitations[9]. Microbial abundance profiles can also be generated from WGS metagenomic sequence by methods that include alignment, taxonomic classification, metagenomics assembly, binning and deconvolution. Relative abundances can be estimated by aligning WGS metagenomic sequence to taxon specific marker genes[10], unique genomic regions[11], complete genomes[12\u201314] and universal marker genes[15]. Homology-based methods have also been introduced to correct abundance estimates from alignment using a variety of modeling strategies[16\u201318]. Accuracy of the abundance estimates using alignment methods has improved with increasing representation of taxa in reference databases. However, this approach will always be limited by ability to identify microbial strains that are distant from the reference and those which are modified by gene acquisition or deletion as they adapt to new environments and compete for resources. Some of these adaptations may be associated with the particular human disease being investigated. Taxonomic classification of individual WGS metagenomic sequence reads to group them with the assistance of phylogenetic relatedness can improve identification of novel strains[19, 20]. Classification methods can be biased by uneven and limited representation of taxa and the scarcity of unculturable microbes in reference databases. These limitations can be overcome by metagenomic assembly[21\u201324], given sufficient read coverage, especially when combined with other methods of determining microbial abundances. Binning or partitioning of the sequence reads using frequency patterns of k-mers, short nucleotide (nt) sequences of length k, provides a means of clustering WGS metagenomic sequence that is independent of reference databases[25\u201328]. The use of subtle differences in frequency patterns for non-unique k-mers can help distinguish reads from different taxa but this method has relatively lower resolution, especially for closely related species. Deconvolution methods[29\u201331] invert high-dimensional matrices to resolve the relationship between gene content or function and taxonomic abundances. This is a multi-sample analysis method that is dependent on the number and content of the metagenomic samples for accuracy. At the current stage they are also dependent on reference databases and annotation, but are less sensitive to incompleteness of these resources.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:17:58",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "21518798",
+                            "locations": {
+                                "length": 8,
+                                "offset": 4129
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 6977,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "An alternative approach to measuring microbiome similarity that is independent of species abundance estimation and reference databases is direct comparison of metagenomic shotgun sequence reads using \"alignment-free\" methodology[32\u201334]. The advantage of alignment-free methods is that they avoid incomplete database bias, OTU identification error, inability to assemble low coverage (low abundance) OTUs and they are robust even for unculturable microbes. An efficient method of determining sample similarity in WGS metagenomic sequence is through the use of k-mers. By direct comparison of metagenomic sequence at the scale of shotgun sequence reads, similarity can be measured at a subspecies level. The dissimilarity or distance measures derived from them can be used for classification by clustering, construction of phylogenetic-like tree graphs, or ordination such as principal coordinates analysis[1, 35]. The disadvantage of these methods is that the derived scores are not standard ecological measures. Quantitative measures of ecological similarity or distance derived from species identification and abundance such as UNIFRAC[36\u201338], Jensen-Shannon[39, 40], Bray-Curtis (BC)[39, 41\u201344] and Morisita-Horn[45] are commonly used for microbiome analysis in clinical research studies. However, methods to calculate these measures from WGS metagenomic sequence using alignment-free algorithms are lacking. The alignment-free method described in this report, which estimates microbiome similarity with a metric that is analogous to the BC ecological measure, fills this gap in methodology.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8570,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Our method was motivated by the need for accurate estimation of sample similarity in paired comparison of WGS metagenomic sequence-derived microbiomes before and after treatment to evaluate new therapies in clinical studies. For example, successful treatment of recurrent Clostridium difficile[38\u201340, 42, 45, 46] induced colitis with fecal microbiota transplantation (FMT) has stimulated research in evaluating the effectiveness of FMT as therapy for ulcerative colitis (UC)[37, 44], Crohn's disease (CD)[47] and other inflammatory bowel diseases (IBD)[41, 43, 48, 49], which may have a microbial component to the disease. This therapy aims to replace the gut microbiota in a recipient by colonic or nasogastric administration of filtered and diluted stool obtained from a healthy donor. FMT is hypothesized to work by shifting the recipient's microbiota toward a community that resists inflammation induced by pathogens or an altered microbiota. Though case reports indicate episodic success of these therapies for IBD, there has been limited analysis of engraftment performed in these studies to assess the therapeutic potential of FMT to alter the microbiome in a sustained manner[36]. We sought to develop a method to measure the extent to which the donor's gut microbiota has been established in the recipient following transplantation based on similarity of the microbiomes of the patient and donor. In a recent pediatric study to treat Crohn's disease with FMT at Seattle Children's Hospital[47] we applied an alignment-free algorithm, Compareads[50], more recently released as Commet[51], to measure engraftment using WGS metagenomic sequence. Commet is a computationally efficient algorithm that calculates similarity on the basis of sequence identity, which is determined by mapping k-mers between samples. However, it is not a standard ecological measure and its estimate of similarity can be greatly inflated for samples with high asymmetry of abundance since it does not take relative sequence abundance into account.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Clostridium",
+                            "infons": {
+                                "identifier": "NCBI:txid1485",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:18:48",
+                                "parent_taxonomic_id": "NCBI:txid31979"
+                            },
+                            "id": "21518799",
+                            "locations": {
+                                "length": 11,
+                                "offset": 8842
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 10600,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Here we report the development of an alignment-free algorithm, GUTSS that takes into account differences in abundance in a manner analogous to the BC index[52] to measure similarity of microbiomes using WGS metagenomic sequence. While alignment-free algorithms count k-mers[34], use compression[53] or other methods to calculate similarity or dissimilarity[32], we followed the same general approach as Commet in counting reads, identified by matching k-mer sequences, that overlap in two metagenome samples. In contrast to Commet, which tallies all reads that map between the two samples, we use differences in k-mer counts in shared reads to account for relative abundance of sequences in the two samples. We present a description of the methodology and results from applying the method to microbiome data from two clinical studies. Longitudinal samples from healthy young children participating as controls in a pediatric research study of cystic fibrosis (CF) at Seattle Children's Hospital[54] were compared with adults in the Human Microbiome Project (HMP)[55] to measure developmental changes toward an adult microbiome during the first three years of life. An analysis of the microbiome data from a pediatric study to treat Crohn's disease with FMT at Seattle Children's Hospital[47] is also presented to show how this methodology is particularly valuable for evaluating specific therapies directed at altering the microbiome such as FMT to treat IBD.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12059,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Similarity score",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "One of the most well-known coefficients of ecological resemblance is the percentage difference, which in its one-complement form is commonly referred to as the Bray\u2013Curt is index of similarity[2]. The BC index of percent similarity can be expressed as[56]\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12352,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Similarity score",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "In eqs (3) and (4) the sums are only over values of i for which both xXij and yXij (xYij and yYij) are nonzero. That is, the sum is only over differences in counts for k-mers found in both samples. The count differences are constructed such that they are negative where the k-mer count is lesser in the sample from which the reads are drawn. When obtaining the k-mer counts in the two samples for a given read, it is necessary that the read itself not be included in the count for that k-mer. The reason for this is that the probability that a k-mer in that read belongs to the sample it is drawn from is unity for every k-mer in that read, but the probability of occurrence of this k-mer among the other reads in the same sample or the other is binomial. Therefore, the probability distribution of k-mer counts is binomial only if we subtract one from xXij and yYij, which is equivalent to removing the read being considered from the count. Using indicator functions of the count differences for lesser counts\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13363,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Optimization and validation",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Optimization of the alignment-free algorithm implemented by GUTSS involves a compromise between biological, statistical and technical constraints. The k-mer length influences the ability to uniquely map WGS metagenomic sequence between samples. The percentage of unique k-mer sequences with length 11 to 35 bp for four bacterial species, Francisella tularensis subsp. novicida, Escherichia coli, Pseudomonas aeruginosa and Burkholderia pseudomalleii are shown in S1 Fig. Spurious matches are more prevalent for k-mers shorter than about 17 to 20 nucleotides. At the sequence length (k = 31) used throughout this study k-mer uniqueness was greater than 99.3% for these bacterial species except for E. coli, which was 97.8%, presumably due to gene duplication. In the other extreme, opportunity for overlap of sequence reads diminishes with increasing k-mer length. For a range of k-mer lengths between these extremes, variation in the number of k-mers mapped between samples is only weakly dependent on k-mer length.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Francisella tularensis",
+                            "infons": {
+                                "identifier": "NCBI:txid263",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:19:46",
+                                "parent_taxonomic_id": "NCBI:txid262"
+                            },
+                            "id": "21518800",
+                            "locations": {
+                                "length": 22,
+                                "offset": 13701
+                            }
+                        },
+                        {
+                            "text": "Escherichia coli",
+                            "infons": {
+                                "identifier": "NCBI:txid562",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:19:46",
+                                "parent_taxonomic_id": "NCBI:txid561"
+                            },
+                            "id": "21518801",
+                            "locations": {
+                                "length": 16,
+                                "offset": 13741
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:19:46",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "21518802",
+                            "locations": {
+                                "length": 22,
+                                "offset": 13759
+                            }
+                        },
+                        {
+                            "text": "Burkholderia",
+                            "infons": {
+                                "identifier": "NCBI:txid32008",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:19:46",
+                                "parent_taxonomic_id": "NCBI:txid119060"
+                            },
+                            "id": "21518803",
+                            "locations": {
+                                "length": 12,
+                                "offset": 13786
+                            }
+                        },
+                        {
+                            "text": "E. coli",
+                            "infons": {
+                                "identifier": "NCBI:txid562",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:19:49",
+                                "parent_taxonomic_id": "NCBI:txid561"
+                            },
+                            "id": "21518804",
+                            "locations": {
+                                "length": 7,
+                                "offset": 14060
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 14405,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Optimization and validation",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The minimum number of sequence reads required per sample depends on the sequencing technology (length of reads), sequence quality and species diversity in the sample. Variation of percent similarity with coverage for WGS metagenomic sequence from three adult (HMP) gut microbiomes with low, average and high Shannon diversity of 0.99 (SRS013215), 2.02 (SRS016267) and 3.25 (SRS017521) are plotted in S2 Fig for pairs of samples ranging from 10,000 to 20 million reads. Greater than 99% similarity was obtained with 20 million reads. For a single bacterial genome, a binomial model can be used to predict similarity as a function of sample size (number of sequence reads). The percent similarity score, S for two sets of N reads randomly placed in k genomic locations is S = 100(1 \u2013(1\u20131/k)N). This model (blue line) accurately predicted similarity of two mutually exclusive random samples of the 4.1 Mb genome of Acinetobacter baumannii (blue dots in S2 Fig). At the other extreme, a similar binomial model for a 3.2 Gb Homo sapiens genome is shown for reference.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Acinetobacter baumannii",
+                            "infons": {
+                                "identifier": "NCBI:txid470",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:20:04",
+                                "parent_taxonomic_id": "NCBI:txid469"
+                            },
+                            "id": "21518805",
+                            "locations": {
+                                "length": 23,
+                                "offset": 15317
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 15467,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Optimization and validation",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Accuracy of the GUTSS method was tested with simulated bacterial communities using whole genome sequence (WGS) reads. Simulated communities of 20 million reads each were generated by random selection of WGS reads from 59 bacteria commonly found in the Human gut microbiome (S1 Table). MetaPhlAn species abundances of the gut microbiomes of donors and patients in an FMT study (see below) were used to simulate realistic abundance profiles. Sequence reads were drawn from among the 59 sequenced genomes to match the abundance profiles (but not the original species). The expected BC similarity of sample pairs was calculated from the species abundances used to construct the mock communities. GUTSS scores for 62 selected sample pairs were plotted against the expected BC similarity (Fig 1). GUTSS similarity deviated from expected values by an average of 0.2\u00b10.6%. In contrast, Commet similarity was higher than BC similarity by an average of 27.4\u00b112.2% (Fig 1).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:20:09",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "21518806",
+                            "locations": {
+                                "length": 8,
+                                "offset": 15688
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 16429,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Computational performance",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The GUTSS software application developed in this study for calculating sample similarity from metagenomic shotgun sequence in fastq file format is available from GitHub [https://github.com/marade/GUTSS]. The Python utility constructs a hash of k-mers for all reads in each fastq file using Jellyfish[57], obtains k-mer counts for each read using query_per_sequence (slightly modified) from the Jellyfish package, and calculates similarity from total read counts obtained. Similarity scores calculated by GUTSS for two samples with 20 million Illumina reads took 180 minutes on a Intel(R) Xeon(R) CPU E5420 @ 2.50GHz using 5 cores under KVM virtualization. Computation time increases approximately linearly with sample size because most of the computation time involves serially calculating differences in k-mers counts for each read, and this scales proportionally with the number of reads. The memory requirement is generally about 1GB per million reads (total in two samples) but varies greatly with system architecture, sample complexity and k-mer size.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17510,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Sample cohorts",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The pediatric study to treat Crohn's disease with FMT at Seattle Children's Hospital was a single-center open-label study designed to determine tolerability, preliminary safety, and potential efficacy in pediatric patients with CD[47]. Nine patients with mild-to-moderate disease symptoms as defined by Pediatric Crohn\u2019s Disease Activity Index (PCDAI) between 10 and 29, and aged 12 to 21 years, were enrolled into this study. Each participant was followed in the study for approximately 12 weeks. The protocol was approved by the Institutional Review Board of Seattle Children\u2019s Hospital. All patients/participants provided written informed consent or assent. Approval from the FDA (investigational new drug number 14942) was obtained. The study was registered with clinicaltrials.gov [number:NCT01757964]. Study participants were recruited from Seattle Children\u2019s Hospital outpatient gastroenterology clinics.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18435,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Sample cohorts",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Children from a cohort of 12 healthy individuals aged between 55 and 1319 days were recruited as controls in a pediatric CF research study at Seattle Children\u2019s Hospital[54]. This study was approved by the Seattle Children\u2019s Hospital Institutional Review Board, and consent was obtained for all subjects. Children in the control group were excluded if they were less than 36 weeks gestation at birth, were under treatment with antibiotics at recruitment or within two months of enrollment, had a known gastrointestinal or immunological disorder or any condition requiring chronic antibiotic therapy, or were acutely ill at time of enrollment. Sample collection and experimental procedure description can be found in the supplementary data for this study[54].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19193,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Sample cohorts",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The U.S. National Institutes of Health (NIH) funded Human Microbiome Project (HMP) Consortium adult cohort consists of healthy individuals aged 18 to 40 residing in the U.S.[55]. Stool samples in this study were collected according to the Manual of Procedures and the Core Microbiome Sampling Protocol [available at http://www.hmpdacc.org/tools_protocols/tools_protocols.php]. According to the HMP protocol, Human DNA sequence was identified and removed, duplicate reads were marked and removed, and reads with ambiguous bases were trimmed from each end. WGS metagenomic sequence from 100 gut microbiome samples was downloaded from http://hmpdacc.org/. Twenty samples were randomly selected from the 100 samples for comparison with each of the pediatric study control samples.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19969,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Genomic and metagenomic sequence",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The Acinetobacter baumannii AB5075-UW sequence generated by Illumina (MiSeq) technology was registered at NCBI under Bioproject PRJNA243297 [Genbank:CP008706, CP008707, CP008708, and CP008709]. Complete genome assemblies were obtained from NCBI GenBank [http://www.ncbi.nlm.nih.gov/genbank/] for Francisella tularensis subsp. novicida U112 [NCBI: NC_008601.1], Escherichia coli O157:H7 TW14359 [GenBank: CP001368.1 and CP001369.1], Pseudomonas aeruginosa PAO1 [NCBI: NC_002516.2] and Burkholderia pseudomalleii 1026b [NCBI: NC_017831.1 and NC_017832.1]. WGS used to construct simulated communities with accession numbers listed in S1 Table were obtained from the NIH Sequence Read Archive (SRA). Healthy adult gut microbiome WGS metagenomic sequence was obtained from the Human Microbiome Project (http://www.hmpdacc.org/) for the accession numbers listed in S2 Table.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Acinetobacter baumannii",
+                            "infons": {
+                                "identifier": "NCBI:txid470",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:20:55",
+                                "parent_taxonomic_id": "NCBI:txid469"
+                            },
+                            "id": "21518807",
+                            "locations": {
+                                "length": 23,
+                                "offset": 19973
+                            }
+                        },
+                        {
+                            "text": "Francisella tularensis",
+                            "infons": {
+                                "identifier": "NCBI:txid263",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:20:58",
+                                "parent_taxonomic_id": "NCBI:txid262"
+                            },
+                            "id": "21518808",
+                            "locations": {
+                                "length": 22,
+                                "offset": 20265
+                            }
+                        },
+                        {
+                            "text": "Escherichia coli",
+                            "infons": {
+                                "identifier": "NCBI:txid562",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:20:58",
+                                "parent_taxonomic_id": "NCBI:txid561"
+                            },
+                            "id": "21518809",
+                            "locations": {
+                                "length": 16,
+                                "offset": 20330
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:20:58",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "21518810",
+                            "locations": {
+                                "length": 22,
+                                "offset": 20401
+                            }
+                        },
+                        {
+                            "text": "Burkholderia",
+                            "infons": {
+                                "identifier": "NCBI:txid32008",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:20:59",
+                                "parent_taxonomic_id": "NCBI:txid119060"
+                            },
+                            "id": "21518811",
+                            "locations": {
+                                "length": 12,
+                                "offset": 20453
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 20869,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Sequence processing and data analysis",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "All metagenomic shotgun sequence used in this study was filtered according to the HMP protocol, including Human sequence removal. Sequence samples were also subjected to a final quality screen in order to remove reads not meeting the requirement of at least 88 of the first 90 bases having a Phred quality score greater than or equal to 20. Commet [https://github.com/pierrepeterlongo/commet] was run with default parameters and k = 31. Relative abundance of species was calculated using Metagenomic Phylogenetic Analysis (MetaPhlAn) v2[10]. Bray\u2013Curtis similarity scores derived from species relative abundance were calculated using vegan, a CRAN package for the analysis of ecological communities[58]. For the FMT studies we defined the donor similarity index (DSI) as DSI = (St\u2212S0)/(100\u2212S0) where S0 is the pre-transplant (baseline) similarity of the recipient to the donor, and St is the recipient to donor similarity at a given time point, t for the post-transplant samples. All statistical analysis was performed and figures prepared using R (version 3.1, R Development Core Team 2012, R Foundation for Statistical Computing, Vienna, Austria).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22055,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "The gut microbiomes of healthy young children compared to adults",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The gut microbiome of young children up to three years of age is known to be different from that of adults and exhibits greater interpersonal variation[59, 60]. One way to measure how the gut microbiome of a young child progresses toward establishment of an adult-like microbiome is to compare with a pool of healthy adults. We applied GUTSS to compare longitudinal samples from five healthy young children[54] with twenty HMP adult gut microbiomes. The median similarity to adults was determined for each time point (age) of each child (Fig 2). The average similarity of 49 pairs of HMP adult gut microbiomes (solid horizontal line in Fig 2) was estimated by GUTSS to be 16.6\u00b17.5%, with values ranging from 4.8 to 33.6% (S2 Table). Similarity scores for young children ranged from 0.2 to 6% for the first samples taken. Four of the five children were within one standard deviation of the adult average by the time of the last sample. Similarity scores near the adult average were achieved at different timepoints between one and three years of life, suggesting that the establishment of an adult-like microbiome varies across individuals.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23258,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Evaluation of engraftment in FMT therapy",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "WGS metagenomic sequence from patients and donors participating in a pediatric study to treat Crohn's disease with FMT therapy at Seattle Children's Hospital[47] was obtained to detect alteration of the patient's microbiome following transplant. Patients had clinical evaluations and stool collection prior to transplant and at 2, 6, and 12 weeks following FMT. Samples from donors, which were parents of the patients, were acquired on the day of transplant. Samples from eight patients and their respective donors in that study were analyzed using GUTSS. Patient microbiomes were compared with that of their respective donor (Fig 3a). The mean patient to donor similarity, pre-FMT was 25.6\u00b19.7%. Patient 18 had the highest similarity to donor pre-FMT at 40.2%, and Patient 1 had the lowest at 8.0%. The mean similarity to donor was more than one standard deviation above the mean of the adults in the HMP samples, and may be a consequence of relatedness, co-habitation or shared diet of the patients and their donors. Response to FMT therapy is indicated by change from baseline in the recipient's similarity to donor. The highest similarity to donor post-FMT was 47.5% for patient 6, a 19.6% increase from the pre-FMT sample, which is also the largest change observed in this study. Patient 7 had a 14.1% increase to 39.4% following transplant. In contrast, the highest similarity between adult samples in the 100 HMP samples (noted above) was 33.6%. The largest decrease in similarity to donor from baseline was observed for patient 2, from 32.5 to 25.6%. This kind of change can be accounted for by rapid expansion of species not found in the donor, for example.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24964,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Evaluation of engraftment in FMT therapy",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To compare relative changes in response to FMT therapy, we calculated the donor similarity index (DSI; see Methods). A DSI of 0% represents no change in recipient\u2019s microbiota relative to the donor, a positive score represents the relative percent increase in similarity to donor, while a negative score indicates the relative percent reduction in similarity to the donor\u2019s microbiota following transplant. A DSI of 100% (using our method of calculating similarity) means that the microbial community and their relative abundance are identical in the patient and donor. The DSI at 2 weeks post-FMT revealed a large increase in value for patients 6 and 7, a moderate increase for patients 1, 8 and 13, and no increase for patients 2, 10 and 18 (Fig 3b). All post-FMT scores for four of the patients (1, 6, 7, and 13) were positive. The three patients with negative DSI at two weeks had positive DSI at six weeks. The largest DSI of 27.2% was observed in patient 6 at the two week follow up. The DSI for patient 7 at the three follow up visits, which averaged 18.7\u00b10.3%, was unchanged. The difference between the 2 week and 12 week DSI scores for the five patients with initially positive scores was 1.6\u00b13.5%, though the DSI at 12 weeks ranged 5.4 to 23.8% with mean 13.4\u00b17.8%.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26239,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Evaluation of engraftment in FMT therapy",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Since positive DSI scores suggested successful engraftment of the donor's microbiota in the patient, we sought to determine whether they exceeded similarity scores calculated between patients and random healthy donors, excluding their own. Analysis of variance was used to test whether the patients\u2019 microbiota would become similar to the sampling of healthy donors. Although positive DSI scores were observed for some patients when compared with donors other than their own, the DSI scores were not significantly different from zero at any time point (p > 0.1 at 2, 6, and 12 weeks) (Fig 4). Patients did not on average become more like the random donors (all other donors in this study excluding their own). In contrast, the DSI scores for patients (with positive DSI scores, n = 5) compared to their respective donors were significantly greater than the DSI scores with respect to all other donors (at 2 weeks: p = 0.035; at 6 weeks: p = 0.014; and at 12 weeks: p = 0.009) (Fig 4). There were no controls in this trial to determine the inference from these results.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27307,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In this study we developed GUTSS, an alignment-free method of WGS metagenomic sequence comparison in order to estimate similarity or changes in microbiomes without having to identify taxonomic constituents, their relative abundances, or phylogenetic relationships. Our similarity score is modeled on the BC index, which is a commonly used ecological measure of community resemblance. By translating this index of similarity for species in two communities into a measure of DNA sequence overlap between two metagenomics samples, we derived an analogous measure that effectively compares microbiomes at the subspecies level. The advantage of measuring microbiome similarity by direct comparison of sequence reads over methods that require species or OTU identification is that it is not biased by incompleteness in our ability to identify microbial species, organism diversity within species, or our knowledge of their function in the human intestine (or other body site). It is robust even with samples containing unculturable microbes. Similarity scores based on species identification generally overestimate similarity where differences at the subspecies level in the actual microbiome communities are not detected. Even similar species can have widely different gene content. Although methods of detection of bacteria in metagenomic samples using marker genes or unique sequences have improved as the number and variety of completed genomes has grown in sequence databases, they will always be limited by incompleteness of the databases, and bacteria will continually adapt to the gut and other environments by gene transfer or deletion.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:22:36",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "21518812",
+                            "locations": {
+                                "length": 8,
+                                "offset": 28618
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:22:39",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "21518813",
+                            "locations": {
+                                "length": 8,
+                                "offset": 28851
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 28956,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In order to study changes to the microbiome in clinical research, we used GUTSS to compare gut microbiomes of healthy young children participating as controls in a CF study with that of healthy adults participating in the HMP. Similarity of the young children to the adult average increased toward the adult during the first 18 to 36 months of life. Similar trends have also been previously observed using 16S sequencing and the UniFrac distance measure[59, 60]. We also applied our method to microbiome data in a pediatric study of FMT therapy for patients with CD. Exploratory studies of the potential therapeutic value of FMT in mitigating the effects of inflammatory bowel diseases are dependent upon accurate measures of change in the microbiome of transplant recipients in order to develop correlations with clinical measures of outcome. Recipient to donor similarity prior to transplantation of the microbiota may be an important quantity to track in FMT investigations owing to its potential as a determinant of transplant efficacy. We constructed a DSI score that measures relative change in similarity to donor as a metric for cross-comparison of FMT samples. Three basic responses of large, moderate and no response to transplant were observed (Fig 3b). The relatively larger changes in the microbiome between the pre-FMT and 2 week follow up samples compared with later time points was suggestive that the FMT procedure at least caused a perturbation to the microbiome. Some of this change could be due to effect on the microbiome of the \"clean out\" preparation prior to transplant. This effect was not controlled for by \"placebo\" transplants. Since these were not controlled trials, it is not known how the magnitude of these changes compares with normal fluctuations in the microbiome, or whether their cause can be definitively attributed to the transplant procedure. Other factors such as antibiotic therapy, diet or use of probiotics may contribute to observed changes. Even though small samples were used in this trial, it was possible to observe changes in the patients' microbiomes that were significantly increased in similarity to their relative donors compared to all other donors. This suggests that similarity comparison of the metagenomic data using GUTSS is a sensitive test of changes to the microbiome that is useful for clinical evaluation of engraftment.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31341,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "section_title_2": "Conclusions",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Analysis of microbiomes using an alignment-free methodology to calculate similarity analogous to the BC index provides an alternative approach to measuring changes that may be of clinical relevance in studies of the human gut microbiome. We have demonstrated its value for measuring engraftment in FMT therapy studies and its potential for evaluating factors, such as donor to patient similarity, that may be associated with transplant efficacy. Such techniques can also provide more accurate diagnostic assessment of complex human microbiomes to identify patients with an \u2018abnormal\u2019 microbiome who might benefit from targeted therapies to alter the microbial community.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32022,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "S1 Fig",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "For further description see Methods.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32086,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "S1 Fig",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(PDF)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32091,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "S2 Fig",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "GUTSS similarity scores (dots with dashed lines to guide the eye) for 3 HMP adult gut microbiome samples with low, average and high Shannon diversity (SD). Solid lines are models for the A. baumannii (with dots for GUTSS scores) and Homo sapiens genomes. For further description see Methods.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "A. baumannii",
+                            "infons": {
+                                "identifier": "NCBI:txid470",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:23:19",
+                                "parent_taxonomic_id": "NCBI:txid469"
+                            },
+                            "id": "21518814",
+                            "locations": {
+                                "length": 12,
+                                "offset": 32278
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 32388,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "The authors thank Lucas Hoffman MD, PhD, Pediatrics Department, University of Washington, for use of fecal microbiome data from young children serving as controls in his pediatric cystic fibrosis study. This work was supported by Kenneth Rainin Foundation, grant 13H7, The Broad Foundation, grant BMRP 66\u20134945 and the National Institutes of Health, NIDDK grant P30DK089507-01 to S.I.M.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32788,
+                    "infons": {
+                        "section_title_1": "Data Availability",
+                        "iao_name_1": "availability section",
+                        "iao_id_1": "IAO:0000611"
+                    },
+                    "text": "The sources of all data used in this study are specified within the paper and its Supporting Information files, including accession numbers, with the exception of the young adult microbiome data from the CF study at Seattle Children's Hospital (reference 54) whose corresponding author, Lucas R. Hoffman may be contacted at ude.notgnihsaw.u@mffohl, and the FMT data from the pediatric CD study at Seattle Children's Hospital (reference 47) whose corresponding author, David Suskind may be contacted at gro.snerdlihcelttaes@dniksus.divad.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33342,
+                    "infons": {
+                        "title": "A core gut microbiome in obese and lean twins",
+                        "journal": "Nature",
+                        "volume": "457",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Turnbaugh PJ, Hamady M, Yatsunenko T, Cantarel BL, Duncan A, Ley RE, et al.A core gut microbiome in obese and lean twins. Nature. 2009;457(7228):480\u20134. 10.1038/nature07540 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33582,
+                    "infons": {
+                        "journal": "Numerical ecology",
+                        "volume": "xvi",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Legendre P, Legendre L. Numerical ecology. Third English edition ed. Amsterdam: Elsevier; 2012. xvi, 990 pages p. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33715,
+                    "infons": {
+                        "title": "A new statistical approach for assessing similarity of species composition with incidence and abundance data",
+                        "journal": "Ecol Lett",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Chao A, Chazdon RL, Colwell RK, Shen TJ. A new statistical approach for assessing similarity of species composition with incidence and abundance data. Ecol Lett. 2005;8(2):148\u201359. 10.1111/J.1461-0248.2004.00707.X WOS:000226491200003. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33979,
+                    "infons": {
+                        "title": "A similarity measure based on species proportions",
+                        "journal": "Commun Stat-Theor M",
+                        "volume": "34",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Yue JC, Clayton MK. A similarity measure based on species proportions. Commun Stat-Theor M. 2005;34(11):2123\u201331. 10.1080/Sta-200066418 WOS:000233019600005. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34165,
+                    "infons": {
+                        "title": "UniFrac: a new phylogenetic method for comparing microbial communities",
+                        "journal": "Applied and environmental microbiology",
+                        "volume": "71",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Lozupone C, Knight R. UniFrac: a new phylogenetic method for comparing microbial communities. Applied and environmental microbiology. 2005;71(12):8228\u201335. 10.1128/AEM.71.12.8228-8235.2005 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34411,
+                    "infons": {
+                        "title": "High throughput sequencing methods and analysis for microbiome research",
+                        "journal": "Journal of microbiological methods",
+                        "volume": "95",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Di Bella JM, Bao Y, Gloor GB, Burton JP, Reid G. High throughput sequencing methods and analysis for microbiome research. Journal of microbiological methods. 2013;95(3):401\u201314. 10.1016/j.mimet.2013.08.011 . [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34657,
+                    "infons": {
+                        "title": "Chapter 12: Human microbiome analysis",
+                        "journal": "PLoS computational biology",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Morgan XC, Huttenhower C. Chapter 12: Human microbiome analysis. PLoS computational biology. 2012;8(12):e100280810.1371/journal.pcbi.1002808 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34856,
+                    "infons": {
+                        "title": "Meta-analyses of studies of the human microbiota",
+                        "journal": "Genome research",
+                        "volume": "23",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Lozupone CA, Stombaugh J, Gonzalez A, Ackermann G, Wendel D, Vazquez-Baeza Y, et al.Meta-analyses of studies of the human microbiota. Genome research. 2013;23(10):1704\u201314. 10.1101/gr.151803.112 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35108,
+                    "infons": {
+                        "title": "Impact of 16S rRNA gene sequence analysis for identification of bacteria on clinical microbiology and infectious diseases",
+                        "journal": "Clin Microbiol Rev",
+                        "volume": "17",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Clarridge JE 3rd. Impact of 16S rRNA gene sequence analysis for identification of bacteria on clinical microbiology and infectious diseases. Clin Microbiol Rev. 2004;17(4):840\u201362, table of contents. 10.1128/CMR.17.4.840-862.2004 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:23:49",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "21518815",
+                            "locations": {
+                                "length": 8,
+                                "offset": 35193
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 35395,
+                    "infons": {
+                        "title": "Metagenomic microbial community profiling using unique clade-specific marker genes",
+                        "journal": "Nature methods",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Segata N, Waldron L, Ballarini A, Narasimhan V, Jousson O, Huttenhower C. Metagenomic microbial community profiling using unique clade-specific marker genes. Nature methods. 2012;9(8):811\u20134. 10.1038/nmeth.2066 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35664,
+                    "infons": {
+                        "title": "Accurate read-based metagenome characterization using a hierarchical suite of unique signatures",
+                        "journal": "Nucleic Acids Res",
+                        "volume": "43",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Freitas TA, Li PE, Scholz MB, Chain PS. Accurate read-based metagenome characterization using a hierarchical suite of unique signatures. Nucleic Acids Res. 2015;43(10):e6910.1093/nar/gkv180 . [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35915,
+                    "infons": {
+                        "title": "Optimizing read mapping to reference genomes to determine composition and species prevalence in microbial communities",
+                        "journal": "PLoS One",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Martin J, Sykes S, Young S, Kota K, Sanka R, Sheth N, et al.Optimizing read mapping to reference genomes to determine composition and species prevalence in microbial communities. PLoS One. 2012;7(6):e3642710.1371/journal.pone.0036427 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36208,
+                    "infons": {
+                        "title": "A human gut microbial gene catalogue established by metagenomic sequencing",
+                        "journal": "Nature",
+                        "volume": "464",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Qin JJ, Li RQ, Raes J, Arumugam M, Burgdorf KS, Manichanh C, et al.A human gut microbial gene catalogue established by metagenomic sequencing. Nature. 2010;464(7285):59\u2013U70. 10.1038/Nature08821 WOS:000275117500033. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36482,
+                    "infons": {
+                        "title": "Genomic variation landscape of the human gut microbiome",
+                        "journal": "Nature",
+                        "volume": "493",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Schloissnig S, Arumugam M, Sunagawa S, Mitreva M, Tap J, Zhu A, et al.Genomic variation landscape of the human gut microbiome. Nature. 2013;493(7430):45\u201350. 10.1038/nature11711 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36718,
+                    "infons": {
+                        "title": "Accurate and fast estimation of taxonomic profiles from metagenomic shotgun sequences",
+                        "journal": "BMC genomics",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Liu B, Gibbons T, Ghodsi M, Treangen T, Pop M. Accurate and fast estimation of taxonomic profiles from metagenomic shotgun sequences. BMC genomics. 2011;12Suppl 2:S410.1186/1471-2164-12-S2-S4 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36969,
+                    "infons": {
+                        "title": "A statistical framework for accurate taxonomic assignment of metagenomic sequencing reads",
+                        "journal": "PLoS One",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Jiang H, An L, Lin SM, Feng G, Qiu Y. A statistical framework for accurate taxonomic assignment of metagenomic sequencing reads. PLoS One. 2012;7(10):e4645010.1371/journal.pone.0046450 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37213,
+                    "infons": {
+                        "title": "Metagenomic abundance estimation and diagnostic testing on species level",
+                        "journal": "Nucleic Acids Res",
+                        "volume": "41",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Lindner MS, Renard BY. Metagenomic abundance estimation and diagnostic testing on species level. Nucleic Acids Res. 2013;41(1):e1010.1093/nar/gks803 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37421,
+                    "infons": {
+                        "title": "Accurate genome relative abundance estimation for closely related species in a metagenomic sample",
+                        "journal": "BMC bioinformatics",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Sohn MB, An L, Pookhao N, Li Q. Accurate genome relative abundance estimation for closely related species in a metagenomic sample. BMC bioinformatics. 2014;15:24210.1186/1471-2105-15-242 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37667,
+                    "infons": {
+                        "title": "MTR: taxonomic annotation of short metagenomic reads using clustering at multiple taxonomic ranks",
+                        "journal": "Bioinformatics",
+                        "volume": "27",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Gori F, Folino G, Jetten MS, Marchiori E. MTR: taxonomic annotation of short metagenomic reads using clustering at multiple taxonomic ranks. Bioinformatics. 2011;27(2):196\u2013203. 10.1093/bioinformatics/btq649 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37933,
+                    "infons": {
+                        "title": "Integrative analysis of environmental sequences using MEGAN4",
+                        "journal": "Genome research",
+                        "volume": "21",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Huson DH, Mitra S, Ruscheweyh HJ, Weber N, Schuster SC. Integrative analysis of environmental sequences using MEGAN4. Genome research. 2011;21(9):1552\u201360. 10.1101/gr.120618.111 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38169,
+                    "infons": {
+                        "title": "Genome sequences of rare, uncultured bacteria obtained by differential coverage binning of multiple metagenomes",
+                        "journal": "Nat Biotechnol",
+                        "volume": "31",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Albertsen M, Hugenholtz P, Skarshewski A, Nielsen KL, Tyson GW, Nielsen PH. Genome sequences of rare, uncultured bacteria obtained by differential coverage binning of multiple metagenomes. Nat Biotechnol. 2013;31(6):533\u20138. 10.1038/nbt.2579 . [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:24:20",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "21518816",
+                            "locations": {
+                                "length": 8,
+                                "offset": 38286
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 38451,
+                    "infons": {
+                        "title": "Time series community genomics analysis reveals rapid shifts in bacterial species, strains, and phage during infant gut colonization",
+                        "journal": "Genome research",
+                        "volume": "23",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Sharon I, Morowitz MJ, Thomas BC, Costello EK, Relman DA, Banfield JF. Time series community genomics analysis reveals rapid shifts in bacterial species, strains, and phage during infant gut colonization. Genome research. 2013;23(1):111\u201320. 10.1101/gr.142315.112 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38773,
+                    "infons": {
+                        "title": "MetAMOS: a modular and open source metagenomic assembly and analysis pipeline",
+                        "journal": "Genome Biol",
+                        "volume": "14",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Treangen TJ, Koren S, Sommer DD, Liu B, Astrovskaya I, Ondov B, et al.MetAMOS: a modular and open source metagenomic assembly and analysis pipeline. Genome Biol. 2013;14(1):R210.1186/gb-2013-14-1-r2 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39031,
+                    "infons": {
+                        "title": "Community structure and metabolism through reconstruction of microbial genomes from the environment",
+                        "journal": "Nature",
+                        "volume": "428",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Tyson GW, Chapman J, Hugenholtz P, Allen EE, Ram RJ, Richardson PM, et al.Community structure and metabolism through reconstruction of microbial genomes from the environment. Nature. 2004;428(6978):37\u201343. 10.1038/nature02340 . [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39298,
+                    "infons": {
+                        "title": "Joint analysis of multiple metagenomic samples",
+                        "journal": "PLoS computational biology",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Baran Y, Halperin E. Joint analysis of multiple metagenomic samples. PLoS computational biology. 2012;8(2):e100237310.1371/journal.pcbi.1002373 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39501,
+                    "infons": {
+                        "title": "MetaCluster 5.0: a two-round binning approach for metagenomic data for low-abundance species in a noisy sample",
+                        "journal": "Bioinformatics",
+                        "volume": "28",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Wang Y, Leung HC, Yiu SM, Chin FY. MetaCluster 5.0: a two-round binning approach for metagenomic data for low-abundance species in a noisy sample. Bioinformatics. 2012;28(18):i356\u2013i62. 10.1093/bioinformatics/bts397 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39775,
+                    "infons": {
+                        "title": "MetaCluster 4.0: a novel binning algorithm for NGS reads and huge number of species",
+                        "journal": "Journal of computational biology: a journal of computational molecular cell biology",
+                        "volume": "19",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Wang Y, Leung HC, Yiu SM, Chin FY. MetaCluster 4.0: a novel binning algorithm for NGS reads and huge number of species. Journal of computational biology: a journal of computational molecular cell biology. 2012;19(2):241\u20139. 10.1089/cmb.2011.0276 . [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40062,
+                    "infons": {
+                        "title": "A novel abundance-based algorithm for binning metagenomic sequences using l-tuples",
+                        "journal": "Journal of computational biology: a journal of computational molecular cell biology",
+                        "volume": "18",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Wu YW, Ye Y. A novel abundance-based algorithm for binning metagenomic sequences using l-tuples. Journal of computational biology: a journal of computational molecular cell biology. 2011;18(3):523\u201334. 10.1089/cmb.2010.0245 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40344,
+                    "infons": {
+                        "title": "Reconstructing the genomic content of microbiome taxa through shotgun metagenomic deconvolution",
+                        "journal": "PLoS computational biology",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Carr R, Shen-Orr SS, Borenstein E. Reconstructing the genomic content of microbiome taxa through shotgun metagenomic deconvolution. PLoS computational biology. 2013;9(10):e100329210.1371/journal.pcbi.1003292 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40611,
+                    "infons": {
+                        "title": "Alignment-free methods for metagenomic profiling",
+                        "journal": "BMC bioinformatics",
+                        "volume": "16",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Gao S P D-T; Phan V. Alignment-free methods for metagenomic profiling. BMC bioinformatics. 2015;16(Suppl 15:P4). [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40744,
+                    "infons": {
+                        "title": "A non-negative matrix factorization framework for identifying modular patterns in metagenomic profile data",
+                        "journal": "J Math Biol",
+                        "volume": "64",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Jiang X, Weitz JS, Dushoff J. A non-negative matrix factorization framework for identifying modular patterns in metagenomic profile data. J Math Biol. 2012;64(4):697\u2013711. 10.1007/s00285-011-0428-2 . [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40983,
+                    "infons": {
+                        "title": "Alignment-free sequence comparison-a review",
+                        "journal": "Bioinformatics",
+                        "volume": "19",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Vinga S, Almeida J. Alignment-free sequence comparison-a review. Bioinformatics. 2003;19(4):513\u201323. . [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41114,
+                    "infons": {
+                        "title": "Alignment-free sequence comparison (II): theoretical power of comparison statistics",
+                        "journal": "Journal of computational biology: a journal of computational molecular cell biology",
+                        "volume": "17",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Wan L, Reinert G, Sun F, Waterman MS. Alignment-free sequence comparison (II): theoretical power of comparison statistics. Journal of computational biology: a journal of computational molecular cell biology. 2010;17(11):1467\u201390. 10.1089/cmb.2010.0056 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41424,
+                    "infons": {
+                        "title": "New developments of alignment-free sequence comparison: measures, statistics and next-generation sequencing",
+                        "journal": "Brief Bioinform",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Song K, Ren J, Reinert G, Deng M, Waterman MS, Sun F. New developments of alignment-free sequence comparison: measures, statistics and next-generation sequencing. Brief Bioinform. 2014;15(3):343\u201353. 10.1093/bib/bbt067 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41701,
+                    "infons": {
+                        "title": "A pyrosequencing study in twins shows that gastrointestinal microbial profiles vary with inflammatory bowel disease phenotypes",
+                        "journal": "Gastroenterology",
+                        "volume": "139",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Willing BP, Dicksved J, Halfvarson J, Andersson AF, Lucio M, Zheng Z, et al.A pyrosequencing study in twins shows that gastrointestinal microbial profiles vary with inflammatory bowel disease phenotypes. Gastroenterology. 2010;139(6):1844\u201354 e110.1053/j.gastro.2010.08.049 . [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42016,
+                    "infons": {
+                        "title": "Temporal bacterial community dynamics vary among ulcerative colitis patients after fecal microbiota transplantation",
+                        "journal": "The American journal of gastroenterology",
+                        "volume": "108",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "36. Angelberger S, Reinisch W, Makristathis A, Lichtenberger C, Dejaco C, Papay P, et al.Temporal bacterial community dynamics vary among ulcerative colitis patients after fecal microbiota transplantation. The American journal of gastroenterology. 2013;108(10):1620\u201330. 10.1038/ajg.2013.257 . [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42345,
+                    "infons": {
+                        "title": "Alteration of Intestinal Dysbiosis by Fecal Microbiota Transplantation Does not Induce Remission in Patients with Chronic Active Ulcerative Colitis",
+                        "journal": "Inflammatory bowel diseases",
+                        "volume": "19",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "37. Kump PK, Grochenig HP, Lackner S, Trajanoski S, Reicht G, Hoffmann KM, et al.Alteration of Intestinal Dysbiosis by Fecal Microbiota Transplantation Does not Induce Remission in Patients with Chronic Active Ulcerative Colitis. Inflammatory bowel diseases. 2013;19(10):2155\u201365. 10.1097/MIB.0b013e31829ea325 . [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42692,
+                    "infons": {
+                        "title": "Stool substitute transplant therapy for the eradication of Clostridium difficile infection: 'RePOOPulating' the gut",
+                        "journal": "Microbiome",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "38. Petrof EO, Gloor GB, Vanner SJ, Weese SJ, Carter D, Daigneault MC, et al.Stool substitute transplant therapy for the eradication of Clostridium difficile infection: 'RePOOPulating' the gut. Microbiome. 2013;1(1):310.1186/2049-2618-1-3 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Clostridium difficile",
+                            "infons": {
+                                "identifier": "NCBI:txid1496",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:25:05",
+                                "parent_taxonomic_id": "NCBI:txid1870884"
+                            },
+                            "id": "21518817",
+                            "locations": {
+                                "length": 21,
+                                "offset": 42828
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 42986,
+                    "infons": {
+                        "title": "Dynamic changes in short- and long-term bacterial composition following fecal microbiota transplantation for recurrent Clostridium difficile infection",
+                        "journal": "Microbiome",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "39. Weingarden A, Gonzalez A, Vazquez-Baeza Y, Weiss S, Humphry G, Berg-Lyons D, et al.Dynamic changes in short- and long-term bacterial composition following fecal microbiota transplantation for recurrent Clostridium difficile infection. Microbiome. 2015;3:1010.1186/s40168-015-0070-0 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Clostridium difficile",
+                            "infons": {
+                                "identifier": "NCBI:txid1496",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:25:09",
+                                "parent_taxonomic_id": "NCBI:txid1870884"
+                            },
+                            "id": "21518818",
+                            "locations": {
+                                "length": 21,
+                                "offset": 43192
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 43327,
+                    "infons": {
+                        "title": "Microbiota dynamics in patients treated with fecal microbiota transplantation for recurrent Clostridium difficile infection",
+                        "journal": "PLoS One",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "40. Song Y, Garg S, Girotra M, Maddox C, von Rosenvinge EC, Dutta A, et al.Microbiota dynamics in patients treated with fecal microbiota transplantation for recurrent Clostridium difficile infection. PLoS One. 2013;8(11):e8133010.1371/journal.pone.0081330 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Clostridium difficile",
+                            "infons": {
+                                "identifier": "NCBI:txid1496",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:25:12",
+                                "parent_taxonomic_id": "NCBI:txid1870884"
+                            },
+                            "id": "21518819",
+                            "locations": {
+                                "length": 21,
+                                "offset": 43494
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 43638,
+                    "infons": {
+                        "title": "Variable alterations of the microbiota, without metabolic or immunological change, following faecal microbiota transplantation in patients with chronic pouchitis",
+                        "journal": "Sci Rep",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "41. Landy J, Walker AW, Li JV, Al-Hassi HO, Ronde E, English NR, et al.Variable alterations of the microbiota, without metabolic or immunological change, following faecal microbiota transplantation in patients with chronic pouchitis. Sci Rep. 2015;5:1295510.1038/srep12955 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43966,
+                    "infons": {
+                        "title": "Targeted restoration of the intestinal microbiota with a simple, defined bacteriotherapy resolves relapsing Clostridium difficile disease in mice",
+                        "journal": "PLoS Pathog",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "42. Lawley TD, Clare S, Walker AW, Stares MD, Connor TR, Raisen C, et al.Targeted restoration of the intestinal microbiota with a simple, defined bacteriotherapy resolves relapsing Clostridium difficile disease in mice. PLoS Pathog. 2012;8(10):e100299510.1371/journal.ppat.1002995 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Clostridium difficile",
+                            "infons": {
+                                "identifier": "NCBI:txid1496",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:25:18",
+                                "parent_taxonomic_id": "NCBI:txid1870884"
+                            },
+                            "id": "21518820",
+                            "locations": {
+                                "length": 21,
+                                "offset": 44147
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 44302,
+                    "infons": {
+                        "title": "Donor Species Richness Determines Faecal Microbiota Transplantation Success in Inflammatory Bowel Disease",
+                        "journal": "J Crohns Colitis",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "43. Vermeire S, Joossens M, Verbeke K, Wang J, Machiels K, Sabino J, et al.Donor Species Richness Determines Faecal Microbiota Transplantation Success in Inflammatory Bowel Disease. J Crohns Colitis. 2015. 10.1093/ecco-jcc/jjv203 . [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44589,
+                    "infons": {
+                        "title": "Fecal Microbiota Transplantation Induces Remission in Patients With Active Ulcerative Colitis in a Randomized Controlled Trial",
+                        "journal": "Gastroenterology",
+                        "volume": "149",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "44. Moayyedi P, Surette MG, Kim PT, Libertucci J, Wolfe M, Onischi C, et al.Fecal Microbiota Transplantation Induces Remission in Patients With Active Ulcerative Colitis in a Randomized Controlled Trial. Gastroenterology. 2015;149(1):102\u20139 e610.1053/j.gastro.2015.04.001 . [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44898,
+                    "infons": {
+                        "title": "Recovery of the gut microbiome following fecal microbiota transplantation",
+                        "journal": "MBio",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "45. Seekatz AM, Aas J, Gessert CE, Rubin TA, Saman DM, Bakken JS, et al.Recovery of the gut microbiome following fecal microbiota transplantation. MBio. 2014;5(3):e00893\u201314. 10.1128/mBio.00893-14 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45149,
+                    "infons": {
+                        "title": "Fecal microbiota transplant for relapsing Clostridium difficile infection using a frozen inoculum from unrelated donors: a randomized, open-label, controlled pilot study",
+                        "journal": "Clinical infectious diseases: an official publication of the Infectious Diseases Society of America",
+                        "volume": "58",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "46. Youngster I, Sauk J, Pindar C, Wilson RG, Kaplan JL, Smith MB, et al.Fecal microbiota transplant for relapsing Clostridium difficile infection using a frozen inoculum from unrelated donors: a randomized, open-label, controlled pilot study. Clinical infectious diseases: an official publication of the Infectious Diseases Society of America. 2014;58(11):1515\u201322. 10.1093/cid/ciu135 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Clostridium difficile",
+                            "infons": {
+                                "identifier": "NCBI:txid1496",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 20:25:29",
+                                "parent_taxonomic_id": "NCBI:txid1870884"
+                            },
+                            "id": "21518821",
+                            "locations": {
+                                "length": 21,
+                                "offset": 45264
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 45589,
+                    "infons": {
+                        "title": "Fecal microbial transplant effect on clinical outcomes and fecal microbiome in active Crohn's disease",
+                        "journal": "Inflammatory bowel diseases",
+                        "volume": "21",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "47. Suskind DL, Brittnacher MJ, Wahbeh G, Shaffer ML, Hayden HS, Qin X, et al.Fecal microbial transplant effect on clinical outcomes and fecal microbiome in active Crohn's disease. Inflammatory bowel diseases. 2015;21(3):556\u201363. 10.1097/MIB.0000000000000307 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45902,
+                    "infons": {
+                        "title": "Fecal microbiota transplantation and emerging applications",
+                        "journal": "Nature reviews Gastroenterology & hepatology",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "48. Borody TJ, Khoruts A. Fecal microbiota transplantation and emerging applications. Nature reviews Gastroenterology & hepatology. 2012;9(2):88\u201396. 10.1038/nrgastro.2011.244 . [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46115,
+                    "infons": {
+                        "title": "The microbiome and inflammatory bowel disease: is there a therapeutic role for fecal microbiota transplantation?",
+                        "journal": "The American journal of gastroenterology",
+                        "volume": "107",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "49. Damman CJ, Miller SI, Surawicz CM, Zisman TL. The microbiome and inflammatory bowel disease: is there a therapeutic role for fecal microbiota transplantation?The American journal of gastroenterology. 2012;107(10):1452\u20139. 10.1038/ajg.2012.93 . [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46398,
+                    "infons": {
+                        "title": "Compareads: comparing huge metagenomic experiments",
+                        "journal": "BMC bioinformatics",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "50. Maillet N, Lemaitre C, Chikhi R, Lavenier D, Peterlongo P. Compareads: comparing huge metagenomic experiments. BMC bioinformatics. 2012;13Suppl 19:S1010.1186/1471-2105-13-S19-S10 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46636,
+                    "infons": {
+                        "journal": "IEEE International Conference on",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "51. Maillet N, Collet G, Vannier T, Lavenier D, Peterlongo P, editors. Commet: Comparing and combining multiple metagenomic datasets. Bioinformatics and Biomedicine (BIBM), 2014 IEEE International Conference on; 2014 2\u20135November2014.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46869,
+                    "infons": {
+                        "title": "An Ordination of the Upland Forest Communities of Southern Wisconsin",
+                        "journal": "Ecol Monogr",
+                        "volume": "27",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "52. Bray JR, Curtis JT. An Ordination of the Upland Forest Communities of Southern Wisconsin. Ecol Monogr. 1957;27(4):326\u201349. WOS:A1957WW77500001. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47032,
+                    "infons": {
+                        "title": "Compression-based distance (CBD): a simple, rapid, and accurate method for microbiota composition comparison",
+                        "journal": "BMC bioinformatics",
+                        "volume": "14",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "53. Yang F, Chia N, White BA, Schook LB. Compression-based distance (CBD): a simple, rapid, and accurate method for microbiota composition comparison. BMC bioinformatics. 2013;14:13610.1186/1471-2105-14-136 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47294,
+                    "infons": {
+                        "title": "Escherichia coli dysbiosis correlates with gastrointestinal dysfunction in children with cystic fibrosis",
+                        "journal": "Clinical infectious diseases: an official publication of the Infectious Diseases Society of America",
+                        "volume": "58",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "54. Hoffman LR, Pope CE, Hayden HS, Heltshe S, Levy R, McNamara S, et al.Escherichia coli dysbiosis correlates with gastrointestinal dysfunction in children with cystic fibrosis. Clinical infectious diseases: an official publication of the Infectious Diseases Society of America. 2014;58(3):396\u20139. 10.1093/cid/cit715 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47666,
+                    "infons": {
+                        "title": "A framework for human microbiome research",
+                        "journal": "Nature",
+                        "volume": "486",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "55. Methe BA, Nelson KE, Pop M, Creasy HH, Giglio MG, Huttenhower C, et al.A framework for human microbiome research. Nature. 2012;486(7402):215\u201321. 10.1038/Nature11209 WOS:000305189000026. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47883,
+                    "infons": {
+                        "title": "Misidentification of the Bray-Curtis similarity index",
+                        "journal": "Mar Ecol Prog Ser",
+                        "volume": "368",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "56. Yoshioka PM. Misidentification of the Bray-Curtis similarity index. Mar Ecol Prog Ser. 2008;368:309\u201310. 10.3354/Meps07728 WOS:000260511800028. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48057,
+                    "infons": {
+                        "title": "A fast, lock-free approach for efficient parallel counting of occurrences of k-mers",
+                        "journal": "Bioinformatics",
+                        "volume": "27",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "57. Marcais G, Kingsford C. A fast, lock-free approach for efficient parallel counting of occurrences of k-mers. Bioinformatics. 2011;27(6):764\u201370. 10.1093/Bioinformatics/Btr011 WOS:000288277300004. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48311,
+                    "infons": {
+                        "journal": "M. Henry H. Stevens and Helene Wagner vegan: Community Ecology Package. R package version",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "58. Jari Oksanen FGB, Roeland Kindt, Pierre Legendre, Peter R. Minchin, R. B., O'Hara GLS, Peter Solymos, M. Henry H. Stevens and Helene Wagner vegan: Community Ecology Package. R package version 3.2\u20131 ed2015.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48520,
+                    "infons": {
+                        "title": "Human gut microbiome viewed across age and geography",
+                        "journal": "Nature",
+                        "volume": "486",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "59. Yatsunenko T, Rey FE, Manary MJ, Trehan I, Dominguez-Bello MG, Contreras M, et al.Human gut microbiome viewed across age and geography. Nature. 2012;486(7402):222-+10.1038/Nature11053 WOS:000305189000027. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48784,
+                    "infons": {
+                        "title": "Dynamics and Stabilization of the Human Gut Microbiome during the First Year of Life",
+                        "journal": "Cell Host Microbe",
+                        "volume": "17",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "60. Backhed F, Roswall J, Peng Y, Feng Q, Jia H, Kovatcheva-Datchary P, et al.Dynamics and Stabilization of the Human Gut Microbiome during the First Year of Life. Cell Host Microbe. 2015;17(5):690\u2013703. 10.1016/j.chom.2015.04.004 . [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

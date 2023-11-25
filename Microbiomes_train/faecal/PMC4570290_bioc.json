@@ -1,0 +1,1576 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC4570290",
+            "inputfile": "../microbiome_corpus_HTML\\PMC4570290.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Testing in Microbiome-Profiling Studies with MiRKAT, the Microbiome Regression-Based Kernel Association Test",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 108,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "High-throughput sequencing technology has enabled population-based studies of the role of the human microbiome in disease etiology and exposure response. Distance-based analysis is a popular strategy for evaluating the overall association between microbiome diversity and outcome, wherein the phylogenetic distance between individuals\u2019 microbiome profiles is computed and tested for association via permutation. Despite their practical popularity, distance-based approaches suffer from important challenges, especially in selecting the best distance and extending the methods to alternative outcomes, such as survival outcomes. We propose the microbiome regression-based kernel association test (MiRKAT), which directly regresses the outcome on the microbiome profiles via the semi-parametric kernel machine regression framework. MiRKAT allows for easy covariate adjustment and extension to alternative outcomes while non-parametrically modeling the microbiome through a kernel that incorporates phylogenetic distance. It uses a variance-component score statistic to test for the association with analytical p value calculation. The model also allows simultaneous examination of multiple distances, alleviating the problem of choosing the best distance. Our simulations demonstrated that MiRKAT provides correctly controlled type I error and adequate power in detecting overall association. \u201cOptimal\u201d MiRKAT, which considers multiple candidate distances, is robust in that it suffers from little power loss in comparison to when the best distance is used and can achieve tremendous power gain in comparison to when a poor distance is chosen. Finally, we applied MiRKAT to real microbiome datasets to show that microbial communities are associated with smoking and with fecal protease levels after confounders are controlled for.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1944,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The advent of massively parallel sequencing has enabled high-throughput profiling of the microbiota in a large number of samples via targeted sequencing of the 16S rDNA sequence,1\u20134 which contains information about species identity. Knowledge on how microbial communities differ across individuals can provide key information on the role of communities in relation to variation in biological and clinical variables and is essential for gaining a broader understanding of biological mechanisms underlying disease and response to exposures.5\u20139 Although considerable resources have been devoted to sequencing technologies and to quantifying individual taxa, successful application of microbial profiling to studying biomedical conditions requires novel statistical methods for efficiently testing for associations with microbial diversity.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2792,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "A popular strategy for evaluating the association between overall microbiome composition and outcomes of interest utilizes distance- or dissimilarity-based analysis, referred to here as just distance-based analysis for simplicity. Via standard methods, the 16S sequence tags are clustered on the basis of their sequence similarity to form operational taxonomic units (OTUs), which can essentially be considered surrogates for biological taxa. Distance metrics are then constructed to measure the phylogenetic or taxonomic dissimilarity between each pair of samples by incorporating the phylogenetic relationship or the absolute and relative abundance of different taxa. Then, for assessing the association between the microbiome diversity and an outcome variable of interest, the pairwise distance between each pair of samples is compared to the distribution of the outcome variable. For categorical outcome variables, this is essentially comparing the pairwise distances within and between categories. Operationally, multivariate analysis10 or the top principal coordinates11 of the matrix of pairwise distances are used for testing for associations via permutation.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3959,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Among the many possible distances, the UniFrac distances are the most popular in the literature and are constructed on the basis of a phylogenetic tree relating taxa to one another.12,13 There are several different versions of UniFrac distances. The original, unweighted UniFrac distance between any pair of microbial communities is calculated as the proportion of the total branch length within the tree, which leads to un-shared taxa (i.e., taxa in one community but not the other). Thus, the UniFrac distance primarily considers only the species presence and absence information and is most efficient in detecting abundance change in rare lineages given that more prevalent species are likely to be present in all individuals. Weighted UniFrac distance uses species abundance information to weight the UniFrac distance and thus has more power to detect changes in common lineages. The generalized UniFrac distance14 was introduced as a compromise between weighted and unweighted UniFrac distances; it down-weights its emphasis on either abundant or rare lineages and therefore has more power to detect changes in OTU clusters with modest abundance. Generalized UniFrac distance involves an additional parameter (\u03b1), such that the generalized UniFrac distance with \u03b1 = 1 is equivalent to the weighted UniFrac distance. A range of other distances that do not incorporate phylogeny are also available. For example, Bray-Curtis dissimilarity, which is also commonly used, quantifies the taxonomic dissimilarity between two different sites on the basis of counts at each site. Similarly, Euclidean distance can also be used and is frequently thought to be similar to weighted UniFrac distance because abundance information from common taxa tends to dominate.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5715,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Despite successes, distance-based analysis suffers from a number of limitations. First, as noted, many different distance metrics have been developed. Although there are similarities, they are designed to capture distance differently, leading to differential performance across different scenarios. This creates problems in which choosing a particular metric to use as the best metric for any particular dataset depends on the unknown true state of nature. A non-optimal distance metric will reduce power to discover true associations. Using multiple metrics and cherry picking the best result will result in inflated type I rates and lead to large numbers of spurious results. Beyond difficulties in choosing a particular distance metric, the need for permutation can be computationally expensive. Furthermore, the analysis framework is not easily interpretable and does not allow for easy covariate adjustment. Consequently, extending such approaches to accommodate more-sophisticated outcomes, such as survival or multivariate information, is challenging.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6773,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "We propose in this paper the microbiome regression-based kernel association test (MiRKAT), a flexible regression approach for testing the association between microbial community profiles and a continuous or dichotomous variable of interest, such as an environmental exposure or disease. MiRKAT formalizes and extends the strategy of Chen and Li15 to use the kernel machine regression framework, previously developed for genotyping data,16\u201318 to directly regress the variable of interest on the covariates (including potential confounders) and the microbiome compositional profiles. The kernel is a measure of similarity between samples\u2019 microbiome compositions and characterizes the relationship between the microbiome and the variable of interest. We propose using kernels that incorporate phylogenetic relationships among taxa by transforming existing distance metrics into similarities. A variance-component score test can be used to rapidly obtain a p value for the association between microbial community profiles and the variable of interest.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7821,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In addition to providing fast computation, use of the kernel machine approach enables flexible modeling and testing, while still incorporating phylogenetic information and naturally accommodating covariates, under a well-studied, interpretable, and statistically rigorous framework. Beyond providing extensions to allow alternative types of outcomes, the framework allows for simultaneous examination of multiple distance metrics. This enables development of the \u201coptimal\u201d MiRKAT, which has high power in the omnibus. We have demonstrated through simulations and analysis of real data that MiRKAT and optimal MiRKAT can be easily applied and can be more robust than existing tests with well-controlled type I error across a range of models for both continuous and dichotomous variables. We also explicitly establish connections between MiRKAT and existing distance-based approaches.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8703,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The well-studied kernel machine framework forms the statistical underpinnings for our work, which is a strength because this allows leverage of existing machinery within a rigorous framework. However, MiRKAT differs from previous, related kernel methods in the need to accommodate unique features of microbiome data. In particular, we tailor the approach to accommodate microbiome data by adopting kernels on the basis of dissimilarity measures commonly used in microbiome compositional analysis. Furthermore, microbiome studies usually have more modest sample sizes, yet the kernels built on standard distance metrics are frequently of full rank and have poor eigenvalue behavior. Consequently, in contrast to previous analytic17\u201319 and perturbation-based20 p-value-calculation approaches, which do not control type I error well, our method uses alternative small-sample corrections21 (unpublished data) and permutation methods. The present study differs from that detailed in our earlier conference manuscript15 in that we formalize and fully flesh out the overall framework, explicitly relate the approach to existing distance methods, use alternative small-sample corrections to control type I error, and develop the optimal MiRKAT method for testing across choices of distance metrics.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9993,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Notationally, we assume that n samples have been collected and that their microbial communities have been profiled. For the ith subject, let yi denote the outcome variable of interest, Zi =\u00a0(Zi1,Zi2,\u2026,Zip)\u2032 denote the abundances of all OTUs for individual i (p is the total number of OTUs), and Xi =\u00a0(Xi1,Xi2,\u2026,Xim)\u2032 be the covariates\u2014such as age, gender, and other clinical and environmental variables that are suspected to influence microbial community diversity and are related to outcomes\u2014that we want to control for. The goal is to test for association between the outcome and microbial profiles while adjusting for covariates X. Note that we will refer to y as an \u201coutcome\u201d that depends on the microbiome composition, although in some situations it might be a variable that is thought to influence microbial diversity; however, because our goal is association testing rather than causal modeling, the distinction does not affect the validity of our method given the duality.22 We first consider the problem of testing under a single distance metric (kernel) and then extend the approach to optimally accommodate multiple distances simultaneously.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11165,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "MiRKAT Based on a Single Kernel",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The intuition behind the kernel machine framework is that it compares pairwise similarity in the outcome variable to pairwise similarity in the microbiome profiles, and high correspondence is suggestive of association. MiRKAT exploits the kernel machine regression framework to relate the covariates and the microbiota profiles to the outcomes. Specifically, for a continuous outcome variable, we use the linear kernel machine model",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11628,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "MiRKAT Based on a Single Kernel",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The relationship between the microbiome profile and the outcome variable is fully characterized by the function f(\u00a0\u22c5\u00a0)\u00a0\u2014testing that there is no association between microbiome composition and the outcome is equivalent to testing that f(Z) =\u00a00. Under the kernel machine regression framework, f(Zi) is assumed to be from a reproducing kernel Hilbert space, \u210bk, generated from a positive definite kernel function, K(\u00a0\u22c5\u00a0,\u00a0\u00a0\u22c5\u00a0), such that f(Zi)=\u2211ni\u2032=1\u03b1i\u2032K(Zi,Zi\u2032) for some \u03b11,\u00a0\u03b12,\u00a0\u2026,\u00a0\u03b1n.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12110,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "MiRKAT Based on a Single Kernel",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The kernel measures the similarity between different individuals, and different choices of K(Zi,\u00a0Zi') correspond to different underlying models. For example, setting K(Zi,Zi\u2032)=\u2211pj=1ZijZi'j implies that f(Zi)=\u2211pj=1Zij\u03b2j, i.e., that the model is linear. Therefore, by changing the kernel function, one is implicitly changing the model being used. Using more-sophisticated kernels will result in more-complex models that can allow for OTU interactions, nonlinear OTU effects, or incorporation of phylogenetic relationships among OTUs. The matrix of pairwise similarities between pairs of individuals is defined as kernel matrix K, where the (i,i')th element of K is K(Zi,\u00a0Zi').",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12784,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "MiRKAT Based on a Single Kernel",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "For microbiome composition data, the OTUs are related by a phylogenetic tree. Kernels that exploit the degree of divergence between different sequences can be much more powerful than similarity measures that ignore the phylogenetic-tree information. We can construct the kernel matrix, which measures similarities between the microbiome composition among subjects, by exploiting the correspondence with the well-defined distance metrics, which measure dissimilarities between subjects. Specifically, we can construct the kernel matrix via the following transformation of the phylogenetic or taxonomic distance metrics:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13402,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "MiRKAT Based on a Single Kernel",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "When only a single kernel is considered, we estimate the coefficients \u03b2 and f(Z) by maximizing the following penalized log-likelihood:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13536,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "MiRKAT Based on a Single Kernel",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Through an important relationship between kernel machine regression and mixed models,24\u201326\nf(Z) can be viewed as a subject-specific random effect that follows a distribution with mean 0 and variance \u03c4K. Then, testing for an association between the microbiome composition and the outcome is equivalent to testing the null hypothesis that H0:\u03c4 =\u00a00. Under the mixed-model framework, this can be done with a standard variance-component score test.27",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13981,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "MiRKAT Based on a Single Kernel",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "In particular, the score statistic is computed as",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14030,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "MiRKAT Based on a Single Kernel",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Under the null hypothesis, Q asymptotically follows a weighted mixture of \u03c72 distributions, and the p value can be analytically obtained through higher-order moment matching28 or exact methods29,30 with possible small-sample adjustments via resampling.19 However, the comparatively small sample sizes for many microbiome studies and the complexity of the kernels considered here (often of full rank and with erratic eigenvalue behavior) lead to very conservative tests. Previously considered Satterthwaite methods15 lead to inflation of type I error. Thus, MiRKAT further considers the use of new, alternative small-sample adjustments for both continuous and dichotomous traits21 (unpublished data).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14729,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "MiRKAT Based on a Single Kernel",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "A key advantage of the score test is that it only requires fitting the null model yi =\u00a0\u03b20 +\u00a0\u03b2\u2032Xi +\u00a0\u03b5i for continuous traits and logit(P(yi =\u00a01)) =\u00a0\u03b20 +\u00a0\u03b2\u2032Xi for dichotomous traits. Consequently, MiRKAT allows for fast, supervised, distance-based association testing under a regression framework that permits controls for potential confounding.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15072,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "MiRKAT Based on a Single Kernel",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Because the proposed test is a score test, all the parameters are estimated under the null model (linear regression or logistic regression), i.e., f(Z) does not need to be estimated. This means that even if a poor kernel is chosen, the test is still statistically valid. Better choices of kernels simply improve power. From the perspective of testing, a metric that better reflects the true relationship between the microbiome compositional profiles and the outcome will result in substantially higher power.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15580,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "As noted, although MiRKAT is valid even if a poor kernel is chosen, better kernel choices can lead to improved power. Unfortunately, the best kernel requires knowledge of how the microbiome influences the outcome. This is unknown a priori given that knowledge of this would preclude need for analysis. Therefore, in this section, we develop the optimal MiRKAT, which extends MiRKAT to simultaneously consider multiple possible kernels.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16056,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Suppose that we have a set of \u2113 different candidate kernels, K1,\u00a0\u2026,\u00a0K\u2113, such as unweighted UniFrac, weighted UniFrac, Bray-Curtis kernels, etc., which are constructed from corresponding distance matrices via Equation 3.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16275,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The intuition behind the optimal MiRKAT is that it will consider testing with each individual kernel, obtain the p value for each of the tests, select the minimum p value, and then adjust for having taken the minimum via a multiple-comparison technique. If sample sizes are large, this can be accomplished via the perturbation-based approach of Wu et\u00a0al.,20 but when the sample size is more modest, we can apply a residual permutation approach to obtain the empirical null distribution of the test statistic. Specifically, we use the following procedure:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16829,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Fit the null linear or logistic regression model by regressing y on X and obtain the residuals r=y\u2212y\u02c60, where y\u02c60 is the estimated value of y based on the null model.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16995,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "For each Kk, calculate Qk =\u00a0(1/2\u03d5)r\u2032Kkr and the corresponding p values, pk, through the asymptotic distribution of Qk. Then, the minimum p value across all the \u2113 kernels is po =\u00a0mink\u2208(1,\u2026,\u2113)pk.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17188,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Use residual permutation to obtain the null distribution of po to accommodate the fact that we have considered multiple kernels.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17316,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "For a continuous outcome, use the permutation approach of Freeman and Lane.31 Specifically, for each permutation j,",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17431,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Reshuffle the residuals, r, to obtain the permuted residuals, rj.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17496,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Create new values of yj as yj=y\u02c60+rj.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17533,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Consider yj as the new outcome. Refit the null linear regression model by regressing yj on X to obtain the estimated residuals r\u02c6j and \u03d5\u02c6j for calculating the score statistic Qjk=(1/2\u03d5\u02c6j)r\u02c6j\u2032Kkr\u02c6j with each kernel. Obtain the kernel-specific p value, pjk, by comparing Qjk to the same asymptotic distribution as in step 2.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17855,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Obtain pjo=mink\u2208(1,\u2026,\u2113)pjk.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17882,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "For a dichotomous outcome, use the permutation approach of Epistein et\u00a0al.,32 which uses Fisher\u2019s non-central hypergeometric distribution to generate permuted 1/0 outcome values. Specifically,",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18074,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Obtain the estimated odds of being a case for each individual sample, i.e., exp(\u03b2\u02c60+\u03b2\u02c6'Xi), where \u03b2\u02c60 and \u03b2\u02c6 are the estimated coefficients under the null logistic regression model in step 1.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18265,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "For each permutation j, generate new binary outcomes on the basis of the estimated odds by using the Fisher\u2019s non-central hypergeometric distribution (modified version of the BiasedUrn package33 in R).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18466,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Use the permuted outcome to calculate the score statistic, Qjk, as in step 2 for each kernel and the kernel-specific p value, pjk, by comparing Qjk to the same asymptotical mixture of \u03c72 distribution.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18666,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Repeat step 3 for a large number of times B to form an empirical null distribution for po.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18756,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Calculate the final p value as p=(1/B)\u2211Bb=1I(po>pbo).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18809,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Optimal MiRKAT, Based on Multiple Kernels",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "For each permutation j, pj1,\u22ef,pj\u2113 are calculated with the same set of permuted outcomes and are thus correlated; taking the minimum p value across different kernels accounts for this correlation. Although the optimal MiRKAT requires permutation for the final p\u00a0value calculation, it only estimates residuals under each permutated data by using the null model, which essentially equates to finding the QR residuals for continuous outcomes or logistic regression for binary outcomes and thus can be done very fast. Additionally, for each kernel, each Qjk follows the same weighted mixture of the \u03c72 distribution with the weights and degree of freedom needed to be estimated only once.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19491,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Simulation Study",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We conducted simulation studies under a range of scenarios in order to verify that MiRKAT correctly controls type I error rate and to assess the relative power of MiRKAT by using different kernels and the power of optimal MiRKAT.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19736,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Simulation Study",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We first simulated microbiome datasets according to Chen and Li\u2019s general approach,15 which has been shown to generate simulated data reflective of real OTU counts. In particular, we simulated datasets composed of n = 100, 200, or 500 individuals. Then, we generated the OTU information for each individual in a simulated dataset from a Dirichlet-multinomial distribution, which accommodates the over-dispersion of OTU counts. To employ realistic parameter values for the Dirichlet-multinomial distribution, we estimated the dispersion parameters and the proportion means from Charlson et\u00a0al.\u2019s real upper-respiratory-tract microbiome dataset,34 which consists of 856 OTUs measured on each of 60 samples. Then, for each individual we generated OTU counts on the same 856 OTUs by using the estimated parameters and assumed 1,000 total counts per sample. For both continuous outcomes and dichotomous outcomes, we considered two simulation scenarios that differed in how the OTUs were related to the outcome.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20741,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Simulation Study",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Under simulation scenario 1, the outcome was related to a cluster of taxa that depend on a phylogenetic tree. Specifically, we partitioned all the OTUs into 20 clusters (lineages) by performing the partitioning-around-medoids algorithm on the basis of the OTU distance matrix. The abundance of these OTU clusters varied greatly, such that each OTU cluster corresponded to some possible bacterial lineage. We then used the model to choose a relatively abundant OTU cluster that constituted 19.4% of the total OTU reads to be related to the outcome. For continuous outcomes, we simulated under the model",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21342,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Simulation Study",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "For dichotomous outcomes, we simulated under the model",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21396,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Simulation Study",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "For both continuous and dichotomous outcomes, X1i and X2i are covariates to be adjusted for, and \ud835\udc9c denotes the indices of the OTUs in the selected cluster. The \u201cscale\u201d function standardizes the total OTU abundance in the associated cluster to have mean 0 and SD 1. X1i was simulated as a Bernoulli random variable with success probability 0.5. For X2i, we considered situations in which X2i and microbiome profiles (Zi) were correlated and in which X2i and Zi were independent. In the simulation wherein X2i and Zi were independent, X2i was simulated as N(0,1). For the case wherein X2i and Zi were correlated, we let X2i=scale\u00a0(\u2211j\u2208AZij)+N(0,1).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22041,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Simulation Study",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Under simulation scenario 2, the outcome was associated with the ten most abundant OTUs in all samples, without regard for the phylogeny. In particular, instead of clustering the OTUs on\u00a0the basis of the phylogenetic relationship, we simply selected the ten OTUs with the largest average number of reads across all samples. Then, we simulated the continuous outcome as",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22409,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Simulation Study",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We simulated the dichotomous outcome as",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22448,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Simulation Study",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We simulated the additional covariates (X) as before, and we again considered the scenario in which the covariates were associated with the microbiome and the scenario in which the covariates were independent of the microbiome.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22675,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Simulation Study",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "For both simulation scenarios, we considered using the weighted and unweighted UniFrac kernels (Kw and Ku, respectively), the Bray-Curtis kernel (KBC), and four generalized UniFrac Kernels with \u03b1 values chosen as 0, 0.25, 0.5, and 0.75, which are denoted as K0, K0.25, K0.5, and K0.75, respectively. All of these kernels were computed from the corresponding distances. We considered these particular kernels (distances) because they represent a range of different classes of kernels: the UniFrac-based methods utilize phylogenetic relationships, whereas the Bray-Curtis kernel does not, and the weighted and generalized UniFrac kernels account for abundance information to differing degrees, whereas the unweighted UniFrac kernel does not.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23414,
+                    "infons": {
+                        "section_title_1": "Material and Methods",
+                        "section_title_2": "Simulation Study",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We used each kernel to apply MiRKAT to the simulated datasets to test for associations between the simulated OTUs (Z) and the outcome (y). Additionally, we also applied optimal MiRKAT. We applied tests with and without adjustment for the potential confounders (X). For comparison, we further considered a naive Bonferroni-adjusted test, which selects the minimum p value across all the single-kernel testing and uses \u2113 \u00a0\u00d7\u00a0 pmin, where pmin is the smallest p value across all single-kernel tests and \u2113 is the total number of tests, as the final p value. For each choice of sample size n, simulation scenario, and correlation structure between the microbiome and covariates, we conducted 5,000 simulations with \u03b2 = 0 to examine the type I error rate. To assess the statistical power of the tests across both simulation scenarios, we varied values of the coefficient \u03b2 and conducted 2,000 simulations for each choice of sample size, simulation scenario, correlation structure, and value of \u03b2.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24403,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "In this section, we present the simulation results from performing our proposed MiRKAT and optimal MiRKAT methods, as well as the results from applying our methods to two real datasets. We also consider the relationship between MiRKAT and existing methods and demonstrate a close connection.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24701,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Simulation Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The type I error rates of MiRKAT and optimal MiRKAT across different simulation scenarios for continuous outcomes are shown in Table 1. In simulation scenario 1, a single phylogenetic cluster of OTUs was associated with the outcome, and in simulation scenario 2, the ten most abundant OTUs were associated with the outcome. Note that when the covariates were independent of the microbiome, both simulation scenarios were equivalent because there was no association between y and Z. For both simulation scenarios, when the covariates (X) and the microbiome composition (Z) were independent, MiRKAT was valid with or without adjusting for X. However, when X and Z were correlated, adjusting for X was necessary: the type I error was seriously inflated if the confounder X was not accounted for.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25511,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Simulation Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Figures 1 and \u200band22 show the statistical power for the tests with continuous outcomes in simulation scenario 1, in which a phylogenetic cluster of OTUs was associated with the outcome. Specifically, Figure\u00a01 shows the power when X and Z were independent, and Figure\u00a02 shows the\u00a0power when X and Z were correlated. Note that for Figure\u00a02, we only considered statistical tests that adjusted for X because the tests without X adjustment had inflated type I error and were invalid in such situations.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26008,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Simulation Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The power is presented for MiRKAT with each individual kernel, the optimal MiRKAT (which incorporates multiple kernels), and the naive Bonferroni-adjusted test. For all the kernels that were considered, the power increased when the association strength increased. Good kernel choices can greatly improve the statistical power of detecting association, whereas improper kernel choice leads to little power to detect the association. For this simulation scenario, the weighted UniFrac kernel and the generalized UniFrac kernel with \u03b1 = 0.75 produced the highest power, and the unweighted UniFrac kernel was the least powerful. Compared to the weighted UniFrac kernel, the optimal MiKRAT, which considers all metrics, lost some power but still maintained power considerably better than that of many other kernel choices. As expected, the optimal test was always more powerful than the naive Bonferroni-adjusted test.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26921,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Simulation Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Figures 3 and \u200band44 show the statistical power for simulation scenario 2, where the top ten most abundant OTUs were associated with the outcome without regard for phylogeny. We again show the power when X and Z were independent (Figure\u00a03) and when X and Z were correlated (Figure\u00a04). Results were similar to those of simulation scenario 1, except that the Bray-Curtis distance metric gave the highest power. Optimal MiRKAT, which considers all distance metrics, had power that was smaller but comparable to that of the Bray-Curtis distance but much higher than that of the naive Bonferroni-corrected test. The unweighted UniFrac kernel provided the least power.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27583,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Simulation Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "In practice, the optimal kernel depends on the true state of nature and can vary from case to case. The two simulation scenarios show that proper kernel choice is essential for being well powered to discover associations between microbiome composition and outcomes and that poor kernel choice leads to tremendous power loss. Optimal MiRKAT, however, alleviates the problem by considering different kernels and is more robust than single-distance-based analysis given that it hedges against different scenarios and works well in the omnibus.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28123,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Simulation Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The simulation results for dichotomous outcomes are quantitatively similar to the results obtained from continuous outcomes. The type I error results are summarized in Table S1, and power results are shown in Figures S1\u2013S4.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28346,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Relationship between MiRKAT and Existing Methods",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "A key advantage of MiRKAT is that it is already closely related to existing approaches for analyzing the association between microbiome composition and an outcome. In particular, with large sample size, the PERMANOVA method10 can be shown to be a special case of the kernel machine testing framework under the scenario in which there are no confounding variables.23 Consequently, MiRKAT with a single kernel can be viewed as a PERMANOVA generalization that accommodates additional covariates. In numerical simulations, the correlation between p values obtained from single-kernel MiRKAT and the corresponding distance-based method is usually more than 0.99 in scenarios without covariates to be adjusted for. For example, Figure\u00a0S5 shows the p values for MiRKAT and the distance-based approach for 2,000 simulated datasets when a single distance or kernel was used. However, because it uses the asymptotic distribution, MiRKAT is considerably faster than corresponding distance-based approaches, especially with large sample sizes (Figure\u00a0S6).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29437,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Analysis of Smoking Data",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Recently, a microbiome-profiling study was conducted to examine the communities within the upper respiratory tract34 in order to explain the effect of cigarette smoking on the orpharyngeal and nospharyngeal microbiome. Although details can be found in the original manuscript and subsequent re-analyses,14 in brief, swab samples were collected from the right and left nasopharynx and oropharynx of 29 smoking and 33 non-smoking adults. The variable region 1\u20132 (V1\u2013V2) of the bacterial gene 16S rRNA was PCR amplified and subjected to multiplexed pyrosequencing. OTUs were constructed with the QIIME pipeline. Samples with fewer than 500 reads and OTUs with only one read were removed, resulting in an OTU table with 60 samples (28 smokers and 32 nonsmokers) and 856 OTUs. Additional covariates in these data included gender and antibiotic use within the last 3\u00a0months.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30329,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Analysis of Smoking Data",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Distance-based analysis of the oropharyngeal samples via permutation-based distance analysis (PERMANOVA) with both weighted and unweighted UniFrac distances identified significant association between microbiome profiles and smoking status. However, the analyses did not take into account potential confounders: within the collected study sample, 75% of smokers were male, yet only 56% of non-smokers were male. The odds ratio of smoking between males and females was 2.33 within the dataset. The imbalance in the proportion of male and female subjects indicates strong potential for confounding: it is unclear whether the differences in microbiome profiles between smokers and non-smokers is driven by smoking or by the gender imbalance. Additionally, the tests were conducted with either weighted or unweighted UniFrac distance; it is practically attractive to consider multiple possible distance measurements while controlling for possible confounding effects. MiRKAT represents a natural analysis approach.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31338,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Analysis of Smoking Data",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Therefore, we re-analyzed the data from the oropharyngeal samples by using MiRKAT. Specifically, we applied MiKRAT to analyze the association between smoking and microbial community composition by using weighted and unweighted UniFrac distance matrices and the Bray-Curtis distance, except that here we transformed them to be similarity metrics to form the kernels and further adjusted for gender and antibiotic use. We also applied the optimal MiRKAT. Using MiRKAT under individual distance metrics, we found the p values from Kw, Ku, and KBC to be 0.0048, 0.014, and 0.002, respectively. The optimal MiRKAT generated a p value of 0.0031. Thus, despite the potential for confounding, our results show that the association between microbiome profiles and smoking status remains significant after the potential confounders are controlled for, reaffirming and providing greater confidence in the earlier results. In addition to validating a previous analysis, this result also demonstrates the utility and importance of MiRKAT with regard to accommodating covariates and multiple kernels.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32424,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Analysis of Fecal Protease Data",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Fecal proteases (FPs) are enteric enzymes that are elevated in subsets of individuals with irritable bowel syndrome (IBS) and inflammatory bowel disease (MIM: 266600). It was demonstrated that FPs from IBS-affected individuals have a profound impact on intestinal physiology, including visceral sensitivity and colonic permeability in mice.35 Although there is evidence that elevated FP levels can alter intestinal physiology by activating proteinase-activated receptors, it remains unclear whether the FP levels are of human or microbial origin. Consequently, Carroll et\u00a0al.36 conducted a study to examine the relationship between FP levels and microbiota in human fecal samples from 30 individuals affected by IBS and 24 healthy adults. 454 pyrosequencing of the gene 16S rRNA was again used for profiling the microbiomes, and QIIME was again applied to quantify the composition and diversity of each community.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33368,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Analysis of Fecal Protease Data",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The original study identified a significant association between microbiome composition and FP levels. However, analyses were restricted to the subjects with the highest and lowest FP levels. Thus, we applied MiRKAT to the dataset (limiting to the 23 diarrhea-predominant IBS-affected subjects and 23 healthy control subjects) to test for an association between FP levels and microbiome composition, except that we treated FP levels as continuous (so as to use all subjects), and we further adjusted for additional potential confounders, including age, body mass index, gender, race, and functional bowel disorder. We considered MiRKAT by using the weighted UniFrac, unweighted UniFrac, and Bray-Curtis kernels, as well as the optimal MiRKAT.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34109,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Analysis of Fecal Protease Data",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Interestingly, the three distances gave discordant conclusions in that the unweighted UniFrac kernel and Bray-Curtis kernel yielded significant p values (p = 0.0046 and 0.039, respectively), whereas the weighted UniFrac kernel gave a non-significant result (p = 0.124). The unweighted UniFrac kernel is primarily based on the presence or absence of an OTU, whereas the weighted UniFrac kernel further incorporates abundance, which could account for the differences, but the difference in association results makes it difficult to draw a single conclusion. The optimal MiRKAT, which simultaneously considers the three candidate kernels, gave a single p value of 0.0116 after covariate adjustment. This further demonstrates the advantages of optimal MiRKAT to be able to consider multiple kernels given that using individual distance metrics yielded disparate results and is difficult to interpret.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35005,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "We propose MiRKAT to test for the association between microbial community composition and a continuous or dichotomous outcome of interest in which covariate effects are modeled parametrically and the microbiome effect is modeled non-parametrically. The kernel matrix, which defines the functional form of the microbiome effect, is constructed via the exploitation of its correspondence with the popular distance metric designed to convey phylogenetic or taxonomic information among different OTUs. Additionally, the proposed method allows the incorporation of multiple candidate kernels simultaneously, enabling development of the optimal MiRKAT. Simulations and real-data analyses indicate that the approach has reasonable power and that the optimal MiRKAT is robust to poor kernel choice. Close connections between MiRKAT and existing analysis frameworks ensure that the approach is a natural addition to the currently available methodology.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35958,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "The optimal MiRKAT enables researchers to consider multiple distance and dissimilarity metrics simultaneously. Here, we focused primarily on the UniFrac, weighted UniFrac, generalized UniFrac, and Bray-Curtis metrics because our experiences have shown that these tend to work well in practice. In principle, one can include a wide range of other metrics with little penalty with regard to the false-positive rate, but the trade-off is that one might lose power if there are too many overly disparate kernels under consideration\u2014use of highly correlated kernels will not affect power very much. In the most extreme cases, optimal MiRKAT from multiple perfectly correlated kernels will generate the same p value as will each of the individual kernel tests. Furthermore, we note that the tests using each of the individual kernels are constructed on the basis of the same datasets and are non-negatively correlated (i.e., not competitive). Thus, the optimal MiRKAT should always have higher power than the naive Bonferroni-adjusted test.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36992,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "A reasonable alternative to the proposed omnibus test approach is to construct, as a kernel, a weighted combination of multiple kernels. In practice, the optimal \u201cweight\u201d is unknown and needs to be estimated from data or selected via other approaches, such as a grid search. From the mixed-model point of view, estimating the weights is equivalent to estimating a variance component that disappears when the null hypothesis is true; this violates the common regularity conditions in the standard asymptotic tests. Statistical methods for such problems, such as likelihood-ratio tests, recently have been the focus of considerable statistical research.37,38 However, this is frequently much more computationally intensive than the score test, especially when many kernels are under consideration. Furthermore, very limited work has been conducted on the likelihood-ratio test for variance components when some parameters disappear under the null and when the null values are on the boundary of the parameter space. On the other hand, selecting the best \u201cweight\u201d through a grid search can be conducted similarly to the optimal MiRKAT, in which each of the weighted combination of candidate kernels is treated as a new kernel. However, when the number of kernels under consideration increases or when a finer grid is used, the computation burden increases quickly as a result of the large search space and rapidly becomes computationally prohibitive. Therefore, if prior evidence is available to suggest that a single kernel is the best kernel, then using that single kernel or using a smaller set of kernels will be more powerful. In the absence of prior knowledge, then we suggest using a modest range of kernels with differing characteristics, e.g., a combination of phylogeny-based and non-phylogeny-based kernels, as in our simulations.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38830,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Beyond assessing the association with overall composition, there is considerable interest in identifying the individual taxa that are driving the apparent associations. This approach for analyzing microbiome data is frequently complementary and parallel to methods for testing overall composition and diversity. One common approach for doing this is to assess the marginal association between each OTU and the outcome. However, in addition to difficulties in determining the scale of the analysis, i.e., whether to use composition percentages or raw OTU counts, a problem of considerable interest lies in using distance metrics to inform the identification of individual taxa related to the outcome. To this end, as a regression-based approach combined with relatively fast computation, MiRKAT could enable a stepwise variable selection approach with the Akaike information criterion or the Bayesian information criterion. Such an approach could be applied post hoc to identify the variables most strongly driving apparent associations. It might also be possible to use a penalized regression approach within the kernel framework,39 but this remains a topic for future research.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40008,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Microbiome studies are now being included within epidemiological, population-based, and clinical studies. In contrast to early microbiome studies with modest sample sizes and relatively controlled experimental conditions, current microbiome studies consider issues such as confounding, covariate adjustment, and accommodation of more-sophisticated outcomes to be increasingly important. MiRKAT\u2019s ability to control for confounders within a principled regression-based framework while maintaining type I error and adequate power make it an attractive alternative to currently available methods. Furthermore, although we focused on dichotomous and continuous variables of interest, the framework can be generalized to alternative types of outcomes, such as multivariate, longitudinal, and survival data. Thus, with growing interest in applying the microbiome to complex clinical and population-based studies, MiRKAT can be extended to open new avenues of research by enabling analysis of data from the emerging studies with more-sophisticated outcomes.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41058,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "This study was supported in part by NIH grants K01DK092330, R01HG007508, R01HG006139, and R01GM097505; Center for Gastrointestinal Biology and Disease pilot feasibility grant P30DK03498; the Hope Foundation; and the Gerstner Family Career Development Award in Individualized Medicine.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41357,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41366,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Supplemental Data include six figures and one table and can be found with this article online at http://dx.doi.org/10.1016/j.ajhg.2015.04.003.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41508,
+                    "infons": {
+                        "section_title_1": "Web Resources",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Implementation of MiRKAT in the R language, http://research.fhcrc.org/wu/en.html",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41601,
+                    "infons": {
+                        "section_title_1": "Web Resources",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "MiRKAT R package and manual, http://research.fhcrc.org/wu/en.html",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41666,
+                    "infons": {
+                        "section_title_1": "Web Resources",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "OMIM, http://www.omim.org",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41691,
+                    "infons": {
+                        "section_title_1": "Web Resources",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "The URLs for data presented herein are as follows:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41741,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "254",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Woese C.R., Fox G.E., Zablen L., Uchida T., Bonen L., Pechman K., Lewis B.J., Stahl D. Conservation of primary structure in 16S ribosomal RNA. Nature. 1975;254:83\u201386. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41946,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "428",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Tyson G.W., Chapman J., Hugenholtz P., Allen E.E., Ram R.J., Richardson P.M., Solovyev V.V., Rubin E.M., Rokhsar D.S., Banfield J.F. Community structure and metabolism through reconstruction of microbial genomes from the environment. Nature. 2004;428:37\u201343. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42232,
+                    "infons": {
+                        "journal": "PLoS Comput. Biol. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Wooley J.C., Godzik A., Friedberg I. A primer on metagenomics. PLoS Comput. Biol. 2010;6:e1000667. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42378,
+                    "infons": {
+                        "journal": "Nat. Rev. Microbiol. ",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Lasken R.S. Genomic sequencing of uncultured microorganisms from single cells. Nat. Rev. Microbiol. 2012;10:631\u2013640. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42523,
+                    "infons": {
+                        "journal": "Nat. Rev. Microbiol. ",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Willing B.P., Russell S.L., Finlay B.B. Shifting the balance: antibiotic effects on host-microbiota mutualism. Nat. Rev. Microbiol. 2011;9:233\u2013243. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42699,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "457",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Turnbaugh P.J., Hamady M., Yatsunenko T., Cantarel B.L., Duncan A., Ley R.E., Sogin M.L., Jones W.J., Roe B.A., Affourtit J.P. A core gut microbiome in obese and lean twins. Nature. 2009;457:480\u2013484. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42946,
+                    "infons": {
+                        "journal": "PLoS ONE. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Larsen N., Vogensen F.K., van den Berg F.W., Nielsen D.S., Andreasen A.S., Pedersen B.K., Al-Soud W.A., S\u00f8rensen S.J., Hansen L.H., Jakobsen M. Gut microbiota in human adults with type 2 diabetes differs from non-diabetic adults. PLoS ONE. 2010;5:e9085. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43247,
+                    "infons": {
+                        "journal": "Cell Host Microbe. ",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Peterson D.A., Frank D.N., Pace N.R., Gordon J.I. Metagenomic approaches for defining the pathogenesis of inflammatory bowel diseases. Cell Host Microbe. 2008;3:417\u2013427. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43464,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "498",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Karlsson F.H., Tremaroli V., Nookaew I., Bergstr\u00f6m G., Behre C.J., Fagerberg B., Nielsen J., B\u00e4ckhed F. Gut metagenome in European women with normal, impaired and diabetic glucose control. Nature. 2013;498:99\u2013103. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43706,
+                    "infons": {
+                        "journal": "Ecology. ",
+                        "volume": "82",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. McArdle B., Anderson M. Fitting multivariate models to community data: a comment on distance-based redundancy analysis. Ecology. 2001;82:290\u2013297. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43872,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "473",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Arumugam M., Raes J., Pelletier E., Le Paslier D., Yamada T., Mende D.R., Fernandes G.R., Tap J., Bruls T., Batto J.M., MetaHIT Consortium Enterotypes of the human gut microbiome. Nature. 2011;473:174\u2013180. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44126,
+                    "infons": {
+                        "journal": "Appl. Environ. Microbiol. ",
+                        "volume": "71",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Lozupone C., Knight R. UniFrac: a new phylogenetic method for comparing microbial communities. Appl. Environ. Microbiol. 2005;71:8228\u20138235. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44314,
+                    "infons": {
+                        "journal": "Appl. Environ. Microbiol. ",
+                        "volume": "73",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Lozupone C.A., Hamady M., Kelley S.T., Knight R. Quantitative and qualitative beta diversity measures lead to different insights into factors that structure microbial communities. Appl. Environ. Microbiol. 2007;73:1576\u20131585. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44587,
+                    "infons": {
+                        "journal": "Bioinformatics. ",
+                        "volume": "28",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Chen J., Bittinger K., Charlson E.S., Hoffmann C., Lewis J., Wu G.D., Collman R.G., Bushman F.D., Li H. Associating microbiome composition with environmental covariates using generalized UniFrac distances. Bioinformatics. 2012;28:2106\u20132113. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44876,
+                    "infons": {
+                        "journal": "Topics in Applied Statistics: 2012 Symposium of the International Chinese Statistical Association.",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Chen J., Li H. Kernel Methods for Regression Analysis of Microbiome Compositional Data. In: Hu M., Liu Y., Lin J., editors. Topics in Applied Statistics: 2012 Symposium of the International Chinese Statistical Association. Springer; 2013. pp. 191\u2013201. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45148,
+                    "infons": {
+                        "journal": "Am. J. Hum. Genet. ",
+                        "volume": "82",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Kwee L.C., Liu D., Lin X., Ghosh D., Epstein M.P. A powerful and flexible multilocus association test for quantitative traits. Am. J. Hum. Genet. 2008;82:386\u2013397. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45359,
+                    "infons": {
+                        "journal": "Am. J. Hum. Genet. ",
+                        "volume": "86",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Wu M.C., Kraft P., Epstein M.P., Taylor D.M., Chanock S.J., Hunter D.J., Lin X. Powerful SNP-set analysis for case-control genome-wide association studies. Am. J. Hum. Genet. 2010;86:929\u2013942. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45599,
+                    "infons": {
+                        "journal": "Am. J. Hum. Genet. ",
+                        "volume": "89",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Wu M.C., Lee S., Cai T., Li Y., Boehnke M., Lin X. Rare-variant association testing for sequencing data with the sequence kernel association test. Am. J. Hum. Genet. 2011;89:82\u201393. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45828,
+                    "infons": {
+                        "journal": "Am. J. Hum. Genet. ",
+                        "volume": "91",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Lee S., Emond M.J., Bamshad M.J., Barnes K.C., Rieder M.J., Nickerson D.A., Christiani D.C., Wurfel M.M., Lin X., NHLBI GO Exome Sequencing Project\u2014ESP Lung Project Team Optimal unified approach for rare-variant association testing with application to small-sample case-control whole-exome sequencing studies. Am. J. Hum. Genet. 2012;91:224\u2013237. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46222,
+                    "infons": {
+                        "journal": "Genet. Epidemiol. ",
+                        "volume": "37",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Wu M.C., Maity A., Lee S., Simmons E.M., Harmon Q.E., Lin X., Engel S.M., Molldrem J.J., Armistead P.M. Kernel machine SNP-set testing under multiple candidate kernels. Genet. Epidemiol. 2013;37:267\u2013275. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46474,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Chen W., Zhao N., Wu M.C., Schaid D.J., Chen J. Mayo Clinic; 2015. Small sample kernel association test for genetic association studies. Technical report. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46649,
+                    "infons": {
+                        "journal": "Bioinformatics. ",
+                        "volume": "20",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Goeman J.J., van de Geer S.A., de Kort F., van Houwelingen H.C. A global test for groups of genes: testing association with a clinical outcome. Bioinformatics. 2004;20:93\u201399. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46853,
+                    "infons": {
+                        "journal": "Genet. Epidemiol. ",
+                        "volume": "35",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Pan W. Relationship between genomic distance-based regression and kernel machine regression for multi-marker association testing. Genet. Epidemiol. 2011;35:211\u2013216. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47066,
+                    "infons": {
+                        "journal": "Biometrics. ",
+                        "volume": "63",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Liu D., Lin X., Ghosh D. Semiparametric regression of multidimensional genetic pathway data: least-squares kernel machines and linear mixed models. Biometrics. 2007;63:1079\u20131088. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47293,
+                    "infons": {
+                        "journal": "BMC Bioinformatics. ",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Liu D., Ghosh D., Lin X. Estimation and testing for the effect of a genetic pathway on a disease outcome using logistic kernel machine regression via logistic mixed models. BMC Bioinformatics. 2008;9:292. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47546,
+                    "infons": {
+                        "journal": "Genetics. ",
+                        "volume": "178",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Gianola D., van Kaam J.B. Reproducing kernel hilbert spaces regression methods for genomic assisted prediction of quantitative traits. Genetics. 2008;178:2289\u20132303. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47759,
+                    "infons": {
+                        "journal": "Biometrika. ",
+                        "volume": "84",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Lin X. Variance component testing in generalised linear models with random effects. Biometrika. 1997;84:309\u2013326. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47892,
+                    "infons": {
+                        "journal": "Comput. Stat. Data Anal. ",
+                        "volume": "53",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Liu H., Tang Y., Zhang H.H. A new chi-square approximation to the distribution of non-negative definite quadratic forms in non-central normal variables. Comput. Stat. Data Anal. 2009;53:853\u2013856. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48107,
+                    "infons": {
+                        "journal": "J.\u00a0R. Stat. Soc. Ser. C Appl. Stat. ",
+                        "volume": "29",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Davies R. The distribution of a linear combination of chi-2 random variables. J.\u00a0R. Stat. Soc. Ser. C Appl. Stat. 1980;29:323\u2013333. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48258,
+                    "infons": {
+                        "journal": "Comput. Stat. Data Anal. ",
+                        "volume": "54",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Duchesne P., Lafaye de Micheaux P. Computing the distribution of quadratic forms: Further comparisons between the liu-tang-zhang approximation and exact methods. Comput. Stat. Data Anal. 2010;54:858\u2013862. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48482,
+                    "infons": {
+                        "journal": "J.\u00a0Bus. Econ. Stat. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Freedman D., Lane D. A nonstochastic interpretation of reported significance levels. J.\u00a0Bus. Econ. Stat. 1983;1:292\u2013298. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48623,
+                    "infons": {
+                        "journal": "Am. J. Hum. Genet. ",
+                        "volume": "91",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Epstein M.P., Duncan R., Jiang Y., Conneely K.N., Allen A.S., Satten G.A. A permutation procedure to correct for confounders in case-control studies, including tests of rare variation. Am. J. Hum. Genet. 2012;91:215\u2013223. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48892,
+                    "infons": {
+                        "journal": "Commun. Stat. Simul. Comput. ",
+                        "volume": "37",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Fog A. Sampling methods for wallenius\u2019 and fisher\u2019s noncentral hypergeometric distributions. Commun. Stat. Simul. Comput. 2008;37:241\u2013257. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49051,
+                    "infons": {
+                        "journal": "PLoS ONE. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Charlson E.S., Chen J., Custers-Allen R., Bittinger K., Li H., Sinha R., Hwang J., Bushman F.D., Collman R.G. Disordered microbial communities in the upper respiratory tract of cigarette smokers. PLoS ONE. 2010;5:e15216. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49320,
+                    "infons": {
+                        "journal": "Pain. ",
+                        "volume": "144",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Annah\u00e1zi A., Gecse K., Dabek M., Ait-Belgnaoui A., Roszt\u00f3czy A., R\u00f3ka R., Moln\u00e1r T., Theodorou V., Wittmann T., Bueno L., Eutamene H. Fecal proteases from diarrheic-IBS and ulcerative colitis patients exert opposite effect on visceral sensitivity in mice. Pain. 2009;144:209\u2013217. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49629,
+                    "infons": {
+                        "journal": "PLoS ONE. ",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "36. Carroll I.M., Ringel-Kulka T., Ferrier L., Wu M.C., Siddle J.P., Bueno L., Ringel Y. Fecal protease activity is associated with compositional alterations in the intestinal microbiota. PLoS ONE. 2013;8:e78017. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49886,
+                    "infons": {
+                        "journal": "J.\u00a0R. Stat. Soc. Series B Stat. Methodol. ",
+                        "volume": "66",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "37. Crainiceanu C.M., Ruppert D. Likelihood ratio tests in linear mixed models with one variance component. J.\u00a0R. Stat. Soc. Series B Stat. Methodol. 2004;66:165\u2013185. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50069,
+                    "infons": {
+                        "journal": "J.\u00a0Comput. Graph. Stat. ",
+                        "volume": "17",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "38. Greven S., Crainiceanu C.M., Kchenhoff H., Peters A. Restricted likelihood ratio testing for zero variance components in linear mixed models. J.\u00a0Comput. Graph. Stat. 2008;17:870\u2013891. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50272,
+                    "infons": {
+                        "journal": "J.\u00a0Comput. Graph. Stat. ",
+                        "volume": "22",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "39. Allen G.I. Automatic feature selection via weighted kernels and regularization. J.\u00a0Comput. Graph. Stat. 2013;22:284\u2013299. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

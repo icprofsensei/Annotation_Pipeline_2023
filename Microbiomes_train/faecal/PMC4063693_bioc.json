@@ -1,0 +1,2277 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC4063693",
+            "inputfile": "../microbiome_corpus_HTML\\PMC4063693.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Quantification of HTLV-1 Clonality and TCR Diversity",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Estimation of immunological and microbiological diversity is vital to our understanding of infection and the immune response. For instance, what is the diversity of the T cell repertoire? These questions are partially addressed by high-throughput sequencing techniques that enable identification of immunological and microbiological \u201cspecies\u201d in a sample. Estimators of the number of unseen species are needed to estimate population diversity from sample diversity. Here we test five widely used non-parametric estimators, and develop and validate a novel method, DivE, to estimate species richness and distribution. We used three independent datasets: (i) viral populations from subjects infected with human T-lymphotropic virus type 1; (ii) T cell antigen receptor clonotype repertoires; and (iii) microbial data from infant faecal samples. When applied to datasets with rarefaction curves that did not plateau, existing estimators systematically increased with sample size. In contrast, DivE consistently and accurately estimated diversity for all datasets. We identify conditions that limit the application of DivE. We also show that DivE can be used to accurately estimate the underlying population frequency distribution. We have developed a novel method that is significantly more accurate than commonly used biodiversity estimators in microbiological and immunological populations.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1449,
+                    "infons": {
+                        "section_title_1": "Author Summary",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "The \u201cunseen species problem\u201d is ubiquitous in biology and is frequently encountered outside its original setting in population ecology. For example, the human retrovirus HTLV-1 persists within hosts in multiple, genetically identical clones of infected cells. However, the number of clones in one host is unknown; this knowledge is required for an understanding of how the virus survives despite a strong host immune response. The problem arises again in estimating the diversity of the T-cell repertoire, which influences adaptive immunity. For example, the T-cell diversity may influence the outcome of viral challenge. While there have been numerous attempts to address the unseen species problem, there is currently no consensus on how to do so in immunology and microbiology. The aim of this study was to identify a suitable method to estimate the number of species in immunological and microbiological populations. We found that five existing estimators we tested performed poorly across three data sources (HTLV-1 clonality, T cell receptor, and microbial data). We therefore developed a new estimator, DivE, which significantly outperformed the other estimators. Accurate diversity quantification allows better evaluation of the impact on immunity from factors such as ageing and infection.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2761,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "How can we estimate diversity from a population sample? In viral infections, the number of viral variants and their population structure inform our understanding of disease pathogenesis, and can suggest treatment strategies [1], [2]. In immunology, the repertoire and population structure of B cell and T cell receptor clonotypes vary with age [3]\u2013[7], and are intimately linked to antimicrobial protective efficacy. In the human microbiome, decreased diversity of the gastrointestinal microbiota is associated with atopy [8], Crohn's disease and ulcerative colitis [9], [10].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3349,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "A complete census is usually impossible and so estimators of the number of unseen \u201cspecies\u201d are required. Here we use the word \u201cindividual\u201d to refer to a single T cell sequence read, microbial sequence read, or virus- infected cell. We use \u201cspecies\u201d to denote a class of individuals, such a T cell clonotype, bacterial operational taxonomic unit (OTU) or viral clone. The term \u201cspecies richness\u201d denotes the number of species in the population under consideration.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3813,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Immunological and microbiological data differ in important respects from ecological data. First, in many immunological and microbiological populations, it may be reasonable to assume that \u201cspecies\u201d are taxonomically similar, that the spatial distribution of individuals is homogeneous, and that individuals are sampled randomly, independently and with equal probabilities. If made, these simplifying assumptions allow the extrapolation of individual-based rarefaction curves, which depict the expected number of species against the number of individuals sampled [11]\u2013[14]. However, the above assumptions are frequently violated in ecological populations [14]\u2013[18], where unobserved individuals may differ from observed individuals in their colour, physical size, geographical distribution, movement, variety of habitats and relationship to other species [15], and thus remain unobserved despite substantial subsequent sampling. Second, many common assumptions about population structure are inappropriate for immunological and microbiological populations, for example that all species have equal frequencies [19]\u2013[21], or that the functional form of the population distribution is known [22]\u2013[26]. We therefore consider non-parametric estimators.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5059,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Non-parametric estimators, such as Chao1 [27], and the abundance-based coverage estimator (ACE) [28], have been proposed. ACE has been suggested to be the best current approach [14], [22], [29] and is widely applied in microbiology and immunology; for example to estimate the diversity of the human gastrointestinal flora [30], human gut metagenome [31], mouse TCR repertoire [32], [33], fungi [34], and the number of HTLV-1 infected cell clones [35]. Although they were originally intended as methods to estimate lower bounds, the Chao1 estimator, and the modified, bias-corrected form Chao1bc [36], have been used to make a point estimate of the number of TCR clonotypes [37], [38], the number of OTUs in hepatitis C virus infection [1], parasite diversity in malaria infection [39] metagenome size [40], the number of integration sites of therapeutic gene therapy vectors [41], soil diversity [42], and again the number of HTLV-1 infected cell clones [35], [43]. In addition to the ACE and the Chao estimator, we also consider two additional non-parametric estimators: the Bootstrap [44] and Good-Turing estimators [45].",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "fungi",
+                            "infons": {
+                                "identifier": "NCBI:txid4751",
+                                "type": "fungi_kingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 13:44:24",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "34632599",
+                            "locations": {
+                                "length": 5,
+                                "offset": 5447
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 6182,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Most diversity estimators aim to estimate the species richness in one of two populations of interest: either in the population from which the sample was drawn (e.g. number of microbial species in the gut, given a sample from the gut) or the value where the rarefaction curve saturates (e.g. number of species at the point when further sampling does not yield any new species). These definitions of the population of interest lack flexibility and may be inappropriate or poorly defined for the question in hand. Indeed, if some species are represented by a single individual, the rarefaction curve will not saturate. For many microbiological and immunological questions, an estimator that allows the user to specify the size of the population of interest is desirable. For instance, we may wish to know the T cell repertoire diversity of both the blood and the whole body.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7053,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The aim of this study was to identify a suitable method for estimating species richness in immunological and microbiological populations. We tested widely-used estimators on samples of microbiological and immunological populations. We found these estimators performed poorly. We therefore developed and validated a new method to estimate species richness and species frequencies.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7432,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "We used data from three independent sources: (i) viral populations from human T-lymphotropic virus type-1 (HTLV-1)\u2013infected subjects; (ii) T cell antigen receptor (TCR) clonotype repertoires; and, (iii) infant faecal microbial samples.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7667,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "HTLV-1 is a retrovirus that mainly infects CD4+ T lymphocytes. HTLV-1 spreads within hosts via two routes: de novo infection of uninfected cells, and proliferation of infected cells [46]. When an infected cell proliferates, the integrated provirus is replicated with the host genome and a clone of infected cells is generated, each cell carrying a provirus in the same genomic site. Consequently, in each host, HTLV-1 persists in many distinct infected cell clones. We used high-throughput data on the abundance of HTLV-1 infected cell clones in 14 HTLV-1 seropositive subjects [43].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8250,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The human gastrointestinal tract contains a densely populated ecosystem of microbes that performs a variety of functions [47]. We obtained high-throughput 16S rRNA sequence data from infant faecal samples. In this study we used observed frequencies of different bacterial operational taxonomic units (OTUs) [48].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8562,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "T cells are vital to adaptive immunity. The T cell population comprises a diverse repertoire of TCR clonotypes, each defined by the DNA sequence of the expressed TCR. In humans, there are a potential 1015\u20131020 different TCR clonotypes [49], but the actual number of clonotypes in one person is estimated to be between 106 and 108\n[50]. In this study we used RACE-based data on TCR clonotype abundance. We studied circulating central and effector memory, na\u00efve and total CD4+ and CD8+ T cells.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9054,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Ethics Statement",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Blood samples were donated by HTLV-1+ subjects attending the HTLV-1 clinic at the National Centre for Human Retrovirology (Imperial College Healthcare NHS trust) at St. Mary's Hospital, London UK, with fully informed written consent. This study was approved by the UK National Research Ethics Service (NRES reference 09/H0606/106). Parents gave full written informed consent for infant faecal sample collection, and all protocols and procedures were approved by the National Research Ethics Service Committee, U.K. (Southampton and South West Hampshire) (ref: 05/Q1702/119). For the TCR data, leukaphereses were performed on healthy donors who provided written informed consent at the National Institutes of Health, USA. The protocol and use of these samples for immunological investigation were approved by the National Institute of Allergy and Infectious Diseases Institutional Review Board.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9984,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "HTLV-1 Data Collection",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Previously reported [43] and new high-throughput data on HTLV-1 clonality were analysed. Each HTLV-1 dataset quantifies the abundance of HTLV-1-infected T cell clones. There were 105 datasets, comprising nine samples from each of 11 subjects (three independent samples at each of three time points), and 15 samples from four subjects. All had either HTLV-1-associated myelopathy/tropical spastic paraparesis or were asymptomatic carriers of HTLV-1.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10454,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Microbial Data Collection",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The microbial data were derived from faecal samples obtained from 10 infants. DNA was amplified with two sets of PCR primers, generating 20 datasets [48]. Amplicons of the V3-V5 regions of the 16S rRNA gene were generated by PCR using two sets of universal primers. Sequencing data were generated using the Roche 454 GS Junior platform. Analysis was performed using the QIIME pipeline as described previously [48].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10893,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "TCR Data Collection",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "A total of 16 datasets were collected from two subjects, comprising TCR sequences from four phenotypically defined subsets of CD4+ and CD8+ T-cells: na\u00efve, central memory (CM), effector memory (EM) and total. After flow cytometric sorting and cell lysis, mRNA was extracted and subjected to a non-nested, template-switch anchored RT-PCR using a 3\u2032 TCRB constant region primer as described previously [51]. This approach allows linear and unbiased amplification of all TCRs irrespective of TRBV or TRBJ gene usage. Paired-end sequencing reactions (each 150 bp) were performed using an Illumina HiSeq 2000 sequencer. Raw FASTQ files were annotated using reference TCRB sequences from the ImMunoGeneTics (IMGT) website (http://www.imgt.org) and a custom-written Java application. Following annotation, the data were filtered to eliminate potential sequencing and PCR errors.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11783,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "\nProchlorococcus Data Collection",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "\nProchlorococci are vital to energy and nutrient cycling in the oceanic ecosystem, and the genus contains a highly diverse and abundant population of clades. We analysed publicly available metagenomic data describing clades Prochlorococcus. The data were obtained by the Global Ocean Sampling Expedition and contains the frequency of distinct sequence reads of genes of Prochlorococcus clades.[52] Sampling sites, sample collection, library construction, fragment recruitment, and determination of Prochlorococcus abundances are detailed in [52], [53].",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Prochlorococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1218",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 13:45:40",
+                                "parent_taxonomic_id": "NCBI:txid2881426"
+                            },
+                            "id": "34632600",
+                            "locations": {
+                                "length": 15,
+                                "offset": 12007
+                            }
+                        },
+                        {
+                            "text": "Prochlorococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1218",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 13:45:41",
+                                "parent_taxonomic_id": "NCBI:txid2881426"
+                            },
+                            "id": "34632601",
+                            "locations": {
+                                "length": 15,
+                                "offset": 12153
+                            }
+                        },
+                        {
+                            "text": "Prochlorococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1218",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 13:45:42",
+                                "parent_taxonomic_id": "NCBI:txid2881426"
+                            },
+                            "id": "34632602",
+                            "locations": {
+                                "length": 15,
+                                "offset": 12281
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 12367,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "\nDivE Species Richness Estimator",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We developed a heuristic approach to estimate species richness, which we named DivE (Diversity Estimator) (Figure 1). To calculate the DivE estimator, many mathematical models are fitted to multiple nested subsamples of individual-based rarefaction curves. Each model is fitted to all nested subsamples, and is scored on a set of four criteria. The five best-performing models are extrapolated and their respective estimates are aggregated to produce the DivE species richness estimate. DivE requires an estimate of population size. If the species richness of a wider population is desired, the same models are used but extrapolated to a different population size; this is only justified if the two populations are similar in their spatial distribution of individuals.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13167,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "\nDivE Species Richness Estimator",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The criteria against which each model fit is scored are:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13223,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "\nDivE Species Richness Estimator",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "\nDiscrepancy \u2013 the mean percentage error between data points and model prediction.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13305,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "\nDivE Species Richness Estimator",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "\nAccuracy \u2013 the percentage error between the full sample species richness, and the estimate of full sample species richness from a given subsample.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13452,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "\nDivE Species Richness Estimator",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "\nSimilarity \u2013 the area between the curve fitted to a subsample and the curve fitted to the full sample, normalized to the area under the curve from the full data, on the interval [0, Nobs], where Nobs is the size of the full data.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13682,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "\nDivE Species Richness Estimator",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "\nPlausibility \u2013 the predicted number of species must either increase monotonically or plateau and the predicted rate of species accumulation must either decrease or plateau (i.e. for S(x) and x\u22651, where x is the number of individuals, S\u2032(x) \u22650, and S\"(x) \u22640).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13941,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "\nDivE Species Richness Estimator",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The rationale behind each criterion is as follows:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13991,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "\nDivE Species Richness Estimator",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "\nDiscrepancy - the model must describe the data to which it was fitted.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14062,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "\nDivE Species Richness Estimator",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "\nAccuracy - from a subsample, the model should predict the full sample species richness.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14150,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "\nDivE Species Richness Estimator",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "\nSimilarity - an ideal model will produce identical fits from all subsamples. The smaller the area between the model fits, the better the model.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14294,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "\nDivE Species Richness Estimator",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "\nPlausibility - this criterion requires that, as the observed number of individuals increases, the observed number of species does not decrease and the rate of species-accumulation does not increase; the former is impossible and the latter is implausible (Figure 1).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14560,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "\nDivE Species Richness Estimator",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Criteria 2), 3) and 4) are independent of the fitting process. That is, they are not constraints by which models are fitted; instead they are tests of model performance.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14729,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "\nDivE Species Richness Estimator",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Each model fit is scored on all four criteria. For criteria 1\u20133, we scored a fit in multiples of empirically chosen precision levels. The precision level for criterion 1 was 0.01%: a score of 1 denotes a model fit where the mean percentage error of the residuals, \u03b5, was less than 0.01%; a score of 2 denotes 0.01%<\u03b5\u22640.02% and so on. Criteria 2 and 3 were similarly scored in multiples of 0.5%. Criterion 4 was implemented by giving a score of 500 to model fits that violated either of its conditions; this value was chosen to exceed the score of any model fit that satisfied this criterion.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15320,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "\nDivE Species Richness Estimator",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The final score for each model is an aggregate of the scores of all model fits across subsamples and criteria, and is calculated as follows. First, the score for each criterion is defined as the mean of the scores of all subsample fits for that criterion. The final score for each model is the mean of all criteria scores. The DivE species richness estimate is the geometric mean of the estimates provided by the five best-performing (i.e. lowest-scoring) models.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15783,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "\nDivE Species Richness Estimator",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "A list of 58 candidate models (Text S1) was chosen from an online repository [54]. Many of these (e.g. logistic, logarithmic, hyperbolic) are widely used in population ecology [11], [55]. Models were fitted by least squares regression using R version 2.14.2 [56] with the package FME [57]. Global fitting was performed using Price's algorithm [58] followed by local fitting using the Levenberg-Marquardt algorithm [59].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16202,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Study Design",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We evaluated DivE and five non-parametric estimators: the Chao1 bias-corrected estimator (Chao1bc) [36], the abundance-based coverage estimator (ACE) [28], the Bootstrap estimator [44], the Good-Turing estimator [45], [60], [61] and the widely-used negative exponential model [11], [12], [36], [62], [63]. ACE and Chao1 [27], have been suggested as best practice [12], [14], [22], [29], [64] and are widely applied in microbiology and immunology [1], [30], [32], [34], [35], [37], [39]\u2013[43]. For ACE, \u201cabundant\u201d species were defined as those with an observed frequency of greater than 10, as recommended in [64].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16826,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Study Design",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Due to differences between estimators and between datasets, we conducted multiple, distinct evaluations and validations. We first evaluated, for each estimator, the relationship between estimated diversity and sample size, using the estimates produced from a series of successively smaller, randomly generated in silico subsamples of observed data. For the microbial and TCR data respectively, five and six equidistant subsample sizes were chosen from each observed dataset. For the HTLV-1 data, subsample sizes were chosen to be approximately equidistant; however some were removed due to runtime constraints. See Table S1 for further details. Second, we measured the accuracy of DivE by comparing the estimated species richness \u015cobs at the size of the full dataset Nobs from each subsample to the (known) species richness Sobs in the full data. Using the same method, we compared DivE to the second order bias-corrected Akaike Information Criterion (AICc) [65], [66]. Third, the TCR data have rarefaction curves which plateau. Using smaller subsamples of this data and making the assumption that the species richness of the full data is equal to that of the entire population, we were able to evaluate the accuracies of all estimators together. Finally for 11 of the 14 HTLV-1 patients detailed in Table S1, three samples were taken at a single time point. For each time point, the three samples were pooled and used as a practical test of DivE's ability to predict species richness in larger samples.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18329,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "\nDivE Frequency Distribution Generation Algorithm",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "In addition to species richness, we wanted to estimate the population frequency distribution. Because of the considerable structural variation between and within immunological and microbiological populations, we developed a general method which does not assume the analytical form of the population structure. This algorithm uses the DivE estimator combined with observed abundances (Figure 2). See Text S1 for details. The algorithm was applied to multiple random subsamples of observed data. The estimated distributions were then compared to the full data frequency distribution using two measurements: (i) error, defined as the sum of discrepancies in species frequencies between estimated and observed (full) distributions, divided by the number of individuals in the observed distribution, i.e. error \u200a=\u200aand (ii) percentage error between the Gini coefficients of the estimated and observed distributions. The Gini coefficient is an index of dispersion used widely in epidemiology, sociology, biology, and ecology [43], [67].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19407,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of Estimators: Relationship between Sample Size and Estimated Diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Each species richness estimator (Chao1bc [36], Bootstrap [44], ACE [28], Good-Turing [45], the negative-exponential model [12] and DivE) was applied to random subsamples of observed data. We used linear regression to calculate the average proportional increase in estimated diversity as a function of the proportional increase in sample size. Sample size and diversity were normalized respectively to the smallest sample and the estimated diversity at the smallest sample. For example, a \u201cnormalized gradient\u201d of 0.5 would mean that, on average, an increase of 10% in sample size would produce a 5% increase in estimated diversity. A value of zero would signify no bias with sample size.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20183,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of Estimators: Relationship between Sample Size and Estimated Diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The existing estimators performed poorly when applied to the HTLV-1 and microbial data: estimates systematically increased with sample size. In contrast, DivE produced consistent estimates that showed no obvious relationship with sample size (Figures 3 and \u200band4).4). Across subjects and for all methods except DivE, estimates showed significant positive normalized gradients (p<0.01 for every estimator, n\u200a=\u200a14; two-tailed binomial test) ranging between 0.17 and 0.52 for the HTLV-1 data and 0.3 to 0.45 for the microbial data (Figure 4). Conversely, the normalized gradients produced by DivE did not differ significantly from zero (p\u200a=\u200a0.18, n\u200a=\u200a14; two-tailed binomial test), and were much smaller (0.0081 and 0.022 for the HTLV-1 and microbial data respectively) (Figure 4). In any specified population there is only one value of species richness, and an accurate estimator will arrive at this value regardless of sample size. An increase in estimate magnitude with sample size implies that estimates of a population's species richness would increase if e.g. greater blood volumes were drawn or technique sensitivity was improved.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21317,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of Estimators: Relationship between Sample Size and Estimated Diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The existing estimators were less biased when applied to the TCR data, and estimates were largely consistent. Although the normalized gradients were still significantly positive (p<0.0001 for each estimator except DivE, n\u200a=\u200a16), their magnitudes were substantially lower than for the HTLV-1 and microbial data. However, existing estimators again increased with sample size for the effector memory (EM) CD8+ T cell population from the same subject. These observations can be explained with reference to the TCR rarefaction curves (Figure 3). With the exception of the CD8+ EM dataset (for which the subsample sizes were considerably smaller), each TCR rarefaction curve reached a plateau, implying that the vast majority of observed clonotypes were encountered early. In contrast, the CD8+ EM rarefaction curve did not plateau, suggesting that further sampling would reveal more CD8+ EM clonotypes. In common with the microbial and the HTLV-1 datasets, DivE performed well for all TCR datasets, producing consistent results from all subsample sizes. To make sure that the smallest subsamples did not disproportionately contribute to the observed gradients, we repeated the above analysis using only estimates from the largest three subsamples in each patient dataset, which showed almost identical results (Figure S1).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22634,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of DivE and Second Order Bias-Corrected Akaike Information Criterion (AICc)",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The best-performing models were largely consistent within patients and between subsamples for the microbial and TCR data, although less so for the HTLV-1 data. Ideally, model selection would be consistent across all subsamples. Deviation from this will result in a discrepancy between Sobs and \u015cobs. This discrepancy is quantified in Figure 3 (middle column) and in Table S2. To ensure the four criteria provide a useful metric of model performance, we compared DivE to the second order bias-corrected Akaike Information Criterion(AICc) [65], [66]. DivE's mean errors (between the species richness of the full data Sobs and \u015cobs) were 3.3%, 1.0%, and 4.0% for the HTLV-1, TCR and microbial data respectively. These were lower than the corresponding errors of 6.7%, 1.1%, and 7.5%, produced when models were scored by the AICc. This effect was more marked when we considered estimates from small subsamples, defined as those comprising at most 50% of the observed data (Table S2). However, the differences between errors were smaller for the TCR data, perhaps also due to the saturating rarefaction curves in these samples.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23842,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of Estimators: Accuracy of Diversity Estimate",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "When rarefaction curves reach a plateau, we can assume that the value of the plateau is approximately equal to the species richness of the entire population, which the existing estimators aim to estimate. Thus it is appropriate to evaluate DivE and the existing estimators together using TCR rarefaction curves which plateau. We took random subsamples of 0.5%, 1%, 2%, 5%, and 10% of the total CD4+ and CD8+ cells for subjects C and E. We then applied each estimator to each subsample and measured its error (\u200a=\u200a|Sobs - \u015cobs| /Sobs) (Table 1, Figure S2). DivE's median error was 6.7%, substantially lower than respective median errors of 43.8%, 42.8%, 65.3%, 61.7%, and 50.7% for the Chao1bc, ACE, Bootstrap, Good-Turing and negative exponential estimators (p<0.0005 for each estimator comparison with DivE, n\u200a=\u200a20; two-tailed binomial test)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24739,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of Estimators: Accuracy of Diversity Estimate",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "As neither the HTLV-1 nor the microbial data exhibit rarefaction curves that plateau, we cannot apply the same analysis to these datasets. Instead we took advantage of the fact that, for 11 of the 14 HTLV-1 subjects, the data comprised three time points,with three samples drawn at each time point in immediate succession from the subject. For a given subject and a single time point, the three samples were combined in silico to produce a single pooled sample. We compared the observed species richness of the pooled sample to each estimator's estimates from a subsample (Figure 5, Figure S3). The total blood diversity must be at least as great as that observed by pooling the samples. However, all existing estimators estimate the total diversity to be less than that observed. Based on a single subsample, the Chao1bc, ACE, Bootstrap, Good-Turing and negative exponential estimators respectively estimate medians of 27.0%, 12.7%, 71.1%, 65.5%, and 47.6% fewer clones than observed in the pooled samples (n\u200a=\u200a11). Since the pooled samples do not saturate, and since the blood contains approximately 105 times more infected cells than the pooled sample, the diversity observed in the pooled sample is likely to be a small fraction of the total diversity. Since the existing estimators produce estimates lower than the pooled sample diversity, let alone total blood diversity, this represents a considerable error. We used DivE to produce two estimates: the pooled sample diversity and blood diversity. From the subsamples DivE estimated a median of 2.6\u00d7103 clones in the pooled samples, a median error of 2.5% (n\u200a=\u200a11) (Figure 5, Figure S3). Additionally, DivE estimated 2.8\u00d7104 clones in the blood, approximately one log higher than the observed pooled sample diversity. Whilst we cannot determine whether or not this is accurate it is at least plausible, considering that it is not less than the diversity of the pooled sample, that the sampling fraction is very small, and that the rarefaction curve has not reached a plateau.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26770,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Estimate Error as a Function of Data Curvature",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Next we sought to identify conditions under which DivE would be prone to error and should not be applied. When the observed rarefaction curve is linear, the data imply a constant rate of species accumulation, and so provide little information on how quickly the rate of species accumulation will decrease. This is usually indicative of severe under-sampling. We predicted that DivE will fail to give accurate estimates given such a near linear rarefaction curve. We tested this prediction by calculating the error in the DivE estimates as a function of rarefaction data curvature.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27396,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Estimate Error as a Function of Data Curvature",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The curvature Cp was quantified by the area between the observed rarefaction curve and a linear rarefaction curve, as a fraction of the maximum possible area, which occurs when the rarefaction curve saturates immediately. Cp can take values between 0 and 1, where 1 reflects perfect saturation and 0 reflects a constant rate of species accumulation (Figure S4). We took additional samples of 0.1% of the total CD4+ and CD8+ cells for subjects C and E to obtain lower curvature values.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27880,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Estimate Error as a Function of Data Curvature",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "As expected, at very low curvatures (0.016\u2264Cp\u22640.101), DivE was prone to overestimation and performed poorly (Figure 6), with median error 0.23. However, for under-sampled populations of intermediate curvature (0.11\u2264Cp\u22640.62) DivE improved markedly (median error \u200a=\u200a0.06), and typically outperformed the other estimators (Figure 6, Table S3). Finally, all estimators perform well when the curvature is high and most of the diversity has been observed (Figure 3D, 3H and 3L).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28352,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Estimate Error as a Function of Data Curvature",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We next tested DivE using the Prochlorococcus data [52], with multiple subsamples of increasing curvature (as for the TCR data). At low curvatures DivE again performed poorly, but it became more accurate as the curvature increased. For under-sampled populations of intermediate curvature, DivE again outperformed the other estimators, although the differences between the estimator errors were not as dramatic as with the TCR data (Figure S5).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Prochlorococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1218",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 13:48:50",
+                                "parent_taxonomic_id": "NCBI:txid2881426"
+                            },
+                            "id": "34632603",
+                            "locations": {
+                                "length": 15,
+                                "offset": 28382
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 28795,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Estimate Error as a Function of Data Curvature",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Very low curvatures suggest severe under-sampling and researchers should exercise caution with such data. It is unlikely that any species richness estimator will be accurate or informative in such cases.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28998,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Example Application: Estimated Number of HTLV-1 Infected Cell Clones",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "In both HTLV-1 infection and infection with the related bovine leukaemia virus (BLV), accurate determination of the number of infected cell clones in the host is critical to understanding retroviral dynamics and pathogenesis [68]-[71]. Here we make two different estimates of the number of HTLV-1 infected cell clones: (i) in the circulation; and, (ii) in the whole body. See Text S1 for details of HTLV-1 population size estimation.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29499,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Example Application: Estimated Number of HTLV-1 Infected Cell Clones",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The mean estimated number of clones in the circulation in a single host was 2.9\u00d7104. It is unknown whether the population structure of HTLV-1 clones in the blood reflects that in solid lymphoid tissue and the spleen. If we assume that these two populations have similar structures, and thus that it is justified to extrapolate to the whole body, we obtain an average of 6.2\u00d7104 clones, i.e. approximately only twice as many clones, although there are >300 times as many infected cells in the body as the blood. These new estimates in the blood and body are approximately 1 and 1.3 logs higher respectively than those calculated using ACE and Chao1bc (p<0.0001, two-tailed paired Mann-Whitney U-test), and >2 logs higher than previously published estimates (Figure S6) [35], [43], [69], [72].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30290,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "\nDivE Uncertainty",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Because of its heuristic nature, DivE lacks formal statistical confidence intervals. Uncertainty in the estimates produced by DivE has two sources: parameter values in each respective model (within-model variation), and the choice of model (between-model variation). Using standard errors of parameter estimates to calculate confidence intervals ignores uncertainty from model selection. Information theoretic approaches that take account of model selection uncertainty have become increasingly common in ecology [73], [74] and elsewhere. There are broadly two approaches: i) computing AIC weights, and ii) repeated resampling and model ranking to determine bootstrap model selection probabilities [66]. However, neither approach is appropriate in our case. We do not rank models using AIC since this produces less accurate estimates than DivE (Table S2), and so we cannot use AIC weights to derive confidence intervals. Further, since there is a systematic bias towards lower species richness in bootstrap samples (Figure S7), a similar bias may be introduced in the estimation of bootstrap model selection probabilities, leading in turn to a bias in species richness estimation. Systematic underestimation in bootstrap samples is particular to species richness estimation: this does not highlight a general problem with resampling to quantify model selection uncertainty. As a pragmatic indicator of estimate variability, we use the range of estimates produced by the five best-performing models; the geometric mean of these five models is taken as the point estimate (Table S4).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31888,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Distribution Generation Algorithm",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The distribution generation algorithm was reasonably accurate for the HTLV-1 data, and considerably more accurate for the TCR and microbial data. The mean error between the estimated and true distributions was 32.1%, 2.9%, and 4.9% for the HTLV-1, TCR and microbial data respectively. The mean error between the estimated and true Gini coefficients was 7.5%, 0.9%, and 2.2% for the HTLV-1, TCR and microbial data respectively (Table 2). For the HTLV-1 data, the algorithm underestimated the abundance of the largest clones, but we did not observe this effect in the TCR and microbial data (Figure 7).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32521,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "We wished to estimate species richness in three microbiological and immunological datasets. Initially we used estimators that are reported to perform well in ecology [12], [34], [36], [60], [61], [75]. In the datasets with rarefaction curves that did not plateau, these estimators were biased by sample size. For datasets with rarefaction curves that did plateau, estimates were consistent, but in such cases estimators contribute little information because approximate species richness is already known. Comparable results have been reported elsewhere [12], [16], [62]. By combining data from multiple independent HTLV-1 samples, we showed that these estimators substantially underestimated species richness.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33240,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "We then developed a new approach, DivE, to estimate species richness and frequency distribution. In our first validation, DivE consistently and accurately estimated the diversity of the observed data from incomplete subsamples of that data. We subsequently determined conditions where DivE would fail and should not be applied. When the rarefaction curvature was low and the data implied a near-constant species-accumulation rate, DivE was prone to overestimation. However, in under-sampled populations of intermediate curvature, DivE substantially improved. The DivE distribution generation algorithm performed with reasonable accuracy (Table 2, Figure 7).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33897,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "We argue that biologically meaningful and useful estimators should be able to estimate species richness in a specified population. This is not the case with the existing estimators we tested. In contrast, DivE can estimate diversity in any given population size. However, population size estimation can be nontrivial [76]\u2013[78]. In spatially homogeneous populations with equiprobable detection of individuals, estimating population size through scaling by area or volume is justifiable e.g. scaling from cells in 50 ml of blood to cells in the total blood volume. When population size estimates are unavailable, it is still usually possible to provide meaningful diversity estimates, e.g. the number of microbes per gram of faeces. DivE may also be useful in deciding the depth of sampling required for an adequate census. Deeper sampling may require more DNA sequencing or a larger tissue sample from a patient, and so minimizing sampling depth has financial and ethical benefits. This is not possible with the other estimators we tested.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34935,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "The HTLV-1 data consisted of absolute species counts, and so we could estimate HTLV-1 diversity. Microbial and TCR datasets were used only for validation as these data consisted of sequence reads and not absolute counts. To the extent that read abundances differ from absolute counts, such data cannot be used to estimate species richness with any abundance-based estimator (e.g. DivE, Chao1bc, and ACE). Over-amplification by PCR may generate a saturating rarefaction curve that is not due to sampling depth, falsely implying that the majority of species have been observed. This can be seen in our TCR data: plateaus were far lower than previously reported diversity estimates [50], [79]. However, absolute counts can often be obtained (e.g. by spiking a sample with a known quantity of identifiable individuals or by barcoding to identify PCR duplicates).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35793,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "It is unlikely that sequencing error influenced our HTLV-1 diversity estimates, because sequencing error cannot systematically alter proviral integration site mapping. However, species richness estimates from TCR or microbial data are likely to be susceptible to sequencing error. Sequencing error can falsely increase diversity, and this will influence species richness estimates using any estimator; researchers must therefore exercise caution when analysing such data; ideally by preprocessing the data to remove error prior to further analysis. Caution must also be exercised when assuming that the spatial distribution of individuals is uniform. We believe that these assumptions are reasonable for the blood, but skin tissue for example may be more clustered.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36558,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "\nDivE is conceptually simple but can be computationally intensive to implement. When applying DivE to a new type of data it is necessary to ascertain which models perform best. This requires that many models be fitted to multiple subsamples. If, for a particular data type, a given set of models performs consistently well, application becomes much quicker because only these models need to be fitted, and it is no longer necessary to fit all models to all subsamples. In our analysis we found that five models performed consistently well, and so we have used the aggregate of the five best-performing models in our estimates. Since the optimal number of models may differ between datasets, we advocate careful analysis of model scores to decide how many models should be aggregated. The DivE estimator has been provided as an R package, available at http://cran.r-project.org/web/packages/DivE/index.html.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37464,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In summary, we have developed and validated a new approach to estimate species richness and distribution that significantly outperformed existing estimators of biodiversity in the datasets we examined.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37665,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nEstimator bias with sample size not due to subsamples. As for Figure 4, except that normalized gradients calculated using only largest three subsamples. For the HTLV-1 and microbial data, all estimators except DivE again show large normalized gradients that are significantly positive. The TCR normalized gradients, show no bias with sample size. *, **, and *** signify p<0.05, p<0.01, and p<0.001 respectively; two-tailed binomial test (n\u200a=\u200a14, 16, 20 for the HTLV-1, TCR and microbial data respectively).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38203,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(TIF)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38208,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S2",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nComparison of estimators: Accuracy of diversity estimates using TCR data. Random subsamples of 0.5%, 1%, 2%, 5%, and 10% of the total CD4+ and CD8+ cells for subjects C and E were taken, and each estimator was applied to each subsample. These populations have rarefaction curves that plateau, so making the assumption that the value of the plateau Sobs is the diversity of the whole population, the distribution of errors for each estimator (\u200a=\u200a|Sobs - \u015cobs| /Sobs) is shown.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38693,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S3",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nExisting estimators underestimate diversity in HTLV-1 infection. As for Figure 5. For each patient, three independent samples are pooled. Rarefaction curves from the pooled sample (black circles) and a subsample (red circles) are shown. Chao1bc, ACE, Bootstrap, Good-Turing and negative exponential estimates (blue, grey, green, black, and orange lines respectively) from the subsample, and DivE estimates (red cross) from the same subsample are plotted. All estimators except DivE typically estimate fewer clones than observed in pooled sample. In contrast, DivE accurately estimates the pooled sample species richness from the subsample.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39342,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S4",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nRarefaction curvature parameter \nCp\n. Rarefaction curves (dashed) and lines of constant rate of species-accumulation and perfect saturation (solid) are shown. Areas between the line of constant rate of species-accumulation and the rarefaction curve (A), and between the rarefaction curve and the line of perfect saturation (B) are indicated. Note Cp\u200a=\u200a0 when the rarefaction curve is linear.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39743,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S5",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nPerformance of species richness estimators in metagenomic data. The curvature parameter Cp is plotted against the relative error (|Sobs - \u015cobs| /Sobs) of each estimator. Each point represents an estimate from a sample from the Prochlorococcus data. As with the TCR data, DivE typically outperforms the other estimators from Cp\u22480.1 onwards. As predicted, DivE is prone to error at lower values of Cp, but becomes more accurate as Cp increases.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Prochlorococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1218",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 13:51:00",
+                                "parent_taxonomic_id": "NCBI:txid2881426"
+                            },
+                            "id": "34632604",
+                            "locations": {
+                                "length": 15,
+                                "offset": 39971
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 40195,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S6",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nDiversity estimates in HTLV-1 infection by estimator. Each estimator was applied to 105 patient datasets, from 14 different HTLV-1+ subjects. All subjects either had HTLV-1-associated myelopathy/tropical spastic paraparesis or were asymptomatic.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40450,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S7",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nRarefaction plots from bootstrap samples of HTLV-1, TCR, and microbial data. Rarefaction plots from 100 bootstrap samples (grey) for each of A HTLV-1, B TCR, and C microbial data. The species richness of the bootstrap samples is at most the species richness of the original data (black), and is substantially less in the majority of cases, although this effect is less noticeable with the TCR data.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40858,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nSubsamples used in analysis of relationship between sample size and estimated diversity, and in comparison of \nDivE\n with AICc. 1 Where there were multiple samples at multiple time points in a given HTLV-1-infected subject, a single sample at a single time point was chosen at random.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41151,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(PDF)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41156,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S2",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nComparison of estimates produced by \nDivE\n and by weighted, second order Akaike's Information Criterion (\nAICc\n). 1 Average percentage error between Sobs and \u015cobs for small subsamples for each data source. Small subsamples were defined as those \u226450% of the size of each patient data set. 2 Large subsamples defined as those >50% of the size of each patient data set. 3 Average percentage error between Sobs and \u015cobs across all patient datasets and subsamples for each data source error.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41651,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S3",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nEstimator error variation with curvature in TCR data. * Median absolute percentage error between Sobs and \u015cobs. \u2020 Low curvatures Cp in range 0.016\u2264Cp\u22640.101, intermediate curvatures in range 0.11\u2264Cp\u22640.62. \u2021 p-value of the significance of the differences between the errors of DivE and each other estimator, for each curvature range.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41991,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S4",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nDivE\n species richness estimates for HTLV-1 data.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42050,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Text S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nAdditional supporting information.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42093,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "The authors thank Graham P. Taylor for ongoing support, and the staff and blood donors at the National Centre for Human Retrovirology, Imperial College Healthcare NHS Trust, St. Mary's Hospital, London, United Kingdom. We also thank Brenda Hartman for expert assistance with graphics, and the High Performance Computing service staff at Imperial College (http://www.imperial.ac.uk/ict/services/teachingandresearchservices/highperformancecomputing).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42556,
+                    "infons": {
+                        "title": "Hepatitis C virus transmission bottlenecks analyzed by deep sequencing",
+                        "journal": "J Virol",
+                        "volume": "84",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Wang GP, Sherrill-Mix SA, Chang K-M, Quince C, Bushman FD (2010) Hepatitis C virus transmission bottlenecks analyzed by deep sequencing. J Virol84: 6218\u20136228. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42772,
+                    "infons": {
+                        "title": "Ultradeep pyrosequencing detects complex patterns of CD8+ T-lymphocyte escape in simian immunodeficiency virus-infected macaques",
+                        "journal": "Journal of Virology",
+                        "volume": "83",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Bimber BN, Burwitz BJ, O'Connor S, Detmer A, Gostick E, et al. (2009) Ultradeep pyrosequencing detects complex patterns of CD8+ T-lymphocyte escape in simian immunodeficiency virus-infected macaques. Journal of Virology83: 8247\u20138253. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43053,
+                    "infons": {
+                        "title": "Direct link between MHC polymorphism, T cell avidity, and diversity in immune defense",
+                        "journal": "Science",
+                        "volume": "298",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Messaoudi I, Patino JAG, Dyall R, LeMaoult J, Nikolich-, et al (2002) Direct link between MHC polymorphism, T cell avidity, and diversity in immune defense. Science298: 1797\u20131800. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43261,
+                    "infons": {
+                        "title": "The T cell repertoire in infection and vaccination: implications for control of persistent viruses",
+                        "journal": "Current Opinion in Immunology",
+                        "volume": "19",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Davenport MP, Price DA, McMichael AJ (2007) The T cell repertoire in infection and vaccination: implications for control of persistent viruses. Current Opinion in Immunology19: 294\u2013300. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43475,
+                    "infons": {
+                        "title": "B-cell responses to vaccination at the extremes of age",
+                        "journal": "Nat Rev Immunol",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Siegrist C-A, Aspinall R (2009) B-cell responses to vaccination at the extremes of age. Nat Rev Immunol9: 185\u2013194. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43618,
+                    "infons": {
+                        "title": "Age-associated decline in T cell repertoire diversity leads to holes in the repertoire and impaired immunity to influenza virus",
+                        "journal": "The Journal of Experimental Medicine",
+                        "volume": "205",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Yager EJ, Ahmed M, Lanzer K, Randall TD, Woodland DL, et al. (2008) Age-associated decline in T cell repertoire diversity leads to holes in the repertoire and impaired immunity to influenza virus. The Journal of Experimental Medicine205: 711\u2013723. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43912,
+                    "infons": {
+                        "title": "TCR clonotypes modulate the protective effect of HLA class I molecules in HIV-1 infection",
+                        "journal": "Nat Immunol",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Chen H, Ndhlovu ZM, Liu D, Porter LC, Fang JW, et al. (2012) TCR clonotypes modulate the protective effect of HLA class I molecules in HIV-1 infection. Nat Immunol13: 691\u2013700. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44135,
+                    "infons": {
+                        "title": "Reduced diversity in the early fecal microbiota of infants with atopic eczema",
+                        "journal": "Journal of Allergy and Clinical Immunology",
+                        "volume": "121",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Wang M, Karlsson C, Olsson C, Adlerberth I, Wold AE, et al. (2008) Reduced diversity in the early fecal microbiota of infants with atopic eczema. Journal of Allergy and Clinical Immunology121: 129\u2013134. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44365,
+                    "infons": {
+                        "title": "Reduction in diversity of the colonic mucosa associated bacterial microflora in patients with active inflammatory bowel disease",
+                        "journal": "Gut",
+                        "volume": "53",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Ott SJ, Musfeldt M, Wenderoth DF, Hampe J, Brant O, et al. (2004) Reduction in diversity of the colonic mucosa associated bacterial microflora in patients with active inflammatory bowel disease. Gut53: 685\u2013693. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44623,
+                    "infons": {
+                        "title": "Alterations of the dominant faecal bacterial groups in patients with Crohn's disease of the colon",
+                        "journal": "Gut",
+                        "volume": "52",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Seksik P, Rigottier-Gois L, Gramet G, Sutren M, Pochart P, et al. (2003) Alterations of the dominant faecal bacterial groups in patients with Crohn's disease of the colon. Gut52: 237\u2013242. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44859,
+                    "infons": {
+                        "title": "Six types of species-area curves",
+                        "journal": "Global Ecology and Biogeography",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Scheiner SM (2003) Six types of species-area curves. Global Ecology and Biogeography12: 441\u2013447. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44976,
+                    "infons": {
+                        "title": "Estimating terrestrial biodiversity through extrapolation",
+                        "journal": "Philosophical Transactions of the Royal Society of London Series B: Biological Sciences",
+                        "volume": "345",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Colwell RK, Coddington JA (1994) Estimating terrestrial biodiversity through extrapolation. Philosophical Transactions of the Royal Society of London Series B: Biological Sciences345: 101\u2013118. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "terrestrial",
+                            "infons": {
+                                "identifier": "NCBI:txid928852",
+                                "type": "archaea_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 13:51:57",
+                                "parent_taxonomic_id": "NCBI:txid1783275"
+                            },
+                            "id": "34632605",
+                            "locations": {
+                                "length": 11,
+                                "offset": 45024
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 45198,
+                    "infons": {
+                        "title": "Models and estimators linking individual-based and sample-based rarefaction, extrapolation and comparison of assemblages",
+                        "journal": "Journal of Plant Ecology",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Colwell RK, Chao A, Gotelli NJ, Lin S-Y, Mao CX, et al. (2012) Models and estimators linking individual-based and sample-based rarefaction, extrapolation and comparison of assemblages. Journal of Plant Ecology5: 3\u201321. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45436,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Gotelli NJ, Colwell RK (2010) Estimating species richness. In: Magurran AE, McGill BJ, editors.Biological diversity: frontiers in measurement and assessment. Oxford, UK: Oxford University Press. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45651,
+                    "infons": {
+                        "title": "How many species are there on earth?",
+                        "journal": "Science",
+                        "volume": "241",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. May RM (1988) How many species are there on earth?Science241: 1441\u20131449. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45753,
+                    "infons": {
+                        "title": "Predicting microbial species richness",
+                        "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+                        "volume": "103",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Hong S-H, Bunge J, Jeon S-O, Epstein SS (2006) Predicting microbial species richness. Proceedings of the National Academy of Sciences of the United States of America103: 117\u2013122. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45980,
+                    "infons": {
+                        "title": "Rarefaction and rarefiction - the use and abuse of a method in paleoecology",
+                        "journal": "Paleobiology",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Tipper JC (1979) Rarefaction and rarefiction - the use and abuse of a method in paleoecology. Paleobiology5: 423\u2013434. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46118,
+                    "infons": {
+                        "title": "Diversity: A sampling study",
+                        "journal": "The American Naturalist",
+                        "volume": "106",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Fager EW (1972) Diversity: A sampling study. The American Naturalist106: 293\u2013310. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46220,
+                    "infons": {
+                        "title": "Estimation of the number of different classes in a population",
+                        "journal": "Biometrics",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Lewontin RC, Prout T (1956) Estimation of the number of different classes in a population. Biometrics12: 211\u2013223. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46354,
+                    "infons": {
+                        "title": "The multiple-recapture census: I. estimation of a closed population",
+                        "journal": "Biometrika",
+                        "volume": "45",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Darroch JN (1958) The multiple-recapture census: I. estimation of a closed population. Biometrika45: 343\u2013359. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46484,
+                    "infons": {
+                        "title": "Estimation of the number of classes in a population",
+                        "journal": "Biometrical Journal",
+                        "volume": "30",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Arnold BC, Beaver RJ (1988) Estimation of the number of classes in a population. Biometrical Journal30: 413\u2013424. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46617,
+                    "infons": {
+                        "title": "Estimating the number of species: a review",
+                        "journal": "Journal of the American Statistical Association",
+                        "volume": "88",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Bunge J, Fitzpatrick M (1993) Estimating the number of species: a review. Journal of the American Statistical Association88: 364\u2013373. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46771,
+                    "infons": {
+                        "title": "Some asymptotic results for incomplete multinomial or poisson samples",
+                        "journal": "Scandinavian Journal of Statistics",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Holst L (1981) Some asymptotic results for incomplete multinomial or poisson samples. Scandinavian Journal of Statistics8: 243\u2013246. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46923,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Kalinin V (1965) Functionals related to the Poisson distribution and statistical structure of a text. Articles on Mathematical Statistics and the Theory of Probability: 202\u2013220.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47104,
+                    "infons": {
+                        "title": "Estimating an author's vocabulary",
+                        "journal": "Journal of the American Statistical Association",
+                        "volume": "68",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. McNeil DR (1973) Estimating an author's vocabulary. Journal of the American Statistical Association68: 92\u201396. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47234,
+                    "infons": {
+                        "title": "The Poisson-Inverse Gaussian distribution as an alternative to the negative binomial",
+                        "journal": "Scandinavian Actuarial Journal",
+                        "volume": "1987",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Willmot GE (1987) The Poisson-Inverse Gaussian distribution as an alternative to the negative binomial. Scandinavian Actuarial Journal1987: 113\u2013127. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47403,
+                    "infons": {
+                        "title": "Nonparametric estimation of the number of classes in a population",
+                        "journal": "Scandinavian Journal of Statistics",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Chao A (1984) Nonparametric estimation of the number of classes in a population. Scandinavian Journal of Statistics11: 265\u2013270. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47551,
+                    "infons": {
+                        "title": "Estimating the Number of Classes via Sample Coverage",
+                        "journal": "Journal of the American Statistical Association",
+                        "volume": "87",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Chao A, Lee S-M (1992) Estimating the Number of Classes via Sample Coverage. Journal of the American Statistical Association87: 210\u2013217. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47708,
+                    "infons": {
+                        "title": "A statistical approach to estimate soil ciliate diversity and distribution based on data from five continents",
+                        "journal": "Oikos",
+                        "volume": "114",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Chao A, C. Li P, Agatha S, Foissner W (2006) A statistical approach to estimate soil ciliate diversity and distribution based on data from five continents. Oikos114: 479\u2013493. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47903,
+                    "infons": {
+                        "title": "Diversity of the human intestinal microbial flora",
+                        "journal": "Science",
+                        "volume": "308",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Eckburg PB, Bik EM, Bernstein CN, Purdom E, Dethlefsen L, et al. (2005) Diversity of the human intestinal microbial flora. Science308: 1635\u20131638. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48097,
+                    "infons": {
+                        "title": "A human gut microbial gene catalogue established by metagenomic sequencing",
+                        "journal": "Nature",
+                        "volume": "464",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Qin J, Li R, Raes J, Arumugam M, Burgdorf KS, et al. (2010) A human gut microbial gene catalogue established by metagenomic sequencing. Nature464: 59\u201365. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48299,
+                    "infons": {
+                        "title": "TCR-based lineage tracing: no evidence for conversion of conventional into regulatory T cells in response to a natural self-antigen in pancreatic islets",
+                        "journal": "The Journal of Experimental Medicine",
+                        "volume": "204",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Wong J, Mathis D, Benoist C (2007) TCR-based lineage tracing: no evidence for conversion of conventional into regulatory T cells in response to a natural self-antigen in pancreatic islets. The Journal of Experimental Medicine204: 2039\u20132045. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48588,
+                    "infons": {
+                        "title": "Origin and T Cell Receptor Diversity of Foxp3+CD4+CD25+ T Cells",
+                        "journal": "Immunity",
+                        "volume": "25",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Pacholczyk R, Ignatowicz H, Kraj P, Ignatowicz L (2006) Origin and T Cell Receptor Diversity of Foxp3+CD4+CD25+ T Cells. Immunity25: 249\u2013259. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48759,
+                    "infons": {
+                        "title": "Application of species richness estimators for the assessment of fungal diversity",
+                        "journal": "FEMS Microbiology Letters",
+                        "volume": "282",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Unterseher M, Schnittler M, Dormann C, Sickert A (2008) Application of species richness estimators for the assessment of fungal diversity. FEMS Microbiology Letters282: 205\u2013213. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48966,
+                    "infons": {
+                        "title": "Estimating abundances of retroviral insertion sites from DNA fragment length data",
+                        "journal": "Bioinformatics",
+                        "volume": "28",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Berry CC, Gillet NA, Melamed A, Gormley N, Bangham CRM, et al. (2012) Estimating abundances of retroviral insertion sites from DNA fragment length data. Bioinformatics28: 755\u2013762. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49194,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "36. Chao A (2005) Species estimation and applications. In: Balakrishman N, Read CB, Vidakovic B, editors.Encyclopedia of Statistical Sciences. 2nd ed.New York, NY, USA: Wiley Press. pp. 7907\u20137916. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49407,
+                    "infons": {
+                        "title": "Primary CTL response magnitude in mice is determined by the extent of naive T cell recruitment and subsequent clonal expansion",
+                        "journal": "The Journal of Clinical Investigation",
+                        "volume": "120",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "37. La Gruta NL, Rothwell WT, Cukalac T, Swan NG, Valkenburg SA, et al. (2010) Primary CTL response magnitude in mice is determined by the extent of naive T cell recruitment and subsequent clonal expansion. The Journal of Clinical Investigation120: 1885\u20131894. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49711,
+                    "infons": {
+                        "title": "Huge overlap of individual TCR beta repertoires",
+                        "journal": "Frontiers in immunology",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "38. Shugay M, Bolotin DA, Putintseva EV, Pogorelyy MV, Mamedov IZ, et al. (2013) Huge overlap of individual TCR beta repertoires. Frontiers in immunology4: 466. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49916,
+                    "infons": {
+                        "title": "Use of massively parallel pyrosequencing to evaluate the diversity of and selection on Plasmodium falciparum csp T-Cell epitopes in Lilongwe, Malawi",
+                        "journal": "Journal of Infectious Diseases",
+                        "volume": "206(4)",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "39. Bailey JA, Mvalo T, Aragam N, Weiser M, Congdon S, et al. (2012) Use of massively parallel pyrosequencing to evaluate the diversity of and selection on Plasmodium falciparum csp T-Cell epitopes in Lilongwe, Malawi. Journal of Infectious Diseases206(4): 580\u2013587. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50226,
+                    "infons": {
+                        "title": "Estimation of metagenome size and structure in an experimental soil microbiota from low coverage next-generation sequence data",
+                        "journal": "Journal of Applied Microbiology",
+                        "volume": "114",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "40. Frisli T, Haverkamp THA, Jakobsen KS, Stenseth NC, Rudi K (2013) Estimation of metagenome size and structure in an experimental soil microbiota from low coverage next-generation sequence data. Journal of Applied Microbiology114: 141\u2013151. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50493,
+                    "infons": {
+                        "title": "DNA bar coding and pyrosequencing to analyze adverse events in therapeutic gene transfer",
+                        "journal": "Nucleic Acids Research",
+                        "volume": "36",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "41. Wang GP, Garrigue A, Ciuffi A, Ronen K, Leipzig J, et al. (2008) DNA bar coding and pyrosequencing to analyze adverse events in therapeutic gene transfer. Nucleic Acids Research36: e49. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50727,
+                    "infons": {
+                        "title": "Introducing DOTUR, a computer program for defining operational taxonomic units and estimating species richness",
+                        "journal": "Applied and Environmental Microbiology",
+                        "volume": "71",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "42. Schloss PD, Handelsman J (2005) Introducing DOTUR, a computer program for defining operational taxonomic units and estimating species richness. Applied and Environmental Microbiology71: 1501\u20131506. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50972,
+                    "infons": {
+                        "title": "The host genomic environment of the provirus determines the abundance of HTLV-1-infected T-cell clones",
+                        "journal": "Blood",
+                        "volume": "117",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "43. Gillet NA, Malani N, Melamed A, Gormley N, Carter R, et al. (2011) The host genomic environment of the provirus determines the abundance of HTLV-1-infected T-cell clones. Blood117: 3113\u20133122. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51212,
+                    "infons": {
+                        "title": "Nonparametric estimation of species richness",
+                        "journal": "Biometrics",
+                        "volume": "40",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "44. Smith EP, Belle Gv (1984) Nonparametric estimation of species richness. Biometrics40: 119\u2013129. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51327,
+                    "infons": {
+                        "title": "The population frequencies of species and the estimation of population parameters",
+                        "journal": "Biometrika",
+                        "volume": "40",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "45. Good IJ (1953) The population frequencies of species and the estimation of population parameters. Biometrika40: 237\u2013264. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51468,
+                    "infons": {
+                        "title": "Selection forces and constraints on retroviral sequence variation",
+                        "journal": "Science",
+                        "volume": "292",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "46. Overbaugh J, Bangham CR (2001) Selection forces and constraints on retroviral sequence variation. Science292: 1106\u20131109. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51618,
+                    "infons": {
+                        "title": "Development of the human infant intestinal microbiota",
+                        "journal": "PLoS Biol",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "47. Palmer C, Bik EM, DiGiulio DB, Relman DA, Brown PO (2007) Development of the human infant intestinal microbiota. PLoS Biol5: e177. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51797,
+                    "infons": {
+                        "title": "Improved detection of Bifidobacteria with optimised 16S rRNA-gene based pyrosequencing",
+                        "journal": "PLoS ONE",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "48. Sim K, Cox MJ, Wopereis H, Martin R, Knol J, et al. (2012) Improved detection of Bifidobacteria with optimised 16S rRNA-gene based pyrosequencing. PLoS ONE7: e32543. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52011,
+                    "infons": {
+                        "title": "Bias in the [alpha][beta] T-cell repertoire: implications for disease pathogenesis and vaccination",
+                        "journal": "Immunol Cell Biol",
+                        "volume": "89",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "49. Miles JJ, Douek DC, Price DA (2011) Bias in the [alpha][beta] T-cell repertoire: implications for disease pathogenesis and vaccination. Immunol Cell Biol89: 375\u2013387. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52206,
+                    "infons": {
+                        "title": "A direct estimate of the human \u03b1\u03b2 T cell receptor diversity",
+                        "journal": "Science",
+                        "volume": "286",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "50. Arstila TP, Casrouge A, Baron V, Even J, Kanellopoulos J, et al. (1999) A direct estimate of the human \u03b1\u03b2 T cell receptor diversity. Science286: 958\u2013961. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52389,
+                    "infons": {
+                        "title": "T cell receptor recognition motifs govern immune escape patterns in acute SIV infection",
+                        "journal": "Immunity",
+                        "volume": "21",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "51. Price DA, West SM, Betts MR, Ruff LE, Brenchley JM, et al. (2004) T cell receptor recognition motifs govern immune escape patterns in acute SIV infection. Immunity21: 793\u2013803. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52594,
+                    "infons": {
+                        "title": "Characterization of Prochlorococcus clades from iron-depleted oceanic regions",
+                        "journal": "Proceedings of the National Academy of Sciences",
+                        "volume": "107",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "52. Rusch DB, Martiny AC, Dupont CL, Halpern AL, Venter JC (2010) Characterization of Prochlorococcus clades from iron-depleted oceanic regions. Proceedings of the National Academy of Sciences107: 16184\u201316189. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Prochlorococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1218",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 13:53:21",
+                                "parent_taxonomic_id": "NCBI:txid2881426"
+                            },
+                            "id": "34632607",
+                            "locations": {
+                                "length": 15,
+                                "offset": 52680
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 52848,
+                    "infons": {
+                        "title": "The Sorcerer II Global Ocean Sampling Expedition: Northwest Atlantic through Eastern Tropical Pacific",
+                        "journal": "PLoS Biol",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "53. Rusch DB, Halpern AL, Sutton G, Heidelberg KB, Williamson S, et al. (2007) The Sorcerer II Global Ocean Sampling Expedition: Northwest Atlantic through Eastern Tropical Pacific. PLoS Biol5: e77. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53091,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "54. Phillips JR (2012) ZunZun.com Online Curve Fitting and Surface Fitting Web Site. United States.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53190,
+                    "infons": {
+                        "title": "Fitting species\u2013accumulation functions and assessing regional land use impacts on avian diversity",
+                        "journal": "Journal of Biogeography",
+                        "volume": "23",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "55. Flather C (1996) Fitting species\u2013accumulation functions and assessing regional land use impacts on avian diversity. Journal of Biogeography23: 155\u2013168. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53362,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "56. R Developer Core Team (2012) R: A Language and Environment for Statistical Computing. 2.14.2 ed. Vienna, Austria: R Foundation for Statistical Computing.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53519,
+                    "infons": {
+                        "title": "Inverse modelling, sensitivity and monte carlo analysis in R using package FME",
+                        "journal": "Journal of Statistical Software",
+                        "volume": "33",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "57. Soetaert K, Petzoldt T (2010) Inverse modelling, sensitivity and monte carlo analysis in R using package FME. Journal of Statistical Software33: 1\u201328. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53690,
+                    "infons": {
+                        "title": "A controlled random search procedure for global optimisation",
+                        "journal": "The Computer Journal",
+                        "volume": "20",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "58. Price WL (1977) A controlled random search procedure for global optimisation. The Computer Journal20: 367\u2013370. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53821,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "59. Mor\u00e9 J (1978) The Levenberg-Marquardt algorithm: implementation and theory. In: Watson G, editor:Springer Berlin/Heidelberg. pp. 105\u2013116.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53962,
+                    "infons": {
+                        "title": "Predicting the number of new species in further taxonomic sampling",
+                        "journal": "Ecology",
+                        "volume": "84",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "60. Shen T-J, Chao A, Lin C-FL (2003) Predicting the number of new species in further taxonomic sampling. Ecology84: 798\u2013804. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54104,
+                    "infons": {
+                        "title": "The efficiency of Good's nonparametric coverage estimator",
+                        "journal": "The Annals of Statistics",
+                        "volume": "14",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "61. Esty WW (1986) The efficiency of Good's nonparametric coverage estimator. The Annals of Statistics14: 1257\u20131260. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54237,
+                    "infons": {
+                        "title": "Counting the uncountable: statistical approaches to estimating microbial diversity",
+                        "journal": "Appl Environ Microbiol",
+                        "volume": "67",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "62. Hughes JB, Hellmann JJ, Ricketts TH, Bohannan BJM (2001) Counting the uncountable: statistical approaches to estimating microbial diversity. Appl Environ Microbiol67: 4399\u20134406. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54463,
+                    "infons": {
+                        "title": "The use of species accumulation functions for the prediction of species richness",
+                        "journal": "Conservation Biology",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "63. Jorge Soberon M, B JL (1993) The use of species accumulation functions for the prediction of species richness. Conservation Biology7: 480\u2013488. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54626,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "64. Bunge J (2009) Statistical estimation of uncultivated microbial diversity. In: Epstein SS, editor.Uncultivated Microorganisms.New York, NY, USA: Springer. pp. 160\u2013178.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54797,
+                    "infons": {
+                        "title": "Regression and time series model selection in small samples",
+                        "journal": "Biometrika",
+                        "volume": "76",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "65. Hurvich CM, Tsai C-L (1989) Regression and time series model selection in small samples. Biometrika76: 297\u2013307. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54929,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "66. Burnham K, Anderson D (2002) Model selection and multi-model inference: a practical information-theoretic approach. New York, NY, USA: Springer.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55077,
+                    "infons": {
+                        "title": "Sulla misura della concentrazione e della variabilita dei caratteri",
+                        "journal": "Transactions of the Real Istituto Veneto di Scienze",
+                        "volume": "LIII",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "67. Gini C (1914) Sulla misura della concentrazione e della variabilita dei caratteri. Transactions of the Real Istituto Veneto di ScienzeLIII: 1203. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55243,
+                    "infons": {
+                        "title": "Cell dynamics and immune response to BLV infection: a unifying model",
+                        "journal": "Front Biosci",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "68. Florins A, Gillet N, Asquith B, Boxus M, Burteau C, et al. (2007) Cell dynamics and immune response to BLV infection: a unifying model. Front Biosci12: 1520\u20131531. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55435,
+                    "infons": {
+                        "title": "HTLV-1 integration into transcriptionally active genomic regions is associated with proviral expression and with HAM/TSP",
+                        "journal": "PLoS Pathog",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "69. Meekings KN, Leipzig J, Bushman FD, Taylor GP, Bangham CR (2008) HTLV-1 integration into transcriptionally active genomic regions is associated with proviral expression and with HAM/TSP. PLoS Pathog4: e1000027. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55694,
+                    "infons": {
+                        "title": "High circulating proviral load with oligoclonal expansion of HTLV-1 bearing T cells in HTLV-1 carriers with strongyloidiasis",
+                        "journal": "Oncogene",
+                        "volume": "19",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "70. Gabet AS, Mortreux F, Talarmin A, Plumelle Y, Leclercq I, et al. (2000) High circulating proviral load with oligoclonal expansion of HTLV-1 bearing T cells in HTLV-1 carriers with strongyloidiasis. Oncogene19: 4954\u20134960. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55944,
+                    "infons": {
+                        "title": "Adult T-cell leukemia/lymphoma on a background of clonally expanding human T-cell leukemia virus type-1-positive cells",
+                        "journal": "Blood",
+                        "volume": "88",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "71. Cavrois M, Wain-Hobson S, Gessain A, Plumelle Y, Wattel E (1996) Adult T-cell leukemia/lymphoma on a background of clonally expanding human T-cell leukemia virus type-1-positive cells. Blood88: 4646\u20134650. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56178,
+                    "infons": {
+                        "title": "Clonal expansion of infected cells: a way of life for HTLV-I",
+                        "journal": "J Acquir Immune Defic Syndr Hum Retrovirol",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "72. Wattel E, Cavrois M, Gessain A, Wain-Hobson S (1996) Clonal expansion of infected cells: a way of life for HTLV-I. J Acquir Immune Defic Syndr Hum Retrovirol13 Suppl 1S92\u201399. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56382,
+                    "infons": {
+                        "title": "Model selection in ecology and evolution",
+                        "journal": "Trends in Ecology & Evolution",
+                        "volume": "19",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "73. Johnson JB, Omland KS (2004) Model selection in ecology and evolution. Trends in Ecology & Evolution19: 101\u2013108. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56524,
+                    "infons": {
+                        "title": "Information theory and hypothesis testing: a call for pluralism",
+                        "journal": "Journal of Applied Ecology",
+                        "volume": "42",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "74. Stephens PA, Buskirk SW, Hayward GD, Mart\u00cdNez Del Rio C (2005) Information theory and hypothesis testing: a call for pluralism. Journal of Applied Ecology42: 4\u201312. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56708,
+                    "infons": {
+                        "title": "Evaluating the performance of species richness estimators: sensitivity to sample grain size",
+                        "journal": "Journal of Animal Ecology",
+                        "volume": "75",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "75. Hortal J, Borges PAV, Gaspar C (2006) Evaluating the performance of species richness estimators: sensitivity to sample grain size. Journal of Animal Ecology75: 274\u2013287. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56906,
+                    "infons": {
+                        "title": "Estimating the Population Size for Capture-Recapture Data with Unequal Catchability",
+                        "journal": "Biometrics",
+                        "volume": "43",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "76. Chao A (1987) Estimating the Population Size for Capture-Recapture Data with Unequal Catchability. Biometrics43: 783\u2013791. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 57057,
+                    "infons": {
+                        "title": "Robust estimation of population size when capture probabilities vary among animals",
+                        "journal": "Ecology",
+                        "volume": "60",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "77. Burnham KP, Overton WS (1979) Robust estimation of population size when capture probabilities vary among animals. Ecology60: 927\u2013936. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 57211,
+                    "infons": {
+                        "title": "Estimating Population Size for Sparse Data in Capture-Recapture Experiments",
+                        "journal": "Biometrics",
+                        "volume": "45",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "78. Chao A (1989) Estimating Population Size for Sparse Data in Capture-Recapture Experiments. Biometrics45: 427\u2013438. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 57345,
+                    "infons": {
+                        "title": "The Influence of Age on T Cell Generation and TCR Diversity",
+                        "journal": "The Journal of Immunology",
+                        "volume": "174",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "79. Naylor K, Li G, Vallejo AN, Lee W-W, Koetz K, et al. (2005) The Influence of Age on T Cell Generation and TCR Diversity. The Journal of Immunology174: 7446\u20137452. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

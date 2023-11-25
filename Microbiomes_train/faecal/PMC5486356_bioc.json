@@ -1,0 +1,869 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC5486356",
+            "inputfile": "../microbiome_corpus_HTML\\PMC5486356.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Targeted metagenomic sequencing data of human gut microbiota associated with Blastocystis colonization",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 102,
+                    "infons": {
+                        "section_title_1": "keywords",
+                        "iao_name_1": "keywords section",
+                        "iao_id_1": "IAO:0000630"
+                    },
+                    "text": "Metagenomics, Parasitology, DNA sequencing, Gastrointestinal diseases",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 179,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "In the past decade, metagenomics studies have become widespread due to the arrival of second-generation sequencing platforms characterized by low costs, high throughput and short read lengths. Today, although benchtop sequencers are considered to be accurate platforms to deliver data for targeted metagenomics studies, the limiting factor has become the analysis of these data. In a previous paper, we performed an Ion Torrent PGM 16S rDNA gene sequencing of faecal DNAs from 48 Blastocystis-colonized patients and 48 Blastocystis-negative subjects, in order to decipher the impact of this widespread protist on gut microbiota composition and diversity. We report here on the Ion Torrent targeted metagenomic sequencing and analysis of these 96 human faecal samples, and the complete datasets from raw to analysed data. We also provide the key steps of the bioinformatic analyses, from library preparation to data filtering and OTUs tables generation. This data represents a valuable resource for the scientific community, enabling re-processing of these targeted metagenomic datasets through various pipelines and a comparative evaluation of microbiota analysis methods.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1359,
+                    "infons": {
+                        "section_title_1": "Background & Summary",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316",
+                        "iao_name_2": "conclusion section",
+                        "iao_id_2": "IAO:0000615"
+                    },
+                    "text": "In recent years, the advent of high-throughput sequencing (HTS)-based metagenomics and the development of related bioinformatics approaches have greatly facilitated the study of microbial communities in humans. For example, it has allowed deeper insight into the critical role played by the community of microorganisms inhabiting our gastrointestinal tract in determining human health and disease. From a technological viewpoint, shotgun metagenomics still remains very expensive, and data analysis remains a challenging issue, due to both the size and complex structure of the data1. Thanks to the recent benchtop sequencer releases (Ion Torrent and MiSeq technologies), targeted metagenomics that focuses only on an informative genomic marker like 16S rDNA, has become widespread in microbiology studies, and is commonly used today to assess the gut microbiota.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2242,
+                    "infons": {
+                        "section_title_1": "Background & Summary",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316",
+                        "iao_name_2": "conclusion section",
+                        "iao_id_2": "IAO:0000615"
+                    },
+                    "text": "Besides bacteria, which are the most numerous organisms, diverse eukaryotes, such as protists, also inhabit the human gut. Among all the human intestinal protists, some are difficult to define unequivocally as pathogens or commensals2. Indeed, pathogenicity is undoubtedly the rule for Cryptosporidium spp. and Entamoeba histolytica, but the clinical significance of other intestinal protists like Blastocystis spp. remains undetermined2,3.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 16:23:07",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "4435",
+                            "locations": {
+                                "length": 8,
+                                "offset": 2250
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 2682,
+                    "infons": {
+                        "section_title_1": "Background & Summary",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316",
+                        "iao_name_2": "conclusion section",
+                        "iao_id_2": "IAO:0000615"
+                    },
+                    "text": "Since their discovery, Blastocystis spp., reported to be the most common unicellular eukaryotes detected in human faecal samples, have generally been investigated under conditions in which they were assumed to cause disease. However, they are also detected with high prevalence in healthy people, and it has been shown that they can colonize the healthy human gut for long periods of time without resulting in symptomatic carrier status4. In order to address the issue of the clinical significance of these intestinal protists, studying the impact of their colonization on gut microbiota began to attract interest from the scientific community3,\n5,6,7.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3334,
+                    "infons": {
+                        "section_title_1": "Background & Summary",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316",
+                        "iao_name_2": "conclusion section",
+                        "iao_id_2": "IAO:0000615"
+                    },
+                    "text": "In a previous paper, we investigated the impact of Blastocystis colonization on the composition and diversity of the human gut microbiota by comparing the microbiota of Blastocystis-colonized patients and Blastocystis-negative individuals3. This study suggested that colonization by this protist is usually associated with a healthy gut microbiota, rather than with the gut dysbiosis generally observed in metabolic or infectious inflammatory diseases of the lower gastrointestinal tract3. This result was obtained from a cross-sectional study including two groups of 48 subjects, colonized or not by Blastocystis, and comparable in terms of clinical and environmental variables. Ion Torrent 16S rDNA gene sequencing of faecal DNAs was performed, followed by bioinformatics analyses to profile and compare the gut bacterial communities of these two groups.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4190,
+                    "infons": {
+                        "section_title_1": "Background & Summary",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316",
+                        "iao_name_2": "conclusion section",
+                        "iao_id_2": "IAO:0000615"
+                    },
+                    "text": "We here provide detailed descriptions of DNA sample processing, including DNA extraction, quantification and monitoring, sequencing library creation, and sequencing procedures. Moreover, we report the Ion Torrent raw sequencing data (Data Citation 1), and provide a full description of the bioinformatics pipeline we used for the analysis (Fig. 1). The datasets provided here represent a valuable resource for the scientific community, enabling the re-processing of the data and a comparative evaluation of other targeted metagenomic analysis pipelines. They include: (i) the raw sequencing data (Data Citation 1) (ii) the intermediate files from our home-made 16S targeted metagenomic analysis pipeline (i.e., the OTU count tables (OTU_count_tables tsv files, Data Citation 2) and the BIOM file before data normalization (raw_global BIOM file, Data Citation 2), and (iii) the final BIOM file (normalized_global BIOM file, Data Citation 2). The intermediate files allow the scientific community to monitor, evaluate and/or optimize certain analytical steps, whereas the final BIOM file (normalized_global BIOM file, Data Citation 2) allows the confirmation of our biological results, particularly the higher bacterial diversity in faecal microbiota of Blastocystis colonized patients3, as well as a comparison of the available tools for secondary analysis of targeted metagenomic data. Finally, the release of all these datasets will be useful for the scientific community to compare microbial patterns for a variety of case-control studies.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5731,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The patient sampling, Blastocystis diagnosis by real-time PCR and additional methods presented here are expanded from the descriptions in our previous paper3.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5896,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Briefly, in order to avoid selection bias in the choice of samples, statistical analyses were performed on patients\u2019 clinical and environmental variables to obtain a ranked Blastocystis colonization risk score for each patient. The risk scores were then used to select the 24 highest score values and the 24 lowest scores in each population of Blastocystis-positive and Blastocystis-negative patients, thus determining 4 groups of 24 patients. Groups 1 and 2 were composed of Blastocystis-colonized patients and groups 3 and 4 included Blastocystis-negative patients. Groups 1 and 3 were linked in terms of low environmental and clinical risk factors, and groups 2 and 4 shared high risk factors (see Supplementary File 1).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6619,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "DNA extraction",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "For each subject, approx. 100\u2009mg of fresh stools was collected and homogenized by shaking in 1.5\u2009ml of Stool Transport and Recovery (S.T.A.R.) buffer (Roche Diagnostics, Indianapolis, IN) (ratio 1:3 according to the manufacturer\u2019s recommendations). The stool samples stored in the S.T.A.R. buffer were centrifuged for 1\u2009min at 1,000\u00d7g. Total genomic DNA was extracted from 200\u2009\u03bcl of the supernatant using the QIAamp DNA Stool Mini Kit (Qiagen, Hilden, Germany) according to the manufacturer\u2019s recommended procedure. The DNA was eluted in 100\u2009\u03bcl of AE elution buffer (Qiagen) and stored at \u221220\u2009\u00b0C until use.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7239,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "DNA extraction monitoring",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Faecal DNA samples corresponding to 48 Blastocystis-positive and 48 Blastocystis-negative subjects were randomly distributed in a 96-well microplate. The total DNA concentration of each DNA extract was monitored using the Quant-iT PicoGreen dsDNA assay (Invitrogen). The 16S gene DNA copy number was assessed by a SybrGreen quantitative PCR method adapted from Maeda et al.,8 allowing both inhibition effect estimation and DNA concentration adjustment. The reaction mixture (15\u2009\u03bcl) for the SybrGreen assay performed in RotorGene (Corbett Life Science) contained 2X Brilliant III SybrGreen qPCR Mastermix (Stratagene), primers (\nGTGSTGCAYGGYTGTCGTCA, Univ16S_1048-1067 as the forward primer and \nACGTCRTCCMCACCTTCCTC, Univ16S_1175_1194 as the reverse primer) with a final concentration of 560\u2009nM and 2\u2009\u03bcl of DNA extract as the template. The amplification conditions were 3\u2009min at 94\u2009\u00b0C, 45 cycles of 15\u2009s at 94\u2009\u00b0C for denaturation, 22\u2009s at 60\u2009\u00b0C for annealing and extension, followed by a melting curve from 54\u2009\u00b0C to 95\u2009\u00b0C with 0.5\u2009\u00b0C increments (10\u2009s).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8316,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "HTS library preparation",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The sequence regions of the 16S rRNA gene-spanning variable regions V3-V5 were then amplified with a fusion PCR using the broad-range forward primer For16S_519, \nCAGCMGCCGCGGTAATAC and the reverse primer Rev16S_926, \nCCGTCAATTCMTTTGAGTTT (see Supplementary File 2).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8604,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "HTS library preparation",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Library preparations for amplicon sequencing were performed in a final volume of 100\u2009\u03bcl containing 1X PCR buffer, 2\u2009mM MgSO4, 1\u2009U of DNA High-Fidelity Taq Polymerase (Invitrogen), 625\u2009nM of each barcoded primer (IDT), 250\u2009\u03bcM of each dNTP (Invitrogen), and a concentration-adjusted DNA sample. Each sample was taken following two PCRs, one with the sequencing adapter linked to the forward primer, and the other with the sequencing adapter linked to the reverse primer. The two resulting PCR products were equimolarly pooled after DNA purification with NucleoFast 96 PCR (Macherey Nagel), followed by a Quant-iT PicoGreen ds DNA quantification (Invitrogen).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9260,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "HTS template preparation and sequencing",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Before emulsion PCR (emPCR), the library concentration was adjusted to 26\u2009pM. Template preparation resulted from an emPCR in Ion 400 Template OT2 following a purification with Ion Torrent OneTouch ES according to the manufacturer's protocol.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9540,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "HTS template preparation and sequencing",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The 96-barcoded bidirectional library was sequenced through PGM, Ion Torrent (Life Technologies) with the Ion 318 Chip and Ion PGM 400 Sequencing Kit (Life Technologies), according to the recommended protocol.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9749,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Sequence-based microbiota analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The analysis of all samples was performed using a home-made Galaxy (v1.0.0)9 pipeline (http://www.pegase-biosciences.com/pub_2014/#ECCB), as shown in Fig. 1, linking three main analytical steps: raw data preprocessing, clustering analysis and OTU classification, and read count normalization. Unless otherwise mentioned in Fig. 1, default parameters were used for all software programs. The home-made scripts are available in Figshare (scripts.zip file, Data Citation 2).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10254,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Sequence-based microbiota analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The preprocessing step (Fig. 1), using Mothur (v1.27.0)10 and home-made scripts (scripts.zip file, Data Citation 2), filtered the raw data (Data Citation 1) to minimize erroneous reads generated by the Ion Torrent PGM sequencer. Reads shorter than 150 bases and/or containing large homopolymers were removed. The reads were then aligned against the SILVA 102 bacterial database11, and those reads with alignments of fewer than 100 bases were filtered out. Finally, the filtered reads were deduplicated to reduce the datasets. Three of the 96 samples, considered to be outliers (see the Technical validation section) were discarded in this step, before proceeding with the subsequent analyses. The number of reads remaining after this preprocessing step was 2,742,108.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11021,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Sequence-based microbiota analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "In the second analytical step, OTU clustering was performed using ESPRIT-Tree12 version 11152011, which allows the same OTU definition precision as standard hierarchical clustering procedures, but requires less execution time. The OTUs were classified using classify.seqs in Mothur (v1.27.0)10 with the SILVA 102 database11 and the RDP taxonomy13 (Fig. 1).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11377,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Sequence-based microbiota analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Intra-sample rarefaction curves were generated using the home-made rarefaction curve plotting tool (rarefaction.R in scripts.zip file, Data Citation 2). It provides a way of comparing the richness observed in the samples. Graphically it presents the number of OTUs theoretically observed for a range number of sequences into the sample at variable distances (91%, 93%, 95%, 97%).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11756,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Sequence-based microbiota analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "For each sample, the output of this second analytical step is an OTU table file (OTU_count_tables tsv file, Data Citation 2) containing four columns: the first column is the consensus read name associated to the OTU, the second column is the OTU raw counts, the third column is the consensus read name (same as the first column) and the fourth column is the associated taxon. The consensus sequence for a given OTU is the most abundant sequence in this OTU. The characteristics of these OTU_count_tables files are summarized in Table 1.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12292,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Sequence-based microbiota analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "In the third analytical step of the home-made pipeline (Fig. 1), all the annotated OTU tables were merged into a global OTU table using a home-made python script (v2.7.3) (OTU_tables_merge.py script from scripts.zip file, Data Citation 2), based on each OTU's taxonomic annotation.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12573,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Sequence-based microbiota analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The Global OTU table is a tabulation-formatted file (TSV) in which each column of this table represents one sample, and each line represents one taxon (identified by its OTU identifier in the first column and by the taxonomic annotation in the last column). This merged OTU table describes 474 OTUs, their annotation, and the number of reads belonging to each OTU per sample. Finally, this annotated OTU table was converted into a global BIOM file14 by the biom (v2.1.4) convert command. HDF5 format was chosen to optimize the storage. The characteristics of the BIOM file (Data Citation 2) are summarized in Table 2.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13190,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Sequence-based microbiota analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "As advised by previous recommendations15, the DESeq2 package16 integrated into QIIME (v1.9.0)17, was used to normalize the total read counts and avoid rarefaction of the read count data. The normalization_table.py python script from QIIME (v1.9.0) was configured with the following options: the algorithm chosen was DESeq2, replacing negative numbers produced by the DESeq normalization technique with zeros. A normalized Global BIOM file was then produced (Table 3). Note that the taxonomic information disappears after this normalization step. The biom (v2.1.4) 'add-metadata' option was used to add the taxonomic information back and obtain a fully annotated and normalized BIOM file (Data Citation 2).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13895,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Ethical approval",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Ethical approval surrounding the procurement of samples used in this study was obtained from the Research Ethics Committee \u2018Comit\u00e9 de Protection des Personnes Sud-Est 6, France\u2019 (reference number 2015/CE82), which waived the requirement for informed consent because the experiments did not result in additional constraints for the patients. All the methods were carried out in accordance with the approved guidelines (World Medical Association\u2019s (WMA) Declaration of Helsinki-Ethical Principles for Medical Research Involving Human Subjects).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14453,
+                    "infons": {
+                        "section_title_1": "Data Records",
+                        "iao_name_1": "availability section",
+                        "iao_id_1": "IAO:0000611"
+                    },
+                    "text": "The raw data from each of the 96 sequenced samples were submitted to the Sequence Read Archive (SRA) of the NCBI, under Project ID PRJNA342805 (Data Citation 1). The raw data were deposited under each barcode index. The association between the sample name, sample ID (index), and Blastocystis colonization status and group is available in Supplementary File 1.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14825,
+                    "infons": {
+                        "section_title_1": "Data Records",
+                        "iao_name_1": "availability section",
+                        "iao_id_1": "IAO:0000611"
+                    },
+                    "text": "The data analyzed using the home-made metagenomics pipeline (Fig. 1) are available on the PEGASE-biosciences website: http://www.pegase-biosciences.com/collaborations/blastocystis-gut-microbiota/.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15021,
+                    "infons": {
+                        "section_title_1": "Data Records",
+                        "iao_name_1": "availability section",
+                        "iao_id_1": "IAO:0000611"
+                    },
+                    "text": "The taxonomic assignment before data normalization is available per sample in the OTU_count_tables tsv files (Data Citation 2) and the raw_global.biom file (Data Citation 2); and after data normalization (process described in the Methods section) in the normalized_global.biom file (Data Citation 2).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15321,
+                    "infons": {
+                        "section_title_1": "Data Records",
+                        "iao_name_1": "availability section",
+                        "iao_id_1": "IAO:0000611"
+                    },
+                    "text": "Finally, the four home-made scripts used in the bioinformatics pipeline (Fig. 1) are available in the scripts.zip file (Data Citation 2).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15458,
+                    "infons": {
+                        "section_title_1": "Technical Validation",
+                        "section_title_2": "Data quality check",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320",
+                        "iao_name_2": "associated data section",
+                        "iao_id_2": "",
+                        "iao_name_3": "textual abstract section",
+                        "iao_id_3": "IAO:0000315",
+                        "iao_name_4": "introduction section",
+                        "iao_id_4": "IAO:0000316",
+                        "iao_name_5": "materials section",
+                        "iao_id_5": "IAO:0000633",
+                        "iao_name_6": "results section",
+                        "iao_id_6": "IAO:0000318",
+                        "iao_name_7": "discussion section",
+                        "iao_id_7": "IAO:0000319"
+                    },
+                    "text": "As shown in Fig. 2, the quality scores of the raw Ion Torrent reads (average Q27) are quite stable across the reads, above the Q20 reported accuracy for Ion Torrent PGM sequencing. Even the ends of the reads, which are known to be of lesser quality, are still within the Q20 range. This allowed the use of the complete reads for downstream analyses, without requiring a quality read trimming step.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15893,
+                    "infons": {
+                        "section_title_1": "Technical Validation",
+                        "section_title_2": "Raw data output",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320",
+                        "iao_name_2": "associated data section",
+                        "iao_id_2": "",
+                        "iao_name_3": "textual abstract section",
+                        "iao_id_3": "IAO:0000315",
+                        "iao_name_4": "introduction section",
+                        "iao_id_4": "IAO:0000316",
+                        "iao_name_5": "materials section",
+                        "iao_id_5": "IAO:0000633",
+                        "iao_name_6": "results section",
+                        "iao_id_6": "IAO:0000318",
+                        "iao_name_7": "discussion section",
+                        "iao_id_7": "IAO:0000319"
+                    },
+                    "text": "A total of 3,962,103 reads were obtained from the Ion 318 Chip sequencing run of the 96 indexed samples. As expected, a length mode of approximately 400 bases (403 bases) was observed, with an average read number per index of 41,562 and an average read length of 272 bases. These metrics assessed the good quality/quantity of the generated raw data (Table 4).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16267,
+                    "infons": {
+                        "section_title_1": "Technical Validation",
+                        "section_title_2": "Raw data output",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320",
+                        "iao_name_2": "associated data section",
+                        "iao_id_2": "",
+                        "iao_name_3": "textual abstract section",
+                        "iao_id_3": "IAO:0000315",
+                        "iao_name_4": "introduction section",
+                        "iao_id_4": "IAO:0000316",
+                        "iao_name_5": "materials section",
+                        "iao_id_5": "IAO:0000633",
+                        "iao_name_6": "results section",
+                        "iao_id_6": "IAO:0000318",
+                        "iao_name_7": "discussion section",
+                        "iao_id_7": "IAO:0000319"
+                    },
+                    "text": "Three of the 96 samples were discarded after sequencing (see Supplementary File 1). Indexes 50 and 63 were considered to be outliers due to the low number of reads (<10,000) for these samples. A third outlier (index 18) was due to an accidental handling error and was also discarded from the data set.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16568,
+                    "infons": {
+                        "section_title_1": "Technical Validation",
+                        "section_title_2": "Raw data output",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320",
+                        "iao_name_2": "associated data section",
+                        "iao_id_2": "",
+                        "iao_name_3": "textual abstract section",
+                        "iao_id_3": "IAO:0000315",
+                        "iao_name_4": "introduction section",
+                        "iao_id_4": "IAO:0000316",
+                        "iao_name_5": "materials section",
+                        "iao_id_5": "IAO:0000633",
+                        "iao_name_6": "results section",
+                        "iao_id_6": "IAO:0000318",
+                        "iao_name_7": "discussion section",
+                        "iao_id_7": "IAO:0000319"
+                    },
+                    "text": "ANOVA tests were conducted to compare the read number per index and the read lengths from the output sequence data in the four groups of patients. There were no significant differences between the four groups for any variable, indicating that there was no technical bias in sequencing for the four groups of patients (mean read length per group (P-value=0.47) and mean read number per group (P-value=0.78)) (Table 5).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16985,
+                    "infons": {
+                        "section_title_1": "Additional Information",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "How to cite this article: Siegwald, L. et al. Targeted metagenomic sequencing data of human gut microbiota associated with Blastocystis colonization. Sci. Data 4:170081 doi: 10.1038/sdata.2017.81 (2017).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17210,
+                    "infons": {
+                        "section_title_1": "Additional Information",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Publisher\u2019s note: Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17346,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "This work was supported by grants from the Programmes Orientations Strat\u00e9giques of the University de Lille 2 and the Centre National de la Recherche Scientifique and the Institut Pasteur de Lille. This work was also supported by CIFRE grant no. 2013/0920 from the Association Nationale de la Recherche et de la Technologie to L.S.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17691,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "The authors declare no competing financial interests.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17753,
+                    "infons": {
+                        "title": "An evaluation of the accuracy and speed of metagenome analysis tools",
+                        "journal": "Sci. Rep",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Lindgreen S., Adair K. L. & Gardner P.An evaluation of the accuracy and speed of metagenome analysis tools. Sci. Rep6, 19233 (2015). [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17940,
+                    "infons": {
+                        "title": "Are human intestinal eukaryotes beneficial or commensals?",
+                        "journal": "PLoS Pathog.",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Luke\u0161 J., Stensvold C. R., Jirk\u016f-Pomajb\u00edkov\u00e1 K. & Wegener Parfrey L.Are human intestinal eukaryotes beneficial or commensals?PLoS Pathog.11, e1005039 (2015). [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18142,
+                    "infons": {
+                        "title": "Colonization with the enteric protozoa Blastocystis is associated with increased diversity of human gut bacterial microbiota",
+                        "journal": "Sci. Rep.",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Audebert C.et al.Colonization with the enteric protozoa Blastocystis is associated with increased diversity of human gut bacterial microbiota. Sci. Rep.6, 25255 (2016). [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18355,
+                    "infons": {
+                        "title": "The microbial eukaryote Blastocystis is a prevalent and diverse member of the healthy human gut microbiota",
+                        "journal": "FEMS Microbiol. Ecol.",
+                        "volume": "90",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Scanlan P. D.et al.The microbial eukaryote Blastocystis is a prevalent and diverse member of the healthy human gut microbiota. FEMS Microbiol. Ecol.90, 326\u2013330 (2014). [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18548,
+                    "infons": {
+                        "title": "A retrospective metagenomics approach to studying Blastocystis",
+                        "journal": "FEMS Microbiol. Ecol.",
+                        "volume": "91",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Andersen L. O., Bonde I., Nielsen H. B. & Stensvold C. R.A retrospective metagenomics approach to studying Blastocystis. FEMS Microbiol. Ecol.91https://doi.org/10.1093/femsec/fiv072 (2015). [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18763,
+                    "infons": {
+                        "title": "Gut microbiota related to Giardia duodenalis, Entamoeba spp. and Blastocystis hominis infections in humans from C\u00f4te d'Ivoire",
+                        "journal": "J. Infect. Dev. Ctries",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Iebba V.et al.Gut microbiota related to Giardia duodenalis, Entamoeba spp. and Blastocystis hominis infections in humans from C\u00f4te d'Ivoire. J. Infect. Dev. Ctries10, 1035\u20131041 (2016). [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18973,
+                    "infons": {
+                        "title": "Comparison of faecal microbiota in Blastocystis-positive and Blastocystis-negative irritable bowel syndrome patients",
+                        "journal": "Microbiome",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Nagel R., Traub R. J., Allcock R. J., Kwan M. M. & Bielefeldt-Ohmann H.Comparison of faecal microbiota in Blastocystis-positive and Blastocystis-negative irritable bowel syndrome patients. Microbiome4, 47 (2016). [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19230,
+                    "infons": {
+                        "title": "Quantitative real-time PCR using TaqMan and SYBR Green for Actinobacillus actinomycetemcomitans, Porphyromonas gingivalis, Prevotella intermedia, tetQ gene and total bacteria",
+                        "journal": "FEMS Immunol. Med. Microbiol.",
+                        "volume": "39",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Maeda H.et al.Quantitative real-time PCR using TaqMan and SYBR Green for Actinobacillus actinomycetemcomitans, Porphyromonas gingivalis, Prevotella intermedia, tetQ gene and total bacteria. FEMS Immunol. Med. Microbiol.39, 81\u201386 (2003). [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Actinobacillus actinomycetemcomitans",
+                            "infons": {
+                                "identifier": "NCBI:txid714",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 16:26:13",
+                                "parent_taxonomic_id": "NCBI:txid416916"
+                            },
+                            "id": "4436",
+                            "locations": {
+                                "length": 36,
+                                "offset": 19303
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas gingivalis",
+                            "infons": {
+                                "identifier": "NCBI:txid837",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 16:26:13",
+                                "parent_taxonomic_id": "NCBI:txid836"
+                            },
+                            "id": "4437",
+                            "locations": {
+                                "length": 24,
+                                "offset": 19341
+                            }
+                        },
+                        {
+                            "text": "Prevotella intermedia",
+                            "infons": {
+                                "identifier": "NCBI:txid28131",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 16:26:14",
+                                "parent_taxonomic_id": "NCBI:txid838"
+                            },
+                            "id": "4438",
+                            "locations": {
+                                "length": 21,
+                                "offset": 19367
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-16 16:26:14",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "4439",
+                            "locations": {
+                                "length": 8,
+                                "offset": 19410
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 19492,
+                    "infons": {
+                        "title": "Galaxy: a comprehensive approach for supporting accessible, reproducible, and transparent computational research in the life sciences",
+                        "journal": "Genome Biol.",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Goecks J., Nekrutenko A. & Taylor J.Galaxy: a comprehensive approach for supporting accessible, reproducible, and transparent computational research in the life sciences. Genome Biol.11, R86 (2010). [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19735,
+                    "infons": {
+                        "title": "Introducing mothur: Open-source, platform-independent, community-supported software for describing and comparing microbial communities",
+                        "journal": "Appl. Environ. Microbiol.",
+                        "volume": "75",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Schloss P. D.et al.Introducing mothur: Open-source, platform-independent, community-supported software for describing and comparing microbial communities. Appl. Environ. Microbiol.75, 7537\u20137541 (2009). [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19981,
+                    "infons": {
+                        "title": "The SILVA ribosomal RNA gene database project: improved data processing and web-based tools",
+                        "journal": "Nucleic Acids Res.",
+                        "volume": "41",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Quast C.et al.The SILVA ribosomal RNA gene database project: improved data processing and web-based tools. Nucleic Acids Res.41, D590\u2013D596 (2013). [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20172,
+                    "infons": {
+                        "title": "ESPRIT-Tree: Hierarchical clustering analysis of millions of 16S rRNA pyrosequences in quasilinear computational time",
+                        "journal": "Nucleic Acids Res.",
+                        "volume": "39",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Cai Y. & Sun Y.ESPRIT-Tree: Hierarchical clustering analysis of millions of 16S rRNA pyrosequences in quasilinear computational time. Nucleic Acids Res.39, e95 (2011). [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20384,
+                    "infons": {
+                        "title": "Na\u00efve Bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy",
+                        "journal": "Appl. Environ. Microbiol.",
+                        "volume": "73",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Wang Q., Garrity G. M., Tiedje J. M. & Cole J. R.Na\u00efve Bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy. Appl. Environ. Microbiol.73, 5261\u20135267 (2007). [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20622,
+                    "infons": {
+                        "title": "The Biological Observation Matrix (BIOM) format or: how I learned to stop worrying and love the ome-ome",
+                        "journal": "Gigascience",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "McDonald D.et al.The Biological Observation Matrix (BIOM) format or: how I learned to stop worrying and love the ome-ome. Gigascience1, 7 (2012). [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20812,
+                    "infons": {
+                        "title": "Waste not, want not: why rarefying microbiome data is inadmissible",
+                        "journal": "PLoS Comput. Biol.",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "McMurdie P. J. & Holmes S.Waste not, want not: why rarefying microbiome data is inadmissible. PLoS Comput. Biol.10, e1003531 (2014). [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20989,
+                    "infons": {
+                        "title": "Moderated estimation of fold change and dispersion for RNA-Seq data with DESeq2",
+                        "journal": "Genome Biol.",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Love M. I., Huber W. & Anders S.Moderated estimation of fold change and dispersion for RNA-Seq data with DESeq2. Genome Biol.15, 550 (2014). [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21174,
+                    "infons": {
+                        "title": "QIIME allows analysis of high-throughput community sequencing data",
+                        "journal": "Nat. methods",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Caporaso J. G.et al.QIIME allows analysis of high-throughput community sequencing data. Nat. methods7, 335\u2013336 (2010). [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

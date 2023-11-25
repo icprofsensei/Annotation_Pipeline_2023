@@ -1,0 +1,1346 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC3462755",
+            "inputfile": "../microbiome_corpus_HTML\\PMC3462755.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Analysis of the Cystic Fibrosis Lung Microbiota via Serial Illumina Sequencing of Bacterial 16S rRNA Hypervariable Regions",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 122,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "The characterization of bacterial communities using DNA sequencing has revolutionized our ability to study microbes in nature and discover the ways in which microbial communities affect ecosystem functioning and human health. Here we describe Serial Illumina Sequencing (SI-Seq): a method for deep sequencing of the bacterial 16S rRNA gene using next-generation sequencing technology. SI-Seq serially sequences portions of the V5, V6 and V7 hypervariable regions from barcoded 16S rRNA amplicons using an Illumina short-read genome analyzer. SI-Seq obtains taxonomic resolution similar to 454 pyrosequencing for a fraction of the cost, and can produce hundreds of thousands of reads per sample even with very high multiplexing. We validated SI-Seq using single species and mock community controls, and via a comparison to cystic fibrosis lung microbiota sequenced using 454 FLX Titanium. Our control runs show that SI-Seq has a dynamic range of at least five orders of magnitude, can classify >96% of sequences to the genus level, and performs just as well as 454 and paired-end Illumina methods in estimation of standard microbial ecology diversity measurements. We illustrate the utility of SI-Seq in a pilot sample of central airway secretion samples from cystic fibrosis patients.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1414,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Microbes inhabit all environments on earth and contribute to ecosystem function in ways that are only vaguely understood. Decades of culture-based study have provided a solid foundation for our understanding of microbial physiology, genetics, and evolution, but investigations of microbial ecology have been notoriously difficult due to the small size and vast diversity of microbes. Recent developments of culture-independent methods have illuminated the microbial ecosystems that are found in terrestrial and aquatic environments, as well as those intimately associated with organisms. Of particular interest are microbial ecosystems within the human body (the human microbiome), as they are expected to profoundly impact human health and disease. For example, bacterial communities within human intestines are being studied for their effects on atopic and bowel diseases [1], [2], and altered structure of bacterial communities in the vagina is associated with susceptibility to a plethora of diseases including bacterial vaginosis and sexually transmitted infections [3].",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "terrestrial",
+                            "infons": {
+                                "identifier": "NCBI:txid928852",
+                                "type": "archaea_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:55:02",
+                                "parent_taxonomic_id": "NCBI:txid1783275"
+                            },
+                            "id": "16216057",
+                            "locations": {
+                                "length": 11,
+                                "offset": 1909
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 2501,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Here we propose 16S rRNA gene-based community analysis by Serial Illumina Sequencing (SI-Seq), which provides a taxonomic resolution similar to 454 pyrosequencing with the throughput and cost-effectiveness of Illumina sequencing. SI-Seq is able to get the best of both technologies by adapting Illumina sequencing technology to read three hypervariable regions of the 16S rRNA gene. Here we describe the development of SI-Seq, its validation using single species controls and a mock community, and its comparison to 454 FLX 16S rRNA sequencing of 56 sputum samples collected from Cystic Fibrosis patients.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3106,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Control communities",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Genomic DNA was extracted from overnight cultures of five bacterial species (Bacillus subtilis, Pseudomonas aeruginosa, Staphylococcus aureus, Erwinia amylovora, and Burkholderia cepacia) using the Gentra Puregene Cell kit (Qiagen). Genomic DNAs were quantified using the Qubit Fluorometer (Life Technologies) and mixed in abundances that differed 10-fold.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacillus subtilis",
+                            "infons": {
+                                "identifier": "NCBI:txid1423",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:55:16",
+                                "parent_taxonomic_id": "NCBI:txid1386"
+                            },
+                            "id": "16216058",
+                            "locations": {
+                                "length": 17,
+                                "offset": 3182
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:55:16",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "16216059",
+                            "locations": {
+                                "length": 22,
+                                "offset": 3202
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:55:16",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "16216060",
+                            "locations": {
+                                "length": 21,
+                                "offset": 3226
+                            }
+                        },
+                        {
+                            "text": "Erwinia amylovora",
+                            "infons": {
+                                "identifier": "NCBI:txid552",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:55:16",
+                                "parent_taxonomic_id": "NCBI:txid551"
+                            },
+                            "id": "16216061",
+                            "locations": {
+                                "length": 17,
+                                "offset": 3249
+                            }
+                        },
+                        {
+                            "text": "Burkholderia cepacia",
+                            "infons": {
+                                "identifier": "NCBI:txid292",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:55:16",
+                                "parent_taxonomic_id": "NCBI:txid32008"
+                            },
+                            "id": "16216062",
+                            "locations": {
+                                "length": 20,
+                                "offset": 3272
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 3502,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Ethics Statement ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Protocols for specimen collection, distribution and use were approved by the University Health Network (UHN) and St. Michael's Hospital Research Ethics Boards.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3678,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Ethics Statement ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Central airway secretion samples were aspirated intraoperatively using sterile syringes at the time of lung explantation, from consenting patients with an established diagnosis of CF undergoing transplantation in the Toronto Lung Transplant Program between July 2008 and December 2010. Sputum samples were voluntarily produced by consenting CF patients attending the CF clinic at St. Michael's Hospital. Samples were flash frozen in liquid nitrogen and stored in cryovials at \u221280\u00b0C until use. Whole genomic DNA was extracted using the DNeasy Blood & Tissue Kit, with lysozyme pretreatment (Qiagen, Toronto, ON).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4289,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "16S rRNA amplicons",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Primers for amplification and sequencing were designed using consensus nucleotides at each position of the Greengenes 16S rRNA alignment while also considering the high melting temperatures (>70\u00b0C) required for Illumina technology (Table 1). Primers were assessed for their matching to reference sequences using the \u201cProbe Match\u201d function of the Ribosomal Database Project (http://rdp.cme.msu.edu/probematch/search.jsp). Multiplexing versions of amplification primers V5+791 and V7-1104 had 8-mer barcodes attached to their 5\u2032 ends. Eight barcodes were used for initial SI-Seq development, whereas a subsequent set of 96 barcodes was designed using the barcrawl program [10] for amplification of the CF sputum templates (Table S1).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5038,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "16S rRNA amplicons",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Four independent 25ul PCR reactions were generated for each patient template. Replicate reactions were then pooled and concentrated using purification columns (Fermentas). To ensure removal of primers and any nonspecific amplicons, reactions were then run on 1% low melting temperature agarose gels and amplicons were extracted from agarose using Agarase (Fermentas) or purification columns (Fermentas), according to the manufacturer's instructions. Amplicons were quantified using the Qubit dsDNA BR assay kit (Life Technologies) and equal quantities of product from each patient were pooled before preparation for Illumina sequencing.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5674,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "DNA library construction and Illumina sequencing",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Libraries were constructed based on Illumina's paired-end library sample preparation protocol with the exception of starting at the \u2018A\u2019 base overhang addition, omitting the fragmentation and end repair steps to maintain the 16S rRNA gene amplicons.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5970,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "DNA library construction and Illumina sequencing",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Libraries were loaded onto the Illumina cBot cluster station for cluster generation according to the manufacturer's instructions. Sequencing was performed on an Illumina GA-IIx, and the sequencing recipe used is available for download in xml format from the University of Toronto Centre for the Analysis of Genome Evolution & Function (CAGEF) website (www.cagef.utoronto.ca). First strand sequencing began with the Illumina sequencing primer for eight cycles to read the barcode, followed by a denaturation chemistry and hybridization with a mix of the V5 forward and V7 reverse primers at 5 \u00b5M final concentration each. After 36 cycles of sequencing, another round of denaturation was performed and a mixture of V6 forward and V6 reverse primers (5 \u00b5M each) was hybridized for another 36 cycles of sequencing. The second strand was then synthesized using the paired-end protocol and the same procedures were carried out to generate the barcoded reads and reads for V5, V7 and V6 forward and V6 reverse. Data were pipelined using the standard Illumina computation pipeline. Library construction, sequencing, and data pipelining were performed at CAGEF.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7122,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "454 pyrosequencing",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Barcoded amplicons from 56 CF sputum samples were pooled and then split in half for sequencing using SI-Seq (described above) or 454 pyrosequencing; therefore, the same amplicons generated using primers V5+791 and V7-1104 (Table 1) were sequenced by both technologies. For 454 sequencing, amplicons were submitted to The Centre for Applied Genomics (Toronto, ON) for adaptor ligation and one half plate of single read pyrosequencing on a 454 FLX Titanium sequencer. The average raw 454 read length was 386nt (range 40 to 677); QIIME quality trimming (see below) resulted in an average read length of 415nt (range 200 to 573).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7765,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Structuring local version of reference databases",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Sequence reads were simulated using JAligner [11] and in-house Java scripts as follows. Sequencing primers (Table 1 or published [4], [5], [12], [13]) were aligned to each taxon in the database (Bergey, Silva, or Greengenes) using JAligner with the EDNAFULL matrix, and gap opening and extension penalties of 15 and 1, respectively. DNA fragments downstream from the aligned primer (SI-Seq), or starting at the 5\u2032 end of the aligned primer (454 and Illumina Paired-End), were then extracted and concatenated. The proportion of each read set that could be assigned to the genus level was determined by classifying the simulated reads using the RDP Classifier [14] (trained with the same read structure) and choosing the taxonomic classification with bootstrap support greater than or equal to 0.7.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8609,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Preparing sequence reads for classification",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Sequence data in FASTQ format were subjected to quality control analysis and prepared for taxonomic classification using an in-house Java application made available on CAGEF website (Figure S1). Reads were assigned to patient samples based on the barcode data by concatenating the two barcodes sequences obtained from each of the two individual paired-end reads and comparing the sequences to a reference barcode dataset. Barcode sequences were required to match a reference barcode sequence at 13 of 16 sites to be retained. Read quality was checked using the FASTQ data. Multiple quality-filtering measures were tested with the controls and those with >6 bases with a Phred quality score below 20 were discarded.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9366,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Preparing sequence reads for classification",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Since SI-Seq produces reads in two possible orientations it was necessary to concatenate the two paired-end reads in both orientations (i.e. Read1::Read2 and Read2::Read1) to ensure that one of resulting concatenated sequences was reconstructed in the proper orientation to match the reference database. Paired reads were trimmed to discard the leading 8-bp barcode and then concatenated in both orientations. The concatenated reads were then individually mapped by UBLAST [15] to a Greengenes dataset (reconstructed with simulated reads structured in V5::V6a::V7::V6b orientation) using an identity cutoff of 0.8. The concatenated read that provided the best UBLAST result was retained as the \u201ccorrect orientation\u201d.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10082,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "SI-Seq reads ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Operational Taxonomic Units (OTUs) were identified using the OTU_PIPE function within USEARCH [15]; this step also identifies and excludes chimeric reads. The appropriate identity cutoff for OTU clustering was determined empirically using the single species controls, as follows. We determined the average pairwise nucleotide identity of SI-Seq structured sequences from all members of the genera Pseudomonas (89% average pairwise identity) and Bacillus (85%) in the Bergey database. We clustered starting at the average of these two identities (87%) and repeated the process using identities of 97%, 95%, 93%, 90%, 85%, 83%, and 80%. The consensus sequences for each cluster at each identity cutoff were then classified using the RDP Classifier [14] and the clustering identity that most closely recapitulated the single species input with a low level of false positive classification was chosen. Because 87% was found to be the average nucleotide identity within Pseudomonas and Bacillus, and also had the optimal empirical results with the single species controls, we performed all clustering of SI-Seq data using an identity cutoff of 87%. Seed sequences from each cluster from each community were classified by further clustering with the SI-Seq structured Silva database using USEARCH, with parameters values chosen to ensure the best hit was chosen (--maxaccepts \u200a=\u200a0 and --maxrejects \u200a=\u200a0).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas",
+                            "infons": {
+                                "identifier": "NCBI:txid286",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:56:34",
+                                "parent_taxonomic_id": "NCBI:txid135621"
+                            },
+                            "id": "16216063",
+                            "locations": {
+                                "length": 11,
+                                "offset": 10479
+                            }
+                        },
+                        {
+                            "text": "Bacillus",
+                            "infons": {
+                                "identifier": "NCBI:txid1386",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:56:35",
+                                "parent_taxonomic_id": "NCBI:txid186817"
+                            },
+                            "id": "16216064",
+                            "locations": {
+                                "length": 8,
+                                "offset": 10527
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas",
+                            "infons": {
+                                "identifier": "NCBI:txid286",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:56:41",
+                                "parent_taxonomic_id": "NCBI:txid135621"
+                            },
+                            "id": "16216065",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11047
+                            }
+                        },
+                        {
+                            "text": "Bacillus",
+                            "infons": {
+                                "identifier": "NCBI:txid1386",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:56:41",
+                                "parent_taxonomic_id": "NCBI:txid186817"
+                            },
+                            "id": "16216066",
+                            "locations": {
+                                "length": 8,
+                                "offset": 11063
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 11493,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "SI-Seq reads ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Additional classifications were performed on each read (i.e., not clustered into OTUs) using the RDP Classifier [14]. Reference databases included three versions of the Bergey database: the SI-Seq structured database, the V5 454 simulated dataset, and the full-length database. RDP assignments with greater than 0.8 bootstrap support were incorporated into OTU tables using an in-house PERL script.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11891,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "454 reads ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "454 pyrosequencing data files were de-barcoded and quality filtered using the QIIME pipeline [16] with default parameters except for: a minimum quality score of 20, a maximum primer mismatch of 15, and a maximum of 2 errors in the barcode. A separate pipeline was run using a minimum quality score of 25 and a maximum primer mismatch of 5. The resultant reads were analyzed using the QIIME analysis pipeline with default parameters, unless otherwise indicated. Read trimming and filtering were also done separately using Mothur [17] with the following parameters: minlength\u200a=\u200a200, maxlength\u200a=\u200a300, maxambig\u200a=\u200a0, maxhomop\u200a=\u200a10, qwindowsize\u200a=\u200a25, qwindowaverage\u200a=\u200a30, bdiffs\u200a=\u200a1, pdiffs\u200a=\u200a10.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12591,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "454 reads ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "For both read sets (454 and SI-Seq) questionable OTUs (i.e., below the abundance cutoff) were removed by manual inspection of OTU tables. Abundance cutoffs were determined by run-specific single species controls, as described in the Results section and shown in Tables S2 & S3.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12868,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Community ecology analyses",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "OTU tables for 454 and SI-Seq sequences were analyzed using QIIME and the R package VEGAN [16], [18]. Rarefaction analyses for assessment of community coverage were performed in QIIME using 100 rarefactions for each sequence sampling step. The alpha diversity metrics Chao1, observed species, and Phylogenetic Diversity (PD) whole tree were estimated in QIIME during rarefaction. The beta diversity metrics Bray-Curtis (BC), unweighted UniFrac (UF), and weighted UniFrac (WUF) were estimated in QIIME on OTU tables rarefied to the lowest number of sequences per sample (454: 478 sequences; SI-Seq: 38,120 sequences).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13510,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Community ecology analyses",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Species Accumulation curves were calculated in VEGAN [18], using rarefied OTU tables. Patient samples were randomly drawn and the cumulative number of OTUs was calculated. This was repeated 100 times. An additional curve was calculated after all OTUs with a combined abundance lower than 0.1% were removed from the dataset.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13833,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Description of SI-Seq method",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We sequenced the V5 through V7 region of the 16S rRNA locus to balance taxonomic resolution with fragment size restrictions imposed by Illumina sequencing technology. PCR amplicons of \u223c300 bp were generated by amplification of the 16S rRNA gene using bacterial universal primers with 5\u2032 barcodes (Table 1 & Table S1). These amplification products were pooled and libraries were prepared for SI-Seq Illumina sequencing as described in the Materials and Methods. The resulting SI-Seq library consisted of templates with 16S rRNA V5\u2013V7 amplicons flanked by the barcoded universal 16S rRNA PCR primers flanked by the standard Illumina paired-end adaptors (Figure 1). It is important to recognize that each individual SI-Seq template has the potential to bind to the flowcell in either the V5\u2013V7 orientation or the V7\u2013V5 orientation (Figure 1).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14707,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Description of SI-Seq method",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To compare SI-Seq to other commonly used 16S rRNA sequencing protocols (e.g., 454 and Illumina Paired-End), we simulated reads of varying lengths using published primer sequences [4], [5], [12], [13]. From these simulated reads we calculated the proportion of reads that could be assigned to the genus level using the RDP Classifier [14]. As shown in Figure 2, SI-Seq and 454 were similar in their ability to produce a high proportion of reads that could be assigned to the genus level. These data indicate that SI-Seq is in theory comparable to 454 in its ability to produce reads with enough sequence variation for good taxonomic assignment, yet being Illumina-based, produces over 100-fold more reads at similar cost.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15427,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Validation with single species controls",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Amplicons from either Bacillus subtilis or Pseudomonas aeruginosa genomic DNA were sequenced separately by SI-Seq and the resulting reads were used to determine the overall quality of the SI-Seq data and how quality filtering influenced the accuracy of taxonomic classification.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacillus subtilis",
+                            "infons": {
+                                "identifier": "NCBI:txid1423",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:57:31",
+                                "parent_taxonomic_id": "NCBI:txid1386"
+                            },
+                            "id": "16216067",
+                            "locations": {
+                                "length": 17,
+                                "offset": 15449
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:57:31",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "16216068",
+                            "locations": {
+                                "length": 22,
+                                "offset": 15470
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 15744,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Validation with single species controls",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Because every Illumina run varies in quality, we included a single species control as one barcoded sample to empirically determine the rate of classification error. This value is then used as a lower, run-specific threshold for elimination of low abundance OTUs.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16006,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Validation with a mock community",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "A mock community control was sequenced to determine whether PCR amplification introduced taxonomic biases and to identify the dynamic range of SI-Seq taxon detection. Our control community consisted of genomic DNA from Bacillus subtilis, Pseudomonas aeruginosa, Staphylococcus aureus, Erwinia amylovora, and Burkholderia cepacia that were mixed at abundances that differed from each other by an order of magnitude. As shown in Figure 4, the observed taxon abundances were nearly identical to those expected. Furthermore, we were able to detect taxon abundances that ranged over five orders of magnitude. The taxon of lowest abundance, B. cepacia, had only 120 pg of total genomic DNA added to the original pool, of which less than 1,000th of which would be 16S rRNA; thus, the reliable detection of Burkholderia in all separate barcoded samples verifies the repeatability and sensitivity of SI-Seq.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacillus subtilis",
+                            "infons": {
+                                "identifier": "NCBI:txid1423",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:57:39",
+                                "parent_taxonomic_id": "NCBI:txid1386"
+                            },
+                            "id": "16216069",
+                            "locations": {
+                                "length": 17,
+                                "offset": 16225
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:57:39",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "16216070",
+                            "locations": {
+                                "length": 22,
+                                "offset": 16244
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:57:39",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "16216071",
+                            "locations": {
+                                "length": 21,
+                                "offset": 16268
+                            }
+                        },
+                        {
+                            "text": "Erwinia amylovora",
+                            "infons": {
+                                "identifier": "NCBI:txid552",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:57:39",
+                                "parent_taxonomic_id": "NCBI:txid551"
+                            },
+                            "id": "16216072",
+                            "locations": {
+                                "length": 17,
+                                "offset": 16291
+                            }
+                        },
+                        {
+                            "text": "Burkholderia cepacia",
+                            "infons": {
+                                "identifier": "NCBI:txid292",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:57:39",
+                                "parent_taxonomic_id": "NCBI:txid32008"
+                            },
+                            "id": "16216073",
+                            "locations": {
+                                "length": 20,
+                                "offset": 16314
+                            }
+                        },
+                        {
+                            "text": "B. cepacia",
+                            "infons": {
+                                "identifier": "NCBI:txid292",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:57:43",
+                                "parent_taxonomic_id": "NCBI:txid32008"
+                            },
+                            "id": "16216074",
+                            "locations": {
+                                "length": 10,
+                                "offset": 16641
+                            }
+                        },
+                        {
+                            "text": "Burkholderia",
+                            "infons": {
+                                "identifier": "NCBI:txid32008",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:57:45",
+                                "parent_taxonomic_id": "NCBI:txid119060"
+                            },
+                            "id": "16216075",
+                            "locations": {
+                                "length": 12,
+                                "offset": 16805
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 16936,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of SI-Seq to 454 FLX Titanium",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To further validate SI-Seq, we sequenced 56 sputum samples collected from CF patients using both SI-Seq and 454 FLX Titanium. Samples for both platforms were taken from the same PCR stock to ensure no PCR bias. Sequence reads from 454 and SI-Seq were filtered for quality and de-barcoded either using QIIME (454) or a pipeline developed in-house (SI-Seq) (as described in Materials and Methods). The range of sequences obtained per sample differed substantially between the two sequencing approaches: between 478 and 11,405 quality reads were obtained using 454, whereas between 38,120 and 859,764 quality reads were obtained using SI-Seq (Table 2). The average length for the 454 reads was 415nt, with 33% of the reads shorter than the average. A rarefaction sampling analysis indicated that the number of reads obtained for each patient sample saturated the community diversity in all cases for the SI-Seq data and in most cases for the 454 data (Figure 5). Both rarefaction analyses suggest that \u223c1,000 sequences would be sufficient for characterizing the majority of bacteria present in these CF lung communities. The saturation of community diversity with such low read numbers indicates that a much higher degree of multiplexing would further reduce per patient sequencing costs without reducing community information.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:57:59",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16216076",
+                            "locations": {
+                                "length": 8,
+                                "offset": 18007
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 18300,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of SI-Seq to 454 FLX Titanium",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We compared the 454 and SI-Seq community profiles visually and statistically to verify their similarities. We first compared the per-sample distribution of bacterial orders obtained from the 454 and SI-Seq OTU tables (Figure 7). Despite differing sequencing methods, OTU clustering thresholds, and taxonomy classification approaches, the composition of each community for each sample was remarkably similar between the 454 and SI-Seq datasets. We next tested for statistical significance using a Procrustes analyses to determine whether the OTU dissimilarity matrices obtained from each approach were statistically indistinguishable. We applied a variety of distance metrics and found that the match between community profiles generated by 454 and SI-Seq were highly significant regardless of the dissimilarity matrix used (Table 4; Figure S2).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19144,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Application of SI-Seq to study the ecology of the CF lung",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To demonstrate the utility of SI-Seq, we performed additional analyses on the CF sputum samples to begin our investigation of CF lung ecology, although a more in depth analysis of this subject will be completed in the future with a larger patient cohort.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19455,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Application of SI-Seq to study the ecology of the CF lung",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We also compared our SI-Seq data with clinical culture data and found complete agreement (data not shown). There were no samples in which a particular bacterial species was cultured but not detected using SI-Seq.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19667,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Targeted sequencing of taxonomically informative regions of the 16S rRNA gene has been instrumental in describing and comparing microbial communities and ecosystems. Associating changes in these microbiota with disease etiology or ecosystem function requires a method that fulfills the following criteria: good taxonomic resolution; deep enough sequencing to ensure community saturation; and a cost that permits multiple biological replicates and fine temporal or spatial sampling. Our side-by-side comparison of 454 and SI-Seq profiling of single species controls and CF sputum samples revealed the superiority of SI-Seq regarding each of these criteria; below we discuss these in turn.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20364,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Although here we describe the use of SI-Seq for characterizing relatively simple CF communities, additional work shows that the approach easily generates sufficient sequence coverage to thoroughly examine more complex communities such as mouse or human feces, house dust, and saliva (unpublished). We believe SI-Seq will be generally applicable to any microbiota. It can be readily adapted by designing primers to target different regions of the 16S rRNA gene, or different loci altogether. This flexibility also opens the possibility of using SI-Seq to study eukaryotic microbes and Archaea.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Archaea",
+                            "infons": {
+                                "identifier": "NCBI:txid2157",
+                                "type": "archaea_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:58:30",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16216077",
+                            "locations": {
+                                "length": 7,
+                                "offset": 20948
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 20956,
+                    "infons": {
+                        "title": "The human microbiome: at the interface of health and disease",
+                        "journal": "Nat Rev Genet",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Cho I, Blaser MJ (2012) The human microbiome: at the interface of health and disease. Nat Rev Genet13: 260\u2013270. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21125,
+                    "infons": {
+                        "title": "From structure to function: the ecology of host-associated microbial communities",
+                        "journal": "Microbiol Mol Biol Rev",
+                        "volume": "74",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Robinson CJ, Bohannan BJ, Young VB (2010) From structure to function: the ecology of host-associated microbial communities. Microbiol Mol Biol Rev74: 453\u2013476. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21331,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Wilson BA, Thomas SM, Ho M (2011) The Human Vaginal Microbiome. In: Nelson KE, editor. Metagenomics of the Human Body. New York: Springer. pp. 91\u2013115. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21501,
+                    "infons": {
+                        "title": "Generation of Multimillion-Sequence 16S rRNA Gene Libraries from Complex Microbial Communities by Assembling Paired-End Illumina Reads",
+                        "journal": "Appl Environ Microbiol",
+                        "volume": "77",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Bartram AK, Lynch MD, Stearns JC, Moreno-Hagelsieb G, Neufeld JD (2011) Generation of Multimillion-Sequence 16S rRNA Gene Libraries from Complex Microbial Communities by Assembling Paired-End Illumina Reads. Appl Environ Microbiol77: 3846\u20133852. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21793,
+                    "infons": {
+                        "title": "Global patterns of 16S rRNA diversity at a depth of millions of sequences per sample",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "108",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Caporaso JG, Lauber CL, Walters WA, Berg-Lyons D, Lozupone CA, et al. (2011) Global patterns of 16S rRNA diversity at a depth of millions of sequences per sample. Proc Natl Acad Sci U S A108Suppl 14516\u20134522. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22048,
+                    "infons": {
+                        "title": "Illumina-based analysis of microbial community diversity",
+                        "journal": "ISME J",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Degnan PH, Ochman H (2012) Illumina-based analysis of microbial community diversity. ISME J6: 183\u2013194. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22198,
+                    "infons": {
+                        "title": "Microbiome profiling by illumina sequencing of combinatorial sequence-tagged PCR products",
+                        "journal": "PLoS One",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Gloor GB, Hummelen R, Macklaim JM, Dickson RJ, Fernandes AD, et al. (2010) Microbiome profiling by illumina sequencing of combinatorial sequence-tagged PCR products. PLoS One5: e15406. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22430,
+                    "infons": {
+                        "title": "Metagenomic study of the oral microbiota by Illumina high-throughput sequencing",
+                        "journal": "J Microbiol Methods",
+                        "volume": "79",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Lazarevic V, Whiteson K, Huse S, Hernandez D, Farinelli L, et al. (2009) Metagenomic study of the oral microbiota by Illumina high-throughput sequencing. J Microbiol Methods79: 266\u2013271. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22663,
+                    "infons": {
+                        "title": "BIPES, a cost-effective high-throughput method for assessing microbial diversity",
+                        "journal": "ISME J",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Zhou HW, Li DF, Tam NF, Jiang XT, Zhang H, et al. (2011) BIPES, a cost-effective high-throughput method for assessing microbial diversity. ISME J5: 741\u2013749. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22867,
+                    "infons": {
+                        "title": "BARCRAWL and BARTAB: software tools for the design and implementation of barcoded primers for highly multiplexed DNA sequencing",
+                        "journal": "BMC Bioinformatics",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Frank DN (2009) BARCRAWL and BARTAB: software tools for the design and implementation of barcoded primers for highly multiplexed DNA sequencing. BMC Bioinformatics10: 362. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23087,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Moustafa A (2010) JAligner: Open source Java implementation of Smith-Waterman. JAligner website. Available: http://jaligner.sourceforge.net. Accessed 2012 June 11.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23254,
+                    "infons": {
+                        "title": "The pervasive effects of an antibiotic on the human gut microbiota, as revealed by deep 16S rRNA sequencing",
+                        "journal": "PLoS Biol",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Dethlefsen L, Huse S, Sogin ML, Relman DA (2008) The pervasive effects of an antibiotic on the human gut microbiota, as revealed by deep 16S rRNA sequencing. PLoS Biol6: e280. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23478,
+                    "infons": {
+                        "title": "Microbial diversity in the deep sea and the underexplored \"rare biosphere\"",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "103",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Sogin ML, Morrison HG, Huber JA, Mark Welch D, Huse SM, et al. (2006) Microbial diversity in the deep sea and the underexplored \"rare biosphere\". Proc Natl Acad Sci U S A103: 12115\u201312120. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23714,
+                    "infons": {
+                        "title": "Naive Bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy",
+                        "journal": "Appl Environ Microbiol",
+                        "volume": "73",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Wang Q, Garrity GM, Tiedje JM, Cole JR (2007) Naive Bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy. Appl Environ Microbiol73: 5261\u20135267. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23943,
+                    "infons": {
+                        "title": "Search and clustering orders of magnitude faster than BLAST",
+                        "journal": "Bioinformatics",
+                        "volume": "26",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Edgar RC (2010) Search and clustering orders of magnitude faster than BLAST. Bioinformatics26: 2460\u20132461. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24078,
+                    "infons": {
+                        "title": "QIIME allows analysis of high-throughput community sequencing data",
+                        "journal": "Nat Methods",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Caporaso JG, Kuczynski J, Stombaugh J, Bittinger K, Bushman FD, et al. (2010) QIIME allows analysis of high-throughput community sequencing data. Nat Methods7: 335\u2013336. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24295,
+                    "infons": {
+                        "title": "Introducing mothur: open-source, platform-independent, community-supported software for describing and comparing microbial communities",
+                        "journal": "Appl Environ Microbiol",
+                        "volume": "75",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Schloss PD, Westcott SL, Ryabin T, Hall JR, Hartmann M, et al. (2009) Introducing mothur: open-source, platform-independent, community-supported software for describing and comparing microbial communities. Appl Environ Microbiol75: 7537\u20137541. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24586,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Oksanen J, Blanchet FG, Kindt R, Legendre P, Minchin PR, et al... (2011) vegan: Community Ecology Package.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24696,
+                    "infons": {
+                        "title": "Field guide to next-generation DNA sequencers",
+                        "journal": "Mol Ecol Resour",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Glenn TC (2011) Field guide to next-generation DNA sequencers. Mol Ecol Resour11: 759\u2013769. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24816,
+                    "infons": {
+                        "title": "Direct comparisons of Illumina vs. Roche 454 sequencing technologies on the same microbial community DNA sample",
+                        "journal": "PLoS One",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Luo C, Tsementzi D, Kyrpides N, Read T, Konstantinidis KT (2012) Direct comparisons of Illumina vs. Roche 454 sequencing technologies on the same microbial community DNA sample. PLoS One7: e30087. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25061,
+                    "infons": {
+                        "title": "Evaluation of genomic high-throughput sequencing data generated on Illumina HiSeq and Genome Analyzer systems",
+                        "journal": "Genome Biol",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Minoche AE, Dohm JC, Himmelbauer H (2011) Evaluation of genomic high-throughput sequencing data generated on Illumina HiSeq and Genome Analyzer systems. Genome Biol12: R112. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25283,
+                    "infons": {
+                        "title": "Microbial diversity in the sputum of a cystic fibrosis patient studied with 16S rDNA pyrosequencing",
+                        "journal": "Eur J Clin Microbiol Infect Dis",
+                        "volume": "28",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Armougom F, Bittar F, Stremler N, Rolain JM, Robert C, et al. (2009) Microbial diversity in the sputum of a cystic fibrosis patient studied with 16S rDNA pyrosequencing. Eur J Clin Microbiol Infect Dis28: 1151\u20131154. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25528,
+                    "infons": {
+                        "title": "Molecular detection of multiple emerging pathogens in sputa from cystic fibrosis patients",
+                        "journal": "PLoS One",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Bittar F, Richet H, Dubus JC, Reynaud-Gaubert M, Stremler N, et al. (2008) Molecular detection of multiple emerging pathogens in sputa from cystic fibrosis patients. PLoS One3: e2908. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25760,
+                    "infons": {
+                        "title": "Airway microbiota and pathogen abundance in age-stratified cystic fibrosis patients",
+                        "journal": "PLoS One",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Cox MJ, Allgaier M, Taylor B, Baek MS, Huang YJ, et al. (2010) Airway microbiota and pathogen abundance in age-stratified cystic fibrosis patients. PLoS One5: e11044. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25975,
+                    "infons": {
+                        "title": "Phylogenetic and metabolic diversity of bacteria associated with cystic fibrosis",
+                        "journal": "ISME J",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Guss AM, Roeselers G, Newton IL, Young CR, Klepac-Ceraj V, et al. (2011) Phylogenetic and metabolic diversity of bacteria associated with cystic fibrosis. ISME J5: 20\u201329. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:59:29",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16216078",
+                            "locations": {
+                                "length": 8,
+                                "offset": 26092
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26194,
+                    "infons": {
+                        "title": "Significance of the microbiome in obstructive lung disease",
+                        "journal": "Thorax",
+                        "volume": "67",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Han MK, Huang YJ, Lipuma JJ, Boushey HA, Boucher RC, et al. (2012) Significance of the microbiome in obstructive lung disease. Thorax67: 456\u201363. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26387,
+                    "infons": {
+                        "title": "Molecular identification of bacteria in bronchoalveolar lavage fluid from children with cystic fibrosis",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "104",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Harris JK, De Groote MA, Sagel SD, Zemanick ET, Kapsner R, et al. (2007) Molecular identification of bacteria in bronchoalveolar lavage fluid from children with cystic fibrosis. Proc Natl Acad Sci U S A104: 20529\u201320533. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:59:34",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "16216079",
+                            "locations": {
+                                "length": 8,
+                                "offset": 26492
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26655,
+                    "infons": {
+                        "title": "Relationship between cystic fibrosis respiratory tract bacterial communities and age, genotype, antibiotics and Pseudomonas aeruginosa",
+                        "journal": "Environ Microbiol",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Klepac-Ceraj V, Lemon KP, Martin TR, Allgaier M, Kembel SW, et al. (2010) Relationship between cystic fibrosis respiratory tract bacterial communities and age, genotype, antibiotics and Pseudomonas aeruginosa. Environ Microbiol12: 1293\u20131303. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 12:59:38",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "16216080",
+                            "locations": {
+                                "length": 22,
+                                "offset": 26845
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26926,
+                    "infons": {
+                        "title": "Use of 16S rRNA gene profiling by terminal restriction fragment length polymorphism analysis to compare bacterial communities in sputum and mouthwash samples from patients with cystic fibrosis",
+                        "journal": "J Clin Microbiol",
+                        "volume": "44",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Rogers GB, Carroll MP, Serisier DJ, Hockey PM, Jones G, et al. (2006) Use of 16S rRNA gene profiling by terminal restriction fragment length polymorphism analysis to compare bacterial communities in sputum and mouthwash samples from patients with cystic fibrosis. J Clin Microbiol44: 2601\u20132604. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27269,
+                    "infons": {
+                        "title": "A polymicrobial perspective of pulmonary infections exposes an enigmatic pathogen in cystic fibrosis patients",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "105",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Sibley CD, Parkins MD, Rabin HR, Duan K, Norgaard JC, et al. (2008) A polymicrobial perspective of pulmonary infections exposes an enigmatic pathogen in cystic fibrosis patients. Proc Natl Acad Sci U S A105: 15070\u201315075. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27538,
+                    "infons": {
+                        "title": "The polymicrobial nature of airway infections in cystic fibrosis: Cangene Gold Medal Lecture",
+                        "journal": "Can J Microbiol",
+                        "volume": "57",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Sibley CD, Surette MG (2011) The polymicrobial nature of airway infections in cystic fibrosis: Cangene Gold Medal Lecture. Can J Microbiol57: 69\u201377. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27716,
+                    "infons": {
+                        "title": "Partitioning core and satellite taxa from within cystic fibrosis lung bacterial communities",
+                        "journal": "ISME J",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. van der Gast CJ, Walker AW, Stressmann FA, Rogers GB, Scott P, et al. (2011) Partitioning core and satellite taxa from within cystic fibrosis lung bacterial communities. ISME J5: 780\u2013791. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27952,
+                    "infons": {
+                        "title": "Significance of the microbiome in obstructive lung disease",
+                        "journal": "Thorax",
+                        "volume": "67",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Han MK, Huang YJ, Lipuma JJ, Boushey HA, Boucher RC, et al. (2012) Significance of the microbiome in obstructive lung disease. Thorax67: 456\u2013463. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28146,
+                    "infons": {
+                        "title": "The changing microbial epidemiology in cystic fibrosis",
+                        "journal": "Clin Microbiol Rev",
+                        "volume": "23",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Lipuma JJ (2010) The changing microbial epidemiology in cystic fibrosis. Clin Microbiol Rev23: 299\u2013323. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28298,
+                    "infons": {
+                        "title": "MEGAN analysis of metagenomic data",
+                        "journal": "Genome Res",
+                        "volume": "17",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Huson DH, Auch AF, Qi J, Schuster SC (2007) MEGAN analysis of metagenomic data. Genome Res17: 377\u2013386. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

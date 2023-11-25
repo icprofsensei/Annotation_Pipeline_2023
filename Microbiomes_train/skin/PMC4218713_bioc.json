@@ -1,0 +1,2453 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC4218713",
+            "inputfile": "../microbiome_corpus_HTML\\PMC4218713.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "MetaGeniE: Characterizing Human Clinical Samples Using Deep Metagenomic Sequencing",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 82,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "With the decreasing cost of next-generation sequencing, deep sequencing of clinical samples provides unique opportunities to understand host-associated microbial communities. Among the primary challenges of clinical metagenomic sequencing is the rapid filtering of human reads to survey for pathogens with high specificity and sensitivity. Metagenomes are inherently variable due to different microbes in the samples and their relative abundance, the size and architecture of genomes, and factors such as target DNA amounts in tissue samples (i.e. human DNA versus pathogen DNA concentration). This variation in metagenomes typically manifests in sequencing datasets as low pathogen abundance, a high number of host reads, and the presence of close relatives and complex microbial communities. In addition to these challenges posed by the composition of metagenomes, high numbers of reads generated from high-throughput deep sequencing pose immense computational challenges. Accurate identification of pathogens is confounded by individual reads mapping to multiple different reference genomes due to gene similarity in different taxa present in the community or close relatives in the reference database. Available global and local sequence aligners also vary in sensitivity, specificity, and speed of detection. The efficiency of detection of pathogens in clinical samples is largely dependent on the desired taxonomic resolution of the organisms. We have developed an efficient strategy that identifies \u201call against all\u201d relationships between sequencing reads and reference genomes. Our approach allows for scaling to large reference databases and then genome reconstruction by aggregating global and local alignments, thus allowing genetic characterization of pathogens at higher taxonomic resolution. These results were consistent with strain level SNP genotyping and bacterial identification from laboratory culture.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2012,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Despite its importance for infectious disease diagnosis, the ability to rapidly and conclusively identify the causative agents for infections remains an elusive goal. When a symptomatic patient enters the healthcare system, the infectious etiologic agent is rarely known. Patients often are subjected to a battery of expensive tests, often taking days to weeks for results, to narrow down the etiological agent; meanwhile the treating physician is typically forced to make management decisions based on patient symptomology and history. Next-Generation sequencing technologies have transformed our ability to rapidly generate sequence data [1]\u2013[3]; and as such, whole metagenome sequencing is emerging as the future of clinical diagnostics by providing a rapid and highly sensitive method of diagnosing and characterizing infectious agents in clinical samples [4]\u2013[9]. The goal is to replace the multitude of clinical microbiological tests with a single diagnostic approach. In clinical metagenomic analysis, microbial and host DNA are sequenced together and the likely pathogens identified and characterized to streamline treatment. Despite this seemingly simple process, there are numerous obstacles to efficient and accurate identification of pathogens in clinical samples.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3300,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Over the past 5\u201310 years, the composition of microbial communities (i.e., the microbiome) in clinical samples, and elsewhere, has been estimated using conserved gene amplicon sequencing (e.g., 16S rRNA for bacteria). More recently, whole genome sequencing (WGS) approaches have emerged as a powerful alternative that gives a relatively unbiased and global representation of the members of the microbial community [7], [10], [11]. With the advances in sequencing technology, along with decreasing cost, it is now possible to fully interrogate the microbial communities within clinical samples [6], [12], [13], including the ability to genotype community members and understand gene composition. This diagnostic advancement can provide important insights for accurate and timely clinical management of patients. For clinical diagnostics, genus- or even species-level identification may not be sufficient for proper clinical treatment. For example, a patient suffering from methicillin resistant Staphylococcus aureus TCH1516 requires different treatment than a patient colonized by methicillin sensitive S. aureus Newman.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:22:47",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "38835734",
+                            "locations": {
+                                "length": 8,
+                                "offset": 3506
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:22:54",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835735",
+                            "locations": {
+                                "length": 21,
+                                "offset": 4293
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:22:55",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835736",
+                            "locations": {
+                                "length": 9,
+                                "offset": 4402
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 4419,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "A primary issue for metagenomic analyses is read alignment methodology, for analysis of the hundreds of millions of reads per run generated through sequencing technologies [14], [15]. Different metagenomic analysis pipelines incorporate available aligners (local/global) in a computational infrastructure, such as cloud computing or high performance computing (HPC), to provide accurate sequence interrogation, computational speed and the scalability necessary to query enormous numbers of metagenome reads against reference databases. There is, however, a tradeoff between the accuracy of detection and computational speed. Local alignment algorithms are considered to be more sensitive and accurate than global alignment algorithms [16], [17]. On the other hand, existing global aligners [18]\u2013[26] are typically preferred over local aligners, given the high volumes of metagenome sequences [27]. For example, PathSeq [6], MePIC [28] and SURPI [29] utilize cloud computing platforms to expand computational scalability. These computing platforms are usually available externally or commercially and have associated utilization costs but do not require server maintenance costs by the user. PathSeq, IMSA [30], VirusHunter [31] and MEGAN [32] are capable of characterizing unknown reads with BLAST, a local aligner [33]; however, with the high number of metagenome reads (>1 million), BLAST is often not optimal for clinical diagnostics given the high computational time required [16], [17]. RINS [34] and IMSA [30] invoke processes such as BLAT [35] but without parallelization and consequently have scalability issues with large reference databases.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6070,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "An additional issue beyond alignment methodology is read assignment. Each metagenomic sequencing read, in theory, originates from a single genome. Assigning large numbers of reads (especially 50\u2013200 bp short reads) back to their genome of origin is problematic for multiple reasons including: a) the presence of overlapping/shared genomes from other organisms in the sample; b) querying these reads against related genomes from publicly available databases may result in a greater number of hits due to homology; and c) the computational resources required to scan through large reference databases. We have developed a pipeline, MetaGeniE, which has been designed for accurate, sensitive and specific detection of taxa in complex microbial samples and to address all of the above limitations with typical metagenomic analyses. The MetaGeniE pipeline generates an all-against-all comparison dataset between the reads and the reference database and then uses these results to generate cumulative statistics from combined local and global alignment. MetaGeniE also incorporates features such as comprehensive human read filtration and scalability to search large reference databases such as the microbial Refseq database (http://www.ncbi.nlm.nih.gov/refseq/), which is increasing with each release and presently around 20 GB in size.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7401,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Ethics Statement",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "All work with tissues derived from human subjects was approved by the Institutional Review Boards of Northern Arizona University and the Translational Genomics Research Institute. Both Institutional Review Boards waived the need for patient consent for these de-identified samples.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7705,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Human Datasets ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Seven whole genome sequences of human datasets were downloaded from Sequence Read Archive (SRA) at NCBI (http://www.ncbi.nlm.nih.gov/sra/). The accessions and read number for these datasets are ERR191896: 53.03 million reads; ERR218094: 49.50 million reads; ERR237515: 2.54 million reads; SRR032752: 35.29 million reads; SRR033605: 23.53 million reads; SRR054743: 40.63 million reads; SRR054753: 39.76 million reads. We simulated 30 million reads from human reference genome (build 37.2) (ftp://ftp.ncbi.nih.gov/genomes/H_sapiens) with GRINDER version 0.5.3 [36]. We incorporated total 0.5% variability in the simulated human reads, 0.1% as expected human SNP frequency [19] and 0.4% as the average sequencing error for Illumina reads [37].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8460,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Bacterial Datasets ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Average Illumina sequencing error of 0.4% was incorporated in all the simulated reads generated from bacterial reference genomes (ftp://ftp.ncbi.nih.gov/refseq/release/bacteria/). To study sequencing error and its effect on detection and characterization, additional variability of 0.1%, 0.2%, 0.5% and 1% were incorporated in each simulated bacterial library.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8839,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "In-house Clinical Dataset ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Three throat swabs (CF1, CF2, CF3) and one nasopharyngeal swab (CF4) from cystic fibrosis (CF) patients were sequenced with Illumina GA IIx using paired-end 100 bp reads (total reads \u223c37\u201358 million). Culture-based methods were also performed for the CF samples to identify microbial infection.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9158,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "In-house Clinical Dataset ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We benchmarked our work using only simulated Illumina reads since this is currently the leading sequencing platform in overall usage and its high throughput provides an opportunity to test computational scalability. The pipeline can utilize other platforms and as expected, the detection will incorporate platform-specific biases [38].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9493,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Design",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The pipeline is designed as a distributed and scalable software package to analyze millions of reads and query large reference databases and consists of two modules: Read-Reduct and Patho-Detect. The Read-Reduct module sequentially filters and reduces the low quality, redundant, and human reads (Figure 1-A). The low quality reads are filtered using PRINSEQ [27]. Human read filtration can be performed with the short read aligners that are classified into Burrows-Wheeler Transform (BWT) mappers and hash-based mappers. The BWT mappers such as BWA, SOAP2 and Bowtie are fast but considered less sensitive, while the hash-based aligners are slow but more accurate such as MAQ, ELAND, Novoalign and STAMPY [19]. To reduce overall computational processing time and memory, one of two faster BWT aligners, BWA [18] or BOWTIE2 [21], are utilized initially in the pipeline. Higher CPU and memory intensive features such as data compression [27] and hash-based sensitive alignment STAMPY [19] are then utilized to further reduce the overall number of reads. The second module of the pipeline, Patho-Detect, aligns the remaining reads against known bacterial, fungal and viral sequences with BWT alignment followed with the local aligner BLAT [35] (Figure 1-B).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10754,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Scalability",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Incorporating a large reference database such as RefSeq rather than using just a few selected complete genomes allows identification to subspecies/strain level for a broad range of taxa. The RefSeq bacterial database has doubled from 8.7 G in Release 54 to 19 G in Release 60 for bacteria and will be increasing in the future. This results in increasing demand for computational memory to scale to sizeable reference databases. To address the issue of scalability with large reference databases, we designed the pipeline to handle multiple partitions of a reference database for better memory management (Figure 1-C). Multithreaded input files query each smaller database partition (\u223c1 GB) iteratively and thus reduce the overall memory footprint. This querying of each input file fragment generates higher number of mapped-unmapped relationships against the partitioned database results per iteration, which increases the computational time. To address this issue, the pipeline utilizes custom hash functions and indexing tools formatdb and fastacmd (ftp://ftp.ncbi.nlm.nih.gov/blast/executables/) to allow faster extraction of millions of reads as an input for the next reference database search.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:23:55",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "38835737",
+                            "locations": {
+                                "length": 8,
+                                "offset": 11034
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 11963,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Normalized Genome Coverage",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Assessing the detection of a pathogen by the total number of reads that hit/align to the respective genome(s) is not always an accurate predictor of presence of an organism due to repeat elements, close relatives in the metagenome and PCR amplification biases. To overcome these issues, MetaGeniE detects microbial presence by genomic reconstruction, which is the percent of the genome mapped to the reference genome(s) for each organism. The pipeline first converts the local and global alignment output to common BED format. Genome coverage of each mapped organism is then calculated from the global and local alignments with BEDTOOLS [39]. The total genome reconstructed for each mapped organism is the sum of genome coverage from global and local alignments for any metagenome. The normalized genome coverage (% genome coverage) is calculated as follows:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12847,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Normalized Genome Coverage",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The normalized genome coverage allows comparison of different organisms with different genome sizes, which is helpful in representing the abundance of various organisms in each metagenome for community analysis (See Clinical Samples Section below).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13095,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Computing Infrastructure",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "To benchmark the performance of the pipeline, all the human datasets and simulated (human and bacterial) datasets were run on the same High Performance Computing (HPC). A 47 GB RAM and 6 processor limit was set for all the simulated and downloaded human datasets. Analysis of the CF clinical dataset was executed with eight processors and 100 GB RAM in a HPC cluster. The CPU hour logs are generated by the pipeline for comparison of runtime between different processes. Simulated datasets were generated in FASTA format without quality values. Downloaded human datasets were filtered at a quality threshold of Phred value >15. Only the quality-filtered sequences were utilized to benchmark, as some samples had higher percentages of low quality reads.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13871,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Benchmarking",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "To test the sensitivity of the pipeline, synthetic reads 100 bases in length were generated from respective reference genomes with a range of read numbers. These are represented as follows: 0.1K: 100 reads; 1K: 1,000 reads; 10K: 10,000 reads; 100K: 100,000 reads; 250K: 250,000 reads. Human filtration is a five step process and different steps are utilized to compare the sensitivity/specificity of detection of simulated reads, execution speed and memory usage (Table 1). All these steps utilized the same parameters as follows, BWA (default), BOWTIE2 (default with very sensitive mode), STAMPY (default), PHRED quality score >15, minimum length >50, low complexity (dust) and BLAT (80% identity).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14582,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "SNP Genotyping",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The reads mapping to organisms with the highest genome coverage, as detected by the pipeline, were extracted. Besides genome coverage that is proportional to pathogen DNA (and usually incomplete), other factors like depth, recombinant genomes are factors to be considered for performing SNP genotyping. FASTA formatted sequence files generated from mapped reads can then be used for SNP genotyping for such goals as the identification of specific lineages, fine-scale strain differentiation, and determination of antibiotic resistance variants. We use an in-house SNP Pipeline that integrates the SNPs detected by SolSNP (http://sourceforge.net/projects/solsnp/) from BWA alignment and Mummer 3.22 [40] from available public genomes although other SNP pipelines can be incorporated. These SNPs can then be utilized for phylogenetic analysis using a program such as MEGA version 5.04 [41].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15484,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Visualization of genome reconstruction",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The genome reconstruction provides an overview of the entire genome recovered for organisms identified from the metagenome sequences. The genome reconstruction of the identified organism is performed with the reference-based assembly [42]. The resulting contigs are merged as super scaffolds (http://abacas.sourceforge.net/Manual.html) and visualized with MAUVE [43].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15889,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The goal of clinical metagenomics is often to identify the cause of infection amidst a veritable sea of host and microbial sequences. No two metagenomes are the same and broad variation exists due to the differences in microbial diversity and abundance as well as the size and architecture of genomes in the sampled community [44]. Other factors that dictate metagenome variation are the low amount of target DNA (often a pathogen), DNA from other microbes in the community, and the amount of host DNA, in addition to variation based on clinical sample type. The variation in metagenomes and the needs of researchers and clinicians makes it challenging to develop a \u201cone-size-fits-all\u201d method for analysis.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16617,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The characterization of community composition using microbial sequences can now be approached at three specific taxonomic levels: genus, species and strain/genotype (Figure S1), rather than the limited subfamily/genera that are the observable taxonomic units of 16S microbiome analysis. There are, however, fewer species- and strain-specific regions of the genome than genus-specific regions, given the relationships of genome composition with taxonomy. Increasing sequencing breadth across a genome allows for better taxonomic resolution of any organism present in a sample, especially for taxa that have been genetically well characterized. For metagenome data, single reads may map to multiple organisms either due to conserved microbial genomic regions (e.g., genus-specific genes) or due to the presence of closely related organisms in queried reference databases or the community being analyzed. Studies have shown metagenomic sequences share similar regions for even the simplest microbial communities [17], [45], [46]. Assigning each read to all mapped genomes might be an effective strategy as metagenome community analysis is unbiased and researchers may have no a priori knowledge about the community composition [38]. The genus specific reads will map to higher numbers of organisms followed by reads specific to species and sub-species/strains. The organism with the highest shared (genus-specific) regions, as well as unique regions, which generally belong to species- and strain-specific genes, will result in a higher percent of the genome mapped. The taxonomic rank and the detection resolution is proportional to sequencing throughput, richness of pathogen(s) in metagenome sampling and the availability of genomic data from the community members (e.g., target pathogens), or close relatives, in the reference database. We benchmarked the sensitivity and specificity of the detection step of the pipeline by evaluating simulated read libraries through identification of correct pathogen, corresponding percent read recalled, genome coverage detected, correct percentage of host reads filtered and false detection of host and/or non-host.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18772,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Human Read Reduction",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "To detect the \u201cneedle\u201d (e.g. pathogen reads), reducing the size of the \u201chaystack\u201d (non-target reads) is critical [6]. This starts with removing the overwhelming majority of reads, i.e. host DNA sequence. The efficiency of human read filtration can be measured by the total number of human reads removed from clinical samples. To test the effect on human read filtration with different parameters, seven whole genome sequencing datasets from humans and one simulated dataset created from human reference genome (Hg19) were analyzed. The mg_bwa and mg_bw2 uses only BWA and BOWTIE2 aligners only, while mgall_bw2 and mgall_bwa uses all five steps of pipeline including fast alignment with BOWTIE2 and BWA, respectively (Table 1). We found that use of a single aligner (mg_bwa/mg_bw2) is not always efficient in removing human reads. Utilizing all the features of the MetaGeniE pipeline (mgall_bw2 and mgall_bwa) allowed higher filtration of human reads (Figure 2-A). The runtime of single step (mg_bwa/mg_bw2) was faster than running all steps of human filtration (mgall_bwa/mgall_bw2) (Figure 2-B). Keeping all parameters the same, we found that the BWA aligner ran faster than BOWTIE2 (Figure 2-B) but that this increased speed comes at a cost; BOWTIE (mg_bw2) was more sensitive than BWA (mg_bwa) and correctly aligned a higher number of human reads (Figure 2-A). However, the total number of reads removed by mgall_bw2 and mgall_bwa (that utilizes all the steps of human filtration) was nearly equal, irrespective of whether the BWA or BOWTIE2 aligner was used.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20355,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Human Read Reduction",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Remaining human reads that were not filtered were aligned against the NCBI Refseq bacterial database. These \u201chuman\u201d reads mapped to the bacterial database and as expected, were higher for single step alignment (*_mg_bw2) than with comprehensive human read reduction with pipeline (*_mgall_bw2) (Figure S2). The unfiltered human reads not only mapped incorrectly to microbial datasets, but also contributed to overall runtime during pathogen detection. Removal of human reads with high specificity is advantageous for sensitive clinical interpretation.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20906,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Pathogen Detection",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Metagenome datasets derived from clinical samples typically have analytical challenges such as a) the often extremely low abundance of pathogens; b) the analyzed sample may contain single infection (with only one dominant infection); c) contain multiple infectious agents from close relatives; and d) samples may house highly complex microbial communities (e.g. sputa from cystic fibrosis patients). The sequencing reads aligned against the reference genome(s) may have high divergence resulting from sequencing error or/and mutations. We created and analyzed simulated libraries based on varying community complexities to estimate the efficiency of pathogen detection.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21593,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Simple Community ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Metagenome sequences are often processed as a single genome alignment to a reference genome [16]. In a single genome alignment, reads aligning to multiple loci in a reference genome are randomly assigned to a locus and SAMTools only parses these as \u201cmain\u201d hits [47]. To evaluate the ability of MetaGeniE to distinguish a known target strain from its close relatives with our all-against-all strategy, we utilized S. aureus strain TCH1516 to assess the detection of a single infection by a known strain. Staphylococcus is well-characterized genus with high number of sequenced strains, allowing us to test the specificity of detecting the correct organism from not only among the many species of Staphylococcus in the reference genome database, but also from members of its own strain or subtype (i.e. ST8-MRSA-IVa/USA300). Typically the genus-specific regions of Staphylococcus are assigned to several, or all, of the members of the genus. Reads that contribute to unique regions, which may belong to its species (S. aureus), and strain-specific genes (clonal complex 5), will result in highest percent genome coverage of the correct organism. We were able to detect S. aureus TCH1516 in all the test sets as the top hit (highest genome reconstruction/coverage) even with lowest number of reads (i.e., 100 reads). This detection occurred even when single genome alignment was not able to report correct detection (Table S1). We found that the single alignment underestimates the genome coverage compared with the results from MetaGeniE, and the coverage detected by our approach approximated to the actual coverage detected (Table S2).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:25:45",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835738",
+                            "locations": {
+                                "length": 9,
+                                "offset": 22006
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:25:46",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "38835739",
+                            "locations": {
+                                "length": 14,
+                                "offset": 22096
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:25:48",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "38835740",
+                            "locations": {
+                                "length": 14,
+                                "offset": 22288
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:25:50",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "38835741",
+                            "locations": {
+                                "length": 14,
+                                "offset": 22456
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:25:51",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835742",
+                            "locations": {
+                                "length": 9,
+                                "offset": 22606
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:25:53",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835743",
+                            "locations": {
+                                "length": 9,
+                                "offset": 22760
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 23245,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Simple Community ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We also compared the effect on pathogen detection based on factors such as quantity of reads, percent genome coverage and read recall (reads aligning correctly to its genome of origin) percentage against different parameters available in human filtration module of the MetaGeniE (Figure 3). Read recall percentage is the percent of simulated reads that correctly align to the reference genome after human filtration. As the read number increased, the expected genome coverage percentage also increased; genome coverage reached 99.9% at 250K reads and thus had coverage across nearly the entire genome. The 250K reads were approximately the number of reads necessary to reconstruct the entire genome of S. aureus TCH1516 from the metagenome. As more reads were sequenced (simulated), a higher number of duplicate reads was also expected. Using the data compression feature of human filtration of pipeline (*_mgall_bw2) to remove duplicates reduced the read recall percentage but had no effect on genome coverage percentage or detection of the correct organism. The duplicate reads therefore did not add additional information; to manage computational scalability, removal of these duplicates improved MetaGeniE performance. We also found that using all the human filtration steps of the pipeline (*_mgall-bw2) as compared to using just fast alignment (*_mg_bw2) or not utilizing data compression (*_mg_dc) did not lead to underestimation of the percent genome coverage for correct pathogen detection.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:04",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835744",
+                            "locations": {
+                                "length": 9,
+                                "offset": 23947
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 24744,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Complex Community ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The ability to detect and differentiate the members of the community in complex clinical samples, such as those from cystic fibrosis patients, should be helpful in generating insight for proper treatment. Shared regions are expected in even the simplest microbial communities so careful attention is necessary for these orthologs. The simulated library allowed us to evaluate the impact on detection due to the presence of multiple organisms in community with different genome sizes. We designed a simulated complex community of five bacteria based on a similar community composition that was previously detected from a cystic fibrosis clinical sample (See Methods). Simulated reads were generated from the reference genome of each of the five organisms and four libraries with different read numbers (i.e., 100, 1000, 10K, 100K per organism) were created. In metagenomes, many organisms may not have any complete or incomplete entries in the reference genome database. To test the specificity of detection of an unknown organism, Veillonella dispar ATCC 17748 was added to this complex community. This organism was not present in the bacterial reference genome database (RefSeq Build 60). Querying a large reference database usually results in detection of multiple organisms within same genus due to sequence homology. Therefore, for organism detection we selected the highest mapped genome percentage (i.e., the top hit) within the same genus. The correct detection was confirmed for all of the organisms except for V. dispar ATCC 17748 (Table S3). This indicates that the pipeline allowed detection of the correct organisms even in a complex community.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:18",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "38835745",
+                            "locations": {
+                                "length": 8,
+                                "offset": 25278
+                            }
+                        },
+                        {
+                            "text": "Veillonella dispar",
+                            "infons": {
+                                "identifier": "NCBI:txid39778",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:22",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "38835746",
+                            "locations": {
+                                "length": 18,
+                                "offset": 25775
+                            }
+                        },
+                        {
+                            "text": "V. dispar",
+                            "infons": {
+                                "identifier": "NCBI:txid39778",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:27",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "38835747",
+                            "locations": {
+                                "length": 9,
+                                "offset": 26263
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26418,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Complex Community ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Different genera in a complex community may share genomic regions. The robustness of detection can be measured by loss of sensitivity (i.e., genome coverage) of any organism in a complex versus simple community infection. We compared the percent genome coverage of E. coli APEC O1 as single pathogen and in complex community. We found no loss in percent genome coverage for the E. coli APEC O1 between simple and complex community and the trend for simple and complex community overlaps completely in the Figure 4. The all-against-all relationship between the reads and reference database, therefore, allows us to detect any organism without loss in sensitivity, which could potentially occur in samples containing organisms with shared genomic regions.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "E. coli",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid562"
+                                ],
+                                "type": [
+                                    "bacteria_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:31",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid561"
+                                ]
+                            },
+                            "id": "38835748",
+                            "locations": {
+                                "length": 7,
+                                "offset": 26683
+                            }
+                        },
+                        {
+                            "text": "E. coli",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid562"
+                                ],
+                                "type": [
+                                    "bacteria_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:32",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid561"
+                                ]
+                            },
+                            "id": "38835749",
+                            "locations": {
+                                "length": 7,
+                                "offset": 26796
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 27171,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Complex Community ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "For simulated reads of V. dispar ATCC 17748 (not present in reference database), V. parvula DSM 2008 chromosome was detected as top hit with lower percent genome coverage compared to other hits (Figure 4). We can infer that true calls (i.e. detections) may not always be possible, given the limited, albeit growing, nature of genomic databases and the taxonomic resolution might decrease to genus, (e.g. Veillonella in this case).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "V. dispar",
+                            "infons": {
+                                "identifier": "NCBI:txid39778",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:36",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "38835750",
+                            "locations": {
+                                "length": 9,
+                                "offset": 27194
+                            }
+                        },
+                        {
+                            "text": "V. parvula",
+                            "infons": {
+                                "identifier": "NCBI:txid29466",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:37",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "38835751",
+                            "locations": {
+                                "length": 10,
+                                "offset": 27252
+                            }
+                        },
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:40",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "38835752",
+                            "locations": {
+                                "length": 11,
+                                "offset": 27575
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 27601,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Co-infections",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We were able to accurately detect and identify the target organism (as a top hit) for each taxon from multiple genera in a complex community as discussed above. However, some clinical samples will have pathogens from same species, for example co-infections with methicillin resistant S. aureus (MRSA) and methicillin sensitive S. aureus (MSSA). Staphylococcus aureus TCH1516 and S. aureus Newman belong to different clonal complexes (CC8 & CC5) and are abbreviated as MRSA and MSSA, respectively. To test the specificity of detecting and distinguishing these two distinct strains in clinical samples, we created co-infection libraries consisting of simulated reads from S. aureus Newman and S. aureus TCH1516 genomes.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:43",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835753",
+                            "locations": {
+                                "length": 9,
+                                "offset": 27885
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:43",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835754",
+                            "locations": {
+                                "length": 9,
+                                "offset": 27928
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:43",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835755",
+                            "locations": {
+                                "length": 21,
+                                "offset": 27946
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:44",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835756",
+                            "locations": {
+                                "length": 9,
+                                "offset": 27980
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:46",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835757",
+                            "locations": {
+                                "length": 9,
+                                "offset": 28271
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:47",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835758",
+                            "locations": {
+                                "length": 9,
+                                "offset": 28292
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 28331,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Co-infections",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The presence of S. aureus Newman in co-infection library (true positive) was compared with its detection in a single infection library (false positive) containing only simulated reads from the S. aureus TCH1516 genome (Figure 5-A). Any genome coverage percentage detected for S. aureus Newman in single infection library can be considered as false detection. The percent genome coverage of S. aureus Newman (false call) was slightly less than its true presence in multiple-infection library, due to contribution of homologous reads from S. aureus TCH1516. As summarized in (Table S4), S. aureus Newman ranked behind few other closely related genomes of S. aureus TCH1516 (CC5) in the single infection library (Table S5) but was detected as top hit in co-infection library (Table S6).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:47",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835759",
+                            "locations": {
+                                "length": 9,
+                                "offset": 28347
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:49",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835760",
+                            "locations": {
+                                "length": 9,
+                                "offset": 28524
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:50",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835761",
+                            "locations": {
+                                "length": 9,
+                                "offset": 28607
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:51",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835762",
+                            "locations": {
+                                "length": 9,
+                                "offset": 28721
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:52",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835763",
+                            "locations": {
+                                "length": 9,
+                                "offset": 28868
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:53",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835764",
+                            "locations": {
+                                "length": 9,
+                                "offset": 28916
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:54",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835765",
+                            "locations": {
+                                "length": 9,
+                                "offset": 28984
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 29114,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Co-infections",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The co-infection library consisted of reads from both S. aureus TCH1516 and S. aureus Newman. Due to the all reads mapped against all reference strategy, the shared homology between these two organisms resulted in a higher percent genome coverage of S. aureus TCH1516 in the co-infection library than the single-infection library (Figure 5-B). The S. aureus TCH1516 was detected as top hit per genus in single infection library (Table S5) and as one of top hits with S. aureus Newman in co-infection library (Table S6). We can infer that although the \u201ctop hit per genus\u201d detection was correct in identifying the correct strain in a co-infection, proper detection of the strains in a co-infection is difficult and will require additional validation.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:56",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835766",
+                            "locations": {
+                                "length": 9,
+                                "offset": 29168
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:56",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835767",
+                            "locations": {
+                                "length": 9,
+                                "offset": 29190
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:58",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835768",
+                            "locations": {
+                                "length": 9,
+                                "offset": 29364
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:26:58",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835769",
+                            "locations": {
+                                "length": 9,
+                                "offset": 29462
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:27:00",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835770",
+                            "locations": {
+                                "length": 9,
+                                "offset": 29581
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 29862,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Metagenome reads may have artificial variation due to sequencing error. The ability to assign these reads back to their genome can affect the sensitivity of detection. However, utilizing only a global aligner may result in loss of sensitivity of divergent reads detection. To incorporate these divergent reads for sensitive detection, we utilized BLAT, which is \u223c500 times faster than preexisting tools with comparable sensitivity [35].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30307,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We designed the simulated reads from S. aureus TCH1516 genome with increasing amounts of error in the reads. To evaluate sensitivity to error, reads that the global aligner was unable to map, but were aligned by a local aligner (BLAT), were categorized as divergent reads. With increasing sequence divergence, higher numbers of reads were not aligned by global aligner (Figure 6). MetaGeniE is nonetheless able to incorporate these divergent reads through local alignment without a decrease in the genome coverage detected (Figure 6). In all 25 of the simulated test cases (0%, 0.1%, 0.2%, 0.5% and 1% divergence for 100, 1K, 10K, 100K, 250K reads), S. aureus TCH1516 was detected correctly in all except one: at 1% divergence with 100 reads. The limitation of detection for correct identification can therefore be seen at highest divergence with low number of reads.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:27:08",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835771",
+                            "locations": {
+                                "length": 9,
+                                "offset": 30344
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:27:14",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835772",
+                            "locations": {
+                                "length": 9,
+                                "offset": 30957
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 31174,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Workflow ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Due to the variations and limitations in metagenome analyses and importance of detection accuracy given clinical perspective, the analyses of clinical samples might require a cycle of Detection \u2192 Validation \u2192 Confirmation (Figure S3). After detection of the pathogen likely responsible for the infection as well as assessing the rest of the microbial community, the validation of clinical datasets can be done through analysis such as SNP genotyping and BLAST analysis, depending on the number of reads aligned to the detected organism to more fully characterize the organism(s). These inferences from clinical datasets can finally be confirmed with laboratory test/culture, PCR, and/or patient's clinical history. We performed Detection\u2192 Validation \u2192 Confirmation workflow to evaluate overall performance in the cystic fibrosis (CF) clinical dataset.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32034,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Detection ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We first removed low quality, redundant and human reads with the MetaGeniE Read-Reduct module on the initial metagenomic reads (Figure 7). For the CF samples, the data were reduced 33\u201390%. The remaining reads after running the read filtration module were mapped against bacterial reference genome to detect pathogens. Different steps utilized by the pipeline have varying effects of reduction/filtration on these metagenomes (Figure 7). The total number of reads that mapped against the bacterial database was 24\u201368% for these four samples. The increase in number of reads mapping due to local alignment in these samples was 27\u201353% and therefore implementation of local alignment in the pipeline helped in aligning a higher number of divergent reads that increased the sensitivity for detection (Figure 7).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32850,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Detection ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The mapped reads in the Patho-Detect module of the pipeline was utilized to understand the community with percent genome mapped for top-hit per genus for the CF samples (Table S7). The percent genome mapped (i.e., genomic reconstruction of the top hits for CF samples) ranged from 55\u201399% (Table S8). The four CF samples presented different genomic signatures (Table 2) and thus different communities in each patient (Table S8). Infectious agents in CF patients are acquired through nosocomial, social and environmental factors [48]\u2013[50]. These pathogens, along with commensal microbiota, represent the microbial community in CF patients. The community for each CF metagenome sample was represented by normalized (%) genome coverage of top hit per each genus that was detected by MetaGeniE (Figure S4). Organisms from genera such as Gemella, Granulicatella, Haemophilus, Neisseria and Streptococcus are commonly found in the oral microbiome, including oral samples from CF patients [48], [49], [51], [52].",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Gemella",
+                            "infons": {
+                                "identifier": "NCBI:txid1378",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:27:40",
+                                "parent_taxonomic_id": "NCBI:txid539738"
+                            },
+                            "id": "38835773",
+                            "locations": {
+                                "length": 7,
+                                "offset": 33682
+                            }
+                        },
+                        {
+                            "text": "Granulicatella",
+                            "infons": {
+                                "identifier": "NCBI:txid117563",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:27:40",
+                                "parent_taxonomic_id": "NCBI:txid186828"
+                            },
+                            "id": "38835774",
+                            "locations": {
+                                "length": 14,
+                                "offset": 33691
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:27:40",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "38835775",
+                            "locations": {
+                                "length": 11,
+                                "offset": 33707
+                            }
+                        },
+                        {
+                            "text": "Neisseria",
+                            "infons": {
+                                "identifier": "NCBI:txid482",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:27:40",
+                                "parent_taxonomic_id": "NCBI:txid481"
+                            },
+                            "id": "38835776",
+                            "locations": {
+                                "length": 9,
+                                "offset": 33720
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:27:40",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "38835777",
+                            "locations": {
+                                "length": 13,
+                                "offset": 33734
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 33854,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Validation ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "\nSNP Genotyping: Single nucleotide polymorphism (SNP) genotyping is widely used in analysis of WGS to accurately identify and discriminate between strains of a species [53]. Figure S5-1 represents the phylogenetic tree for the metagenome sequences mapping to top hit (S. aureus USA300 TCH1516) detected by pipeline for sample CF1. To confirm the accuracy of the detection of S. aureus USA300 TCH1516 for CF1 sample, the close relatives of available S. aureus from GenBank were downloaded and SNP genotyping was performed. We found that S. aureus USA300 TCH1516 detected by MetaGeniE is confirmed through SNP genotyping for CF1 and other CF samples (Figure S5). We are able to validate that detection at a high taxonomic level is possible in a clinical metagenome sample.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:27:44",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835778",
+                            "locations": {
+                                "length": 9,
+                                "offset": 34121
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:27:45",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835779",
+                            "locations": {
+                                "length": 9,
+                                "offset": 34229
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:27:46",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835780",
+                            "locations": {
+                                "length": 9,
+                                "offset": 34303
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:27:47",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835781",
+                            "locations": {
+                                "length": 9,
+                                "offset": 34390
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 34635,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Genome Reconstruction and Visualization ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We extracted and then assembled the reads mapped to these identified genomes to generate contigs and scaffolds. This pre-selection approach is different than assembling entire metagenome as this might result in chimeric contigs [17], [41], [42]. We were able to reconstruct all features of the identified MRSA and MSSA strains in CF1 and CF4 respectively (Figure S6). Due to low coverage, identified strains of sample CF2 and CF3 were not fully reconstructed.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35134,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Confirmation ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The top hits for pathogen detection and community composition were confirmed in all four CF samples using culture-based methods from clinical laboratory (Table 2). The ability of MetaGeniE to correctly identify infections to the strain level, for example MRSA versus MSSA detection, demonstrates higher resolution than amplicon sequencing community analysis (e.g., 16S microbiome).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35528,
+                    "infons": {
+                        "section_title_1": "Conclusions",
+                        "iao_name_1": "conclusion section",
+                        "iao_id_1": "IAO:0000615"
+                    },
+                    "text": "Various features have been incorporated and validated in the MetaGeniE pipeline to improve computational scalability, speed, and accuracy, which allowed us to perform comprehensive analysis of the clinical samples from whole sample sequence data. We successfully tested the pipeline on various simulated clinical datasets, available public datasets and in-house sequenced clinical datasets.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35929,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nHierarchical architecture of genomes and its relationship with sequencing throughput.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36047,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(DOCX)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36053,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S2",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nTotal numbers of reads aligning to bacterial database after human read filtration for human datasets.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36165,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S3",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nThe workflow of the clinical sample analysis.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36221,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S4",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nDistribution of microbial community across the four cystic fibrosis samples.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36308,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S5",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nPhylogenetic tree representing the mapped reads from clinical dataset and the available genome in GenBank.\nS5-1. Mapped reads from Staphylococcus aureus USA300 TCH1516. S5-2. Mapped reads from Escherichia coli APEC O1. S5-3. Mapped reads from Staphylococcus aureus Newman.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:28:04",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835782",
+                            "locations": {
+                                "length": 21,
+                                "offset": 36440
+                            }
+                        },
+                        {
+                            "text": "Escherichia coli",
+                            "infons": {
+                                "identifier": "NCBI:txid562",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:28:04",
+                                "parent_taxonomic_id": "NCBI:txid561"
+                            },
+                            "id": "38835783",
+                            "locations": {
+                                "length": 16,
+                                "offset": 36502
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:28:05",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "38835784",
+                            "locations": {
+                                "length": 21,
+                                "offset": 36552
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 36590,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S6",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nThe visualization of the genomic reconstruction for the organism detected for four cystic fibrosis samples.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36708,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nComparison of genome coverage detection with single genome alignment versus metagenome alignment.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36815,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(XLSX)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36821,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S2",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nComparison of single genome alignment and metagenome alignment with actual genome coverage.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36922,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S3",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nDetection of organisms in complex community with metagenome alignment.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37002,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S4",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nRank of \nStaphylococcus aureus\n Newman and \nStaphylococcus aureus\n TCH1516 in single infection and co-infection library.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37132,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S5",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nDetection of close relative in single infection library consisting of \nStaphylococcus aureus\n TCH1516.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37244,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S6",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nDetection of close relative in co-infection library consisting of \nStaphylococcus aureus\n Newman and \nStaphylococcus aureus\n TCH1516.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37387,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S7",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nDetection of organisms in four cystic fibrosis clinical samples with metagenome alignment.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37487,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S8",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nTop five hits sorted by the genome coverage mapped per organism for four cystic fibrosis clinical samples.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37603,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "We are thankful to Dr. Michael Saubolle & Bette Wojack, Banner Health for Cystic Fibrosis clinical datasets. Thanks to James Schupp, TGen, and Dr. Paal S. Anderson, Statens Serum Institut, for useful discussions.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37830,
+                    "infons": {
+                        "section_title_1": "Data Availability",
+                        "iao_name_1": "availability section",
+                        "iao_id_1": "IAO:0000611"
+                    },
+                    "text": "The authors confirm that all data underlying the findings are fully available without restriction. The authors confirm that all data underlying the findings are fully available without restriction. The MetaGeniE pipeline, helper scripts, test environment and documentation are available at https://github.com/ngsclinical/metagenie.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38178,
+                    "infons": {
+                        "title": "Next-generation DNA sequencing methods",
+                        "journal": "Annual Review of Genomics and Human Genetics",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Mardis ER (2008) Next-generation DNA sequencing methods. Annual Review of Genomics and Human Genetics9: 387\u2013402. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38329,
+                    "infons": {
+                        "title": "Next-generation DNA sequencing",
+                        "journal": "Nature Biotechnology",
+                        "volume": "26",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Shendure J, Ji H (2008) Next-generation DNA sequencing. Nature Biotechnology26: 1135\u20131145. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38448,
+                    "infons": {
+                        "title": "Genome sequencing in microfabricated high-density picolitre reactors",
+                        "journal": "Nature",
+                        "volume": "437",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Margulies M, Egholm M, Altman WE, Attiya S, Bader JS, et al. (2005) Genome sequencing in microfabricated high-density picolitre reactors. Nature437: 376\u2013380. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38653,
+                    "infons": {
+                        "title": "Metagenomic sequencing for virus identification in a public-health setting",
+                        "journal": "Journal of General Virology",
+                        "volume": "91",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Svraka S, Rosario K, Duizer E, van der Avoort H, Breitbart M, et al. (2010) Metagenomic sequencing for virus identification in a public-health setting. Journal of General Virology91: 2846\u20132856. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38875,
+                    "infons": {
+                        "title": "Clinical insights from metagenomic analysis of sputum samples from patients with cystic fibrosis",
+                        "journal": "Journal of Clinical Microbiology",
+                        "volume": "52",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Lim YW, Evangelista JS, Schmieder R, Bailey B, Haynes M, et al. (2014) Clinical insights from metagenomic analysis of sputum samples from patients with cystic fibrosis. Journal of Clinical Microbiology52: 425\u2013437. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39136,
+                    "infons": {
+                        "title": "PathSeq: software to identify or discover microbes by deep sequencing of human tissue",
+                        "journal": "Nature Biotechnology",
+                        "volume": "29",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Kostic AD, Ojesina AI, Pedamallu CS, Jung J, Verhaak RG, et al. (2011) PathSeq: software to identify or discover microbes by deep sequencing of human tissue. Nature Biotechnology29: 393\u2013396. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39374,
+                    "infons": {
+                        "title": "Comparative metagenomics of microbial communities",
+                        "journal": "Science",
+                        "volume": "308",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Tringe SG, von Mering C, Kobayashi A, Salamov AA, Chen K, et al. (2005) Comparative metagenomics of microbial communities. Science308: 554\u2013557. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39546,
+                    "infons": {
+                        "title": "Direct sampling of cystic fibrosis lungs indicates that DNA-based analyses of upper-airway specimens can misrepresent lung microbiota",
+                        "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+                        "volume": "109",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Goddard AF, Staudinger BJ, Dowd SE, Joshi-Datar A, Wolcott RD, et al. (2012) Direct sampling of cystic fibrosis lungs indicates that DNA-based analyses of upper-airway specimens can misrepresent lung microbiota. Proceedings of the National Academy of Sciences of the United States of America109: 13769\u201313774. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39902,
+                    "infons": {
+                        "title": "Metagenomic analysis of respiratory tract DNA viral communities in cystic fibrosis and non-cystic fibrosis individuals",
+                        "journal": "PLoS One",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Willner D, Furlan M, Haynes M, Schmieder R, Angly FE, et al. (2009) Metagenomic analysis of respiratory tract DNA viral communities in cystic fibrosis and non-cystic fibrosis individuals. PLoS One4: e7370. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40155,
+                    "infons": {
+                        "title": "Environmental shotgun sequencing: its potential and challenges for studying the hidden world of microbes",
+                        "journal": "PLoS Biology",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Eisen JA (2007) Environmental shotgun sequencing: its potential and challenges for studying the hidden world of microbes. PLoS Biology5: e82. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40345,
+                    "infons": {
+                        "title": "Metagenomic analyses: past and future trends",
+                        "journal": "Applied and Environmental Microbiology",
+                        "volume": "77",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Simon C, Daniel R (2011) Metagenomic analyses: past and future trends. Applied and Environmental Microbiology77: 1153\u20131161. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40517,
+                    "infons": {
+                        "title": "Genomic analysis identifies association of Fusobacterium with colorectal carcinoma",
+                        "journal": "Genome Research",
+                        "volume": "22",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Kostic AD, Gevers D, Pedamallu CS, Michaud M, Duke F, et al. (2012) Genomic analysis identifies association of Fusobacterium with colorectal carcinoma. Genome Research22: 292\u2013298. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Fusobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid848",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:28:39",
+                                "parent_taxonomic_id": "NCBI:txid203492"
+                            },
+                            "id": "38835785",
+                            "locations": {
+                                "length": 13,
+                                "offset": 40632
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 40745,
+                    "infons": {
+                        "title": "Detection of a possible bioterrorism agent, Francisella sp., in a clinical specimen by use of next-generation direct DNA sequencing",
+                        "journal": "Journal of Clinical Microbiology",
+                        "volume": "50",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Kuroda M, Sekizuka T, Shinya F, Takeuchi F, Kanno T, et al. (2012) Detection of a possible bioterrorism agent, Francisella sp., in a clinical specimen by use of next-generation direct DNA sequencing. Journal of Clinical Microbiology50: 1810\u20131812. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Francisella sp",
+                            "infons": {
+                                "identifier": "NCBI:txid262",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:28:42",
+                                "parent_taxonomic_id": "NCBI:txid34064"
+                            },
+                            "id": "38835786",
+                            "locations": {
+                                "length": 14,
+                                "offset": 40860
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 41040,
+                    "infons": {
+                        "title": "Sequencing technologies - the next generation",
+                        "journal": "Nature Reviews Genetics",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Metzker ML (2010) Sequencing technologies - the next generation. Nature Reviews Genetics11: 31\u201346. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41168,
+                    "infons": {
+                        "title": "Sense from sequence reads: methods for alignment and assembly",
+                        "journal": "Nature Methods",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Flicek P, Birney E (2009) Sense from sequence reads: methods for alignment and assembly. Nature Methods6: S6\u2013S12. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41311,
+                    "infons": {
+                        "title": "Fast identification and removal of sequence contamination from genomic and metagenomic datasets",
+                        "journal": "PLoS One",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Schmieder R, Edwards R (2011) Fast identification and removal of sequence contamination from genomic and metagenomic datasets. PLoS One6: e17288. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41505,
+                    "infons": {
+                        "title": "Composition-based classification of short metagenomic sequences elucidates the landscapes of taxonomic and functional enrichment of microorganisms",
+                        "journal": "Nucleic Acids Research",
+                        "volume": "41",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Liu J, Wang H, Yang H, Zhang Y, Wang J, et al. (2013) Composition-based classification of short metagenomic sequences elucidates the landscapes of taxonomic and functional enrichment of microorganisms. Nucleic Acids Research41: e3. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41785,
+                    "infons": {
+                        "title": "Fast and accurate short read alignment with Burrows-Wheeler transform",
+                        "journal": "Bioinformatics",
+                        "volume": "25",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Li H, Durbin R (2009) Fast and accurate short read alignment with Burrows-Wheeler transform. Bioinformatics25: 1754\u20131760. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41955,
+                    "infons": {
+                        "title": "Stampy: a statistical algorithm for sensitive and fast mapping of Illumina sequence reads",
+                        "journal": "Genome Research",
+                        "volume": "21",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Lunter G, Goodson M (2011) Stampy: a statistical algorithm for sensitive and fast mapping of Illumina sequence reads. Genome Research21: 936\u2013939. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42149,
+                    "infons": {
+                        "title": "Aligning short sequencing reads with Bowtie",
+                        "journal": "Current Protocols in Bioinformatics Chapter 11: Unit 11 17",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Langmead B (2010) Aligning short sequencing reads with Bowtie. Current Protocols in Bioinformatics Chapter 11: Unit 11 17[PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42318,
+                    "infons": {
+                        "title": "Fast gapped-read alignment with Bowtie 2",
+                        "journal": "Nature Methods",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Langmead B, Salzberg SL (2012) Fast gapped-read alignment with Bowtie 2. Nature Methods9: 357\u2013359. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42465,
+                    "infons": {
+                        "title": "BFAST: an alignment tool for large scale genome resequencing",
+                        "journal": "PLoS One",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Homer N, Merriman B, Nelson SF (2009) BFAST: an alignment tool for large scale genome resequencing. PLoS One4: e7767. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42631,
+                    "infons": {
+                        "title": "Mapping short DNA sequencing reads and calling variants using mapping quality scores",
+                        "journal": "Genome Research",
+                        "volume": "18",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Li H, Ruan J, Durbin R (2008) Mapping short DNA sequencing reads and calling variants using mapping quality scores. Genome Research18: 1851\u20131858. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42825,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Novocraft Aligner. http://www.novocraft.com.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42873,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. MOSAIK Aligner. bioinformatics.bc.edu/marthlab/Mosaik.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42931,
+                    "infons": {
+                        "title": "SOAP2: an improved ultrafast tool for short read alignment",
+                        "journal": "Bioinformatics",
+                        "volume": "25",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Li R, Yu C, Li Y, Lam TW, Yiu SM, et al. (2009) SOAP2: an improved ultrafast tool for short read alignment. Bioinformatics25: 1966\u20131967. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43097,
+                    "infons": {
+                        "title": "Quality control and preprocessing of metagenomic datasets",
+                        "journal": "Bioinformatics",
+                        "volume": "27",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Schmieder R, Edwards R (2011) Quality control and preprocessing of metagenomic datasets. Bioinformatics27: 863\u2013864. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43261,
+                    "infons": {
+                        "title": "MePIC, metagenomic pathogen identification for clinical specimens",
+                        "journal": "Japanese Journal of Infectious Disease",
+                        "volume": "67",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Takeuchi F, Sekizuka T, Yamashita A, Ogasawara Y, Mizuta K, et al. (2014) MePIC, metagenomic pathogen identification for clinical specimens. Japanese Journal of Infectious Disease67: 62\u201365. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43480,
+                    "infons": {
+                        "title": "A cloud-compatible bioinformatics pipeline for ultrarapid pathogen identification from next-generation sequencing of clinical samples",
+                        "journal": "Genome Research",
+                        "volume": "24",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Naccache SN, Federman S, Veeraraghavan N, Zaharia M, Lee D, et al. (2014) A cloud-compatible bioinformatics pipeline for ultrarapid pathogen identification from next-generation sequencing of clinical samples. Genome Research24: 1180\u20131192. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43767,
+                    "infons": {
+                        "title": "IMSA: integrated metagenomic sequence analysis for identification of exogenous reads in a host genomic background",
+                        "journal": "PLoS One",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Dimon MT, Wood HM, Rabbitts PH, Arron ST (2013) IMSA: integrated metagenomic sequence analysis for identification of exogenous reads in a host genomic background. PLoS One8: e64546. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43997,
+                    "infons": {
+                        "title": "Identification of novel viruses using VirusHunter \u2013 an automated data analysis pipeline",
+                        "journal": "PLoS ONE",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Zhao G, Krishnamurthy S, Cai Z, Popov VL, Travassos da Rosa AP, et al. (2013) Identification of novel viruses using VirusHunter \u2013 an automated data analysis pipeline. PLoS ONE8: e78470. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44231,
+                    "infons": {
+                        "title": "MEGAN analysis of metagenomic data",
+                        "journal": "Genome Research",
+                        "volume": "17",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Huson DH, Auch AF, Qi J, Schuster SC (2007) MEGAN analysis of metagenomic data. Genome Research17: 377\u2013386. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44387,
+                    "infons": {
+                        "title": "Basic local alignment search tool",
+                        "journal": "Journal of Molecular Biology",
+                        "volume": "215",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Altschul SF, Gish W, Miller W, Myers EW, Lipman DJ (1990) Basic local alignment search tool. Journal of Molecular Biology215: 403\u2013410. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44551,
+                    "infons": {
+                        "title": "Rapid identification of non-human sequences in high-throughput sequencing datasets",
+                        "journal": "Bioinformatics",
+                        "volume": "28",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Bhaduri A, Qu K, Lee CS, Ungewickell A, Khavari PA (2012) Rapid identification of non-human sequences in high-throughput sequencing datasets. Bioinformatics28: 1174\u20131175. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44770,
+                    "infons": {
+                        "title": "BLAT\u2013the BLAST-like alignment tool",
+                        "journal": "Genome Research",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Kent WJ (2002) BLAT\u2013the BLAST-like alignment tool. Genome Research12: 656\u2013664. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44897,
+                    "infons": {
+                        "title": "Grinder: a versatile amplicon and shotgun sequence simulator",
+                        "journal": "Nucleic Acids Research",
+                        "volume": "40",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "36. Angly FE, Willner D, Rohwer F, Hugenholtz P, Tyson GW (2012) Grinder: a versatile amplicon and shotgun sequence simulator. Nucleic Acids Research40: e94. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45099,
+                    "infons": {
+                        "title": "A tale of three next generation sequencing platforms: comparison of Ion Torrent, Pacific Biosciences and Illumina MiSeq sequencers",
+                        "journal": "BMC Genomics",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "37. Quail MA, Smith M, Coupland P, Otto TD, Harris SR, et al. (2012) A tale of three next generation sequencing platforms: comparison of Ion Torrent, Pacific Biosciences and Illumina MiSeq sequencers. BMC Genomics13: 341. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45365,
+                    "infons": {
+                        "title": "Comparison of three next-generation sequencing platforms for metagenomic sequencing and identification of pathogens in blood",
+                        "journal": "BMC Genomics",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "38. Frey KG, Herrera-Galeano JE, Redden CL, Luu TV, Servetas SL, et al. (2014) Comparison of three next-generation sequencing platforms for metagenomic sequencing and identification of pathogens in blood. BMC Genomics15: 96. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45634,
+                    "infons": {
+                        "title": "BEDTools: a flexible suite of utilities for comparing genomic features",
+                        "journal": "Bioinformatics",
+                        "volume": "26",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "39. Quinlan AR, Hall IM (2010) BEDTools: a flexible suite of utilities for comparing genomic features. Bioinformatics26: 841\u2013842. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45808,
+                    "infons": {
+                        "title": "Fast algorithms for large-scale genome alignment and comparison",
+                        "journal": "Nucleic Acids Research",
+                        "volume": "30",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "40. Delcher AL, Phillippy A, Carlton J, Salzberg SL (2002) Fast algorithms for large-scale genome alignment and comparison. Nucleic Acids Research30: 2478\u20132483. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46013,
+                    "infons": {
+                        "title": "MEGA5: molecular evolutionary genetics analysis using maximum likelihood, evolutionary distance, and maximum parsimony methods",
+                        "journal": "Molecular Biology and Evolution",
+                        "volume": "28",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "41. Tamura K, Peterson D, Peterson N, Stecher G, Nei M, et al. (2011) MEGA5: molecular evolutionary genetics analysis using maximum likelihood, evolutionary distance, and maximum parsimony methods. Molecular Biology and Evolution28: 2731\u20132739. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46301,
+                    "infons": {
+                        "title": "CAPRG: sequence assembling pipeline for next generation sequencing of non-model organisms",
+                        "journal": "PLoS ONE",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "42. Rawat A, Elasri MO, Gust KA, George G, Pham D, et al. (2012) CAPRG: sequence assembling pipeline for next generation sequencing of non-model organisms. PLoS ONE7: e30370. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46520,
+                    "infons": {
+                        "title": "progressiveMauve: multiple genome alignment with gene gain, loss and rearrangement",
+                        "journal": "PLoS One 5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "43. Darling AE, Mau B, Perna NT (2010) progressiveMauve: multiple genome alignment with gene gain, loss and rearrangement. PLoS One 5[PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46697,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "44. Kunin V, Copeland A, Lapidus A, Mavromatis K, Hugenholtz P (2008) A bioinformatician's guide to metagenomics. Microbiology and Molecular Miology Reviews 72: : 557\u2013578, Table of Contents. [PMC free article] [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46915,
+                    "infons": {
+                        "title": "Use of simulated data sets to evaluate the fidelity of metagenomic processing methods",
+                        "journal": "Nature Methods",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "45. Mavromatis K, Ivanova N, Barry K, Shapiro H, Goltsman E, et al. (2007) Use of simulated data sets to evaluate the fidelity of metagenomic processing methods. Nature Methods4: 495\u2013500. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47128,
+                    "infons": {
+                        "title": "Evaluating the fidelity of de novo short read metagenomic assembly using simulated data",
+                        "journal": "PLoS One",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "46. Pignatelli M, Moya A (2011) Evaluating the fidelity of de novo short read metagenomic assembly using simulated data. PLoS One6: e19984. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47312,
+                    "infons": {
+                        "title": "The Sequence Alignment/Map format and SAMtools",
+                        "journal": "Bioinformatics",
+                        "volume": "25",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "47. Li H, Handsaker B, Wysoker A, Fennell T, Ruan J, et al. (2009) The Sequence Alignment/Map format and SAMtools. Bioinformatics25: 2078\u20132079. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47500,
+                    "infons": {
+                        "title": "Pulmonary bacterial pathogens in cystic fibrosis patients and antibiotic therapy: a tool for the health workers",
+                        "journal": "International Archives of Medicine",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "48. Coutinho HD, Falcao-Silva VS, Goncalves GF (2008) Pulmonary bacterial pathogens in cystic fibrosis patients and antibiotic therapy: a tool for the health workers. International Archives of Medicine1: 24. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47752,
+                    "infons": {
+                        "title": "The airway microbiota in cystic fibrosis: a complex fungal and bacterial community\u2013implications for therapeutic management",
+                        "journal": "PLoS One",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "49. Delhaes L, Monchy S, Frealle E, Hubans C, Salleron J, et al. (2012) The airway microbiota in cystic fibrosis: a complex fungal and bacterial community\u2013implications for therapeutic management. PLoS One7: e36313. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48011,
+                    "infons": {
+                        "title": "Evidence for transmission of Pseudomonas cepacia by social contact in cystic fibrosis",
+                        "journal": "Lancet",
+                        "volume": "342",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "50. Govan JR, Brown PH, Maddison J, Doherty CJ, Nelson JW, et al. (1993) Evidence for transmission of Pseudomonas cepacia by social contact in cystic fibrosis. Lancet342: 15\u201319. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas cepacia",
+                            "infons": {
+                                "identifier": "NCBI:txid292",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:29:50",
+                                "parent_taxonomic_id": "NCBI:txid32008"
+                            },
+                            "id": "38835787",
+                            "locations": {
+                                "length": 19,
+                                "offset": 48113
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 48214,
+                    "infons": {
+                        "title": "Molecular detection of multiple emerging pathogens in sputa from cystic fibrosis patients",
+                        "journal": "PLoS One",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "51. Bittar F, Richet H, Dubus JC, Reynaud-Gaubert M, Stremler N, et al. (2008) Molecular detection of multiple emerging pathogens in sputa from cystic fibrosis patients. PLoS One3: e2908. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48446,
+                    "infons": {
+                        "title": "Partitioning core and satellite taxa from within cystic fibrosis lung bacterial communities",
+                        "journal": "The ISME Journal",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "52. Van der Gast CJ, Walker AW, Stressmann FA, Rogers GB, Scott P, et al. (2011) Partitioning core and satellite taxa from within cystic fibrosis lung bacterial communities. The ISME Journal5: 780\u2013791. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48692,
+                    "infons": {
+                        "title": "Whole genome single nucleotide polymorphism based phylogeny of Francisella tularensis and its application to the development of a strain typing assay",
+                        "journal": "BMC Microbiology",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "53. Pandya GA, Holmes MH, Petersen JM, Pradhan S, Karamycheva SA, et al. (2009) Whole genome single nucleotide polymorphism based phylogeny of Francisella tularensis and its application to the development of a strain typing assay. BMC Microbiology9: 213. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Francisella tularensis",
+                            "infons": {
+                                "identifier": "NCBI:txid263",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 19:29:57",
+                                "parent_taxonomic_id": "NCBI:txid262"
+                            },
+                            "id": "38835788",
+                            "locations": {
+                                "length": 22,
+                                "offset": 48835
+                            }
+                        }
+                    ],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

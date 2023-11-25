@@ -1,0 +1,1459 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC6964864",
+            "inputfile": "../microbiome_corpus_HTML\\PMC6964864.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Comparing bioinformatic pipelines for microbial 16S rRNA amplicon sequencing",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 76,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Microbial amplicon sequencing studies are an important tool in biological and biomedical research. Widespread 16S rRNA gene microbial surveys have shed light on the structure of many ecosystems inhabited by bacteria, including the human body. However, specialized software and algorithms are needed to convert raw sequencing data into biologically meaningful information (i.e. tables of bacterial counts). While different bioinformatic pipelines are available in a rapidly changing and improving field, users are often unaware of limitations and biases associated with individual pipelines and there is a lack of agreement regarding best practices. Here, we compared six bioinformatic pipelines for the analysis of amplicon sequence data: three OTU-level flows (QIIME-uclust, MOTHUR, and USEARCH-UPARSE) and three ASV-level (DADA2, Qiime2-Deblur, and USEARCH-UNOISE3). We tested workflows with different quality control options, clustering algorithms, and cutoff parameters on a mock community as well as on a large (N = 2170) recently published fecal sample dataset from the multi-ethnic HELIUS study. We assessed the sensitivity, specificity, and degree of consensus of the different outputs. DADA2 offered the best sensitivity, at the expense of decreased specificity compared to USEARCH-UNOISE3 and Qiime2-Deblur. USEARCH-UNOISE3 showed the best balance between resolution and specificity. OTU-level USEARCH-UPARSE and MOTHUR performed well, but with lower specificity than ASV-level pipelines. QIIME-uclust produced large number of spurious OTUs as well as inflated alpha-diversity measures and should be avoided in future studies. This study provides guidance for researchers using amplicon sequencing to gain biological insights.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 06:33:50",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "32724864",
+                            "locations": {
+                                "length": 8,
+                                "offset": 283
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 1820,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Microbial surveys based on 16S rRNA gene amplicon sequencing are an important tool in environmental and biomedical research [1\u20132]. Microbial community structure can provide valuable insights not only into the workings of natural ecosystems, but increasingly into the relationship between the human host and its bacterial colonizers. Rapid progress in DNA sequencing technology has provided ever-increasing outputs coupled with lowered costs, facilitating an explosion in amplicon sequencing studies [3]. Unfortunately, these studies are vulnerable to potential biases introduced along the workflow and there is a lack of consensus regarding best practices [4\u20135]. This paper aims to provide researchers (e.g. ecologists, microbiologists, biomedical researchers) with a overview of the strengths and weaknesses of six of the most popular current bioinformatic pipelines for 16S rRNA gene amplicon sequencing. While this selection is not a comprehensive set, it includes some of the most used (QIIME [6], MOTHUR [4], and USEARCH [5]) as well as more recent options (DADA2 [6] and Qiime2-Deblur [7\u20138]). Three of these pipelines cluster sequences at (typically) 97% identity into Operational Taxonomical Units (OTUs): QIIME-uclust, MOTHUR and USEARCH-UPARSE. The other three (Qiime2-Deblur, DADA2, and USEARCH-UNOISE3) attempt to reconstruct the exact biological sequences present in the sample, so-called Amplicon Sequence Variants (ASVs) [9]. ASVs are referred to by other authors as \u201czero noise OTUs\u201d [10] or \u201csub-OTUs\u201d [7].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3354,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The pipelines benchmarked here may perform better than reported in this paper if their parameters are customly tuned for an individual dataset. However, we believe that the vast majority of users employ either default or author-recommended settings. We therefore aimed to compare pipelines under these typical conditions in order to match the most plausible use scenarios. We examined the effect of different quality filtering steps (for QIIME-uclust, Qiime2-Deblur, and DADA2) and of different clustering algorithms and cutoffs (for MOTHUR), as we deemed these to be the most likely pipeline variations users might attempt. While other benchmarking studies have been published, they relied only on simulated (synthetic) reads [11] or on very small data sets [12].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4118,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In this paper, pipelines were compared using a mock sample sequenced repeatedly over multiple sequencing runs as well as a large (N = 2170 individuals) fecal sample dataset from the \u201cHealthy Life in an Urban Setting\u201d (HELIUS) multi-ethnic study [13\u201314]. We examined the specificity and sensitivity of each workflow (e.g. number of spurious OTUs/ASVs produced), the quantitative agreement between the inferred relative abundances, as well as any pipeline-specific effects on downstream alpha-diversity measures.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4628,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "Mock community ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Genomic DNA from the Microbial Mock Community B (Even, Low concentration), v5.1L (Catalog no. HM-782D, obtained through BEI Resources, NIAID, NIH as part of the Human Microbiome Project) was sequenced in three separate runs. Details of mock composition are included in S1 Table. The mock contains DNA from 20 bacterial strains in equimolar (Even) ribosomal RNA operon counts (100000 copies per organism per \u03bcL). Two of the strains (Bacteriodes vulgatus and Clostridium beijerinckii) have multiple sequence variants in the V4 region of the 16S rRNA gene. B. vulgatus has three variants (in a 5:1:1 ratio), whereas C. beijerinckii has two variants (in a 13:1 ratio). The 16S rRNA sequences of Staphylococcus aureus and Staphylococcus epidermidis are identical in the V4 region. Therefore, the mock contains a total of 22 variants (ASVs) of the 16S gene in the V4 region. These sequences correspond to 19 OTUs when clustered at 97% identity. The mock community was sequenced three times in different sequencing runs. The mock raw sequence data is publicly available (https://github.com/andreiprodan/mock-sequences).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Clostridium beijerinckii",
+                            "infons": {
+                                "identifier": "NCBI:txid1520",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 06:34:43",
+                                "parent_taxonomic_id": "NCBI:txid1485"
+                            },
+                            "id": "32724865",
+                            "locations": {
+                                "length": 24,
+                                "offset": 5085
+                            }
+                        },
+                        {
+                            "text": "B. vulgatus",
+                            "infons": {
+                                "identifier": "NCBI:txid821",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 06:34:44",
+                                "parent_taxonomic_id": "NCBI:txid909656"
+                            },
+                            "id": "32724866",
+                            "locations": {
+                                "length": 11,
+                                "offset": 5182
+                            }
+                        },
+                        {
+                            "text": "C. beijerinckii",
+                            "infons": {
+                                "identifier": "NCBI:txid1520",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 06:34:45",
+                                "parent_taxonomic_id": "NCBI:txid1485"
+                            },
+                            "id": "32724867",
+                            "locations": {
+                                "length": 15,
+                                "offset": 5241
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus aureus",
+                            "infons": {
+                                "identifier": "NCBI:txid1280",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 06:34:46",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "32724868",
+                            "locations": {
+                                "length": 21,
+                                "offset": 5319
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus epidermidis",
+                            "infons": {
+                                "identifier": "NCBI:txid1282",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 06:34:46",
+                                "parent_taxonomic_id": "NCBI:txid1279"
+                            },
+                            "id": "32724869",
+                            "locations": {
+                                "length": 26,
+                                "offset": 5345
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 5775,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "HELIUS fecal samples dataset ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "A total of 2170 fecal samples obtained from adult individuals from six ethnic groups in Amsterdam, the Netherlands (the HELIUS study) were sequenced. Cohort information and detailed sample collection and processing protocols have been previously described [13\u201314]. The HELIUS fecal sample dataset contained 177.08 million paired-end reads obtained from 17 individual sequencing runs. All raw sequencing data from this dataset is available on the European Genome-phenome Archive repository (accession no. EGAD00001004106).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6325,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "Library preparation and sequencing",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Library preparation and sequencing was performed at the Wallenberg Laboratory (Sahlgrenska University of Gothenburg, Sweden). Total genomic DNA was extracted from a 150 mg fecal sample aliquot using a repeated bead beating method as previously described [15]. Fecal microbiome composition was profiled by sequencing the V4 region of the 16S rRNA gene on an Illumina MiSeq instrument (Illumina RTA v1.17.28; MCS v2.5) with 515F and 806R primers designed for dual indexing [16] and the V2 Illumina kit (2x250 bp paired-end reads). 16S rRNA genes from each sample were amplified in duplicate reactions in volumes of 25 \u03bcL containing 1x Five Prime Hot Master Mix (5 PRIME GmbH), 200 nM of each primer, 0.4 mg/ml BSA, 5% DMSO and 20 ng of genomic DNA. PCR was carried out under the following conditions: initial denaturation for 47 min at 94\u00b0C, followed by 25 cycles of denaturation for 45 sec at 94\u00b0C, annealing for 60 sec at 52\u00b0C and elongation for 90 sec at 72\u00b0C, and a final elongation step for 10 min at 72\u00b0C. Duplicates were combined, purified with the NucleoSpin Gel and PCR Clean-up kit (Macherey-Nagel) and quantified using the Quant-iT PicoGreen dsDNA kit (Invitrogen). Purified PCR products were diluted to 10 ng/\u03bcL and pooled in equal amounts. The pooled amplicons were purified again using Ampure magnetic purification beads (Agencourt) to remove short amplification products. Libraries for sequencing were prepared by mixing the pooled amplicons with PhiX control DNA purchased from Illumina. The input DNA had a concentration of 3 pM and contained 15% PhiX and resulted in the generation of about 700K clusters/mm2 and an overall percentage of bases with quality score higher than 30 (Q30) higher than 70%.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8075,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "Pipelines and parameters",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Six different pipelines were included in this comparison: QIIME (v.1.9.1) [17], MOTHUR (v.1.39.5) [4], DADA2 (1.7.0) [6], Qiime2 (v.2017.6.0)-Deblur [7,8], USEARCH (v.10.0.240)-UPARSE [18], and USEARCH (v.10.0.240)-UNOISE3 [10].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8327,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "Paired-end reads merging and quality filtering ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "In MOTHUR, the merging and quality filtering of reads (\u201cscreening\u201d) is an integral part of the pipeline, not easily performed outside MOTHUR. We therefore used MOTHUR only with its internal read merging and filtering. In DADA2\u2014in contrast to all other pipelines\u2014denoising is always implemented separately on the forward and the reverse reads, with resulting ASVs merged at the end of the workflow. External merging / filtering is therefore not applicable to DADA2, while it can be integrated with relative ease into QIIME and Qiime2 workflows. We therefore implemented one workflow in QIIME-uclust and one workflow in Qiime2-Deblur where reads were merged and filtered externally using USEARCH. The author of USEARCH explicitly advises against using the default USEARCH read merging parameters for reads with a long overlap (e.g. MiSeq 2 x 250bp V4) and argues in favor of maximizing the proportion of reads that survive the merging step. We therefore benchmarked several settings for the merging step. Based on the outcomes (Fig 1), we chose 30 max. allowed differences in the overlapping region (\u201cmaxdiffs\u201d) for the merging step (using the \u201cfastq_mergepairs\u201d command) and max. 1 expected errors (\u201cfastq_maxee\u201d) as a quality filter threshold (using the \u201cfastq_filter\u201d command). The rationale was to use permissive parameters in the merging step in order to fully exploit the error correction made possible by the overlapping of the reads (e.g. a lower Q-score sequencing error in the reverse read can be rectified using the higher Q-score correct base call from the forward read). Strict thresholds (i.e. low \u201cmaxdiffs\u201d) discard read pairs where mismatches due to an error on one read might have been easily corrected using the complementary read. As Fig 1 shows, more relaxed merging parameters resulted in around 10% more of total raw reads (82.9% compared to 73.5%) passing the quality filter. These merging / filtering parameters were used in the USEARCH-UPARSE, USEARCH-UNOISE3, QIIME-uclust (e30.ee1), and Qiime2-Deblur (e30.ee1) flows. Expected error-based read quality filtering is described in detail in Edgar et al. 2015 [19].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10511,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "QIIME-uclust ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "In the typical QIIME-uclust workflow, forward and reverse reads are merged using the \u201cmultiple_join_paired_ends.py\u201d script. Subsequently, quality control and demultiplexing are performed simultaneously using the \u201cmultiple_split_libraries_fastq.py\u201d script, which truncates the reads if more than r (default 3) consecutive bases do not have a Q-score higher than q (default 3). Reads are discarded if, after trimming, the read length drops to less than p (default 0.75) of initial length. By default, no ambiguous bases (\u201cN\u201d) are allowed (default is 0). OTU clustering was performed using the \u201cpick_open_reference_otus.py\u201d script, with all default parameters. This script implements the latest QIIME open reference OTU clustering [20]. In brief, it performs closed reference clustering against the Greengenes (v.13.8) 97% OTU database, using UCLUST v.1.2.22q [5]; reads that do not map in this first step are subsampled (default proportion of subsampling = 0.001) and used as new centroids for a de novo OTU clustering step. Remaining unmapped reads are subsequently closed-reference clustered against these de novo OTUs. Finally, another step of de novo clustering is performed on the remaining unmapped reads.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11733,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "QIIME-uclust ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Three different QIIME-uclust workflows were run using different merging and quality control parameters. One QIIME-uclust flow used all default parameters (\u201cQIIME-uclust (default)\u201d), while another was run with the q parameter set to 19 instead of default 3 (\u201cQIIME-default (Q20)\u201d). For the 3rd flow the read merging and quality control steps were performed outside QIIME, using USEARCH with the same parameters used in the USEARCH flows: max. 30 allowed mismatches in the overlapping region for merging, max. 1 allowed expected error per merged read for filtering (\u201cQIIME-uclust (e30.ee1)\u201d).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12323,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "MOTHUR ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "In MOTHUR, paired-end reads are merged using the \u201cmake.contigs\u201d command. This aligns the forward and reverse reads and, if a position in the overlapping region has different base calls in the forward read versus the reverse read, compares the forward read Q-score and the reverse read Q-score for that position. If one of the two Q-scores is at least \u201cdeltaq\u201d points higher than the other (default deltaq is 6), then the merged read will use the respective base call. Otherwise, if the difference between the forward and the reverse base call Q-scores is less than deltaq, the base at that position is re-labelled as ambiguous (\u201cN\u201d}). Quality filtering is implemented with the\u201dscreen.seqs\u201d command, which (by default) removes all merged reads containing ambiguous bases. Sequences are then deduplicated, aligned to a database (SILVA v.128), and pre-clustered (i.e. sequences with less than 2 base differences (\u201cdiffs\u201d) from a more abundant sequence are merged with the more abundant sequence). Chimeric reads are removed (\u201cchimera.vsearch\u201d) and remaining uniques are clustered into OTUs.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13417,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "MOTHUR ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Two different clustering algorithms were used in MOTHUR: Opticlust (the current default) and DGC (Distance-based Greedy Clustering).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13549,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "MOTHUR ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Opticlust [21] is a distance-based algorithm and therefore requires a distance matrix to be constructed between all unique sequences. The size of this matrix scales with the square of the number of sequences and can thus become problematic with large datasets (since the matrix must fit into available RAM memory). This issue can be side-stepped with the \u201csplit.abund\u201d command, removing sequences with extremely low abundance after the pre-clustering step. In this study, a cutoff of 3 was used for the MOTHUR-Opticlust flow, keeping only sequences with more than 3 counts in the entire dataset (\u201cMOTHUR (Opticlust.3)\u201d).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14169,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "MOTHUR ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "DGC uses Vsearch [22] (an open source alternative to USEARCH) in order to perform greedy clustering which does not require a distance matrix. Three different MOTHUR pipelines were run with DGC clustering, applying different cutoffs to the \u201csplit.abund\u201d command after the preclustering step: \u201cMOTHUR (DGC.0)\u201d (cutoff 0, i.e. not removing any sequences), \u201cMOTHUR (DGC.1)\u201d (cutoff 1, i.e. only removing singletons, sequences that appear only once in the entire dataset), and \u201cMOTHUR (DGC.3)\u201d (cutoff 3, i.e. removing unique sequences with at most 3 counts in the entire dataset).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14745,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "DADA2 ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "DADA2 (Divisive Amplicon Denoising Algorithm 2) uses a parametric model to infer true biological sequences from reads. The model relies on input read abundances (true reads are likely to be more abundant) and distances (less abundant reads only a few base-differences away from a more abundant sequence are likely error-derived). Base Q-scores are used to calculate a substitution model, estimating a probability for each possible base substitution (e.g. A replacing G, G replacing T, etc). Based on this substitution model and on the input reads abundances and reciprocal distances, DADA2 uses a probability threshold to decide whether to assign counts from a less abundant, \u201cerror-derived\u201d read to a more abundant, \u201ctrue\u201d sequence. DADA2 was run as an R script (in R v.3.4) using its R package (dada2 v.1.7).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15561,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "DADA2 ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "In DADA2, reads are quality-filtered using the \u201cfilterAndTrim\u201d function. Error rates are subsequently learned from a set of subsampled reads (i.e. 1 million random reads). Error rates are estimated separately for each sequencing run, since different runs may have different error profiles. Reads are then deduplicated and ASVs are inferred. Uniquely, DADA2 retains a summary of the quality scores associated with each unique sequence (the average of the positional qualities from deduplicated reads). These quality scores are subsequently used to perform ASV inference. Also, unlike all the other pipelines, DADA2 denoises the forward and the reverse reads independently. ASVs from the forward and reverse flows are only merged at the end of the workflow prior to the removal of chimeric ASVs, using \u201cremoveChimeraDenovo\u201d.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16383,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "DADA2 ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Two DADA2 pipeline flows were run using different quality score filters. Both flows truncated reads by removing the last 10 bases from the forward reads and the last 40 bases from the reverse reads, as well as truncating / removing reads with ambiguous bases. The 1st DADA2 flow, \u201cDADA2 (ee2)\u201d, filtered (trimmed) reads to max. 2 allowed expected errors per read, while the 2nd, \u201cDADA2 (no filter)\u201d, did not use an expected error-based filter. Removing or truncating reads with ambiguous bases is mandatory in DADA2.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16899,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "Qiime2-Deblur ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Qiime2 [8] is the successor platform to QIIME. It incorporates several plugins, including DADA2 and Deblur. We used Qiime2 in combination with its Deblur plugin [7], following the flow for paired-end reads from the Qiime2 website (https://qiime2.org/). Raw reads were imported into a Qiime2 artifact before merging paired-end reads and quality filtering. An artifact is a Qiime2-specific file format which holds data as well as metadata, provenance, and version information. Reads were then denoised using the \u201cdeblur denoise-16S\u201d command, trimming reads at a length of 250 bases.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17493,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "Qiime2-Deblur ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Deblur compares sequence-to-sequence Hamming distances to an upper-bound error profile combined with a greedy algorithm [7]. Sequences are sorted by abundance, then the number of predicted error-derived reads is subtracted from the counts of neighboring reads based on their read-to-read Hamming distance. Any sequence whose abundance drops to 0 during this process is removed. The Deblur algorithm is applied to each sample independently.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17932,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "Qiime2-Deblur ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Three different Qiime2-Deblur flows were run. In the first, \u201cQiime2-Deblur (default), merging and trimming were performed inside Qiime2 using the \u201cvsearch\u201d plugin [22] (for merging) and the \u201cquality-filter q-score\u201d plugin (for filtering) with default options\u201d. Similar to the quality filtering in QIIME, the Qiime2 quality-filter truncates reads if more than 3 consecutive bases do not have a Q-score higher than 3 and discards them if post-trimming read length is less than 0.75 of initial length. No ambiguous bases are allowed. The second Qiime2 flow, \u201cQiime2-Deblur (Q20)\u201d, used the same parameters as the first, but with the Q-score threshold (\u201cp-min-quality\u201d) set to 20 In the third Qiime2 flow, \u201cQiime2-Deblur (e30.ee1)\u201d, read merging and quality control were performed outside Qiime2, using USEARCH with the same parameters used in the USEARCH flows.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18790,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "USEARCH-UPARSE and USEARCH-UNOISE3 ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Both the UPARSE [18] and the UNOISE3 [10] pipelines are implemented in USEARCH [5]. The merging and filtering (covered in the \u201cPaired-end reads merging and quality filtering\u201d subsection) as well as deduplicating (\u201cfastx_uniques\u201d command) are therefore identical for UPARSE and UNOISE3 and only need to be performed once, before the pipelines branch off into OTU-level clustering (with UPARSE) or ASV-level denoising (with UNOISE3). Indeed, the author of USEARCH advises that UPARSE and UNOISE3 should be performed together (https://drive5.com/usearch/manual/faq_uparse_or_unoise.html).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19410,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "USEARCH-UPARSE and USEARCH-UNOISE3 ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "UPARSE uses the UPARSE-REF greedy algorithm to infer errors using the concept of parsimony. In brief, UPARSE-REF aims to explain a given input sequence starting from sequences in a database, using the fewest possible number of events (i.e. PCR or sequencing errors). It constructs a model sequence using one or more sequences from the database (i.g. a single sequence representing a non-chimeric amplicon, or multiple concatenated segments representing a chimeric amplicon). Different penalty scores are given for chimeric crossover and for mismatches and the model sequence with the lowest total score is chosen as the true OTU sequence. Sequences are ranked in decreasing order of abundance, discarding singletons. Each input sequence is then compared to the current OTU set and to the maximum parsimony model sequence constructed using UPARSE-REF. If the model sequence is more than 97% identical to an existing OTU, the sequence is assigned to the respective OTU. It the model sequence is chimeric, the sequence is discarded. Finally, if the model is less than 97% identical to any existing OTU, the sequence is added to the existing OTU set. After all OTUs are found, all merged reads (including those dropped during quality filtering) are mapped against the OTUs to construct the OTU table.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20706,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "USEARCH-UPARSE and USEARCH-UNOISE3 ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The UNOISE3 flow ranks sequences in decreasing order of abundance, discarding sequences with less than 8 counts (the default min. abundance default threshold). The ASV set is initially empty. A model is then applied (Eq 1) to each input sequence in order to test whether its abundance (aM) is sufficiently large compared to the abundance of its closest sequence (aC) at Levenshtein distance d. The default value of the \u03b1 parameter is 2. If Eq (1) holds, the input sequence becomes a new ASV; else, the input sequence it assigned to the nearest existing ASV. The final set of ASVs undergoes chimera filtering using the UCHIME2 [23] algorithm in de novo mode. Similar to UPARSE, the final step in the UNOISE3 flow is to map all merged reads to non-chimeric ASVs in order to construct the ASV table.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21502,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "USEARCH-UPARSE and USEARCH-UNOISE3 ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Both the UPARSE clustering (the \u201ccluster_otus\u201d command) and the UNOISE3 denoising (the \u201cunoise3\u201d command) steps were executed with all default settings. In both flows, all samples in a data set were processed together, rather than individually, in order to achieve optimal sensitivity.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21787,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "Data analysis",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "All OTU/ASV tables produced by the pipelines were converted into phyloseq objects using the \u201cphyloseq\u201d package [24](v.1.24.2). Alpha diversity measures (richness, Chao1, Shannon index, inverse Simpson index) were calculated using the \u201cestimate_richness\u201d function from \u201cphyloseq\u201d. OTUs/ASVs were classified as \u201cExact\u201d (perfect match to a true sequence in the mock community), \u201cOne-off\u201d (at 1 Hamming distance away from a true sequence), or \u201cOther\u201d (at more than 1 Hamming distance from a true sequence). Sequence-to-sequence Hamming distances were calculated using the \u201cstringdist\u201d R package (v.0.9.5.1). \u201cOne-off\u201d and \u201cOther\u201d were together labeled as \u201cSpurious\u201d.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22462,
+                    "infons": {
+                        "section_title_1": "Material and methods",
+                        "section_title_2": "Data analysis",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Plots were constructed in R [25] (v.3.4) using the \u201cggplot2\u201d[26] (v.3.1.0), \u201ccorrplot\u201d[27] (v.0.84), and \u201cVennDiagram\u201d[28] (v.1.6.20) packages.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22605,
+                    "infons": {
+                        "section_title_1": "Results and discussion",
+                        "section_title_2": "Sensitivity and specificity ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "An overview of Exact, One-Off, and Spurious OTUs/ASVs produced by the different pipelines using reads from the three mock sequencing runs is shown in Table 1. The three mock sample runs had 36464, 84054, and 146653 paired-end reads, respectively. For each OTU/ASV sequence produced by the different flows, Hamming distances to the closest true sequence (Fig 2) and to the closest other OTU/ASV in the respective flow (Fig 3) were plotted as function of ASV/OTU abundance.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23126,
+                    "infons": {
+                        "section_title_1": "Results and discussion",
+                        "section_title_2": "Sensitivity and specificity ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "DADA2 showed the best sensitivity, detecting all 22 true ASVs present in the mock and was was the only pipeline able to differentiate sequences at single-base resolution even at high abundance ratios (e.g. the 13:1 ratio between the two C. beijenrickii variants). It only missed the low-abundance C. beijenrickii variant ASV in the sequencing run with the lowest number of raw reads. USEARCH-UNOISE3 was also capable of single-base resolution, but was limited (due to the default setting of \u03b1 parameter, see Eq 1, Methods) to single-base difference variants present at a no more than 8:1 abundance ratio. Thus, it was able to differentiate between the three B. vulgatus ASVs (ratio 5:1:1), but not between the two C. beijenrickii variants (ratio 13:1) (Fig 3). In effect, USEARCH-UNOISE3 (with default parameters) does not detect ASVs at 1 Hamming distance from another sequence that is >8 times more abundant.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "B. vulgatus",
+                            "infons": {
+                                "identifier": "NCBI:txid821",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 06:38:24",
+                                "parent_taxonomic_id": "NCBI:txid909656"
+                            },
+                            "id": "32724870",
+                            "locations": {
+                                "length": 11,
+                                "offset": 23784
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 24036,
+                    "infons": {
+                        "section_title_1": "Results and discussion",
+                        "section_title_2": "Sensitivity and specificity ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "USEARCH-UNOISE3 and Qiime2-Deblur were the only two pipelines to show perfect specificity on the mock sample sequencing data, producing no spurious OTUs/ASVs. Although showing the best sensitivity, DADA2 flows did produce some spurious ASVs. USEARCH-UPARSE and MOTHUR also produces some spurious OTUs. In MOTHUR, there was a visible effect of the cutoff applied to very low abundance sequences prior to clustering. While MOTHUR (DGC.0) and MOTHUR (DGC.1) both produced more spurious OTUs compared to USEARCH-UPARSE, the higher cutoff MOTHUR workflows (DGC.3 and Opticlust.3) produced fewer spurious features and were the OTU-level flows with the best specificity. In our analysis, all MOTHUR flows generated far fewer OTUs compared to QIIME-uclust, in contrast to a similar benchmark performed by the DADA2 authors [6]. It should be noted that USEARCH-UPARSE (by default) automatically removes singletons in the OTU clustering step.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24968,
+                    "infons": {
+                        "section_title_1": "Results and discussion",
+                        "section_title_2": "Sensitivity and specificity ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Both DADA2 and USEARCH-UNOISE3 showed high accuracy in the quantification of abundance ratios in the case of 1-base-pair-difference ASVs (Table 2), yielding values close to the true ratios. Qiime2-Deblur did not differentiate any of the mock ASVs that were only 1 Hamming distance apart and thus did not demonstrate single-base resolution in this analysis.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25324,
+                    "infons": {
+                        "section_title_1": "Results and discussion",
+                        "section_title_2": "Sensitivity and specificity ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Extremely low abundance spurious OTUs/AVSs can be filtered out with relative ease in downstream analysis steps and may therefore have marginal impact on end results. However, QIIME-uclust flows assigned more than 12% of total counts to spurious OTUs, compared to at most 0.17% in other pipelines (Table 3). All three QIIME-uclust flows produced hundreds of spurious OTUs (around 25 times more than the number of true sequences in the mock sample), orders of magnitude more compared to other pipelines. While the flow using the external (and more stringent) quality control produced fewer spurious OTUs compared to the other two flows, the improvement was relatively small (around 10%).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26009,
+                    "infons": {
+                        "section_title_1": "Results and discussion",
+                        "section_title_2": "Pipeline- and parameter-dependent biases",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Biases affecting the inferred sample composition (systematic under- or over-estimation of certain taxa) pose a problem for amplicon sequencing bioinformatic pipelines, particularly if influenced by factors that can vary between samples or sequencing runs (e.g. read sequencing quality). We observed one such bias in the QIIME-uclust output (Fig 4A). While most workflows yielded very similar relative abundance values, all QIIME-uclust flows severely under-estimated the abundance of three OTUs (corresponding to Neisseria meningitis, Pseudomonas aeruginosa, and Rhodobacter sphaeroides). The bias was caused by QIIME-uclust assigning a large proportion of the counts of these true OTUs to other, spurious OTUs. This effect was independent of quality filtering parameters (i.e. it was observed in all three QIIME-uclust flows) and is likely intrinsic to the closed-reference OTU clustering specific to QIIME-uclust.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Neisseria",
+                            "infons": {
+                                "identifier": "NCBI:txid482",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 06:38:55",
+                                "parent_taxonomic_id": "NCBI:txid481"
+                            },
+                            "id": "32724871",
+                            "locations": {
+                                "length": 9,
+                                "offset": 26522
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 06:38:55",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "32724872",
+                            "locations": {
+                                "length": 22,
+                                "offset": 26544
+                            }
+                        },
+                        {
+                            "text": "Rhodobacter sphaeroides",
+                            "infons": {
+                                "identifier": "NCBI:txid1063",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 06:38:55",
+                                "parent_taxonomic_id": "NCBI:txid1653176"
+                            },
+                            "id": "32724873",
+                            "locations": {
+                                "length": 23,
+                                "offset": 26572
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26964,
+                    "infons": {
+                        "section_title_1": "Results and discussion",
+                        "section_title_2": "Pipeline- and parameter-dependent biases",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Another bias was induced in DADA2 (Fig 4B) by quality filtering. While the DADA2 (no filter) flow gave results in line with that of other pipelines (Fig 4A), the DADA2 (ee2) flow under-estimated the relative abundance of three ASVs (Lactobacillus gasseri, Streptococcus agalactiae, and Streptococcus pneumoniae). This bias was caused by preferential filtering (exclusion) of reads from these ASVs in the quality filtering step. While it is widely known that Illumina sequencing error rates are position-dependent (i.e. error rates tend to increase towards the end of the read), it is often neglected that they may also be affected by underlying sequence patterns [29]. Particular patterns of bases may result in much higher base call error rates than would be expected. Examples of such patterns are \u201cGGC\u201d triplets or inverted repeats (more than 8 bases long) located upstream of the respective position [29]. Thus, if a particular ASV sequence happens to contains such a pattern, application of a quality filter will exclude its reads preferentially before the denoising step. The V4 region of the 16S rRNA gene contains 8 instances of the \u201cGGC\u201d pattern for L. gasseri, 7 for S. agalactiae, and 9 for S. pneumoniae, though other patterns likely contribute to the effect. In practice, this presents an issue only for DADA2 (in the case of paired-end sequencing) since all other pipelines merge paired-end reads before clustering/denoising. In these other flows, the errors at the position where the pattern is present are corrected using information from the complementary read in the pair. Considering that the additional quality filter did not improve the specificity of the DADA2 pipeline (Table 2, Fig 2) while introducing a significant bias in the output (Fig 4B), we advise against it.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Lactobacillus gasseri",
+                            "infons": {
+                                "identifier": "NCBI:txid1596",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 06:39:03",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "32724874",
+                            "locations": {
+                                "length": 21,
+                                "offset": 27196
+                            }
+                        },
+                        {
+                            "text": "Streptococcus agalactiae",
+                            "infons": {
+                                "identifier": "NCBI:txid1311",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 06:39:03",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "32724875",
+                            "locations": {
+                                "length": 24,
+                                "offset": 27220
+                            }
+                        },
+                        {
+                            "text": "Streptococcus pneumoniae",
+                            "infons": {
+                                "identifier": "NCBI:txid1313",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 06:39:03",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "32724876",
+                            "locations": {
+                                "length": 24,
+                                "offset": 27250
+                            }
+                        },
+                        {
+                            "text": "L. gasseri",
+                            "infons": {
+                                "identifier": "NCBI:txid1596",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 06:39:14",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "32724877",
+                            "locations": {
+                                "length": 10,
+                                "offset": 28123
+                            }
+                        },
+                        {
+                            "text": "S. agalactiae",
+                            "infons": {
+                                "identifier": "NCBI:txid1311",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 06:39:14",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "32724878",
+                            "locations": {
+                                "length": 13,
+                                "offset": 28141
+                            }
+                        },
+                        {
+                            "text": "S. pneumoniae",
+                            "infons": {
+                                "identifier": "NCBI:txid1313",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 06:39:14",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "32724879",
+                            "locations": {
+                                "length": 13,
+                                "offset": 28166
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 28755,
+                    "infons": {
+                        "section_title_1": "Results and discussion",
+                        "section_title_2": "Conversion of reads to counts ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Large throughput is desirable to improve detection of low abundance taxa and to maximize the chance than samples with a lower number of sequencing reads will yield sufficient counts to be included in downstream analyses. In this study, we observed a tendency of Qiime2-Deblur to output far fewer counts than other pipelines (Fig 5). While other workflows converted more than 70% of reads form the mock community into counts (with highest conversion rate for USEARCH-UPARSE and USEARCH-UNOISE), Qiime2-Deblur flows converted less than 50%.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29323,
+                    "infons": {
+                        "section_title_1": "Results and discussion",
+                        "section_title_2": "Quantitative comparison of pipeline outputs ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Agreement between the sample composition profiles produced by different pipeline flows was generally high (as measured by the median Spearman's \u03c1 correlation across all OTUs) (Fig 6). For this comparison, DADA2, USEARCH-UNOISE3, and Qiime2-Deblur ASVs were clustered into 97% OTUs in order to be comparable to output from OTU-level pipelines. Different quality filtering parameters (tested in QIIME-uclust and Qiime2-Deblur) or clustering algorithm and cutoffs (tested in MOTHUR) had negligible effect on the inferred composition. The exception was DADA2, for which additional quality filtering shifted the composition profile. While different flows of the same pipeline were clearly grouped together when using hierarchical clustering (Fig 6), DADA2 (no filter) clustered next to USEARCH-UPARSE and USEARCH-UNOISE, while DADA2 (ee2) clustered together with the MOTHUR flows.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30242,
+                    "infons": {
+                        "section_title_1": "Results and discussion",
+                        "section_title_2": "Quantitative comparison of pipeline outputs ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Table 4 shows read tracking for the different workflows as well as the total numbers of OTUs/ASVs produced from the HELIUS fecal sample dataset. Consistent with results from the mock community analysis, QIIME-uclust flows produced very large numbers of OTUs (around 200000). More stringent read quality filtering only reducing this number by approx. 25%. All QIIME-uclust flows produced an order of magnitude more OTUs compared to any other OTU-level workflow. Based on mock community results, the vast majority of these OTUs are expected to be spurious. USEARCH-UPARSE and both MOTHUR flows using cutoff 3 (Opticlust and DGC) produced a similar number of OTUs (ranging from around 4000 to 5500 OTUs) suggesting that this is the probable range for the number of true OTUs in this dataset. In contrast, QIIME-uclust produced between 150000 and 200000 OTUs. While the cutoff parameter had a large effect on the number or OTUs produced by MOTHUR, there was little to no effect of different quality filtering parameters on the number of ASVs produced by DADA2 and Qiime2-Deblur.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31316,
+                    "infons": {
+                        "section_title_1": "Results and discussion",
+                        "section_title_2": "Quantitative comparison of pipeline outputs ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Qiime2-Deblur produced far fewer counts than other pipelines (Fig 5, Table 4), while QIIME-uclust, USEARCH-UPARSE, and USEARCH-UNOISE3 had conversion rates of more than 90% of initial raw reads. The low conversion rate of Qiime2-Deblur flows is due to the \u201ccount substraction\u201d-based algorithm of Deblur [7], which removes more than 50% of the (filtered reads) counts entering the denoising step (Table 4). The proportion of chimeric reads removed by the different pipelines was very similar, averaging around 1% of raw read counts.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31847,
+                    "infons": {
+                        "section_title_1": "Results and discussion",
+                        "section_title_2": "Quantitative comparison of pipeline outputs ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "In the HELIUS fecal sample dataset analysis there was a 3.5-fold difference between the highest number of ASVs produced by a pipeline (around 25000, in DADA2) and the lowest number (more than 7500, in USEARCH-UNOISE3). Qiime2-Deblur produced around 11000 ASVs (Table 4). The representative sequence of an OTU may vary depending on the nature of the (de novo) clustering algorithm and is influenced by other sequences present, particularly in complex samples. However, by definition, ASV sequences are exact representations of biological sequences and are therefore directly comparable between workflows. We compared ASV sequences from each of the three ASV-level pipelines, identified perfect matches, and constructed Venn diagrams showing the overlap between the different outputs (Fig 7). Only around 4000 ASVs were found by all three pipelines (Fig 7A). Around 9000 (around 37% of total) ASVs produced by DADA2 were not found by either USEARCH-UNOISE3 or by Qiime2-Deblur. This mirrors findings from the mock community analysis, where DADA2 showed both the best sensitivity and the highest propensity for spurious ASVs among the three ASV-level pipelines. USEARCH-UNOISE3 and Qiime2-Deblur ach produced more than 2000 ASVs not found by other pipelines. These differences were mostly associated with low-abundance ASVs. To illustrate, 95.5% of counts produced by DADA2 were assigned to ASVs found by USEARCH-UNOISE3, while 98% of counts produced by USEARCH-UNOISE3 were assigned to ASVs found by DADA2. ASVs shared by USEARCH-UNOISE3 and Qiime2-Deblur accounted for around 98% of total counts. Thus, while the number of non-consensus ASVs produced by the ASV-level pipelines was large, it accounted for only 2% to 4% of the total number of counts.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33596,
+                    "infons": {
+                        "section_title_1": "Results and discussion",
+                        "section_title_2": "Quantitative comparison of pipeline outputs ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The creation of spurious OTUs/ASVs is a known issue for 16S rRNA bioinformatic pipelines. Some authors recommend applying a minimum relative abundance threshold filter in order to remove OTUs/ASVs with extremely low abundance that have a higher probability of being spurious. When a 0.002% minimum relative abundance filter was applied to the ASVs tables, most non-consensus ASVs were removed (Fig 7B). From each pipeline, 1396 ASVs (DADA2), 1294 ASVs (UNOISE3), and 1296 ASVs (Qiime2-Deblur) passed the filter, of which 1023 ASVs were found by all three pipelines. Thus, around 26% of filtered DADA ASVs, 21% of filtered UNOISE3 ASVs, and 21% of filtered Qiime2-Deblur ASVs were found by at most two of the three pipelines (i.e. were non-consensus ASVs). An analysis of closest matches between the (filtered) ASVs produced by the different pipelines showed that while DADA2 and Qiime2-Deblur non-consensus ASVs were generally 1 base away from the closest UNOISE3 ASVs, the most common closest match for UNOISE3 non-consensus ASVs was at 3 or 4 bases distance (S1 Fig). Thus, pipeline-specific biases remained after the application of a typical low-abundance filter. Moreover, the filter also removed around 75% of the 4029 consensus ASVs. While abundance-based filters may remove some of the spurious ASVs, they will also remove many true low-abundance biological features.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34970,
+                    "infons": {
+                        "section_title_1": "Results and discussion",
+                        "section_title_2": "Quantitative comparison of pipeline outputs ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "There was a significant effect of the pipeline on downstream alpha-diversity measures (Fig 8). Ground-truth ASV-level data should always yield higher alpha-diversity than OTU-level data. However, two types of errors can bias perceived alpha-diversity. First, as observed in QIIME-uclust workflows, massive numbers of spurious OTUs can greatly inflate perceived alpha-diversity. Spurious OTUs are responsible for QIIME-uclust yielding much higher alpha-diversity values than all others pipelines, including all ASV-level workflows. The relatively steep downward slope observed for QIIME-uclust when plotting richness as function of rarefaction level or of abundance-based OTU filtering (Figs \u200b(Figs8A8A and \u200band9A)9A) is indicative of large numbers of very low-abundance OTUs, most of which are likely spurious (Figs \u200b(Figs22 and \u200band3).3). The propensity of QIIME-uclust to generate spurious OTUs and inflate alpha-diversity measures has been previously reported by other authors [6, 30]. Second, as observed for QIIME2-Deblur, an ASV-level pipeline can fail to distinguish very closely related true biological sequences and clump them together into a single ASV. This will artificially decrease perceived alpha-diversity compared to higher sensitivity ASV-level pipelines, and is the reason why Qiime2-Deblur yielded lower alpha-diversity values compared to DADA2 and USEARCH-UNOISE3 (Fig 8B). Pipeline-induced biases (e.g. inflation of sample richness and diversity) cannot be fully addressed using filters (Fig 9). We applied a wide range of filters to the OTU/ASV tables and observed that inter-pipeline differences in alpha-diversity measures remain after the application of typical filters (i.e. 0.002% to 0.005% [31] of relative abundance).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36717,
+                    "infons": {
+                        "section_title_1": "Conclusion",
+                        "iao_name_1": "conclusion section",
+                        "iao_id_1": "IAO:0000615"
+                    },
+                    "text": "Large differences in sensitivity and specificity were observed between different pipelines. DADA2 showed the best sensitivity and resolution (followed by USEARCH-UNOISE3) at the cost of producing higher number of spurious ASVs compared to USEARCH-UNOISE3 and Qiime2-Deblur. USEARCH-UPARSE and MOTHUR produced similar numbers of OTUs, especially when a cutoff value was used in MOTHUR to remove singletons or extremely low abundance sequences before clustering. QIIME-uclust workflows produced huge numbers of spurious OTUs as well as inflated alpha-diversity measures, regardless of quality filtering parameters. Current QIIME users may consider switching to other pipelines. Indeed, the authors of QIIME have stopped supporting the platform since 1st January 2018 and are encouraging users to switch over to Qiime2. Biological conclusions based on alpha-diversity measures obtained from QIIME-uclust pipelines may warrant revisiting or confirmation other pipelines. ASV-level workflows offer superior resolution compared to OTU-level, and in this study showed better specificity and lower spurious sequence rates. Moreover, ASV-level pipelines allow for easier inter-study integration of biological features, as ASVs have intrinsic biological meaning, independent of reference database or study context [9].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38035,
+                    "infons": {
+                        "section_title_1": "Conclusion",
+                        "iao_name_1": "conclusion section",
+                        "iao_id_1": "IAO:0000615"
+                    },
+                    "text": "We found DADA2 to be the best choice for studies requiring the highest possible biological resolution (e.g. studies focused on differentiating closely related strains). However, USEARCH-UNOISE3 showed arguably the best overall performance, combining high sensitivity with excellent specificity.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38329,
+                    "infons": {
+                        "section_title_1": "Conclusion",
+                        "iao_name_1": "conclusion section",
+                        "iao_id_1": "IAO:0000615"
+                    },
+                    "text": "Current advances in sequencing technology and bioinformatic pipelines offer new opportunities for ecologists, microbiologists and biomedical scientists. This paper aimed to guide researchers in their choice of the pipeline most suited for their goal while pointing out some of the associated pitfalls and limitations.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38646,
+                    "infons": {
+                        "section_title_1": "Supporting information",
+                        "section_title_2": "S1 Fig",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Data is shown for the rarefied ASV tables, filtered using a minimum relative abundance threshold (0.002%). For the Levenshtein distance calculation, DADA2 and UNOISE3 ASVs were trimmed to 250 bp to match the length of Qiime2-Deblur ASVs (which are trimmed to 250 bp in the pipeline flow).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38962,
+                    "infons": {
+                        "section_title_1": "Supporting information",
+                        "section_title_2": "S1 Fig",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(TIF)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38967,
+                    "infons": {
+                        "section_title_1": "Supporting information",
+                        "section_title_2": "S1 Table",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Accession number, 16S rRNA gene copy number, and number of 16S rRNA gene amplicon variants are given for each mock community member.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39107,
+                    "infons": {
+                        "section_title_1": "Supporting information",
+                        "section_title_2": "S1 Table",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(XLSX)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39113,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "The HELIUS study is conducted by the Academic Medical Center Amsterdam and the Public Health Service of Amsterdam. Both organizations provided core support for HELIUS. The HELIUS study is also funded by the Dutch Heart Foundation, the Netherlands Organization for Health Research and Development (ZonMw), the European Union (FP-7), and the European Fund for the Integration of non-EU immigrants (EIF). We are most grateful to the participants of the HELIUS study and the management team, research nurses, interviewers, research assistants and other staff who have taken part in gathering the data of this study. MN is supported by a personal ZONMW-VIDI grant 2013 [016.146.327] and a Dutch Heart Fundation CVON IN CONTROL Young Talent Grant 2013 (on which AP is appointed). We thank Prof. Fredrik B\u00e4ckhed from the Wallenberg Laboratory for his support and expertise that assisted this research and Mark Davids from the Amsterdam Medical Center for his feedback on the analysis.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40105,
+                    "infons": {
+                        "section_title_1": "Data Availability",
+                        "iao_name_1": "availability section",
+                        "iao_id_1": "IAO:0000611"
+                    },
+                    "text": "Due to legal and ethical consideration, the Board of the HELIUS study requires that applicants for HELIUS study data fill out a form where the purpose of the study and intention to uphold the ethical guidelines of the HELIUS study are declared.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40366,
+                    "infons": {
+                        "title": "Biomonitoring 2.0: a new paradigm in ecosystem assessment made possible by next-generation DNA sequencing",
+                        "journal": "Mol Ecol",
+                        "volume": "21",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Baird DJ, HajibabeiI M. Biomonitoring 2.0: a new paradigm in ecosystem assessment made possible by next-generation DNA sequencing. Mol Ecol. 2012;21:2039\u20132044. 10.1111/j.1365-294x.2012.05519.x [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40608,
+                    "infons": {
+                        "title": "The Human Intestinal Microbiome in Health and Disease. Phimister EG, editor",
+                        "journal": "N Engl J Med",
+                        "volume": "375",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Lynch S V., Pedersen O.The Human Intestinal Microbiome in Health and Disease. Phimister EG, editor. N Engl J Med. 2016;375:2369\u20132379. 10.1056/NEJMra1600266 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40803,
+                    "infons": {
+                        "title": "The Third Revolution in Sequencing Technology",
+                        "journal": "Trends Genet",
+                        "volume": "34",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. van Dijk EL, Jaszczyszyn Y, Naquin D, Thermes C. The Third Revolution in Sequencing Technology. Trends Genet. 2018;34:666\u2013681. 10.1016/j.tig.2018.05.008 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40995,
+                    "infons": {
+                        "title": "Introducing mothur: open-source, platform-independent, community-supported software for describing and comparing microbial communities",
+                        "journal": "Appl Environ Microbiol",
+                        "volume": "75",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Schloss PD, Westcott SL, Ryabin T, Hall JR, Hartmann M, Hollister EB, et al.Introducing mothur: open-source, platform-independent, community-supported software for describing and comparing microbial communities. Appl Environ Microbiol. 2009;75:7537\u201341. 10.1128/AEM.01541-09 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41327,
+                    "infons": {
+                        "title": "Search and clustering orders of magnitude faster than BLAST",
+                        "journal": "Bioinformatics",
+                        "volume": "26",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Edgar RC. Search and clustering orders of magnitude faster than BLAST. Bioinformatics. 2010;26:2460\u20132461. 10.1093/bioinformatics/btq461 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41502,
+                    "infons": {
+                        "title": "DADA2: High-resolution sample inference from Illumina amplicon data",
+                        "journal": "Nat Meth",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Callahan BJ, McMurdie PJ, Rosen MJ, Han AW, Johnson AJA, Holmes SP. DADA2: High-resolution sample inference from Illumina amplicon data. Nat Meth. 2016;13:581\u2013583. 10.1038/nmeth.3869 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41743,
+                    "infons": {
+                        "title": "Deblur Rapidly Resolves Single-Nucleotide Community Sequence Patterns",
+                        "journal": "mSystems",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Amir A, McDonald D, Navas-Molina JA, Kopylova E, Morton JT, Zech Xu Z, et al.Deblur Rapidly Resolves Single-Nucleotide Community Sequence Patterns. Gilbert JA, editor. mSystems. 2017;2:e00191\u201316. 10.1128/mSystems.00191-16 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42023,
+                    "infons": {
+                        "title": "Reproducible, interactive, scalable and extensible microbiome data science using QIIME 2",
+                        "journal": "Nat Biotechnol",
+                        "volume": "37",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Bolyen E, Rideout JR, Dillon MR, Bokulich NA, Abnet CC, Al-Ghalith GA, et al.Reproducible, interactive, scalable and extensible microbiome data science using QIIME 2. Nat Biotechnol. 2019;37:852\u201385710.1038/s41587-019-0209-9 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42305,
+                    "infons": {
+                        "title": "Exact sequence variants should replace operational taxonomic units in marker gene data analysis",
+                        "journal": "bioRxiv",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Callahan BJ, McMurdie PJ, Holmes SP, Callahan BJ, Mcmurdie PJ, Holmes SP. Exact sequence variants should replace operational taxonomic units in marker gene data analysis. bioRxiv. 2017. 10.1038/ismej.2017.119 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42572,
+                    "infons": {
+                        "title": "UNOISE2: improved error-correction for Illumina 16S and ITS amplicon sequencing",
+                        "journal": "bioRxiv",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Edgar RC. UNOISE2: improved error-correction for Illumina 16S and ITS amplicon sequencing. bioRxiv. 2016;08125710.1101/081257 [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42729,
+                    "infons": {
+                        "title": "Benchmarking taxonomic assignments based on 16S rRNA gene profiling of the microbiota from commonly sampled environments",
+                        "journal": "Gigascience",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Almeida A, Mitchell AL, Tarkowska A, Finn RD. Benchmarking taxonomic assignments based on 16S rRNA gene profiling of the microbiota from commonly sampled environments. Gigascience. 2018;7:giy05410.1093/gigascience/giy054 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43009,
+                    "infons": {
+                        "title": "Denoising the Denoisers: An independent evaluation of microbiome sequence error-correction methods",
+                        "journal": "PeerJ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Nearing JT, Douglas GM, Comeau AM, Langille MGI. Denoising the Denoisers: An independent evaluation of microbiome sequence error-correction methods. PeerJ. 2018;6:e536410.7717/peerj.5364 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43255,
+                    "infons": {
+                        "title": "Cohort profile: the Healthy Life in an Urban Setting (HELIUS) study in Amsterdam, The Netherlands",
+                        "journal": "BMJ Open",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Snijder MB, Galenkamp H, Prins M, Derks EM, Peters RJG, Zwinderman AH, et al.Cohort profile: the Healthy Life in an Urban Setting (HELIUS) study in Amsterdam, The Netherlands. BMJ Open. 2017;7:e01787310.1136/bmjopen-2017-017873 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43542,
+                    "infons": {
+                        "title": "Depicting the composition of gut microbiota in a population with varied ethnic origins but shared geography",
+                        "journal": "Nat Med",
+                        "volume": "24",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Deschasaux M, Bouter KE, Prodan A, Levin E, Groen AK, Herrema H, et al.Depicting the composition of gut microbiota in a population with varied ethnic origins but shared geography. Nat Med. 2018;24:152610.1038/s41591-018-0160-1 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43809,
+                    "infons": {
+                        "title": "Metabolic effects of Lactobacillus reuteriDSM 17938 in people with type 2 diabetes: A randomized controlled trial",
+                        "journal": "Diabetes, Obes Metab",
+                        "volume": "19",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Mobini R, Tremaroli V, St\u00e5hlman M, Karlsson F, Levin M, Ljungberg M, et al.Metabolic effects of Lactobacillus reuteriDSM 17938 in people with type 2 diabetes: A randomized controlled trial. Diabetes, Obes Metab. 2017;19:579\u2013589. 10.1111/dom.12861 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Lactobacillus",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 06:42:10",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "32724880",
+                            "locations": {
+                                "length": 13,
+                                "offset": 43909
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 44096,
+                    "infons": {
+                        "title": "Development of a dual-index sequencing strategy and curation pipeline for analyzing amplicon sequence data on the MiSeq Illumina sequencing platform",
+                        "journal": "Appl Env Microbiol",
+                        "volume": "79",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Kozich JJ, Westcott SL, Baxter NT, Highlander SK, Schloss PD. Development of a dual-index sequencing strategy and curation pipeline for analyzing amplicon sequence data on the MiSeq Illumina sequencing platform. Appl Env Microbiol. 2013/06/25. 2013;79:5112\u20135120. 10.1128/aem.01043-13 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44439,
+                    "infons": {
+                        "title": "QIIME allows analysis of high-throughput community sequencing data",
+                        "journal": "Nat Methods",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Caporaso JG, Kuczynski J, Stombaugh J, Bittinger K, Bushman FD, Costello EK, et al.QIIME allows analysis of high-throughput community sequencing data. Nat Methods. 2010;7:335\u20136. 10.1038/nmeth.f.303 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44696,
+                    "infons": {
+                        "title": "UPARSE: highly accurate OTU sequences from microbial amplicon reads",
+                        "journal": "Nat Methods",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Edgar RC. UPARSE: highly accurate OTU sequences from microbial amplicon reads. Nat Methods. 2013/08/21. 2013;10:996\u2013998. 10.1038/nmeth.2604 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44876,
+                    "infons": {
+                        "title": "Error filtering, pair assembly and error correction for next-generation sequencing reads",
+                        "journal": "Bioinformatics",
+                        "volume": "31",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Edgar RC, Flyvbjerg H. Error filtering, pair assembly and error correction for next-generation sequencing reads. Bioinformatics. 2015;31:3476\u20133482. 10.1093/bioinformatics/btv401 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45094,
+                    "infons": {
+                        "title": "Subsampled open-reference clustering creates consistent, comprehensive OTU definitions and scales to billions of sequences",
+                        "journal": "PeerJ",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Rideout JR, He Y, Navas-Molina JA, Walters WA, Ursell LK, Gibbons SM, et al.Subsampled open-reference clustering creates consistent, comprehensive OTU definitions and scales to billions of sequences. PeerJ. 2014;2:e54510.7717/peerj.545 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45389,
+                    "infons": {
+                        "title": "OptiClust, an Improved Method for Assigning Amplicon-Based Sequence Data to Operational Taxonomic Units",
+                        "journal": "mSphere",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Westcott SL, Schloss PD. OptiClust, an Improved Method for Assigning Amplicon-Based Sequence Data to Operational Taxonomic Units. mSphere. 2017;2:e00073\u201317. 10.1128/mSphereDirect.00073-17 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45636,
+                    "infons": {
+                        "title": "VSEARCH: a versatile open source tool for metagenomics",
+                        "journal": "PeerJ",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Rognes T, Flouri T, Nichols B, Quince C, Mah\u00e9 F. VSEARCH: a versatile open source tool for metagenomics. PeerJ. 2016;4:e258410.7717/peerj.2584 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45838,
+                    "infons": {
+                        "title": "UCHIME2: improved chimera prediction for amplicon sequencing",
+                        "journal": "bioRxiv",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Edgar R.UCHIME2: improved chimera prediction for amplicon sequencing. bioRxiv. 2016; 07425210.1101/074252 [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45975,
+                    "infons": {
+                        "title": "phyloseq: An R Package for Reproducible Interactive Analysis and Graphics of Microbiome Census Data",
+                        "journal": "PLoS One",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. McMurdie PJ, Holmes S. phyloseq: An R Package for Reproducible Interactive Analysis and Graphics of Microbiome Census Data. PLoS One. 2013;8:e6121710.1371/journal.pone.0061217 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46210,
+                    "infons": {
+                        "journal": "R: A language and environment for statistical computing",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. R Core Team. R: A language and environment for statistical computing. R Foundation for Statistical Computing; Vienna, Austria: https://www.R-project.org/.; 2016. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46392,
+                    "infons": {
+                        "journal": "ggplot2: Elegant Graphics for Data Analysis",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Wickham H.ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag; New York; 2009. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46500,
+                    "infons": {
+                        "journal": "R package \u2018corrplot\u2019: visualization of a correlation matrix (version 0.84)",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Wei T, Simko V. R package \u2018corrplot\u2019: visualization of a correlation matrix (version 0.84).\u2019. Retrived from https://githubcom/taiyun/corrplot. 2017. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46669,
+                    "infons": {
+                        "title": "VennDiagram: a package for the generation of highly-customizable Venn and Euler diagrams in R",
+                        "journal": "BMC Bioinformatics",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Chen H, Boutros C. VennDiagram: a package for the generation of highly-customizable Venn and Euler diagrams in R. BMC Bioinformatics. 2011;12:3510.1186/1471-2105-12-35 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46896,
+                    "infons": {
+                        "title": "Sequence-specific error profile of Illumina sequencers",
+                        "journal": "Nucleic Acids Res",
+                        "volume": "39",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Nakamura K, Oshima T, Morimoto T, Ikeda S, Yoshikawa H, Shiwa Y, et al.Sequence-specific error profile of Illumina sequencers. Nucleic Acids Res. 2011;39:e90\u2013e90. 10.1093/nar/gkr344 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47137,
+                    "infons": {
+                        "title": "Accuracy of microbial community diversity estimated by closed- and open-reference OTUs",
+                        "journal": "PeerJ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Edgar RC. Accuracy of microbial community diversity estimated by closed- and open-reference OTUs. PeerJ. 2017;5:e388910.7717/peerj.3889 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47332,
+                    "infons": {
+                        "title": "Quality-filtering vastly improves diversity estimates from Illumina amplicon sequencing",
+                        "journal": "Nature",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Bokulich N, Subramanian S, Faith J, Gevers D. Quality-filtering vastly improves diversity estimates from Illumina amplicon sequencing. Nature. 2013. Available: https://www.nature.com/articles/nmeth.2276 [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}
