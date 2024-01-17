@@ -1,0 +1,2610 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC5882660",
+            "inputfile": "../microbiome_corpus_HTML\\PMC5882660.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Dysbiosis of the salivary microbiota in pediatric-onset primary sclerosing cholangitis and its potential as a biomarker",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 119,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Primary sclerosing cholangitis (PSC) is a liver disease known for its frequent concurrence with inflammatory bowel disease. Dysbiosis of the gut microbiota in PSC was reported in several studies, but the microbiological features of the salivary microbiota in PSC have not been established. Here we compared the salivary microbial communities of 24 pediatric-onset PSC patients, 16 age-matched ulcerative colitis (UC) patients, and 24 healthy controls (HCs) by analyzing the bacterial 16S rRNA gene sequence data. The species-richness (\u03b1-diversity) showed no significant between-group differences, whereas the overall salivary microbiota structure (\u03b2-diversity) showed significant differences among the three groups. Taxonomic assignment revealed that the PSC salivary microbiota were characterized by significant decreases in the abundance of Rothia and Haemophilus compared to the HC group, and significantly decreased Haemophilus and increased Oribacterium compared to the UC group. By combining the genera selected by the random forest algorithm in machine learning, followed by confirmation with 10-fold cross-validation, we were able to distinguish the PSC group from the HC group with the area under the curve (AUC) of 0.7423, and from the UC group with the AUC of 0.8756. Our results indicate the potential of salivary microbiota as biomarkers for a noninvasive diagnosis of PSC.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Rothia",
+                            "infons": {
+                                "identifier": "NCBI:txid32207",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:44:44",
+                                "parent_taxonomic_id": "NCBI:txid1268"
+                            },
+                            "id": "18415159",
+                            "locations": {
+                                "length": 6,
+                                "offset": 962
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:44:44",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "18415160",
+                            "locations": {
+                                "length": 11,
+                                "offset": 973
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:44:44",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "18415161",
+                            "locations": {
+                                "length": 11,
+                                "offset": 1039
+                            }
+                        },
+                        {
+                            "text": "Oribacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid265975",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:44:45",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "18415162",
+                            "locations": {
+                                "length": 12,
+                                "offset": 1065
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 1513,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Primary sclerosing cholangitis (PSC) is a liver disease characterized by multiple stenoses due to chronic inflammation and fibrosis in the intrahepatic and extrahepatic biliary system. The disease eventually progresses to end-stage liver disease, resulting in poor prognoses1. PSC is also known for its high association with inflammatory bowel disease (IBD), mainly ulcerative colitis (UC), with a prevalence of 70\u201380% in adults1, and with the same proportion or an even higher proportion in children2\u20134. Conversely, as many as 8.1% of IBD patients develop PSC5. It was also reported that PSC-like bile duct lesions occur frequently even with normal biochemical profiles in children with IBD6.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2218,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In light of this frequent concurrence of PSC and IBD, the diagnosis of either of these diseases should consider the concurrence of the other disease. Cholangiography is mandatory for the diagnosis of PSC, and endoscopic retrograde cholangiopancreatography (ERCP) has been used for the diagnosis of PSC in adults and children7. However, ERCP is associated with complications such as pancreatitis. To avoid complications, magnetic resonance cholangiopancreatography (MRCP) has been proposed as an alternative method for the diagnosis of PSC, but its sensitivity is approximately 81\u201386% in children, with a lower resolution in younger patients and the need for sedation in some cases8,9. Thus, additional noninvasive diagnostic biomarkers are desirable for the evaluation of the presence of PSC.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3010,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In pediatric and adult PSC patients, the oral administration of antibiotics was reported to decrease the serum levels of alanine aminotransferase (ALT) and \u03b3-glutamyltranspeptidase (GGT), with histological improvement10\u201314, implying that gastrointestinal inflammation and indigenous microbes are associated with the pathogenesis and prognosis of PSC, and that early intervention may also produce better prognoses. The gut microbiota of adult PSC patients were recently intensively evaluated by using 16S rRNA gene sequences15\u201323. Those studies indicated the enrichment of particular bacterial genera including Veillonella19,23, Enterococcus20,23, Lactobacillus20, Ruminococcus22, Streptococcus23, Rothia23, and Fusobacterium20,22 in the feces of PSC patients. We also reported the enrichment of several species, some belonging to these genera, in a Japanese pediatric-onset PSC cohort2.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3896,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In addition to close associations between dysbiosis of the gut microbiota and diseases24, several studies have described alterations of salivary microbiota in patients with various diseases. These include cirrhosis25, IBD26,27, pancreatic cancer28,29, lung cancer30, colorectal cancer31, IgA nephropathy32, celiac disease33, Behcet\u2019s disease34, and rheumatoid arthritis35. The involvement of salivary microbes in these diseases is unclear, but a correlation between the gut and oral microbiota was suggested27,36. In addition, changes in the salivary microbiota in systemic diseases may be a resource of microbial biomarkers specific to the diseases, which could contribute to the development of simple and noninvasive diagnoses based on microbial profiling with saliva samples.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4674,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "To date, there has been no report on the salivary microbiota of PSC patients. As the initial step in the exploration of potential biomarkers for the noninvasive diagnosis of PSC, we performed a bacterial 16S rRNA gene sequence analysis to characterize the salivary microbiota of pediatric-onset PSC patients in a comparison of their microbiota with those of pediatric-onset UC patients and healthy controls (HCs).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5087,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Patients, clinical data, and healthy subjects",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We recruited 24 PSC and 16 UC patients without PSC whose age of onset was <18 years from Saiseikai Yokohamashi Tobu Hospital (Kanagawa, Japan) between May 2013 and October 2015, and healthy volunteers without any symptoms (Table\u00a01). We collected salivary samples from 24 patients with PSC (the PSC group, median age 12.5 years), 16 patients with UC without PSC (the UC group, median age 12.5 years), and 24 healthy controls (the HC group, median age 11.5 years).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5601,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Patients, clinical data, and healthy subjects",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The diagnosis of PSC was made based on characteristic bile duct changes with multifocal strictures and segmental dilatation on cholangiography, clinical presentation, and the cholestatic biochemical profile, and no evidence of secondary sclerosing cholangitis7. The diagnosis of UC was made using the revised Porto criteria37.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5927,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Patients, clinical data, and healthy subjects",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "This study was approved by the ethical committees of Saiseikai Yokohamashi Tobu Hospital, Azabu University, Waseda University, and the University of Tokyo, and signed informed consent was obtained from all subjects who provided specimens.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6165,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "The collection of 16S rRNA gene sequences of salivary microbiota of the three subject groups",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We obtained a total of 458,021 high-quality 16S reads from the three groups by using the Roche 454 platform (see Methods, Supplementary Table\u00a0S1). Of them, we randomly selected 3,000 reads per sample, accounting for a total of 192,000 reads from 64 samples, and analyzed them to minimize the overestimation of the species richness in the clustering due to intrinsic sequencing error38. The Good\u2019s coverage index39,40 of the 3,000 reads per sample was 0.971, indicating a high coverage degree which was sufficient for the analysis.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6787,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Relationship between medications and phenotypes of the PSC patients with the salivary microbial composition",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Some of the PSC and UC patients had been treated with various medications (Table\u00a01). Since we observed a significant alteration of the gut microbiota of PSC patients due to salazosulfapyridine (SASP) treatment2, we first evaluated the effect of medications on the salivary microbiota of the patients by comparing the data between those with and without medication use. The comparative analyses of the PSC samples with and without SASP treatment (Supplementary Table\u00a0S2) revealed no significant difference between the two groups in the observed and Chao 1-estimated operational taxonomic units (OTU) number or in Shannon\u2019s diversity index (Supplementary Fig.\u00a0S1A). In addition, the weighted and unweighted UniFrac distance analyses also showed no significant difference between the PSC samples with and without SASP treatment (Supplementary Fig.\u00a0S1B,C).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7746,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Relationship between medications and phenotypes of the PSC patients with the salivary microbial composition",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The permutational multivariate analysis of variance (PERMANOVA) also confirmed no significant difference between the PSC samples with and without SASP treatment, or between the PSC patients treated and untreated with ursodeoxycholic acid (UDCA), mesalazine, and probiotics respectively (Supplementary Table\u00a0S3). In addition, the overlap with AIH and the concurrence of UC or IBD-U in the PSC patients showed no significant differences (Supplementary Table\u00a0S3). These data suggested that the administration of these medications and the phenotype of PSC did not largely affect the salivary microbiota of the PSC patients. We therefore further analyzed all of the samples regardless of their use or non-use of medications and the phenotype of PSC.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8490,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of the salivary microbiota of the PSC, UC, and HC samples",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Our comparative analysis of the PSC, UC and HC samples revealed that the observed and Chao 1-estimated OTU numbers of the PSC group tended to be lower than those of the UC and HC groups, without significant differences (Fig.\u00a01A). Shannon\u2019s index also showed no significant differences in bacterial diversity among the three groups (Fig.\u00a01A).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8899,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of the salivary microbiota of the PSC, UC, and HC samples",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The principal coordinate analysis (PCoA) plot based on the weighted UniFrac distance metric showed that many of the PSC and UC samples segregated from the HC samples, suggesting that the salivary microbiota structure of both the PSC and UC groups differed from that of the HC group (Fig.\u00a01B). The PERMANOVA further revealed significant differences between the PSC and UC groups in the weighted UniFrac metric but not in the unweighted UniFrac metric (Table\u00a02). Collectively, these data suggested that the salivary microbiota of the PSC group exhibited microbial dysbiosis without a large alteration of the species richness, but that changes in the abundance of the shared species among the three groups largely contributed to the overall structural differences in salivary microbiota across the three groups.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9707,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of the salivary microbiota of the PSC, UC, and HC samples",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We then taxonomically assigned the OTUs at the phylum and family levels according to a similarity search against the public databases. The taxonomic assignment indicated that the major phyla in the three groups were Firmicutes, Bacteroidetes, Proteobacteria, Actinobacteria, Fusobacteria, and TM7. The phylum-level comparison showed that the abundance of Bacteroidetes and Actinobacteria in the PSC group and the abundance of Firmicutes and TM7 in the UC group differed significantly from that in the HC group (Supplementary Fig.\u00a0S2A). At the family level, of the 14 families with the relative mean abundance of >0.5%, accounting for 93.1% of the total abundance, the abundance of Streptococcaceae, Pasteurellaceae, and Lachnospiraceae showed significant differences among the three groups. Of these three families, a lower Pasteurellaceae abundance and a higher Lachnospiraceae abundance were observed in the PSC group compared to both the UC and HC groups (Supplementary Fig.\u00a0S2B). The abundance of Streptococcaceae was significantly lower in only the UC group compared to the HC group (Supplementary Fig.\u00a0S2B).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Firmicutes",
+                            "infons": {
+                                "identifier": "NCBI:txid1239",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:23",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "18415163",
+                            "locations": {
+                                "length": 10,
+                                "offset": 9923
+                            }
+                        },
+                        {
+                            "text": "Bacteroidetes",
+                            "infons": {
+                                "identifier": "NCBI:txid976",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:32",
+                                "parent_taxonomic_id": "NCBI:txid68336"
+                            },
+                            "id": "18415164",
+                            "locations": {
+                                "length": 13,
+                                "offset": 9935
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:23",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "18415165",
+                            "locations": {
+                                "length": 14,
+                                "offset": 9950
+                            }
+                        },
+                        {
+                            "text": "Actinobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid201174",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:32",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "18415166",
+                            "locations": {
+                                "length": 14,
+                                "offset": 9966
+                            }
+                        },
+                        {
+                            "text": "Fusobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid32066",
+                                    "NCBI:txid203490"
+                                ],
+                                "type": [
+                                    "bacteria_phylum",
+                                    "bacteria_class"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:23",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid2",
+                                    "NCBI:txid32066"
+                                ]
+                            },
+                            "id": "18415167",
+                            "locations": {
+                                "length": 12,
+                                "offset": 9982
+                            }
+                        },
+                        {
+                            "text": "Bacteroidetes",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid976",
+                                    "NCBI:txid200643"
+                                ],
+                                "type": [
+                                    "bacteria_phylum",
+                                    "bacteria_class"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:24",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid68336",
+                                    "NCBI:txid976"
+                                ]
+                            },
+                            "id": "18415168",
+                            "locations": {
+                                "length": 13,
+                                "offset": 10062
+                            }
+                        },
+                        {
+                            "text": "Actinobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid201174",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:32",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "18415169",
+                            "locations": {
+                                "length": 14,
+                                "offset": 10080
+                            }
+                        },
+                        {
+                            "text": "Firmicutes",
+                            "infons": {
+                                "identifier": "NCBI:txid1239",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:24",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "18415170",
+                            "locations": {
+                                "length": 10,
+                                "offset": 10133
+                            }
+                        },
+                        {
+                            "text": "Streptococcaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid1300",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:27",
+                                "parent_taxonomic_id": "NCBI:txid186826"
+                            },
+                            "id": "18415171",
+                            "locations": {
+                                "length": 16,
+                                "offset": 10388
+                            }
+                        },
+                        {
+                            "text": "Pasteurellaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid712",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:27",
+                                "parent_taxonomic_id": "NCBI:txid135625"
+                            },
+                            "id": "18415172",
+                            "locations": {
+                                "length": 15,
+                                "offset": 10406
+                            }
+                        },
+                        {
+                            "text": "Lachnospiraceae",
+                            "infons": {
+                                "identifier": "NCBI:txid186803",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:28",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "18415173",
+                            "locations": {
+                                "length": 15,
+                                "offset": 10427
+                            }
+                        },
+                        {
+                            "text": "Pasteurellaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid712",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:29",
+                                "parent_taxonomic_id": "NCBI:txid135625"
+                            },
+                            "id": "18415174",
+                            "locations": {
+                                "length": 15,
+                                "offset": 10531
+                            }
+                        },
+                        {
+                            "text": "Lachnospiraceae",
+                            "infons": {
+                                "identifier": "NCBI:txid186803",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:29",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "18415175",
+                            "locations": {
+                                "length": 15,
+                                "offset": 10570
+                            }
+                        },
+                        {
+                            "text": "Streptococcaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid1300",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:30",
+                                "parent_taxonomic_id": "NCBI:txid186826"
+                            },
+                            "id": "18415176",
+                            "locations": {
+                                "length": 16,
+                                "offset": 10708
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 10820,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of the salivary microbiota of the PSC, UC, and HC samples",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The taxonomic assignment at the genus level identified a total of 114 bacterial genera, of which we further evaluated the major 16 genera with the relative mean abundances of >0.5%, accounting for 92.2% of the total abundance (Fig.\u00a02). As shown in Fig.\u00a02B, the abundances of Rothia and Haemophilus were significantly lower in the PSC group compared to the HC group (p\u2009=\u20090.0454 and 0.0036, respectively). Moreover, the abundance of Haemophilus was also significantly lower in the PSC group than that in the UC group (p\u2009=\u20090.0007). Conversely, the abundance of Oribacterium was significantly higher in the PSC group compared to the UC group (p\u2009=\u20090.0036). Additionally, the abundance of Streptococcus was significantly lower in the UC group compared to the HC group (p\u2009=\u20090.0159).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Rothia",
+                            "infons": {
+                                "identifier": "NCBI:txid32207",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:35",
+                                "parent_taxonomic_id": "NCBI:txid1268"
+                            },
+                            "id": "18415177",
+                            "locations": {
+                                "length": 6,
+                                "offset": 11095
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:35",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "18415178",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11106
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:37",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "18415179",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11251
+                            }
+                        },
+                        {
+                            "text": "Oribacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid265975",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:39",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "18415180",
+                            "locations": {
+                                "length": 12,
+                                "offset": 11378
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:40",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18415181",
+                            "locations": {
+                                "length": 13,
+                                "offset": 11503
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 11595,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of the salivary microbiota of the PSC, UC, and HC samples",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To explore the taxa contributing to differences between any pair of the three groups, we generated random forest (RF) models using the AUC-RF package41. All receiver operating characteristic (ROC) curves were based on the out-of-bag (OOB) error rates in the RF models. We used the area under the curve (AUC) of these ROC curves to find the combination of multiple taxa contributing most to the discrimination of the three groups from the 29 abundant genera with relative mean abundances of >0.1%. The best model was selected according to the best OOB-AUC, which was observed for eight and six genera between the PSC and HC groups, and the PSC and UC groups, respectively (Fig.\u00a03A).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12276,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of the salivary microbiota of the PSC, UC, and HC samples",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Among these selected genera, four genera (Haemophilus, Streptococcus, Aggregatibacter and Oribacterium) were the common contributors to distinguish the PSC from both the HC and UC groups (Fig.\u00a03B,C and Supplementary Fig.\u00a0S3A). Four genera (Rothia, Prevotella, Solobacterium, and Eubacterium) contributed to distinguishing the PSC from the HC group (Fig.\u00a03B, Supplementary Fig.\u00a0S3B), and the two genera Leptotrichia and Alloprevotella contributed to distinguishing the PSC from the UC group (Fig.\u00a03C, Supplementary Fig.\u00a0S3C). These results were further confirmed by evaluating the mean AUC of 10-fold cross-validation repeated 20 times, which showed a mean AUC of 0.7423 between the PSC and HC groups, and 0.8756 between the PSC and UC groups (Table\u00a03).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:49",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "18415182",
+                            "locations": {
+                                "length": 11,
+                                "offset": 12317
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:49",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18415183",
+                            "locations": {
+                                "length": 13,
+                                "offset": 12331
+                            }
+                        },
+                        {
+                            "text": "Aggregatibacter",
+                            "infons": {
+                                "identifier": "NCBI:txid416916",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:49",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "18415184",
+                            "locations": {
+                                "length": 15,
+                                "offset": 12346
+                            }
+                        },
+                        {
+                            "text": "Oribacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid265975",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:49",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "18415185",
+                            "locations": {
+                                "length": 12,
+                                "offset": 12366
+                            }
+                        },
+                        {
+                            "text": "Rothia",
+                            "infons": {
+                                "identifier": "NCBI:txid32207",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:51",
+                                "parent_taxonomic_id": "NCBI:txid1268"
+                            },
+                            "id": "18415186",
+                            "locations": {
+                                "length": 6,
+                                "offset": 12515
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:51",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18415187",
+                            "locations": {
+                                "length": 10,
+                                "offset": 12524
+                            }
+                        },
+                        {
+                            "text": "Solobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid123375",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:51",
+                                "parent_taxonomic_id": "NCBI:txid128827"
+                            },
+                            "id": "18415188",
+                            "locations": {
+                                "length": 13,
+                                "offset": 12536
+                            }
+                        },
+                        {
+                            "text": "Eubacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1730",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:51",
+                                "parent_taxonomic_id": "NCBI:txid186806"
+                            },
+                            "id": "18415189",
+                            "locations": {
+                                "length": 11,
+                                "offset": 12555
+                            }
+                        },
+                        {
+                            "text": "Leptotrichia",
+                            "infons": {
+                                "identifier": "NCBI:txid32067",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:52",
+                                "parent_taxonomic_id": "NCBI:txid1129771"
+                            },
+                            "id": "18415190",
+                            "locations": {
+                                "length": 12,
+                                "offset": 12678
+                            }
+                        },
+                        {
+                            "text": "Alloprevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid1283313",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:46:52",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18415191",
+                            "locations": {
+                                "length": 14,
+                                "offset": 12695
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 13028,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of the salivary microbiota of the PSC, UC, and HC samples",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The principal component analysis (PCA) using the RF-selected genera more clearly distinguished the PSC from the HC and UC groups than the PCA using the 29 genera with the mean abundance >0.1% (Supplementary Fig.\u00a0S4). Similarly, a best mean AUC of 0.6452 was obtained between the UC and HC groups in the 10-fold cross-validation of the RF-selected genera (Table\u00a03).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13392,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of the salivary microbiota of the PSC, UC, and HC samples",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "At a finer species level, we used 95 species with relative mean abundances of >0.1% to build the first RF. The best model was selected from the best OOB-AUC value, which was observed for 16 and 11 species between the PSC and HC groups, and between the PSC and UC groups, respectively (Fig.\u00a03D). The three species Oribacterium sp. ACB1, Lachnospiraceae oral taxon 107, and Haemophilus parainfluenzae were the common species to distinguish PSC from both the HC and UC groups (Fig.\u00a03E,F and Supplementary Fig.\u00a0S5A). These species also exhibited significant differences in the relative abundance between the PSC and HC groups and between the PSC and UC groups (Supplementary Fig.\u00a0S5A).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Oribacterium sp.",
+                            "infons": {
+                                "identifier": "NCBI:txid265975",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:05",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "18415192",
+                            "locations": {
+                                "length": 16,
+                                "offset": 13705
+                            }
+                        },
+                        {
+                            "text": "Lachnospiraceae oral",
+                            "infons": {
+                                "identifier": "NCBI:txid329065",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:05",
+                                "parent_taxonomic_id": "NCBI:txid189703"
+                            },
+                            "id": "18415193",
+                            "locations": {
+                                "length": 20,
+                                "offset": 13728
+                            }
+                        },
+                        {
+                            "text": "Haemophilus parainfluenzae",
+                            "infons": {
+                                "identifier": "NCBI:txid729",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:05",
+                                "parent_taxonomic_id": "NCBI:txid724"
+                            },
+                            "id": "18415194",
+                            "locations": {
+                                "length": 26,
+                                "offset": 13764
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 14073,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of the salivary microbiota of the PSC, UC, and HC samples",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Of the 16 species, 13 (Haemophilus sputorum, Leptotrichia BU064, Prevotella DO039, Atopobium sp. ICM58, Rothia mucilaginosa, Veillonella sp. 3_1_44, Solobacterium moorei, Granulicatella adiacens, Streptococcus sanguinis, Streptococcus genomosp. C5, Actinomyces sp. ICM39, TM7 oral taxon 352 and [Eubacterium] infirmum) were the species distinguishing the PSC group from the HC group (Fig.\u00a03E, Supplementary Fig.\u00a0S5B). Of the 11 species, eight (Haemophilus haemolyticus, Streptococcus sp. M143, Porphyromonas CW034, Prevotella sp. oral taxon 317, Streptococcus parasanguinis, Alloprevotella rava, Neisseria mucosa, and Streptococcus cristatus) were the species distinguishing the PSC group from the UC group (Fig.\u00a03F, Supplementary Fig.\u00a0S5C).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Haemophilus sputorum",
+                            "infons": {
+                                "identifier": "NCBI:txid1078480",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:09",
+                                "parent_taxonomic_id": "NCBI:txid724"
+                            },
+                            "id": "18415195",
+                            "locations": {
+                                "length": 20,
+                                "offset": 14095
+                            }
+                        },
+                        {
+                            "text": "Leptotrichia",
+                            "infons": {
+                                "identifier": "NCBI:txid32067",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:09",
+                                "parent_taxonomic_id": "NCBI:txid1129771"
+                            },
+                            "id": "18415196",
+                            "locations": {
+                                "length": 12,
+                                "offset": 14118
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:09",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18415197",
+                            "locations": {
+                                "length": 10,
+                                "offset": 14138
+                            }
+                        },
+                        {
+                            "text": "Atopobium sp.",
+                            "infons": {
+                                "identifier": "NCBI:txid1380",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:09",
+                                "parent_taxonomic_id": "NCBI:txid1643824"
+                            },
+                            "id": "18415198",
+                            "locations": {
+                                "length": 13,
+                                "offset": 14156
+                            }
+                        },
+                        {
+                            "text": "Rothia mucilaginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid43675",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:09",
+                                "parent_taxonomic_id": "NCBI:txid32207"
+                            },
+                            "id": "18415199",
+                            "locations": {
+                                "length": 19,
+                                "offset": 14177
+                            }
+                        },
+                        {
+                            "text": "Veillonella sp.",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:09",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "18415200",
+                            "locations": {
+                                "length": 15,
+                                "offset": 14198
+                            }
+                        },
+                        {
+                            "text": "Solobacterium moorei",
+                            "infons": {
+                                "identifier": "NCBI:txid102148",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:09",
+                                "parent_taxonomic_id": "NCBI:txid123375"
+                            },
+                            "id": "18415201",
+                            "locations": {
+                                "length": 20,
+                                "offset": 14222
+                            }
+                        },
+                        {
+                            "text": "Granulicatella adiacens",
+                            "infons": {
+                                "identifier": "NCBI:txid46124",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:09",
+                                "parent_taxonomic_id": "NCBI:txid117563"
+                            },
+                            "id": "18415202",
+                            "locations": {
+                                "length": 23,
+                                "offset": 14244
+                            }
+                        },
+                        {
+                            "text": "Streptococcus sanguinis",
+                            "infons": {
+                                "identifier": "NCBI:txid1305",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:09",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "18415203",
+                            "locations": {
+                                "length": 23,
+                                "offset": 14269
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:09",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18415204",
+                            "locations": {
+                                "length": 13,
+                                "offset": 14294
+                            }
+                        },
+                        {
+                            "text": "Actinomyces sp.",
+                            "infons": {
+                                "identifier": "NCBI:txid1654",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:09",
+                                "parent_taxonomic_id": "NCBI:txid2049"
+                            },
+                            "id": "18415205",
+                            "locations": {
+                                "length": 15,
+                                "offset": 14322
+                            }
+                        },
+                        {
+                            "text": "Haemophilus haemolyticus",
+                            "infons": {
+                                "identifier": "NCBI:txid726",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:12",
+                                "parent_taxonomic_id": "NCBI:txid724"
+                            },
+                            "id": "18415206",
+                            "locations": {
+                                "length": 24,
+                                "offset": 14516
+                            }
+                        },
+                        {
+                            "text": "Streptococcus sp.",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:12",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "18415207",
+                            "locations": {
+                                "length": 17,
+                                "offset": 14543
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas",
+                            "infons": {
+                                "identifier": "NCBI:txid836",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:12",
+                                "parent_taxonomic_id": "NCBI:txid171551"
+                            },
+                            "id": "18415208",
+                            "locations": {
+                                "length": 13,
+                                "offset": 14567
+                            }
+                        },
+                        {
+                            "text": "Prevotella sp.",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:12",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "18415209",
+                            "locations": {
+                                "length": 14,
+                                "offset": 14588
+                            }
+                        },
+                        {
+                            "text": "Streptococcus parasanguinis",
+                            "infons": {
+                                "identifier": "NCBI:txid1318",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:12",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "18415210",
+                            "locations": {
+                                "length": 27,
+                                "offset": 14619
+                            }
+                        },
+                        {
+                            "text": "Alloprevotella rava",
+                            "infons": {
+                                "identifier": "NCBI:txid671218",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:12",
+                                "parent_taxonomic_id": "NCBI:txid1283313"
+                            },
+                            "id": "18415211",
+                            "locations": {
+                                "length": 19,
+                                "offset": 14648
+                            }
+                        },
+                        {
+                            "text": "Neisseria mucosa",
+                            "infons": {
+                                "identifier": "NCBI:txid488",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:12",
+                                "parent_taxonomic_id": "NCBI:txid482"
+                            },
+                            "id": "18415212",
+                            "locations": {
+                                "length": 16,
+                                "offset": 14669
+                            }
+                        },
+                        {
+                            "text": "Streptococcus cristatus",
+                            "infons": {
+                                "identifier": "NCBI:txid45634",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:12",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "18415213",
+                            "locations": {
+                                "length": 23,
+                                "offset": 14691
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 14814,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparison of the salivary microbiota of the PSC, UC, and HC samples",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The mean AUC of the 10-fold cross-validation repeated 20 times was 0.8011 between the PSC and HC groups and 0.7626 between the PSC and UC groups (Table\u00a03). The PCA using the RF-selected species showed clear segregation between the PSC and HC groups, and between the PSC and UC groups (Supplementary Fig.\u00a0S6). These specie-level contributors were further confirmed by a heatmap of the abundance of OTUs in the individuals (Supplementary Fig.\u00a0S7). Similarly, a mean AUC of 0.5314 was obtained between the UC and HC groups in the 10-fold cross-validation (Table\u00a03).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15376,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "We compared salivary microbiota from age-matched pediatric-onset PSC patients, UC patients without PSC, and healthy individuals by using the enumerated 16S rRNA gene sequence data. The results indicated that compared to the healthy controls, the species richness of the PSC and UC salivary microbiota was not significantly changed. However, the overall structure of the PSC and UC salivary microbiota exhibited microbial dysbiosis compared to that of the healthy controls, and the observed dysbiosis was represented by significant changes in the abundance of several genera and species.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15972,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "When we focused on the differences in the salivary microbiota between the PSC and UC groups, we observed significant differences in the abundance of two genera assigned to Haemophilus and Oribacterium and some species belonging to Haemophilus, Oribacterium, and Lachnospiraceae between the two groups. On the other hand, we observed previously that the abundance of Faecalibacterium, Ruminococcus and Roseburia genera was significantly different in the gut microbiota between the same PSC and UC individuals as those in the present study2. These data suggested almost no taxonomical similarity in the dysbiosis of salivary and gut microbiota between the PSC and UC groups, whereas larger numbers of species were different between them in the salivary microbiota than the gut microbiota. Interestingly, the PSC fecal microbiota were characterized by a significant enrichment of S. parasanguinis2, which was also one of the contributing species discriminating the PSC from the UC salivary microbiota in the present study (Fig.\u00a03F), but a significant difference was not observed between them (Supplementary Fig.\u00a0S5C).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:28",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "18415214",
+                            "locations": {
+                                "length": 11,
+                                "offset": 16144
+                            }
+                        },
+                        {
+                            "text": "Oribacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid265975",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:29",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "18415215",
+                            "locations": {
+                                "length": 12,
+                                "offset": 16160
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:29",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "18415216",
+                            "locations": {
+                                "length": 11,
+                                "offset": 16203
+                            }
+                        },
+                        {
+                            "text": "Oribacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid265975",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:29",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "18415217",
+                            "locations": {
+                                "length": 12,
+                                "offset": 16216
+                            }
+                        },
+                        {
+                            "text": "Lachnospiraceae",
+                            "infons": {
+                                "identifier": "NCBI:txid186803",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:29",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "18415218",
+                            "locations": {
+                                "length": 15,
+                                "offset": 16234
+                            }
+                        },
+                        {
+                            "text": "Faecalibacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid216851",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:30",
+                                "parent_taxonomic_id": "NCBI:txid216572"
+                            },
+                            "id": "18415219",
+                            "locations": {
+                                "length": 16,
+                                "offset": 16338
+                            }
+                        },
+                        {
+                            "text": "Ruminococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1263",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:30",
+                                "parent_taxonomic_id": "NCBI:txid216572"
+                            },
+                            "id": "18415220",
+                            "locations": {
+                                "length": 12,
+                                "offset": 16356
+                            }
+                        },
+                        {
+                            "text": "Roseburia",
+                            "infons": {
+                                "identifier": "NCBI:txid841",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:30",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "18415221",
+                            "locations": {
+                                "length": 9,
+                                "offset": 16373
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 17086,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "The large differences observed between the PSC and UC salivary microbial communities prompted us to investigate the potential of the microbiota as novel biomarkers discriminating PSC and UC patients. The cross-validation using salivary microbiota data identified several genera and species efficiently distinguishing the PSC patients from the healthy controls, and from the UC patients (Fig.\u00a03, Table\u00a03). Some of these AUC values were substantially higher than those reported in a study in which a combination of several gut species distinguished PSC from healthy individuals with an AUC of 0.78, and from UC with an AUC of 0.8219. We thus anticipate that salivary microbes can also be used as diagnostic biomarkers distinguishing PSC from healthy individuals and UC patients, similarly to gut microbes. Notably, since all the PSC patients in our cohort were associated with IBD, the identified salivary microbial biomarkers may also be efficient for distinguishing IBD patients with PSC from those without PSC.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18097,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Bajaj et al. reported decreased abundances of the families Lachnospiraceae and Ruminococcaceae in the salivary microbiota of patients with liver cirrhosis compared to healthy controls25. In contrast, although PSC is also a disease that eventually progresses to liver cirrhosis, the abundance of Lachnospiraceae was significantly increased in our PSC salivary samples compared to the UC and healthy control samples. This opposite change in the abundance of the family Lachnospiraceae in salivary microbiota between the two diseases may be due largely to the increase in the genus Oribacterium belonging to the family Lachnospiraceae in the PSC group and the reduction of this genus in the UC group compared to the healthy controls. Oribacterium was also shown to be one of the RF-selected genera contributing to the discrimination of PSC from UC.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Lachnospiraceae",
+                            "infons": {
+                                "identifier": "NCBI:txid186803",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:50",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "18415222",
+                            "locations": {
+                                "length": 15,
+                                "offset": 18156
+                            }
+                        },
+                        {
+                            "text": "Ruminococcaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid216572",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:51",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "18415223",
+                            "locations": {
+                                "length": 15,
+                                "offset": 18176
+                            }
+                        },
+                        {
+                            "text": "Lachnospiraceae",
+                            "infons": {
+                                "identifier": "NCBI:txid186803",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:53",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "18415224",
+                            "locations": {
+                                "length": 15,
+                                "offset": 18392
+                            }
+                        },
+                        {
+                            "text": "Lachnospiraceae",
+                            "infons": {
+                                "identifier": "NCBI:txid186803",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:55",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "18415225",
+                            "locations": {
+                                "length": 15,
+                                "offset": 18564
+                            }
+                        },
+                        {
+                            "text": "Oribacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid265975",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:56",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "18415226",
+                            "locations": {
+                                "length": 12,
+                                "offset": 18676
+                            }
+                        },
+                        {
+                            "text": "Lachnospiraceae",
+                            "infons": {
+                                "identifier": "NCBI:txid186803",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:56",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "18415227",
+                            "locations": {
+                                "length": 15,
+                                "offset": 18713
+                            }
+                        },
+                        {
+                            "text": "Oribacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid265975",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:58",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "18415228",
+                            "locations": {
+                                "length": 12,
+                                "offset": 18828
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 18942,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Additionally, at the species level, two species (Lachnospiraceae oral taxon 107 and Oribacterium sp. ACB1, both belonging to the family Lachnospiraceae) were markedly enriched in the present pediatric-onset PSC group compared to the UC and healthy control groups, and were shown to be the species contributing to the discrimination of the two groups. Similar to the pediatric-onset PSC patients analyzed here, the family Lachnospiraceae was increased in the salivary microbiota of children with celiac disease33. On the other hand, Streptococcus sanguinis was concurrently enriched in celiac disease patients33, whereas this species was significantly decreased in our PSC group (Fig.\u00a03E, Supplementary Fig.\u00a0S6).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Lachnospiraceae oral",
+                            "infons": {
+                                "identifier": "NCBI:txid329065",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:47:59",
+                                "parent_taxonomic_id": "NCBI:txid189703"
+                            },
+                            "id": "18415229",
+                            "locations": {
+                                "length": 20,
+                                "offset": 18990
+                            }
+                        },
+                        {
+                            "text": "Oribacterium sp.",
+                            "infons": {
+                                "identifier": "NCBI:txid265975",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:48:00",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "18415230",
+                            "locations": {
+                                "length": 16,
+                                "offset": 19026
+                            }
+                        },
+                        {
+                            "text": "Lachnospiraceae",
+                            "infons": {
+                                "identifier": "NCBI:txid186803",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:48:00",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "18415231",
+                            "locations": {
+                                "length": 15,
+                                "offset": 19078
+                            }
+                        },
+                        {
+                            "text": "Lachnospiraceae",
+                            "infons": {
+                                "identifier": "NCBI:txid186803",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:48:03",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "18415232",
+                            "locations": {
+                                "length": 15,
+                                "offset": 19363
+                            }
+                        },
+                        {
+                            "text": "Streptococcus sanguinis",
+                            "infons": {
+                                "identifier": "NCBI:txid1305",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:48:05",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "18415233",
+                            "locations": {
+                                "length": 23,
+                                "offset": 19474
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 19653,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Oribacterium was also enriched in the microbiota of the tongue coat in patients with liver cancer, in which Oribacterium and Fusobacterium gave AUCs of 0.8137 and 0.7749 for distinguishing patients with liver cancer from healthy subjects, respectively42. Since PSC was also shown to have a risk for the development of liver cancer43 and its salivary microbiota composition is similar to that of the tongue and other intraoral microbiota44,45, further studies are needed to clarify the differences in salivary and tongue microbiota between these two hepatic diseases.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Oribacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid265975",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:48:06",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "18415234",
+                            "locations": {
+                                "length": 12,
+                                "offset": 19653
+                            }
+                        },
+                        {
+                            "text": "Oribacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid265975",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:48:07",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "18415235",
+                            "locations": {
+                                "length": 12,
+                                "offset": 19761
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid848",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:48:07",
+                                "parent_taxonomic_id": "NCBI:txid203492"
+                            },
+                            "id": "18415236",
+                            "locations": {
+                                "length": 13,
+                                "offset": 19778
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 20219,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Several papers have described the potential of salivary microbes as biomarkers for disease. For example, a combination of two salivary species identified as metagenomic linkage groups separated rheumatoid arthritis patients from healthy subjects with an AUC of 0.81435. In another study, a combination of two salivary species, Neisseria elongata and Streptococcus mitis, was reported to be the biomarker discriminating pancreatic cancer patients from healthy controls with an AUC of 0.9028. A combination of two salivary genera, Capnocytophaga and Veillonella, yielded AUCs of 0.86 and 0.80 in distinguishing squamous cell carcinoma and adenocarcinoma in patients with lung cancer from healthy controls, respectively30.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Neisseria elongata",
+                            "infons": {
+                                "identifier": "NCBI:txid495",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:48:16",
+                                "parent_taxonomic_id": "NCBI:txid482"
+                            },
+                            "id": "18415237",
+                            "locations": {
+                                "length": 18,
+                                "offset": 20546
+                            }
+                        },
+                        {
+                            "text": "Streptococcus mitis",
+                            "infons": {
+                                "identifier": "NCBI:txid28037",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:48:16",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "18415238",
+                            "locations": {
+                                "length": 19,
+                                "offset": 20569
+                            }
+                        },
+                        {
+                            "text": "Capnocytophaga",
+                            "infons": {
+                                "identifier": "NCBI:txid1016",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:48:18",
+                                "parent_taxonomic_id": "NCBI:txid49546"
+                            },
+                            "id": "18415239",
+                            "locations": {
+                                "length": 14,
+                                "offset": 20748
+                            }
+                        },
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:48:18",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "18415240",
+                            "locations": {
+                                "length": 11,
+                                "offset": 20767
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 20938,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "These previous studies and our present investigation consider the combination of more than two different genera or species to be candidates for microbial biomarkers. We note that none of the microbial combinations reported to date overlap between diseases, suggesting that physiological states in these systemic diseases have different influences on the salivary microbiota. The alteration of salivary microbial profile would thus be a potent indicator that is sensitive to the host\u2019s physiological changes in systemic disease.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21465,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In the diagnoses of clinical samples, medical treatments such as the administration of antibiotics are an issue to be considered because such treatments sometimes strongly change the microbial community structure, regardless of disease. We use exclusively SASP for gastrointestinal lesions in PSC, based on several reports46,47, and we observed that SASP treatment significantly changed the gut microbiota due to an antibacterial agent generated by the metabolism of SASP in the gut2. Therefore, a high tolerance of salivary microbiota to medical treatments is desired for the development of accurate diagnostics using the microbiota as biomarkers. In the present study, no significant difference in the salivary microbiota was observed in the PCS and UC salivary samples treated with SASP and mesalazine, in agreement with the previous report demonstrating the high stability of salivary microbiota compared to gut microbiota under the exposure of antibiotics48.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22428,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "One of the limitations in our study is the small sample size. Pediatric-onset PSC is a rare disease, and it is difficult to collect large numbers of samples. To address this problem, we used cross-validation based on the best RF model to identify and validate microbial species that discriminate two groups with high fidelity to minimize overfitting. This may be a powerful strategy for analyses in which the number of samples is limited. In addition, sampling time in a day may also be considered for the accurate diagnosis because of considerable changes in the salivary microbiota composition due to the circadian rhythm44.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23054,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Our present findings demonstrated the potential of salivary microbes as tools for the noninvasive diagnosis of pediatric-onset PSC. However, it remains unknown whether the microbial markers identified here are also globally applicable to adult PSC patients and to PSC patients with different IBD status, genetic backgrounds, geographic locations, and dietary styles.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23420,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Sample collection and DNA extraction",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "All subjects were instructed to provide fresh saliva in a test tube during the daytime on the day of sample collection. The subjects were antibiotic-free for \u22652 weeks prior to sampling, except for SASP in the PSC group. The subjects were prohibited from eating or drinking for 2\u2009hr prior to sample collection, but there was no restriction regarding the type of food eaten before that period. The saliva samples were immediately sealed in an AnaeroPack-Anaero (a plastic bag containing a disposable oxygen-absorbing and carbon dioxide-generating agent; Mitsubishi Gas Chemical, Tokyo) and then transported on ice to the laboratory within 24\u2009hr. At the laboratory, the saliva samples were suspended in 20% glycerol and phosphate-buffered saline (PBS), and then immediately frozen in liquid nitrogen and stored at \u221280\u2009\u00b0C until further analysis49.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24306,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Sample collection and DNA extraction",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The isolation of bacterial DNA from the salivary samples was performed as described26. The 16S rRNA gene V1\u2013V2 region was amplified by polymerase chain reaction (PCR) using the forward primer 27Fmod (5\u2032-CCATCTCATCCCTGCGTGTCTCCGACTCAGNNNNNNNNNNagrgtttgatymtggctcag-3\u2032), containing the 454 primer A and a unique 10-bp barcode sequence for each sample (indicated by Ns), and the reverse primer 338\u2009R (5\u2032-CCTATCCCCTGTGTGCCTTGGCAGTCTCAGtgctgcctcccgtaggagt-3\u2032) containing the 454 primer B38. The PCR was performed using 50\u2009\u03bcL of 1\u00d7 Ex Taq PCR buffer composed of 10\u2009mM Tris-HCl (pH 8.3), 50\u2009mM KCl, and 1.5\u2009mM MgCl2 in the presence of 250\u2009\u03bcM dNTPs, 1 U Ex Taq polymerase (Takara Bio, Kyoto, Japan), forward and reverse primers (0.2\u2009\u03bcM), and approximately 20 ng of template DNA.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25076,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Sample collection and DNA extraction",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Thermal cycling was performed in a 9700 PCR System (Life Technologies Japan, Tokyo) with the following cycling conditions: initial denaturation at 96\u2009\u00b0C for 2\u2009min, followed by 25 cycles of denaturation at 96\u2009\u00b0C for 30\u2009sec, annealing at 55\u2009\u00b0C for 45\u2009sec, and extension at 72\u2009\u00b0C for 1\u2009min; and final extension at 72\u2009\u00b0C. PCR amplicons were purified using AMPure XP magnetic purification beads (Beckman Coulter, Brea, CA, USA) and quantified using the Quant-iT PicoGreen dsDNA Assay Kit (Life Technologies Japan). An equal amount of each PCR amplicon was mixed and subjected to sequencing with the 454 GS FLX Titanium platform (Roche Applied Science, Indianapolis, IN) according to the manufacturer\u2019s instructions.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25786,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Data processing of 16S rRNA sequences",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We used an analysis pipeline for the processing of the 454 pyrosequencing data of the 16S rRNA gene V1\u2013V2 region, as reported38. Briefly, after multiplexed sequencing of the 16S amplicons, sequences were assigned to samples on the basis of their barcode sequences. Reads with an average quality value <25, inexact matches to both universal primers, and possible chimeric reads, totally accounting for 43\u201344% of all reads, were removed (Supplementary Table\u00a0S1). Among the high-quality reads, 3,000 reads per sample were randomly chosen and used for the analysis conducted in this study.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26408,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Data processing of 16S rRNA sequences",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We then sorted the selected reads with the average quality value and grouped them into OTUs by clustering using the UCLUST algorithm with a 96% identity threshold26. Taxonomic assignments for each OTU were made by similarity searching against the publicly available 16S (RDP and CORE) and NCBI genome databases using the GLSEARCH program. For assignment at the phylum, family, genus, and species levels, the sequence similarity thresholds of 70%, 90%, 94% and 96% were respectively applied. All of the high-quality 16S V1\u2013V2 sequences analyzed in this study were deposited into the DDBJ/GenBank/EMBL database (accession no. DRA005698).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27043,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Data analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Comparisons of the categorical variables were done using the Chi-squared test, Fisher\u2019s exact test, Mann-Whitney U-test, and Kruskal-Wallis test where appropriate. The UniFrac distance was used for the assessment of the dissimilarity (distance) between any pair of samples50. We performed a principal coordinate analysis (PCoA) to visualize the similarities or dissimilarities in the microbiome structure in the UniFrac analysis. We conducted a PERMANOVA to compare the overall microbiome structure, and the p-values were adjusted for multiple testing by the Benjamin-Hochberg procedure. We used the observed and Chao 1-estimated OTU numbers and Shannon\u2019s index to evaluate the richness and diversity of the overall microbial community. The similarity of the relative abundance at the phylum, family, genus, and species levels was assessed using the Kruskal-Wallis test followed by the Steel-Dwass test for multiple comparisons.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27984,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Data analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Random forest (RF) models were generated using the AUC-RF41 package. All receiver operating characteristic (ROC) curves presented for RF models were based on the out-of-bag (OOB) error rates. The area under the curve (AUC) of these ROC curves was used to find the most discriminatory variables (genera or species). The first RF was build, using all the variables, which provides the initial ranking of the variables according to its importance according to the mean decrease Gini. In the subsequent steps, 5% of the less important variables according to the initial ranking were eliminated. The RF was built with the remaining variables, and the AUC based on OOB predictions (OOB-AUC) of the RF was computed in each model. The best model was selected with the best OOB-AUC value. The best RF model was further confirmed by evaluating the mean AUC of a 10-fold cross-validation repeated 20 times using the AUC-RF41 package. All of these analyses were performed using the R software program (v3.3.1). All methods were carried out in accordance with relevant guidelines and regulations.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29067,
+                    "infons": {
+                        "section_title_1": "Electronic supplementary material",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29101,
+                    "infons": {
+                        "section_title_1": "Acknowledgements",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "We thank Dr. K. Oshima, Dr. K. Takanashi, Y. Hattori, E. Iioka, M. Kiuchi, K. Komiya, R. Kurokawa, C. Shindo, L. Takayasu, N. Yamashita (The University of Tokyo), Dr. M. Takahata (BIOBANK Co., Ltd.), Y. Noguchi (Azabu University), and I. Mimura (Okayama University) for their technical support. This study was supported by the Yokohama Foundation for the Advancement of Medical Science Health to K.I.; Labor Science Research Grants from Research on Measures for Intractable Diseases, the Intractable Hepato-Biliary Diseases Study Group in Japan to T.F.; a Grant-in-Aid for Challenging Exploratory Research to M.H.; the Global COE Project of the \u2018Genome Information Big Bang\u2019 from the Ministry of Education, Culture, Sports, Science, and Technology (MEXT) of Japan to M.H., and an administration grant from the University of Tokyo to the Laboratory of Metagenomics.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29981,
+                    "infons": {
+                        "section_title_1": "Author Contributions",
+                        "iao_name_1": "author contributions section",
+                        "iao_id_1": "IAO:0000323"
+                    },
+                    "text": "K.I., W.S., H.M., T.S. and M.H. planned the study. K.I., T.T., M.O.K., S.U., A.I., T.F. and T.S. contributed to the collection of samples and clinical data. K.I., W.S., H.M. and M.H. contributed to the collection and analysis of the primary sequence data of salivary samples. K.I., W.S. and L.T. contributed significantly to the statistical analysis of the data. K.I. wrote the first draft, and W.S., T.S. and M.H. contributed to the completion of the manuscript. All authors read, critically revised for important intellectual content, and approved the final manuscript.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30572,
+                    "infons": {
+                        "section_title_1": "Notes",
+                        "iao_name_1": "notes section",
+                        "iao_id_1": "IAO:0000634"
+                    },
+                    "text": "The authors declare no competing interests.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30620,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Tsuyoshi Sogo and Masahira Hattori jointly supervised this work.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30693,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Electronic supplementary material",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30726,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Supplementary information accompanies this paper at 10.1038/s41598-018-23870-w.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30805,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Publisher's note: Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30941,
+                    "infons": {
+                        "journal": "N Engl J Med. ",
+                        "volume": "375",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Lazaridis KN, LaRusso NF. Primary sclerosing cholangitis. N Engl J Med. 2016;375:1161\u20131170. doi: 10.1056/NEJMra1506330. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31129,
+                    "infons": {
+                        "journal": "Gut. ",
+                        "volume": "66",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Iwasawa K, et al. Characterisation of the faecal microbiota in Japanese patients with paediatric-onset primary sclerosing cholangitis. Gut. 2017;66:1344\u20131346. doi: 10.1136/gutjnl-2016-312533. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31379,
+                    "infons": {
+                        "journal": "Hepatology. ",
+                        "volume": "38",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Feldstein AE, et al. Primary sclerosing cholangitis in children: A long-term follow-up study. Hepatology. 2003;38:210\u2013217. doi: 10.1053/jhep.2003.50289. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31571,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Deneau, M. R. et al. The natural history of primary sclerosing cholangitis in 781 children: A multicenter, international collaboration. Hepatology, 10.1002/hep.29204 (2017). [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31756,
+                    "infons": {
+                        "journal": "Gastroenterology. ",
+                        "volume": "151",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Lunder AK, et al. Prevalence of sclerosing cholangitis detected by magnetic resonance cholangiography in patients with long-term inflammatory bowel disease. Gastroenterology. 2016;151:660\u2013669 e664. doi: 10.1053/j.gastro.2016.06.021. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32028,
+                    "infons": {
+                        "journal": "J Pediatr Gastroenterol Nutr. ",
+                        "volume": "55",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Alexopoulou E, et al. Investigative MRI cholangiopancreatography for primary sclerosing cholangitis-type lesions in children with IBD. J Pediatr Gastroenterol Nutr. 2012;55:308\u2013313. doi: 10.1097/MPG.0b013e31825bb3dc. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32284,
+                    "infons": {
+                        "journal": "Hepatology. ",
+                        "volume": "51",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Chapman R, et al. Diagnosis and management of primary sclerosing cholangitis. Hepatology. 2010;51:660\u2013678. doi: 10.1002/hep.23294. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32454,
+                    "infons": {
+                        "journal": "Pediatr Radiol. ",
+                        "volume": "32",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Ferrara C, Valeri G, Salvolini L, Giovagnoni A. Magnetic resonance cholangiopancreatography in primary sclerosing cholangitis in children. Pediatr Radiol. 2002;32:413\u2013417. doi: 10.1007/s00247-001-0617-z. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32697,
+                    "infons": {
+                        "journal": "Clin Res Hepatol Gastroenterol. ",
+                        "volume": "37",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Rossi G, et al. Diagnosis of sclerosing cholangitis in children: Blinded, comparative study of magnetic resonance versus endoscopic cholangiography. Clin Res Hepatol Gastroenterol. 2013;37:596\u2013601. doi: 10.1016/j.clinre.2013.05.014. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32969,
+                    "infons": {
+                        "journal": "J Pediatr Gastroenterol Nutr. ",
+                        "volume": "47",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Davies YK, et al. Long-term treatment of primary sclerosing cholangitis in children with oral vancomycin: An immunomodulating antibiotic. J Pediatr Gastroenterol Nutr. 2008;47:61\u201367. doi: 10.1097/MPG.0b013e31816fee95. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33227,
+                    "infons": {
+                        "journal": "Hepatology. ",
+                        "volume": "40",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Farkkila M, et al. Metronidazole and ursodeoxycholic acid for primary sclerosing cholangitis: A randomized placebo-controlled trial. Hepatology. 2004;40:1379\u20131386. doi: 10.1002/hep.20457. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33455,
+                    "infons": {
+                        "journal": "Am J Gastroenterol. ",
+                        "volume": "104",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Silveira MG, et al. Minocycline in the treatment of patients with primary sclerosing cholangitis: Results of a pilot study. Am J Gastroenterol. 2009;104:83\u201388. doi: 10.1038/ajg.2008.14. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33681,
+                    "infons": {
+                        "journal": "Aliment Pharmacol Ther. ",
+                        "volume": "37",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Tabibian JH, et al. Randomised clinical trial: vancomycin or metronidazole in patients with primary sclerosing cholangitis \u2014 A pilot study. Aliment Pharmacol Ther. 2013;37:604\u2013612. doi: 10.1111/apt.12232. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33926,
+                    "infons": {
+                        "journal": "J Gastrointestin Liver Dis. ",
+                        "volume": "25",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Rahimpour S, et al. A Triple blinded, randomized, placebo-controlled clinical trial to evaluate the efficacy and safety of oral vancomycin in primary sclerosing cholangitis: A pilot study. J Gastrointestin Liver Dis. 2016;25:457\u2013464. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34189,
+                    "infons": {
+                        "journal": "J Crohns Colitis. ",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Rossen NG, et al. The mucosa-associated microbiota of PSC patients is characterized by low diversity and low abundance of uncultured Clostridiales II. J Crohns Colitis. 2015;9:342\u2013348. doi: 10.1093/ecco-jcc/jju023. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Clostridiales",
+                            "infons": {
+                                "identifier": "NCBI:txid186802",
+                                "type": "bacteria_order",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:50:46",
+                                "parent_taxonomic_id": "NCBI:txid186801"
+                            },
+                            "id": "18415241",
+                            "locations": {
+                                "length": 13,
+                                "offset": 34326
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 34444,
+                    "infons": {
+                        "journal": "J Crohns Colitis. ",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Kevans D, et al. Characterization of intestinal microbiota in ulcerative colitis patients with and without primary sclerosing cholangitis. J Crohns Colitis. 2016;10:330\u2013337. doi: 10.1093/ecco-jcc/jjv204. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34707,
+                    "infons": {
+                        "journal": "Aliment Pharmacol Ther. ",
+                        "volume": "43",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Torres J, et al. The features of mucosa-associated microbiota in primary sclerosing cholangitis. Aliment Pharmacol Ther. 2016;43:790\u2013801. doi: 10.1111/apt.13552. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34928,
+                    "infons": {
+                        "journal": "Gut. ",
+                        "volume": "66",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Quraishi MN, et al. The gut-adherent microbiota of PSC-IBD is distinct to that of IBD. Gut. 2017;66:386\u2013388. doi: 10.1136/gutjnl-2016-311915. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35110,
+                    "infons": {
+                        "journal": "Gut. ",
+                        "volume": "66",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Kummen M, et al. The gut microbial profile in patients with primary sclerosing cholangitis is distinct from patients with ulcerative colitis without biliary disease and healthy controls. Gut. 2017;66:611\u2013619. doi: 10.1136/gutjnl-2015-310500. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35392,
+                    "infons": {
+                        "journal": "Gut. ",
+                        "volume": "65",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Sabino J, et al. Primary sclerosing cholangitis is characterised by intestinal dysbiosis independent from IBD. Gut. 2016;65:1681\u20131689. doi: 10.1136/gutjnl-2015-311004. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35619,
+                    "infons": {
+                        "journal": "Gut. ",
+                        "volume": "66",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Ruhlemann MC, et al. Faecal microbiota profiles as diagnostic biomarkers in primary sclerosing cholangitis. Gut. 2017;66:753\u2013754. doi: 10.1136/gutjnl-2016-312180. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35822,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Torres, J. et al. The gut microbiota, bile acids and their correlation in primary sclerosing cholangitis associated with inflammatory bowel disease. United European Gastroenterol J, 205064061770895, 10.1177/2050640617708953 (2017). [PMC free article] [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36085,
+                    "infons": {
+                        "journal": "World J Gastroenterol. ",
+                        "volume": "23",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Bajer L, et al. Distinct gut microbiota profiles in patients with primary sclerosing cholangitis and ulcerative colitis. World J Gastroenterol. 2017;23:4548\u20134558. doi: 10.3748/wjg.v23.i25.4548. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36338,
+                    "infons": {
+                        "journal": "Cell. ",
+                        "volume": "148",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Clemente JC, Ursell LK, Parfrey LW, Knight R. The impact of the gut microbiota on human health: An integrative view. Cell. 2012;148:1258\u20131270. doi: 10.1016/j.cell.2012.01.035. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36573,
+                    "infons": {
+                        "journal": "Hepatology. ",
+                        "volume": "62",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Bajaj JS, et al. Salivary microbiota reflects changes in gut microbiota in cirrhosis with hepatic encephalopathy. Hepatology. 2015;62:1260\u20131271. doi: 10.1002/hep.27819. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36801,
+                    "infons": {
+                        "journal": "DNA Res. ",
+                        "volume": "21",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Said HS, et al. Dysbiosis of salivary microbiota in inflammatory bowel disease and its association with oral immunological biomarkers. DNA Res. 2014;21:15\u201325. doi: 10.1093/dnares/dst037. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37047,
+                    "infons": {
+                        "journal": "Science. ",
+                        "volume": "358",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Atarashi K, et al. Ectopic colonization of oral bacteria in the intestine drives TH1 cell induction and inflammation. Science. 2017;358:359\u2013365. doi: 10.1126/science.aan4526. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 15:51:13",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "18415242",
+                            "locations": {
+                                "length": 8,
+                                "offset": 37099
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 37281,
+                    "infons": {
+                        "journal": "Gut. ",
+                        "volume": "61",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Farrell JJ, et al. Variations of oral microbiota are associated with pancreatic diseases including pancreatic cancer. Gut. 2012;61:582\u2013588. doi: 10.1136/gutjnl-2011-300784. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37513,
+                    "infons": {
+                        "journal": "PeerJ. ",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Torres PJ, et al. Characterization of the salivary microbiome in patients with pancreatic cancer. PeerJ. 2015;3:e1373. doi: 10.7717/peerj.1373. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37716,
+                    "infons": {
+                        "journal": "Am J Cancer Res. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Yan X, et al. Discovery and validation of potential bacterial biomarkers for lung cancer. Am J Cancer Res. 2015;5:3111\u20133122. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37889,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Flemer, B. et al. The oral microbiota in colorectal cancer is distinctive and predictive. Gut, 10.1136/gutjnl-2017-314814 (2017). [PMC free article] [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38050,
+                    "infons": {
+                        "journal": "Microb Ecol. ",
+                        "volume": "70",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Piccolo M, et al. Salivary microbiota associated with immunoglobulin A nephropathy. Microb Ecol. 2015;70:557\u2013565. doi: 10.1007/s00248-015-0592-9. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38236,
+                    "infons": {
+                        "journal": "Appl Environ Microbiol. ",
+                        "volume": "80",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Francavilla R, et al. Salivary microbiota and metabolome associated with celiac disease. Appl Environ Microbiol. 2014;80:3416\u20133425. doi: 10.1128/AEM.00362-14. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38454,
+                    "infons": {
+                        "journal": "Clin Immunol. ",
+                        "volume": "169",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Coit P, et al. Sequencing of 16S rRNA reveals a distinct salivary microbiome signature in Behcet\u2019s disease. Clin Immunol. 2016;169:28\u201335. doi: 10.1016/j.clim.2016.06.002. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38665,
+                    "infons": {
+                        "journal": "Nat Med. ",
+                        "volume": "21",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Zhang X, et al. The oral and gut microbiomes are perturbed in rheumatoid arthritis and partly normalized after treatment. Nat Med. 2015;21:895\u2013905. doi: 10.1038/nm.3914. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38875,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "509",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "36. Ding T, Schloss PD. Dynamics and associations of microbial community types across the human body. Nature. 2014;509:357\u2013360. doi: 10.1038/nature13178. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39084,
+                    "infons": {
+                        "journal": "J Pediatr Gastroenterol Nutr. ",
+                        "volume": "58",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "37. Levine A, et al. ESPGHAN revised Porto criteria for the diagnosis of inflammatory bowel disease in children and adolescents. J Pediatr Gastroenterol Nutr. 2014;58:795\u2013806. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39285,
+                    "infons": {
+                        "journal": "DNA Res. ",
+                        "volume": "20",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "38. Kim SW, et al. Robustness of gut microbiota of healthy adults in response to probiotic intervention revealed by high-throughput pyrosequencing. DNA Res. 2013;20:241\u2013253. doi: 10.1093/dnares/dst006. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39542,
+                    "infons": {
+                        "journal": "Appl Environ Microbiol. ",
+                        "volume": "67",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "39. Singleton DR, Furlong MA, Rathbun SL, Whitman WB. Quantitative comparisons of 16S rRNA gene sequence libraries from environmental samples. Appl Environ Microbiol. 2001;67:4374\u20134376. doi: 10.1128/AEM.67.9.4374-4376.2001. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39821,
+                    "infons": {
+                        "journal": "Biometrika. ",
+                        "volume": "40",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "40. Good IJ. The population frequencies of species and the estimation of population parameters. Biometrika. 1953;40:237\u2013264. doi: 10.1093/biomet/40.3-4.237. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40005,
+                    "infons": {
+                        "journal": "Hum Hered. ",
+                        "volume": "72",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "41. Calle ML, Urrea V, Boulesteix AL, Malats N. AUC-RF: A new strategy for genomic profiling with random forest. Hum Hered. 2011;72:121\u2013132. doi: 10.1159/000330778. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40206,
+                    "infons": {
+                        "journal": "Sci Rep. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "42. Lu H, et al. Deep sequencing reveals microbiota dysbiosis of tongue coat in patients with liver carcinoma. Sci Rep. 2016;6:33142. doi: 10.1038/srep33142. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40419,
+                    "infons": {
+                        "journal": "Hepatology. ",
+                        "volume": "54",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "43. Razumilava N, Gores GJ, Lindor KD. Cancer surveillance in patients with primary sclerosing cholangitis. Hepatology. 2011;54:1842\u20131852. doi: 10.1002/hep.24570. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40637,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "44. Takayasu, L. et al. Circadian oscillations of microbial and functional composition in the human salivary microbiome. DNA Res, 10.1093/dnares/dsx001 (2017). [PMC free article] [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40824,
+                    "infons": {
+                        "journal": "Sci Rep. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "45. Takeshita T, et al. Bacterial diversity in saliva and oral health-related conditions: The Hisayama Study. Sci Rep. 2016;6:22164. doi: 10.1038/srep22164. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41036,
+                    "infons": {
+                        "journal": "J Gastroenterol. ",
+                        "volume": "41",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "46. Tada S, Ebinuma H, Saito H, Hibi T. Therapeutic benefit of sulfasalazine for patients with primary sclerosing cholangitis. J Gastroenterol. 2006;41:388\u2013389. doi: 10.1007/s00535-005-1758-x. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41265,
+                    "infons": {
+                        "journal": "J Gastroenterol Hepatol. ",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "47. Kozaiwa K, et al. Three paediatric cases of primary sclerosing cholangitis treated with ursodeoxycholic acid and sulphasalazine. J Gastroenterol Hepatol. 1998;13:825\u2013829. doi: 10.1111/j.1440-1746.1998.tb00740.x. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41517,
+                    "infons": {
+                        "journal": "MBio. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "48. Zaura E, et al. Same exposure but two radically different responses to antibiotics: Resilience of the salivary microbiome versus long-term microbial shifts in feces. MBio. 2015;6:e01693\u201301615. doi: 10.1128/mBio.01693-15. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41797,
+                    "infons": {
+                        "journal": "Microbes Environ. ",
+                        "volume": "22",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "49. Morita H, et al. An improved DNA isolation method for metagenomic analysis of the microbial flora of the human intestine. Microbes Environ. 2007;22:214\u2013222. doi: 10.1264/jsme2.22.214. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42012,
+                    "infons": {
+                        "journal": "ISME J. ",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "50. Lozupone C, Lladser ME, Knights D, Stombaugh J, Knight R. UniFrac: An effective distance metric for microbial community comparison. ISME J. 2011;5:169\u2013172. doi: 10.1038/ismej.2010.133. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

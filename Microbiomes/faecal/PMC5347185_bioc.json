@@ -1,0 +1,3080 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC5347185",
+            "inputfile": "../microbiome_corpus_HTML\\PMC5347185.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Community-Level Differences in the Microbiome of Healthy Wild Mallards and Those Infected by Influenza A Viruses",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 112,
+                    "infons": {
+                        "section_title_1": "keywords",
+                        "iao_name_1": "keywords section",
+                        "iao_id_1": "IAO:0000630"
+                    },
+                    "text": "influenza, mallard, microbiome, network modeling, machine learning, biomarkers",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 198,
+                    "infons": {
+                        "section_title_1": "ABSTRACT",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Waterfowl, especially ducks and geese, are primary reservoirs for influenza A viruses (IAVs) that evolve and emerge as important pathogens in domestic animals and humans. In contrast to humans, where IAVs infect the respiratory tract and cause significant morbidity and mortality, IAVs infect the gastrointestinal tract of waterfowl and cause little or no pathology and are spread by fecal-oral transmission. For this reason, we examined whether IAV infection is associated with differences in the cloacal microbiome of mallards (Anas platyrhyncos), an important host of IAVs in North America and Eurasia. We characterized bacterial community composition by sequencing the V4 region of 16S rRNA genes. IAV-positive mallards had lower species diversity, richness, and evenness than IAV-negative mallards. Operational taxonomic unit (OTU) cooccurrence patterns were also distinct depending on infection status. Network analysis showed that IAV-positive mallards had fewer significant cooccurring OTUs and exhibited fewer coassociation patterns among those OTUs than IAV-negative mallards. These results suggest that healthy mallards have a more robust and complex cloacal microbiome. By combining analytical approaches, we identified 41 bacterial OTUs, primarily representatives of Streptococcus spp., Veillonella dispar, and Rothia mucilaginosa, contributing to the observed differences. This study found that IAV-infected wild mallards exhibited strong differences in microbiome composition relative to noninfected mallards and identified a concise set of putative biomarker OTUs. Using Random Forest, a supervised machine learning method, we verified that these 41 bacterial OTUs are highly predictive of infection status.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Streptococcus spp",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:38:08",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "37331846",
+                            "locations": {
+                                "length": 17,
+                                "offset": 1478
+                            }
+                        },
+                        {
+                            "text": "Veillonella dispar",
+                            "infons": {
+                                "identifier": "NCBI:txid39778",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:38:08",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "37331847",
+                            "locations": {
+                                "length": 18,
+                                "offset": 1498
+                            }
+                        },
+                        {
+                            "text": "Rothia mucilaginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid43675",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:38:08",
+                                "parent_taxonomic_id": "NCBI:txid32207"
+                            },
+                            "id": "37331848",
+                            "locations": {
+                                "length": 19,
+                                "offset": 1522
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 1929,
+                    "infons": {
+                        "section_title_1": "ABSTRACT",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "IMPORTANCE Seasonal influenza causes 3 to 5 million severe illnesses and 250,000 to 500,000 human deaths each year. While pandemic influenza viruses emerge only periodically, they can be devastating\u2014for example, the 1918 H1N1 pandemic virus killed more than 20 million people. IAVs infect the respiratory tract and cause significant morbidity and mortality in humans. In contrast, IAVs infect the gastrointestinal tract of waterfowl, producing little pathology. Recent studies indicated that viruses can alter the microbiome at the respiratory and gastrointestinal mucosa, but there are no reports of how the microbiota of the natural host of influenza is affected by infection. Here we find that the mallard microbiome is altered during IAV infection. Our results suggest that detailed examination of humans and animals infected with IAVs may reveal individualized microbiome profiles that correspond to health and disease. Moreover, future studies should explore whether the altered microbiome facilitates maintenance and transmission of IAVs in waterfowl populations.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2999,
+                    "infons": {
+                        "section_title_1": "INTRODUCTION",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Mallards (Anas platyrhyncos) are an important natural reservoir in North America and Eurasia for many subtypes of influenza A viruses (IAVs), the group of influenza viruses mainly responsible for seasonal and pandemic influenza in humans (1). Waterfowl (ducks, geese, and swans in the avian family Anatidae) are the primary reservoir of naturally occurring IAVs (2, 6). In humans and domestic animals (poultry, swine, horses, dogs, etc.), IAVs contain gene segments that trace back to a wild avian origin (3, 4). Recent concern over the emergence of new pandemic IAVs led to intensive IAV surveillance in waterfowl, especially of dabbling ducks in the genus Anas, which revealed that IAV prevalence may reach 40%, especially in young (hatch year) birds (58,\u201361, 65). In contrast to humans, where IAVs infect the respiratory tract and cause significant morbidity and mortality, IAVs infect the gastrointestinal tract of waterfowl and cause little or no pathology (5) and are spread by fecal-oral transmission (6).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4023,
+                    "infons": {
+                        "section_title_1": "INTRODUCTION",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Here we investigated the bacterial microbiome in wild, juvenile mallards and tested for associations with IAV infection. The microbiome was first defined by Whipps et al. (7) as a characteristic microbial community (including bacteria, archaea, fungi, the various single-celled eukaryotes generally referred to as protists, and viruses) occupying a distinct habitat. For a variety of reasons, most microbiome research to date has focused on the bacterial portion of these communities. The application of contemporary sequencing methods to characterize diversity in the microbiome has revolutionized the study of interactions between microbial inhabitants of the microbiome in general as well as the study of interactions between members of the microbiome and particular pathogens (see, e.g., references 8,\u201312). Identification of potential effects of IAV infection on the microbiome of mallards (a natural reservoir) should contribute to a greater understanding of how these viruses are maintained and transmitted in nature.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:38:35",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "37331849",
+                            "locations": {
+                                "length": 8,
+                                "offset": 4249
+                            }
+                        },
+                        {
+                            "text": "archaea",
+                            "infons": {
+                                "identifier": "NCBI:txid2157",
+                                "type": "archaea_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:38:35",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "37331850",
+                            "locations": {
+                                "length": 7,
+                                "offset": 4259
+                            }
+                        },
+                        {
+                            "text": "fungi",
+                            "infons": {
+                                "identifier": "NCBI:txid4751",
+                                "type": "fungi_kingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:38:35",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "37331851",
+                            "locations": {
+                                "length": 5,
+                                "offset": 4268
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 5046,
+                    "infons": {
+                        "section_title_1": "INTRODUCTION",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "When a mallard ingests IAV from contaminated material in the environment, the process of infection requires a virus to pass from the gut lumen through mucus, which presents a potent physical and immunological barrier to microbial invasion (13, 14, 15). In birds and mammals, mucus is composed primarily of mucins produced by underlying epithelial cells and is divided into two layers: an outer layer that typically contains a diverse community of resident microbes and an inner \u201cprotected\u201d layer that has a low density of microbes except during pathogen invasion (15). In some cases, the microbiome of the mucus layer may affect pathogen attachment to host cells; for example, glycan structures on the surface of the bacterium Enterobacter cloacae in the human gut microbiome may facilitate the attachment of human norovirus to host cells (16). In addition, some orally transmitted viruses, including poliovirus and reovirus, may manipulate the bacterial microbiome to promote their transmission across the mucosal interface (reviewed in reference 10). Along with its associated microbiota and any potential pathogens trapped in the mucus layer, mucus is continuously expelled from the body. Once IAVs have crossed the mucosal barrier in the intestinal tract of waterfowl, they amplify inside host epithelial cells and are then shed into the environment and transmitted to new hosts. Free-ranging mallards typically shed IAVs in feces for about 6\u00a0days after infection (5, 17).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Enterobacter cloacae",
+                            "infons": {
+                                "identifier": "NCBI:txid550",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:38:49",
+                                "parent_taxonomic_id": "NCBI:txid547"
+                            },
+                            "id": "37331852",
+                            "locations": {
+                                "length": 20,
+                                "offset": 5773
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 6522,
+                    "infons": {
+                        "section_title_1": "INTRODUCTION",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In this study, we analyzed the relationship between infection by low-pathogenicity IAVs and the composition and species cooccurrence patterns of bacteria inhabiting the cloacal microbiome of juvenile mallards. We hypothesized that IAV infection would be associated with an altered microbiome. To investigate this, we identified members of the microbiome that contribute to the observed associations. We compared bacterial community composition characteristics using standard approaches (alpha and beta diversity; see Materials and Methods), and, to assess the relationships between groups of taxa, we analyzed bacterial operational taxonomic unit (OTU) cooccurrence patterns. Given that groups of bacterial taxa are often both functionally and phylogenetically related, it is useful to assess how infection might affect interdependencies between bacterial OTUs. In order to investigate potential interactions and relationships among different microbial taxa, we analyzed their cooccurrence relationships using a network. Network analysis of significant cooccurrence structures of microbial taxa has helped decipher complex microbial dynamics such as groups of taxa that are metabolically linked or are genetically related (18).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:38:58",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "37331853",
+                            "locations": {
+                                "length": 8,
+                                "offset": 6667
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 7749,
+                    "infons": {
+                        "section_title_1": "INTRODUCTION",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Although several studies have focused on IAVs and the microbiome in humans and mice (19,\u201325), we believe that this is the first study to have investigated the relationship between IAV infection and the microbiome of a wild bird that is an important primary reservoir.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8016,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Cloacal swabs were collected from 122 juvenile mallards in the Suisun Bay area in California in the United States between 2009 and 2013. All mallards sampled in this study were apparently healthy at the time of sampling. We performed influenza testing and microbiome analysis on the cloacal swabs.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8320,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "OTU richness levels in cloacal samples differed based on infection status (t = 7.20, df = 94.8, P < 0.00001) (Fig.\u00a01a). After rarefaction to 5,000 reads per sample and removal of OTUs that were unidentified at the kingdom level, IAV-negative (here \u201cIAV\u2212\u201d) mallards had 1.5 times as many OTUs per individual (282 OTUs) as IAV-positive (IAV+) mallards (187 OTUs; Fig.\u00a01a). OTU diversity (based on Shannon index values) was greater in IAV\u2212 mallards than in IAV+ mallards (t = 3.77, df = 78.83, P = 0.0003) (Fig.\u00a01a), and OTU evenness was greater in IAV\u2212 mallards than in IAV+ mallards (t = 2.53, df = 76.45, P = 0.014) (Fig.\u00a01a).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8946,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Representatives of the bacterial phyla Firmicutes, Proteobacteria, Bacteroidetes, Actinobacteria, Fusobacteria, and Tenericutes were detected in all of the samples, comprising averages of 44%, 27%, 16%, 5%, 4%, and 1.4% in IAV\u2212 mallards and 27%, 33%, 24%, 4%, 5.5%, and 1% in IAV+ mallards, respectively (Fig.\u00a01b). Infection status was correlated with large differences in the proportions of bacterial OTUs, particularly within the phyla Firmicutes, Proteobacteria, and Bacteroidetes (Fig.\u00a01b).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Firmicutes",
+                            "infons": {
+                                "identifier": "NCBI:txid1239",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:22",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "37331854",
+                            "locations": {
+                                "length": 10,
+                                "offset": 8985
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:22",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "37331855",
+                            "locations": {
+                                "length": 14,
+                                "offset": 8997
+                            }
+                        },
+                        {
+                            "text": "Bacteroidetes",
+                            "infons": {
+                                "identifier": "NCBI:txid976",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:25",
+                                "parent_taxonomic_id": "NCBI:txid68336"
+                            },
+                            "id": "37331856",
+                            "locations": {
+                                "length": 13,
+                                "offset": 9013
+                            }
+                        },
+                        {
+                            "text": "Actinobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid1760",
+                                    "NCBI:txid201174"
+                                ],
+                                "type": [
+                                    "bacteria_class",
+                                    "bacteria_phylum"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:22",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid201174",
+                                    "NCBI:txid1783272"
+                                ]
+                            },
+                            "id": "37331857",
+                            "locations": {
+                                "length": 14,
+                                "offset": 9028
+                            }
+                        },
+                        {
+                            "text": "Fusobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid32066",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:25",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "37331858",
+                            "locations": {
+                                "length": 12,
+                                "offset": 9044
+                            }
+                        },
+                        {
+                            "text": "Tenericutes",
+                            "infons": {
+                                "identifier": "NCBI:txid544448",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:22",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "37331859",
+                            "locations": {
+                                "length": 11,
+                                "offset": 9062
+                            }
+                        },
+                        {
+                            "text": "Firmicutes",
+                            "infons": {
+                                "identifier": "NCBI:txid1239",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:25",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "37331860",
+                            "locations": {
+                                "length": 10,
+                                "offset": 9384
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:25",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "37331861",
+                            "locations": {
+                                "length": 14,
+                                "offset": 9396
+                            }
+                        },
+                        {
+                            "text": "Bacteroidetes",
+                            "infons": {
+                                "identifier": "NCBI:txid976",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:25",
+                                "parent_taxonomic_id": "NCBI:txid68336"
+                            },
+                            "id": "37331862",
+                            "locations": {
+                                "length": 13,
+                                "offset": 9416
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 9440,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The overall composition of cloacal bacteria in IAV+ mallards differed significantly from that in IAV\u2212 mallards (permutational multivariate analysis of variance [PERMANOVA]: F1,114 = 11.2; P < 0.001), even though the community composition was influenced by the year of sampling (PERMANOVA: F1,114 = 3: 28; P < 0.001), and the interaction between influenza infection status and year of sampling was also significant (PERMANOVA: F1,114 = 3.05; P < 0.002). The microbiome of mallard males did not differ from that of females (PERMANOVA: F2,114 = 1.14; P = 0.24). Despite the effect of the year data, we detected significant clustering based on infection status (see Fig.\u00a0S1\u00a0in the supplemental material).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:25",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "37331863",
+                            "locations": {
+                                "length": 8,
+                                "offset": 9475
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 10140,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "FIG\u00a0S1\u00a0",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "PCoA plots of IAV+ and IAV\u2212 mallards. The top row shows PCoA results calculated on log-scaled abundance values; the bottom row shows PCoA results calculated on binarized presence/absence versions of the same data. (a) A total of 10,363 OTUs found in the data after rarefaction (5,000 reads per sample). (b) A total of 10,363 OTUs minus 85 OTUs that were identified as significant by the G-test. (c) A total of 10,363 OTUs minus 47 OTUs that were identified based on the DIROM. Download FIG\u00a0S1, PDF file, 0.4 MB.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10658,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Infected mallards only. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Among IAV+ mallards, there was a significant effect of IAV subtype (based on the levels of the surface proteins hemagglutinin [HA] and neuraminidase [NA]) on bacterial community composition (F1,69 = 1.35, P < 0.004). In addition, we detected a significant effect of year of sampling (F1,69 = 3.03, P < 0.004), likely because some subtypes occurred only in certain years, and the interaction between HA and NA subtype and the year that the mallards were sampled was significant (F1,69 = 2.14, P = 0.007).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11185,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Infected mallards only. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Using the DIROM (Difference in the Relative Occurrence Metric; see Materials and Methods) method, we identified all OTUs that had a greater than 50% difference in how frequently they occurred in the two groups. This resulted in 47 OTUs (see Table\u00a0S1\u00a0in the supplemental material), all of which occurred in greater frequency in the IAV\u2212 mallards. These OTUs belonged to the phyla Tenericutes (n = 1), Proteobacteria (n = 4), Firmicutes (n = 31), Bacteroidetes (n = 5), and Actinobacteria (n = 6). According to the results obtained with a Quantitative Insights in Microbial Ecology (QIIME) taxonomy assignment script (assign_taxonomy.py), 21 of the 47 OTUs belonged to the genus Streptococcus, 5 were representatives of the species Rothia mucilaginosa, and 5 were representatives of the species Veillonella dispar. The largest difference belonged to the single OTU from the Tenericutes, representing a mycoplasma, whose examples differed by 92.1% between the groups and, like the other OTUs, occurred more frequently in IAV\u2212 mallards.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Tenericutes",
+                            "infons": {
+                                "identifier": "NCBI:txid544448",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:48",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "37331864",
+                            "locations": {
+                                "length": 11,
+                                "offset": 11564
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:48",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "37331865",
+                            "locations": {
+                                "length": 14,
+                                "offset": 11585
+                            }
+                        },
+                        {
+                            "text": "Firmicutes",
+                            "infons": {
+                                "identifier": "NCBI:txid1239",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:49",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "37331866",
+                            "locations": {
+                                "length": 10,
+                                "offset": 11609
+                            }
+                        },
+                        {
+                            "text": "Bacteroidetes",
+                            "infons": {
+                                "identifier": "NCBI:txid976",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:54",
+                                "parent_taxonomic_id": "NCBI:txid68336"
+                            },
+                            "id": "37331867",
+                            "locations": {
+                                "length": 13,
+                                "offset": 11630
+                            }
+                        },
+                        {
+                            "text": "Actinobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid1760",
+                                    "NCBI:txid201174"
+                                ],
+                                "type": [
+                                    "bacteria_class",
+                                    "bacteria_phylum"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:49",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid201174",
+                                    "NCBI:txid1783272"
+                                ]
+                            },
+                            "id": "37331868",
+                            "locations": {
+                                "length": 14,
+                                "offset": 11657
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:51",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "37331869",
+                            "locations": {
+                                "length": 13,
+                                "offset": 11862
+                            }
+                        },
+                        {
+                            "text": "Rothia mucilaginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid43675",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:52",
+                                "parent_taxonomic_id": "NCBI:txid32207"
+                            },
+                            "id": "37331870",
+                            "locations": {
+                                "length": 19,
+                                "offset": 11915
+                            }
+                        },
+                        {
+                            "text": "Veillonella dispar",
+                            "infons": {
+                                "identifier": "NCBI:txid39778",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:52",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "37331871",
+                            "locations": {
+                                "length": 18,
+                                "offset": 11978
+                            }
+                        },
+                        {
+                            "text": "Tenericutes",
+                            "infons": {
+                                "identifier": "NCBI:txid544448",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:53",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "37331872",
+                            "locations": {
+                                "length": 11,
+                                "offset": 12057
+                            }
+                        },
+                        {
+                            "text": "mycoplasma",
+                            "infons": {
+                                "identifier": "NCBI:txid2093",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:53",
+                                "parent_taxonomic_id": "NCBI:txid2092"
+                            },
+                            "id": "37331873",
+                            "locations": {
+                                "length": 10,
+                                "offset": 12085
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 12217,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "TABLE\u00a0S1\u00a0",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "OTUs that differed by more than 50% in relative occurrence levels between IAV+ and IAV\u2212 mallards (difference in relative occurrence metric [DIROM]). Download TABLE\u00a0S1, DOCX file, 0.1 MB.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12412,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "TABLE\u00a0S1\u00a0",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We also used the G-test (see Materials and Methods) to identify 85 OTUs that differed in abundance between IAV\u2212 and IAV+ mallards (Table\u00a0S2). IAV\u2212 mallards had higher abundances in 51 OTUs in Firmicutes, particularly in representatives of Streptococcus (n = 31 OTUs) and Veillonella (n = 14 OTUs), as well as OTUs in other phyla, including Actinobacteria (n = 10), Bacteroidetes (n = 10), Proteobacteria (n = 5), Tenericutes (n = 4), and Fusobacteria (n = 3). Only one OTU (in phylum Actinobacteria, family Micrococcaceae) was significantly enriched in the IAV+ mallards compared to IAV\u2212 individuals.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Firmicutes",
+                            "infons": {
+                                "identifier": "NCBI:txid1239",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:58",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "37331874",
+                            "locations": {
+                                "length": 10,
+                                "offset": 12604
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:59",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "37331875",
+                            "locations": {
+                                "length": 13,
+                                "offset": 12651
+                            }
+                        },
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:39:59",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "37331876",
+                            "locations": {
+                                "length": 11,
+                                "offset": 12683
+                            }
+                        },
+                        {
+                            "text": "Actinobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid1760",
+                                    "NCBI:txid201174"
+                                ],
+                                "type": [
+                                    "bacteria_class",
+                                    "bacteria_phylum"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:40:00",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid201174",
+                                    "NCBI:txid1783272"
+                                ]
+                            },
+                            "id": "37331877",
+                            "locations": {
+                                "length": 14,
+                                "offset": 12752
+                            }
+                        },
+                        {
+                            "text": "Bacteroidetes",
+                            "infons": {
+                                "identifier": "NCBI:txid976",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:40:03",
+                                "parent_taxonomic_id": "NCBI:txid68336"
+                            },
+                            "id": "37331878",
+                            "locations": {
+                                "length": 13,
+                                "offset": 12777
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:40:01",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "37331879",
+                            "locations": {
+                                "length": 14,
+                                "offset": 12801
+                            }
+                        },
+                        {
+                            "text": "Tenericutes",
+                            "infons": {
+                                "identifier": "NCBI:txid544448",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:40:01",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "37331880",
+                            "locations": {
+                                "length": 11,
+                                "offset": 12825
+                            }
+                        },
+                        {
+                            "text": "Fusobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid32066",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:40:03",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "37331881",
+                            "locations": {
+                                "length": 12,
+                                "offset": 12850
+                            }
+                        },
+                        {
+                            "text": "Actinobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid1760",
+                                    "NCBI:txid201174"
+                                ],
+                                "type": [
+                                    "bacteria_class",
+                                    "bacteria_phylum"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:40:02",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid201174",
+                                    "NCBI:txid1783272"
+                                ]
+                            },
+                            "id": "37331882",
+                            "locations": {
+                                "length": 14,
+                                "offset": 12896
+                            }
+                        },
+                        {
+                            "text": "Micrococcaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid1268",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:40:02",
+                                "parent_taxonomic_id": "NCBI:txid85006"
+                            },
+                            "id": "37331883",
+                            "locations": {
+                                "length": 14,
+                                "offset": 12919
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 13012,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "TABLE\u00a0S2\u00a0",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "A total of 85 OTUs differed significantly in mean abundance levels between IAV+ and IAV\u2212 mallards based on the G-test (P\u00a0value corrected for multiple comparisons with Bonferroni method). Download TABLE\u00a0S2, DOCX file, 0.1 MB.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13245,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Network analysis. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The resulting bacterial networks (see Materials and Methods) both consisted of 674 nodes (OTUs) with 112,488 non-zero-weighted edges in IAV+ and 132,875 edges in IAV\u2212 networks with average node connections (i.e., the average number of edges incident to each node) of 333.79 and 394.02, respectively. The average values for weighted degree (i.e., sum of all the weights for incident edges) were 13.12 for IAV+ and 29.89 for IAV\u2212. These results show that OTUs in the IAV+ group had a lower number of connections in total and that the edges had relatively much lower weights. Thus, the OTUs in IAV+ mallards cooccurred in fewer IAV+ mallards than IAV\u2212 mallards.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13921,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Network analysis. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To ensure that we were detecting OTUs associated with infection status (rather than clusters idiosyncratic to individuals), we filtered the OTU table to include only those OTUs that appeared in two or more samples per IAV condition, resulting in 674 OTUs. We then characterized OTU cooccurrence networks across the 674 OTUs in the IAV+ and IAV\u2212 mallards and compared the IAV+ and IAV\u2212 networks to generate difference networks (D+ and D\u2212; see Materials and Methods). Briefly, the cooccurrences that were at higher levels in IAV+ were assigned to D+, and the cooccurrences that were at higher levels in IAV\u2212 were assigned to D\u2212. The assumption is that the clusters of OTUs highly cooccurring in one group (D+ or D\u2212) but not the other were infection dependent. The resulting difference networks both consisted of 674 nodes (OTUs) with 344 edges in D+ and 6,702 edges in D\u2212 networks with average node connections of 1.02 and 19.8, respectively. We found that the network of D+ mallards had fewer edges and thus lower network density than the network of D\u2212 mallards. The density values were 0.002 in D+ and 0.03 in D\u2212, showing proportionally larger numbers of existing connections in D. In order to identify core communities of bacteria that were associated with IAV infection, we set a threshold for edge weights (see Materials and Methods) to exclude weak connections and then decomposed our D+ and D\u2212 networks into modules (i.e., groups of nodes that were more densely connected to one another than to the rest of the network) (26) to find significant community differences in cooccurrence patterns between IAV+ and IAV\u2212 mallards. Both D+ and D\u2212 resulted in the formation of one cluster by the use of the Chinese whispers clustering method (27) and Markov cluster algorithm (MCL) clustering (28) with 27 and 80 nodes, respectively. A visualization of these clusters is shown in Fig.\u00a02. Twenty of these OTUs were mutual (shared) between the two groups (mutual 20). The mutual 20 exhibited similar abundance patterns across all the samples regardless of the infection group (Fig.\u00a03) and may be part of the core microbiome of the mallard. In addition to the mutual 20 OTUs, we found 7 OTUs that were uniquely identified by the D+ cluster and we found 60 OTUs that were uniquely identified by the D\u2212 cluster. The set of OTUs that were uniquely identified in D+ may be indicative of a community of bacteria that are activated in the presence of infection. This approach allows us to identify those OTUs that were uniquely identified in the D\u2212 cluster (and therefore absent in the D+ cluster) and may reflect bacteria that are diminished in population during infection. The obtained cluster from D\u2212 was bigger and more densely connected, whereas the D+ cluster had fewer OTUs and weaker connections. Therefore, the cluster from D\u2212 may represent stronger patterns of coassociation between OTUs.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:40:26",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "37331884",
+                            "locations": {
+                                "length": 8,
+                                "offset": 15144
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:40:39",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "37331885",
+                            "locations": {
+                                "length": 8,
+                                "offset": 16312
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:40:41",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "37331886",
+                            "locations": {
+                                "length": 8,
+                                "offset": 16522
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 16806,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Network analysis. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "In the final step of network modeling, we used the difference networks to identify clusters that were highly correlated with groups of mallards based on their infection status (Table\u00a0S3). Notably, 41 of the OTUs identified by network analysis overlapped the OTUs identified by G-test and DIROM (Fig.\u00a03; Table\u00a01). All of these OTUs were contained in the clusters retrieved from the D\u2212 network. We studied the distribution of those 41 OTUs across the clusters and observed that all of them were contained in one cluster and had high edge weights (Fig.\u00a02).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17359,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "TABLE\u00a0S3\u00a0",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Taxonomic assignments for OTUs identified in network modeling as significantly clustered. Download TABLE\u00a0S3, DOCX file, 0.1 MB.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17495,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "TABLE\u00a0S3\u00a0",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To confirm whether these OTUs are predictive of infection status, we also used the Random Forest model, which is a supervised machine-learning technique (29). The 3-fold cross-validation approach was applied to estimate the accuracy of the classifier. We assigned OTUs as the features in our model to identify the set of OTUs most predictive of infection status, resulting in 211 OTUs. Of the 211 OTUs, 38 were represented in the 41 overlapping OTUs obtained from our previous approaches. Using only the 41 overlapping OTUs as features in a second Random Forest model, we obtained 96% accuracy in predicting infection status.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18120,
+                    "infons": {
+                        "section_title_1": "RESULTS",
+                        "section_title_2": "Classifying mallards using overlapping OTUs. ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Subsequently, we determined whether the overlapping 41 OTUs indicated the IAV condition for each sample. We found that the 41 overlapping OTUs were highly represented in IAV\u2212 mallards and were not highly represented in IAV+ mallards (Fig.\u00a03). IAV\u2212 mallards had most of the 41 OTUs at high abundance, whereas IAV+ mallards frequently had few of the 41 OTUs and that those few OTUs occurred at low abundance (Fig.\u00a04). More than 90% of the IAV+ mallards had 12 or fewer of the overlapping 41 OTUs, and 80% of the IAV\u2212 mallards had more than 24 of the overlapping OTUs.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18730,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "This study was the first characterization of the cloacal microbiome of wild, free-ranging mallards. Anatomically, the cloaca differs from the gastrointestinal tract in that it interacts with the digestive system, the urogenital system, and the outside world (including sexual partners). Only a few sequence-based studies have been conducted on the cloacal microbiome of birds. As we found for the mallards, black-legged kittiwakes (Rissa tridactyla), another natural host for IAV (30), contain Actinobacteria, Firmicutes, and Proteobacteria in the cloacal microbiome and even share many genera with our data set (e.g., Rothia, Streptococcus, Corynebacterium, and Enterococcus) (31). The most abundant bacterial phyla reported in the cloacal microbiota of the barn swallow (Hirundo rustica), a passerine bird, were Actinobacteria, Firmicutes, Proteobacteria, Bacteroidetes, and Tenericutes (32). Several genera frequently found in our samples (e.g., Rothia, Streptococcus, Corynebacterium, Enterococcus, Streptococcus, and Staphylococcus) were detected in barn swallows as well.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "cloaca",
+                            "infons": {
+                                "identifier": "NCBI:txid547",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:06",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "37331887",
+                            "locations": {
+                                "length": 6,
+                                "offset": 18848
+                            }
+                        },
+                        {
+                            "text": "Actinobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid1760",
+                                    "NCBI:txid201174"
+                                ],
+                                "type": [
+                                    "bacteria_class",
+                                    "bacteria_phylum"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:10",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid201174",
+                                    "NCBI:txid1783272"
+                                ]
+                            },
+                            "id": "37331888",
+                            "locations": {
+                                "length": 14,
+                                "offset": 19224
+                            }
+                        },
+                        {
+                            "text": "Firmicutes",
+                            "infons": {
+                                "identifier": "NCBI:txid1239",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:10",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "37331889",
+                            "locations": {
+                                "length": 10,
+                                "offset": 19240
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:11",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "37331890",
+                            "locations": {
+                                "length": 14,
+                                "offset": 19256
+                            }
+                        },
+                        {
+                            "text": "Rothia",
+                            "infons": {
+                                "identifier": "NCBI:txid32207",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:12",
+                                "parent_taxonomic_id": "NCBI:txid1268"
+                            },
+                            "id": "37331891",
+                            "locations": {
+                                "length": 6,
+                                "offset": 19349
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:12",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "37331892",
+                            "locations": {
+                                "length": 13,
+                                "offset": 19357
+                            }
+                        },
+                        {
+                            "text": "Corynebacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1716",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:12",
+                                "parent_taxonomic_id": "NCBI:txid1653"
+                            },
+                            "id": "37331893",
+                            "locations": {
+                                "length": 15,
+                                "offset": 19372
+                            }
+                        },
+                        {
+                            "text": "Enterococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1350",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:12",
+                                "parent_taxonomic_id": "NCBI:txid81852"
+                            },
+                            "id": "37331894",
+                            "locations": {
+                                "length": 12,
+                                "offset": 19393
+                            }
+                        },
+                        {
+                            "text": "Actinobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid1760",
+                                    "NCBI:txid201174"
+                                ],
+                                "type": [
+                                    "bacteria_class",
+                                    "bacteria_phylum"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:13",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid201174",
+                                    "NCBI:txid1783272"
+                                ]
+                            },
+                            "id": "37331895",
+                            "locations": {
+                                "length": 14,
+                                "offset": 19544
+                            }
+                        },
+                        {
+                            "text": "Firmicutes",
+                            "infons": {
+                                "identifier": "NCBI:txid1239",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:13",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "37331896",
+                            "locations": {
+                                "length": 10,
+                                "offset": 19560
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:13",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "37331897",
+                            "locations": {
+                                "length": 14,
+                                "offset": 19572
+                            }
+                        },
+                        {
+                            "text": "Bacteroidetes",
+                            "infons": {
+                                "identifier": "NCBI:txid976",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:14",
+                                "parent_taxonomic_id": "NCBI:txid68336"
+                            },
+                            "id": "37331898",
+                            "locations": {
+                                "length": 13,
+                                "offset": 19588
+                            }
+                        },
+                        {
+                            "text": "Tenericutes",
+                            "infons": {
+                                "identifier": "NCBI:txid544448",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:13",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "37331899",
+                            "locations": {
+                                "length": 11,
+                                "offset": 19607
+                            }
+                        },
+                        {
+                            "text": "Rothia",
+                            "infons": {
+                                "identifier": "NCBI:txid32207",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:14",
+                                "parent_taxonomic_id": "NCBI:txid1268"
+                            },
+                            "id": "37331900",
+                            "locations": {
+                                "length": 6,
+                                "offset": 19679
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:14",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "37331901",
+                            "locations": {
+                                "length": 13,
+                                "offset": 19687
+                            }
+                        },
+                        {
+                            "text": "Corynebacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1716",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:14",
+                                "parent_taxonomic_id": "NCBI:txid1653"
+                            },
+                            "id": "37331902",
+                            "locations": {
+                                "length": 15,
+                                "offset": 19702
+                            }
+                        },
+                        {
+                            "text": "Enterococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1350",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:14",
+                                "parent_taxonomic_id": "NCBI:txid81852"
+                            },
+                            "id": "37331903",
+                            "locations": {
+                                "length": 12,
+                                "offset": 19719
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:14",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "37331904",
+                            "locations": {
+                                "length": 13,
+                                "offset": 19733
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:41:14",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "37331905",
+                            "locations": {
+                                "length": 14,
+                                "offset": 19752
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 19817,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "All of the mallards sampled in this study were apparently healthy at the time that they were sampled, and a number of studies have shown that infection with low-pathogenicity IAVs does not cause gross or microscopic lesions in the gastrointestinal tract of waterfowl (4, 5, 6, 33). Thus, we assume that the microbiome effects were caused by the IAV and were not due to lower fitness in infected birds. All mallards were in their hatch year (likely <6\u00a0months of age) and were sampled on their breeding grounds prior to migration. Thus, our findings almost certainly reflect their first exposure to the particular virus strain isolated from their feces and may reflect their first exposure to any IAV. In an experimental infection study of IAV in mallards, Jourdain et al. (5) found that most viral shedding occurs during the first 7\u00a0days of infection. Despite the apparent lack of clinical disease or detectable pathology, some authors have suggested that infection may cause reduced fitness, perhaps due to IAV-induced decreases in nutrient uptake. For example, Latorre-Margalef et al. (17) found that body mass was significantly lower in free-ranging infected mallards than in uninfected mallards; however, prior infection status did not affect the speed or distance of subsequent migration. Importantly, we found that IAV+ mallards exhibited large differences in the composition of their cloacal microbiome, suggesting that IAV infection, and associated changes in the host microbiome, may have effects on the normal function of the gastrointestinal tract and perhaps of other organ systems and physiological responses (i.e., immune system responses) as well (4, 62, 63, 64). Although our study focused on a single species and a single anatomic location, our results indicate that future studies of host-IAV interactions may be incomplete if they do not include members of the microbiome as key players in the progress and outcome of infection.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21763,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Whether the observed differences in bacterial community composition associated with IAV infection in mallards represent a transient change in the cloacal microbiome is unknown. Although we assume that our IAV\u2212 and IAV+ mallards had similar microbiomes prior to IAV infection, additional studies are needed to follow the microbiome composition before, during, and after infection. If IAV infection caused our observed differences in microbiome composition, an interesting future direction would be to verify that cloacal diversity returns to preinfection (IAV\u2212) levels after recovery. Alternatively, mallards with more-diverse cloacal bacterial communities may be less susceptible to infection by IAVs, and the observed differences in bacterial community structure may instead reflect variations in the host susceptibility to infection rather than being a consequence of infection. Furthermore, if reduced diversity in the cloacal microbiome persists following infection, mallards exposed to IAVs may be more vulnerable to opportunistic infections. However, no studies have suggested that prior exposure, reflected by the presence of anti-IAV antibodies, is associated with decreased fitness or enhanced susceptibility to opportunistic infections.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23009,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "More-diverse ecological communities are often more stable in response to perturbations because decreases in the abundances of some species are counterbalanced by increases in the abundances of others (34). Studies of macroorganisms (see, e.g., references 35 and 36) have found that greater species diversity is correlated with greater surface cover, which may help prevent the establishment of invasive species. Interactions between taxa may occur on surfaces in animal microbiomes, and, in some cases, low diversity may make hosts vulnerable to invasion. Still, it is important to recognize that diversity is not a panacea and that the consequences of diversity depend on complex interactions between host susceptibility and traits associated with invading species (37). In the human microbiome, diseases that incite a strong inflammatory response are known to cause changes (both decreases and increases) in bacterial OTU richness and diversity (reviewed in reference 38). For example, bacterial diversity in the lung is increased in patients with cystic fibrosis (39) and in patients with bacterial vaginosis (40). High microbial diversity is expected to occur in a healthy gut microbiome and in patients with Crohn\u2019s disease (41), and patients with inflammatory bowel disease tend to have reduced bacterial diversity in their gastrointestinal tracts (42). However, it is unclear whether reduced diversity is a symptom or a cause of these conditions.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24462,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In this study, we used network modeling to identify a set of highly diagnostic cooccurring OTUs that would not have been detected by standard diversity analysis or differential-abundance-based statistics. Difference networks for the two IAV conditions revealed that D\u2212 was a denser network, which was consistent with the observation that the IAV\u2212 mallards had greater OTU diversity, richness, and evenness. Combining all three approaches revealed that a relatively small number of OTUs were significantly different across both the abundance and presence/absence patterns and that these OTUs contributed to differences associated with infection status, including infections by representatives of Streptococcus spp., Veillonella dispar, Rothia mucilaginosa, and Prevotella, among others.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Streptococcus spp",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:07",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "37331906",
+                            "locations": {
+                                "length": 17,
+                                "offset": 25157
+                            }
+                        },
+                        {
+                            "text": "Veillonella dispar",
+                            "infons": {
+                                "identifier": "NCBI:txid39778",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:07",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "37331907",
+                            "locations": {
+                                "length": 18,
+                                "offset": 25177
+                            }
+                        },
+                        {
+                            "text": "Rothia mucilaginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid43675",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:07",
+                                "parent_taxonomic_id": "NCBI:txid32207"
+                            },
+                            "id": "37331908",
+                            "locations": {
+                                "length": 19,
+                                "offset": 25197
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:07",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "37331909",
+                            "locations": {
+                                "length": 10,
+                                "offset": 25222
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 25247,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Nearly all OTUs identified as contributing significantly to the observed differences were enriched in uninfected individuals. The only exception was a single OTU in the family Micrococcaceae (phylum Actinobacteria) that was enriched in IAV+ mallards (new reference OTU 462). In contrast, enrichment of specific bacterial taxa is associated with various medical conditions in humans and other animals. For example, enrichment by Streptococcus spp. was detected in human patients with irritable bowel disease (IBD) (reviewed in reference 43) and in chickens infected with pathogenic Campylobacter jejuni (44).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Micrococcaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid1268",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:08",
+                                "parent_taxonomic_id": "NCBI:txid85006"
+                            },
+                            "id": "37331910",
+                            "locations": {
+                                "length": 14,
+                                "offset": 25423
+                            }
+                        },
+                        {
+                            "text": "Actinobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid1760",
+                                    "NCBI:txid201174"
+                                ],
+                                "type": [
+                                    "bacteria_class",
+                                    "bacteria_phylum"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:09",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid201174",
+                                    "NCBI:txid1783272"
+                                ]
+                            },
+                            "id": "37331911",
+                            "locations": {
+                                "length": 14,
+                                "offset": 25446
+                            }
+                        },
+                        {
+                            "text": "Streptococcus spp.",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:11",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "37331912",
+                            "locations": {
+                                "length": 18,
+                                "offset": 25675
+                            }
+                        },
+                        {
+                            "text": "Campylobacter jejuni",
+                            "infons": {
+                                "identifier": "NCBI:txid197",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:12",
+                                "parent_taxonomic_id": "NCBI:txid194"
+                            },
+                            "id": "37331913",
+                            "locations": {
+                                "length": 20,
+                                "offset": 25828
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 25854,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "For an OTU to show up as significant in the G-test, the DIROM, and network clusters, it would need to be differentially enriched, differentially occurring, and highly cooccurring with other OTUs. OTUs identified as significant by all three methods did not fully overlap (Fig.\u00a05a). This is because these methods detect different contributions of variance to the data. The network analysis identifies clusters based on the frequency of OTU cooccurrence within group, whereas the G-test and DIROM identify OTUs based on differential levels of enrichment between groups. Enrichment level and cooccurrence may be independent effects of IAV infection, in which case we would not expect to see a full overlap of the two analyses. However, both enrichment and cooccurrence contribute to intersample variance; thus, it was not unexpected for the OTUs identified by G-test and OTUs from the network analysis to overlap the highly variant OTUs without overlapping each other. However, the overlapping 41 OTUs were identified as significant in the three different approaches (Fig.\u00a05 and Table\u00a01). The intersection of the three methods contained OTU representatives of Streptococcus, Rothia mucilaginosa, Veillonella dispar, Prevotella, Haemophilus, and Mycoplasma and an unidentified OTU from the Lactobacillales order. These OTUs were assigned to these taxonomic classifications in QIIME, and these assignments were verified using BLAST. Interestingly, Streptococcus, Haemophilus, and Veillonella form consortia in the human oral microbiome and Rothia and Prevotella are common members as well (45). It would be interesting to investigate whether these taxa facilitate transmission of avian influenza virus to humans.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:23",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "37331914",
+                            "locations": {
+                                "length": 13,
+                                "offset": 27010
+                            }
+                        },
+                        {
+                            "text": "Rothia mucilaginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid43675",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:23",
+                                "parent_taxonomic_id": "NCBI:txid32207"
+                            },
+                            "id": "37331915",
+                            "locations": {
+                                "length": 19,
+                                "offset": 27025
+                            }
+                        },
+                        {
+                            "text": "Veillonella dispar",
+                            "infons": {
+                                "identifier": "NCBI:txid39778",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:23",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "37331916",
+                            "locations": {
+                                "length": 18,
+                                "offset": 27046
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:23",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "37331917",
+                            "locations": {
+                                "length": 10,
+                                "offset": 27066
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:23",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "37331918",
+                            "locations": {
+                                "length": 11,
+                                "offset": 27078
+                            }
+                        },
+                        {
+                            "text": "Mycoplasma",
+                            "infons": {
+                                "identifier": "NCBI:txid2093",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:23",
+                                "parent_taxonomic_id": "NCBI:txid2092"
+                            },
+                            "id": "37331919",
+                            "locations": {
+                                "length": 10,
+                                "offset": 27095
+                            }
+                        },
+                        {
+                            "text": "Lactobacillales",
+                            "infons": {
+                                "identifier": "NCBI:txid186826",
+                                "type": "bacteria_order",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:24",
+                                "parent_taxonomic_id": "NCBI:txid91061"
+                            },
+                            "id": "37331920",
+                            "locations": {
+                                "length": 15,
+                                "offset": 27139
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:25",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "37331921",
+                            "locations": {
+                                "length": 13,
+                                "offset": 27296
+                            }
+                        },
+                        {
+                            "text": "Haemophilus",
+                            "infons": {
+                                "identifier": "NCBI:txid724",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:25",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "37331922",
+                            "locations": {
+                                "length": 11,
+                                "offset": 27311
+                            }
+                        },
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:25",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "37331923",
+                            "locations": {
+                                "length": 11,
+                                "offset": 27328
+                            }
+                        },
+                        {
+                            "text": "Rothia",
+                            "infons": {
+                                "identifier": "NCBI:txid32207",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:25",
+                                "parent_taxonomic_id": "NCBI:txid1268"
+                            },
+                            "id": "37331924",
+                            "locations": {
+                                "length": 6,
+                                "offset": 27388
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:42:25",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "37331925",
+                            "locations": {
+                                "length": 10,
+                                "offset": 27399
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 27560,
+                    "infons": {
+                        "section_title_1": "DISCUSSION",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In conclusion, our methods revealed large differences in the compositions of the bacterial cloacal microbiomes of juvenile free-ranging mallards associated with IAV. Furthermore, we identified a set of significantly enriched, differentially occurring, and highly cooccurring OTUs that may be potential biomarker candidates for predicting infection status. Intersection of our analysis methods identified a concise subset of OTUs that best described the effect of IAV in mallards. This subset of OTUs provides specific targets for more-detailed studies addressing functional validation of in-depth interactions between individual taxa and IAVs. Experimental studies, with appropriate infected and noninfected controls sampled before, during, and after infection, are needed to confirm our findings and demonstrate causal relationships. Those studies should be performed with different IAV subtypes to explore the observed significant effect that different surface glycoproteins (HA and NA) have on bacterial diversity. Finally, such studies are also essential for assessing the relevance and ubiquity of our putative biomarker OTUs.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28691,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Field collection and influenza testing. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Cloacal swabs were collected from 122 mallards for influenza testing and microbiome analysis. In the field, swabs were placed in separate vials containing 2\u00a0ml of ice-cold virus transport medium (VTM; medium 199 with Earle\u2019s salts, l-glutamine, and sodium bicarbonate, plus 2\u00a0mU/liter penicillin G, 200\u00a0mg/liter streptomycin, 2\u00a0mU/liter polymyxin B, 250\u00a0mg/liter gentamicin, 0.5\u00a0mU/liter nystatin, 60\u00a0mg/liter ofloxacin, 200\u00a0mg/liter sulfamethoxazole, and 0.5% bovine serum albumin V). The samples were transported on ice to the laboratory, where they were stored at \u221280\u00b0C. Samples underwent one or more freeze/thaw cycles as aliquots were removed for influenza testing prior to microbiome analysis.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29451,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Field collection and influenza testing. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Samples were screened for the influenza matrix gene by reverse transcription-PCR (RT-PCR), viruses were isolated from matrix-positive samples by egg inoculation, and full-genome sequences were generated as described in reference 65. Known negative samples did not yield virus on egg inoculation and were matrix RT-PCR negative. We focused on juvenile mallards in this study in order to minimize differences that might arise in the composition of the microbiome in different age classes. More detail on these samples is included in Table\u00a0S4\u00a0in the supplemental material).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30021,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "TABLE\u00a0S4\u00a0",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Metadata file. Download TABLE\u00a0S4, DOCX file, 0.03 MB.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30083,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "DNA extraction. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "DNA was extracted from cloacal swabs using a PowerSoil 96-well soil DNA isolation kit (MoBio, Carlsbad, CA). Samples in 96-well plates were incubated at 65\u00b0C for 10\u00a0min after addition of C1 solution. Each 96-well plate was then subjected to vortex mixing for 3-min using a plate shaker on the high setting (2,600\u00a0rpm), and then the standard kit protocol was followed. After elution, DNA was quantified using Qubit fluorometic quantitation (Invitrogen, South San Francisco, CA).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30576,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Nested PCR to amplify and sequence the 16S rRNA gene. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "DNA was characterized for bacterial diversity based on the V4 region of 16S rRNA gene following the methods of Caporaso et al. (46). When possible, 1.0 to 5.0\u00a0\u03bcl of template DNA was used for PCR. However, due to low DNA concentrations for some samples, bacterial DNA was amplified by a two-step PCR enrichment using primers 27F-YM+3 and 1492R to target V1 to V4 of the 16S rRNA gene (47). The 7-fold-degenerate primer 27f-YM+3 is composed of four parts 27f-YM (AGAGTTTGATYMTGGCTCAG) plus one part each of primers specific for the amplification of Bifidobacteriaceae, Borrelia, and Chlamydiales sequences (47). For the second PCR, the primers used were the bacterial/archaeal primers 515F/806R (46) modified by addition of an Illumina adaptor and an in-house barcode system (described in reference 48). After amplification, magnetic beads (Agencourt AMPure XP; Beckman Coulter, Inc., Indianapolis, IN) were used to clean the PCRs. Amplicons were quantified and characterized using Qubit fluorometic quantitation, quantitative PCR (qPCR), and a Bioanalyzer (Agilent Technologies, Santa Clara, CA) prior to sequencing. Libraries were sequenced using an Illumina MiSeq system, generating 250-bp paired-end amplicon reads. The amplicon data were multiplexed using dual-barcode combinations for each sample.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bifidobacteriaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid31953",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:43:00",
+                                "parent_taxonomic_id": "NCBI:txid85004"
+                            },
+                            "id": "37331926",
+                            "locations": {
+                                "length": 18,
+                                "offset": 31123
+                            }
+                        },
+                        {
+                            "text": "Borrelia",
+                            "infons": {
+                                "identifier": "NCBI:txid138",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:43:00",
+                                "parent_taxonomic_id": "NCBI:txid1643685"
+                            },
+                            "id": "37331927",
+                            "locations": {
+                                "length": 8,
+                                "offset": 31143
+                            }
+                        },
+                        {
+                            "text": "Chlamydiales",
+                            "infons": {
+                                "identifier": "NCBI:txid51291",
+                                "type": "bacteria_order",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:43:01",
+                                "parent_taxonomic_id": "NCBI:txid204429"
+                            },
+                            "id": "37331928",
+                            "locations": {
+                                "length": 12,
+                                "offset": 31157
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 31931,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Data analysis. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We used a custom script (available in a GitHub repository https://github.com/gjospin/scripts/blob/master/Demul_trim_prep.pl) to assign each pair of reads to their respective samples when parsing the raw data. This script allows for a 1-bp difference per barcode. The paired reads were then aligned and a consensus was computed using FLASH (49) with a maximum overlap of 120 and a minimum overlap of 70 (other parameters were left as the default). The custom script automatically demultiplexes the data into fastq files, executes FLASH, and parses its results to reformat the sequences with appropriate naming conventions for Quantitative Insights in Microbial Ecology (QIIME v.1.9.1; 46) in fasta format. Each sample was characterized for taxonomic composition (number and abundance) using QIIME. For presence/absence analyses, representative operational taxonomic units (OTUs) were clustered at the >97% identity level and an OTU table was constructed using QIIME\u2019s pick_otus_through_otu_table.py script. Samples in the OTU table were rarefied to 5,000 reads per sample. After rarefaction, the total number of samples was 115 individuals: 71 mallards were IAV positive and 44 were IAV negative (Table\u00a0S4).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33152,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Data analysis. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We compared alpha diversity (mean species diversity per habitat) using the Shannon index as implemented in the vegan library (50) in R (51). We compared levels of OTU richness (numbers of OTUs found in each sample) and Pielou\u2019s evenness (calculated by dividing the value for the Shannon index for diversity by the log of the value for OTU richness). We tested for statistical significance in alpha diversity measures using the Welch two-sample t\u00a0test in R. We compared levels of beta diversity (the ratio between regional species diversity and local species diversity) using Bray-Curtis dissimilarity, and we used principal-coordinate analysis (PCoA) for ordination and clustering. We then used Adonis, a multivariate ANOVA based on dissimilarities, to test for significant categorical differences with 1,000 permutations in the picante library (52) in R.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34007,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Identification of significant OTUs. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "To identify the OTUs most responsible for the differentiation between IAV\u2212 and IAV+ birds, we employed several strategies. The first and simplest method involved simply computing the difference in the relative occurrence metric (DIROM) results for each OTU in the IAV\u2212 and IAV+ groups. For example, if an OTU was found in 40 of the 44 (0.91) IAV\u2212 birds and 7 of the 71 (0.09) IAV+ birds, then that OTU had a DIROM value of 0.82 (the absolute difference between 0.91 and 0.09). We then sorted the OTUs in descending DIROM order, causing the most differentially occurring OTUs to be highest on the list. Next, we used the G-test to identify differences in OTU abundance between the different sample groups using the group_significance.py script in QIIME and the Bonferroni method to correct for multiple comparisons. We used Venny 2.1 (53) to examine the intersection of the results from the methods described above with the results of the network analysis described below. Finally, we used the Random Forest classifier (available in Python\u2019s scikit-learn package; 29) with 3-fold cross-validation to learn the linear and nonlinear relationships among the features (here, relative OTU abundances) in order to find the set of the OTUs that are the most predictive of infection status.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35324,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Building the IAV networks. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "To identify OTUs that cooccur within an infection group (namely, IAV+ or IAV\u2212), we used network analysis. Recent studies have shown that network inference techniques are useful for deciphering microbial relationships from cooccurrence patterns (18, 54, 55). Here, we built a network of the OTUs based on the presence/absence patterns across all samples. The goal was to see if there are clusters of OTUs that are more likely to cooccur in (only) one of the infection groups. We compared every pair of OTUs in one group to the same pair of OTUs in the other infection group, determining the cooccurrence patterns between them. If the cooccurrence patterns of a pair of OTUs differed by only a little between the infection groups, we ignored that pair of OTUs. Alternatively, if the patterns were very different, we studied that pair in more detail. We assumed that clusters of OTUs highly cooccurring in one group but not the other were infection dependent. We discuss the details of how we obtained these clusters below.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36371,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Building the IAV networks. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "After identifying clustering of IAV\u2212 and IAV+ mallards using ordination methods and ANOVA, we performed network analysis of the two groups as follows. First, we filtered the OTU table to remove taxa present in fewer than two individuals per IAV condition. Next, we binarized the OTU abundance matrix for presence/absence of OTUs. We define each sample as a binary presence/absence vector of OTUs, xj\u03f5X, where j = (sample1,\u00a0\u2026 sampleN). Each vector value was multiplied by its transpose to obtain cooccurrence between all pairs of OTUs, and then the results were averaged across samples, for each IAV condition, to obtain the cooccurrence score for all pairs of OTUs as follows:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37047,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Building the IAV networks. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We explored the cooccurrence patterns in each group by building a network of OTUs where each OTU represented a node in the network and where there existed an edge between every two nodes. The elements of G are the scores for determining edge weights between two corresponding OTUs. In this study, we focused only on the positive cooccurrence patterns since only the positive patterns have the transitive property. We then visualized the networks of infected and uninfected groups in Fig.\u00a02 using Gephi (56).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37554,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Building the difference networks. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We then analyzed bacterial communities in IAV+ and IAV\u2212 mallards by building separate difference networks (for each condition) based on the original networks (Fig.\u00a02). Difference networks were calculated as the difference of edge weights between the two groups. Let us assume that we have OTUi and OTUj with an edge between them with weight WIAV+ in the IAV+ group. The same pair of OTUs, namely, (OTUi,OTUj), also occurs in the IAV\u2212 group, with weight WIAV\u2212. We built two difference networks, D+ and D\u2212, and added OTUi and OTUj to the difference networks as nodes. If WIAV+ minus WIAV\u2212 was positive and higher than a threshold \u03b5 value (0.2 was arbitrarily chosen throughout this study), this indicated that (OTUi,OTUj) had a strong cooccurrence pattern in the IAV+ group. We then added an edge between the terms (OTUi,OTUj) with weight WIAV+ to the difference network D+. Similarly, if WIAV\u2212 minus WIAV+ was higher than \u03b5, we added an edge between the terms (OTUi,OTUj) with weight WIAV\u2212 to D\u2212.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38583,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Building the difference networks. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We denote a weighted graph G by G = (V, E) in which V is the set of vertices (nodes) and E is the set of edges between the vertices that connects them (|V| = n) with the weight function W : E \u2192 [0, 1]. Graph G should be undirected and irreflexive. We define our networks as the set of vertices V = (OTU0,OTU1,\u2026OTUi,\u2026OTUj,\u2026OTUn). The network of the infected mallards (IAV+) is defined as follows: \n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38980,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Building the difference networks. ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Once the difference networks D+ and D\u2212 were constructed, we applied a threshold of 0.5 to remove the edges with low edge weights (Fig.\u00a02). Then, we extracted the clusters (i.e., the groups of nodes that were more densely connected to each other than to the rest of the network) (26). We filtered out the clusters that were of size 3 or less (including singletons). The resulting clusters in the D+ and D\u2212 networks contained 27 OTUs and 80 OTUs, respectively. We then examined which of the OTUs identified through the network analysis contributed the most to the differences between the IAV+ and IAV\u2212 groups. Network analyses were performed in Python using the NetworkX package and Gephi (56, 57). The effect of removal of OTUs identified as significant by all the methods described above on PCoA clusters was determined (see Text\u00a0S1\u00a0and Fig.\u00a0S1 and S2\u00a0in the supplemental material).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39862,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "TEXT\u00a0S1\u00a0",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Materials and Methods for testing for effects of OTU removal on ordination plots to accompany Fig.\u00a0S1 and S2. Download TEXT\u00a0S1, DOCX file, 0.1 MB.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40016,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "FIG\u00a0S2\u00a0",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "PCoA plots of IAV+ and IAV\u2212 mallards. (a) A total of 674 OTUs found in >2 individuals per group. (b) A total of 674 OTUs minus 7 OTUs that were unique in the IAV+ network. (c) A total of 674 OTUs minus 60 OTUs that were unique in the IAV\u2212 network. (d) A total of 674 OTUs minus 20 mutual OTUs significant to both networks. (e) A total of 674 OTUs minus the 41 OTUs identified as overlapping from multiple approaches. (f) PCoA plots of IAV+ and IAV\u2212 mallards calculated on the overlapping 41 OTUs only. Download FIG\u00a0S2, PDF file, 0.3 MB.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40559,
+                    "infons": {
+                        "section_title_1": "MATERIALS AND METHODS",
+                        "section_title_2": "Accession number(s). ",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The sequence data reported in this study have been submitted to the NCBI SRA database under BioProject accession number PRJNA358103.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40712,
+                    "infons": {
+                        "section_title_1": "ACKNOWLEDGMENTS",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "We thank Magdalena Plancarte and Winston Vickers for their contributions to the influenza study and Matt Rolston for sample preparation for the bacterial microbiome characterization. We also thank the United States Geological Survey, the California Waterfowl Association, and the California Department of Fish and Wildlife, Grizzly Island Wildlife Area, for their cooperation and assistance in sample collection from mallards.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41153,
+                    "infons": {
+                        "section_title_1": "ACKNOWLEDGMENTS",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "This study was supported in part by funding from NIH (CEIRS\u2014HHSN272201400008C and HHSN266200700010C) (W.M.B.) and by a grant to J.A.E. from the Alfred P. Sloan Foundation as part of their \u201cMicrobiology of the Built Environment\u201d program. S.M.H. was funded through The UC Davis Chancellor\u2019s Postdoctoral Fellowship, and A.J.F. was funded through the UC Davis College of Biological Sciences New Biology Postdoctoral Fellowship.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41577,
+                    "infons": {
+                        "title": "The pathology of influenza virus infections",
+                        "journal": "Annu Rev Pathol",
+                        "volume": "3",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Taubenberger JK, Morens DM. 2008. The pathology of influenza virus infections. Annu Rev Pathol3:499\u2013522. doi:10.1146/annurev.pathmechdis.3.121806.154316. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41799,
+                    "infons": {
+                        "title": "Evolutionary processes in influenza viruses: divergence, rapid evolution, and stasis",
+                        "journal": "Genetic diversity of RNA viruses",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Gorman OT, Bean WJ, Webster RG. 1992. Evolutionary processes in influenza viruses: divergence, rapid evolution, and stasis, p 75\u201397. InGenetic diversity of RNA viruses. Springer, New York, NY. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42020,
+                    "infons": {
+                        "title": "Influenza A viruses: new research developments",
+                        "journal": "Nat Rev Microbiol",
+                        "volume": "9",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Medina RA, Garc\u00eda-Sastre A. 2011. Influenza A viruses: new research developments. Nat Rev Microbiol9:590\u2013603. doi:10.1038/nrmicro2613. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42194,
+                    "infons": {
+                        "title": "Connecting the study of wild influenza with the potential for pandemic disease",
+                        "journal": "Infect Genet Evol",
+                        "volume": "17",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Runstadler J, Hill N, Hussein IT, Puryear W, Keogh M. 2013. Connecting the study of wild influenza with the potential for pandemic disease. Infect Genet Evol17:162\u2013187. doi:10.1016/j.meegid.2013.02.020. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42455,
+                    "infons": {
+                        "title": "Influenza virus in a natural host, the mallard: experimental infection data",
+                        "journal": "PLoS One",
+                        "volume": "5",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Jourdain E, Gunnarsson G, Wahlgren J, Latorre-Margalef N, Br\u00f6jer C, Sahlin S, Svensson L, Waldenstr\u00f6m J, Lundkvist A, Olsen B. 2010. Influenza virus in a natural host, the mallard: experimental infection data. PLoS One5:e8935. doi:10.1371/journal.pone.0008935. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42774,
+                    "infons": {
+                        "title": "Evolution and ecology of influenza A viruses",
+                        "journal": "Microbiol Rev",
+                        "volume": "56",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Webster RG, Bean WJ, Gorman OT, Chambers TM, Kawaoka Y. 1992. Evolution and ecology of influenza A viruses. Microbiol Rev56:152\u2013179. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42954,
+                    "infons": {
+                        "title": "Mycoparasitism and plant disease control",
+                        "journal": "Fungi in biological control systems",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Whipps J, Lewis K, Cooke R. 1988, Mycoparasitism and plant disease control, p 161\u2013187. InFungi in biological control systems. Manchester University Press, Manchester, United Kingdom. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43156,
+                    "infons": {
+                        "title": "Human microbiome analysis",
+                        "journal": "PLoS Comput Biol",
+                        "volume": "8",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Morgan XC, Huttenhower C. 2012. Human microbiome analysis. PLoS Comput Biol8:e1002808. doi:10.1371/journal.pcbi.1002808. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43335,
+                    "infons": {
+                        "title": "A compositional look at the human gastrointestinal microbiome and immune activation parameters in HIV infected subjects",
+                        "journal": "PLoS Pathog",
+                        "volume": "10",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Mutlu EA, Keshavarzian A, Losurdo J, Swanson G, Siewe B, Forsyth C, French A, DeMarais P, Sun Y, Koenig L, Cox S, Engen P, Chakradeo P, Abbasi R, Gorenz A, Burns C, Landay A. 2014. A compositional look at the human gastrointestinal microbiome and immune activation parameters in HIV infected subjects. PLoS Pathog10:e1003829. doi:10.1371/journal.ppat.1003829. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43753,
+                    "infons": {
+                        "title": "With a little help from my enteric microbial friends",
+                        "journal": "Front Med",
+                        "volume": "2",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Berkhout B.2015. With a little help from my enteric microbial friends. Front Med2:30. doi:10.3389/fmed.2015.00030. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43927,
+                    "infons": {
+                        "title": "Commensal bacteria calibrate the activation threshold of innate antiviral immunity",
+                        "journal": "Immunity",
+                        "volume": "37",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Abt MC, Osborne LC, Monticelli LA, Doering TA, Alenghat T, Sonnenberg GF, Paley MA, Antenus M, Williams KL, Erikson J, Wherry EJ, Artis D. 2012. Commensal bacteria calibrate the activation threshold of innate antiviral immunity. Immunity37:158\u2013170. doi:10.1016/j.immuni.2012.04.011. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:45:10",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "37331929",
+                            "locations": {
+                                "length": 8,
+                                "offset": 44086
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 44269,
+                    "infons": {
+                        "title": "House dust exposure mediates gut microbiome lactobacillus enrichment and airway immune defense against allergens and virus infection",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "111",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Fujimura KE, Demoor T, Rauch M, Faruqi AA, Jang S, Johnson CC, Boushey HA, Zoratti E, Ownby D, Lukacs NW, Lynch SV. 2014. House dust exposure mediates gut microbiome lactobacillus enrichment and airway immune defense against allergens and virus infection. Proc Natl Acad Sci U S A111:805\u2013810. doi:10.1073/pnas.1310750111. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "lactobacillus",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:45:14",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "37331930",
+                            "locations": {
+                                "length": 13,
+                                "offset": 44439
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 44650,
+                    "infons": {
+                        "title": "Intestinal mucosal barrier function in health and disease",
+                        "journal": "Nat Rev Immunol",
+                        "volume": "9",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Turner JR.2009. Intestinal mucosal barrier function in health and disease. Nat Rev Immunol9:799\u2013809. doi:10.1038/nri2653. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44812,
+                    "infons": {
+                        "title": "Defense and adaptation: the complex inter-relationship between Campylobacter jejuni and mucus",
+                        "journal": "Front Cell Infect Microbiol",
+                        "volume": "2",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Alemka A, Corcionivoschi N, Bourke B. 2012. Defense and adaptation: the complex inter-relationship between Campylobacter jejuni and mucus. Front Cell Infect Microbiol2:15. doi:10.3389/fcimb.2012.00015. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Campylobacter jejuni",
+                            "infons": {
+                                "identifier": "NCBI:txid197",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:45:18",
+                                "parent_taxonomic_id": "NCBI:txid194"
+                            },
+                            "id": "37331931",
+                            "locations": {
+                                "length": 20,
+                                "offset": 44923
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 45073,
+                    "infons": {
+                        "title": "Mucins in the mucosal barrier to infection",
+                        "journal": "Mucosal Immunol",
+                        "volume": "1",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Linden SK, Sutton P, Karlsson NG, Korolik V, McGuckin MA. 2008. Mucins in the mucosal barrier to infection. Mucosal Immunol1:183\u2013197. doi:10.1038/mi.2008.5. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45289,
+                    "infons": {
+                        "title": "Enteric bacteria promote human and mouse norovirus infection of B cells",
+                        "journal": "Science",
+                        "volume": "346",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Jones MK, Watanabe M, Zhu S, Graves CL, Keyes LR, Grau KR, Gonzalez-Hernandez MB, Iovine NM, Wobus CE, Vinj\u00e9 J, Tibbetts SA, Wallet SM, Karst SM. 2014. Enteric bacteria promote human and mouse norovirus infection of B cells. Science346:755\u2013759. doi:10.1126/science.1257147. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:45:23",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "37331932",
+                            "locations": {
+                                "length": 8,
+                                "offset": 45453
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 45622,
+                    "infons": {
+                        "title": "Effects of influenza A virus infection on migrating mallard ducks",
+                        "journal": "Proc R Soc Lond B Biol Sci",
+                        "volume": "276",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Latorre-Margalef N, Gunnarsson G, Munster VJ, Fouchier RA, Osterhaus AD, Elmberg J, Olsen B, Wallensten A, Haemig PD, Fransson T, Brudin L, Waldenstr\u00f6m J. 2009. Effects of influenza A virus infection on migrating mallard ducks. Proc R Soc Lond B Biol Sci276:1029\u20131036. doi:10.1098/rspb.2008.1501. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45978,
+                    "infons": {
+                        "title": "Using network analysis to explore co-occurrence patterns in soil microbial communities",
+                        "journal": "ISME J",
+                        "volume": "6",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Barber\u00e1n A, Bates ST, Casamayor EO, Fierer N. 2012. Using network analysis to explore co-occurrence patterns in soil microbial communities. ISME J6:343\u2013351. doi:10.1038/ismej.2011.119. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46222,
+                    "infons": {
+                        "title": "Recognition of N-glycolylneuraminic acid linked to galactose by the \u03b12,3 linkage is associated with intestinal replication of influenza A virus in ducks",
+                        "journal": "J Virol",
+                        "volume": "74",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Ito T, Suzuki Y, Suzuki T, Takada A, Horimoto T, Wells K, Kida H, Otsuki K, Kiso M, Ishida H, Kawaoka Y. 2000. Recognition of N-glycolylneuraminic acid linked to galactose by the \u03b12,3 linkage is associated with intestinal replication of influenza A virus in ducks. J Virol74:9300\u20139305. doi:10.1128/JVI.74.19.9300-9305.2000. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46605,
+                    "infons": {
+                        "title": "Microbiota regulates immune defense against respiratory tract influenza A virus infection",
+                        "journal": "Proc Natl Acad Sci USA",
+                        "volume": "108",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Ichinohe T, Pang IK, Kumamoto Y, Peaper DR, Ho JH, Murray TS, Iwasaki A. 2011. Microbiota regulates immune defense against respiratory tract influenza A virus infection. Proc Natl Acad Sci USA108:5354\u20135359. doi:10.1073/pnas.1019378108. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46900,
+                    "infons": {
+                        "title": "Bacterial neuraminidase rescues influenza virus replication from inhibition by a neuraminidase inhibitor",
+                        "journal": "PLoS One",
+                        "volume": "7",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Nishikawa T, Shimizu K, Tanaka T, Kuroda K, Takayama T, Yamamoto T, Hanada N, Hamada Y. 2012. Bacterial neuraminidase rescues influenza virus replication from inhibition by a neuraminidase inhibitor. PLoS One7:e45371. doi:10.1371/journal.pone.0045371. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47211,
+                    "infons": {
+                        "title": "Characterization of the upper respiratory tract microbiomes of patients with pandemic H1N1 influenza",
+                        "journal": "PLoS One",
+                        "volume": "8",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Chaban B, Albert A, Links MG, Gardy J, Tang P, Hill JE. 2013. Characterization of the upper respiratory tract microbiomes of patients with pandemic H1N1 influenza. PLoS One8:e69559. doi:10.1371/journal.pone.0069559. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47486,
+                    "infons": {
+                        "title": "Modulation of potential respiratory pathogens by pH1N1 viral infection",
+                        "journal": "Clin Microbiol Infect",
+                        "volume": "19",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Leung RK, Zhou JW, Guan W, Li SK, Yang ZF, Tsui SK. 2013. Modulation of potential respiratory pathogens by pH1N1 viral infection. Clin Microbiol Infect19:930\u2013935. doi:10.1111/1469-0691.12054. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47718,
+                    "infons": {
+                        "title": "Intranasal vaccination with live attenuated influenza vaccine increases diversity of the human nasal microbiome. VAC8P. 1001",
+                        "journal": "J Immunol",
+                        "volume": "192",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Lambert N, Salk H, Kennedy R, Chia N, Grill D, Jacobson R, Poland G. 2014. Intranasal vaccination with live attenuated influenza vaccine increases diversity of the human nasal microbiome (VAC8P. 1001). J Immunol192:142.7. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47960,
+                    "infons": {
+                        "title": "The bacterial microbiome of gut, lung, and blood after H1N1 influenza virus infection in mice with and without house dust mite exposure",
+                        "journal": "A32 Microbial Interactions And Host Defense",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Oh Y, Yang S-WJ, Ngan DA, Hirota JA, Niikura M, Tam S, Knight DA, Hackett T-L, Dorscheid D, Man S. 2015. The bacterial microbiome of gut, lung, and blood after H1N1 influenza virus infection in mice with and without house dust mite exposure, p A1315\u2013A1315. InA32 Microbial Interactions And Host Defense. American Thoracic Society, New York, NY. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48325,
+                    "infons": {
+                        "title": "Fast unfolding of communities in large networks",
+                        "journal": "J Stat Mech",
+                        "volume": "2008",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Blondel VD, Guillaume J-L, Lambiotte R, Lefebvre E. 2008. Fast unfolding of communities in large networks. J Stat Mech2008:P10008. doi:10.1088/1742-5468/2008/10/P10008. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48525,
+                    "infons": {
+                        "title": "Chinese whispers: an efficient graph clustering algorithm and its application to natural language processing problems",
+                        "journal": "Proceedings of the First Workshop on Graph Based Methods for Natural Language Processing",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Biemann C.2006. Chinese whispers: an efficient graph clustering algorithm and its application to natural language processing problems, p 73\u201380. InProceedings of the First Workshop on Graph Based Methods for Natural Language Processing. Association for Computational Linguistics, Stroudsburg, PA. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48841,
+                    "infons": {
+                        "journal": "Graph clustering by flow simulation",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. van Dongen S.2000. Graph clustering by flow simulation. PhD thesisUniversity of Utrecht, Utrecht, Holland. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48968,
+                    "infons": {
+                        "title": "Scikit-learn: machine learning in Python",
+                        "journal": "J Mach Learn Res",
+                        "volume": "12",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Pedregosa F, Varoquaux G, Gramfort A, Michel V, Thirion B, Grisel O, Blondel M, Prettenhofer P, Weiss R, Dubourg V. 2011. Scikit-learn: machine learning in Python. J Mach Learn Res12:2825\u20132830. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49182,
+                    "infons": {
+                        "title": "Virological and serological surveillance for type A influenza in the black-legged kittiwake (Rissa tridactyla)",
+                        "journal": "Virol J",
+                        "volume": "8",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Toennessen R, Germundsson A, Jonassen CM, Haugen I, Berg K, Barrett RT, Rimstad E. 2011. Virological and serological surveillance for type A influenza in the black-legged kittiwake (Rissa tridactyla). Virol J8:21. doi:10.1186/1743-422X-8-21. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49483,
+                    "infons": {
+                        "title": "Age-related differences in the cloacal microbiota of a wild bird species",
+                        "journal": "BMC Ecol",
+                        "volume": "13",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. van Dongen WF, White J, Brandl HB, Moodley Y, Merkling T, Leclaire S, Blanchard P, Danchin E, Hatch SA, Wagner RH. 2013. Age-related differences in the cloacal microbiota of a wild bird species. BMC Ecol13:11. doi:10.1186/1472-6785-13-11. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49781,
+                    "infons": {
+                        "title": "Cloacal microbiome structure in a long-distance migratory bird assessed using deep 16sRNA pyrosequencing",
+                        "journal": "PLoS One",
+                        "volume": "10",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Kreisinger J, \u010c\u00ed\u017ekov\u00e1 D, Krop\u00e1\u010dkov\u00e1 L, Albrecht T. 2015. Cloacal microbiome structure in a long-distance migratory bird assessed using deep 16sRNA pyrosequencing. PLoS One10:e0137401. doi:10.1371/journal.pone.0137401. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50058,
+                    "infons": {
+                        "title": "Is low pathogenic avian influenza virus virulent for wild waterbirds?",
+                        "journal": "Proc R Soc Lond B Biol Sci",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Kuiken T.2013. Is low pathogenic avian influenza virus virulent for wild waterbirds?Proc R Soc Lond B Biol Sci 280:20130990. doi:10.1098/rspb.2013.0990. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50270,
+                    "infons": {
+                        "title": "Stability and diversity of ecosystems",
+                        "journal": "Science",
+                        "volume": "317",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Ives AR, Carpenter SR. 2007. Stability and diversity of ecosystems. Science317:58\u201362. doi:10.1126/science.1133258. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50425,
+                    "infons": {
+                        "title": "Biodiversity and invasibility in grassland microcosms",
+                        "journal": "Oecologia",
+                        "volume": "126",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Dukes JS.2001. Biodiversity and invasibility in grassland microcosms. Oecologia126:563\u2013568. doi:10.1007/s004420000549. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50584,
+                    "infons": {
+                        "title": "Biodiversity, invasion resistance, and marine ecosystem function: reconciling pattern and process",
+                        "journal": "Ecology",
+                        "volume": "83",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "36. Stachowicz JJ, Fried H, Osman RW, Whitlatch RB. 2002. Biodiversity, invasion resistance, and marine ecosystem function: reconciling pattern and process. Ecology83:2575\u20132590. doi:10.1890/0012-9658(2002)083[2575:BIRAME]2.0.CO;2. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50842,
+                    "infons": {
+                        "title": "Benefits of host genetic diversity for resistance to infection depend on parasite diversity",
+                        "journal": "Ecology",
+                        "volume": "91",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "37. Ganz HH, Ebert D. 2010. Benefits of host genetic diversity for resistance to infection depend on parasite diversity. Ecology91:1263\u20131268. doi:10.1890/09-1243.1. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51062,
+                    "infons": {
+                        "title": "From animalcules to an ecosystem: application of ecological concepts to the human microbiome",
+                        "journal": "Annu Rev Ecol Evol Syst",
+                        "volume": "43",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "38. Fierer N, Ferrenberg S, Flores GE, Gonz\u00e1lez A, Kueneman J, Legg T, Lynch RC, McDonald D, Mihaljevic JR, O\u2019Neill SP, Rhodes ME, Song SJ, Walters WA. 2012. From animalcules to an ecosystem: application of ecological concepts to the human microbiome. Annu Rev Ecol Evol Syst43:137\u2013155. doi:10.1146/annurev-ecolsys-110411-160307. [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51419,
+                    "infons": {
+                        "title": "Microbial ecology of the cystic fibrosis lung",
+                        "journal": "Microbiology",
+                        "volume": "153",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "39. Harrison F.2007. Microbial ecology of the cystic fibrosis lung. Microbiology153:917\u2013923. doi:10.1099/mic.0.2006/004077-0. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51581,
+                    "infons": {
+                        "title": "The vaginal microbiome: new information about genital tract flora using molecular based techniques",
+                        "journal": "BJOG Int J Obstet Gynaecol",
+                        "volume": "118",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "40. Lamont RF, Sobel JD, Akins RA, Hassan SS, Chaiworapongsa T, Kusanovic JP, Romero R. 2011. The vaginal microbiome: new information about genital tract flora using molecular based techniques. BJOG Int J Obstet Gynaecol118:533\u2013549. doi:10.1111/j.1471-0528.2010.02840.x. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51907,
+                    "infons": {
+                        "title": "Reduced diversity of faecal microbiota in Crohn\u2019s disease revealed by a metagenomic approach",
+                        "journal": "Gut",
+                        "volume": "55",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "41. Manichanh C, Rigottier-Gois L, Bonnaud E, Gloux K, Pelletier E, Frangeul L, Nalin R, Jarrin C, Chardon P, Marteau P, Roca J, Dore J. 2006. Reduced diversity of faecal microbiota in Crohn\u2019s disease revealed by a metagenomic approach. Gut55:205\u2013211. doi:10.1136/gut.2005.073817. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52243,
+                    "infons": {
+                        "title": "Molecular-phylogenetic characterization of microbial community imbalances in human inflammatory bowel diseases",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "104",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "42. Frank DN, St Amand AL, Feldman RA, Boedeker EC, Harpaz N, Pace NR. 2007. Molecular-phylogenetic characterization of microbial community imbalances in human inflammatory bowel diseases. Proc Natl Acad Sci U S A104:13780\u201313785. doi:10.1073/pnas.0706625104. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52557,
+                    "infons": {
+                        "title": "Gut microbiota as potential orchestrators of irritable bowel syndrome",
+                        "journal": "Gut Liver",
+                        "volume": "9",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "43. Bennet SM, Ohman L, Simr\u00e9n M. 2015. Gut microbiota as potential orchestrators of irritable bowel syndrome. Gut Liver9:318\u2013331. doi:10.5009/gnl14344. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52765,
+                    "infons": {
+                        "title": "Survival with a helping hand: campylobacter and microbiota",
+                        "journal": "Front Microbiol",
+                        "volume": "6",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "44. Indikova I, Humphrey TJ, Hilbert F. 2015. Survival with a helping hand: campylobacter and microbiota. Front Microbiol6:1266. doi:10.3389/fmicb.2015.01266. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "campylobacter",
+                            "infons": {
+                                "identifier": "NCBI:txid194",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:46:31",
+                                "parent_taxonomic_id": "NCBI:txid72294"
+                            },
+                            "id": "37331933",
+                            "locations": {
+                                "length": 13,
+                                "offset": 52841
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 52979,
+                    "infons": {
+                        "title": "Biogeography of a human oral microbiome at the micron scale",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "113",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "45. Mark Welch JL, Rossetti BJ, Rieken CW, Dewhirst FE, Borisy GG. 2016. Biogeography of a human oral microbiome at the micron scale. Proc Natl Acad Sci U S A113:E791\u2013E800. doi:10.1073/pnas.1522149113. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53236,
+                    "infons": {
+                        "title": "QIIME allows analysis of high-throughput community sequencing data",
+                        "journal": "Nat Methods",
+                        "volume": "7",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "46. Caporaso JG, Kuczynski J, Stombaugh J, Bittinger K, Bushman FD, Costello EK, Fierer N, Pe\u00f1a AG, Goodrich JK, Gordon JI, Huttley GA, Kelley ST, Knights D, Koenig JE, Ley RE, Lozupone CA, McDonald D, Muegge BD, Pirrung M, Reeder J, Sevinsky JR, Turnbaugh PJ, Walters WA, Widmann J, Yatsunenko T, Zaneveld J, Knight R. 2010. QIIME allows analysis of high-throughput community sequencing data. Nat Methods7:335\u2013336. doi:10.1038/nmeth.f.303. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 53732,
+                    "infons": {
+                        "title": "Critical evaluation of two primers commonly used for amplification of bacterial 16S rRNA genes",
+                        "journal": "Appl Environ Microbiol",
+                        "volume": "74",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "47. Frank JA, Reich CI, Sharma S, Weisbaum JS, Wilson BA, Olsen GJ. 2008. Critical evaluation of two primers commonly used for amplification of bacterial 16S rRNA genes. Appl Environ Microbiol74:2461\u20132470. doi:10.1128/AEM.02272-07. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54019,
+                    "infons": {
+                        "title": "The microbes we eat: abundance and taxonomy of microbes consumed in a day\u2019s worth of meals for three diet types",
+                        "journal": "PeerJ",
+                        "volume": "2",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "48. Lang JM, Eisen JA, Zivkovic AM. 2014. The microbes we eat: abundance and taxonomy of microbes consumed in a day\u2019s worth of meals for three diet types. PeerJ2:e659. doi:10.7717/peerj.659. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54265,
+                    "infons": {
+                        "title": "FLASH: fast length adjustment of short reads to improve genome assemblies",
+                        "journal": "Bioinformatics",
+                        "volume": "27",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "49. Mago\u010d T, Salzberg SL. 2011. FLASH: fast length adjustment of short reads to improve genome assemblies. Bioinformatics27:2957\u20132963. doi:10.1093/bioinformatics/btr507. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54490,
+                    "infons": {
+                        "journal": "vegan: community ecology package. R package version 2.3-5",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "50. Oksanen J, Blanchet FG, Kindt R, Legendre P, Minchin PR, O\u2019Hara RB, Simpson GL, Solymos P, Stevens MHH, Wagner H. 2016. vegan: community ecology package. R package version 2.3-5. https://cran.r-project.org/package=vegan. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54731,
+                    "infons": {
+                        "journal": "R: a language and environment for statistical computing",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "51. Team RC. 2016. R: a language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria: https://www.r-project.org/. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54908,
+                    "infons": {
+                        "title": "Picante: R tools for integrating phylogenies and ecology",
+                        "journal": "Bioinformatics",
+                        "volume": "26",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "52. Kembel SW, Cowan PD, Helmus MR, Cornwell WK, Morlon H, Ackerly DD, Blomberg SP, Webb CO. 2010. Picante: R tools for integrating phylogenies and ecology. Bioinformatics26:1463\u20131464. doi:10.1093/bioinformatics/btq166. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55164,
+                    "infons": {
+                        "journal": "Venny. An interactive tool for comparing lists with Venn\u2019s diagrams",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "53. Oliveros JC.2007\u20132015. Venny. An interactive tool for comparing lists with Venn\u2019s diagrams. http://bioinfogp.cnb.csic.es/tools/venny/index.html.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55312,
+                    "infons": {
+                        "title": "Cross-biome comparison of microbial association networks",
+                        "journal": "Front Microbiol",
+                        "volume": "6",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "54. Faust K, Lima-Mendez G, Lerat JS, Sathirapongsasuti JF, Knight R, Huttenhower C, Lenaerts T, Raes J. 2015. Cross-biome comparison of microbial association networks. Front Microbiol6:1200. doi:10.3389/fmicb.2015.01200. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55589,
+                    "infons": {
+                        "title": "Microbial co-occurrence relationships in the human microbiome",
+                        "journal": "PLoS Comput Biol",
+                        "volume": "8",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "55. Faust K, Sathirapongsasuti JF, Izard J, Segata N, Gevers D, Raes J, Huttenhower C. 2012. Microbial co-occurrence relationships in the human microbiome. PLoS Comput Biol8:e1002606. doi:10.1371/journal.pcbi.1002606. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55862,
+                    "infons": {
+                        "title": "Gephi: an open source software for exploring and manipulating networks",
+                        "journal": "Proceedings of the Third International Conference on Weblogs and Social Media",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "56. Bastian M, Heymann S, Jacomy M. 2009. Gephi: an open source software for exploring and manipulating networks, p 361\u2013362. InProceedings of the Third International Conference on Weblogs and Social Media. The AAAI Press, Menlo Park, CA. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56116,
+                    "infons": {
+                        "title": "Exploring network structure, dynamics, and function using NetworkX",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "57. Schult DA, Swart P. 2008. Exploring network structure, dynamics, and function using NetworkX, p 11\u201316. InProceedings of the 7th Python in Science Conferences (SciPy 2008). [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56308,
+                    "infons": {
+                        "title": "Avian influenza viruses in wild birds: a moving target",
+                        "journal": "Comp Immunol Microbiol Infect Dis",
+                        "volume": "32",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "58. Boyce WM, Sandrock C, Kreuder-Johnson C, Kelly T, Cardona C. 2009. Avian influenza viruses in wild birds: a moving target. Comp Immunol Microbiol Infect Dis32:275\u2013286. doi:10.1016/j.cimid.2008.01.002. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56549,
+                    "infons": {
+                        "title": "Surveillance for high pathogenicity avian influenza virus in wild birds in the Pacific flyway of the United States, 2006\u20132007",
+                        "journal": "Avian Dis",
+                        "volume": "53",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "59. Dusek RJ, Bortner JB, DeLiberto TJ, Hoskins J, Franson JC, Bales BD, Yparraguirre D, Swafford SR, Ip HS. 2009. Surveillance for high pathogenicity avian influenza virus in wild birds in the Pacific flyway of the United States, 2006\u20132007. Avian Dis53:222\u2013230. doi:10.1637/8462-082908-Reg.1. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56879,
+                    "infons": {
+                        "title": "Genetic structure of Pacific flyway avian influenza viruses is shaped by geographic location, host species, and sampling period",
+                        "journal": "Virus Genes",
+                        "volume": "44",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "60. Girard YA, Runstadler JA, Aldehoff F, Boyce W. 2012. Genetic structure of Pacific flyway avian influenza viruses is shaped by geographic location, host species, and sampling period. Virus Genes44:415\u2013428. doi:10.1007/s11262-011-0706-5. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 57155,
+                    "infons": {
+                        "title": "Sampling strategies and biodiversity of influenza A subtypes in wild birds",
+                        "journal": "PLoS One",
+                        "volume": "9",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "61. Olson SH, Parmley J, Soos C, Gilbert M, Latorre-Margalef N, Hall JS, Hansbro PM, Leighton F, Munster V, Joly D. 2014. Sampling strategies and biodiversity of influenza A subtypes in wild birds. PLoS One9:e90826. doi:10.1371/journal.pone.0090826. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 57460,
+                    "infons": {
+                        "title": "Individual variation in influenza A virus infection histories and long-term immune responses in mallards",
+                        "journal": "PLoS One",
+                        "volume": "8",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "62. Tolf C, Latorre-Margalef N, Wille M, Bengtsson D, Gunnarsson G, Grosbois V, Hasselquist D, Olsen B, Elmberg J, Waldenstrom J. 2013. Individual variation in influenza A virus infection histories and long-term immune responses in mallards. PLoS One8:e61201. doi:10.1371/journal.pone.0061201. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 57809,
+                    "infons": {
+                        "title": "Dual role of commensal bacteria in viral infections",
+                        "journal": "Immunol Rev",
+                        "volume": "255",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "63. Wilks J, Beilinson H, Golovkina TV. 2013. Dual role of commensal bacteria in viral infections. Immunol Rev255:222\u2013229. doi:10.1111/imr.12097. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-18 18:47:16",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "37331934",
+                            "locations": {
+                                "length": 8,
+                                "offset": 57878
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 58010,
+                    "infons": {
+                        "title": "Characterizing the avian gut microbiota: membership, driving influences, and potential function",
+                        "journal": "Front Microbiol",
+                        "volume": "5",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "64. Waite DW, Taylor MW. 2014. Characterizing the avian gut microbiota: membership, driving influences, and potential function. Front Microbiol5:223. doi:10.3389/fmicb.2014.00223. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 58245,
+                    "infons": {
+                        "title": "Avian influenza: mixed infections and missing viruses",
+                        "journal": "Viruses",
+                        "volume": "5",
+                        "section_title_1": "REFERENCES",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "65. Lindsay LL, Kelly TR, Plancarte M, Schobel S, Lin X, Dugan VG, Wentworth DE, Boyce WM. 2013. Avian influenza: mixed infections and missing viruses. Viruses5:1964\u20131977. doi:10.3390/v5081964. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

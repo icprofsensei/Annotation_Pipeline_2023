@@ -1,0 +1,2033 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20220803",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC6048198",
+            "inputfile": "../microbiome_corpus_HTML\\PMC6048198.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Respiratory Microbiome Profiling for Etiologic Diagnosis of Pneumonia in Mechanically Ventilated Patients",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 105,
+                    "infons": {
+                        "section_title_1": "keywords",
+                        "iao_name_1": "keywords section",
+                        "iao_id_1": "IAO:0000630"
+                    },
+                    "text": "microbiome, pneumonia, 16S rRNA gene sequencing, respiratory failure, antibiotic stewardship",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 205,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Etiologic diagnosis of bacterial pneumonia relies on identification of causative pathogens by cultures, which require extended incubation periods and have limited sensitivity. Next-generation sequencing of microbial DNA directly from patient samples may improve diagnostic accuracy for guiding antibiotic prescriptions. In this study, we hypothesized that enhanced pathogen detection using sequencing can improve upon culture-based diagnosis and that certain sequencing profiles correlate with host response. We prospectively collected endotracheal aspirates and plasma within 72 h of intubation from patients with acute respiratory failure. We performed 16S rRNA gene sequencing to determine pathogen abundance in lung samples and measured plasma biomarkers to assess host responses to detected pathogens. Among 56 patients, 12 patients (21%) had positive respiratory cultures. Sequencing revealed lung communities with low diversity (p < 0.02) dominated by taxa (>50% relative abundance) corresponding to clinically isolated pathogens (concordance p = 0.009). Importantly, sequencing detected dominant pathogens in 20% of the culture-negative patients exposed to broad-spectrum empiric antibiotics. Regardless of culture results, pathogen dominance correlated with increased plasma markers of host injury (receptor of advanced glycation end-products-RAGE) and inflammation (interleukin-6, tumor necrosis factor receptor 1-TNFR1) (p < 0.05), compared to subjects without dominant pathogens in their lung communities. Machine-learning algorithms identified pathogen abundance by sequencing as the most informative predictor of culture positivity. Thus, enhanced detection of pathogenic bacteria by sequencing improves etiologic diagnosis of pneumonia, correlates with host responses, and offers substantial opportunity for individualized therapeutic targeting and antimicrobial stewardship. Clinical translation will require validation with rapid whole meta-genome sequencing approaches to guide real-time antibiotic prescriptions.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:35:09",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24620981",
+                            "locations": {
+                                "length": 8,
+                                "offset": 1891
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 2244,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Severe pneumonia is a leading cause of hospitalization and death among adults in the US, often requiring admission to an intensive care unit (ICU) (Chalmers et al., 2011; Barrett et al., 2014; Jain et al., 2015; Valley et al., 2015). While appropriate antibiotic therapy is the cornerstone of pneumonia management, etiologic pathogen diagnosis with current culture-based microbiologic tests is often negative in patients with a clinical picture of pneumonia (Jain et al., 2015) or requires long incubation periods (\u223c3 days) to provide actionable results (Zumla et al., 2014; Jain et al., 2015; Vincent et al., 2015). Consequently, antibiotic prescriptions for severe pneumonia are empiric and typically include two or three broad-spectrum agents prescribed for seven or more days (Mandell et al., 2007; Kalil et al., 2016). This \u201cone-size-fits-all\u201d practice is hazardous for individual patients, who may receive insufficient or disproportionately intense antibiotics, and further contributes to antibiotic resistance, a global health threat (Laxminarayan et al., 2013; Modi et al., 2014; Kitsios et al., 2017).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3366,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Next-generation sequencing (NGS) of microbial DNA extracted directly from patient samples without the need for ex vivo organismal growth may overcome shortcomings of culture-based diagnosis. By sequencing either amplified bacterial marker genes (typically the 16S rRNA gene [16S sequencing]) or whole metagenomes, NGS provides comprehensive profiling of resident microbial communities with relative abundance information of the constituent bacteria, regardless of whether they are alive, dead or fastidious. With improvements in fidelity and accessibility of whole metagenome sequencing, identification of non-bacterial microbes (viruses, fungi and parasites) (Kuczynski et al., 2011) is becoming increasingly feasible and holds promise for clinical utility in the near future (Judge et al., 2015). Despite the theoretical advantages of NGS, the technology has not yet been validated as a diagnostic tool to guide antimicrobial prescriptions in the ICU.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:35:29",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24620982",
+                            "locations": {
+                                "length": 8,
+                                "offset": 3806
+                            }
+                        },
+                        {
+                            "text": "fungi",
+                            "infons": {
+                                "identifier": "NCBI:txid4751",
+                                "type": "fungi_kingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:35:31",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24620983",
+                            "locations": {
+                                "length": 5,
+                                "offset": 4005
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 4319,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "To examine the clinical validity (Khoury et al., 2003) of 16S sequencing for etiologic diagnosis of bacterial pneumonia in patients requiring mechanical ventilation, we conducted this proof-of-concept study with the Microbiome Cohort in Acute Lung Injury Registry (MICALIR) at the University of Pittsburgh Medical Center (UPMC), assessing the upper and lower respiratory tract microbiome composition and its association with clinical diagnoses, host responses, and clinical outcomes.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4802,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "This study is reported in compliance with the Strengthening the Reporting of Observational studies in Epidemiology (STROBE) statement (details presented in Supplementary Table 1) (Elm et al., 2007). Extensive methods regarding clinical data recording, sample collection, experimental protocols and statistical analyses are presented in the Supplement. Primary data and statistical code for replication of our findings are also provided in the online Supplement and are also available for download at https://github.com/MicrobiomeALIR/Resp_Microbiome_Profiles_Pneumonia.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5392,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Study Design and Participants",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We conducted a prospective cohort study from June 2015 \u2013 March 2017 enrolling consecutive adult patients in the Medical ICU with acute respiratory failure within 72 h of intubation. Eligible patients were 18 years or older with acute respiratory failure requiring mechanical ventilation via endotracheal intubation. Exclusion criteria included inability to obtain informed consent, presence of tracheostomy, or mechanical ventilation for more than 72 h. Given our focus on etiologic diagnosis of bacterial pneumonia, we divided patients into culture-positive and culture-negative cases, based on clinical microbiologic results of respiratory specimens. We considered specimens obtained within 48 h of research sample timing acquisition so that such specimens would be reflective of the same infectious process being studied by NGS. Clinical cultures were obtained at the discretion of the treating physicians who were not involved in the MICALIR study. We considered microbiologic cultures of respiratory specimens [sputum, endo-tracheal aspirates (ETAs), or bronchoalveolar lavage \u2013 (BAL)] as positive when pathogenic bacterial species had been isolated by the clinical laboratory and treating physicians covered these bacteria with antibiotics (i.e., clinically these bacteria were not considered to be airway colonizers). Culture-negative cases were defined as those in which no organismal growth was observed or presence of \u201cnormal respiratory flora\u201d was reported, as per standard clinical practices. We also recorded results of respiratory viral panel testing performed in nasopharyngeal swabs or respiratory specimens. The University of Pittsburgh Institutional Review Board approved the MICALIR study and written informed consent was provided by all participants or their surrogates in accordance with the Declaration of Helsinki.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:35:58",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24620984",
+                            "locations": {
+                                "length": 8,
+                                "offset": 6612
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:35:58",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24620985",
+                            "locations": {
+                                "length": 8,
+                                "offset": 6662
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 7258,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Clinical Data Collection",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We collected prospective clinical data on participants including age, gender, body mass index and history of smoking, comorbid conditions, such as diabetes and chronic obstructive pulmonary disease (COPD), on the day of enrollment. Physiological and laboratory variables such as PaO2 to FiO2 ratio, levels of positive end-expiratory pressure, plateau pressure, systolic blood pressure, white blood cell count etc. were obtained from the medical record by recording the physiologically worse value within a 24 h period on the day of enrollment (e.g., lowest blood pressure or highest creatinine value). We measured modified sequential organ failure assessment (SOFA) scores (we did not include the neurologic component of SOFA score because all patients were intubated and receiving sedative medications) by using the physiologically worse values within 24 h of enrollment. We recorded antibiotics and vasopressors administered during the first week of ICU course from intubation. A consensus committee of clinical experts (GDK, JE, WB, JSL, AM, BJM) reviewed all available data for the enrolled patients and performed retrospective classifications of the etiology and severity of their acute respiratory failure. Classifications were performed without knowledge of microbiome sequencing or host biomarker data and included sepsis, acute respiratory distress syndrome (ARDS), pneumonia or aspiration, and intubation for airway protection without risk factors for ARDS per established criteria (Gong et al., 2005; ARDS Definition Task Force et al., 2012; Singer et al., 2016; Neto et al., 2016). Prospective clinical outcomes included 30-day mortality, duration of ICU stay, acute kidney injury (Mehta et al., 2007), incident shock (defined as need for vasopressors) and ventilator-free days (VFD) (Kalanuria et al., 2014).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9103,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Sample Collection",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Immediately after enrollment, we obtained baseline samples for microbiome analyses of the oral and lung communities, with swabs of the base of the tongue and ETA, respectively. Simultaneous blood samples (10cc) were collected for centrifugation and separation of plasma. All samples were frozen and stored at -80\u00b0C.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9435,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Laboratory Analyses",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "We extracted bacterial DNA directly from oral swabs and ETAs and amplified the V4 hypervariable region of the 16S rRNA gene for sequencing on the Illumina MiSeq platform (Morris et al., 2013). We also performed qPCR of the V3-V4 region of the 16S rRNA gene to obtain absolute bacterial loads in each sample (Liu et al., 2012). For plasma biomarker analyses, we constructed a custom Luminex multi-analyte panel (R&D Systems, Minneapolis, MI, United States) (McKay et al., 2017) targeting biomarkers associated with pneumonia diagnosis (procalcitonin) and acute lung injury outcomes (RAGE: receptor of advanced glycation end-products, IL-6: interleukin-6, IL-8: interleukin-8, sTNFR1: soluble tumor necrosis factor receptor 1) (Narvaez-Rivera et al., 2012; Calfee et al., 2014; Famous et al., 2017). Clinical microbiologic cultures were processed per standard procedures as described in the Supplement.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10354,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Data Processing and Statistical Analysis Methods",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "From derived 16S sequences, we applied a custom pipeline for Operational Taxonomic Units (OTUs-taxa) classification (Supplement). We calculated descriptive statistics of baseline characteristics and performed non-parametric comparisons using the R software (R Foundation for Statistical Computing, 2016). We performed ecological analyses of alpha diversity (richness-Shannon and evenness-Dominance), beta diversity (Bray\u2013Curtis dissimilarity index), and taxonomic descriptions between culture-positive and negative cases with the Quantitative Insights in Microbial Ecology software (QIIME) and the R vegan package (Dixon, 2003; Caporaso et al., 2010). Beta-diversity comparisons with permutation analysis of variance (Permanova at 1000 permutations) were visualized with non-metric multidimensional scaling (NMDS). From the taxonomic composition of the reference-standard culture-positive cases and the available literature on the composition of the healthy lung microbiome (Morris et al., 2013; Segal et al., 2016), we operationally defined taxa as \u201cpathogenic\u201d (when corresponding to clinically relevant bacterial species isolated in cultures) vs. \u201coral-origin\u201d taxa, for those taxa that have been included in the supraglottic pneumotype of the lung microbiome created by microaspiration of oral bacteria (Segal et al., 2016). From observed taxonomic profiles and distribution of pathogen and oral taxa abundances, we defined pathogen dominance or oral taxa dominance as relative abundance of >50%, respectively. We compared log-transformed concentrations of host-response biomarkers and pathogen or oral taxa dominance with linear regression models, adjusted for culture results and history of COPD.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:36:52",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24620986",
+                            "locations": {
+                                "length": 8,
+                                "offset": 11652
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 12104,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Integrative Analysis and Modeling of Microbiome and Clinical Data",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "To move beyond simple correlations and comprehensively examine which microbiome variables are directly linked to clinical variables, we used Probabilistic Graphical Models (PGMs). PGMs can estimate and graphically represent the complex relationships of large numbers of variables that interact with each other, allowing for the discovery of direct links between variables based on their conditional dependencies. We used the CausalMGM (Causal Mixed Graphical Model) R package1, a novel algorithm that can accurately identify the underlying graphical model structure over mixed data types (continuous and discrete) (Sedgewick et al., 2016; Raghu et al., 2017).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12828,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Cohort Descriptive Data",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Fifty six patients were enrolled (mean age 56 years, 61% men), 12 (21%) with positive cultures for common respiratory pathogens (Table \u200bTable11). Culture-positive and negative patients had similar distribution of comorbid conditions, severity of illness scores, mechanical ventilation parameters, laboratory values and clinical outcomes (Table \u200bTable11). Empiric antibiotics were prescribed for 54/56 (96%) of patients at the time of enrollment, with a median exposure of two different classes of antibiotics (gram-positive, gram-negative, and atypical coverage).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13421,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "16S Sequencing Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We analyzed a total of 110 clinical microbiome samples (56 ETAs and 54 oral swabs) and 71 experimental control samples. Clinical samples produced 3835 (standard deviation [SD] = 1329) reads (high-quality 16S sequences) on average, whereas negative experimental controls generated relatively few reads (mean = 136 [SD = 146]) (p < 10-16) (Figure \u200bFigure1A1A) and were compositionally dissimilar to clinical samples by Bray\u2013Curtis indices (Figure \u200bFigure1B1B).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13901,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Lung Microbial Community Profiles",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Lung communities in culture-positive subjects had significantly lower alpha diversity (richness [p = 0.02] and evenness [p = 0.04]) compared to culture-negative subjects (Figure \u200bFigure2A2A). Culture-negative communities had a wide distribution of alpha diversity, ranging from very low richness as in culture-positive cases (Shannon = 0-1) to high alpha diversity (Shannon > 2.9) in the range of the healthy lung microbiome, despite the fact that these patients were exposed to broad-spectrum antibiotics (Morris et al., 2013). Culture-positive communities had overall significantly different taxonomic composition by Bray\u2013Curtis indices compared to culture-negative communities (Permanova p = 0.003) (Figure \u200bFigure2B2B). On the other hand, lung communities from patients with a history of COPD (a disease process that is known to affect lung microbiome composition) (Sze et al., 2014) had modest differences in alpha and beta diversity compared to patients without COPD (Supplementary Figure 3).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14932,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Lung Microbial Community Profiles",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "By examining the taxonomic composition of the 12 culture-positive samples (Figure \u200bFigure3A3A), we found that 16S sequencing detected taxa concordant to the clinically isolated bacterial pathogens in 11/12 samples (e.g., Staphylococcus genera for S. aureus and Enterobacteriaceae for Klebsiella pneumoniae). In 9 (75%) samples, the concordant taxa were the most abundant organisms in their respective communities. In two other cases (cases 10 and 11, Figure \u200bFigure3A3A), sequencing revealed that taxa corresponding to clinical isolates (Klebsiella and Staphylococcus, respectively) had low abundance in their communities, which were dominated by potentially pathogenic taxa undetected by clinical cultures (Enterococcus and Fusobacterium, respectively) (Grupper et al., 2009; Johannesen et al., 2016; Kelly et al., 2016). Although definitive causal inferences about the clinical impact of these bacteria are not possible, in the case of Fusobacterium dominance (case 11), vancomycin monotherapy targeted against the cultured methicillin-resistant S. aureus (MRSA) failed to produce a clinical response, whereas improvement ensued after empiric addition of piperacillin/tazobactam which in fact is effective against the fastidious anaerobe Fusobacterium (Johannesen et al., 2016).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:28",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "24620987",
+                            "locations": {
+                                "length": 14,
+                                "offset": 15153
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid1280",
+                                    "NCBI:txid193461"
+                                ],
+                                "type": [
+                                    "bacteria_species",
+                                    "bacteria_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:29",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid1279",
+                                    "NCBI:txid1883"
+                                ]
+                            },
+                            "id": "24620988",
+                            "locations": {
+                                "length": 9,
+                                "offset": 15179
+                            }
+                        },
+                        {
+                            "text": "Enterobacteriaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid543",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:29",
+                                "parent_taxonomic_id": "NCBI:txid91347"
+                            },
+                            "id": "24620989",
+                            "locations": {
+                                "length": 18,
+                                "offset": 15193
+                            }
+                        },
+                        {
+                            "text": "Klebsiella pneumoniae",
+                            "infons": {
+                                "identifier": "NCBI:txid573",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:29",
+                                "parent_taxonomic_id": "NCBI:txid570"
+                            },
+                            "id": "24620990",
+                            "locations": {
+                                "length": 21,
+                                "offset": 15216
+                            }
+                        },
+                        {
+                            "text": "Klebsiella",
+                            "infons": {
+                                "identifier": "NCBI:txid570",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:31",
+                                "parent_taxonomic_id": "NCBI:txid2890311"
+                            },
+                            "id": "24620991",
+                            "locations": {
+                                "length": 10,
+                                "offset": 15469
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:31",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "24620992",
+                            "locations": {
+                                "length": 14,
+                                "offset": 15485
+                            }
+                        },
+                        {
+                            "text": "Enterococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1350",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:33",
+                                "parent_taxonomic_id": "NCBI:txid81852"
+                            },
+                            "id": "24620993",
+                            "locations": {
+                                "length": 12,
+                                "offset": 15639
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid848",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:33",
+                                "parent_taxonomic_id": "NCBI:txid203492"
+                            },
+                            "id": "24620994",
+                            "locations": {
+                                "length": 13,
+                                "offset": 15657
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:35",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24620995",
+                            "locations": {
+                                "length": 8,
+                                "offset": 15828
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid848",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:35",
+                                "parent_taxonomic_id": "NCBI:txid203492"
+                            },
+                            "id": "24620996",
+                            "locations": {
+                                "length": 13,
+                                "offset": 15870
+                            }
+                        },
+                        {
+                            "text": "S. aureus",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid1280",
+                                    "NCBI:txid193461"
+                                ],
+                                "type": [
+                                    "bacteria_species",
+                                    "bacteria_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:36",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid1279",
+                                    "NCBI:txid1883"
+                                ]
+                            },
+                            "id": "24620997",
+                            "locations": {
+                                "length": 9,
+                                "offset": 15980
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid848",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:38",
+                                "parent_taxonomic_id": "NCBI:txid203492"
+                            },
+                            "id": "24620998",
+                            "locations": {
+                                "length": 13,
+                                "offset": 16172
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 16212,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Lung Microbial Community Profiles",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Based on the overall concordance between culture-isolated bacteria and taxonomic abundance by sequencing, we operationally defined the most abundant taxa in culture-positive communities as \u201cpathogens\u201d (Supplementary Table 2 and Supplementary Figure 4). Looking then into the culture-negative cases that represent a diagnostic \u201cblack-box,\u201d we found that 9/44 (20%) communities were dominated by pathogenic taxa (e.g., Staphylococcus or Pseudomonas genera) suggesting a specific etiology that was undefined by standard culture-based methods (Figure \u200bFigure3B3B). The remaining culture-negative samples were populated by the most common members of the supraglottic pneumotype of the lung microbiome, such as Prevotella, Veillonella, and Streptococcus taxa (\u201coral-origin\u201d taxa) (Segal et al., 2016; Dickson et al., 2017). In four culture-negative cases, clinical viral panel testing was positive for respiratory viruses (influenza, parainfluenza, metapneumovirus, and respiratory syncytial virus) without identification of common bacterial pathogens (Figure \u200bFigure2B2B), and thus no indication of the commonly suspected bacterial super-infection that leads to empiric antibiotic courses in patients with viral pneumonia (van der Sluijs et al., 2010).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:39",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24620999",
+                            "locations": {
+                                "length": 8,
+                                "offset": 16270
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:42",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "24621000",
+                            "locations": {
+                                "length": 14,
+                                "offset": 16629
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas",
+                            "infons": {
+                                "identifier": "NCBI:txid286",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:42",
+                                "parent_taxonomic_id": "NCBI:txid135621"
+                            },
+                            "id": "24621001",
+                            "locations": {
+                                "length": 11,
+                                "offset": 16647
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:45",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "24621002",
+                            "locations": {
+                                "length": 10,
+                                "offset": 16917
+                            }
+                        },
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:45",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "24621003",
+                            "locations": {
+                                "length": 11,
+                                "offset": 16929
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:37:45",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "24621004",
+                            "locations": {
+                                "length": 13,
+                                "offset": 16946
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 17459,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Lung Microbial Community Profiles",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "After examining different thresholds of pathogen abundance (Supplementary Figure 5), we found that a relative abundance of \u223c50% (community dominance) was strongly associated with bacterial culture results with an odds-ratio (OR) of 48.2 (95% CI: 2.6-898.9, p = 0.009) (Figure \u200bFigure44). In contrast, oral taxa dominance was strongly \u201cprotective\u201d against respiratory culture positivity (OR = 0.01 [95% CI: 0.0008\u20130.26, p = 0.004]).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17890,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Lung Microbial Community Profiles",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We also quantified the bacterial load in lung communities by 16S qPCR and found no significant differences in absolute number of 16S rRNA gene copies between culture-positive and negative samples, underscoring the fact that several culture-negative samples were carrying high bacterial loads that were clinically undetected. There was a wide range of 16S rRNA copies across samples (range from 34 to 50,390,355 copies) (Figure \u200bFigure55), and we did not identify a diagnostic threshold of absolute pathogen abundance for association with culture positivity. Thus, in our dataset relative abundance of pathogens, which is reflective of within community microbial dynamics, appeared as a stronger predictor of culture positivity compared to absolute pathogen abundance as quantified by 16S qPCR copies.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18690,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Oral Microbial Community Profiles",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Oral microbiome profiles closely reflected the patterns observed with the lung microbiome, with lower alpha diversity in subjects with positive respiratory cultures compared to culture-negative subjects (p = 0.002) (Figure \u200bFigure66). We further examined the taxonomic composition of the oral communities in subjects with pathogen dominance in their lung communities (n = 19) and found that the oral communities were dominated by the same pathogen (Supplementary Figure 6) in seven subjects (36%), implicating colonization of the oral cavity as a potential source of pneumonia pathogens and suggesting the potential utility of oral sample sequencing for pneumonia diagnosis.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19397,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Host Responses to Lung Microbiota and Clinical Outcomes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Lung community pathogen dominance was significantly associated with higher levels of circulating inflammatory cytokines (IL-6: p = 0.007; sTNFR1: p = 0.03) and epithelial injury biomarkers (RAGE: p = 0.02) (Figure \u200bFigure77). For IL-6, the association remained significant after adjusting for culture results (p = 0.03), suggesting that such pathogenic bacteria induce host inflammation regardless of their viability or ability to grow in cultures at the time of sample acquisition (Table \u200bTable22). These associations remained statistically significant and with larger effect sizes when adjusted for history of COPD, a disease process that could also confound host-microbiome associations (Table \u200bTable22). We did not find any significant associations between important patient-centered outcomes (mortality, shock, VFD and length of ICU stay) and pathogen dominance in the lung communities.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:38:16",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24621005",
+                            "locations": {
+                                "length": 8,
+                                "offset": 19750
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 20343,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Network Analyses",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Probabilistic graph interrogation of our dataset using CausalMGM identified five microbial taxa and the levels of hemoglobin to be the most informative values for respiratory culture positivity, as well as a composite variable measuring pathogen taxa abundance (Figure \u200bFigure88). These findings extended our univariate taxonomic analyses in that they identified the taxa that are directly linked to positive cultures (not simply correlated) and highlighted sequenced bacterial taxa as the strongest explanatory variables of culture positivity. To examine the ability of 16S taxonomic data alone to predict culture positivity, we used the Markov blanket around the culture-positivity variable as a feature selection method (Huang et al., 2015). The taxonomy-based classifier yielded mean accuracy of 82.3% (SD = 7%) (Table \u200bTable33), indicating proof-of-concept utility for use of sequencing in clinical practice for predicting culture results, if sequencing results were available real-time.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21351,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Our prospective study in mechanically ventilated patients provides the largest examination to date of the clinical validity of NGS for etiologic diagnosis of index severe pneumonia. By utilizing minimally invasive samples, we detected high abundance of pathogenic bacteria in both culture-positive and negative cases of pneumonia, which could allow for timely etiologic pathogen identification and antibiotic adjustments once technology evolves to allow rapid NGS. Our analyses highlighted overall community structure differences associated with culture-positivity and uncovered distinct differences in the host immune responses to dominant bacterial taxa in the lungs. Probabilistic graphical models that inclusively consider the wide range of variables in our dataset provided insights on the taxonomic and clinical variables directly linked to respiratory culture positivity. Our results indicate that respiratory microbiome profiles may provide clinically meaningful and actionable information above that currently afforded by standard microbiologic cultures.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:38:34",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24621006",
+                            "locations": {
+                                "length": 8,
+                                "offset": 21615
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 22424,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "16S sequencing provided important insights into the etiology of both culture-positive and negative bacterial pneumonias. In culture-positive cases, taxa concordant to clinically isolated pathogens dominated the respective communities in the vast majority of cases, consistent with the concept of community collapse during infection (Dickson et al., 2014). In the few exceptions of discordance between dominant pathogen and culture results (cases 10\u201312, Figure \u200bFigure3A3A), sequencing did find the cultured pathogen although it was not dominant and may have uncovered co-primary or alternative pathogens not clinically considered. Thus, even in cases of supposed diagnostic certainty, cultures may only capture a small portion of the underlying bacterial community and miss dominant bacteria that may have important therapeutic implications.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:38:50",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24621007",
+                            "locations": {
+                                "length": 8,
+                                "offset": 23207
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 23265,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Culture-negative samples represent a diagnostic \u201cblack-box\u201d in clinical practice, and in up to 75% of pneumonia cases no bacterial pathogen is ever isolated (Jain et al., 2015), similar to the culture-negative rate seen in our cohort. We found that approximately 20% of our culture-negative samples actually contained a predominance of pathogenic taxa similar to those observed in culture-positive specimens (e.g., Staphylococcus or Pseudomonas). In contrast, eighty percent of culture-negative samples without a dominant pathogen had high oral bacteria abundance, similar to what is often found in the lung microbiome and suggesting ongoing micro-aspiration of oral secretions around endotracheal tube cuffs in these patients (Kitsios and McVerry, 2018). In general, oral-origin taxa were associated with lower levels of host immune responses compared to pathogenic taxa. Nevertheless, oral taxa dominance cannot be uniformly considered as clinically innocuous, given significant interindividual variability in host responses and absolute bacterial load, making context-specific integration of clinical and microbiome data necessary for clarifying the clinical importance of individual oral bacteria.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:38:55",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "24621008",
+                            "locations": {
+                                "length": 14,
+                                "offset": 23680
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas",
+                            "infons": {
+                                "identifier": "NCBI:txid286",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:38:55",
+                                "parent_taxonomic_id": "NCBI:txid135621"
+                            },
+                            "id": "24621009",
+                            "locations": {
+                                "length": 11,
+                                "offset": 23698
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:38:56",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24621010",
+                            "locations": {
+                                "length": 8,
+                                "offset": 23810
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:39:03",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24621011",
+                            "locations": {
+                                "length": 8,
+                                "offset": 24457
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 24466,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Improvements in the etiologic diagnosis of pneumonia offered by NGS can translate into measurable benefits as defined by appropriate antibiotic targeting. For example, when a culprit pathogen is identified to dominate a community, early antibiotic tailoring against this pathogen becomes feasible and avoids the hazards of empiric broad-spectrum antibiotic courses. Furthermore, in up to 40% of culture-negative communities, no pathogenic sequence abundance was found and communities had high alpha diversity metrics in the range of the healthy human lung microbiome. With no indication of bacterial pneumonia in these patients by 16S sequencing, early discontinuation of antibiotics could substantially decrease their cumulative antibiotic exposure. Nonetheless, the 16S sequencing technique we utilized cannot yet be applied clinically and does not provide species-level or antibiotic resistance information. The advent of ultra-rapid sequencing devices and bioinformatics pipelines offer the capacity for whole metagenome sequencing in a matter of hours, theoretically allowing for bedside pathogen identification including viruses and fungi and antibiotic resistance prediction (Naccache et al., 2014; Judge et al., 2015; Schmidt et al., 2017). In a recent proof-of-concept study, sequencing with a portable, point-of-care device (Oxford Nanopore Technologies) was able to identify the culprit pathogens before a clinical microbiology lab, underlining that NGS may alleviate the time-consumption problem with traditional culture techniques (Pendleton et al., 2017). Whole metagenome sequencing techniques remain to be optimized for pathogen detection from biological samples containing substantial amounts of human DNA.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "fungi",
+                            "infons": {
+                                "identifier": "NCBI:txid4751",
+                                "type": "fungi_kingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:39:16",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24621012",
+                            "locations": {
+                                "length": 5,
+                                "offset": 25605
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26189,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Apart from the technological challenges outlined above, clinical research in the field also has to overcome the formidable challenge of comparing a new sensitive test (NGS) against a standard-of-care (microbiologic cultures) that is not a gold-standard (Rutjes et al., 2007). Given that clinical cultures can effectively grow only a subset of cultivable bacteria (Venkataraman et al., 2015), conventional sensitivity/specificity analyses of NGS become obsolete. To overcome such diagnostic challenges, the clinical reference standard has to be refined, with synthesis of multi-level data (clinical, radiographic, biomarkers etc.) to be combined in a \u201cconstruct gold-standard\u201d for pneumonia diagnosis with supervised (involving expert input) or unsupervised classification methods (Rutjes et al., 2007). Our PGM analyses highlighted sequencing variables as the strongest predictors of culture-positivity. Through iterative training of machine-learning algorithms comparing sequencing profiles to \u201cconstruct gold-standard\u201d cases of pneumonia, a diagnostic, sequencing-based classifier can be developed for clinical use (Kitsios, 2018). Ultimately, demonstration of clinical efficacy of NGS-based testing for improving patient outcomes in randomized clinical trials will provide the evidentiary support necessary for clinical adoption.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:39:26",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24621013",
+                            "locations": {
+                                "length": 8,
+                                "offset": 26543
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 27521,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "The striking similarities between the oral and lung communities provided us with further understanding of the bacterial topography of the intubated respiratory tract (Kelly et al., 2016; Dickson et al., 2017; Kitsios et al., 2017). Although not part of routine clinical screening, oral cavity colonization by pathogenic gram-negative bacteria is a well-known harbinger of pneumonia in hospitalized patients (Dickson, 2016). Our analyses uncovered oral communities with dysbiosis (very low alpha diversity) in patients with positive sputum or BAL cultures. With cross-sectional examination of the respiratory microbiome, we could not assess for temporal bacterial immigration along the oro-tracheal tract. However, the observed patterns of oral and lung co-dominance by the same pathogens strongly indict the mouth as the originating pool of pathogens, which notably occurred despite routine oropharyngeal decontamination with chlorhexidine in our ICU (Price et al., 2014). Thus, sequencing of non-invasive oral swabs offers an attractive option for screening for pathogen colonization and for plausible pathogen detection in patients with pneumonia when lower respiratory specimens are unavailable.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:39:38",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24621014",
+                            "locations": {
+                                "length": 8,
+                                "offset": 27855
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 28719,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "The significant associations between sequencing-detected abundance of pathogens and host biomarkers of injury and inflammation (RAGE, IL-6, TNFR1) provided further validation of the biological and clinical relevance of sequencing profiles for pneumonia diagnosis. Consistent with other recent reports correlating lung microbiota composition with concurrently measured plasma biomarkers in critically ill patients (Panzer et al., 2017), our findings indicate that inter-individual heterogeneity in patients with severe pneumonia and ARDS may be explained on the basis of host-microbiome interactions, offering a new avenue for identifying clinical subphenotypes for personalized therapies (Calfee et al., 2014). Our linear regression models identified history of COPD as a significant confounder of host\u2013microbiome associations, and thus COPD should be taken into account in future statistical modeling of these associations.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29643,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Our study has several limitations. It is a single-center design and is limited by available sample size, despite being the largest study of its kind. Consequently, the panel of pathogenic bacteria detected by sequencing is limited (Srinivasan et al., 2015), and generalizing to other critically ill populations and bacteria should be cautious (Calfee et al., 2014). Streptococcus taxa were commonly found in our patients with oral taxa-predominant bacterial communities, and without species-level information, we cannot exclude that certain 16S sequences belonged to pathogenic Streptococcus pneumoniae (albeit not recovered in any culture). However, in sensitivity analyses in which we coded Streptococcus sequences as \u201cpathogens,\u201d the associations between pathogen abundance and host responses were attenuated and no longer statistically significant (data not shown), suggesting that Streptococcus taxa detected in our samples are less likely to induce host inflammation and injury.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:39:59",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24621015",
+                            "locations": {
+                                "length": 8,
+                                "offset": 29831
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:40:00",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24621016",
+                            "locations": {
+                                "length": 8,
+                                "offset": 29958
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:40:01",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "24621017",
+                            "locations": {
+                                "length": 13,
+                                "offset": 30009
+                            }
+                        },
+                        {
+                            "text": "Streptococcus pneumoniae",
+                            "infons": {
+                                "identifier": "NCBI:txid1313",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:40:03",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "24621018",
+                            "locations": {
+                                "length": 24,
+                                "offset": 30221
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:40:04",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "24621019",
+                            "locations": {
+                                "length": 13,
+                                "offset": 30336
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:40:06",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "24621020",
+                            "locations": {
+                                "length": 13,
+                                "offset": 30529
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 30627,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Since we performed 16S sequencing in extracted DNA, we did not consider viruses (either DNA or RNA) or fungi in our analyses, which can be important pathogens in subgroups of hospitalized patients (Jain et al., 2015). Sequencing of the bacteriome is nonetheless of paramount importance, even when a viral pathogen is identified, as the concern of bacterial super- or co-infection is pervasive among clinicians. For practical and ethical purposes, we did not perform BAL for microbiome analyses, thus we could not assess for regional variability of communities. Our approach to rely on ETAs was informed by the recent clinical practice guidelines by the American Thoracic Society and the Infectious Disease Society of America, recommending non-invasive testing via ETAs over invasive testing (with bronchoscopy or blind bronchial sampling) for hospital-acquired or ventilator-associated pneumonia diagnosis (Kalil et al., 2016). These recommendations are based on evidence from five randomized clinical trials (Berton et al., 2014), including a multicenter clinical trial (Canadian Critical Care Trials Group, 2006) showing that there is no clinical advantage (in terms of mortality, length of ICU stay, duration of mechanical ventilation or antibiotic management changes) between invasive or non-invasive sampling practices. For research purposes, ETAs are considered minimal-risk for enrolled patients, and represent a generally accepted \u201csummary statement\u201d of the pulmonary microbiome in intubated patients (Kelly et al., 2016; Kitsios et al., 2017; Panzer et al., 2017). Thus, we considered a priori that our comparisons between clinical BAL samples and research ETAs are internally valid for assessing concordance between cultures and sequencing. Our results showing striking concordance between dominance pathogen by sequencing with culture positivity (Figure \u200bFigure44) further validated the comparability of ETAs vs. BAL for microbiologic diagnosis. Timing differences of sample acquisition between clinical cultures and research ETAs may account for some of the observed sequencing-culture discordances, although research samples were obtained within 24hrs of clinical samples in >75% cases. Finally, we did not compare NGS against evolving techniques for rapid pathogen identification (Zumla et al., 2014), because cultures remain the current standard-of-care and allowed us to perform pragmatic comparisons in clinically challenging cases.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "fungi",
+                            "infons": {
+                                "identifier": "NCBI:txid4751",
+                                "type": "fungi_kingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:40:08",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24621021",
+                            "locations": {
+                                "length": 5,
+                                "offset": 30730
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 33076,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In summary, our study provides proof-of-concept evidence that as NGS technologies develop further, they will become useful as pneumonia diagnostic tools in the ICU to allow for fast and reliable etiologic pathogen identification. Our results demonstrate the clinical relevance of comprehensive microbial community profiling to provide information beyond what is currently available in clinical practice by microbiologic cultures and to directly impact clinical decision-making. Further prospective study in larger patient cohorts will allow for meaningful integration of sequencing output in culture-independent definitions of pneumonia.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33713,
+                    "infons": {
+                        "section_title_1": "Data Availability Statement",
+                        "iao_name_1": "availability section",
+                        "iao_id_1": "IAO:0000611"
+                    },
+                    "text": "All datasets generated and analyzed for this study are included in the Supplementary Files and are also publicly available for download at https://github.com/MicrobiomeALIR/Resp_Microbiome_Profiles_Pneumonia.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33948,
+                    "infons": {
+                        "section_title_1": "Author Contributions",
+                        "iao_name_1": "author contributions section",
+                        "iao_id_1": "IAO:0000323"
+                    },
+                    "text": "GK, AM, and BJM: conception and design. GK, AF, SR, DM, KL, SQ, JH, YZ, YD, JE, WB, JL, BM, PB, AM, and BJM: acquisition, analysis or interpretation of data. GK, JE, WB, JL, AM, and BJM: clinical cohort phenotyping. GK, AF, SR, DM, KL, SQ, JH, YZ, YD, JE, WB, JL, BM, PB, AM, and BJM: drafting of work and/or revising for important intellectual content. GK, AF, SR, DM, KL, SQ, JH, YZ, YD, JE, WB, JL, BM, PB, AM, and BJM: final approval of version to be published; agreement to be accountable for all aspects of the work in ensuring that questions related to the accuracy or integrity of any part of the work are appropriately investigated and resolved.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34622,
+                    "infons": {
+                        "section_title_1": "Conflict of Interest Statement",
+                        "iao_name_1": "conflict of interest section",
+                        "iao_id_1": "IAO:0000616"
+                    },
+                    "text": "The authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34824,
+                    "infons": {
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Funding. This work was supported by National Institutes of Health [T32 HL007562 (GK); K23 HL139987 (GK); U01 HL098962 (AM); P01 HL114453 (BJM); R01 HL097376 (BJM); K24 HL123342 (AM); U01 HL137159 (DM and PB); R01 LM012087 (DM and PB); R01 HL086884 (JL and WB); HL136143 (JL and WB); F32 HL137258-01 (JE)].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35129,
+                    "infons": {
+                        "section_title_1": "Supplementary Material",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "The Supplementary Material for this article can be found online at: https://www.frontiersin.org/articles/10.3389/fmicb.2018.01413/full#supplementary-material",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35308,
+                    "infons": {
+                        "section_title_1": "Supplementary Material",
+                        "section_title_2": "DATA SHEET S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Metadata file.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35335,
+                    "infons": {
+                        "section_title_1": "Supplementary Material",
+                        "section_title_2": "DATA SHEET S2",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Combined metadata and taxonomic table.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35386,
+                    "infons": {
+                        "section_title_1": "Supplementary Material",
+                        "section_title_2": "DATA SHEET S3",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Taxa table at genus level.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35425,
+                    "infons": {
+                        "section_title_1": "Supplementary Material",
+                        "section_title_2": "DATA SHEET S4",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Extended Methods and Results.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35467,
+                    "infons": {
+                        "title": "Acute respiratory distress syndrome: the Berlin definition.",
+                        "journal": "JAMA",
+                        "volume": "307",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "ARDS Definition Task ForceRanieri V. M., Rubenfeld G. D., Thompson B. T., Ferguson N. D., Caldwell E., et al. (2012). Acute respiratory distress syndrome: the Berlin definition.JAMA3072526\u20132533. 10.1001/jama.2012.5669 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35731,
+                    "infons": {
+                        "journal": "Utilization of Intensive Care Services, 2011. HCUP Statistical Brief # 185.",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Barrett M. L., Smith M. W., Elixhauser A., Honigman L. S., Pines J. M. (2014). Utilization of Intensive Care Services, 2011. HCUP Statistical Brief # 185.Rockville, MD: Agency for Healthcare Research and Quality. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35960,
+                    "infons": {
+                        "title": "Quantitative versus qualitative cultures of respiratory secretions for clinical outcomes in patients with ventilator-associated pneumonia.",
+                        "journal": "Cochrane Database Syst. Rev.",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Berton D. C., Kalil A. C., Teixeira P. J. Z. (2014). Quantitative versus qualitative cultures of respiratory secretions for clinical outcomes in patients with ventilator-associated pneumonia.Cochrane Database Syst. Rev.10:CD006482. 10.1002/14651858.CD006482.pub4 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36259,
+                    "infons": {
+                        "title": "Subphenotypes in acute respiratory distress syndrome: latent class analysis of data from two randomised controlled trials.",
+                        "journal": "Lancet Respir. Med.",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Calfee C. S., Delucchi K., Parsons P. E., Thompson B. T., Ware L. B., Matthay M. A., et al. (2014). Subphenotypes in acute respiratory distress syndrome: latent class analysis of data from two randomised controlled trials.Lancet Respir. Med.2611\u2013620. 10.1016/S2213-2600(14)70097-9 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36595,
+                    "infons": {
+                        "title": "A randomized trial of diagnostic techniques for ventilator-associated pneumonia.",
+                        "journal": "N. Engl. J. Med.",
+                        "volume": "355",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Canadian Critical Care Trials Group (2006). A randomized trial of diagnostic techniques for ventilator-associated pneumonia.N. Engl. J. Med.3552619\u20132630. 10.1056/NEJMoa052904 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36806,
+                    "infons": {
+                        "title": "QIIME allows analysis of high-throughput community sequencing data.",
+                        "journal": "Nat. Methods",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Caporaso J. G., Kuczynski J., Stombaugh J., Bittinger K., Bushman F. D., Costello E. K., et al. (2010). QIIME allows analysis of high-throughput community sequencing data.Nat. Methods7335\u2013336. 10.1038/nmeth.f.303 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37074,
+                    "infons": {
+                        "title": "Validation of the infectious diseases society of America/American thoratic society minor criteria for intensive care unit admission in community-acquired pneumonia patients without major criteria or contraindications to intensive care unit care.",
+                        "journal": "Clin. Infect. Dis.",
+                        "volume": "53",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Chalmers J. D., Taylor J. K., Mandal P., Choudhury G., Singanayagam A., Akram A. R., et al. (2011). Validation of the infectious diseases society of America/American thoratic society minor criteria for intensive care unit admission in community-acquired pneumonia patients without major criteria or contraindications to intensive care unit care.Clin. Infect. Dis.53503\u2013511. 10.1093/cid/cir463 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37503,
+                    "infons": {
+                        "title": "The microbiome and critical illness.",
+                        "journal": "Lancet Respir. Med.",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Dickson R. P. (2016). The microbiome and critical illness.Lancet Respir. Med.459\u201372. 10.1016/S2213-2600(15)00427-0 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37673,
+                    "infons": {
+                        "title": "Bacterial topography of the healthy human lower respiratory tract.",
+                        "journal": "MBio",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Dickson R. P., Erb-Downward J. R., Freeman C. M., McCloskey L., Falkowski N. R., Huffnagle G. B., et al. (2017). Bacterial topography of the healthy human lower respiratory tract.MBio8:e02287-16. 10.1128/mBio.02287-16 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37946,
+                    "infons": {
+                        "title": "Towards an ecology of the lung: new conceptual models of pulmonary microbiology and pneumonia pathogenesis.",
+                        "journal": "Lancet Respir. Med.",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Dickson R. P., Erb-Downward J. R., Huffnagle G. B. (2014). Towards an ecology of the lung: new conceptual models of pulmonary microbiology and pneumonia pathogenesis.Lancet Respir. Med.2238\u2013246. 10.1016/S2213-2600(14)70028-1 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38226,
+                    "infons": {
+                        "title": "VEGAN, a package of R functions for community ecology.",
+                        "journal": "J. Veg. Sci.",
+                        "volume": "14",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Dixon P. (2003). VEGAN, a package of R functions for community ecology.J. Veg. Sci.14927\u2013930. 10.1111/j.1654-1103.2003.tb02228.x [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38382,
+                    "infons": {
+                        "title": "The strengthening the reporting of observational studies in epidemiology (STROBE) statement: guidelines for reporting observational studies.",
+                        "journal": "Lancet",
+                        "volume": "370",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Elm E., von Altman D. G., Egger M., Pocock S. J., G\u00f8tzsche P. C., Vandenbroucke J. P., et al. (2007). The strengthening the reporting of observational studies in epidemiology (STROBE) statement: guidelines for reporting observational studies.Lancet3701453\u20131457. 10.1016/S0140-6736(07)61602-X [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38710,
+                    "infons": {
+                        "title": "Acute respiratory distress syndrome subphenotypes respond differently to randomized fluid management strategy.",
+                        "journal": "Am. J. Respir. Crit. Care Med.",
+                        "volume": "195",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Famous K. R., Delucchi K., Ware L. B., Kangelaris K. N., Liu K. D., Thompson B. T., et al. (2017). Acute respiratory distress syndrome subphenotypes respond differently to randomized fluid management strategy.Am. J. Respir. Crit. Care Med.195331\u2013338. 10.1164/rccm.201603-0645OC [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39043,
+                    "infons": {
+                        "title": "Clinical predictors of and mortality in acute respiratory distress syndrome: potential role of red cell transfusion.",
+                        "journal": "Crit. Care Med.",
+                        "volume": "33",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Gong M. N., Thompson B. T., Williams P., Pothier L., Boyce P. D., Christiani D. C. (2005). Clinical predictors of and mortality in acute respiratory distress syndrome: potential role of red cell transfusion.Crit. Care Med.331191\u20131198. 10.1097/01.CCM.0000165566.82925.14 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39349,
+                    "infons": {
+                        "title": "Enterococcal-associated lower respiratory tract infections: a case report and literature review.",
+                        "journal": "Infection",
+                        "volume": "37",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Grupper M., Kravtsov A., Potasman I. (2009). Enterococcal-associated lower respiratory tract infections: a case report and literature review.Infection3760\u201364. 10.1007/s15010-007-7123-7 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39570,
+                    "infons": {
+                        "title": "T-ReCS: stable selection of dynamically formed groups of features with application to prediction of clinical outcomes.",
+                        "journal": "Pac. Symp. Biocomput.",
+                        "volume": "20",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Huang G. T., Tsamardinos I., Raghu V., Kaminski N., Benos P. V. (2015). T-ReCS: stable selection of dynamically formed groups of features with application to prediction of clinical outcomes.Pac. Symp. Biocomput.20431\u2013442. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39836,
+                    "infons": {
+                        "title": "Community-acquired pneumonia requiring hospitalization among U.S. Adults.",
+                        "journal": "N. Engl. J. Med.",
+                        "volume": "373",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Jain S., Self W. H., Wunderink R. G., Fakhran S., Balk R., Bramley A. M., et al. (2015). Community-acquired pneumonia requiring hospitalization among U.S. Adults.N. Engl. J. Med.373415\u2013427. 10.1056/NEJMoa1500245 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40103,
+                    "infons": {
+                        "title": "Bad news itself or just the messenger? The high mortality of Fusobacterium spp. infections is related to disseminated malignancy and other comorbidities.",
+                        "journal": "Eur. Clin. Respir. J.",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Johannesen K., Dessau R., Heltberg O., Bodtger U. (2016). Bad news itself or just the messenger? The high mortality of Fusobacterium spp. infections is related to disseminated malignancy and other comorbidities.Eur. Clin. Respir. J.330287. 10.3402/ecrj.v3.30287 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Fusobacterium spp.",
+                            "infons": {
+                                "identifier": "NCBI:txid848",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:41:51",
+                                "parent_taxonomic_id": "NCBI:txid203492"
+                            },
+                            "id": "24621022",
+                            "locations": {
+                                "length": 18,
+                                "offset": 40222
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 40420,
+                    "infons": {
+                        "title": "Early insights into the potential of the Oxford Nanopore MinION for the detection of antimicrobial resistance genes.",
+                        "journal": "J. Antimicrob. Chemother.",
+                        "volume": "70",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Judge K., Harris S. R., Reuter S., Parkhill J., Peacock S. J. (2015). Early insights into the potential of the Oxford Nanopore MinION for the detection of antimicrobial resistance genes.J. Antimicrob. Chemother.702775\u20132778. 10.1093/jac/dkv206 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40718,
+                    "infons": {
+                        "title": "Ventilator-associated pneumonia in the ICU.",
+                        "journal": "Crit. Care",
+                        "volume": "18",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Kalanuria A. A., Ziai W., Mirski M. (2014). Ventilator-associated pneumonia in the ICU.Crit. Care18:208. 10.1186/cc13775 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40894,
+                    "infons": {
+                        "title": "Executive summary: management of adults with hospital-acquired and ventilator-associated pneumonia: 2016 clinical practice guidelines by the infectious diseases society of America and the American thoracic society.",
+                        "journal": "Clin. Infect. Dis.",
+                        "volume": "63",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Kalil A. C., Metersky M. L., Klompas M., Muscedere J., Sweeney D. A., Palmer L. B., et al. (2016). Executive summary: management of adults with hospital-acquired and ventilator-associated pneumonia: 2016 clinical practice guidelines by the infectious diseases society of America and the American thoracic society.Clin. Infect. Dis.63575\u2013582. 10.1093/cid/ciw504 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41310,
+                    "infons": {
+                        "title": "Composition and dynamics of the respiratory tract microbiome in intubated patients.",
+                        "journal": "Microbiome",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Kelly B. J., Imai I., Bittinger K., Laughlin A., Fuchs B. D., Bushman F. D., et al. (2016). Composition and dynamics of the respiratory tract microbiome in intubated patients.Microbiome4:7. 10.1186/s40168-016-0151-8 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41581,
+                    "infons": {
+                        "title": "ACCE: a model process for evaluating data on emerging genetic tests",
+                        "journal": "Human Genome Epidemiology: A Scientific Foundation for Using Genetic Information to Improve Health and Prevent Disease",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Khoury M., Little J., Burke W. (2003). \u201cACCE: a model process for evaluating data on emerging genetic tests,\u201d in Human Genome Epidemiology: A Scientific Foundation for Using Genetic Information to Improve Health and Prevent Disease, edsKhoury M., Little J., Burke W. (Oxford: Oxford University Press; ), 217\u2013233. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41910,
+                    "infons": {
+                        "title": "Translating advancements in lung microbiome analytics into the next-generation diagnosticgold-standard for pneumonia: a physician-investigator\u2019s perspective.",
+                        "journal": "mSystems",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Kitsios G. D. (2018). Translating advancements in lung microbiome analytics into the next-generation diagnosticgold-standard for pneumonia: a physician-investigator\u2019s perspective.mSystems13:e00153-17. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42155,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Kitsios G. D., McVerry B. J. (2018). Host-microbiome interactions in the subglottic space: bacteria ante Portas! Am. J. Respir. Crit. Care Med.10.1164/rccm.201802-0276ED [Epub ahead of print]. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2023-10-17 23:42:13",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "24621023",
+                            "locations": {
+                                "length": 8,
+                                "offset": 42246
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 42384,
+                    "infons": {
+                        "title": "Dysbiosis in the intensive care unit: microbiome science coming to the bedside.",
+                        "journal": "J. Crit. Care",
+                        "volume": "38",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Kitsios G. D., Morowitz M. J., Dickson R. P., Huffnagle G. B., McVerry B. J., Morris A. (2017). Dysbiosis in the intensive care unit: microbiome science coming to the bedside.J. Crit. Care3884\u201391. 10.1016/j.jcrc.2016.09.029 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42663,
+                    "infons": {
+                        "title": "Experimental and analytical tools for studying the human microbiome.",
+                        "journal": "Nat. Rev. Genet.",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Kuczynski J., Lauber C. L., Walters W. A., Parfrey L. W., Clemente J. C., Gevers D., et al. (2011). Experimental and analytical tools for studying the human microbiome.Nat. Rev. Genet.1347\u201358. 10.1038/nrg3129 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42927,
+                    "infons": {
+                        "title": "Antibiotic resistance-the need for global solutions.",
+                        "journal": "Lancet Infect. Dis.",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Laxminarayan R., Duse A., Wattal C., Zaidi A. K. M., Wertheim H. F. L., Sumpradit N., et al. (2013). Antibiotic resistance-the need for global solutions.Lancet Infect. Dis.131057\u20131098. 10.1016/S1473-3099(13)70318-9 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43178,
+                    "infons": {
+                        "title": "BactQuant: an enhanced broad-coverage bacterial quantitative real-time PCR assay.",
+                        "journal": "BMC Microbiol.",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Liu C. M., Aziz M., Kachur S., Hsueh P.-R., Huang Y.-T., Keim P., et al. (2012). BactQuant: an enhanced broad-coverage bacterial quantitative real-time PCR assay.BMC Microbiol.12:56. 10.1186/1471-2180-12-56 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43440,
+                    "infons": {
+                        "title": "Infectious diseases society of America/American thoracic society consensus guidelines on the management of community-acquired pneumonia in adults.",
+                        "journal": "Clin. Infect. Dis.",
+                        "volume": "44",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Mandell L. A., Wunderink R. G., Anzueto A., Bartlett J. G., Campbell G. D., Dean N. C., et al. (2007). Infectious diseases society of America/American thoracic society consensus guidelines on the management of community-acquired pneumonia in adults.Clin. Infect. Dis.44(Suppl. 2), S27\u2013S72. 10.1086/511159 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43800,
+                    "infons": {
+                        "title": "Multiplex assay reliability and long-term intra-individual variation of serologic inflammatory biomarkers.",
+                        "journal": "Cytokine",
+                        "volume": "90",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "McKay H. S., Margolick J. B., Mart\u00ednez-Maza O., Lopez J., Phair J., Rappocciolo G., et al. (2017). Multiplex assay reliability and long-term intra-individual variation of serologic inflammatory biomarkers.Cytokine90185\u2013192. 10.1016/j.cyto.2016.09.018 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44106,
+                    "infons": {
+                        "title": "Acute kidney injury network: report of an initiative to improve outcomes in acute kidney injury.",
+                        "journal": "Crit. Care",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Mehta R. L., Kellum J. A., Shah S. V., Molitoris B. A., Ronco C., Warnock D. G., et al. (2007). Acute kidney injury network: report of an initiative to improve outcomes in acute kidney injury.Crit. Care11:R31. 10.1186/cc5713 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44386,
+                    "infons": {
+                        "title": "Antibiotics and the gut microbiota.",
+                        "journal": "J. Clin. Invest.",
+                        "volume": "124",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Modi S. R., Collins J. J., Relman D. A. (2014). Antibiotics and the gut microbiota.J. Clin. Invest.1244212\u20134218. 10.1172/JCI72333 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44571,
+                    "infons": {
+                        "title": "Comparison of the respiratory microbiome in healthy nonsmokers and smokers.",
+                        "journal": "Am. J. Respir. Crit. Care Med.",
+                        "volume": "187",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Morris A., Beck J. M., Schloss P. D., Campbell T. B., Crothers K., Curtis J. L., et al. (2013). Comparison of the respiratory microbiome in healthy nonsmokers and smokers.Am. J. Respir. Crit. Care Med.1871067\u20131075. 10.1164/rccm.201210-1913OC [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44868,
+                    "infons": {
+                        "title": "A cloud-compatible bioinformatics pipeline for ultrarapid pathogen identification from next-generation sequencing of clinical samples.",
+                        "journal": "Genome Res.",
+                        "volume": "24",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Naccache S. N., Federman S., Veeraraghavan N., Zaharia M., Lee D., Samayoa E., et al. (2014). A cloud-compatible bioinformatics pipeline for ultrarapid pathogen identification from next-generation sequencing of clinical samples.Genome Res.241180\u20131192. 10.1101/gr.171934.113 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45197,
+                    "infons": {
+                        "title": "Soluble RAGE as a severity marker in community acquired pneumonia associated sepsis.",
+                        "journal": "BMC Infect. Dis.",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Narvaez-Rivera R. M., Rendon A., Salinas-Carmona M. C., Rosas-Taraco A. G. (2012). Soluble RAGE as a severity marker in community acquired pneumonia associated sepsis.BMC Infect. Dis.12:15. 10.1186/1471-2334-12-15 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45466,
+                    "infons": {
+                        "title": "Epidemiological characteristics, practice of ventilation, and clinical outcome in patients at risk of acute respiratory distress syndrome in intensive care units from 16 countries (PRoVENT): an international, multicentre, prospective study.",
+                        "journal": "Lancet Respir. Med.",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Neto A. S., Barbas C. S. V., Simonis F. D., Artigas-Ravent\u00f3s A., Canet J., Determann R. M., et al. (2016). Epidemiological characteristics, practice of ventilation, and clinical outcome in patients at risk of acute respiratory distress syndrome in intensive care units from 16 countries (PRoVENT): an international, multicentre, prospective study.Lancet Respir. Med.4882\u2013893. 10.1016/S2213-2600(16)30305-8 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45908,
+                    "infons": {
+                        "title": "Lung microbiota is related to smoking status and to development of ARDS in critically ill trauma patients.",
+                        "journal": "Am. J. Respir. Crit. Care Med.",
+                        "volume": "197",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Panzer A. R., Lynch S. V., Langelier C., Christie J. D., McCauley K., Nelson M., et al. (2017). Lung microbiota is related to smoking status and to development of ARDS in critically ill trauma patients.Am. J. Respir. Crit. Care Med.197621\u2013631. 10.1164/rccm.201702-0441OC [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46234,
+                    "infons": {
+                        "title": "Rapid pathogen identification in bacterial pneumonia using real-time metagenomics.",
+                        "journal": "Am. J. Respir. Crit. Care Med.",
+                        "volume": "196",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Pendleton K. M., Erb-Downward J. R., Bao Y., Branton W. R., Falkowski N. R., Newton D. W., et al. (2017). Rapid pathogen identification in bacterial pneumonia using real-time metagenomics.Am. J. Respir. Crit. Care Med.1961610\u20131612. 10.1164/rccm.201703-0537LE [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46548,
+                    "infons": {
+                        "title": "Selective digestive or oropharyngeal decontamination and topical oropharyngeal chlorhexidine for prevention of death in general intensive care: systematic review and network meta-analysis.",
+                        "journal": "BMJ",
+                        "volume": "348",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Price R., MacLennan G., Glen J., SuDDICU Collaboration . (2014). Selective digestive or oropharyngeal decontamination and topical oropharyngeal chlorhexidine for prevention of death in general intensive care: systematic review and network meta-analysis.BMJ348:g2197. 10.1136/bmj.g2197 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46888,
+                    "infons": {
+                        "journal": "R: A Language and Environment for Statistical Computing.",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "R Foundation for Statistical Computing (2016). R: A Language and Environment for Statistical Computing.Vienna: CRAN. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47021,
+                    "infons": {
+                        "journal": "Comparison of Strategies for Scalable Causal Discovery of Latent Variable Models from Mixed Data.",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Raghu V. K., Ramsey J. D., Morris A., Manatakis D. V., Sprites P., Chrysanthis P. K., et al. (2017). Comparison of Strategies for Scalable Causal Discovery of Latent Variable Models from Mixed Data.Halifax, NS: Narcotics Anonymous. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47269,
+                    "infons": {
+                        "title": "Evaluation of diagnostic tests when there is no gold standard. A review of methods.",
+                        "journal": "Health Technol. Assess.",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Rutjes A. W. S., Reitsma J. B., Coomarasamy A., Khan K. S., Bossuyt P. M. M. (2007). Evaluation of diagnostic tests when there is no gold standard. A review of methods.Health Technol. Assess.11iii, ix\u201351. 10.3310/hta11500 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47527,
+                    "infons": {
+                        "title": "Identification of bacterial pathogens and antimicrobial resistance directly from clinical urines by nanopore-based metagenomic sequencing.",
+                        "journal": "J. Antimicrob. Chemother.",
+                        "volume": "72",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Schmidt K., Mwaigwisya S., Crossman L. C., Doumith M., Munroe D., Pires C., et al. (2017). Identification of bacterial pathogens and antimicrobial resistance directly from clinical urines by nanopore-based metagenomic sequencing.J. Antimicrob. Chemother.72104\u2013114. 10.1093/jac/dkw397 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47847,
+                    "infons": {
+                        "title": "Learning mixed graphical models with separate sparsity parameters and stability-based model selection.",
+                        "journal": "BMC Bioinformatics",
+                        "volume": "17",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Sedgewick A. J., Shi I., Donovan R. M., Benos P. V. (2016). Learning mixed graphical models with separate sparsity parameters and stability-based model selection.BMC Bioinformatics17:175. 10.1186/s12859-016-1039-0 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48116,
+                    "infons": {
+                        "title": "Enrichment of the lung microbiome with oral taxa is associated with lung inflammation of a Th17 phenotype.",
+                        "journal": "Nat. Microbiol.",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Segal L. N., Clemente J. C., Tsay J.-C. J., Koralov S. B., Keller B. C., Wu B. G., et al. (2016). Enrichment of the lung microbiome with oral taxa is associated with lung inflammation of a Th17 phenotype.Nat. Microbiol.1:16031. 10.1038/nmicrobiol.2016.31 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48426,
+                    "infons": {
+                        "title": "The third international consensus definitions for sepsis and septic shock (Sepsis-3).",
+                        "journal": "JAMA",
+                        "volume": "315",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Singer M., Deutschman C. S., Seymour C. W., Shankar-Hari M., Annane D., Bauer M., et al. (2016). The third international consensus definitions for sepsis and septic shock (Sepsis-3).JAMA315801\u2013810. 10.1001/jama.2016.0287 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48702,
+                    "infons": {
+                        "title": "Use of 16S rRNA gene for identification of a broad range of clinically relevant bacterial pathogens.",
+                        "journal": "PLoS One",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Srinivasan R., Karaoz U., Volegova M., MacKichan J., Kato-Maeda M., Miller S., et al. (2015). Use of 16S rRNA gene for identification of a broad range of clinically relevant bacterial pathogens.PLoS One10:e0117617. 10.1371/journal.pone.0117617 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49001,
+                    "infons": {
+                        "title": "Bacterial microbiome of lungs in COPD.",
+                        "journal": "Int. J. Chron. Obstruct. Pulmon. Dis.",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Sze M. A., Hogg J. C., Sin D. D. (2014). Bacterial microbiome of lungs in COPD.Int. J. Chron. Obstruct. Pulmon. Dis.9229\u2013238. 10.2147/COPD.S38932 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49202,
+                    "infons": {
+                        "title": "Association of intensive care unit admission with mortality among older patients with pneumonia.",
+                        "journal": "JAMA",
+                        "volume": "314",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Valley T. S., Sjoding M. W., Ryan A. M., Iwashyna T. J., Cooke C. R. (2015). Association of intensive care unit admission with mortality among older patients with pneumonia.JAMA3141272\u20131279. 10.1001/jama.2015.11068 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49472,
+                    "infons": {
+                        "title": "Bench-to-bedside review: bacterial pneumonia with influenza - pathogenesis and clinical implications.",
+                        "journal": "Crit. Care",
+                        "volume": "14",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "van der Sluijs K. F., van der Poll T., Lutter R., Juffermans N. P., Schultz M. J. (2010). Bench-to-bedside review: bacterial pneumonia with influenza - pathogenesis and clinical implications.Crit. Care14:219. 10.1186/cc8893 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49751,
+                    "infons": {
+                        "title": "Application of a neutral community model to assess structuring of the human lung microbiome.",
+                        "journal": "MBio",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Venkataraman A., Bassis C. M., Beck J. M., Young V. B., Curtis J. L., Huffnagle G. B., et al. (2015). Application of a neutral community model to assess structuring of the human lung microbiome.MBio6e2284\u201314. 10.1128/mBio.02284-14 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50037,
+                    "infons": {
+                        "title": "Rapid diagnosis of infection in the critically Ill, a multicenter study of molecular detection in bloodstream infections, pneumonia, and sterile site infections.",
+                        "journal": "Crit. Care Med.",
+                        "volume": "43",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Vincent J.-L., Brealey D., Libert N., Abidi N. E., O\u2019Dwyer M., Zacharowski K., et al. (2015). Rapid diagnosis of infection in the critically Ill, a multicenter study of molecular detection in bloodstream infections, pneumonia, and sterile site infections.Crit. Care Med.432283\u20132291. 10.1097/CCM.0000000000001249 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50404,
+                    "infons": {
+                        "title": "Rapid point of care diagnostic tests for viral and bacterial respiratory tract infections\u2013needs, advances, and future prospects.",
+                        "journal": "Lancet Infect. Dis.",
+                        "volume": "14",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Zumla A., Tawfiq J. A., Al-Enne V. I., Kidd M., Drosten C., Breuer J., et al. (2014). Rapid point of care diagnostic tests for viral and bacterial respiratory tract infections\u2013needs, advances, and future prospects.Lancet Infect. Dis.141123\u20131135. 10.1016/S1473-3099(14)70827-8 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}
