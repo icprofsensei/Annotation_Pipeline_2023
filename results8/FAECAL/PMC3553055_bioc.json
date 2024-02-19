@@ -1,0 +1,1852 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC3553055",
+            "inputfile": "../microbiome_corpus_HTML\\PMC3553055.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Bacterial Diversity in Two Neonatal Intensive Care Units (NICUs)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 64,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Infants in Neonatal Intensive Care Units (NICUs) are particularly susceptible to opportunistic infection. Infected infants have high mortality rates, and survivors often suffer life-long neurological disorders. The causes of many NICU infections go undiagnosed, and there is debate as to the importance of inanimate hospital environments (IHEs) in the spread of infections. We used culture-independent next-generation sequencing to survey bacterial diversity in two San Diego NICUs and to track the sources of microbes in these environments. Thirty IHE samples were collected from two Level-Three NICU facilities. We extracted DNA from these samples and amplified the bacterial small subunit (16S) ribosomal RNA gene sequence using \u2018universal\u2019 barcoded primers. The purified PCR products were pooled into a single reaction for pyrosequencing, and the data were analyzed using QIIME. On average, we detected 93+/\u221239 (mean +/\u2212 standard deviation) bacterial genera per sample in NICU IHEs. Many of the bacterial genera included known opportunistic pathogens, and many were skin-associated (e.g., Propionibacterium). In one NICU, we also detected fecal coliform bacteria (Enterobacteriales) in a high proportion of the surface samples. Comparison of these NICU-derived sequences to previously published high-throughput 16S rRNA amplicon studies of other indoor environments (offices, restrooms and healthcare facilities), as well as human- and soil-associated environments, found the majority of the NICU samples to be similar to typical building surface and air samples, with the notable exception of the IHEs which were dominated by Enterobacteriaceae. Our findings provide evidence that NICU IHEs harbor a high diversity of human-associated bacteria and demonstrate the potential utility of molecular methods for identifying and tracking bacterial diversity in NICUs.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Propionibacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1743",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:07:25",
+                                "parent_taxonomic_id": "NCBI:txid31957"
+                            },
+                            "id": "171127",
+                            "locations": {
+                                "length": 17,
+                                "offset": 1157
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:07:25",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "171128",
+                            "locations": {
+                                "length": 8,
+                                "offset": 1222
+                            }
+                        },
+                        {
+                            "text": "Enterobacteriales",
+                            "infons": {
+                                "identifier": "NCBI:txid91347",
+                                "type": "bacteria_order",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:07:25",
+                                "parent_taxonomic_id": "NCBI:txid1236"
+                            },
+                            "id": "171129",
+                            "locations": {
+                                "length": 17,
+                                "offset": 1231
+                            }
+                        },
+                        {
+                            "text": "Enterobacteriaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid543",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:07:29",
+                                "parent_taxonomic_id": "NCBI:txid91347"
+                            },
+                            "id": "171130",
+                            "locations": {
+                                "length": 18,
+                                "offset": 1695
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:07:29",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "171131",
+                            "locations": {
+                                "length": 8,
+                                "offset": 1804
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 1938,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Low Birth Weight and Extremely Low Birth Weight (ELBW) infants in Neonatal Intensive Care Units (NICUs) are typically immunocompromised, and therefore susceptible to hospital-acquired infections [1], [2]. Infants admitted to NICUs, especially ones who have undergone surgery or have congenital abnormalities, are also often at high risk for developing nosocomial infections [2], [3]. An analysis of ELBW infant registry data from 1993\u20132001 by Stoll et al. (2004) illustrated the problems of NICU-acquired infections. This study found high infection rates, high mortality rates, and significantly increased risks of developing severe neuro-developmental disorders among infection survivors [4]. Specifically, Stoll et al. found that 65% (3932/6093) of ELBW infants contracted at least one infection during hospitalization; 38% had sepsis; 27% died from a hospital infection; surviving infected ELBW infants were significantly more likely than surviving uninfected infants to have severe neuro-developmental disorders; and 25% of ELBW infants had clinical manifestations of bacterial infection but were negative for culture growth.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3079,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "One of the biggest difficulties in preventing NICU and Hospital-Acquired Infections (HAIs) is understanding the sources of the infectious agents and the routes of transmission. While culture-based methods are used to identify many infectious agents post-infection, it is not feasible to detect these a priori using culture-based techniques. The infectious bacteria may come from many different sources (e.g., individuals in the hospital, on surfaces, or on equipment), and even if it were possible to culture samples from all of these sources, culturing may still fail if growth conditions are not known, because a particular microbe grows very slowly (e.g., Mycobacteria), or samples were poorly handled.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:07:40",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "171132",
+                            "locations": {
+                                "length": 8,
+                                "offset": 3435
+                            }
+                        },
+                        {
+                            "text": "Mycobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid85007",
+                                "type": "bacteria_order",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:07:42",
+                                "parent_taxonomic_id": "NCBI:txid1760"
+                            },
+                            "id": "171133",
+                            "locations": {
+                                "length": 12,
+                                "offset": 3738
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 3784,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Culture-independent methods based on amplification and sequencing of 16S rRNA genes allow identification of thousands of different bacteria in a single sample [5], [6], [7] when combined with high-throughput DNA sequencing, and hundreds of samples can be multiplexed simultaneously [7], [8]. In this study, we used high-throughput sequencing to investigate the diversity of bacteria found on inanimate hospital environments (IHEs; e.g., surfaces and equipment) in NICUs. While DNA sequencing methods cannot verify the current viability of particular microorganisms, they can determine the typical patterns and sources of surface microbial diversity. Although the importance of IHEs in spreading infections has been controversial [9], studies have shown that nosocomial pathogens can persist in a viable state for months on IHEs, and that contaminated rooms are a significant risk factor for infection [9], [10]. More recently, studies have shown that patients exposed to a contaminated environment are more likely to contract nosocomial pathogens [11], [12], [13], and that cleaning improvements can reduce infection rates of certain pathogens [14], [15], [16]. Our goal was to comprehensively characterize the microbial diversity of IHEs in NICUs, with a focus on commonly touched surfaces. We also compared our results to those of other indoor settings using similar molecular methods. Our results paint a broad picture of the source and extent of bacterial diversity on NICU IHEs.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:07:43",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "171134",
+                            "locations": {
+                                "length": 8,
+                                "offset": 3915
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:07:45",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "171135",
+                            "locations": {
+                                "length": 8,
+                                "offset": 4158
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 5267,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Sample Collection",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Samples were collected from two different large Level 3 Neonatal Intensive Care Units in San Diego, CA: one collection time in January 2009 (NICU1) and one collection time in February 2009 (NICU2). (The identities of the specific facilities were kept anonymous at the request of the medical staff.) Table 1 lists the surfaces sampled inside of the two facilities. Surface types sampled within the NICUs were chosen based on advice from the NICU medical personnel. We focused our sampling efforts primarily on surfaces that were likely to be touched before handling an infant. We also included less frequently touched surfaces, such as the inside of incubators and sink counters away from handles. Environmental samples were obtained with dual tip sterile cotton swabs (BBL CultureSwab\u2122, catalog # 220135, Becton Dickinson, Sparks, MD). On flat surfaces (e.g., incubator plastic, counters and touch screens), approximately 12 cm2 of each surface was swabbed. Handles were swabbed in their entirety, and we swabbed a total of 9 keys on each of the keyboards and button pads. After sampling, the swab was immediately transported back to the lab on ice and stored at \u221280\u00b0C until DNA extraction.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6481,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "DNA Extraction and PCR",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Prior to DNA extraction, the cotton from the swab was removed using a flame-sterilized razor blade and the cotton threads were deposited into a lysozyme reaction mixture. The DNA extractions for all 30 swabs from surfaces in both NICUs and two negative controls were conducted at the same time. The reaction mixture had a total volume of 200 \u00b5l and included the following final concentrations: 20 M Tris, 2 mM EDTA (pH 8.0), 1.2% P40 detergent, 20 mg ml\u22121 lysozyme, and 0.2 \u00b5m filtered sterile water (Sigma Chemical Co., St. Louis, MO). Samples were incubated in a 37\u00b0C water bath for thirty minutes. Next, Proteinase K (DNeasy Tissue Kit, Qiagen Corporation, Valencia, CA) and AL Buffer (DNeasy Tissue Kit, Qiagen Corporation, Valencia, CA) were added to the tubes and gently mixed. Samples were incubated in a 70\u00b0C water bath for 10 min. All samples were subjected to purification using the DNeasy Tissue Kit. Following extraction, the DNA was quantified using a NanoDrop ND-1000 Spectrophotometer (NanoDrop Technologies, Willmington, DE).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7544,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "DNA Extraction and PCR",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "PCR reactions were performed in small lots (six plus positive and negative extraction and PCR controls) to reduce the possibility of laboratory contamination. Barcoded PCR amplification was performed with the widely used 27F and 338R 16S rRNA \u201cuniversal\u201d bacterial primers. The primers flank the highly variable V2 region of the 16S rRNA gene sequence that is taxonomically informative across most of the bacteria. The barcodes allowed us to pool the PCR products from all samples into one 454 sequencing run. The forward primer constructs consist of a short adapter sequence necessary for the pyrosequencing reaction, the unique 12-base DNA \u201cbarcode\u201d encoded with Golay codes [17], and the universal primer sequence. PCR was carried out in a total reaction volume of 50 \u00b5l including 1 \u00b5l (approx. 10 ng \u00b5l\u22121) of sample DNA as template, each deoxynucleoside triphosphate at 400 \u00b5M, 1.65 mM MgCl2, 5 \u00b5l 10\u00d7 buffer (10\u00d7 concentration: 500 mM 1 M KCl, 100 mM 1 M Tris HCl pH 8.4, 1% Triton-X), each primer at 1 \u00b5M, and 1 \u00b5l of REDTAQ\u2122 DNA polymerase (1 unit \u00b5l\u22121; Sigma-Aldrich Inc., St. Louis, MO). Thirty cycles of PCR amplification were performed for the environmental swab samples. We used the lowest number of cycles that yielded a visible band on an agarose gel in order to minimize differential amplification of sequences and production of chimeric sequences. All PCR cycles included an initial denaturation step at 94\u00b0C for 1 min, an annealing step at 55\u00b0C for 45 sec and an extension step at 72\u00b0C for 1.5 min. The amplification cycles were preceded by a one-time denaturing step at 94\u00b0C for 5 min prior to the first cycle and included a final 72\u00b0C extension for 10 min to ensure complete extension.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:08:13",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "171136",
+                            "locations": {
+                                "length": 8,
+                                "offset": 7949
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 9248,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Sequencing",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Individual barcoded PCR products were purified using the AMPure purification kit (Agenourt, Beverly) following the manufacturer\u2019s protocol. After Ampure purification every sample was quantified on an Agilent 2100 Bioanalyzer. All samples were diluted down to 2\u00d710\u22125 moles/\u00b5L (50 \u00b5L volume) and were then pooled with a total combined concentration of 2\u00d710\u22125 moles/\u00b5L (100 \u00b5L total volume). PCR purification, dilutions and pyrosequencing on a 454 Life Sciences FLX Genome Sequencer were all conducted by the core facility at the University of South Carolina (Environmental Genomics Core Facility).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9853,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Computational and Statistical Analyses",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The barcoded pyrosequencing data was analyzed using the QIIME database (www.microbio.me/qiime), QIIME [18] version 1.5.0-dev, SitePainter 1.1 [19] and SourceTracker 0.9.4 [20].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10067,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Computational and Statistical Analyses",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "As part of the QIIME database processing pipeline, raw sequence data were split into samples by barcode, and low quality reads were filtered using the QIIME database\u2019s default parameters. Each library was sub-sampled to an even sequencing depth of exactly 500 sequences per sample to mitigate biases arising from different depths of sequence across samples, and clustered into operational taxonomic units (OTUs) using a closed-reference OTU picking protocol at the 97% sequencing identity level using UCLUST [21] against the Greengenes database [22] pre-clustered at 97% sequence identity. The closed-reference OTU picking protocol was applied to allow direct comparison of these samples to samples amplified with different \u201cuniversal\u201d 16S rRNA PCR primers The taxonomy associated with each OTU was assigned as the taxonomy associated with the reference sequence defining the OTU, and the corresponding Greengenes tree was used to compute weighted UniFrac [23] distances between samples. Principal Coordinates Analysis (PCoA) was applied to summarize UniFrac distance matrices and generate biplots including taxa (Figure 1).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11191,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Computational and Statistical Analyses",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "As part of the QIIME database processing, a metaanalysis was performed to compare our two NICUs to data obtained in five previously published studies: office workspaces in three major cities [24]; restroom surfaces [25];, airborne bacteria in a health-care facility [26]; human-associated microbial communities from different body sites [27]; and diverse soil types [28]. All three studies followed similar protocols for DNA purification, 16S amplification and pyrosequencing but, several studies used different bacterial 16S primers than our NICU samples, requiring the use of a closed-reference OTU picking protocol. This protocol has been shown to be reliable for comparing sequence data generated on different sequencing platforms and from different primer pairs [29]. SourceTracker was applied treating the human-associated (skin, feces, mouth, vagina, and urine), outdoor air, and soil communities as sources and the NICU sites as sinks (Figure 2).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:08:39",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "171137",
+                            "locations": {
+                                "length": 8,
+                                "offset": 11422
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 12145,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Computational and Statistical Analyses",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "All sample metadata is providing in Supplementary Table S3 as a QIIME-compatible mapping file. We present the exact series of commands that were applied to perform our bioinformatics analyses as supplementary methods (Table S4) and the OTU tables are supplied in QIIME-compatible text (Table S5) and biom (Table S6) formats.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12469,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "DNA extractions from all surface samples contained measurable quantities of bacterial DNA (4\u201310 ng/\u00b5l): negative extraction controls had no quantifiable DNA. All samples produced visible PCR products, and the negative PCR and DNA extraction controls were blank. The pyrosequencing of 30 surface swab samples yielded a total of 321,000 sequences with an average of 245bp (75.9 Mb of data). There were approximately 193,546 sequences after removal of the low quality reads and closed-reference OTU picking. Approximately 37,384 sequences were obtained from NICU1, averaging 2200 reads per surface, while 156,162 sequences were obtained from NICU2, averaging 12,012 reads per surface.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13157,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "\nTable 2 lists the 17 different bacterial genera containing species with known opportunistic pathogens that were found commonly in both NICU facilities (although we emphasize that our techniques did not allow species-level identification). Supplementary tables S1 and S2 list of genera present an expansive list of bacterial genera and the final OTU tables output by QIIME are included as supplementary data. Figure 1 presents the results of a Principal Coordinate Analysis (PCoA) produced using QIIME and based on the pairwise weighted UniFrac distances between all the NICU samples, both including (Figure 1A) and not including (Figure 1B) biplots showing the prevalent taxa. Figure 2 presents the suspected sources of the microbial communities in the different NICU sites.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13932,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "The culture-independent high-throughput sequencing methods employed in the NICU facilities revealed far more microbial diversity than previously revealed by culture-dependent or targeted molecular PCR analyses of NICU surfaces. Every surface we sampled was inhabited by tens to hundreds of bacterial genera, averaging approximately 100 bacterial genera per surface. These included genera containing many known opportunistic pathogens (Table 2), as well as abundant groups whose pathogenic potential and ability to resist antibiotic treatment are poorly understood (Table S1, S2). While we detected substantially more diversity with the 16S rRNA methods than typically found with culture-based methods, many of the genera in our study are commonly found in culture-based studies of hospital environments and specifically associated with Hospital-Acquired Infections (HAIs) in neonatal patients. Species of Enterobacter, Neisseria, Pseudomonas, Streptococcus, and Staphylococcus were found abundantly in both NICUs (Table 2). Members of these genera are known to cause nosocomial infections in infants [30], [31]. We also found evidence of other opportunistic pathogens that routinely cause nosocomial infections, including Acinetobacter, Clostridium, Flavimonas, Flavobacterium, Fusobacterium, Gemella, LeClercia, Legionella, Pasteurella, Propionibacterium, and Stenotrophomonas\n[32], [33]. We also observed a substantial number of organisms that are not readily cultured (Table S1, S2).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Enterobacter",
+                            "infons": {
+                                "identifier": "NCBI:txid547",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:03",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "171138",
+                            "locations": {
+                                "length": 12,
+                                "offset": 14837
+                            }
+                        },
+                        {
+                            "text": "Neisseria",
+                            "infons": {
+                                "identifier": "NCBI:txid482",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:03",
+                                "parent_taxonomic_id": "NCBI:txid481"
+                            },
+                            "id": "171139",
+                            "locations": {
+                                "length": 9,
+                                "offset": 14851
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas",
+                            "infons": {
+                                "identifier": "NCBI:txid286",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:03",
+                                "parent_taxonomic_id": "NCBI:txid135621"
+                            },
+                            "id": "171140",
+                            "locations": {
+                                "length": 11,
+                                "offset": 14862
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:03",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "171141",
+                            "locations": {
+                                "length": 13,
+                                "offset": 14875
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:03",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "171142",
+                            "locations": {
+                                "length": 14,
+                                "offset": 14894
+                            }
+                        },
+                        {
+                            "text": "Acinetobacter",
+                            "infons": {
+                                "identifier": "NCBI:txid469",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:05",
+                                "parent_taxonomic_id": "NCBI:txid468"
+                            },
+                            "id": "171143",
+                            "locations": {
+                                "length": 13,
+                                "offset": 15154
+                            }
+                        },
+                        {
+                            "text": "Clostridium",
+                            "infons": {
+                                "identifier": "NCBI:txid1485",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:05",
+                                "parent_taxonomic_id": "NCBI:txid31979"
+                            },
+                            "id": "171144",
+                            "locations": {
+                                "length": 11,
+                                "offset": 15169
+                            }
+                        },
+                        {
+                            "text": "Flavimonas",
+                            "infons": {
+                                "identifier": "NCBI:txid286",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:05",
+                                "parent_taxonomic_id": "NCBI:txid135621"
+                            },
+                            "id": "171145",
+                            "locations": {
+                                "length": 10,
+                                "offset": 15182
+                            }
+                        },
+                        {
+                            "text": "Flavobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid237",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:05",
+                                "parent_taxonomic_id": "NCBI:txid49546"
+                            },
+                            "id": "171146",
+                            "locations": {
+                                "length": 14,
+                                "offset": 15194
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid848",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:05",
+                                "parent_taxonomic_id": "NCBI:txid203492"
+                            },
+                            "id": "171147",
+                            "locations": {
+                                "length": 13,
+                                "offset": 15210
+                            }
+                        },
+                        {
+                            "text": "Gemella",
+                            "infons": {
+                                "identifier": "NCBI:txid1378",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:05",
+                                "parent_taxonomic_id": "NCBI:txid539738"
+                            },
+                            "id": "171148",
+                            "locations": {
+                                "length": 7,
+                                "offset": 15225
+                            }
+                        },
+                        {
+                            "text": "LeClercia",
+                            "infons": {
+                                "identifier": "NCBI:txid83654",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:05",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "171149",
+                            "locations": {
+                                "length": 9,
+                                "offset": 15234
+                            }
+                        },
+                        {
+                            "text": "Legionella",
+                            "infons": {
+                                "identifier": "NCBI:txid445",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:05",
+                                "parent_taxonomic_id": "NCBI:txid444"
+                            },
+                            "id": "171150",
+                            "locations": {
+                                "length": 10,
+                                "offset": 15245
+                            }
+                        },
+                        {
+                            "text": "Pasteurella",
+                            "infons": {
+                                "identifier": "NCBI:txid745",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:05",
+                                "parent_taxonomic_id": "NCBI:txid712"
+                            },
+                            "id": "171151",
+                            "locations": {
+                                "length": 11,
+                                "offset": 15257
+                            }
+                        },
+                        {
+                            "text": "Propionibacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1743",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:05",
+                                "parent_taxonomic_id": "NCBI:txid31957"
+                            },
+                            "id": "171152",
+                            "locations": {
+                                "length": 17,
+                                "offset": 15270
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 15428,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Our Principal Coordinates Analysis (PCoA) of the pairwise weighted UniFrac distances between samples in the NICUs found that nine of the NICU1 surfaces were easily separable from the rest of the surface samples from both NICU1 and NICU2 (top left of Figure 1A). Most of the NICU samples clustered with other indoor samples from office, healthcare centers and restrooms. However, PCoA showed that those nine NICU1 samples were clearly divergent from the rest of the samples (Figure 1, pink points). Many of the restroom surface samples (green points) were also quite different from indoor office surfaces (yellow) and air (indoor hospital air (red), outdoor hospital air (purple).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16107,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "A closer inspection of the microbial diversity in the divergent NICU1 samples indicated that an excess of Enterobacteriaceae sequences was responsible for the divergence of these samples (Figure 1A). Members of the Enterobacteriaceae (e.g., E. Coli, Klebsiella, Enterobacter, Salmonella) commonly inhabit the digestive tract and can be found abundantly in feces. E. coli, Klebsiella and Enterobacter in particular are very well known hospital ICU pathogens that appear to spread and proliferate quite easily in hospitals [32], and many of whom appear to be developing multi-drug resistance [34], [35]. Another very consistent finding was the high proportion of bacterial genera associated with human skin, particularly Propionibacterium, which was one of the most common in both NICUs. We also found considerable proportions of Corynebacterium, Lactobacillus, Staphylococcus, and Streptococcus, all of which are very common on hand surfaces [17].",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Enterobacteriaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid543",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:12",
+                                "parent_taxonomic_id": "NCBI:txid91347"
+                            },
+                            "id": "171153",
+                            "locations": {
+                                "length": 18,
+                                "offset": 16213
+                            }
+                        },
+                        {
+                            "text": "Enterobacteriaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid543",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:13",
+                                "parent_taxonomic_id": "NCBI:txid91347"
+                            },
+                            "id": "171154",
+                            "locations": {
+                                "length": 18,
+                                "offset": 16322
+                            }
+                        },
+                        {
+                            "text": "E. Coli",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid562"
+                                ],
+                                "type": [
+                                    "bacteria_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:13",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid561"
+                                ]
+                            },
+                            "id": "171155",
+                            "locations": {
+                                "length": 7,
+                                "offset": 16348
+                            }
+                        },
+                        {
+                            "text": "Klebsiella",
+                            "infons": {
+                                "identifier": "NCBI:txid570",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:13",
+                                "parent_taxonomic_id": "NCBI:txid2890311"
+                            },
+                            "id": "171156",
+                            "locations": {
+                                "length": 10,
+                                "offset": 16357
+                            }
+                        },
+                        {
+                            "text": "Enterobacter",
+                            "infons": {
+                                "identifier": "NCBI:txid547",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:13",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "171157",
+                            "locations": {
+                                "length": 12,
+                                "offset": 16369
+                            }
+                        },
+                        {
+                            "text": "Salmonella",
+                            "infons": {
+                                "identifier": "NCBI:txid590",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:13",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "171158",
+                            "locations": {
+                                "length": 10,
+                                "offset": 16383
+                            }
+                        },
+                        {
+                            "text": "E. coli",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid562"
+                                ],
+                                "type": [
+                                    "bacteria_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:14",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid561"
+                                ]
+                            },
+                            "id": "171159",
+                            "locations": {
+                                "length": 7,
+                                "offset": 16470
+                            }
+                        },
+                        {
+                            "text": "Klebsiella",
+                            "infons": {
+                                "identifier": "NCBI:txid570",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:14",
+                                "parent_taxonomic_id": "NCBI:txid2890311"
+                            },
+                            "id": "171160",
+                            "locations": {
+                                "length": 10,
+                                "offset": 16479
+                            }
+                        },
+                        {
+                            "text": "Enterobacter",
+                            "infons": {
+                                "identifier": "NCBI:txid547",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:14",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "171161",
+                            "locations": {
+                                "length": 12,
+                                "offset": 16494
+                            }
+                        },
+                        {
+                            "text": "Propionibacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1743",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:16",
+                                "parent_taxonomic_id": "NCBI:txid31957"
+                            },
+                            "id": "171162",
+                            "locations": {
+                                "length": 17,
+                                "offset": 16826
+                            }
+                        },
+                        {
+                            "text": "Corynebacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1716",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:17",
+                                "parent_taxonomic_id": "NCBI:txid1653"
+                            },
+                            "id": "171163",
+                            "locations": {
+                                "length": 15,
+                                "offset": 16935
+                            }
+                        },
+                        {
+                            "text": "Lactobacillus",
+                            "infons": {
+                                "identifier": "NCBI:txid1578",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:17",
+                                "parent_taxonomic_id": "NCBI:txid33958"
+                            },
+                            "id": "171164",
+                            "locations": {
+                                "length": 13,
+                                "offset": 16952
+                            }
+                        },
+                        {
+                            "text": "Staphylococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1279",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:17",
+                                "parent_taxonomic_id": "NCBI:txid90964"
+                            },
+                            "id": "171165",
+                            "locations": {
+                                "length": 14,
+                                "offset": 16967
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:17",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "171166",
+                            "locations": {
+                                "length": 13,
+                                "offset": 16987
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 17053,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "According to Flores et al. (2011), some restroom samples were either dominated by gut- (fecal), vagina- and soil-associated bacteria, while others were dominated by skin-associated bacteria. The majority of the office surfaces contained both skin and soil-associated bacteria [20] and clustered with the frequently hand-touched restroom surfaces (e.g., door and handle surfaces; Figure 1). SourceTracker shows the source of NICU surface microbes is often human skin to the exclusion of the other sources that were investigated here (Figure 2). Interestingly, we noticed that NICU1 surfaces seem to resemble human skin far more than NICU2 surfaces. We suspect that this might result from more recent cleaning of NICU2, but unfortunately we do not know when each room was last cleaned. These findings lend considerable weight to the notion that human hands are important vectors for transmitting bacteria in NICU facilities.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:18",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "171167",
+                            "locations": {
+                                "length": 8,
+                                "offset": 17177
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:18",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "171168",
+                            "locations": {
+                                "length": 8,
+                                "offset": 17234
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:19",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "171169",
+                            "locations": {
+                                "length": 8,
+                                "offset": 17320
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:23",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "171170",
+                            "locations": {
+                                "length": 8,
+                                "offset": 17947
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 17975,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Our data provide evidence that NICUs harbor pools of diverse bacteria, that NICU diversity is similar to other indoor surface environments, and that human skin is a primary contributor indicating that hand transfer (touch) can move organisms through such settings. Future work in hospitals should attempt to integrate these molecular methods with long-term assessment of surface bacterial diversity and infection rates over time and record the cleaning schedule to investigate the rate at which skin microbes colonize IHEs.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:24",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "171171",
+                            "locations": {
+                                "length": 8,
+                                "offset": 18036
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 18498,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "One clear limitation to our study is that we cannot determine which of the microbes we identified were viable. Non-viable organisms cannot directly cause infection, although they may still contribute antibiotic resistance genes to the wider bacterial community. Numerous previous studies have shown the potential ability of many of the microbes detected by molecular methods to be viable, and it is generally easy to grow microbes from any given indoor surface. Setting aside the futility of trying to cultivate dozens or hundreds of different microbes from even a single sample, future work in this area would benefit from the combination of molecular and cultivation assays, increasingly rapid sequencing technologies, and perhaps the addition of molecular assays that simultaneously determine diversity and viability.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19318,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "A drawback of this approach is the lack of taxonomic resolution at the strain level, which can be problematic for differentiating pathogens from their non-pathogenic close relatives. Short reads of the 16S rRNA obtained (as obtained with recent sequencing technologies) are effective at providing broad, genus-level characterization of microbial communities. Longer reads or different marker genes that provide strain-level resolution for taxonomic groups of interest (i.e., genes with higher rates of accumulated mutations and therefore more divergence between species and strains) will likely be necessary to accurately detect the presence of specific pathogenic bacterial species and strains.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20013,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "As these high-throughput methods become cheaper and easier, and as the associated bioinformatics becomes more accessible, techniques such as those described here could be routinely applied in detecting or monitoring the spread of bacteria in NICUs. By detecting departures from \u201ctypical\u201d NICU bacterial diversity, an early warning system for infectious agents could be developed. To achieve these goals, more data (including NICU surface time-series data) will need to be gathered to understand what normal bacterial diversity and temporal variability looks like on NICU surfaces. This information is essential to accurately identifying deviations from normality.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:09:39",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "171172",
+                            "locations": {
+                                "length": 8,
+                                "offset": 20243
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 20676,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nRaw sequence counts of bacterial genera found on NICU1 surfaces. Identifications were made using the Ribosomal Database Project Classifier (Wang et al. 2007; see Methods). Genera with less than a combined total of 50 sequence matches were excluded from the table. Genera containing known opportunistic pathogens are highlighted in boldface.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21047,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(DOC)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21052,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S2",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nRaw sequence counts of bacterial genera found on NICU 2 surfaces. Genera containing known opportunistic pathogens are highlighted in boldface.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21203,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S3",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nQIIME-compatible sample metadata mapping file.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21259,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S3",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(TXT)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21264,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S4",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nSupplementary Methods.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21296,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S4",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(DOCX)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21302,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S5",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nQIIME-compatible text-formatted OTU table.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21354,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S5",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(GZ)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21358,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S6",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nQIIME-compatible biom\u2013formatted OTU table.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21410,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "We thanks the staff members at the two NICU facilities for access during busy work hours and advice on sampling locations and V. Thackray for comments on the manuscript. We thank the two anonymous reviewers for their insightful comments. Finally, we wish to thank Amazon Web Services for the AWS in Education researcher's grant to the QIIME development group.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21784,
+                    "infons": {
+                        "title": "A 10-year prospective surveillance of nosocomial infections in neonatal intensive care units",
+                        "journal": "Am J Infect Control",
+                        "volume": "35",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Couto RC, Carvalho EA, Pedrosa TM, Pedroso ER, Neto MC, et al. (2007) A 10-year prospective surveillance of nosocomial infections in neonatal intensive care units. Am J Infect Control35: 183\u2013189. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22018,
+                    "infons": {
+                        "title": "Nosocomial infection rates in US children's hospitals' neonatal and pediatric intensive care units",
+                        "journal": "Am J Infect Control",
+                        "volume": "29",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Stover BH, Shulman ST, Bratcher DF, Brady MT, Levine GL, et al. (2001) Nosocomial infection rates in US children's hospitals' neonatal and pediatric intensive care units. Am J Infect Control29: 152\u2013157. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22249,
+                    "infons": {
+                        "title": "A prospective incidence study of nosocomial infections in a neonatal care unit",
+                        "journal": "Am J Infect Control",
+                        "volume": "31",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Urrea M, Iriondo M, Thio M, Krauel X, Serra M, et al. (2003) A prospective incidence study of nosocomial infections in a neonatal care unit. Am J Infect Control31: 505\u2013507. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22450,
+                    "infons": {
+                        "title": "Neurodevelopmental and growth impairment among extremely low-birth-weight infants with neonatal infection",
+                        "journal": "Jama",
+                        "volume": "292",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Stoll BJ, Hansen NI, Adams-Chapman I, Fanaroff AA, Hintz SR, et al. (2004) Neurodevelopmental and growth impairment among extremely low-birth-weight infants with neonatal infection. Jama292: 2357\u20132365. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22680,
+                    "infons": {
+                        "title": "Phylogenetic identification and in situ detection of individual microbial cells without cultivation",
+                        "journal": "Microbiol Rev",
+                        "volume": "59",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Amann RI, Ludwig W, Schleifer KH (1995) Phylogenetic identification and in situ detection of individual microbial cells without cultivation. Microbiol Rev59: 143\u2013169. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22894,
+                    "infons": {
+                        "title": "A molecular view of microbial diversity and the biosphere",
+                        "journal": "Science",
+                        "volume": "276",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Pace NR (1997) A molecular view of microbial diversity and the biosphere. Science276: 734\u2013740. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23017,
+                    "infons": {
+                        "title": "A renaissance for the pioneering 16S rRNA gene",
+                        "journal": "Curr Opin Microbiol",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Tringe SG, Hugenholtz P (2008) A renaissance for the pioneering 16S rRNA gene. Curr Opin Microbiol11: 442\u2013446. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23156,
+                    "infons": {
+                        "title": "Ultra-high-throughput microbial community analysis on the Illumina HiSeq and MiSeq platforms",
+                        "journal": "ISME J",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Caporaso JG, Lauber CL, Walters WA, Berg-Lyons D, Huntley J, et al. (2012) Ultra-high-throughput microbial community analysis on the Illumina HiSeq and MiSeq platforms. ISME J6: 1621\u20131624. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23392,
+                    "infons": {
+                        "title": "Contamination, disinfection, and cross-colonization: are hospital surfaces reservoirs for nosocomial infection?",
+                        "journal": "Clin Infect Dis",
+                        "volume": "39",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Hota B (2004) Contamination, disinfection, and cross-colonization: are hospital surfaces reservoirs for nosocomial infection?Clin Infect Dis39: 1182\u20131189. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23594,
+                    "infons": {
+                        "title": "How long do nosocomial pathogens persist on inanimate surfaces? A systematic review",
+                        "journal": "BMC Infect Dis",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Kramer A, Schwebke I, Kampf G (2006) How long do nosocomial pathogens persist on inanimate surfaces? A systematic review. BMC Infect Dis6: 130. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23786,
+                    "infons": {
+                        "title": "Risk of acquiring antibiotic-resistant bacteria from prior room occupants",
+                        "journal": "Arch Intern Med",
+                        "volume": "166",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Huang SS, Datta R, Platt R (2006) Risk of acquiring antibiotic-resistant bacteria from prior room occupants. Arch Intern Med166: 1945\u20131951. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:10:04",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "171173",
+                            "locations": {
+                                "length": 8,
+                                "offset": 23863
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 23955,
+                    "infons": {
+                        "title": "An outbreak of multidrug-resistant Acinetobacter baumannii associated with pulsatile lavage wound treatment",
+                        "journal": "Jama",
+                        "volume": "292",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Maragakis LL, Cosgrove SE, Song X, Kim D, Rosenbaum P, et al. (2004) An outbreak of multidrug-resistant Acinetobacter baumannii associated with pulsatile lavage wound treatment. Jama292: 3006\u20133011. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Acinetobacter baumannii",
+                            "infons": {
+                                "identifier": "NCBI:txid470",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:10:06",
+                                "parent_taxonomic_id": "NCBI:txid469"
+                            },
+                            "id": "171174",
+                            "locations": {
+                                "length": 23,
+                                "offset": 24063
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 24182,
+                    "infons": {
+                        "title": "Role of environmental contamination as a risk factor for acquisition of vancomycin-resistant enterococci in patients treated in a medical intensive care unit",
+                        "journal": "Arch Intern Med",
+                        "volume": "163",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Martinez JA, Ruthazer R, Hansjosten K, Barefoot L, Snydman DR (2003) Role of environmental contamination as a risk factor for acquisition of vancomycin-resistant enterococci in patients treated in a medical intensive care unit. Arch Intern Med163: 1905\u20131912. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24470,
+                    "infons": {
+                        "title": "Reduction in acquisition of vancomycin-resistant enterococcus after enforcement of routine environmental cleaning measures",
+                        "journal": "Clin Infect Dis",
+                        "volume": "42",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Hayden MK, Bonten MJ, Blom DW, Lyle EA, van de Vijver DA, et al. (2006) Reduction in acquisition of vancomycin-resistant enterococcus after enforcement of routine environmental cleaning measures. Clin Infect Dis42: 1552\u20131560. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "enterococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1350",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:10:09",
+                                "parent_taxonomic_id": "NCBI:txid81852"
+                            },
+                            "id": "171176",
+                            "locations": {
+                                "length": 12,
+                                "offset": 24595
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 24725,
+                    "infons": {
+                        "title": "Interventional evaluation of environmental contamination by vancomycin-resistant enterococci: failure of personnel, product, or procedure?",
+                        "journal": "J Hosp Infect",
+                        "volume": "71",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Hota B, Blom DW, Lyle EA, Weinstein RA, Hayden MK (2009) Interventional evaluation of environmental contamination by vancomycin-resistant enterococci: failure of personnel, product, or procedure?J Hosp Infect71: 123\u2013131. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24975,
+                    "infons": {
+                        "title": "Environmental control to reduce transmission of Clostridium difficile",
+                        "journal": "Clin Infect Dis",
+                        "volume": "31",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Mayfield JL, Leet T, Miller J, Mundy LM (2000) Environmental control to reduce transmission of Clostridium difficile. Clin Infect Dis31: 995\u20131000. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Clostridium difficile",
+                            "infons": {
+                                "identifier": "NCBI:txid1496",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:10:12",
+                                "parent_taxonomic_id": "NCBI:txid1870884"
+                            },
+                            "id": "171177",
+                            "locations": {
+                                "length": 21,
+                                "offset": 25074
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 25151,
+                    "infons": {
+                        "title": "The influence of sex, handedness, and washing on the diversity of hand surface bacteria",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "105",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Fierer N, Hamady M, Lauber CL, Knight R (2008) The influence of sex, handedness, and washing on the diversity of hand surface bacteria. Proc Natl Acad Sci U S A105: 17994\u201317999. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:10:14",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "171178",
+                            "locations": {
+                                "length": 8,
+                                "offset": 25281
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 25377,
+                    "infons": {
+                        "title": "QIIME allows analysis of high-throughput community sequencing data",
+                        "journal": "Nat Methods",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Caporaso JG, Kuczynski J, Stombaugh J, Bittinger K, Bushman FD, et al. (2010) QIIME allows analysis of high-throughput community sequencing data. Nat Methods7: 335\u2013336. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25594,
+                    "infons": {
+                        "title": "SitePainter: a tool for exploring biogeographical patterns",
+                        "journal": "Bioinformatics",
+                        "volume": "28",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Gonzalez A, Stombaugh J, Lauber CL, Fierer N, Knight R (2012) SitePainter: a tool for exploring biogeographical patterns. Bioinformatics28: 436\u2013438. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25791,
+                    "infons": {
+                        "title": "Bayesian community-wide culture-independent microbial source tracking",
+                        "journal": "Nat Methods",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Knights D, Kuczynski J, Charlson ES, Zaneveld J, Mozer MC, et al. (2011) Bayesian community-wide culture-independent microbial source tracking. Nat Methods8: 761\u2013763. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26006,
+                    "infons": {
+                        "title": "Search and clustering orders of magnitude faster than BLAST",
+                        "journal": "Bioinformatics",
+                        "volume": "26",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Edgar RC (2010) Search and clustering orders of magnitude faster than BLAST. Bioinformatics26: 2460\u20132461. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26141,
+                    "infons": {
+                        "title": "An improved Greengenes taxonomy with explicit ranks for ecological and evolutionary analyses of bacteria and archaea",
+                        "journal": "ISME J",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. McDonald D, Price MN, Goodrich J, Nawrocki EP, DeSantis TZ, et al. (2012) An improved Greengenes taxonomy with explicit ranks for ecological and evolutionary analyses of bacteria and archaea. ISME J6: 610\u2013618. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:10:21",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "171179",
+                            "locations": {
+                                "length": 8,
+                                "offset": 26315
+                            }
+                        },
+                        {
+                            "text": "archaea",
+                            "infons": {
+                                "identifier": "NCBI:txid2157",
+                                "type": "archaea_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:10:21",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "171180",
+                            "locations": {
+                                "length": 7,
+                                "offset": 26328
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26399,
+                    "infons": {
+                        "title": "UniFrac: a new phylogenetic method for comparing microbial communities",
+                        "journal": "Appl Environ Microbiol",
+                        "volume": "71",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Lozupone C, Knight R (2005) UniFrac: a new phylogenetic method for comparing microbial communities. Appl Environ Microbiol71: 8228\u20138235. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26584,
+                    "infons": {
+                        "title": "Office space bacterial abundance and diversity in three metropolitan areas",
+                        "journal": "PLoS ONE",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Hewitt KM, Gerba CP, Maxwell SL, Kelley ST (2012) Office space bacterial abundance and diversity in three metropolitan areas. PLoS ONE7: e37849. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26777,
+                    "infons": {
+                        "title": "Microbial biogeography of public restroom surfaces",
+                        "journal": "PLoS ONE",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Flores GE, Bates ST, Knights D, Lauber CL, Stombaugh J, et al. (2011) Microbial biogeography of public restroom surfaces. PLoS ONE6: e28132. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26966,
+                    "infons": {
+                        "title": "Architectural design influences the diversity and structure of the built environment microbiome",
+                        "journal": "ISME J",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Kembel SW, Jones E, Kline J, Northcutt D, Stenson J, et al. (2012) Architectural design influences the diversity and structure of the built environment microbiome. ISME J6: 1469\u20131479. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27198,
+                    "infons": {
+                        "title": "Bacterial community variation in human body habitats across space and time",
+                        "journal": "Science",
+                        "volume": "326",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Costello EK, Lauber CL, Hamady M, Fierer N, Gordon JI, et al. (2009) Bacterial community variation in human body habitats across space and time. Science326: 1694\u20131697. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27414,
+                    "infons": {
+                        "title": "Pyrosequencing-based assessment of soil pH as a predictor of soil bacterial community structure at the continental scale",
+                        "journal": "Appl Environ Microbiol",
+                        "volume": "75",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Lauber CL, Hamady M, Knight R, Fierer N (2009) Pyrosequencing-based assessment of soil pH as a predictor of soil bacterial community structure at the continental scale. Appl Environ Microbiol75: 5111\u20135120. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27668,
+                    "infons": {
+                        "title": "Global patterns of 16S rRNA diversity at a depth of millions of sequences per sample",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "108",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Caporaso JG, Lauber CL, Walters WA, Berg-Lyons D, Lozupone CA, et al. (2011) Global patterns of 16S rRNA diversity at a depth of millions of sequences per sample. Proc Natl Acad Sci U S A108 Suppl 14516\u20134522. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27925,
+                    "infons": {
+                        "title": "Late-onset sepsis in very low birth weight neonates: the experience of the NICHD Neonatal Research Network",
+                        "journal": "Pediatrics",
+                        "volume": "110",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Stoll BJ, Hansen N, Fanaroff AA, Wright LL, Carlo WA, et al. (2002) Late-onset sepsis in very low birth weight neonates: the experience of the NICHD Neonatal Research Network. Pediatrics110: 285\u2013291. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28154,
+                    "infons": {
+                        "title": "Hospital-acquired neonatal infections in developing countries",
+                        "journal": "Lancet",
+                        "volume": "365",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Zaidi AK, Huskins WC, Thaver D, Bhutta ZA, Abbas Z, et al. (2005) Hospital-acquired neonatal infections in developing countries. Lancet365: 1175\u20131188. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28334,
+                    "infons": {
+                        "title": "Nosocomial infection rates in adult and pediatric intensive care units in the United States. National Nosocomial Infections Surveillance System",
+                        "journal": "Am J Med",
+                        "volume": "91",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Jarvis WR, Edwards JR, Culver DH, Hughes JM, Horan T, et al. (1991) Nosocomial infection rates in adult and pediatric intensive care units in the United States. National Nosocomial Infections Surveillance System. Am J Med91: 185S\u2013191S. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28599,
+                    "infons": {
+                        "title": "Nosocomial infections in pediatric intensive care units in the United States. National Nosocomial Infections Surveillance System",
+                        "journal": "Pediatrics",
+                        "volume": "103",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Richards MJ, Edwards JR, Culver DH, Gaynes RP (1999) Nosocomial infections in pediatric intensive care units in the United States. National Nosocomial Infections Surveillance System. Pediatrics103: e39. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28831,
+                    "infons": {
+                        "title": "Extended-spectrum beta-lactamase-producing Escherichia coli and Klebsiella pneumoniae: risk factors for infection and impact of resistance on outcomes",
+                        "journal": "Clin Infect Dis",
+                        "volume": "32",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Lautenbach E, Patel JB, Bilker WB, Edelstein PH, Fishman NO (2001) Extended-spectrum beta-lactamase-producing Escherichia coli and Klebsiella pneumoniae: risk factors for infection and impact of resistance on outcomes. Clin Infect Dis32: 1162\u20131171. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Escherichia coli",
+                            "infons": {
+                                "identifier": "NCBI:txid562",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:10:40",
+                                "parent_taxonomic_id": "NCBI:txid561"
+                            },
+                            "id": "171181",
+                            "locations": {
+                                "length": 16,
+                                "offset": 28945
+                            }
+                        },
+                        {
+                            "text": "Klebsiella",
+                            "infons": {
+                                "identifier": "NCBI:txid570",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:10:40",
+                                "parent_taxonomic_id": "NCBI:txid2890311"
+                            },
+                            "id": "171182",
+                            "locations": {
+                                "length": 10,
+                                "offset": 28966
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 29109,
+                    "infons": {
+                        "title": "Epidemiological investigation of fluoroquinolone resistance in infections due to extended-spectrum beta-lactamase-producing Escherichia coli and Klebsiella pneumoniae",
+                        "journal": "Clin Infect Dis",
+                        "volume": "33",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Lautenbach E, Strom BL, Bilker WB, Patel JB, Edelstein PH, et al. (2001) Epidemiological investigation of fluoroquinolone resistance in infections due to extended-spectrum beta-lactamase-producing Escherichia coli and Klebsiella pneumoniae. Clin Infect Dis33: 1288\u20131294. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Escherichia coli",
+                            "infons": {
+                                "identifier": "NCBI:txid562",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:10:42",
+                                "parent_taxonomic_id": "NCBI:txid561"
+                            },
+                            "id": "171183",
+                            "locations": {
+                                "length": 16,
+                                "offset": 29310
+                            }
+                        },
+                        {
+                            "text": "Klebsiella pneumoniae",
+                            "infons": {
+                                "identifier": "NCBI:txid573",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 00:10:42",
+                                "parent_taxonomic_id": "NCBI:txid570"
+                            },
+                            "id": "171184",
+                            "locations": {
+                                "length": 21,
+                                "offset": 29331
+                            }
+                        }
+                    ],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

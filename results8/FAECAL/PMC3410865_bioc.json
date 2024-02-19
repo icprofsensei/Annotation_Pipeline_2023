@@ -1,0 +1,2568 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC3410865",
+            "inputfile": "../microbiome_corpus_HTML\\PMC3410865.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Inferring Dynamic Signatures of Microbes in Complex Host Ecosystems",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 67,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "The human gut microbiota comprise a complex and dynamic ecosystem that profoundly affects host development and physiology. Standard approaches for analyzing time-series data of the microbiota involve computation of measures of ecological community diversity at each time-point, or measures of dissimilarity between pairs of time-points. Although these approaches, which treat data as static snapshots of microbial communities, can identify shifts in overall community structure, they fail to capture the dynamic properties of individual members of the microbiota and their contributions to the underlying time-varying behavior of host ecosystems. To address the limitations of current methods, we present a computational framework that uses continuous-time dynamical models coupled with Bayesian dimensionality adaptation methods to identify time-dependent signatures of individual microbial taxa within a host as well as across multiple hosts. We apply our framework to a publicly available dataset of 16S rRNA gene sequences from stool samples collected over ten months from multiple human subjects, each of whom received repeated courses of oral antibiotics. Using new diversity measures enabled by our framework, we discover groups of both phylogenetically close and distant bacterial taxa that exhibit consensus responses to antibiotic exposure across multiple human subjects. These consensus responses reveal a timeline for equilibration of sub-communities of micro-organisms with distinct physiologies, yielding insights into the successive changes that occur in microbial populations in the human gut after antibiotic treatments. Additionally, our framework leverages microbial signatures shared among human subjects to automatically design optimal experiments to interrogate dynamic properties of the microbiota in new studies. Overall, our approach provides a powerful, general-purpose framework for understanding the dynamic behaviors of complex microbial ecosystems, which we believe will prove instrumental for future studies in this field.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2128,
+                    "infons": {
+                        "section_title_1": "Author Summary",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Microbes colonize the human body soon after birth and propagate to form rich ecosystems. These ecosystems play essential roles in health and disease. Recent advances in DNA sequencing technologies make possible comprehensive studies of the time-dependent behavior of microbes throughout the body. Sophisticated computer-based methods are essential for the analysis and interpretation of these complex datasets. We present a computational method that models how human microbial ecosystems respond over time to perturbations, such as when subjects in a study are treated with a drug. When applied to a large publicly available dataset, our method yields new insights into the diversity of dynamic responses to antibiotics among microbes in the human body. We find that within an individual, sub-populations of microbes that share certain physiological roles also share coordinated responses. Moreover, we find that these responses are similar across different people. We use this information to improve the experimental design of the previously conducted study, and to develop strategies for optimal design of future studies. Our work provides an integrated computer-based method for automatically discovering patterns of change over time in the microbiota, and for designing future experiments to identify changes that impact human health and disease.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3492,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The human gut harbors a dense and complex microbial ecosystem. Our ability to extensively characterize the microbiota has greatly increased in the last several years, due to lower costs and technical improvements in both DNA sequencing [1] and bioinformatics tools [2], [3]. High-throughput sequencing-based studies of the microbiota generally analyze regions of the conserved 16S ribosomal subunit gene [4], or use shotgun sequencing to sample the entire repertoire of genes present in a complex, mixed population of microbes [5]\u2013[8]. These studies, of either human subjects or animal models, have uncovered intriguing associations between the composition of the gut microbiota and various diseases, including obesity [8], inflammatory bowel disease [7], [9], and multiple sclerosis [10].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4293,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Longitudinal studies of the microbiota are particularly important for further advancing the field [3], [5], [6], [11]\u2013[13]. The majority of such longitudinal studies have been observational, monitoring the composition of the flora in healthy individuals over time at various body sites [3], [5], [6], [11]. Such observational studies are valuable for understanding natural variations in commensal communities, as well as capturing rarer events such as onset and resolution of acute disease in the host. Additionally, interventional studies have been performed, in which subjects were intentionally exposed to agents that perturb the microflora, with subsequent evaluation of changes in host ecosystems over time [12], [13]. Such interventional studies hold promise for discovering the mechanisms by which microbes interact with one another and the host, and to define how sub-communities of micro-organisms may cause or protect against disease.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5237,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "To date, longitudinal studies of the microbiota have largely employed static analysis techniques that do not adequately capture the dynamic nature of the data. The most common types of analyses employed involve either computation of diversity measures, such as the Shannon-Weaver diversity index [14], at each data point, or measures such as Unifrac [15] or Bray-Curtis dissimilarity [16], which characterize pair-wise relationships between data points. These techniques have proven useful for uncovering certain trends in longitudinal data [3], [6], [8], [11], [12]. However, these techniques treat longitudinal data as a collection of static snapshots, and ignore inherent ordering and other temporal dependencies.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5953,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "We developed a probabilistic model and inference algorithm, called Microbial Counts Trajectories Infinite Mixture Model Engine (MC-TIMME), which provides a unified framework for analyzing the dynamic behavior of the microbiota captured via high-throughput sequencing data. Our framework models time-varying counts of microbial taxausing exponential relaxation processes. Each relaxation process is characterized by a transient effect level (the amplitude of the process immediately after a perturbation), an equilibrium level (the amplitude of the process approached as time tends to infinity), and a relaxation time constant (the time required for the amplitude of the process to reach 33% of the transient effect level plus 67% of the equilibrium level, as measured on a logarithmic scale).Observed abundances of taxa are assumed to arise from an infinite mixture of prototype signatures. Each prototype signature is composed of a set of relaxation processes that model a response to multiple perturbations. Each reference operational taxonomic unit (refOTU) in the ecosystem(s) analyzed is probabilistically assigned to a prototype signature. Adaptive Bayesian techniques are used to model the dimensionality of prototype signatures and the extent of sharing of prototype signatures among refOTUs within and across ecosystem(s).The time-series of observed counts for a particular refOTU in an ecosystem is modeled through a generative process, in which the prototype signature to which the refOTU has been assigned is customized to an individual signature by addition of refOTU and time-point specific offset terms. Data is then generated from a discrete-valued noise model parameterized by the individual signature.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7672,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "MC-TIMME enables several new types of analysis. The first type, termed Signature Diversity (SD) analysis, measures the variety of time-dependent microbial responses to perturbations to the host ecosystem(s). SD utilizes time-varying information, and is thus distinct from traditional static measures of ecological diversity [17], which characterize the complexity of a microbial community in terms of its constituent members at a single point in time. The second type, Relaxation Time Distribution (RTD) analysis, estimates the distribution of times required for members of the host ecosystem(s) to equilibrate after a perturbation event. This analysis summarizes the kinetics of responses, which is useful for understanding the phasing of changes within microbial ecosystems. The third type, Consensus Signature Group (CSG) analysis, identifies sub-communities of microbes within the larger ecosystem(s) that exhibit coordinated responses to a set of perturbations. This latter analysis provides information about which microbes may form functional sub-populations that affect the host or other microbial populations over time. Finally, MC-TIMME enables automated design of longitudinal studies of the microbiota. Our method couples information theoretic and Bayesian approaches to estimate from prior data the optimal sets of time-points to be sampled in future experiments. In this manner, data from a pilot study can be leveraged to develop optimized experimental designs for larger studies.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9167,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "MC-TIMME has some similarities to previously published methods for analyzing other types of high-throughput data. Several studies have employed continuous-time models [18]\u2013[21] or infinite mixture models [22], [23]to analyze time-series microarray data. Methods for optimal experimental design for time-series microarray data have also been described [24]. However, methods designed for analyzing gene expression data do not model dynamics inherent in complex microbial ecosystems, such as equilibrium reverting behavior. Further, these methods generally assume observed data are continuously valued and normally distributed, which is reasonable for microarray data, but not sequencing data, which consist of counts. Extensive statistical literature has documented that, for data consisting of discrete counts, direct modeling of the data yields superior results as compared to transforming data to continuous values (see e.g., [25]\u2013[27]). This issue has been recognized for RNA Seq data, and several methods have been developed that use discrete-valued noise models [28]\u2013[30]. Recently, Holmes et al.\n[31]presented a method for modeling microbial metagenomics counts data that also uses discrete-valued distributions. However, in contrast to MC-TIMME, these methods for analyzing RNA Seqor metagenomics count data use only static models.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10505,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "To gain new understanding of dynamic changes in the human gut microbiota caused by antibiotic exposure, we applied MC-TIMME to data from a longitudinal study by Dethlefsen et al.\n[12]. Despite the profound effects antibacterial agents presumably have on commensal species in vivo, remarkably little is known about the rates at which these complex ecosystems recover or remain altered after cessation of a course of antibiotics. Further, it remains poorly understood how antibiotic-induced changes in the microbiota affect underlying host physiology, including enhanced susceptibilities to other pathogens [32], disease states such as allergic and auto-immune responses [33], [34], and acute or chronic effects on host diet and metabolism [35].To date, the Dethlefsen et al. study provides the longest time-series systematically monitoring the effects of antibiotics on human gut commensals. In this study, human subjects were given two spaced five day courses of oral ciprofloxacin, a broad-spectrum antibiotic that targets the DNA gyrase and topoisomerases of many microbial species [36]\u2013[40]. Subjects' gut microbiota was monitored at 50+ time-points over nearly a year, by sequencing 16S rRNA gene signatures present in stool samples.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11742,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The remainder of the manuscript is organized as follows. First, we provide additional background on the Dethlefsen et al. dataset that we re-analyzed. Second, we describe the MC-TIMME framework, including our model of dynamics, inference algorithm, and automated experimental design method. Third, we apply MC-TIMME to the Dethlefsen et al. data to demonstrate the utility of Signature Diversity (SD), Relaxation Time Distribution (RTD), and Consensus Signature Group (CSG) analyses, and experimental design methods. Our results provide new quantitative insights into how antibiotic exposures affect the human gut microbiota, and how these dynamic alterations may influence the host.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12425,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Dataset Summary",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Dethlefsen et al.\n[12] examined the microbiota from stool samples of three human subjects over a 10 month period, using Roche 454 high-throughput sequencing of PCR amplicons spanning the V1, V2 and V3 regions of 16S rRNA genes, producing a total of approximately 5 million reads. During the study, each subject received two separate 5 day courses of oral ciprofloxacin. Stool samples were collected daily during, one week prior, and one week after the antibiotics courses, but otherwise were collected less regularly throughout the study. Dethlefsen et al. combined the sequencing reads from all subjects to produce 2,582 reference operational taxonomic units (refOTUs). However, they found that only a few hundred refOTUs were present at consistently detectable levels in at least one sample per subject. In order to focus our analysis on refOTUs above the threshold of detection of the sequencing assay, we required that refOTUs have \u22655 counts for \u226510 time-points. This resulted in a total of 218 refOTUs for subject D, 261 for subject E, and 277 for subject F. Dethlefsen et al. taxonomically labeled refOTUs using the Silva 100 Small Subunit Reference database [41], and UClust [42] with a minimum best hit similarity of 95%. Data files containing counts and taxonomic labels for refOTUs were downloaded from the website linked to the original publication; DNA sequences for each refOTU were not available.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13857,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Overview ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "MC-TIMME uses a Bayesian nonparametric hierarchical generative probability model as depicted in Figure 1. The ecosystem(s) analyzed are assumed to be decomposable into probabilistic mixtures of functions, continuous in both time and value, termed prototype signatures (Figure 1A). The data generation process probabilistically assigns each refOTU to a prototype signature, which induces a clustering of refOTUs into groups that share similar dynamics. The continuous-time prototype signature is then sampled at observed time-points (Figure 1B). The prototype signature is converted to an individual signature(Figure 1C) through a refOTU specific scaling term, and an experiment-wide normalization term that accounts for the total numbers of sequencing reads across experiments. Finally, the observed data for each refOTU, a time-series of counts, is generated from the individual signature through a discrete-valued noise model (Figure 1D).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14806,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Overview ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "MC-TIMME adaptively learns three levels of Signature Diversity (SD) as depicted in Figure 2. These three levels are: (SD1) intra-signature (Figure 2A), or the dimensionality of each prototype signature, (SD2) intra-ecosystem (Figures 2B,2C), or the diversity of prototype signatures among the taxa within an ecosystem, and (SD3) inter-ecosystem (Figures 2D,2E), or the diversity of prototype signatures across multiple host ecosystems. For SD1 adaptive learning, MC-TIMME employs latent variables that control the number of parameters that specify each prototype signature. For SD2, MC-TIMME incorporates Dirichlet Process infinite mixture models, which effectively adjust the number of prototype signatures used to model the system. ForSD3, MC-TIMME maps experiments from different ecosystems to the same time-scale for simultaneous analysis, facilitated by the continuous-time model of dynamics.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15703,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Overview ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The MC-TIMME model is fully Bayesian, and we thus seek to infer the posterior probability distribution of the model variables given the data. However, the posterior distribution is not computable in closed form, making exact inference intractable. Instead, we approximate the posterior distribution using Markov Chain Monte Carlo (MCMC) methods, and then compute various summary statistics. Below, we provide further information on the MC-TIMME model and associated algorithms; see Protocol S1 for complete details.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16218,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Overview ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Sample data, instructions, and GPLv3 licensed Matlab\u2122 (MathWorks, Natick, MA) source code for MC-TIMME are available at https://sourceforge.net/projects/mctimme/. The implementation provided will process datasets with an arbitrary number of experimental subjects or perturbations, as specified through user supplied data files.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16545,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Dynamical model for antibiotic pulses ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Prior longitudinal studies have qualitatively described several key dynamic properties of the gut microbiota [3], [12]. First, abundances of individual microbes within a stable ecosystem are constrained around average levels, despite day-to-day temporal variability. Second, when the ecosystem is perturbed, individual members exhibit varied responses. These responses are characterized by transient components that eventually decay toward an equilibrium state. Of note, this equilibrium state may differ from the pre-perturbation state. Third, the responses of micro-organisms within the ecosystem are dependent on one another. These dependencies may be multifactorial, including factors such as competition for nutrients and other essential resources, as well as common reactions to phases of the host immune response.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17403,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Dynamical model for antibiotic pulses ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "To model these phenomena for the Dethlefsen et al. data, we assume that the dynamics for each refOTU are characterized by piece-wise defined functions over five intervals delimited by the antibiotic treatments in the experiment (Figure S1). These five intervals are: (a) pre-antibiotic, (b) antibiotic treatment one, (c) post-antibiotic treatment one, (d) antibiotic treatment two, and (e) post-antibiotic treatment two.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17823,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Dynamical model for antibiotic pulses ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Observed sequencing counts ysot for subject s, refOTUo, and at time t are assumed to be samples from the negative binomial distribution (NBD), a two parameter distribution [25]. The density function of the NBD can be parameterized in terms of its mean m and inverse shape parameter \u03b5. Thus, for ysot the NBD density function is given by:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18160,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Dynamical model for antibiotic pulses ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Let each prototype signature k be associated with a deterministic function f(t,\u03b8k). We then specify the mean of the NBD msot at time t for refOTUo in subject s assigned to prototype signature k as:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18357,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Dynamical model for antibiotic pulses ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The variable \u03b3so is a subject and refOTU specific offset that scales the baseline number of counts for refOTUo in subject s. The variable \u03c6st is a subject and time-point specific offset that accounts for differences in the total number of sequencing reads among experiments for subject s.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18645,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Dynamical model for antibiotic pulses ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "For intervals (a), (b) and (d), we assume f(t,\u03b8k) is constant valued, i.e., fa(\u2022)\u200a=\u200a\u03bcka, fb(\u2022)\u200a=\u200aXkb, and fd(\u2022)\u200a=\u200aXkd. We assume that dynamics in interval (c), the period after the first antibiotic treatment and before the second, are specified by an exponential relaxation process:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18927,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Dynamical model for antibiotic pulses ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "This process has initial value Xkb, modeling the transient effect of the antibiotic treatment, and approaches equilibrium level \u03bckc with relaxation time \u03bbkc.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19084,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Dynamical model for antibiotic pulses ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "For interval (e), the period after the second antibiotic treatment, we also assume an exponential relaxation process:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19201,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Dynamical model for antibiotic pulses ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "For the NBD inverse shape parameter, we assume it is equal to the same value, \u03b51, on intervals (a), (c) and (e), and equal to a different value, \u03b52, on the antibiotic treatment intervals (b) and (d).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19400,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Dynamical model for antibiotic pulses ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "To capture behavior of the microbiota that spans multiple temporal intervals, we model dependencies between interval parameters using random walks. For instance, the equilibrium level on interval (c), \u03bckc, for the prototype signature k is given by:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19648,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Dynamical model for antibiotic pulses ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Here, \u03bcka is the pre-treatment equilibrium level, and \u03b4ka\u2192c is a random, normally distributed increment. We model relationships between the other interval parameters similarly, as described fully in Protocol S1.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19859,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Dynamical model for antibiotic pulses ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "To adapt the complexity of the dynamical models for prototype signatures, we introduce dimensionality changing variables, ck\u03bc and ck\u03bb. These variables are discrete-valued, and act as \u201cswitches\u201d to control the number of equilibrium levels or relaxation time parameters utilized by each prototype signature.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20164,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Model inference and posterior distribution summarization ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We approximate the posterior distribution of the MC-TIMME model using Markov Chain Monte Carlo (MCMC) methods. The DirichletProcess aspects of the model are handled with Gibbs sampling steps [43]. Updating prototype signature variables is more involved, because of temporally induced dependencies among variables, non-conjugacy of prior distributions, and the dimensionality changing variables. For these updates, we use combined Reversible Jump/Metropolis-Hastings steps. See Protocol S1 for complete details. We ran our MCMC algorithm with a burn-in of 10,000 iterations, and then collected every 10th sample for an additional 5,000 iterations. Convergence was evaluated using standard techniques as described in [44]. Eight independent MCMC runs were pooled for our final analysis. This produced a set of J\u200a=\u200a4,000 posterior samples, which were then used to compute summary measures for Signature Diversity (SD), Relaxation Time Distribution (RTD), and Consensus Signature Group (CSG) analysis.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21218,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Model inference and posterior distribution summarization ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We define the Signature Diversity type 1 equilibrium level score, SD1\u03bc, as the expected fraction of refOTUs with greater than one equilibrium level. We similarly define the SD1 relaxation time score, SD1\u03bb, as the expected fraction of refOTUs with greater than one relaxation time constant. The SD1 scores are given by:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21536,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Model inference and posterior distribution summarization ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Here, I(\u2022) denotes the indicator function, nsk(j) the number of refOTUs from subject s assigned to prototype signature k in MCMC sample j, and Os the number of refOTUs for subject s.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21718,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Model inference and posterior distribution summarization ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We define the Signature Diversity type 2 (SD2) score as the expected equivalent number of prototype signatures per 100 refOTUs. Because assignment of refOTUs to prototype signatures may be non-uniform, we use a measure that standardizes for this effect. The SD2 score is given by:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21998,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Model inference and posterior distribution summarization ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Here, Hs(ns(j)) represents the entropy with respect to the distribution over assignments to prototype signatures for sample j, restricted to subject s. The exponentiated entropy yields the equivalent number of prototype signatures: the hypothetical number of prototype signatures, assuming a uniform assignment of refOTUs, which will yield an entropy equal to Hs(ns(j)).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22368,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Model inference and posterior distribution summarization ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We define the Signature Diversity type 3 (SD3) score as a ratio of SD2 scores: SD2D, which is an SD2 score computed on a hypothetical combined ecosystem, and SD2I, which is the weighted average of independent SD2 scores computed on each ecosystem separately. These scores are given by:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22653,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Model inference and posterior distribution summarization ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Here, H(n(j)) represents the entropy with respect to the distribution over assignments to prototype signatures for sample j for all subjects' ecosystems combined.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22815,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Model inference and posterior distribution summarization ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "To characterize Relaxation TimeDistributions, we estimated probability density functions for relaxation time constants of all refOTUs, using the ksdensitykernel density estimation function in MatlabR2011b with the default options.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23045,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Model inference and posterior distribution summarization ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "To characterize Consensus Signature Groups (CSGs), we used an agglomerative clustering method as described in [23]. For each pair of refOTUso and o\u2032 in subjects s and s\u2032 (possibly the same subject) we computed:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23255,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Model inference and posterior distribution summarization ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Here, z(j) is a random variable that specifies the assignment of a refOTU to a prototype signature for MCMC iteration j. The agglomerative clustering method successively merges CSGs based on average linkage using pso,s\u2032o\u2032 as the similarity measure. Merging is stopped when the number of clusters reaches the expected number of prototype signatures, as calculated from all the MCMC samples. Consensus signatures and relaxation time constants for a CSG are then computed from the MCMC samples for all refOTUs belonging to that CSG.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23784,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Model inference and posterior distribution summarization ",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "To test for enrichment of Consensus Signature Groups for particular taxonomic labels, we used the following procedure. For each CSG, we computed p-values for the observed configuration of taxonomic labels of refOTUs at the order, family and genus levels, under the null hypothesis that configurations followed the hypergeometric distribution. We computed the false discovery rate (FDR) using the method of [45], and considered cases with FDR<0.05 significant.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24243,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Experimental Design",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Our approach is based on a Bayesian information theoretic formulation of the experimental design problem (see e.g., [46]\u2013[48]). To define notation, suppose we are given a joint probability distribution p(\u0398,A(T)) over model parameters \u0398 and possible data A(T) collected at a set of time-points T. Suppose we then perform experiments, which allow us to collect a dataset denoted a. This results in a gain in Shannon information that is given by:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24705,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Experimental Design",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Here, H{\u2022} denotes the differential entropy. Thus, we see that the gain in information is due to the difference in entropy between prior and posterior distributions.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24870,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Experimental Design",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The objective of our automated experimental design algorithm is then to choose the sampling times T that maximize the expected information gain over all possible data that could be observed at those time-points:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25081,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Experimental Design",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "This is a high dimensional integral that is in general intractable. However, for a linear model with Gaussian noise, the integral can be written as [46], [49], [50]:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25246,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Experimental Design",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Here, IM denotes the Fisher information matrix, and |\u2022| the determinant of the matrix. The integral can be approximated with a function g(\u2022) of samples \u0398(j) from the priorp(\u0398), yielding:",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25432,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Experimental Design",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "In the case of a Generalized Linear Model, a linear approximation can be calculated to yield a local Bayesian D-optimality measure [50]. We use this measure, as each prototype signature in MC-TIMME is a Generalized Linear Model if we condition on the appropriate parameters (see Protocol S1).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25724,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Experimental Design",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We estimate samples from p(\u0398), the prior probability distribution over model parameters for future experiments, using a model learned from previously observed data. Specifically, we use 500 MCMC samples obtained from the posterior distribution of the MC-TIMME model conditioned on a set of observed data. We then use a greedy optimization algorithm with the Bayesian D-optimality function g(\u2022)defined above, to generate experimental designs. See Protocol S1 for complete details.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26203,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Algorithm Performance",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "MC-TIMME analyzed the complete Dethlefsen et al. dataset, consisting of 3 subjects with 50+ time-points each, in approximately 12 hours on an Intel Xeon E5507 2.27 GHz core. Figure S2 provides examples of individual signatures for refOTUs inferred by MC-TIMME. The subsequent sections detail our biological findings based on these analyses.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26571,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Algorithm Performance",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We also ran additional analyses to evaluate the sensitivity of our results to key model assumptions or features of the data. First, we tested the robustness of the model's dimensionality adaptation capability, which is a critical component of Signature Diversity scores. These tests showed no significant differences in our results when relevant model parameters were varied. Second, we tested the robustness of our results to noise. Because an equivalent gold standard experimental dataset does not exist, we generated simulated data for use in testing. For these simulations, we used all prototype signatures estimated by MC-TIMME from the full Dethlefsen et al. dataset as our gold standard, and then generated test datasets with varying amounts of added noise. When the amount of noise equaled that in the original dataset (coefficient of variation of \u224860% for counts), MC-TIMME recovered Signature Diversity scores with <\u224810% error, and relaxation time constant estimates with \u224825% error for the first post-antibiotic exposure interval, and \u224840% error for the second interval; measures of consistency of assignment of refOTUs to prototype signatures showed \u224820% reduction in quality. Third and finally, we tested the sensitivity of our results to exclusion of each experimental subject. These tests showed error rates comparable to those from our simulations when noise levels were equal to those in the original dataset. See Protocol S1 for complete details. Overall, our model performance tests demonstrate that our results are robust to changes in relevant parameter settings, noise, and exclusion of experimental subjects.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28202,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Signature Diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To characterize the diversity of responses of the microbiota to repeated antibiotic treatments, we calculated three types of Signature Diversity (SD) scores. As shown in Figure 2, each SD score (SD1 to SD3) measures the dynamic behavior of micro-organisms in the host ecosystem(s) at a different level of resolution. These scores take into account the responses over time for refOTUs, and thus provide new information about dynamic properties of the ecosystems studied, as compared to traditional static measures of ecological diversity [17].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28763,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Signature Diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The intra-signature diversity (SD1) scores for all three subjects in the Dethlefsen et al. study were >\u224850% (Figures 3A, 3B), indicating that the majority of micro-organisms in these host ecosystems exhibited changes in equilibrium levels or relaxation times after one or both antibiotic treatments. As shown in Figures 3A and 3B, the SD1 score has two components: (1) SD1\u03bc, which measures the expected fraction of refOTUs with changes in equilibrium levels between pre-treatment and at least one post-antibiotic treatment interval, and (2) SD1\u03bb, which measures the expected fraction of refOTUs with changes in relaxation time constants between the two antibiotic treatment intervals. The intra-ecosystem signature diversity (SD2) score was \u22488\u201320 expected equivalent signatures per 100 refOTUs (Figure 3C), indicating that many micro-organisms within each host ecosystem exhibited similar responses to the antibiotic treatments. Stated another way, a typical refOTU in a subject's gut ecosystems shared a similar response with \u22485\u201312 other refOTUs.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29810,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Signature Diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "These analyses indicated that subject E's gut microbiota exhibited fewer long-term shifts in abundance levels and responded overall more uniformly to the antibiotic exposures. That is, subject E had significantly lower intra-signature and intra-ecosystem Signature Diversity scores, with an SD1\u03bcscore of 50% and SD2 score of 10, as compared with the other two subjects with SD1\u03bc scores >70% and SD2 scores \u224820. This differential behavior of subject E's microbiota was not discernible in the original analysis performed by Dethlefsen et al., as they did not use techniques that quantified diversity of temporal responses. Our Signature Diversity analysis thus provides additional information about the functional diversity of subject E's microbiota, suggesting that this subject may have harbored a more ciprofloxacin-resistant flora prior to the experiments. Of note, subjects in the study had not received antibiotics in the past year before the experiments, but their antibiotic exposure history prior to this point was unknown.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30840,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Signature Diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The inter-ecosystem signature diversity (SD3) score for the 3 subjects was 48%(p-value<10\u22126using a permutation test with null hypothesis of independent ecosystems), indicating that there were substantial similarities in the time-dependent responses of the subjects' microbiota to the antibiotic treatments. As shown in Figure 3D, the SD3 score is a ratio of two SD2 scores: (1) SD2D, which is computed on a hypothetical combined ecosystem, in which refOTUs from different subjects probabilistically share prototype signatures, and (2) SD2I, which is a weighted average of independent SD2 scores computed separately on each subject. The SD3 score of 48% indicates that approximately as many prototype signatures were shared among the subjects as were unique to each subject. Thus, although subjects' microbiota did exhibit varied responses to the antibiotic treatments, as reported in the Dethlefsen et al. study, our findings indicate that there were substantial commonalities among responses. These commonalities could not have been found using the analysis techniques of the original study, which relied on calculations at individual time-points, in part because different sampling times for each subject made point-wise comparisons impossible. In contrast, MC-TIMME uses a continuous-time model of dynamics that leverages information from multiple time-points to estimate key dynamical properties, allowing comparisons across subjects on a common time-scale.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32301,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Relaxation Time Distributions and Consensus Signature Groups",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We generated Relaxation Time Distribution (RTD)plots using data from all three subjects, to investigate common trends in the rates at which the microbiota attained equilibrium levels after repeated antibiotic exposures (Figure 4). These plots depict estimated smoothed probability distributions of relaxation time constants, in units of days, for all refOTUs across all subjects. As shown in Figure 4, the Relaxation Time Distribution for the first post-antibiotic exposure interval is multi-modal. A large peak in the distribution at \u22481\u20133 days indicates that many refOTUs quickly reached equilibrium levels, while a subsequent broader peak suggests waves of microbial succession events among subpopulations that took longer to equilibrate. Interestingly, after the second antibiotic exposure, the relaxation time distribution became simpler and more concentrated, with more refOTUs exhibiting relaxation times around \u22481\u20133 days. This finding suggests that the first antibiotic treatment shifted gut ecosystems toward more rapidly equilibrating states, possibly by selecting for more antibiotic resistant organisms or for sub-communities that more quickly and stably established themselves in relevant niches.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33569,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Relaxation Time Distributions and Consensus Signature Groups",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To further our understanding of the differential responses of microbial sub-communities to antibiotic exposures, we next generated Consensus Signature Groups (CSGs), which represent groups of refOTUs that consistently covary in terms of relative abundances over time. Combining data from all subjects, MC-TIMME identified 125 CSGs. Interestingly, many of the CSGs contained refOTUs that are phylogenetically related or are common to all subjects. To assess the phylogentic relationships among refOTUs within each CSG, we calculated an enrichment p-value for taxonomic labels at the order, family and genus levels, based on a hypergeometric distribution null hypothesis. Approximately 61% of refOTUs belonged to CSGs significantly enriched for at least one taxonomic label at these levels, with most such CSGs shared across subjects. These results provide evidence that MC-TIMME detected biologically relevant sub-communities of organisms based only on evaluation of time-varying behaviors of refOTUs. MC-TIMME additionally discovered refOTUs that exhibited consistent behavior across all subjects: 88refOTUs were present in all 3 subjects, and of these 88 refOTUs, \u224825% were assigned to common CSGs. These sets of refOTUs, which consistently covary across all subjects, could serve as candidate biomarkers in future studies of antibiotic treatments or other perturbations to the gut flora.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34958,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Relaxation Time Distributions and Consensus Signature Groups",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We created a time-line of the largest and best taxonomically defined Consensus Signature Groups (Figure 5A\u2013M), to gain insight into the specific responses and successive equilibration of gut commensal sub-populations after antibiotic exposures. For purposes of visualization, we ordered the CSGs according to their relaxation time constants after the first antibiotic pulse, as these relaxation times exhibited the most variation. To facilitate interpretation, we included only CSGs containing at least one refOTU shared among all subjects, and significantly enriched (false discovery rate<0.05, hypergeometric tests)for at least one taxonomic label at the family or genus level. These criteria yielded 13 CSGs, containing \u224850% of all refOTUs. Of the 13 CSGs, 8 exhibited decreases in relative abundance during the first antibiotic pulse (Figure 5A\u2013H), and 5 respectively exhibited increases (Figure 5I\u2013M).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35864,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Relaxation Time Distributions and Consensus Signature Groups",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Among Consensus Signature Groups showing decreases in relative abundance during the first antibiotic pulse, those containing refOTUs in the genus Bacteroides (Figure 5A,C), or refOTUs in the related family Porphyromonadaceae (Figure 5D), were among the first groups to equilibrate after cessation of antibiotics. These groups of refOTUs had relaxation times <\u22482 weeks, and returned to the same or higher relative abundances as compared to those prior to the first antibiotic pulse. The Bacteroides\n[51]are obligate anaerobes. Members of this genus, in particular B. fragilis, are known to have greater resistance to ciprofloxacin, mediated in part by several bacterial factors, coupled with reduced activity of the antibiotic under anaerobic conditions [40], [52]. The Bacteroides can also be opportunistic pathogens and are capable of developing resistance to multiple classes of antibiotics after repeated exposures [53], [54]. These characteristics may explain why the Bacteroides were among the first genera found by MC-TIMME to recover post-antibiotic treatment. Interestingly, another CSG significantly enriched for refOTUs of genus Bacteroides (Figure 5M) exhibited an increase in relative abundance during antibiotic treatment, with a very slow return to equilibrium levels (relaxation time \u224842 days). This finding suggests that subjects consistently harbored antibiotic resistant Bacteroides, echoing concerns that members of this genus could serve as reservoirs of resistance genes for more frankly pathogenic bacteria [53], [54].",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:11",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "141067",
+                            "locations": {
+                                "length": 11,
+                                "offset": 36010
+                            }
+                        },
+                        {
+                            "text": "Porphyromonadaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid171551",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:11",
+                                "parent_taxonomic_id": "NCBI:txid171549"
+                            },
+                            "id": "141068",
+                            "locations": {
+                                "length": 18,
+                                "offset": 36070
+                            }
+                        },
+                        {
+                            "text": "B. fragilis",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid817"
+                                ],
+                                "type": [
+                                    "bacteria_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:14",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid816"
+                                ]
+                            },
+                            "id": "141069",
+                            "locations": {
+                                "length": 11,
+                                "offset": 36427
+                            }
+                        },
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:15",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "141070",
+                            "locations": {
+                                "length": 11,
+                                "offset": 36633
+                            }
+                        },
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:17",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "141071",
+                            "locations": {
+                                "length": 11,
+                                "offset": 36836
+                            }
+                        },
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:18",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "141072",
+                            "locations": {
+                                "length": 11,
+                                "offset": 37003
+                            }
+                        },
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:19",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "141073",
+                            "locations": {
+                                "length": 11,
+                                "offset": 37253
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:20",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "141074",
+                            "locations": {
+                                "length": 8,
+                                "offset": 37384
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 37404,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Relaxation Time Distributions and Consensus Signature Groups",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "MC-TIMME also identified another quickly equilibrating sub-community that contained refOTUs belonging to acetate [55] and butyrate [56] producing genera (Figure 5I). This sub-community showed increases in relative abundance during antibiotic treatments and was significantly enriched for refOTUs belonging to the genera Blautia, Faecalibacterium, or Roseburia. Many Blautia species are acetogens, producing acetate from H2 and CO2 through the acetyl-CoA pathway [55]. Acetate has known downstream effects on the microbial production of butyrate [57]. Butyrate, a 4-carbon short chain fatty acid, has important roles in maintaining colonic health of the host, providing a luminal source of energy to the epithelial barrier [57], while limiting the degree of autophagy in host colonocytes and reducing the host's susceptibility to agents that might otherwise promote damage to the colonic mucosa [58]. Members of the genera Faecalibacterium and Roseburia are prominent butyrate producers in the human gut [56]. Our CSG analysis suggests that the identified Blautia, Faecalibacterium, and Roseburia refOTUs may operate as a functional multi-species community in the gut, one demonstrating relative resilience tociprofloxacin's effects. This finding highlights MC-TIMME's ability to identify and track over time and across multiple subjects, bacterial sub-communities with potential benefits to the host. Interestingly, MC-TIMME discovered a second CSG containing Blautia refOTUs, but not the butyrate producing genera (Figure 5B),and that exhibited a different response pattern, with a decrease in relative abundance during the first antibiotic pulse, and relatively rapid return to pre-antibiotic relative abundances. Of note, certain Blautia species, such as B. hydrogenotrophica, use a broader range of substrates for acetogenesis than other species in the genus [55].The presence of such Blautia species with greater metabolic flexibility in the CSG depicted in Figure 5B could explain the lack of butyrate producers in this consensus signature group.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Blautia",
+                            "infons": {
+                                "identifier": "NCBI:txid572511",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:22",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "141075",
+                            "locations": {
+                                "length": 7,
+                                "offset": 37724
+                            }
+                        },
+                        {
+                            "text": "Faecalibacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid216851",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:22",
+                                "parent_taxonomic_id": "NCBI:txid216572"
+                            },
+                            "id": "141076",
+                            "locations": {
+                                "length": 16,
+                                "offset": 37733
+                            }
+                        },
+                        {
+                            "text": "Roseburia",
+                            "infons": {
+                                "identifier": "NCBI:txid841",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:22",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "141077",
+                            "locations": {
+                                "length": 9,
+                                "offset": 37754
+                            }
+                        },
+                        {
+                            "text": "Blautia",
+                            "infons": {
+                                "identifier": "NCBI:txid572511",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:22",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "141078",
+                            "locations": {
+                                "length": 7,
+                                "offset": 37770
+                            }
+                        },
+                        {
+                            "text": "Faecalibacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid216851",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:26",
+                                "parent_taxonomic_id": "NCBI:txid216572"
+                            },
+                            "id": "141079",
+                            "locations": {
+                                "length": 16,
+                                "offset": 38326
+                            }
+                        },
+                        {
+                            "text": "Roseburia",
+                            "infons": {
+                                "identifier": "NCBI:txid841",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:27",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "141080",
+                            "locations": {
+                                "length": 9,
+                                "offset": 38347
+                            }
+                        },
+                        {
+                            "text": "Blautia",
+                            "infons": {
+                                "identifier": "NCBI:txid572511",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:27",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "141081",
+                            "locations": {
+                                "length": 7,
+                                "offset": 38459
+                            }
+                        },
+                        {
+                            "text": "Faecalibacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid216851",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:27",
+                                "parent_taxonomic_id": "NCBI:txid216572"
+                            },
+                            "id": "141082",
+                            "locations": {
+                                "length": 16,
+                                "offset": 38468
+                            }
+                        },
+                        {
+                            "text": "Roseburia",
+                            "infons": {
+                                "identifier": "NCBI:txid841",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:27",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "141083",
+                            "locations": {
+                                "length": 9,
+                                "offset": 38490
+                            }
+                        },
+                        {
+                            "text": "Blautia",
+                            "infons": {
+                                "identifier": "NCBI:txid572511",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:30",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "141084",
+                            "locations": {
+                                "length": 7,
+                                "offset": 38864
+                            }
+                        },
+                        {
+                            "text": "Blautia",
+                            "infons": {
+                                "identifier": "NCBI:txid572511",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:32",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "141085",
+                            "locations": {
+                                "length": 7,
+                                "offset": 39137
+                            }
+                        },
+                        {
+                            "text": "B. hydrogenotrophica",
+                            "infons": {
+                                "identifier": "NCBI:txid53443",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:32",
+                                "parent_taxonomic_id": "NCBI:txid572511"
+                            },
+                            "id": "141086",
+                            "locations": {
+                                "length": 20,
+                                "offset": 39162
+                            }
+                        },
+                        {
+                            "text": "Blautia",
+                            "infons": {
+                                "identifier": "NCBI:txid572511",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:33",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "141087",
+                            "locations": {
+                                "length": 7,
+                                "offset": 39293
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 39456,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Relaxation Time Distributions and Consensus Signature Groups",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Several Consensus Signature Groups contained refOTUs belonging to the family Ruminococcaceae (Figure 5F,G,H). These CSGs showed decreases in relative abundance during the first antibiotic pulse and equilibrated slowly thereafter. In fact, one group of these organisms (Figure 5H), become undetectable after the first antibiotic pulse, and another group (Figure 5F) declined to very low relative abundance levels after the second pulse. The Ruminococcaceae are overall obligately anaerobic, fastidious organisms that may require substrates produced as by-products of metabolism by earlier colonizers in gut luminal food-webs [57]\u2013[59]. Thus, the delay in which these consensus groups of Ruminococcaceae recovered may be due to high degrees of dependence on activities of other organisms in the ecosystem.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Ruminococcaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid216572",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:34",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "141088",
+                            "locations": {
+                                "length": 15,
+                                "offset": 39533
+                            }
+                        },
+                        {
+                            "text": "Ruminococcaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid216572",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:37",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "141089",
+                            "locations": {
+                                "length": 15,
+                                "offset": 39896
+                            }
+                        },
+                        {
+                            "text": "Ruminococcaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid216572",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:38",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "141090",
+                            "locations": {
+                                "length": 15,
+                                "offset": 40142
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 40259,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Relaxation Time Distributions and Consensus Signature Groups",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "MC-TIMME also discovered a number of Consensus Signature Groups containing refOTUs from the family Lachnospiraceae (Figure 5E,J,K,L). The majority of these CSGs showed increases during the antibiotic pulses, with fairly long relaxation times to pre-antibiotic relative abundance levels. The Lachnospiraceae are a large family of difficult to cultivate organisms, some of which have been found in close association with the mucous layer over the distal colonic epithelium [60]. Although little is known about the antibiotic susceptibilities of these organisms, it has been hypothesized that they may have evolved special mechanisms to survive the higher concentrations of endogenously produced host anti-microbial peptides present in this niche [60]. Our CSG analysis identified distinct groups of refOTUs from the Lachnospiraceae family that exhibited prolonged increases in relative abundance after ciprofloxacin exposure. These findings provide new information about this poorly understood bacterial family, which could be used to guide future studies to evaluate potential mechanisms of innate antibiotic resistance among Lachnospiraceae sub-communities.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Lachnospiraceae",
+                            "infons": {
+                                "identifier": "NCBI:txid186803",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:40",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "141091",
+                            "locations": {
+                                "length": 15,
+                                "offset": 40358
+                            }
+                        },
+                        {
+                            "text": "Lachnospiraceae",
+                            "infons": {
+                                "identifier": "NCBI:txid186803",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:41",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "141092",
+                            "locations": {
+                                "length": 15,
+                                "offset": 40550
+                            }
+                        },
+                        {
+                            "text": "Lachnospiraceae",
+                            "infons": {
+                                "identifier": "NCBI:txid186803",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:45",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "141093",
+                            "locations": {
+                                "length": 15,
+                                "offset": 41073
+                            }
+                        },
+                        {
+                            "text": "Lachnospiraceae",
+                            "infons": {
+                                "identifier": "NCBI:txid186803",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:55:46",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "141094",
+                            "locations": {
+                                "length": 15,
+                                "offset": 41384
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 41416,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Automated Experimental Design",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Application of metagenomic techniques to diagnostic medicine will require human clinical trials across many subjects to ascertain time-dependent effects and responses of the microbiota relative to a defined perturbation or clinical course of disease. The complicated logistics and expense of such trials highlight the need for computational techniques to optimize sampling across subjects.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41834,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Automated Experimental Design",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We developed an algorithm for automated experimental design, and applied it to the Dethlefsen et al. dataset to explore how the experimental design of a longitudinal study of the microbiota could be improved for future, larger trials. Our algorithm uses the data from a set of previously performed experiments to estimate an initial model of prototype signatures. This initial model is used to find a set of time-points that maximize the information that can be gained from future, hypothetical experiments. In general, our algorithm prioritizes time-points for sampling in future experiments around time-points in the original experiment that had the highest degree of uncertainty in the model. The selected time-points may differ from those in the original experiments, and thus indicate when increased sampling could better estimate dynamics of the ecosystems under study, or when reduced sampling still yields sufficient information.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42771,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Automated Experimental Design",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "\nFigure 6 depicts the optimized experimental design produced by our algorithm for each subject. To facilitate comparisons among designs, we restricted our algorithm to choose the same numbers of time points as were used in the original design. Our algorithm generated an optimal design that consistently differed from the original design, over certain temporal intervals. On the pre-antibiotic interval, the optimized design required more uniform sampling, reflecting the modeling assumption that host ecosystems were at equilibrium prior to antibiotic exposure. For the period immediately after the first antibiotic exposure, the optimized design required additional frequent sampling beyond the one week of the original design. This increased sampling requirement is consistent with the relaxation time distribution on the first post-antibiotic treatment interval shown in Figure 4, which indicates the presence of transient effects beyond one week for many refOTUs. However, the optimal design required fewer subsequent samples on the first post-antibiotic treatment interval, suggesting that MC-TIMME can effectively leverage earlier time-points obtained while the ecosystem is still equilibrating to estimate later behavior near steady-state. During the period immediately after the second antibiotic exposure, the optimal design generally required less frequent sampling than did the original design. This reduced sampling requirement reflected the shorter relaxation time distribution on the second post-antibiotic interval as shown in Figure 4. Finally, the optimal design required considerably more sampling at the end of the time-series; the original experiments clearly under-sampled after the second antibiotic exposure, as is evident from high variability in model parameter estimates on this interval (see Figure 5 and Figure S2).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44615,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Automated Experimental Design",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To assess the predictive accuracy of our experimental design algorithm, we evaluated its ability to find a set of experiments to best estimate a model to predict held-out data (Figure S3). We used root mean square error (RMSE) to measure predictive accuracy. RMSE is the square root of the sum of squared differences between actual and predicted sequencing counts, averaged over refOTUs and time-points. Evaluation of predictive accuracy is important to assess the degree to which a probabilistic model generalizes to new data, without over-fitting features particular to one dataset. To perform this evaluation, we estimated optimal experimental designs for each subject, using three design strategies. For the first strategy, a sequential design, we gave the experimental design algorithm data for all refOTUs observed at a subset of time-points, and asked the algorithm to estimate additional time-points to sample in the same subject. For the second strategy, a cross-subject design, we gave the experimental design algorithm all observed data from one subject, and asked the algorithm to estimate time-points to sample for a different subject. In the third strategy, a dispersed design, we did not use the experimental design algorithm, and simply chose time-points to sample that were as evenly spaced on the study interval as possible. The dispersed design uses no information from observed data, and thus served as a baseline with which to compare the other two design strategies.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46103,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Automated Experimental Design",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The two experimental design strategies (sequential and cross-subject)that use prior information improved on the uninformative dispersed strategy by an average of 13%, as measured by reduction in prediction accuracy (RMSE). Of the two informative strategies, neither consistently dominated the other. However, the cross-subject strategy did substantially outperform the sequential strategy for subject D. This subject exhibited the highest Signature Diversity equilibrium level (SD1\u03bc) score, meaning that many refOTUs in this subject changed equilibrium levels subsequent to one or both antibiotic exposures. Consequently, equilibrium levels for refOTUs in subject D were harder to predict from prior equilibrium levels. Thus, the sequential design strategy, which uses only partial time-series data as input to the design algorithm, suffered in performance. In contrast, the cross-subject strategy that uses complete data from another subject, performed particularly well for subject D, because it leveraged prototype signatures predicted from subject E or F that were substantially similar to those in subject D.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47216,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "We presented MC-TIMME, a unified computational framework for inferring dynamic signatures of the microbiota from high-throughput sequencing time-series datasets, and applied our framework to discover new features of the in vivo response of human gut microbes to antibiotic treatments. Our work represents both biologically and computationally significant advances. From the biological perspective, our study provides new insights into the differential and dynamic effects of antibiotic treatments on commensal bacteria in the human gut. Antibiotics disrupt the commensal flora, which can contribute to overgrowth and pathogenic effects of organisms such as Clostridium difficile, the cause of pseudomembranous colitis [61]. However, antibiotic effects have primarily been studied in pathogens; the range of effects on complex commensal populations remains largely unknown. Our results provide evidence, consistent across multiple human subjects, that sub-groups of commensals exhibit distinct temporal responses to treatment with a broad spectrum antibiotic. These results illustrate the staged dynamics of responses among sub-populations of commensals, and will enable future experimental studies to characterize the underlying molecular mechanisms behind these differential responses. From the computational standpoint, our study provides a robust, general-purpose framework for extracting fundamental information on ecosystem dynamics from massive sequencing datasets. Our framework may be applied to types of data other than 16S phylotypes, such as metagenomics or RNA Seq data, as well as model systems in animal or plant hosts, or studies in soil or marine environments. MC-TIMME employs probabilistic models of dynamics and associated measures of their properties, which yield important functional information that standard techniques for analyzing microbial communities cannot. Our use of adaptive Bayesian methods not only increases the strength of statistical inferences, but also provides signatures of microbial responses that are robust across multiple experimental subjects. Additionally, MC-TIMME enables optimal design of new time-series experiments, which will provide a strong foundation for future longitudinal studies of the microbiota.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:56:32",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "141095",
+                            "locations": {
+                                "length": 8,
+                                "offset": 47726
+                            }
+                        },
+                        {
+                            "text": "Clostridium difficile",
+                            "infons": {
+                                "identifier": "NCBI:txid1496",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:56:33",
+                                "parent_taxonomic_id": "NCBI:txid1870884"
+                            },
+                            "id": "141096",
+                            "locations": {
+                                "length": 21,
+                                "offset": 47873
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 49482,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Our results on automated experimental design strategies have implications for how future longitudinal studies of the microbiota should be designed. An automated cross-subject design strategy generally performed comparably to or better than a sequential design strategy. A cross-subject design strategy uses all data from one subject to predict a future experimental design for a second subject. In contrast, a sequential design strategy uses limited samples from one subject to predict a future experimental design for the same subject. In the past, when the costs of experimentally interrogating samples were high, strategies using automated design were advocated in which samples would be over-collected, frozen, and then sequential design methods would be used to select the next samples to interrogate [24]. Our findings suggest that, in an era of plummeting sequencing costs, automated experimental designs based on pilot studies with small cohorts may prove more effective, particularly for clinical trials in which sample collection costs and logistics can be the limiting factors. However, confirmation of this hypothesis will require larger numbers of subjects and more detailed information about the heterogeneity of cohorts, with respect to factors such as demographics and environmental exposures. Additionally, we used a general-purpose, information theoretic utility function as a basis for selecting optimal experimental designs. This utility function has proven useful in many prior studies (see e.g., [46]), and performed well in our analyses. However, our framework for experimental design could readily be extended, by using utility functions that explicitly include financial or other costs involved in performing experiments.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51228,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Analysis of host microbial ecosystems solely by 16S phylotyping has inherent limitations. Sequencing based methods suffer from various biases, due to factors such as the DNA extraction method and sequencing platform utilized [62]. Additionally, from 16S phylotyping data, it is only possible to infer abundances of taxa relative to other members of the microbial ecosystem detected with sequencing, and not the actual biomasses of individual taxa relative to the input mass of material analyzed. Thus, from our relaxation time analysis, one cannot infer the time required for taxa to equilibrate in terms of their absolute biomasses in vivo. Nonetheless, many studies have shown that relative abundances of organisms serve as important ecological indicators [2]. Relative abundances reflect differential abilities of organisms to compete for and effectively use limited resources, and thus provide insights into the roles of sub-communities within larger host ecosystems. However, the most profound limitation to 16S phylotyping data is that it is only useful for identifying which bacteria are present, not what they are doing. Ultimately, targeted or high-throughput functional studies [63] are essential for following up hypotheses generated based on 16S phylotyping.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:57:03",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "141097",
+                            "locations": {
+                                "length": 8,
+                                "offset": 52310
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 52498,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "MC-TIMME can be extended with alternate models of dynamics for analyzing other time-series datasets. The key components of the model, including the infinite mixture model for prototype signatures and the noise model for counts data, employ general-purpose inference techniques that would not need to be modified to accommodate different models of dynamics. However, the Reversible Jump MCMC techniques we used for inference of intra-signature dimensionality changes require model-specific moves; in future work, more general techniques such as sparse priors [64], [65]could be employed for inference of this portion of the model. For the experimental system we modeled, with defined antibiotic administrations, we assumed that perturbations to the microbiota start at known time-points. This model of dynamics could be extended for analyzing observational studies, in which naturally occurring perturbations may occur, by adding latent variables that automatically determine switch-points in dynamics. Another direction for extension would be building more elaborate relaxation time models. We used a relaxation time model based on ordinary differential equations, which assumes instantaneous transitions to different dynamic regimes and monotonic exponential decay to equilibrium levels. A more detailed model could allow smooth transitions between regimes, and richer kinetics of decay to equilibrium, to capture more subtle or chronic responses to perturbations. Additionally, more complex temporal correlations could be captured using a stochastic differential equation model such as the Ornstein-Uhlenbeck process [66]. Finally, longitudinal covariates, such as subject diet, could be added to the model of dynamics to capture exogenous factors that may affect the microbiota. Such extensions to MC-TIMME will enable increasingly sophisticated longitudinal studies, to expand our knowledge of the role of the microbiota in human health or disease.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54450,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nModel of dynamics for prototype signatures. An example of a prototype signature (solid blue line) is depicted. The model of dynamics for each prototype signature is a function continuous in both time and values, which is used to parameterize the mean of the negative binomial distribution (NBD). The function is defined piece-wise on 5 intervals: (A) pre-antibiotic exposure, (B) first antibiotic pulse, (C) first post-antibiotic exposure, (D) second antibiotic pulse, and (E) second post-antibiotic exposure. The function is constant on intervals A, B and D. On intervals C and E, the function follows an exponential relaxation process with initial value X, equilibrium value \u03bc, and relaxation time constant \u03bb; an equation for the corresponding relaxation process is shown above intervals C and E. Equilibrium levels for each interval are depicted at the right of the figure.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55358,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(TIF)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55363,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S2",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nRepresentative individual signatures of human gut commensals perturbed by antibiotic pulses. Panels (A\u2013F) depict normalized individual signatures for reference operational taxonomic units (refOTUs) from a single human subject. The vertical axis represents sequencing counts per 10,000 total reads normalized across experiments. The horizontal axis represents time in days since the start of the experiment. Vertical blue lines depict the two windows of antibiotic exposure (56 to 60 and 238 to 242 days). Dashed red lines depict median inferred individual signatures, and shaded red areas depict 95% credible intervals. Each refOTU is labeled with its number from the original dataset and its taxonomic assignment at the family and genus levels. The symbol \u03bbc denotes the inferred median relaxation time constant on the first post-antibiotic interval, and \u03bbe denotes the corresponding relaxation time constant on the second post-antibiotic interval. The symbols \u03bca, \u03bcc, and \u03bce denote the equilibrium levels on pre- and first and second post-antibiotic intervals. The five probabilities shown indicate the probability that: 1) the relaxation times on both post-antibiotic intervals are equal, and 2\u20135) the three equilibrium levels on the pre- and first and second post-antibiotic intervals have a particular pattern.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56688,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S3",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nPredictive performance of the experimental design algorithm using different design strategies. Predictive performance was evaluated on held-out time-points, with accuracy assessed using root mean square error (RMSE). (A) The sequential design strategy used data for all reference operational taxonomic units (refOTUs) observed at a subset of time-points in a subject, to estimate additional time-points to sample in the same subject. (B) The cross-subject design strategy used all observed data from refOTUs in one subject, and estimated time-points to sample in a different subject. A dispersed design strategy was used as a baseline for comparison. The dispersed design did not use the experimental design algorithm, and chose time-points to sample that were as evenly spaced on the study interval as possible.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 57510,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Protocol S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nDetailed methods.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 57540,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Protocol S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(PDF)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 57545,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "We would like to thank Neil Herring for critical reading of the manuscript and Wayne Lencer for helpful discussions.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 57676,
+                    "infons": {
+                        "title": "Overview of DNA sequencing strategies",
+                        "journal": "Curr Protoc Mol Biol Chapter",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Shendure J, Porreca GJ, Church GM, Gardner AF, Hendrickson CL, et al. (2011) Overview of DNA sequencing strategies. Curr Protoc Mol Biol Chapter7: Unit 7.1. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 57871,
+                    "infons": {
+                        "title": "Microbial community profiling for human microbiome projects: Tools, techniques, and challenges",
+                        "journal": "Genome Res",
+                        "volume": "19",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Hamady M, Knight R (2009) Microbial community profiling for human microbiome projects: Tools, techniques, and challenges. Genome Res19: 1141\u20131152. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 58065,
+                    "infons": {
+                        "title": "Moving pictures of the human microbiome",
+                        "journal": "Genome Biol",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Caporaso JG, Lauber CL, Costello EK, Berg-Lyons D, Gonzalez A, et al. (2011) Moving pictures of the human microbiome. Genome Biol12: R50. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 58250,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Lane DJ (1991) 16S/23S rRNA sequencing. In: Nucleic acid techniques in bacterial systematics. Stackebrandt E, Goodfellow M, editors. New York: John Wiley and Sons Ltd. 115\u2013147. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 58446,
+                    "infons": {
+                        "title": "Enterotypes of the human gut microbiome",
+                        "journal": "Nature",
+                        "volume": "473",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Arumugam M, Raes J, Pelletier E, Le Paslier D, Yamada T, et al. (2011) Enterotypes of the human gut microbiome. Nature473: 174\u2013180. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 58625,
+                    "infons": {
+                        "title": "Succession of microbial consortia in the developing infant gut microbiome",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "108",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Koenig JE, Spor A, Scalfone N, Fricker AD, Stombaugh J, et al. (2011) Succession of microbial consortia in the developing infant gut microbiome. Proc Natl Acad Sci U S A108: 4578\u20134585. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 58857,
+                    "infons": {
+                        "title": "A human gut microbial gene catalogue established by metagenomic sequencing",
+                        "journal": "Nature",
+                        "volume": "464",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Qin J, Li R, Raes J, Arumugam M, Burgdorf KS, et al. (2010) A human gut microbial gene catalogue established by metagenomic sequencing. Nature464: 59\u201365. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 59058,
+                    "infons": {
+                        "title": "A core gut microbiome in obese and lean twins",
+                        "journal": "Nature",
+                        "volume": "457",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Turnbaugh PJ, Hamady M, Yatsunenko T, Cantarel BL, Duncan A, et al. (2009) A core gut microbiome in obese and lean twins. Nature457: 480\u2013484. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 59247,
+                    "infons": {
+                        "title": "Reduced diversity of faecalmicrobiota in Crohn's disease revealed by a metagenomic approach",
+                        "journal": "Gut",
+                        "volume": "55",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Manichanh C, Rigottier-Gois L, Bonnaud E, Gloux K, Pelletier E, et al. (2006) Reduced diversity of faecalmicrobiota in Crohn's disease revealed by a metagenomic approach. Gut55: 205\u2013211. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 59481,
+                    "infons": {
+                        "title": "Proinflammatory T-cell responses to gut microbiotapromote experimental autoimmune encephalomyelitis",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "108",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Lee YK, Menezes JS, Umesaki Y, Mazmanian SK (2010) Proinflammatory T-cell responses to gut microbiotapromote experimental autoimmune encephalomyelitis. Proc Natl Acad Sci U S A108: 4615\u20134622. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 59721,
+                    "infons": {
+                        "title": "Vaginal microbiome of reproductive-age women",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "108",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Ravel J, Gajer P, Abdo Z, Schneider GM, Koenig SSK, et al. (2010) Vaginal microbiome of reproductive-age women. Proc Natl Acad Sci U S A108: 4680\u20134687. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 59921,
+                    "infons": {
+                        "title": "Incomplete recovery and individualized responses of the human distal gut microbiota to repeated antibiotic perturbation",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "108",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Dethlefsen L, Relman D (2010) Incomplete recovery and individualized responses of the human distal gut microbiota to repeated antibiotic perturbation. Proc Natl Acad Sci U S A108: 4554\u20134561. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 60160,
+                    "infons": {
+                        "title": "The Pervasive Effects of an Antibiotic on the Human Gut Microbiota, as Revealed by Deep 16S rRNA Sequencing",
+                        "journal": "PLoS Genet",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Dethlefsen L, Huse S, Sogin ML, Relman DA (2008) The Pervasive Effects of an Antibiotic on the Human Gut Microbiota, as Revealed by Deep 16S rRNA Sequencing. PLoS Genet6: e280. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 60385,
+                    "infons": {
+                        "journal": "The Mathematical Theory of Communication",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Weaver W, Shannon C (1963) The Mathematical Theory of Communication. Illinois: University of Illinois Press; 144. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 60519,
+                    "infons": {
+                        "title": "Fast UniFrac: facilitating high-throughput phylogenetic analyses of microbial communities including analysis of pyrosequencing and PhyloChip data",
+                        "journal": "ISME J",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Hamady M, Lozupone C, Knight R (2010) Fast UniFrac: facilitating high-throughput phylogenetic analyses of microbial communities including analysis of pyrosequencing and PhyloChip data. ISME J4: 17\u201327. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 60768,
+                    "infons": {
+                        "title": "An ordination of upland forest communities of southern Wisconsin",
+                        "journal": "Ecol Monogr",
+                        "volume": "27",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Bray J, Curtis J (1957) An ordination of upland forest communities of southern Wisconsin. Ecol Monogr27: 325\u2013349. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 60902,
+                    "infons": {
+                        "journal": "Measuring Biological Diversity",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Magurran A (2004) Measuring Biological Diversity. New Jersey: Wiley-Blackwell; 256. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 61006,
+                    "infons": {
+                        "title": "Continuous Representations of Time Series Gene Expression Data",
+                        "journal": "J Comput Biol",
+                        "volume": "3\u20134",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Bar-Joseph Z, Gerber G, Jaakkola TS, Gifford DK, Simon I (2003) Continuous Representations of Time Series Gene Expression Data. J Comput Biol3\u20134: 341\u2013356. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 61190,
+                    "infons": {
+                        "title": "Comparing the continuous representation of time-series expression profiles to identify differentially expressed genes",
+                        "journal": "Proc Natl Acad Sci U S A",
+                        "volume": "100",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Bar-Joseph Z, Gerber G, Simon I, Gifford DK, Jaakkola TS (2003) Comparing the continuous representation of time-series expression profiles to identify differentially expressed genes. Proc Natl Acad Sci U S A100: 10146\u201310151. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 61463,
+                    "infons": {
+                        "title": "Bayesian functional data clustering for temporal microarray data",
+                        "journal": "Int J Plant Genomics",
+                        "volume": "2008",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Ma P, Zhong W, Feng Y, Liu JS (2008) Bayesian functional data clustering for temporal microarray data. Int J Plant Genomics2008: 231897. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 61648,
+                    "infons": {
+                        "title": "A data-driven clustering method for time course gene expression data",
+                        "journal": "Nucleic Acids Res",
+                        "volume": "34",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Ma P, Castillo-Davis C, Zhong W, JS (2006) A data-driven clustering method for time course gene expression data. Nucleic Acids Res34: 1261\u20131269. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 61841,
+                    "infons": {
+                        "title": "Automated discovery of functional generality of human gene expression programs",
+                        "journal": "PLoS Comput Biol",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Gerber GK, Dowell RD, Jaakkola TS, Gifford DK (2007) Automated discovery of functional generality of human gene expression programs. PLoS Comput Biol3: e148. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 62047,
+                    "infons": {
+                        "title": "Bayesian infinite mixture model based clustering of gene expression profiles",
+                        "journal": "Bioinformatics",
+                        "volume": "18",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Medvedovic M, Sivaganesan S (2002) Bayesian infinite mixture model based clustering of gene expression profiles. Bioinformatics18: 1194\u20131206. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 62218,
+                    "infons": {
+                        "title": "Active learning for sampling in time-series experiments with application to gene expression analysis",
+                        "journal": "ICML '05 Proceedings of the 22nd international conference on Machine learning",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Singh R, Palmer N, Gifford D, Berger B, Bar-Joseph Z (2005) Active learning for sampling in time-series experiments with application to gene expression analysis. In: ICML '05 Proceedings of the 22nd international conference on Machine learning. De Raedt L, Wrobels S, editors. New York: ACM; 832\u2013839. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 62539,
+                    "infons": {
+                        "journal": "Negative Binomial Regression. 2nd ed",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Hilbe J (2011) Negative Binomial Regression. 2nd ed. Cambridge: Cambridge University Press; 576. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 62656,
+                    "infons": {
+                        "title": "Do not log-transform count data",
+                        "journal": "Methods Ecol Evol",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. O'Hara R, Kotze D (2010) Do not log-transform count data. Methods Ecol Evol1: 118\u2013122. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 62763,
+                    "infons": {
+                        "title": "Generalized linear mixed models: a practical guide for ecology and evolution",
+                        "journal": "Trends Ecol Evol (Amst.)",
+                        "volume": "24",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Bolker BM, Brooks ME, Clark CJ, Geange SW, Poulsen JR, et al. (2009) Generalized linear mixed models: a practical guide for ecology and evolution. Trends Ecol Evol (Amst.)24: 127\u2013135. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 62976,
+                    "infons": {
+                        "title": "Differential expression analysis for sequence count data",
+                        "journal": "Genome Biol",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Anders S, Huber W (2010) Differential expression analysis for sequence count data. Genome Biol11: R106. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 63128,
+                    "infons": {
+                        "title": "edgeR: a Bioconductor package for differential expression analysis of digital gene expression data",
+                        "journal": "Bioinformatics",
+                        "volume": "26",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Robinson MD, McCarthy DJ, Smyth GK (2010) edgeR: a Bioconductor package for differential expression analysis of digital gene expression data. Bioinformatics26: 139\u2013140. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 63345,
+                    "infons": {
+                        "title": "The NBP Negative Binomial Model for Assessing Differential Gene Expression from RNA-Seq",
+                        "journal": "Stat Appl Genet Mol Biol",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Di Y, Schafer DW, Cumbie JS, Chang JH (2011) The NBP Negative Binomial Model for Assessing Differential Gene Expression from RNA-Seq. Stat Appl Genet Mol Biol10: 24. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 63531,
+                    "infons": {
+                        "title": "Dirichlet Multinomial Mixtures: Generative Models for Microbial Metagenomics",
+                        "journal": "PLoS ONE",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Holmes I, Harris K, Quince C (2012) Dirichlet Multinomial Mixtures: Generative Models for Microbial Metagenomics. PLoS ONE7: e30126. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 63712,
+                    "infons": {
+                        "title": "Prolonged impact of antibiotics on intestinal microbial ecology and susceptibility to enteric Salmonella infection",
+                        "journal": "Infect Immun",
+                        "volume": "77",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Croswell A, Amir E, Teggatz P, Barman M, Salzman NH (2009) Prolonged impact of antibiotics on intestinal microbial ecology and susceptibility to enteric Salmonella infection. Infect Immun77: 2741\u20132753. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Salmonella",
+                            "infons": {
+                                "identifier": "NCBI:txid590",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:58:27",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "141098",
+                            "locations": {
+                                "length": 10,
+                                "offset": 63869
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 63962,
+                    "infons": {
+                        "title": "Early life antibiotic-driven changes in microbiota enhance susceptibility to allergic asthma",
+                        "journal": "EMBO Rep",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Russell SL, Gold MJ, Hartmann M, Willing BP, Thorson L, et al. (2012) Early life antibiotic-driven changes in microbiota enhance susceptibility to allergic asthma. EMBO Rep. 1\u20138. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 64189,
+                    "infons": {
+                        "title": "Maternal intestinal flora and wheeze in early childhood",
+                        "journal": "Clin Exp Allergy",
+                        "volume": "42",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Lange NE, Celed\u00f3n JC, Forno E, Ly NP, Onderdonk A, et al. (2011) Maternal intestinal flora and wheeze in early childhood. Clin Exp Allergy42: 901\u2013908. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 64388,
+                    "infons": {
+                        "title": "Changes in Gut Microbiota Control Metabolic Endotoxemia-Induced Inflammation in High-Fat Diet-Induced Obesity and Diabetes in Mice",
+                        "journal": "Diabetes",
+                        "volume": "57",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Cani P, Bibiloni R, Knauf C, Waget A, Neyrinck A, et al. (2008) Changes in Gut Microbiota Control Metabolic Endotoxemia-Induced Inflammation in High-Fat Diet-Induced Obesity and Diabetes in Mice. Diabetes57: 1470\u20131481. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 64636,
+                    "infons": {
+                        "title": "Ciprofloxacin, a quinolone carboxylic acid compound active against aerobic and anaerobic bacteria",
+                        "journal": "Antimicrob Agents Chemother",
+                        "volume": "25",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "36. Chin N, Neu H (1984) Ciprofloxacin, a quinolone carboxylic acid compound active against aerobic and anaerobic bacteria. Antimicrob Agents Chemother25: 319\u2013326. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:58:33",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "141099",
+                            "locations": {
+                                "length": 8,
+                                "offset": 64750
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 64844,
+                    "infons": {
+                        "title": "Comparative activity of ciprofloxacin, ofloxacin, sparfloxacin, temafloxacin, CI-960, CI-990, and WIN 57273 against anaerobic bacteria",
+                        "journal": "Antimicrob Agents Chemother",
+                        "volume": "36",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "37. Goldstein E, Citron D (1992) Comparative activity of ciprofloxacin, ofloxacin, sparfloxacin, temafloxacin, CI-960, CI-990, and WIN 57273 against anaerobic bacteria. Antimicrob Agents Chemother36: 1158\u20131162. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:58:35",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "141100",
+                            "locations": {
+                                "length": 8,
+                                "offset": 65003
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 65099,
+                    "infons": {
+                        "title": "Comparison of the antibacterial activities of the quinolones BAY 12-8039, gatifloxacin (AM 1155), trovafloxacin, clinafloxacin, levofloxacin and ciprofloxacin",
+                        "journal": "Antimicrob Agents Chemother",
+                        "volume": "40",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "38. Baurenfeind A (1997) Comparison of the antibacterial activities of the quinolones BAY 12-8039, gatifloxacin (AM 1155), trovafloxacin, clinafloxacin, levofloxacin and ciprofloxacin. Antimicrob Agents Chemother40: 639\u2013651. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 65349,
+                    "infons": {
+                        "title": "The mode of action of quinolones: The paradox in activity of low and high concentrations and activity in the anaerobic environment",
+                        "journal": "Eur J ClinMicrobiol Infect Dis",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "39. Lewin C, Morrissey I, Smith J (1991) The mode of action of quinolones: The paradox in activity of low and high concentrations and activity in the anaerobic environment. Eur J ClinMicrobiol Infect Dis10: 240\u2013248. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 65590,
+                    "infons": {
+                        "title": "Accumulation of garenoxacin by Bacteroidesfragilis compared with that of five fluoroquinolones",
+                        "journal": "J Antimicrob Chemother",
+                        "volume": "52",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "40. Ricci V, Piddock L (2003) Accumulation of garenoxacin by Bacteroidesfragilis compared with that of five fluoroquinolones. J Antimicrob Chemother52: 605\u2013609. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 65776,
+                    "infons": {
+                        "title": "SILVA: a comprehensive online resource for quality checked and aligned ribosomal RNA sequence data compatible with ARB",
+                        "journal": "Nucleic Acids Res",
+                        "volume": "35",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "41. Pruesse E, Quast C, Knittel K, Fuchs BM, Ludwig W, et al. (2007) SILVA: a comprehensive online resource for quality checked and aligned ribosomal RNA sequence data compatible with ARB. Nucleic Acids Res35: 7188\u20137196. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 66041,
+                    "infons": {
+                        "title": "Search and clustering orders of magnitude faster than BLAST",
+                        "journal": "Bioinformatics",
+                        "volume": "26",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "42. Edgar RC (2010) Search and clustering orders of magnitude faster than BLAST. Bioinformatics26: 2460\u20132461. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 66176,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "43. Rasmussen C (2000) The Infinite Gaussian Mixture Model. In: Advances in Neural Information Processing Systems 13. Leen TK, Dietterich G, Tresp V, editors. Cambridge: The MIT Press. 554\u2013560. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 66386,
+                    "infons": {
+                        "journal": "Bayesian Data Analysis",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "44. Gelman A, Carlin J, Stern H, Rubin D (2004) Bayesian Data Analysis. Florida: Chapman & Hall/CRC; 696. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 66508,
+                    "infons": {
+                        "title": "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing",
+                        "journal": "J R Stat Soc Series B Stat Methodol",
+                        "volume": "57",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "45. Benjamini Y, Hochberg Y (1995) Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing. J R Stat Soc Series B Stat Methodol57: 289\u2013300. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 66700,
+                    "infons": {
+                        "title": "Bayesian Experimental Design: A Review",
+                        "journal": "Stat Sci",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "46. Chaloner K, Verdinelli I (1995) Bayesian Experimental Design: A Review. Stat Sci3: 273\u2013304. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 66812,
+                    "infons": {
+                        "title": "Bayesian Experimental Design and Shannon Information",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "47. Sebastiani P, Wynn HP (1997) Bayesian Experimental Design and Shannon Information. In: Proceedings of the Section on Bayesian Statistical Science Vol. 44. Alexandria: American Statistical Association 176\u2013181. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 67041,
+                    "infons": {
+                        "title": "On a measure of the information provided by an experiment",
+                        "journal": "Ann Math Statist",
+                        "volume": "27",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "48. Lindley D (1956) On a measure of the information provided by an experiment. Ann Math Statist27: 986\u20131005. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 67167,
+                    "infons": {
+                        "title": "Optimum experimental designs for properties of a compartmental model",
+                        "journal": "Biometrics",
+                        "volume": "49",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "49. Atkinson A, Chaloner K, Herzberg A, Juritz J (1993) Optimum experimental designs for properties of a compartmental model. Biometrics49: 325\u2013337. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 67341,
+                    "infons": {
+                        "title": "Sequential Experimental Designs for Generalized Linear Models",
+                        "journal": "J Am Stat Assoc",
+                        "volume": "103",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "50. Ror HAD, Teinberg DMS (2008) Sequential Experimental Designs for Generalized Linear Models. J Am Stat Assoc103: 288\u2013298. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 67482,
+                    "infons": {
+                        "title": "Bacteroides: the good, the bad, and the nitty-gritty",
+                        "journal": "Clin Microbiol Rev",
+                        "volume": "20",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "51. Wexler HM (2007) Bacteroides: the good, the bad, and the nitty-gritty. Clin Microbiol Rev20: 593\u2013621. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 67632,
+                    "infons": {
+                        "title": "Antimicrobial resistance in Bacteroides",
+                        "journal": "Clin Infect Dis",
+                        "volume": "16 Suppl 4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "52. Rasmussen B, Bush K, Tally F (1993) Antimicrobial resistance in Bacteroides. Clin Infect Dis16 Suppl 4: S390\u2013S400. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:58:54",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "141101",
+                            "locations": {
+                                "length": 11,
+                                "offset": 67700
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 67776,
+                    "infons": {
+                        "title": "Human intestinal bacteria as reservoirs for antibiotic resistance genes",
+                        "journal": "Trends Microbiol",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "53. Salyers A, Gupta A, Wang Y (2004) Human intestinal bacteria as reservoirs for antibiotic resistance genes. Trends Microbiol12: 412\u2013416. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:58:55",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "141102",
+                            "locations": {
+                                "length": 8,
+                                "offset": 67831
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 67941,
+                    "infons": {
+                        "title": "Clindamycin-induced enrichment and long-term persistence of resistant Bacteroides spp. and resistance genes",
+                        "journal": "J Antimicrob Chemother",
+                        "volume": "58",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "54. L\u00f6fmark S, Jernberg C, Jansson JK, Edlund C (2006) Clindamycin-induced enrichment and long-term persistence of resistant Bacteroides spp. and resistance genes. J Antimicrob Chemother58: 1160\u20131167. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteroides spp.",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:58:57",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "141103",
+                            "locations": {
+                                "length": 16,
+                                "offset": 68066
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 68167,
+                    "infons": {
+                        "title": "Dissecting the in vivo metabolic potential of two human gut acetogens",
+                        "journal": "J Biol Chem",
+                        "volume": "285",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "55. Rey FE, Faith JJ, Bain J, Muehlbauer MJ, Stevens RD, et al. (2010) Dissecting the in vivo metabolic potential of two human gut acetogens. J Biol Chem285: 22082\u201322090. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 68382,
+                    "infons": {
+                        "title": "Diversity, metabolism and microbial ecology of butyrate-producing bacteria from the human large intestine",
+                        "journal": "FEMS Microbiol Lett",
+                        "volume": "294",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "56. Louis P, Flint HJ (2009) Diversity, metabolism and microbial ecology of butyrate-producing bacteria from the human large intestine. FEMS Microbiol Lett294: 1\u20138. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:59:00",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "141104",
+                            "locations": {
+                                "length": 8,
+                                "offset": 68477
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 68572,
+                    "infons": {
+                        "title": "Acetate utilization and butyryl coenzyme A (CoA): acetate-CoA transferase in butyrate-producing bacteria from the human large intestine",
+                        "journal": "Appl Environ Microbiol",
+                        "volume": "68",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "57. Duncan S, Barcenilla A, Stewart C, Pryde S, Flint H (2002) Acetate utilization and butyryl coenzyme A (CoA): acetate-CoA transferase in butyrate-producing bacteria from the human large intestine. Appl Environ Microbiol68: 5186\u20135190. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:59:01",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "141105",
+                            "locations": {
+                                "length": 8,
+                                "offset": 68731
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 68853,
+                    "infons": {
+                        "title": "The microbiome and butyrate regulate energy metabolism and autophagy in the mammalian colon",
+                        "journal": "Cell Metab",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "58. Donohoe DR, Garge N, Zhang X, Sun W, O'Connell TM, et al. (2011) The microbiome and butyrate regulate energy metabolism and autophagy in the mammalian colon. Cell Metab13: 517\u2013526. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 69082,
+                    "infons": {
+                        "title": "Phylotypes related to Ruminococcusbromii are abundant in the large bowel of humans and increase in response to a diet high in resistant starch",
+                        "journal": "FEMS Microbiol Ecol",
+                        "volume": "66",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "59. Abell GCJ, Cooke CM, Bennett CN, Conlon MA, McOrist AL (2008) Phylotypes related to Ruminococcusbromii are abundant in the large bowel of humans and increase in response to a diet high in resistant starch. FEMS Microbiol Ecol66: 505\u2013515. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 69349,
+                    "infons": {
+                        "title": "Diversity of the autochthonous colonic microbiota",
+                        "journal": "Gut Microbes",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "60. Nava GM, Stappenbeck TS (2011) Diversity of the autochthonous colonic microbiota. Gut Microbes2: 99\u2013104. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 69502,
+                    "infons": {
+                        "title": "Clostridium difficile \u2014 More Difficult Than Ever",
+                        "journal": "N Engl J Med",
+                        "volume": "359",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "61. Kelly C, LaMont J (2008) Clostridium difficile \u2014 More Difficult Than Ever. N Engl J Med359: 1932\u20131940. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Clostridium difficile",
+                            "infons": {
+                                "identifier": "NCBI:txid1496",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-29 23:59:07",
+                                "parent_taxonomic_id": "NCBI:txid1870884"
+                            },
+                            "id": "141106",
+                            "locations": {
+                                "length": 21,
+                                "offset": 69531
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 69634,
+                    "infons": {
+                        "title": "Metagenomic sequencing of an in vitro-simulated microbial community",
+                        "journal": "PloS One",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "62. Morgan JL, Darling AE, Eisen JA (2010) Metagenomic sequencing of an in vitro-simulated microbial community. PloS One5: e10209. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 69809,
+                    "infons": {
+                        "title": "Functional characterization of the antibiotic resistance reservoir in the human microflora",
+                        "journal": "Science",
+                        "volume": "325",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "63. Sommer MOA, Dantas G, Church GM (2009) Functional characterization of the antibiotic resistance reservoir in the human microflora. Science325: 1128\u20131131. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 70011,
+                    "infons": {
+                        "title": "The Bayesian Lasso",
+                        "journal": "J Am Stat Assoc",
+                        "volume": "103",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "64. Park T, Casella G (2008) The Bayesian Lasso. J Am Stat Assoc103: 681\u2013686. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 70105,
+                    "infons": {
+                        "title": "Bayesian Nonparametric Inference of Switching Dynamic Linear Models",
+                        "journal": "IEEE Trans Signal Process",
+                        "volume": "59",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "65. Fox E, Sudderth E, Jordan M, Willsky A (2011) Bayesian Nonparametric Inference of Switching Dynamic Linear Models. IEEE Trans Signal Process59: 1569\u20131585. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 70280,
+                    "infons": {
+                        "title": "On the theory of Brownian Motion",
+                        "journal": "Phys Rev",
+                        "volume": "36",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "66. Uhlenbeck G, Ornstein L (1930) On the theory of Brownian Motion. Phys Rev36: 823\u2013841. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

@@ -1,0 +1,1060 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC3971603",
+            "inputfile": "../microbiome_corpus_HTML\\PMC3971603.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "mPUMA: a computational approach to microbiota analysis by de novo assembly of operational taxonomic units based on protein-coding barcode sequences",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 147,
+                    "infons": {
+                        "section_title_1": "keywords",
+                        "iao_name_1": "keywords section",
+                        "iao_id_1": "IAO:0000630"
+                    },
+                    "text": "Operational taxonomic unit, Assembly, Automated sequence analysis pipeline, 60 kDa chaperonin, Cpn60, Barcode, Microbial profiling, Microbiota, Microbiota analysis",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 318,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Background",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Formation of operational taxonomic units (OTU) is a common approach to data aggregation in microbial ecology studies based on amplification and sequencing of individual gene targets. The de novo assembly of OTU sequences has been recently demonstrated as an alternative to widely used clustering methods, providing robust information from experimental data alone, without any reliance on an external reference database.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 755,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Results",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Here we introduce mPUMA (microbial Profiling Using Metagenomic Assembly, http://mpuma.sourceforge.net), a software package for identification and analysis of protein-coding barcode sequence data. It was developed originally for Cpn60 universal target sequences (also known as GroEL or Hsp60). Using an unattended process that is independent of external reference sequences, mPUMA forms OTUs by DNA sequence assembly and is capable of tracking OTU abundance. mPUMA processes microbial profiles both in terms of the direct DNA sequence as well as in the translated amino acid sequence for protein coding barcodes. By forming OTUs and calculating abundance through an assembly approach, mPUMA is capable of generating inputs for several popular microbiota analysis tools. Using SFF data from sequencing of a synthetic community of Cpn60 sequences derived from the human vaginal microbiome, we demonstrate that mPUMA can faithfully reconstruct all expected OTU sequences and produce compositional profiles consistent with actual community structure.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1807,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Conclusions",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "mPUMA enables analysis of microbial communities while empowering the discovery of novel organisms through OTU assembly.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1937,
+                    "infons": {
+                        "section_title_1": "Background",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "A common approach to the profiling of complex microbial communities is the amplification and sequencing of \u2018universal\u2019 genes, such as Cpn60 (also known as GroEL or Hsp60) or 16S rRNA, as DNA barcodes for the genomes in which they reside. Barcodes are defined by the International Barcode of Life Project as short, phylogenetically informative sequences from standardized regions of the genome that can be used for species identification and discovery [1], and preferred barcodes for microbes including fungi [2] and bacteria [3] have been proposed recently. In microbial community studies, broad-range \u2018universal\u2019 PCR primers are used to amplify regions of the target genes, and amplicon sequences are determined directly using next-generation sequencing methods. These gene-targeted methods arguably fall under the umbrella of 'metagenomics' along with whole genome sequencing approaches, since these are methods based on the analysis of total genomic content of a community of organisms rather than individual isolates [4]. The number of individual sequences generated is typically in the order of 106 and can be much greater. Thus, some form of data aggregation is required to reduce the complexity of the raw sequence data, and facilitate interpretation. Data aggregation is focused on the in silico steps following sequence data acquisition, and not issues that arise from methods of DNA extraction and possible biases in PCR amplification. The key challenge in aggregation is ensuring that the resulting 'profiles' (list of sequences and their abundances) are faithful to the raw sequence data that was aggregated.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "fungi",
+                            "infons": {
+                                "identifier": "NCBI:txid4751",
+                                "type": "fungi_kingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-28 21:33:56",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "5280",
+                            "locations": {
+                                "length": 5,
+                                "offset": 2439
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-28 21:33:56",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "5281",
+                            "locations": {
+                                "length": 8,
+                                "offset": 2453
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 3557,
+                    "infons": {
+                        "section_title_1": "Background",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Currently, the most widely used method for data aggregation is the formation of operational taxonomic units (OTU) with clustering approaches such as those of MOTHUR [5] or UCLUST [6] as implemented within packages such as QIIME [7]. Clustering procedures culminate in the selection of a representative sequence for each OTU, which may be selected from the experimental data according to various rules: longest sequence in the cluster, most abundant sequence in the cluster, or random selection. However, representative sequences selected from the experimental data may not include full-length coverage of the target, depending on its length. This in turn limits information content, and the ability to conduct multiple sequence alignments and phylogenetic analysis for characterization of novel OTU sequences. Alternatively, the closest sequence from a reference database may be used to represent the OTU [5]. A limitation common to all of these approaches is apparent when the community under study contains novel sequences not represented in reference databases. In these cases, novel sequences in the experimental data may be ignored or pooled together as 'unclassified' since they do not closely resemble the reference sequences. The end result is that the aggregated description of the community may not reflect the input sequence data generated in the experiment.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4926,
+                    "infons": {
+                        "section_title_1": "Background",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "We have demonstrated recently that de novo assembly of OTU sequences is an alternative strategy for sequence data aggregation that provides robust information from experimental data alone [3]. In this approach, OTU sequences are consensus sequences derived from the experimental data, without any reliance on an external reference database. This strategy has been used successfully in producing high resolution profiles of a variety of complex microbial communities [8-10] and has led to the resolution of subspecies level diversity within previous established bacterial 'species' [11]. However, until now there has been no computational pipeline available for this work, requiring practitioners to attend to each step of the assembly and post-assembly analysis individually. Here, we introduce mPUMA (microbial profiling using metagenomic assembly), a computational pipeline for the automated assembly and analysis of OTU sequences from protein coding gene sequence data derived from microbial communities.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5933,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "mPUMA workflow",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "mPUMA was written in PERL using BioPerl [12] and is maintained as a sourceforge project (http://mpuma.sourceforge.net/). It was developed originally for assembly of Cpn60 universal target sequences [13,14] since the characteristics of this target make it a preferred sequence barcode for resolution of bacterial taxa [3]. However, mPUMA is applicable to any other suitable molecular barcode. mPUMA assembles OTU from PCR amplicon sequence libraries generated from any number of samples, starting from a set of SFF or Fastq files, and a text file explaining how the files relate to experimental samples. Following assembly, the abundance of each OTU is determined and files for downstream analysis using several common microbial ecology and phylogeny tools are generated. The mPUMA workflow is illustrated in Figure\u00a01.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6771,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Sequence assembly",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Sequence assembly within mPUMA can be performed by two methods: gsAssembler (Roche/454, Branford, CT, USA) in cDNA mode, or Trinity [16]. Abundance per OTU can be calculated by mPUMA from a read-to-OTU map produced in one of two ways (Figure\u00a01A). For gsAssembler assemblies, the internal read tracking of the assembly process can be used as the basis for the read tracking. Alternatively, reference mapping with Bowtie 2 [17] can be used to map each experimental read onto reference OTUs assembled with either gsAssembler or Trinity. Considerations for the optimal assembly and read tracking strategy for any particular project are discussed below. Regardless of the strategy used, the quality of the assembly and read tracking result is assessed in terms of the specificity and sensitivity of each OTU as described previously [3].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7619,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Post-assembly analysis of OTU",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Removal of PCR primer sequences is accomplished with seqclean (http://sourceforge.net/projects/seqclean/files/). Identification and removal of chimeric sequences is performed by two strategies implemented within mPUMA. First, gsAssembler identifies chimeras resulting from the assembly process. Second, the Chaban Chimera Checker (C3) identifies putative chimeras that may be removed from subsequent analyses. In C3 the 5\u2032 and 3\u2032 ends of each OTU (150 bp) are extracted, compared to a reference set of sequences (for example, a non-redundant set of sequences from cpnDB [14]) and evaluated to see if both ends match the same reference sequence in the expected orientations. Putative chimeras are identified as assembled OTU that fail this test. In novel environments where taxa are not well represented in the reference database, it may be appropriate to forego the use of C3 because the novelty of the experimental sequences could lead to an increased false positive rate in chimera identification.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8647,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Post-assembly analysis of OTU",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Non-chimeric OTU are clustered at 100% identity by CD-hit [18] to remove redundant sequences. For protein coding barcode sequences, mPUMA implements BLASTX [19] to identify the correct reading frame for translation of OTU, and then translates the nucleotide OTU to their corresponding peptide OTU sequences. Redundant peptide sequences are also collapsed using CD-hit [18] at 100% identity. mPUMA calculates the abundance of each non-redundant peptide OTU for each library, resulting in a peptide OTU abundance table.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9164,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Post-assembly analysis of OTU",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Nucleotide and peptide OTU and abundance data are formatted for use with additional tools, which are run automatically where appropriate. Prior to generating input files for these applications, mPUMA carries out a down-sampling process where reads are sampled at random to the depth of the smallest library to address the concerns raised by Gihring et al. related to the effects of unequal sampling effort on calculation and comparison of ecological parameters such as richness, diversity and evenness [20]. Abundance files for OTU are used to create input for MOTHUR [5]. Using t-coffee [21] for multiple sequence alignments and FastTree [22], a phylogenetic tree of the OTU is calculated, which can be used in conjunction with abundance data to analyze libraries in Unifrac [23,24]. A na\u00efve Bayesian classifier trained on Cpn60 universal target sequences from cpnDB [14] has been developed using the RDP classifier framework [25]. Classifier results can be loaded into MEGAN [26] for comparison of multiple libraries in a taxonomic context. All of the output files generated by mPUMA for secondary analyses are generated both for the nucleotide and the amino acid OTU sequences.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10344,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Computational platform",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Demonstrations of mPUMA running in an unattended fashion were performed using a previously published dataset [10] that included 711 MB of data in SFF files. Analyses were carried out on a Dell R910 equipped with 128 GB of RAM and 2x Intel Xeon 6-core E7530 processors running CentOS 5.8.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10653,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "To validate the primary function of mPUMA (OTU formation and abundance calculation), we tested its performance in the analysis of sequence data generated by amplification and sequencing of Cpn60 universal target sequences from a synthetic community containing cloned Cpn60 universal target sequences from 20 human vaginal bacteria with pairwise sequence identity values of 60 to 96% [27]. PCR from this template mixture and pyrosequencing of the resulting amplicon library on a Roche GS FLX instrument was performed using established protocols [28], resulting in 9,877 sequence reads from either the 5\u2032 or 3\u2032 end of the target sequence. The SFF data is accessible through the mPUMA sourceforge site (http://mpuma.sourceforge.net/). We verified that all 20 target sequences were represented in the results by using Bowtie 2 to map all reads on to the reference sequences for the synthetic community ('Target' in Figure\u00a02). OTU formation and abundance calculations were performed on the dataset using all three options available within the mPUMA pipeline (gsAssembler OTU assembly/gsAssembler read-to-OTU mapping, gsAssembler OTU assembly/Bowtie 2 read-to-OTU mapping and Trinity OTU assembly/Bowtie 2 read-to-OTU mapping) and the resulting microbial profiles were evaluated for number of OTU generated, number of reads unmapped, amount of total error generated and comparison of the profile to the known 'Target' synthetic community profile (Figure\u00a02).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-28 21:34:57",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "5282",
+                            "locations": {
+                                "length": 8,
+                                "offset": 10975
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 12126,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "gsAssembler was able to reconstruct all 20 expected OTU with minimum length parameter settings of >100 bp (Figure\u00a02). However, despite accurately describing the richness of the sample (20 OTUs), read tracking within gsAssembler failed to place a substantial proportion of data in any OTU. The proportion of sequence reads unmapped increased steadily from 8% to a maximum of 33% as the minimum length parameter was increased from 150 through 350 bp (Figure\u00a02). There are several possible explanations for this unplaced data: the reads could be short or of low quality, or the assembly process may not have completely accounted for the placement of each read to an OTU. In our experience, situations in which a study contains samples with extreme differences in richness can lead to incomplete mapping when utilizing gsAssembler which cannot be resolved using the available command line options (\u2212ig, -it, and -icc). The occurrence of such 'thresholding' problems is recorded in the 454IsotigsLayout.txt files generated by gsAssembler. Given that we confirmed that gsAssembler had correctly resolved all 20 of the expected OTU for this synthetic community, we were left with the possibility that either there was a proportion of the data which was of insufficient quality and/or length to be placed in the OTUs at higher stringencies (that is, greater minimum overlap length requirement) or the placement was incomplete. To determine which of these phenomena were occurring we employed Bowtie 2 [17] as a method to independently assess the read to OTU mapping.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13684,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "When read mapping was performed using Bowtie 2 to place reads onto a gsAssembler assembly, there was a dramatic reduction in the proportion of unmapped data and in total error of the assembly coincident with all 20 members of the synthetic community being resolved (Figure\u00a02). The results of assembly using gsAssembler with a minimum overlap >100 bp followed by read mapping with Bowtie 2 served to construct a microbial profile indistinguishable from the actual profile of the synthetic community at both the nucleotide and peptide levels, with the 20 expected nucleotide OTU and 19 corresponding peptide OTU (peptide sequences for Lactobacillus gasseri and Lactobacillus johnsonii are identical). This result confirmed that the reads were of sufficient length and quality for inclusion, and thus the more likely explanation for the relatively large proportion of data that is not placed by gsAssembler read tracking is that the assembler had failed to completely assign all reads to the OTU assembled (the thresholding problem described above).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Lactobacillus gasseri",
+                            "infons": {
+                                "identifier": "NCBI:txid1596",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-28 21:35:22",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "5283",
+                            "locations": {
+                                "length": 21,
+                                "offset": 14317
+                            }
+                        },
+                        {
+                            "text": "Lactobacillus johnsonii",
+                            "infons": {
+                                "identifier": "NCBI:txid33959",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-28 21:35:22",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "5284",
+                            "locations": {
+                                "length": 23,
+                                "offset": 14343
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 14730,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "gsAssembler uses an Overlap-Layout-Consensus (OLC) strategy for assembly, which is dramatically affected by coverage depth [29]. The dominant alternative approach for assembly is the use of a de Bruijn graph (DBG) to analyze sequence composition in terms of k-mers. The total length of sequence being assembled, independent of coverage depth, governs the size of a de Bruijn graph. Being unaffected by coverage depth is the chief computational advantage of DBG approaches. We explored whether Trinity, a DBG method [16], offers a valid alternative to gsAssembler in cDNA mode for the analysis of microbial barcode data. Within Trinity, the parameter most likely to affect the accuracy of assembly results is k-mer size. We examined all possible k-mer lengths supported by Trinity (k-mer ranging from 10 to 31, inclusive). Bowtie 2 was then used to map the individual reads onto the non-redundant set of OTU formed by Trinity for calculating abundance because the reductive process of distilling sequences to component k-mers eliminates the ability of tracking reads directly within DBG approaches.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15827,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "As can be seen in Figure\u00a02, increasing k-mer length resulted in the formation of more of the expected OTU, reduction of the proportion of unmapped reads and a corresponding reduction in total error of the assembly. However, in no case did Trinity resolve all 20 OTUs from the synthetic community. Trinity assemblies with a k-mer of 30 or 31 were nearly complete, failing only to resolve an OTU for L. johnsonii. This was perhaps not surprising since L. johnsonii and L. gasseri are the two most similar members of the community (96% identical) and have similar abundances, being the 11th and 9th most abundant in this dataset, respectively. The L. johnsonii reads were placed in the L. gasseri OTU when an L. johnsonii OTU was not formed.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "L. johnsonii",
+                            "infons": {
+                                "identifier": "NCBI:txid33959",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-28 21:35:36",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "5285",
+                            "locations": {
+                                "length": 12,
+                                "offset": 16225
+                            }
+                        },
+                        {
+                            "text": "L. johnsonii",
+                            "infons": {
+                                "identifier": "NCBI:txid33959",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-28 21:35:36",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "5286",
+                            "locations": {
+                                "length": 12,
+                                "offset": 16277
+                            }
+                        },
+                        {
+                            "text": "L. gasseri",
+                            "infons": {
+                                "identifier": "NCBI:txid1596",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-28 21:35:37",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "5287",
+                            "locations": {
+                                "length": 10,
+                                "offset": 16294
+                            }
+                        },
+                        {
+                            "text": "L. johnsonii",
+                            "infons": {
+                                "identifier": "NCBI:txid33959",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-28 21:35:38",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "5288",
+                            "locations": {
+                                "length": 12,
+                                "offset": 16472
+                            }
+                        },
+                        {
+                            "text": "L. gasseri",
+                            "infons": {
+                                "identifier": "NCBI:txid1596",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-28 21:35:38",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "5289",
+                            "locations": {
+                                "length": 10,
+                                "offset": 16510
+                            }
+                        },
+                        {
+                            "text": "L. johnsonii",
+                            "infons": {
+                                "identifier": "NCBI:txid33959",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-28 21:35:38",
+                                "parent_taxonomic_id": "NCBI:txid1578"
+                            },
+                            "id": "5290",
+                            "locations": {
+                                "length": 12,
+                                "offset": 16533
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 16565,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Resource usage by mPUMA can vary significantly depending on the size and complexity of the datasets being analyzed. In our experience the use of Trinity over gsAssembler can be necessary for computational constraints (memory and cpu time) when dealing with datasets that are extremely rich or diverse. mPUMA is suitable for the assembly and analysis of OTU from other suitable targets besides Cpn60, such as the gene encoding the universal archaeal type-II chaperone (also known as Thermosome or TCP1 or CCT) [30], and RpoB [31]. Pyrosequencing data from both have been processed through mPUMA, confirming its utility for other protein coding targets. To date, we have applied mPUMA to the analysis of amplicon sequence data from the 454 GS FLX, Titanium and Junior platforms. We encourage the microbial ecology community to investigate the application of mPUMA to other sequence data types and gene targets of interest.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17485,
+                    "infons": {
+                        "section_title_1": "Conclusions",
+                        "iao_name_1": "conclusion section",
+                        "iao_id_1": "IAO:0000615"
+                    },
+                    "text": "The de novo assembly of OTUs from barcode sequence data can be optimized to reduce error and accurately reflect the richness of a microbial community, presenting possible advantages over clustering methods that may mask diversity or inhibit discovery of novel sequences. The mPUMA pipeline was developed to facilitate the use of assembly in microbial ecology studies where both accurate descriptions of richness and calculation of OTU abundance are desired. Based on our examination of a synthetic community, optimal resolution of OTU sequence barcodes and calculation of their abundance can be achieved through use of gsAssembler with a minimum overlap length parameter >100 bp followed by Bowtie 2 read tracking for determining OTU abundance. In cases where computational performance is limiting, Trinity assembly followed by read tracking with Bowtie 2 should produce near-optimal results with only exceptionally similar barcodes remaining unresolved. In choosing the most appropriate strategy for assembly and abundance calculations from among the options available in mPUMA, researchers will need to balance the computational performance of the assembly approach with the precision of OTU formation.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18689,
+                    "infons": {
+                        "section_title_1": "Conclusions",
+                        "iao_name_1": "conclusion section",
+                        "iao_id_1": "IAO:0000615"
+                    },
+                    "text": "The mPUMA software package is available from sourceforge and it is covered by an open-source license (http://mPUMA.sourceforge.net). At present, mPUMA is distributed on its own, but it is possible that in the future it may become incorporated into a Virtual Machine image. Since it is as an open-source platform, mPUMA can be extended by anyone interested in utilizing de novo assembly for the analysis of microbial profiling data.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19120,
+                    "infons": {
+                        "section_title_1": "Availability of supporting data",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "The SFF data used in the validation and demonstration of mPUMA is available through the mPUMA sourceforge site (http://mpuma.sourceforge.net/).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19294,
+                    "infons": {
+                        "section_title_1": "Abbreviations",
+                        "iao_name_1": "abbreviations section",
+                        "iao_id_1": "IAO:0000606"
+                    },
+                    "text": "{}",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19309,
+                    "infons": {
+                        "section_title_1": "Competing interests",
+                        "iao_name_1": "conflict of interest section",
+                        "iao_id_1": "IAO:0000616"
+                    },
+                    "text": "The authors declare that they have no competing interests.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19386,
+                    "infons": {
+                        "section_title_1": "Authors\u2019 contributions",
+                        "iao_name_1": "author contributions section",
+                        "iao_id_1": "IAO:0000323"
+                    },
+                    "text": "MGL designed mPUMA. MGL and KM developed the mPUMA codebase. JEH, BC and SMH contributed to the design and validation of mPUMA, and data analysis. BC designed the C3 chimera checker and generated the Cpn60 amplicon library. MGL and JEH drafted the manuscript and figures. All authors read and approved the final manuscript.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19731,
+                    "infons": {
+                        "section_title_1": "Acknowledgements",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "This work was supported by funding from the Canadian Institutes for Health Research, the Natural Sciences and Engineering Research Council of Canada, and Agriculture and AgriFood Canada. We are grateful to the members of the Hill Lab and the Cpn60 research collaboratorium for their valuable feedback, and contributions to testing mPUMA.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20084,
+                    "infons": {
+                        "journal": "Proc R Soc Lond B Biol Sci. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Hebert PD, Cywinska A, Ball SL, DeWaard JR. Biological identifications through DNA barcodes. Proc R Soc Lond B Biol Sci. 2003;1:313\u2013321. doi: 10.1098/rspb.2002.2218. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20315,
+                    "infons": {
+                        "journal": "Proc Natl Acad Sci USA. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Schoch CL, Seifert KA, Huhndorf S, Robert V, Spouge JL, Levesque CA, Chen W. Nuclear ribosomal internal transcribed spacer (ITS) region as a universal DNA barcode marker for Fungi. Proc Natl Acad Sci USA. 2012;1:6241\u20136246. doi: 10.1073/pnas.1117018109. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Fungi",
+                            "infons": {
+                                "identifier": "NCBI:txid4751",
+                                "type": "fungi_kingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-28 21:36:06",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "5291",
+                            "locations": {
+                                "length": 5,
+                                "offset": 20489
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 20623,
+                    "infons": {
+                        "journal": "PLoS ONE. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Links MG, Dumonceaux TJ, Hemmingsen SM, Hill JE. The chaperonin-60 universal target is a barcode for bacteria that enables de novo assembly of metagenomic sequence data. PLoS ONE. 2012;1:e49755. doi: 10.1371/journal.pone.0049755. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-28 21:36:08",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "5292",
+                            "locations": {
+                                "length": 8,
+                                "offset": 20724
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 20908,
+                    "infons": {
+                        "journal": "Curr Opin Biotechnol. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Schloss PD, Handelsman J. Biotechnological prospects from metagenomics. Curr Opin Biotechnol. 2003;1:303\u2013310. doi: 10.1016/S0958-1669(03)00067-3. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21090,
+                    "infons": {
+                        "journal": "Appl Environ Microbiol. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Schloss PD, Westcott SL, Ryabin T, Hall JR, Hartmann M, Hollister EB, Lesniewski RA, Oakley BB, Parks DH, Robinson CJ, Sahl JW, Stres B, Thallinger GG, Van Horn DJ, Weber CF. Introducing mothur: open-source, platform-independent, community-supported software for describing and comparing microbial communities. Appl Environ Microbiol. 2009;1:7537\u20137541. doi: 10.1128/AEM.01541-09. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21525,
+                    "infons": {
+                        "journal": "Bioinformatics. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Edgar RC. Search and clustering orders of magnitude faster than BLAST. Bioinformatics. 2010;1:2460\u20132461. doi: 10.1093/bioinformatics/btq461. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21702,
+                    "infons": {
+                        "journal": "Nat Methods. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Caporaso JG, Kuczynski J, Stombaugh J, Bittinger K, Bushman FD, Costello EK, Fierer N, Pena AG, Goodrich JK, Gordon JI, Huttley GA, Kelley ST, Knights D, Koenig JE, Ley RE, Lozupone CA, McDonald D, Muegge BD, Pirrung M, Reeder J, Sevinsky JR, Turnbaugh PJ, Walters WA, Widmann J, Yatsunenko T, Zaneveld J, Knight R. QIIME allows analysis of high-throughput community sequencing data. Nat Methods. 2010;1:335\u2013336. doi: 10.1038/nmeth.f.303. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22196,
+                    "infons": {
+                        "journal": "Aquaculture. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Desai AR, Links MG, Collins SA, Mansfield GS, Drew MD, Van Kessel AG, Hill JE. Effects of plant-based diets on the distal gut microbiome of rainbow trout (Oncorhynchus mykiss) Aquaculture. 2012;1:134\u2013142. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22417,
+                    "infons": {
+                        "journal": "Appl Environ Microbiol. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Schellenberg JJ, Links MG, Hill JE, Dumonceaux TJ, Kimani J, Jaoko W, Wachihi C, Mungai JN, Peters GA, Tyler S, Graham M, Severini A, Fowke KR, Ball TB, Plummer FA. Molecular definition of vaginal microbiota in East African commercial sex workers. Appl Environ Microbiol. 2011;1:4066\u20134074. doi: 10.1128/AEM.02943-10. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22789,
+                    "infons": {
+                        "journal": "Microbial Ecol. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Chaban B, Links MG, Hill JE. A molecular enrichment strategy based on cpn60 for detection of Epsilon-Proteobacteria in the dog fecal microbiome. Microbial Ecol. 2012;1:348\u2013357. doi: 10.1007/s00248-011-9931-7. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23034,
+                    "infons": {
+                        "journal": "PLoS ONE. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Paramel Jayaprakash T, Schellenberg JJ, Hill JE. Resolution and characterization of distinct cpn60-based subgroups of Gardnerella vaginalis in the vaginal microbiota. PLoS ONE. 2012;1:e43009. doi: 10.1371/journal.pone.0043009. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Gardnerella vaginalis",
+                            "infons": {
+                                "identifier": "NCBI:txid2702",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-28 21:36:24",
+                                "parent_taxonomic_id": "NCBI:txid2701"
+                            },
+                            "id": "5293",
+                            "locations": {
+                                "length": 21,
+                                "offset": 23152
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 23316,
+                    "infons": {
+                        "journal": "Genome Res. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Stajich JE, Block D, Boulez K, Brenner SE, Chervitz SA, Dagdigian C, Fuellen G, Gilbert JG, Korf I, Lapp H, Lehv\u00e4slaiho H, Matsalla C, Mungall CJ, Osborne BI, Pocock MR, Schattner P, Senger M, Stein LD, Stupka E, Wilkinson MD, Birney E. The Bioperl toolkit: Perl modules for the life sciences. Genome Res. 2002;1:1611\u20131618. doi: 10.1101/gr.361602. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23719,
+                    "infons": {
+                        "journal": "J Clin Microbiol. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Goh SH, Potter S, Wood JO, Hemmingsen SM, Reynolds RP, Chow AW. HSP60 gene sequences as universal targets for microbial species identification: studies with coagulase-negative staphylococci. J Clin Microbiol. 1996;1:818\u2013823. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23988,
+                    "infons": {
+                        "journal": "Genome Res. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Hill JE, Penny SL, Crowell KG, Goh SH, Hemmingsen SM. cpnDB: a chaperonin sequence database. Genome Res. 2004;1:1669\u20131675. doi: 10.1101/gr.2649204. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24191,
+                    "infons": {
+                        "journal": "Appl Environ Microbiol. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Schellenberg J, Links MG, Hill JE, Dumonceaux TJ, Peters GA, Tyler S, Ball B, Severini A, Plummer FA. Pyrosequencing of the chaperonin-60 universal target as a tool for determining microbial community composition. Appl Environ Microbiol. 2009;1:2889\u20132898. doi: 10.1128/AEM.01640-08. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24529,
+                    "infons": {
+                        "journal": "Nat Biotechnol. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Grabherr MG, Haas BJ, Yassour M, Levin JZ, Thompson DA, Amit I, Adiconis X, Fan L, Raychowdhury R, Zeng Q, Chen Z, Mauceli E, Hacohen N, Gnirke A, Rhind N, di Palma F, Birren BW, Nusbaum C, Lindblad-Toh K, Friedman N, Regev A. Full-length transcriptome assembly from RNA-Seq data without a reference genome. Nat Biotechnol. 2011;1:644\u2013652. doi: 10.1038/nbt.1883. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24947,
+                    "infons": {
+                        "journal": "Nat Methods. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Langmead B, Salzberg SL. Fast gapped-read alignment with Bowtie 2. Nat Methods. 2012;1:357\u2013359. doi: 10.1038/nmeth.1923. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25123,
+                    "infons": {
+                        "journal": "Bioinformatics. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Li W, Godzik A. Cd-hit: a fast program for clustering and comparing large sets of protein or nucleotide sequences. Bioinformatics. 2006;1:1658\u20131659. doi: 10.1093/bioinformatics/btl158. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25344,
+                    "infons": {
+                        "journal": "Nucl Acids Res. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Altschul SF, Madden TL, Schaffer AA, Zhang J, Zhang Z, Miller W, Lipman DJ. Gapped BLAST and PSI-BLAST: a new generation of protein database search programs. Nucl Acids Res. 1997;1:3389\u20133402. doi: 10.1093/nar/25.17.3389. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25620,
+                    "infons": {
+                        "journal": "Environ Microbiol. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Gihring TM, Green SJ, Schadt CW. Massively parallel rRNA gene sequencing exacerbates the potential for biased community diversity comparisons due to variable library sizes. Environ Microbiol. 2012;1:285\u2013290. doi: 10.1111/j.1462-2920.2011.02550.x. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25903,
+                    "infons": {
+                        "journal": "J Mol Biol. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Notredame C, Higgins DG, Heringa J. T-Coffee: A novel method for fast and accurate multiple sequence alignment. J Mol Biol. 2000;1:205\u2013217. doi: 10.1006/jmbi.2000.4042. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26108,
+                    "infons": {
+                        "journal": "Mol Microbiol. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Long KS, Poehlsgaard J, Hansen LH, Hobbie SN, Bottger EC, Vester B. Single 23S rRNA mutations at the ribosomal peptidyl transferase centre confer resistance to valnemulin and other antibiotics in Mycobacterium smegmatis by perturbation of the drug binding pocket. Mol Microbiol. 2009;1:1218\u20131227. doi: 10.1111/j.1365-2958.2009.06596.x. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Mycobacterium smegmatis",
+                            "infons": {
+                                "identifier": "NCBI:txid1772",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-28 21:36:46",
+                                "parent_taxonomic_id": "NCBI:txid1866885"
+                            },
+                            "id": "5295",
+                            "locations": {
+                                "length": 23,
+                                "offset": 26304
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26480,
+                    "infons": {
+                        "journal": "ISME J. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Hamady M, Lozupone C, Knight R. Fast UniFrac: facilitating high-throughput phylogenetic analyses of microbial communities including analysis of pyrosequencing and PhyloChip data. ISME J. 2010;1:17\u201327. doi: 10.1038/ismej.2009.97. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26764,
+                    "infons": {
+                        "journal": "Appl Environ Microbiol. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Lozupone C, Knight R. UniFrac: a new phylogenetic method for comparing microbial communities. Appl Environ Microbiol. 2005;1:8228\u20138235. doi: 10.1128/AEM.71.12.8228-8235.2005. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26994,
+                    "infons": {
+                        "journal": "Appl Environ Microbiol. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Wang Q, Garrity GM, Tiedje JM, Cole JR. Naive Bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy. Appl Environ Microbiol. 2007;1:5261\u20135267. doi: 10.1128/AEM.00062-07. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27256,
+                    "infons": {
+                        "journal": "Genome Res. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Huson DH, Auch AF, Qi J, Schuster SC. MEGAN analysis of metagenomic data. Genome Res. 2007;1:377\u2013386. doi: 10.1101/gr.5969107. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27438,
+                    "infons": {
+                        "journal": "J Clin Microbiol. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Dumonceaux TJ, Schellenberg J, Goleski V, Hill JE, Jaoko W, Kimani J, Money D, Ball TB, Plummer FA, Severini A. Multiplex detection of bacteria associated with normal microbiota and with bacterial vaginosis in vaginal swabs using oligonucleotide-coupled fluorescent microspheres. J Clin Microbiol. 2009;1:4067\u20134077. doi: 10.1128/JCM.00112-09. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-28 21:36:54",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "5296",
+                            "locations": {
+                                "length": 8,
+                                "offset": 27573
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 27836,
+                    "infons": {
+                        "journal": "Methods Mol Biol. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Schellenberg J, Links MG, Hill JE, Hemmingsen SM, Peters GA, Dumonceaux TJ. Pyrosequencing of chaperonin-60 (cpn60) amplicons as a means of determining microbial community composition. Methods Mol Biol. 2011;1:143\u2013158. doi: 10.1007/978-1-61779-089-8_10. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28126,
+                    "infons": {
+                        "journal": "Brief Funct Genomics. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Li Z, Chen Y, Mu D, Yuan J, Shi Y, Zhang H, Gan J, Li N, Hu X, Liu B, Yang B, Fan W. Comparison of the two major classes of assembly algorithms: overlap-layout-consensus and de-bruijn-graph. Brief Funct Genomics. 2012;1:25\u201337. doi: 10.1093/bfgp/elr035. [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28415,
+                    "infons": {
+                        "journal": "ISME J. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Chaban B, Hill JE. A \u2018universal\u2019 type II chaperonin PCR detection system for the investigation of Archaea in complex microbial communities. ISME J. 2012;1:430\u2013439. doi: 10.1038/ismej.2011.96. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Archaea",
+                            "infons": {
+                                "identifier": "NCBI:txid2157",
+                                "type": "archaea_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-28 21:37:01",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "5297",
+                            "locations": {
+                                "length": 7,
+                                "offset": 28513
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 28662,
+                    "infons": {
+                        "journal": "PLoS ONE. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Vos M, Quince C, Pijl AS, De Hollander M, Kowalchuk GA. A comparison of rpoB and 16S rRNA as markers in pyrosequencing studies of bacterial diversity. PLoS ONE. 2012;1:e30600. doi: 10.1371/journal.pone.0030600. [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

@@ -1,0 +1,1792 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC4820042",
+            "inputfile": "../microbiome_corpus_HTML\\PMC4820042.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Respiratory microbiota resistance and resilience to pulmonary exacerbation and subsequent antimicrobial intervention",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 116,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Pulmonary symptoms in cystic fibrosis (CF) begin in early life with chronic lung infections and concomitant airway inflammation leading to progressive loss of lung function. Gradual pulmonary function decline is interspersed with periods of acute worsening of respiratory symptoms known as CF pulmonary exacerbations (CFPEs). Cumulatively, CFPEs are associated with more rapid disease progression. In this study multiple sputum samples were collected from adult CF patients over the course of CFPEs to better understand how changes in microbiota are associated with CFPE onset and management. Data were divided into five clinical periods: pre-CFPE baseline, CFPE, antibiotic treatment, recovery, and post-CFPE baseline. Samples were treated with propidium monoazide prior to DNA extraction, to remove the impact of bacterial cell death artefacts following antibiotic treatment, and then characterised by 16S rRNA gene-targeted high-throughput sequencing. Partitioning CF microbiota into core and rare groups revealed compositional resistance to CFPE and resilience to antibiotics interventions. Mixed effects modelling of core microbiota members revealed no significant negative impact on the relative abundance of Pseudomonas aeruginosa across the exacerbation cycle. Our findings have implications for current CFPE management strategies, supporting reassessment of existing antimicrobial treatment regimens, as antimicrobial resistance by pathogens and other members of the microbiota may be significant contributing factors.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:07:24",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524836",
+                            "locations": {
+                                "length": 22,
+                                "offset": 1331
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 1651,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Cystic fibrosis (CF) is a common recessive genetic disorder, primarily of Caucasians, affecting more than 8000 children and adults in the UK and an estimated 100\u2009000 globally (Davies et al., 2014). Although this disorder is multisystemic, the leading cause of morbidity and mortality in an overwhelming majority (ca. 90%) of patients is chronic lung infections and concomitant airway inflammation (Foweraker, 2009). Until a treatment for the disorder can be found, for example, cystic fibrosis transmembrane conductance regulator gene therapy or therapies that improve cystic fibrosis transmembrane conductance regulator function, the best way to continue to raise life expectancy is to improve treatment of the chronic polymicrobial lung infections (LiPuma, 2014). Implicit within the aim of improving and directing treatment is to better understand the nature of those chronic polymicrobial infections, their response to standard treatments, and how they differ and change with disease progression.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2663,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Pulmonary symptoms in CF begin in early life and over time a combination of impaired mucociliary clearance, innate immune responses, and chronic infection lead to a progressive loss of lung function (Flume et al., 2009). This gradual decline in pulmonary function is interspersed with periods of acute worsening of respiratory symptoms known as CF pulmonary exacerbations (CFPEs) (Sibley et al., 2008). Cumulatively, these periods of CFPE are associated with more rapid disease progression and reduced survival as well as a recognised reduction in quality of life and an increase in overall healthcare costs (VanDevanter et al., 2013). There is currently no consensus for a generally applicable definition to describe when patients are experiencing a CFPE. This is mainly due to a lack of consistency in the symptoms experienced by CF patients of different ages and disease state, thus making it challenging for paediatric and adult physicians to come to an agreement (Smyth and Elborn, 2008). Despite this, clinical features can include decreased exercise tolerance, increased cough and sputum production, shortness of breath, chest pain, absence from school or work, increased adventitial sounds on lung examination, decreased appetite or weight loss, and a decline in lung function (Fuchs et al., 1994). Although lung function is still widely relied upon as an indicator of worsening symptoms, it has been revealed that short-term changes in lung function show little effect on the sensitivity or specificity of CFPE diagnosis (Rosenfeld et al., 2001).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4218,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "As such, clinicians face the challenging role of determining if a patient is experiencing a CFPE and hence when intervention is appropriate. CFPEs are treated with high-dose intravenous antibiotics that are broad spectrum in their activity, but expected to have an impact on Pseudomonas aeruginosa (Smyth and Elborn, 2008). It is now recognised that immediate management of CFPE results in improved prognosis and increased likelihood of patient recovery, underlining the importance of CFPE diagnosis (Sanders et al., 2010). Therefore, there is an urgent need to identify and develop more reliable bioindicators of disease state change.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:08:01",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524837",
+                            "locations": {
+                                "length": 22,
+                                "offset": 4493
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 4853,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Studies using ecological analyses to aid in the interpretation of culture, independent data have shown associations between respiratory microbiota characteristics and clinical outcomes (LiPuma, 2014). For example, increasing age, disease progression, and reduced lung function have been associated with related changes in CF lung microbiota, summarised in reduced bacterial diversity and increasingly conserved community composition (e.g. Cox et al., 2010; Klepac-Ceraj et al., 2010; van der Gast et al., 2011; Zhao et al., 2012; van der Gast et al., 2014). However, a fundamental knowledge gap remains in relation to how the CF microbiota behaves and respond to CFPE and subsequent antibiotic interventions, largely due to a paucity of studies on this subject.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5614,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "A useful framework proposed to better understand changes in microbiota associated with CFPE and antibiotic intervention has been to partition data into defined clinical periods: (B) baseline, (E) CFPE, (T) treatment, and (R) recovery (Zhao et al., 2012; Price et al., 2013). Set within this BETR classification, studies have provided useful insights including a clear demonstration that CFPE do not result from increased total bacterial density or density of a specific recognised CF pathogen, such as P. aeruginosa (Stressmann et al., 2011; Fodor et al., 2012; Carmody et al., 2013; Price et al., 2013). Conversely, how changes in microbiota composition and structure are associated with CFPE and intervention remain less clear; as different studies have shown either significant change or no change in CF bacterial communities, and in specific constituent species (Fodor et al., 2012; Stressmann et al., 2012; Daniels et al., 2013; Price et al., 2013; Smith et al., 2014). These contradictory findings may be attributed to differing experimental designs, patient cohorts, and sampling strategies. For example, studies have typically relied on single-point samples to be representative of a given disease state (e.g. baseline or exacerbation) which will not account for variance in either microbiota or clinical factors, such as lung function (commonly, FEV1, forced expiratory volume in 1\u2009s), in a given clinical period (Carmody et al., 2013; Price et al., 2013; Zemanick et al., 2013). Studies have also been based in the main on point samples from subsets and different combinations of the clinical periods defined above (Fodor et al., 2012; Carmody et al., 2013; Price et al., 2013; Smith et al., 2014), making them difficult to compare, and as such the complete cycle of clinical periods from pre- to post-CFPE baseline, that is BETRB, has not been studied. However, in both instances this may be a reflection of the difficulty in obtaining respiratory samples and metadata over this type of longitudinal period.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:08:20",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524838",
+                            "locations": {
+                                "length": 13,
+                                "offset": 6116
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 7632,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In the current study, multiple sputum samples were collected from 10 CF adult patients over the course of a CFPE. The data were partitioned into five clinical periods: (B0) baseline pre-CFPE; (E) CFPE, 30 days prior to treatment; (T) treatment for CFPE; (R) recovery, 30 days post-CFPE; and (B1) baseline post-CFPE. In addition, multiple sputum samples were collected from two adult CF patients who were clinically stable over the same time period (B0 only). During periods B0, E, R, and B1, patients were receiving their standard doses of maintenance antibiotics. For T, patients were hospitalised and receiving increased antibiotic intervention, which was typically intravenous antibiotics (Table 1). To allow profiling of the extant CF lung microbiota, sputum samples were treated with propidium monoazide prior to DNA extraction, to remove the impact of extracellular DNA or DNA from dead or damaged bacterial cells, and then 16S rRNA gene-targeted high-throughput sequencing was carried out (Rogers et al., 2013). This allowed a detailed examination of (1) how changes in CF microbiota are associated with the onset of CFPEs, (2) the effect of antibiotic therapy administered for treatment of CFPE on the CF microbiota, and (3) identification of potential biomarkers of disease state change.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8928,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Patients and clinical samples",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "This study was undertaken with the local ethical approval from Southampton and South West Hampshire Research Ethics Committee (06/Q1704/24). Sputum samples were collected from 12 adult CF patients attending the Southampton General Hospital, Southampton, UK (Table 1). All sputum samples were stored at 4oC immediately after expectoration and transferred to \u221280\u2009\u00b0C storage within 12\u2009h of expectoration. This timeframe was selected as recent evidence suggests that failure to stabilise samples at \u221280\u2009\u00b0C within 12\u2009h significantly impacts sequence-based microbiota profiling. (Cuthbertson et al., 2014). Subjects were selected due to their persistent production of sputum and history of CFPE. All patients were clinically defined as chronically colonised with P. aeruginosa. Samples were collected from patients during periods of baseline, defined as periods where patients were only receiving maintenance doses of antibiotics. During the study period 10 of the 12 patients were treated for a CFPE. The start and end of CFPE were identified by treating clinicians, and were defined for the purpose of this study as the period of time where patients received clinical intervention in the form of antibiotic treatment. The antibiotics administered to each patient are all broad spectrum in activity and are expected to have an impact on the predominant pathogen, P. aeruginosa (Table 1). Decisions to initiate treatment were based on worsening clinical symptoms (Fuchs et al., 1994). Stabilisation or improvement of these symptoms led to the termination of this treatment. Retrospectively samples were partitioned into five periods: (B0) baseline pre-CFPE; (E) CFPE, within 30 days prior to antibiotic treatment; (T) period of time patients were receiving treatment for pulmonary exacerbation; (R) recovery, within 30 days post-treatment for CFPE; and (B1) baseline post-CFPE. Clinically relevant symptoms were monitored throughout the sampling period. Lung function (FEV1) was assessed using a Koko PeakPro home spirometer (Ferraris Cardiorespiratory, Louisville, CO, USA) at the time of each sample collection. Patients were also required to assess respiratory symptoms: cough, breathlessness, sputum production, and general wellbeing, using a visual analogue scale scored 0\u2013100, with 0 being the worst and 100 the best.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:08:59",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524839",
+                            "locations": {
+                                "length": 13,
+                                "offset": 9685
+                            }
+                        },
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:09:06",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524840",
+                            "locations": {
+                                "length": 13,
+                                "offset": 10286
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 11295,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "DNA extraction and pyrosequencing",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Sputum samples were washed three times with 1 \u00d7 phosphate-buffered saline to remove saliva as previously described (Rogers et al., 2006). Extracellular DNA and DNA from nonviable cells were excluded from analysis via cross-linking with propidium monoazide prior to DNA extraction, as previously described (Rogers et al., 2013). Barcode encoded FLX amplicon pyrosequencing was performed using the primer 338F (5\u2032-ACTCCTACGGGAGGCAGCAG) and 926R (5\u2032-CCGTCAATTCMTTTRAGT) as described previously (Cooper et al., 2013). Except, initial generation of 16S rRNA gene amplicons involved a one-step polymerase chain reaction of 25 cycles using AccuPrime Taq DNA Polymerase High Fidelity (Invitrogen, Carlsbad, CA, USA). polymerase chain reaction-negative controls were included in each sequencing run (Salter et al., 2014). Four hundred and fifty-four pyrosequencing using the Lib-L kit was performed at the Wellcome Trust Sanger Institute (Hinxton, UK).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12271,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Sequence analysis",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The mothur sequencing analysis platform was used to analyse the resulting data (Schloss et al., 2011). Sequence quality was ensured by trimming reads where the average quality score fell below 35 across a rolling window of 50 bases. Reads shorter than 400\u2009bp in length and those that included mismatches in the barcode or 16S rRNA gene primer sequence, ambiguous base calls and homopolymeric stretches longer than 8 bases were subsequently removed. Chimeras were removed in mothur using the Perseus software program (Quince et al., 2011). Sequences were assembled into operational taxonomic units (OTUs) at 97% sequence identity to give an approximation of species (Schloss and Handelsman, 2006) and identified using the Ribosomal Database Project reference database provided in mothur. OTUs identified in negative controls were removed from further analysis (Salter et al., 2014).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13169,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Sequence analysis",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "As the Ribosomal Database Project classifier only provides classifications down to the genus level, representative sequences from each OTU were used to give appropriate species-level identifications using MegaBlast against the NCBI nucleotide archive. For some OTUs multiple, equally scoring, matches were obtained, As such, species-level designations should be considered putative. The raw sequence data reported in this study have been deposited in the European Nucleotide Archive under study accession numbers ERP005251 and ERP007059, and sample accession numbers ERS421603 and ERS551400. The relevant barcode information for each sample is shown in Supplementary Table S1.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13845,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Statistical analysis",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Species were partitioned into core and rare species groups using a modification of the method previously described (van der Gast et al., 2011). Based on a significant positive distribution\u2013abundance relationship, the persistent and abundant core species were defined as those in more than 75% of all samples, while all other species falling outside of the upper quartile were considered to be rare (Hedin et al., 2015). Species turnover between consecutive samples was measured using the method described by Brown and Kodric-Brown (1977). Turnover was defined as t=b+c/S1+S2. Where b=the number of species present only in the first sample; c=the number of species present only in the second sample; S1=the total number of species in the first sample; and S2 the total number of species in the second sample (Brown and Kodric-Brown, 1977). Species richness (S*) was used as previously described (Rogers et al., 2013). In brief, S* was calculated with a uniform re-sample size (to match the smallest sequence size in each group) following 1000 iterations in each instance and performed in R version 3.1.1 (Oksanen et al., 2013; The R Development Core Team, 2013). Two sample t-tests, regression analysis, coefficients of determination (r2), residuals and significance (P) were calculated using Minitab software (version 16; Minitab, University Park, PA, UK). Analysis of similarity (ANOSIM) and similarity of percentages analysis (SIMPER) were performed using the PAST (Paleontological Statistics, version 3.01) program available from the University of Oslo (http://folk.uio.no/ohammer/past). The Bray\u2013Curtis quantitative index of similarity was used as the underpinning community similarity measure for both ANOSIM and SIMPER analyses.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15599,
+                    "infons": {
+                        "section_title_1": "Materials and methods",
+                        "section_title_2": "Statistical analysis",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Mixed-effect models were fitted in R version 3.1.1 using the GLMMADMB package version 0.8.0 (The R Development Core Team, 2013). Values of r2 were calculated using the R package MuMIN. To analyse species-level changes over the disease periods, mixed-effect models (GLMMADMB) with negative bionomial errors were used as data were over dispersed (greater variability than would be expected based on Poisson distribution). For each species, the change in abundance across all patients was measured using the disease period as the fixed effect and variation between patients was accounted for by including patient as a random effect. The model fits changes in abundance on the logit scale. The null hypothesis for each species was there would be no change in species abundance between periods.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16388,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "An expectation for patterns of lung function (FEV1) within individual patients was that it would entail a consistent decline in FEV1 from baseline (B0) through the CFPE and into the treatment periods, followed by an improvement in the subsequent periods. However, no common pattern in lung function by clinical period was observed across the 10 patients that experienced CFPE (Supplementary Figure S1). Therefore, within the current study, FEV1 was found to be a poor indicator of short-term disease state.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16901,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Microbiota diversity and composition from respiratory samples was assessed using 16S rRNA gene-targeted pyrosequencing. From 237 samples, a total of 386\u2009002 bacterial sequence reads (mean\u00b1standard deviation (s.d.) per sample, 1628\u00b184) were included in the final analysis, identifying 103 genera and 183 distinct OTUs classified to the species level (Supplementary Table S2); however, given the relative length of the ribosomal sequences analysed, these identities should be considered putative. The average numbers of bacterial sequence reads per sample were similar among the five disease states: (B0) n=56, 1845\u00b1247 (mean\u00b1s.d.); (E) n=41, 1357\u00b1136; (T) n=67, 1643\u00b1127; (R) n=32, 1845\u00b1151; and (B1) n=41, 1449\u00b1212 (Supplementary Table S3).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17641,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "We have previously established that categorisation of component species in CF microbiota into core and rare species revealed important aspects of species-abundance distributions with a metacommunity that would be neglected without such a distinction (van der Gast et al., 2011, 2014). A coherent metacommunity could be expected to exhibit a direct relationship between prevalence and proportional abundance of individual species within the constituent communities. Consistent with this prediction, the abundance of OTUs, across all samples and within specific disease periods (Figure 1), was significantly correlated with the number of individual respiratory sample communities that those OTUs occupied. On that basis, OTUs present in more than 75% of all samples, and hence highly abundant, were classified as core (Hedin et al., 2015). These were derived from five common taxa, P. aeruginosa, Streptococcus pneumoniae group, Streptococcus sanguinis group, Prevotella melaninogenica/veroralis/histicola (abbreviated hereafter as P. melaninogenica), and Veillonella parvula/rogosae (abbreviated as P. parvula), and accounted for over 84% of the total sequence abundance. Conversely, the rare OTU group accounted for the majority of the diversity, 178 OTUs.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:10:35",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524841",
+                            "locations": {
+                                "length": 13,
+                                "offset": 18521
+                            }
+                        },
+                        {
+                            "text": "Streptococcus pneumoniae",
+                            "infons": {
+                                "identifier": "NCBI:txid1313",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:10:35",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "524842",
+                            "locations": {
+                                "length": 24,
+                                "offset": 18536
+                            }
+                        },
+                        {
+                            "text": "Streptococcus sanguinis",
+                            "infons": {
+                                "identifier": "NCBI:txid1305",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:10:35",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "524843",
+                            "locations": {
+                                "length": 23,
+                                "offset": 18568
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:10:35",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "524844",
+                            "locations": {
+                                "length": 10,
+                                "offset": 18599
+                            }
+                        },
+                        {
+                            "text": "P. melaninogenica",
+                            "infons": {
+                                "identifier": "NCBI:txid28132",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:10:35",
+                                "parent_taxonomic_id": "NCBI:txid838"
+                            },
+                            "id": "524845",
+                            "locations": {
+                                "length": 17,
+                                "offset": 18671
+                            }
+                        },
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:10:35",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "524846",
+                            "locations": {
+                                "length": 11,
+                                "offset": 18695
+                            }
+                        },
+                        {
+                            "text": "P. parvula",
+                            "infons": {
+                                "identifier": "['NCBI:txid181936', 'NCBI:txid2593393'] Trimmed from : 8",
+                                "type": [
+                                    "fungi_species",
+                                    "fungi_species"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:10:36",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid103391",
+                                    "NCBI:txid13205"
+                                ]
+                            },
+                            "id": "524847",
+                            "locations": {
+                                "length": 10,
+                                "offset": 18739
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 18897,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The rate of species turnover, the number of OTUs eliminated and replaced over time, was assessed for each patient over the study period (Figure 2). The rate of OTU turnover showed more variation in the periods surrounding and during treatment for CFPE. Whereas pre- and post-baseline periods had relatively consistent OTU turnover rates, particularly evident for patients 3 and 7 who did not experience a CFPE over the course of the study (Figure 2). The rate of turnover in the rare microbiota group was greater and more variable than that observed for the core microbiota group, suggesting that the more diverse rare microbiota was driving the observed changes in the whole microbiota. Species richness (S*) within the whole microbiota increased significantly from baseline (B0) within the CFPE and treatment periods, returning to B0 levels in the subsequent recovery and post-CFPE baseline (B1) periods. Again, these patterns of diversity were driven by changes within the rare microbiota (Figure 3). Diversity within the core microbiota significantly decreased within the treatment period, with Prevotella melaninogenica and Veillonella parvula moving into the rare group for that period (Figures 1 and \u200band33).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Prevotella melaninogenica",
+                            "infons": {
+                                "identifier": "NCBI:txid28132",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:10:50",
+                                "parent_taxonomic_id": "NCBI:txid838"
+                            },
+                            "id": "524848",
+                            "locations": {
+                                "length": 25,
+                                "offset": 19996
+                            }
+                        },
+                        {
+                            "text": "Veillonella parvula",
+                            "infons": {
+                                "identifier": "NCBI:txid29466",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:10:50",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "524849",
+                            "locations": {
+                                "length": 19,
+                                "offset": 20026
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 20112,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "ANOSIM, using the Bray\u2013Curtis quantitative index of similarity, was used to determine how composition within the whole, core, and rare microbiota changed by disease period (Table 2). No significant change was observed between disease periods within the whole microbiota. Conversely, significant differences within the core microbiota were observed between pre-CFPE baseline and treatment periods (Table 2). Additionally, significant differences within the rare microbiota were observed between pre-CFPE baseline and the treatment and recovery periods. No significant compositional differences were observed between pre- and post-CFPE baseline periods for both the core and rare OTU groups (Table 2). The switching of the two core OTUs, P. melaninogenica and Veillonella parvula, to the rare group in the treatment period will have likely contributed to the significant differences for the core and rare microbiota between pre-CFPE baseline and treatment periods but not for the whole microbiota, where group membership is not accounted for. SIMPER analysis was employed to assess the contribution of individual OTUs to differences in similarity within the whole microbiota, core, and rare OTU groups between disease periods (Supplementary Tables S4\u2013S6). P. aeruginosa, followed by S. pneumoniae group, contributed most to dissimilarity in the whole microbiota and core OTU group between all disease periods (Supplementary Tables S4 and S5). Within the rare OTU group, Porphyromonas catoniae was observed to provide the greatest contribution to dissimilarity between all disease periods, with the exception of the comparison between the CFPE treatment and recovery periods, where V. parvula provided the largest contribution.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "P. melaninogenica",
+                            "infons": {
+                                "identifier": "NCBI:txid28132",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:10:58",
+                                "parent_taxonomic_id": "NCBI:txid838"
+                            },
+                            "id": "524850",
+                            "locations": {
+                                "length": 17,
+                                "offset": 20848
+                            }
+                        },
+                        {
+                            "text": "Veillonella parvula",
+                            "infons": {
+                                "identifier": "NCBI:txid29466",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:10:58",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "524851",
+                            "locations": {
+                                "length": 19,
+                                "offset": 20870
+                            }
+                        },
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:11:04",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524852",
+                            "locations": {
+                                "length": 13,
+                                "offset": 21366
+                            }
+                        },
+                        {
+                            "text": "S. pneumoniae",
+                            "infons": {
+                                "identifier": "NCBI:txid1313",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:11:04",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "524853",
+                            "locations": {
+                                "length": 13,
+                                "offset": 21393
+                            }
+                        },
+                        {
+                            "text": "Porphyromonas catoniae",
+                            "infons": {
+                                "identifier": "NCBI:txid41976",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:11:06",
+                                "parent_taxonomic_id": "NCBI:txid836"
+                            },
+                            "id": "524854",
+                            "locations": {
+                                "length": 22,
+                                "offset": 21580
+                            }
+                        },
+                        {
+                            "text": "V. parvula",
+                            "infons": {
+                                "identifier": "NCBI:txid29466",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:11:08",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "524855",
+                            "locations": {
+                                "length": 10,
+                                "offset": 21791
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 21836,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "SIMPER analysis also revealed changes in the percentage contribution of individual OTUs within the core microbiota by disease period. Mixed effects models were used to further investigate how individual core OTUs changed between disease periods (Figure 4). P. catoniae, the most abundant of the rare OTU group, was also included in this analysis. These models allowed for the inclusion of both fixed (disease period) and random effects (patient), and therefore variation between patients was accounted for in each model. For P. aeruginosa, no significant change in relative abundance from pre-CFPE baseline (B0) was observed in the CFPE and treatment periods. However, a significant increase in proportional abundance was observed within the recovery period returning to B0 abundance levels in the post-CFPE baseline period (B1). No significant changes in relative abundance from B0 were observed for the S. pneumoniae group OTU in any of the disease periods. S. sanguinis group and P. catoniae both had significantly reduced abundance within the treatment period, with the former OTU also significantly lower in the recovery period. P. melaninogenica proportional abundance significantly reduced from baseline (B0) over the CFPE, treatment, and recovery periods before returning to pre-CFPE baseline (B0) levels in period B1. Conversely, the proportional abundance of V. parvula significantly increased over the same periods (Figure 4).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "P. catoniae",
+                            "infons": {
+                                "identifier": "NCBI:txid41976",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:11:11",
+                                "parent_taxonomic_id": "NCBI:txid836"
+                            },
+                            "id": "524856",
+                            "locations": {
+                                "length": 11,
+                                "offset": 22093
+                            }
+                        },
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:11:14",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524857",
+                            "locations": {
+                                "length": 13,
+                                "offset": 22361
+                            }
+                        },
+                        {
+                            "text": "S. pneumoniae",
+                            "infons": {
+                                "identifier": "NCBI:txid1313",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:11:18",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "524858",
+                            "locations": {
+                                "length": 13,
+                                "offset": 22741
+                            }
+                        },
+                        {
+                            "text": "S. sanguinis",
+                            "infons": {
+                                "identifier": "NCBI:txid1305",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:11:19",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "524859",
+                            "locations": {
+                                "length": 12,
+                                "offset": 22796
+                            }
+                        },
+                        {
+                            "text": "P. catoniae",
+                            "infons": {
+                                "identifier": "NCBI:txid41976",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:11:19",
+                                "parent_taxonomic_id": "NCBI:txid836"
+                            },
+                            "id": "524860",
+                            "locations": {
+                                "length": 11,
+                                "offset": 22819
+                            }
+                        },
+                        {
+                            "text": "P. melaninogenica",
+                            "infons": {
+                                "identifier": "NCBI:txid28132",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:11:21",
+                                "parent_taxonomic_id": "NCBI:txid838"
+                            },
+                            "id": "524861",
+                            "locations": {
+                                "length": 17,
+                                "offset": 22970
+                            }
+                        },
+                        {
+                            "text": "V. parvula",
+                            "infons": {
+                                "identifier": "NCBI:txid29466",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:11:23",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "524862",
+                            "locations": {
+                                "length": 10,
+                                "offset": 23205
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 23273,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Cross-sectional studies have informed our understanding of CF chronic lung infections, revealing a complex and highly variable microbiota in a constantly perturbed ecosystem (van der Gast et al., 2011, 2014). However, in order to better understand the progressive nature of chronic lung infection in CF, it is important to investigate how the bacterial communities change through time in relation to disease state and progression. A small number of studies have attempted to understand bacterial community dynamics within the CF lung (Stressmann et al., 2012; Zhao et al., 2012; Carmody et al., 2013; Price et al., 2013). A common limitation, as stated by Carmody and colleagues (2013) for their own study, has been narrow frequency of sampling, which would not allow fluctuations in airway microbiota to be accounted for, within or between clinical periods. Indeed this within clinical period fluctuation was particularly highlighted in the current study, where species turnover was more variable in the CFPE, treatment, and recovery periods (Figure 2). By collecting samples and associated metadata at more frequent intervals the current study was able to not only account for variation within the microbiota over time but also investigate how this related to changes in disease state through the full cycle of an exacerbation event.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 24618,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Resistance can be defined as \u2018the degree to which microbial composition remains unchanged in the face of a disturbance' and resilience as \u2018the rate at which microbial composition returns to its original composition after being disturbed' regardless of the system studied (Allison and Martiny, 2008). Previously, Price et al. (2013) and Stressmann et al. (2011) reported no significant change in community composition through CFPE and treatment. Congruent with those studies we found that the whole microbiota did not significantly change in composition across the five clinical periods studied, indicating resistance to perturbations within the lung (Table 2). However, partitioning the whole chronic lung infection microbiota revealed there was resilience to intervention with antibiotics within both the core and rare OTU groups (Table 2), a pattern also reflected within the diversity based analysis (Figure 3).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25532,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Infection with P. aeruginosa has been highlighted as a key factor in poor clinical outcomes and is typically one of the main targets for treatment. It was therefore surprising that its proportional abundance remained high across all clinical periods, even exhibiting a significant increase in abundance in the recovery period (Figure 4). While the relative abundance from high-throughput sequencing data of a given species may not be considered strictly quantitative, Price et al. (2013) demonstrated a highly significant correlation between the results of P. aeruginosa-targeted quantitative polymerase chain reaction and sequencing data. One possible explanation for the increase in P. aeruginosa proportional abundances observed after the conclusion of treatment is that antibiotic therapy led to a reduction in the abundance of other species, thereby allowing P. aeruginosa to take advantage of newly available physical niche space. Even so, the proportional abundance of P. aeruginosa returned to baseline after the 30-day post-treatment recovery period, which may be due to the resilience of the members of the rare species group.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:12:04",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524863",
+                            "locations": {
+                                "length": 13,
+                                "offset": 25547
+                            }
+                        },
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:12:11",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524864",
+                            "locations": {
+                                "length": 13,
+                                "offset": 26217
+                            }
+                        },
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:12:13",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524865",
+                            "locations": {
+                                "length": 13,
+                                "offset": 26396
+                            }
+                        },
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:12:14",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524866",
+                            "locations": {
+                                "length": 13,
+                                "offset": 26508
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26668,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "The lack of a generally applicable definition of CFPE and a robust general marker of disease state represents a major challenge for the timely treatment of exacerbations. As stated by Rosenfeld et al. (2001) and confirmed from the FEV1 data (Supplementary Figure S1), changes in lung function demonstrates little sensitivity or specificity of CFPE diagnosis. Molecular diagnostic tests are being increasingly employed in diagnosis of infectious diseases, allowing disease-associated biomarkers to be used to identify, predict, and monitor changes in infections (Pattison et al., 2013). The identification of biomarkers in CF could potentially provide important tools to improve CFPE identification and therefore improve outcomes for CF patients. Within the current study, Veillonella species related to V. parvula/rogosae and Prevotella species related to P. melaninogenica/veroralis/histicola represent potential biomarkers of disease state due to their significant changes in abundance from baseline prior to the start of antibiotic treatment (Figure 4). Development of targeted quantitative polymerase chain reaction based analysis is required to test the efficacy of these two OTUs as molecular diagnostic tools for the onset of CFPE.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:12:24",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "524867",
+                            "locations": {
+                                "length": 11,
+                                "offset": 27440
+                            }
+                        },
+                        {
+                            "text": "Prevotella",
+                            "infons": {
+                                "identifier": "NCBI:txid838",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:12:25",
+                                "parent_taxonomic_id": "NCBI:txid171552"
+                            },
+                            "id": "524868",
+                            "locations": {
+                                "length": 10,
+                                "offset": 27494
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 27906,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "While our study was limited to a detailed examination of a relatively small number of patients, our findings have relevance to current management strategies for CFPEs. CF patients receive frequent and prolonged courses of antibiotics, often at high doses, especially for CFPE treatment. Smyth and Elborn (2008) stated there is no comparable medical condition where so many individuals are exposed to antibiotics and risk of cumulative antibiotic side effects in this way. While the resilience within the core and rare species groups will be of concern with regard to treatment, of particular interest to clinicians will be the lack of substantial negative impact on P. aeruginosa. Antibiotics administered in response to the worsening symptoms associated with CFPE are expected to target P. aeruginosa, which is the emblematic species of chronic lung infections in CF patients. Antimicrobial resistance by recognised respiratory pathogens and other members of the microbiota may be a significant contributing factor underpinning the findings of this study (Sherrard et al., 2014). Therefore this study strongly highlights the merits of continual reassessment of existing antimicrobial treatment regimens and antibiotic delivery strategies (Sherrard et al., 2014).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:12:36",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524869",
+                            "locations": {
+                                "length": 13,
+                                "offset": 28572
+                            }
+                        },
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:12:37",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524870",
+                            "locations": {
+                                "length": 13,
+                                "offset": 28694
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 29169,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "From a more fundamental perspective, the composition of the bacterial microbiota is most likely not the whole story. At the population level, studies have shown a variety of co-infection interactions between P. aeruginosa and other co-colonizing microbes, increasing the virulence of this core CF pathogen. For example, P. aeruginosa can use peptidoglycan shed by Gram-positive bacteria as a cue for enhanced virulence (Korgaonkar et al., 2013), metabolites are transferred (e.g. 2,3-butanediol) between fermenting bacteria and P. aeruginosa (Venkataraman et al., 2014; Whiteson et al., 2014), and, similarly, ethanol produced by the fungus Candida albicans can influence P. aeruginosa biofilm formation and phenazine production (Chen et al., 2014). Therefore the wider microbial community and the myriad of interactions therein need to be considered through, for example, metagenomic, metatranscriptomic, and metabolomic approaches to elucidate the roles of bacteria, fungi, and respiratory viruses in tandem, alongside host immune responses. Studies of this nature could reveal the underlying cause or causes of CFPE and it may well be the case that there is no consistent factor (infection or host) that trigger exacerbations, either within or between patients.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:12:45",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524871",
+                            "locations": {
+                                "length": 13,
+                                "offset": 29377
+                            }
+                        },
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:12:46",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524872",
+                            "locations": {
+                                "length": 13,
+                                "offset": 29489
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:12:46",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "524873",
+                            "locations": {
+                                "length": 8,
+                                "offset": 29547
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:12:47",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "524874",
+                            "locations": {
+                                "length": 8,
+                                "offset": 29684
+                            }
+                        },
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:12:48",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524875",
+                            "locations": {
+                                "length": 13,
+                                "offset": 29697
+                            }
+                        },
+                        {
+                            "text": "Candida albicans",
+                            "infons": {
+                                "identifier": "NCBI:txid5476",
+                                "type": "fungi_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:12:49",
+                                "parent_taxonomic_id": "NCBI:txid1535326"
+                            },
+                            "id": "524876",
+                            "locations": {
+                                "length": 16,
+                                "offset": 29810
+                            }
+                        },
+                        {
+                            "text": "P. aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:12:49",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524877",
+                            "locations": {
+                                "length": 13,
+                                "offset": 29841
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:12:52",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "524878",
+                            "locations": {
+                                "length": 8,
+                                "offset": 30128
+                            }
+                        },
+                        {
+                            "text": "fungi",
+                            "infons": {
+                                "identifier": "NCBI:txid4751",
+                                "type": "fungi_kingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:12:52",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "524879",
+                            "locations": {
+                                "length": 5,
+                                "offset": 30138
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 30433,
+                    "infons": {
+                        "section_title_1": "Data deposition",
+                        "iao_name_1": "availability section",
+                        "iao_id_1": "IAO:0000611"
+                    },
+                    "text": "The sequence data reported in this paper have been deposited in the European Nucleotide Archive under study accession numbers ERP005251 and ERP007059, and sample accession numbers ERS421603 and ERS551400.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30652,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "This study was supported by the UK Natural Environment Research Council (NE/H019456/1) to CJvdG, by the Wellcome Trust (WT 098051) to AWW and JP for sequencing costs, and by The Anna Trust (KB2008) to KDB. AWW and The Rowett Institute of Nutrition and Health, University of Aberdeen, receive core funding support from the Scottish Government Rural and Environmental Science and Analysis Service (RESAS). We thank Paul Scott, Richard Rance and the Wellcome Trust Sanger Institute's sequencing team for generating 16S rRNA gene sequence data.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31207,
+                    "infons": {
+                        "section_title_1": "Notes",
+                        "iao_name_1": "notes section",
+                        "iao_id_1": "IAO:0000634"
+                    },
+                    "text": "The authors declare no conflict of interest.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31256,
+                    "infons": {
+                        "section_title_1": "Footnotes",
+                        "iao_name_1": "footnote section",
+                        "iao_id_1": "IAO:0000325"
+                    },
+                    "text": "Supplementary Information accompanies this paper on The ISME Journal website (http://www.nature.com/ismej)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31371,
+                    "infons": {
+                        "title": "Resistance, resilience, and redundancy in microbial communities",
+                        "journal": "Proc Natl Acad Sci USA",
+                        "volume": "105",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Allison SD, Martiny JBH. (2008). Resistance, resilience, and redundancy in microbial communities. Proc Natl Acad Sci USA105: 11512\u201311519. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31563,
+                    "infons": {
+                        "title": "Turnover rates in insular biogeography: effect of immigration and extinction",
+                        "journal": "Ecology",
+                        "volume": "58",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Brown JH, Kodric-Brown A. (1977). Turnover rates in insular biogeography: effect of immigration and extinction. Ecology58: 445\u2013449. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31711,
+                    "infons": {
+                        "title": "Changes in cystic fibrosis airway microbiota at pulmonary exacerbation",
+                        "journal": "Ann Am Thorac Soc",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Carmody LA, Zhao J, Schloss PD, Petrosino JF, Murray S, Young VB et al. (2013). Changes in cystic fibrosis airway microbiota at pulmonary exacerbation. Ann Am Thorac Soc10: 179\u2013187. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31937,
+                    "infons": {
+                        "title": "Candida albicans ethanol stimulates Pseudomonas aeruginosa WspR-controlled biofilm formation as part of a cyclic relationship involving phenazines",
+                        "journal": "PLoS Pathog",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Chen AI, Dolben EF, Okegbe C, Harty CE, Golub Y, Thao S et al. (2014). Candida albicans ethanol stimulates Pseudomonas aeruginosa WspR-controlled biofilm formation as part of a cyclic relationship involving phenazines. PLoS Pathog10: e1004480. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Candida albicans",
+                            "infons": {
+                                "identifier": "NCBI:txid5476",
+                                "type": "fungi_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:13:11",
+                                "parent_taxonomic_id": "NCBI:txid1535326"
+                            },
+                            "id": "524880",
+                            "locations": {
+                                "length": 16,
+                                "offset": 32008
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:13:11",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524881",
+                            "locations": {
+                                "length": 22,
+                                "offset": 32044
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 32225,
+                    "infons": {
+                        "title": "Patent human infections with the whipworm, Trichuris trichiura, are not associated with alterations in the faecal microbiota",
+                        "journal": "PLoS ONE",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Cooper P, Walker AW, Reyes J, Chico M, Salter SJ, Vaca M et al. (2013). Patent human infections with the whipworm, Trichuris trichiura, are not associated with alterations in the faecal microbiota. PLoS ONE8: e76573. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32486,
+                    "infons": {
+                        "title": "Airway microbiota and pathogen abundance in age-stratified cystic fibrosis patients",
+                        "journal": "PLoS ONE",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Cox MJ, Allgaier M, Taylor B, Baek MS, Huang YJ, Daly RA et al. (2010). Airway microbiota and pathogen abundance in age-stratified cystic fibrosis patients. PLoS ONE5: e11044. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32706,
+                    "infons": {
+                        "title": "Time between collection and storage significantly influences bacterial sequence composition in sputum samples from cystic fibrosis respiratory infections",
+                        "journal": "J Clin Microbiol",
+                        "volume": "52",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Cuthbertson L, Rogers GB, Walker AW, Oliver A, Hafiz T, Hoffman LR et al. (2014). Time between collection and storage significantly influences bacterial sequence composition in sputum samples from cystic fibrosis respiratory infections. J Clin Microbiol52: 3011\u20133016. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33018,
+                    "infons": {
+                        "title": "Impact of antibiotic treatment for pulmonary exacerbations on bacterial diversity in cystic fibrosis",
+                        "journal": "J Cyst Fibros",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Daniels TWV, Rogers GB, Stressmann FA, van der Gast CJ, Bruce KD, Jones GR et al. (2013). Impact of antibiotic treatment for pulmonary exacerbations on bacterial diversity in cystic fibrosis. J Cyst Fibros12: 22\u201328. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33259,
+                    "infons": {
+                        "title": "Recent advances in the management of cystic fibrosis",
+                        "journal": "Arch Dis Child",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Davies JC, Ebdon A-M, Orchard C. (2014). Recent advances in the management of cystic fibrosis. Arch Dis Child11: 1033\u20131036. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33408,
+                    "infons": {
+                        "title": "Cystic fibrosis pulmonary guidelines",
+                        "journal": "Am J Respir Crit Care Med",
+                        "volume": "180",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Flume PA, Mogayzel PJ, Robinson KA, Goss CH, Rosenblatt RL, Kuhn RJ et al. (2009). Cystic fibrosis pulmonary guidelines. Am J Respir Crit Care Med180: 802\u2013808. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33593,
+                    "infons": {
+                        "title": "The adult cystic fibrosis airway microbiota is stable over time and infection type, and highly resilient to antibiotic treatment of exacerbations",
+                        "journal": "PLoS ONE",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Fodor AA, Klem ER, Gilpin DF, Elborn JS, Boucher RC, Tunney MM et al. (2012). The adult cystic fibrosis airway microbiota is stable over time and infection type, and highly resilient to antibiotic treatment of exacerbations. PLoS ONE7: e45001. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33881,
+                    "infons": {
+                        "title": "Recent advances in the microbiology of respiratory tract infection in cystic fibrosis",
+                        "journal": "Br Med Bull",
+                        "volume": "89",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Foweraker J. (2009). Recent advances in the microbiology of respiratory tract infection in cystic fibrosis. Br Med Bull89: 93\u2013110. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34056,
+                    "infons": {
+                        "title": "Effect of aerosolized recombinant human DNase on exacerbations of respiratory symptoms and on pulmonary function in patients with cystic fibrosis",
+                        "journal": "New Engl J Med",
+                        "volume": "331",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Fuchs HJ, Borowitz DS, Christiansen DH, Morris EM, Nash ML, Ramsey BW et al. (1994). Effect of aerosolized recombinant human DNase on exacerbations of respiratory symptoms and on pulmonary function in patients with cystic fibrosis. New Engl J Med331: 637\u2013642. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34341,
+                    "infons": {
+                        "title": "Siblings of patients with Crohn's disease exhibit a biologically relevant dysbiosis in mucosal microbial metacommunities",
+                        "journal": "Gut",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Hedin C, van der Gast CJ, Rogers GB, Cuthbertson L, McCartney S, Stagg AJ et al. (2015). Siblings of patients with Crohn's disease exhibit a biologically relevant dysbiosis in mucosal microbial metacommunities. Gut e-pub ahead of print 8 April 2015 doi:10.1136/gutjnl-2014-308896. [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34630,
+                    "infons": {
+                        "title": "Relationship between cystic fibrosis respiratory tract bacterial communities and age, genotype, antibiotics and Pseudomonas aeruginosa",
+                        "journal": "Environ Microbiol",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Klepac-Ceraj V, Lemon KP, Martin TR, Allgaier M, Kembel SW, Knapp AA et al. (2010). Relationship between cystic fibrosis respiratory tract bacterial communities and age, genotype, antibiotics and Pseudomonas aeruginosa. Environ Microbiol12: 1293\u20131303. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:13:40",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524882",
+                            "locations": {
+                                "length": 22,
+                                "offset": 34826
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 34907,
+                    "infons": {
+                        "title": "Community surveillance enhances Pseudomonas aeruginosa virulence during polymicrobial infection",
+                        "journal": "Proc Natl Acad Sci USA",
+                        "volume": "110",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Korgaonkar A, Trivedi U, Rumbaugh KP, Whiteley M. (2013). Community surveillance enhances Pseudomonas aeruginosa virulence during polymicrobial infection. Proc Natl Acad Sci USA110: 1059\u20131064. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:13:42",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524883",
+                            "locations": {
+                                "length": 22,
+                                "offset": 34997
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 35144,
+                    "infons": {
+                        "title": "Expanding our understanding of respiratory microbiota in cystic fibrosis",
+                        "journal": "Ann Am Thorac Soc",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "LiPuma JJ. (2014). Expanding our understanding of respiratory microbiota in cystic fibrosis. Ann Am Thorac Soc11: 1084\u20131085. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35294,
+                    "infons": {
+                        "journal": "Package Vegan: Community Ecology Package",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Oksanen J, Guillaume Blanchet F, Kindt R, Legendre P, Minchin PR, O'Hara RB et al. (2013) Package Vegan: Community Ecology Package. R package version 2.0-7. R Foundation for Statistical Computing: Vienna, Austria. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35524,
+                    "infons": {
+                        "title": "Molecular detection of CF lung pathogens: current status and future potential",
+                        "journal": "J Cyst Fibros",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Pattison SH, Rogers GB, Crockard M, Elborn JS, Tunney MM. (2013). Molecular detection of CF lung pathogens: current status and future potential. J Cyst Fibros12: 194\u2013205. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35739,
+                    "infons": {
+                        "title": "Unique microbial communities persist in individual cystic fibrosis patients throughout a clinical exacerbation",
+                        "journal": "Microbiome",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Price K, Hampton T, Gifford A, Dolben E, Hogan D, Morrison H et al. (2013). Unique microbial communities persist in individual cystic fibrosis patients throughout a clinical exacerbation. Microbiome1: 27. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35988,
+                    "infons": {
+                        "title": "Removing noise from pyrosequenced amplicons",
+                        "journal": "BMC Bioinformatics",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Quince C, Lanzen A, Davenport R, Turnbaugh P. (2011). Removing noise from pyrosequenced amplicons. BMC Bioinformatics12: 38. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36157,
+                    "infons": {
+                        "title": "Use of 16S rRNA gene profiling by terminal restriction fragment length polymorphism analysis to compare bacterial communities in sputum and mouthwash samples from patients with cystic fibrosis",
+                        "journal": "J Clin Microbiol",
+                        "volume": "44",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Rogers GB, Carroll MP, Serisier DJ, Hockey PM, Jones G, Kehagia V et al. (2006). Use of 16S rRNA gene profiling by terminal restriction fragment length polymorphism analysis to compare bacterial communities in sputum and mouthwash samples from patients with cystic fibrosis. J Clin Microbiol44: 2601\u20132604. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36507,
+                    "infons": {
+                        "title": "Reducing bias in bacterial community analysis of lower respiratory infections",
+                        "journal": "ISME J",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Rogers GB, Cuthbertson L, Hoffman LR, Wing PAC, Pope C, Hooftman DAP et al. (2013). Reducing bias in bacterial community analysis of lower respiratory infections. ISME J7: 697\u2013706. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36732,
+                    "infons": {
+                        "title": "Defining a pulmonary exacerbation in cystic fibrosis",
+                        "journal": "J Pediatr",
+                        "volume": "139",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Rosenfeld M, Emerson J, Williams-Warren J, Pepe M, Smith A, Montgomery AB et al. (2001). Defining a pulmonary exacerbation in cystic fibrosis. J Pediatr139: 359\u2013365. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36923,
+                    "infons": {
+                        "title": "Reagent and laboratory contamination can critically impact sequence-based microbiome analyses",
+                        "journal": "BMC Biol",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Salter SJ, Cox MJ, Turek EM, Calus ST, Cookson WO, Moffatt MF et al. (2014). Reagent and laboratory contamination can critically impact sequence-based microbiome analyses. BMC Biol12: 87. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37155,
+                    "infons": {
+                        "title": "Failure to recover to baseline pulmonary function after cystic fibrosis pulmonary exacerbation",
+                        "journal": "Am J Respir Crit Care Med",
+                        "volume": "182",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Sanders DB, Bittner RCL, Rosenfeld M, Hoffman LR, Redding GJ, Goss CH. (2010). Failure to recover to baseline pulmonary function after cystic fibrosis pulmonary exacerbation. Am J Respir Crit Care Med182: 627\u2013632. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37413,
+                    "infons": {
+                        "title": "Toward a census of bacteria in soil",
+                        "journal": "PLoS Comput Biol",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Schloss PD, Handelsman J. (2006). Toward a census of bacteria in soil. PLoS Comput Biol2: e92. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:14:11",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "524884",
+                            "locations": {
+                                "length": 8,
+                                "offset": 37466
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 37552,
+                    "infons": {
+                        "title": "Reducing the effects of PCR amplification and sequencing artifacts on 16S rRNA-based studies",
+                        "journal": "PLoS ONE",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Schloss PD, Gevers D, Westcott SL. (2011). Reducing the effects of PCR amplification and sequencing artifacts on 16S rRNA-based studies. PLoS ONE6: e27310. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37752,
+                    "infons": {
+                        "title": "Antimicrobial resistance in the respiratory microbiota of people with cystic fibrosis",
+                        "journal": "Lancet",
+                        "volume": "384",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Sherrard LJ, Tunney MM, Elborn JS. (2014). Antimicrobial resistance in the respiratory microbiota of people with cystic fibrosis. Lancet384: 703\u2013713. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37927,
+                    "infons": {
+                        "title": "A polymicrobial perspective of pulmonary infections exposes an enigmatic pathogen in cystic fibrosis patients",
+                        "journal": "Proc Natl Acad Sci USA",
+                        "volume": "105",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Sibley CD, Parkins MD, Rabin HR, Duan K, Norgaard JC, Surette MG. (2008). A polymicrobial perspective of pulmonary infections exposes an enigmatic pathogen in cystic fibrosis patients. Proc Natl Acad Sci USA105: 15070\u201315075. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38196,
+                    "infons": {
+                        "title": "Pyrosequencing reveals transient cystic fibrosis lung microbiome changes with intravenous antibiotics",
+                        "journal": "Eur Respir J",
+                        "volume": "44",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Smith DJ, Badrick AC, Zakrzewski M, Krause L, Bell SC, Anderson GJ et al. (2014). Pyrosequencing reveals transient cystic fibrosis lung microbiome changes with intravenous antibiotics. Eur Respir J44: 922\u2013930. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38431,
+                    "infons": {
+                        "title": "Exacerbations in cystic fibrosis: 3. Management",
+                        "journal": "Thorax",
+                        "volume": "63",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Smyth A, Elborn JS. (2008). Exacerbations in cystic fibrosis: 3. Management. Thorax63: 180\u2013184. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38552,
+                    "infons": {
+                        "title": "Long-term cultivation-independent microbial diversity analysis demonstrates that bacterial communities infecting the adult cystic fibrosis lung show stability and resilience",
+                        "journal": "Thorax",
+                        "volume": "67",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Stressmann FA, Rogers GB, van der Gast CJ, Marsh P, Vermeer LS, Carroll MP et al. (2012). Long-term cultivation-independent microbial diversity analysis demonstrates that bacterial communities infecting the adult cystic fibrosis lung show stability and resilience. Thorax67: 867\u2013873. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38861,
+                    "infons": {
+                        "title": "Does bacterial density in cystic fibrosis sputum increase prior to pulmonary exacerbation",
+                        "journal": "J Cyst Fibros",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Stressmann FA, Rogers GB, Marsh P, Lilley AK, Daniels TWV, Carroll MP et al. (2011). Does bacterial density in cystic fibrosis sputum increase prior to pulmonary exacerbation? J Cyst Fibros10: 357\u2013365. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39088,
+                    "infons": {
+                        "journal": "R: A Language and Environment for Statistical Computing",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "The R Development Core Team. (2013) R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing: Vienna, Austria. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39254,
+                    "infons": {
+                        "title": "Partitioning core and satellite taxa from within cystic fibrosis lung bacterial communities",
+                        "journal": "ISME J",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "van der Gast CJ, Walker AW, Stressmann FA, Rogers GB, Scott P, Daniels TW et al. (2011). Partitioning core and satellite taxa from within cystic fibrosis lung bacterial communities. ISME J5: 780\u2013791. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39498,
+                    "infons": {
+                        "title": "Three clinically distinct chronic pediatric airway infections share a common core microbiota",
+                        "journal": "Ann Am Thorac Soc",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "van der Gast CJ, Cuthbertson L, Rogers GB, Pope C, Marsh RL, Redding GJ et al. (2014). Three clinically distinct chronic pediatric airway infections share a common core microbiota. Ann Am Thorac Soc11: 1039\u20131048. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39755,
+                    "infons": {
+                        "title": "Changing thresholds and incidence of antibiotic treatment of cystic fibrosis pulmonary exacerbations, 1995\u20132005",
+                        "journal": "J Cyst Fibros",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "VanDevanter DR, Elkin EP, Pasta DJ, Morgan WJ, Konstan MW. (2013). Changing thresholds and incidence of antibiotic treatment of cystic fibrosis pulmonary exacerbations, 1995\u20132005. J Cyst Fibros12: 332\u2013337. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39986,
+                    "infons": {
+                        "title": "Metabolite transfer with the fermentation product 2,3-butanediol enhances virulence by Pseudomonas aeruginosa",
+                        "journal": "ISME J",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Venkataraman A, Rosenbaum MA, Werner JJ, Winans SC, Angenent LT. (2014). Metabolite transfer with the fermentation product 2,3-butanediol enhances virulence by Pseudomonas aeruginosa. ISME J8: 1210\u20131220. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Pseudomonas aeruginosa",
+                            "infons": {
+                                "identifier": "NCBI:txid287",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 14:14:38",
+                                "parent_taxonomic_id": "NCBI:txid286"
+                            },
+                            "id": "524885",
+                            "locations": {
+                                "length": 22,
+                                "offset": 40146
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 40234,
+                    "infons": {
+                        "title": "Breath gas metabolites and bacterial metagenomes from cystic fibrosis airways indicate active pH neutral 2,3-butanedione fermentation",
+                        "journal": "ISME J",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Whiteson KL, Meinardi S, Lim YW, Schmieder R, Maughan H, Quinn R et al. (2014). Breath gas metabolites and bacterial metagenomes from cystic fibrosis airways indicate active pH neutral 2,3-butanedione fermentation. ISME J8: 1247\u20131258. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40513,
+                    "infons": {
+                        "title": "Inflammation and airway microbiota during cystic fibrosis pulmonary exacerbations",
+                        "journal": "PLoS ONE",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Zemanick ET, Harris JK, Wagner BD, Robertson CE, Sagel SD, Stevens MJ et al. (2013). Inflammation and airway microbiota during cystic fibrosis pulmonary exacerbations. PLoS ONE8: e62917. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40744,
+                    "infons": {
+                        "title": "Decade-long bacterial community dynamics in cystic fibrosis airways",
+                        "journal": "Proc Natl Acad Sci USA",
+                        "volume": "109",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Zhao J, Schloss PD, Kalikin LM, Carmody LA, Foster BK, Petrosino JF et al. (2012). Decade-long bacterial community dynamics in cystic fibrosis airways. Proc Natl Acad Sci USA109: 5809\u20135814. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

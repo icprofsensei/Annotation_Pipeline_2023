@@ -1,0 +1,2593 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC4939962",
+            "inputfile": "../microbiome_corpus_HTML\\PMC4939962.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Machine Learning Meta-analysis of Large Metagenomic Datasets: Tools and Biological Insights",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 91,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Shotgun metagenomic analysis of the human associated microbiome provides a rich set of microbial features for prediction and biomarker discovery in the context of human diseases and health conditions. However, the use of such high-resolution microbial features presents new challenges, and validated computational tools for learning tasks are lacking. Moreover, classification rules have scarcely been validated in independent studies, posing questions about the generality and generalization of disease-predictive models across cohorts. In this paper, we comprehensively assess approaches to metagenomics-based prediction tasks and for quantitative assessment of the strength of potential microbiome-phenotype associations. We develop a computational framework for prediction tasks using quantitative microbiome profiles, including species-level relative abundances and presence of strain-specific markers. A comprehensive meta-analysis, with particular emphasis on generalization across cohorts, was performed in a collection of 2424 publicly available metagenomic samples from eight large-scale studies. Cross-validation revealed good disease-prediction capabilities, which were in general improved by feature selection and use of strain-specific markers instead of species-level taxonomic abundance. In cross-study analysis, models transferred between studies were in some cases less accurate than models tested by within-study cross-validation. Interestingly, the addition of healthy (control) samples from other studies to training sets improved disease prediction capabilities. Some microbial species (most notably Streptococcus anginosus) seem to characterize general dysbiotic states of the microbiome rather than connections with a specific disease. Our results in modelling features of the \u201chealthy\u201d microbiome can be considered a first step toward defining general microbial dysbiosis. The software framework, microbiome profiles, and metadata for thousands of samples are publicly available at http://segatalab.cibio.unitn.it/tools/metaml.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Streptococcus anginosus",
+                            "infons": {
+                                "identifier": "NCBI:txid1328",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:25:30",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "685319",
+                            "locations": {
+                                "length": 23,
+                                "offset": 1713
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 2151,
+                    "infons": {
+                        "section_title_1": "Author Summary",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "The human microbiome\u2013the entire set of microbial organisms associated with the human host\u2013interacts closely with host immune and metabolic functions and is crucial for human health. Significant advances in the characterization of the microbiome associated with healthy and diseased individuals have been obtained through next-generation DNA sequencing technologies, which permit accurate estimation of microbial communities directly from uncultured human-associated samples (e.g., stool). In particular, shotgun metagenomics provide data at unprecedented species- and strain- levels of resolution. Several large-scale metagenomic disease-associated datasets are also becoming available, and disease-predictive models built on metagenomic signatures have been proposed. However, the generalization of resulting prediction models on different cohorts and diseases has not been validated. In this paper, we comprehensively assess approaches to metagenomics-based prediction tasks and for quantitative assessment of microbiome-phenotype associations. We consider 2424 samples from eight studies and six different diseases to assess the independent prediction accuracy of models built on shotgun metagenomic data and to compare strategies for practical use of the microbiome as a prediction tool.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3456,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The human microbiome constitutes the whole set of microbial organisms associated with the human host. It has been shown to be crucial for human health and for the development and maintenance of the immune system and for several metabolic activities [1\u20133]. Significant effort has been devoted to its characterization in healthy individuals and subjects with a variety of diseases such as inflammatory bowel diseases [4,5], obesity [6,7], and type-2 diabetes [8]. Consequently, the potential use of the microbiome as a diagnostic tool is a promising line of investigation [9]. In addition, even when the findings are not immediately relevant for the clinical setting, identifying associations between the microbiome and specific diseases is essential for follow-up mechanistic studies.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4251,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Next-generation DNA sequencing technologies permit comprehensive profiling of the microbial communities from human-associated samples, and have now been sufficiently widely employed to enable meta-analysis for discovering patterns common to independent studies. Meta-analysis has been broadly adopted in other genomics applications, such as for analysis of microarray or RNA-seq data, where multiple studies have been performed for a similar purpose including identifying gene expression signatures of specific human cancers. The general objectives of meta-analysis include proposing new classifiers [10], comparing different classification methods [11], finding a common transcriptional profile [12], and evaluating generalization of prediction models across different studies [13]. In genomics, rigorous meta-analyses are crucial both to validate the findings of each single study, and for providing robust models for clinical purposes.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5189,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The most common and cost-effective approach for microbiome characterization to date targets the 16S rRNA gene as taxonomic marker [14]. Meta-analyses and independent validation of such experimental approach have identified differences in microbiome composition or function by body site, age, and disease state [15\u201317], and have been conducted to determine the most effective techniques for disease classification [18]. More recently, shotgun metagenomics [19] provided expanded resolution to the level of microbial species [20\u201322] and strain [23], to the fungal and viral kingdoms [24], and to the level of individual genes across the metagenome [25,26]. The decreasing cost of shotgun metagenomics is rapidly increasing the number of available human disease-associated datasets; however, the generalization of resulting prediction models is still unclear.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6045,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Improved resolution and lower variability of shotgun metagenomics hold the promise to provide improved generalization of microbial signatures over 16S rRNA sequencing [27]. Meta-analyses on specific host characteristics have been performed (e.g., with respect to host age [28]). The importance of cross-cohort consistency and validation of predictions has also been recognized, with some works assessing the structure of the microbiome in European cohorts [29] and combined European-American cohorts [21, 30]. Some studies focusing on the link between host conditions and microbiome further provided a validation step with respect to other single investigations [31, 32]. Although these works provided a first assessment on the transferability of condition-associated microbiome features across cohorts, no systematic assessments have been performed on clinical outcomes using the full archive of shotgun metagenomic data now publicly available, and no convenient software frameworks for doing so are available in the community.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7073,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In this study we uniformly process 2424 shotgun metagenomic samples from eight studies to assess the independent prediction accuracy of models built on metagenomic data and to compare strategies for practical use of the microbiome as a prediction tool. The software framework and the microbiome profiles for thousands of samples are made publicly available.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7430,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We evaluated alternative approaches to metagenomics-based prediction tasks, and assessed the strength of microbiome-phenotype associations using publicly available raw sequence data. For this purpose, we developed a machine-learning software framework which uses as features quantitative microbiome profiles, including species-level relative abundances and presence of species- and strain-specific markers (see Methods). Our multi-level validation strategy includes the assessment of microbiome models on single cohorts, across stages of the same study, across different studies, and across target outcomes and conditions (Fig 1). The software and validation framework is publicly available at http://segatalab.cibio.unitn.it/tools/metaml and was applied on a total of 2424 publicly available metagenomic samples from eight large-scale studies (see Table 1 and Methods). All samples were processed with MetaPhlAn2 [21] for quantitative species- and subspecies-level taxonomic profiling after standard sequencing data pre-processing (see Methods).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8498,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Cross-validation studies revealed good capabilities for disease prediction",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We first assessed the prediction power of metagenomic data in linking the gut microbiome with disease states. For such purpose, we considered six available disease-associated metagenomic datasets spanning five diseases: liver cirrhosis [33], colorectal cancer [34], inflammatory bowel diseases (IBD) [35], obesity [31], and type 2 diabetes (two distinct studies\u2014[37] and [32]). Each dataset was analyzed independently using cross-validation (denoted as CV in Fig 1), which repeatedly uses part of the samples with associated known phenotype for learning the statistical model, and the remainder for validating the predictions (see Methods). The support vector machines (SVM) [38] and random forest (RF) [39] classifiers were used for this evaluation as they are state-of-the-art approaches and are appropriate for this type of data [18]. We also evaluated Lasso [40] and elastic net (ENet) [41] regularized multiple logistic regression. Neural networks [42] and Bayesian logistic regression [43] represent other possible alternatives not evaluated here.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9625,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Cross-validation studies revealed good capabilities for disease prediction",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Prediction performance was evaluated by the area under the curve (AUC) metric, which summarizes true positive and false positive rates and is robust to unequal proportions of each outcome. Using MetaPhlAn2 species abundance [21] as input data produced high accuracy for disease classification (Fig 2), although prediction performance varied considerably between datasets. The most predictable disease state appears to be liver cirrhosis (AUC = 0.945, 95% CI: 0.909\u20130.981 for the best classifier), followed by colorectal cancer (AUC = 0.873, 95% CI: 0.802\u20130.944), and IBD (AUC = 0.890, 95% CI: 0.812\u20130.968). For IBD we considered Crohn and ulcerative colitis patients together due to the low number of cases in the datasets compared to controls (as general rule at least ten samples per class are required for reliable prediction models). Stronger signatures might be found when considering the two conditions separately with adequate sample size, as it has been observed that some bacterial features are specific to Crohn disease only [16]. Confounding factors such as active treatment could of course lead to overestimated prediction capabilities [44, 45], but we adopted here the same contrasting approach used in the original works.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10860,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Cross-validation studies revealed good capabilities for disease prediction",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "For the other diseases we achieved lower discrimination capabilities, suggesting less dramatic microbial shifts in the patients. For type 2 diabetes, although the two considered datasets have independently sampled and geographically distinct cohorts, we obtained very similar AUC values for both (0.744, 95% CI: 0.688\u20130.800 and 0.762, 95% CI: 0.651\u20130.873 for T2D and WT2D, respectively). Prediction of obesity generated the lowest AUC (0.655, 95% CI: 0.576\u20130.734). Despite a wide range of classification performances, all investigated datasets showed a substantial level of association between disease and the microbiome (Fig 2), with AUC values significantly higher than those obtained by the same classifier applied to the same data with shuffled class labels (p-values ranging from 9.9 \u00d7 10\u22123 for obesity to 5.6 \u00d7 10\u22127 for cirrhosis, S1 Table).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11707,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Cross-validation studies revealed good capabilities for disease prediction",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Comparing the accuracy of SVM and RF classifiers, RFs exhibited in all cases similar or better results than SVM. In particular, accuracies differed substantially for three datasets: AUC increased from 0.809 to 0.873 for colorectal, from 0.663 to 0.744 for T2D (difference also supported by statistical significance, p-value 0.011, see S1 Fig), and from 0.664 to 0.762 for WT2D. In two cases, slight improvements were verified: AUC increased from 0.922 to 0.945 for cirrhosis and from 0.862 to 0.890 for IBD. Methodologically, our results thus suggested the use of RFs for disease prediction from species abundances.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12322,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Feature selection and strain-specific markers improve prediction accuracy",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We then investigated how feature selection, i.e., the procedure of selecting a reduced subset of relevant discriminative features, impacts the prediction accuracy. To this end, we used the RF classifier that implicitly embeds a feature selection step during the model generation phase (see Methods). Feature selection produced a slight improvement of the AUC in all the cases when the model was generated on a reduced set of species (Fig 3). The advantage of this procedure is twofold. In addition to the increased accuracy, it enables biomarker discovery by detecting the (few) species that are most useful to discriminate between \u201chealthy\u201d and \u201cdiseased\u201d subjects. These most discriminative species may be prioritized when performing follow-up and validation analyses, and the reduced complexity of the model potentially enables additional evaluations on low-throughput assays. However, the best accuracies were obtained with still relatively high numbers of species, i.e., more than 60 (S2 Fig). This confirms the complexity of microbial ecosystems where the combination of few species is probably not sufficient to characterize the microbiome associated with complex diseases.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13575,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Feature selection and strain-specific markers improve prediction accuracy",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We then investigated the use of strain-specific markers, as opposed to species-level taxonomic abundance, by applying the same classification and cross-validation methods to strain-specific microbial features generated by MetaPhlAn2. Given their strain-specificity, adopting markers as features let us also test the hypothesis that complex diseases are associated with the presence of specific strains or subspecies rather than only species-level abundances. Consistent with this hypothesis, better predictions were obtained from markers (Fig 2) than species abundance, with differences that were statistically significant for one dataset (S1 Fig). This was obtained using SVM with linear kernel, which in this context is more practical to use than RF and SVM with more complex kernels due to the very high dimensionality (~100K features) of the data. Focusing on SVM, markers gave statistically significant improvements with respect to species abundances in half of the datasets (S1 Fig). Moreover, RF in combination with feature selection (RF-FS:Emb) achieved satisfactory classification results, i.e., average accuracies were usually worse than SVM but with no statistically significant difference (S1 Fig) even using a very limited portion (<0.2%, S2 Fig) of the investigated markers. The biomarker discovery step here is of particular interest because it permits identification of a limited set of strain-specific markers potentially directly involved in the association with disease.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15064,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Feature selection and strain-specific markers improve prediction accuracy",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We also considered alternative approaches to feature selection based on Lasso and ENet (see Methods). Applying Lasso or ENet as pure classifiers, which implicitly incorporates the feature selection and classification steps, did not give satisfactory results, with AUC worse than RF or SVM for both species abundance and marker features (S3 Fig). Better accuracies were obtained by using them for feature selection only, followed by RF or SVM classification. However, both Lasso and ENet feature selection in general worsened the performance of RF and SVM without prior feature selection. Finally, ENet worked better than Lasso, although it was associated with more time-consuming tuning of its free parameters on a two-dimensional grid.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15800,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Detection of the disease-associated microbial features",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Feature selection can also be used for biomarker discovery, and several tools have been developed specifically for this task in metagenomics [46\u201348]. The approach proposed here (RF with embedded feature selection) focuses on the set of features with the most discriminating power rather than on strictly statistical assessments [46] or statistical assessment coupled with effect size [47]. The implemented tool automatically plots the most relevant species (or markers) with the importance factor (see Methods) along with the average relative abundance (or average presence) associated with the different considered classes. We observed a reasonable level of overlap between the detected species and markers, as the most discriminative markers tended to represent strains of the most discriminative species. Interestingly, for all the considered datasets (Fig 4 and S4 Fig) the importance factor attributed to each species (or marker) was not well correlated with its average relative abundance (or presence) in the samples (maximum correlation of 0.49 for the T2D dataset, S5 Fig). In several cases, we detected relevant species with partial prevalence but highly discriminative potential between \u201chealthy\u201d and \u201cdiseased\u201d subjects. For example, Peptostreptococcus stomatis resulted the most discriminative species in the colorectal dataset with an average relative abundance in the samples less than 0.15%.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Peptostreptococcus stomatis",
+                            "infons": {
+                                "identifier": "NCBI:txid341694",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:14",
+                                "parent_taxonomic_id": "NCBI:txid1257"
+                            },
+                            "id": "685320",
+                            "locations": {
+                                "length": 27,
+                                "offset": 17046
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 17261,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Detection of the disease-associated microbial features",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "In the cirrhosis dataset, the most relevant taxonomic abundances were enriched in diseased patients. The top features were especially related to the Veillonella (Veillonella spp., Veillonella dispar, Veillonella parvula, and Veillonella atypica) and Streptococcus genera (Streptococcus anginosus and Streptococcus parasanguinis) in addition to Haemophilus parainfluenzae, which is consistent with findings of the original study [33]. Species belonging to Veillonella and Streptococcus are typical colonizers of the oral cavity, but they are often overgrown in the small intestine in patients affected by liver cirrhosis, thus suggesting the invasion of the gut from the mouth in these patients [33]. Moreover, species such as Veillonella spp., V. dispar, V. atypica, and S. anginosus were already associated with opportunistic infections [33]. Also the H. parainfluenzae pathogen may arrive to the gut from the oral cavity [33]. In the colorectal dataset we identified five major species: P. stomatis, Fusobacterium nucleatum (both enriched in diseased patients) and Streptococcus salivarius (depleted in diseased subjects) as found in the original study [34], in addition to Parvimonas spp. and Parvimonas micra.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:16",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "685321",
+                            "locations": {
+                                "length": 11,
+                                "offset": 17410
+                            }
+                        },
+                        {
+                            "text": "Veillonella spp",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:16",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "685322",
+                            "locations": {
+                                "length": 15,
+                                "offset": 17422
+                            }
+                        },
+                        {
+                            "text": "Veillonella dispar",
+                            "infons": {
+                                "identifier": "NCBI:txid39778",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:16",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "685323",
+                            "locations": {
+                                "length": 18,
+                                "offset": 17441
+                            }
+                        },
+                        {
+                            "text": "Veillonella parvula",
+                            "infons": {
+                                "identifier": "NCBI:txid29466",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:16",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "685324",
+                            "locations": {
+                                "length": 19,
+                                "offset": 17461
+                            }
+                        },
+                        {
+                            "text": "Veillonella atypica",
+                            "infons": {
+                                "identifier": "NCBI:txid39777",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:16",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "685325",
+                            "locations": {
+                                "length": 19,
+                                "offset": 17486
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:16",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "685326",
+                            "locations": {
+                                "length": 13,
+                                "offset": 17511
+                            }
+                        },
+                        {
+                            "text": "Streptococcus anginosus",
+                            "infons": {
+                                "identifier": "NCBI:txid1328",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:16",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "685327",
+                            "locations": {
+                                "length": 23,
+                                "offset": 17532
+                            }
+                        },
+                        {
+                            "text": "Streptococcus parasanguinis",
+                            "infons": {
+                                "identifier": "NCBI:txid1318",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:16",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "685328",
+                            "locations": {
+                                "length": 27,
+                                "offset": 17561
+                            }
+                        },
+                        {
+                            "text": "Haemophilus parainfluenzae",
+                            "infons": {
+                                "identifier": "NCBI:txid729",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:16",
+                                "parent_taxonomic_id": "NCBI:txid724"
+                            },
+                            "id": "685329",
+                            "locations": {
+                                "length": 26,
+                                "offset": 17605
+                            }
+                        },
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:17",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "685330",
+                            "locations": {
+                                "length": 11,
+                                "offset": 17716
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:17",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "685331",
+                            "locations": {
+                                "length": 13,
+                                "offset": 17732
+                            }
+                        },
+                        {
+                            "text": "Veillonella spp",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:19",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "685332",
+                            "locations": {
+                                "length": 15,
+                                "offset": 17987
+                            }
+                        },
+                        {
+                            "text": "V. dispar",
+                            "infons": {
+                                "identifier": "NCBI:txid39778",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:19",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "685333",
+                            "locations": {
+                                "length": 9,
+                                "offset": 18005
+                            }
+                        },
+                        {
+                            "text": "V. atypica",
+                            "infons": {
+                                "identifier": "NCBI:txid39777",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:19",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "685334",
+                            "locations": {
+                                "length": 10,
+                                "offset": 18016
+                            }
+                        },
+                        {
+                            "text": "S. anginosus",
+                            "infons": {
+                                "identifier": "NCBI:txid1328",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:19",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "685335",
+                            "locations": {
+                                "length": 12,
+                                "offset": 18032
+                            }
+                        },
+                        {
+                            "text": "H. parainfluenzae",
+                            "infons": {
+                                "identifier": "NCBI:txid729",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:20",
+                                "parent_taxonomic_id": "NCBI:txid724"
+                            },
+                            "id": "685336",
+                            "locations": {
+                                "length": 17,
+                                "offset": 18114
+                            }
+                        },
+                        {
+                            "text": "P. stomatis",
+                            "infons": {
+                                "identifier": "NCBI:txid341694",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:21",
+                                "parent_taxonomic_id": "NCBI:txid1257"
+                            },
+                            "id": "685337",
+                            "locations": {
+                                "length": 11,
+                                "offset": 18250
+                            }
+                        },
+                        {
+                            "text": "Fusobacterium nucleatum",
+                            "infons": {
+                                "identifier": "NCBI:txid851",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:21",
+                                "parent_taxonomic_id": "NCBI:txid848"
+                            },
+                            "id": "685338",
+                            "locations": {
+                                "length": 23,
+                                "offset": 18263
+                            }
+                        },
+                        {
+                            "text": "Streptococcus salivarius",
+                            "infons": {
+                                "identifier": "NCBI:txid1304",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:21",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "685339",
+                            "locations": {
+                                "length": 24,
+                                "offset": 18328
+                            }
+                        },
+                        {
+                            "text": "Parvimonas spp.",
+                            "infons": {
+                                "identifier": "NCBI:txid543311",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:22",
+                                "parent_taxonomic_id": "NCBI:txid1570339"
+                            },
+                            "id": "685340",
+                            "locations": {
+                                "length": 15,
+                                "offset": 18437
+                            }
+                        },
+                        {
+                            "text": "Parvimonas micra",
+                            "infons": {
+                                "identifier": "NCBI:txid33033",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:22",
+                                "parent_taxonomic_id": "NCBI:txid543311"
+                            },
+                            "id": "685341",
+                            "locations": {
+                                "length": 16,
+                                "offset": 18457
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 18474,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Detection of the disease-associated microbial features",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We then compared the discriminative species across datasets through hierarchical clustering (S6 Fig). We found some species that were distinctive of one disease only as it is the case for P. stomatis, P. micra and Gemella morbillorum in colorectal cancer, multiple Veillonella species in cirrhosis, and, partially, Bifidobacterium bifidum and Lachnospiraceae in IBD. Interestingly, F. nucleatum was highly discriminant both in colorectal cancer and cirrhosis, suggesting the presence of a similar dysbiosis niche for this organism. Overall, the discriminative species for the two diabetes datasets and the obesity dataset had lower weights, consistent with the lower classification performances achieved with them. Moreover, the pattern of discriminative species for these two datasets clustered together (S6 Fig), suggesting similar dysbiotic configurations of the gut microbiome for obesity and type-2 diabetes. Some species were also found in the set of top discriminative features for all the studies, in particular S. salivarius, S. anginosus, V. parvula, Roseburia intestinalis, and Coprococcus comes. These species might thus be biomarkers of general dysbiosis or ecological community stress in non-healthy states, and should be recognized as such in future disease-microbiome association studies.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "P. stomatis",
+                            "infons": {
+                                "identifier": "NCBI:txid341694",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:23",
+                                "parent_taxonomic_id": "NCBI:txid1257"
+                            },
+                            "id": "685342",
+                            "locations": {
+                                "length": 11,
+                                "offset": 18662
+                            }
+                        },
+                        {
+                            "text": "P. micra",
+                            "infons": {
+                                "identifier": "NCBI:txid33033",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:23",
+                                "parent_taxonomic_id": "NCBI:txid543311"
+                            },
+                            "id": "685343",
+                            "locations": {
+                                "length": 8,
+                                "offset": 18675
+                            }
+                        },
+                        {
+                            "text": "Gemella morbillorum",
+                            "infons": {
+                                "identifier": "NCBI:txid29391",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:23",
+                                "parent_taxonomic_id": "NCBI:txid1378"
+                            },
+                            "id": "685344",
+                            "locations": {
+                                "length": 19,
+                                "offset": 18688
+                            }
+                        },
+                        {
+                            "text": "Veillonella",
+                            "infons": {
+                                "identifier": "NCBI:txid29465",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:24",
+                                "parent_taxonomic_id": "NCBI:txid31977"
+                            },
+                            "id": "685345",
+                            "locations": {
+                                "length": 11,
+                                "offset": 18739
+                            }
+                        },
+                        {
+                            "text": "Bifidobacterium bifidum",
+                            "infons": {
+                                "identifier": "NCBI:txid1681",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:24",
+                                "parent_taxonomic_id": "NCBI:txid1678"
+                            },
+                            "id": "685346",
+                            "locations": {
+                                "length": 23,
+                                "offset": 18789
+                            }
+                        },
+                        {
+                            "text": "Lachnospiraceae",
+                            "infons": {
+                                "identifier": "NCBI:txid186803",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:24",
+                                "parent_taxonomic_id": "NCBI:txid186802"
+                            },
+                            "id": "685347",
+                            "locations": {
+                                "length": 15,
+                                "offset": 18817
+                            }
+                        },
+                        {
+                            "text": "F. nucleatum",
+                            "infons": {
+                                "identifier": "NCBI:txid851",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:24",
+                                "parent_taxonomic_id": "NCBI:txid848"
+                            },
+                            "id": "685348",
+                            "locations": {
+                                "length": 12,
+                                "offset": 18856
+                            }
+                        },
+                        {
+                            "text": "S. salivarius",
+                            "infons": {
+                                "identifier": "NCBI:txid1304",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:28",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "685349",
+                            "locations": {
+                                "length": 13,
+                                "offset": 19494
+                            }
+                        },
+                        {
+                            "text": "S. anginosus",
+                            "infons": {
+                                "identifier": "NCBI:txid1328",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:29",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "685350",
+                            "locations": {
+                                "length": 12,
+                                "offset": 19509
+                            }
+                        },
+                        {
+                            "text": "V. parvula",
+                            "infons": {
+                                "identifier": "NCBI:txid29466",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:29",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "685351",
+                            "locations": {
+                                "length": 10,
+                                "offset": 19523
+                            }
+                        },
+                        {
+                            "text": "Roseburia intestinalis",
+                            "infons": {
+                                "identifier": "NCBI:txid166486",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:29",
+                                "parent_taxonomic_id": "NCBI:txid841"
+                            },
+                            "id": "685352",
+                            "locations": {
+                                "length": 22,
+                                "offset": 19535
+                            }
+                        },
+                        {
+                            "text": "Coprococcus comes",
+                            "infons": {
+                                "identifier": "NCBI:txid410072",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:27:29",
+                                "parent_taxonomic_id": "NCBI:txid33042"
+                            },
+                            "id": "685353",
+                            "locations": {
+                                "length": 17,
+                                "offset": 19563
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 19778,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Extension to non-disease classification problems",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We extended the cross-validation analysis by evaluating the predictability for non-disease based classification problems. Gender discrimination (S7 Fig, part a) exhibited in general low classification accuracy with an AUC close or less than 0.6 for most of the considered datasets. However, statistically significant discrimination was verified in some cases (AUC equal to 0.662 and 0.796 for skin and IBD dataset, respectively, both p < 0.05 by permutation test with shuffled labels), which may suggest some gender-dependent differences in the human microbiome as highlighted by recent studies [49]. High classification accuracy in body site prediction in the Human Microbiome Project (HMP) dataset (AUC = 0.96), is consistent with previously reported large differences in the microbiome composition among different body areas [1], and provided validation of the proposed tool for multi-class classification problems (S8 Fig). The confusion matrix revealed moderate misclassification between nasal and skin body sites, which may be due to nasal samples being taken from the anterior nares (external part of the nostrils), and thus having relatively similar biochemical characteristics compared to skin samples from the retroauricular crease.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21068,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Metagenomic disease-predictive models show strong cross-stage generalization",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "The cross-validation studies discussed in previous sections permitted evaluation of the predictability of different disease states from the human microbiome. However, they are not necessarily a good proxy to evaluate the generalization of the prediction model to independent validation samples, a scenario more relevant to a clinical setting but that has been scarcely investigated. Specifically, how do prediction models perform when applied to samples generated in an independent clinical and laboratory study? We address this question for several problems of increasing complexity (denoted as CStaV in Fig 1).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 21756,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Metagenomic disease-predictive models show strong cross-stage generalization",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We first considered the cirrhosis dataset, in which the samples were acquired in two distinct stages named \u201cdiscovery\u201d and \u201cvalidation\u201d (Fig 5). The generalization of the model was evaluated by (i) generating the model on the samples of the training (TR) stage and (ii) applying it on the test (TS) stage. For comparison, we also report the cross-validation results obtained on each specific stage. In general, we found that the model was transferred properly from one stage to the other. In fact, RF applied on species abundance produced an AUC value on the discovery stage that was only slightly decreased from 0.936 (for cross-validation) to 0.919. For the validation stage we actually obtained an increase from 0.958 (for cross-validation) to 0.972, and the marker-based predictions achieved slightly better but overall consistent values (Fig 5). Finally, we note that the AUC achieved on each specific stage were in line with the AUC exhibited by cross-validation using the entire set of samples (0.945).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22765,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Metagenomic disease-predictive models show strong cross-stage generalization",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "A similar analysis was done on the T2D dataset, in which samples were collected in two different stages (stageI and stageII, Fig 6). We verified sufficient generalization of the model across the two stages, although we observed a decrease in accuracy relative to cross-validation. AUC for RF on species abundance decreased from a cross-validation value of 0.737 (0.735 for marker presence) to 0.661 (0.639) for stageI, and from 0.743 (0.771) to 0.686 (0.672) for stageII. In general, the results obtained on the cirrhosis and T2D datasets provide reasonably good generalization of the model when applied across disease stages, i.e., to independent samples/batches from the same study. This implies that the samples, although associated with different subjects and acquired at different time points, share common characteristics such the population of study, sample collection approach, DNA extraction protocol, sequencing technology, and analysis strategy [19].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23726,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Cross-study generalization is improved by including healthy samples from other cohorts",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Cross-study validation (denoted as CSV in Fig 1) is a more difficult standard of validation than cross-stage validation, in that training and validation are performed in completely independent studies targeting the same disease. We focused on type-2 diabetes, for which two distinct datasets are available (i.e., T2D and WT2D). The two datasets presented very different population characteristics as T2D targeted Chinese subjects while WT2D enrolled European women. Still, we observed generalization from one study to the other, (Fig 6), although cohort effects clearly affected the results. For validation on the T2D dataset, the AUC for RF on species abundance decreased from a cross-validation value of 0.744 (0.747 for marker presence) to 0.569 (0.566) when the model was constructed on the WT2D dataset. Similarly, for validation on the WT2D dataset, AUC decreased from a cross-validation value of 0.762 (0.739) to 0.664 (0.622). Different results were achieved by transferring the model to WT2D from the two different experimental stages of the T2D dataset. We obtained an AUC of 0.585 (0.595) and 0.689 (0.637) by transferring the model from T2D_stageI and T2D_stageII, respectively, indicating that T2D_stageII was more similar than T2D_stageI to WT2D. This similarity was consistent with integrative correlation [50] between the feature relative importance scores obtained on the considered stage of T2D and those on WT2D (S2 Table). The features of T2D_stageII were more correlated to WT2D than were T2D_stageI features, in agreement with the prediction accuracies.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25387,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Cross-study generalization is improved by including healthy samples from other cohorts",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Cross-study validation of T2D classification was improved by adding gut microbiome samples from the healthy subjects of four other datasets, i.e., cirrhosis, colorectal, HMP, and IBD, to the training data. While we included all the control groups as \u201chealthy\u201d, there is the potential for health problems among some control subjects. However, it is standard practice in case-control studies to exclude known disease conditions from control groups, so we can assume that, even in the worst case, just a few diseased patients may be included in the controls and these may be mostly due to undiagnosed cases. In this setting we tested the generalization of the model across cohorts (Fig 7A) by generating the models on all the available samples apart those associated with the dataset considered for testing, a \"leave-one-dataset-out\" cross-study validation [51] (denoted as lodoCSV in Fig 1). Interestingly, we obtained improved discrimination for T2D when control samples from multiple independent studies were added to training sets, with a high cross-validation AUC score in predicting type-2 diabetes on the entire set of samples (0.837/0.806 for species abundance and marker presence using RF, respectively). These values were in fact higher than the AUC obtained by merging all the T2D and WT2D samples into a single set and cross-validating them (0.743/0.736). This cross-validation accuracy was reduced when we tested the generalization of the model to the two T2D datasets (from 0.743/0.736 to 0.655/0.653 and 0.709/0.679 for T2D and WT2D, respectively), which confirmed a non-complete generalization of the model across cohorts. Interestingly, such values obtained by including healthy samples from other cohorts were again higher than for models constructed only on the T2D or WT2D datasets (Fig 6). Thus, including healthy samples from independent cohorts was effective at improving the detection of T2D status. Finally, we evaluated generalization on the healthy samples of the four other datasets (prediction assessed in terms of overall accuracy\u2013OA, right part of Fig 7A). In such cases we verified high accuracy (i.e., OA close to 1 for all the considered datasets), confirming correct prediction for most of the control samples. Addition of independent healthy samples to training sets was also performed for gender prediction (S7 Fig, part b), also resulting in increased accuracy, although the discrimination capabilities remained generally low. Overall, these results strongly suggest that the inclusion of samples of healthy individuals from unrelated cohorts is beneficial in disease-targeted investigations, especially when the prediction task has to be generalized to new cohorts.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28088,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Avoiding overfitting is crucial to generalization on different cohorts",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We compared the cross-validation accuracies that we obtained (Fig 3) with results reported in the original papers, when available. For cirrhosis, our best AUC value was 0.963, higher than the cross-validation result reported in [33] (AUC = 0.838). Slight improvements were also verified for colorectal cancer (AUC = 0.881 against the 0.84 reported in [34]). The best AUC for discrimination of IBD patients in the IBD dataset was 0.914, while a similar analysis was not performed in the original paper [35].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28664,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Avoiding overfitting is crucial to generalization on different cohorts",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "For the other datasets (i.e., obesity, T2D, and WT2D), the original works used a two-step procedure that tends to overstate discrimination accuracy: i) first a statistical test was applied on the entire set of samples to select the most discriminative features, then ii) the model was generated on this set of features and the prediction accuracies were estimated directly on the training set or through a cross-validation approach. This approach overestimates accuracy metrics such as AUC because supervised feature selection is applied on the same data used to evaluate the model, a problem referred by the machine learning community as overfitting [52]. When we adopted the same overfitting-prone procedure, our cross-validation accuracy estimates (especially using marker features) were higher than the original ones for all datasets (S9 Fig), but as discussed these are overestimations of the actual discriminative power of the models.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29604,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Avoiding overfitting is crucial to generalization on different cohorts",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Conversely, the overfitting-prone method resulted in much worse performance when the model was transferred to different cohorts. For example, the results reported in [32] showed an AUC equal to 0.83 when cross-validating on WT2D, which decreased significantly to 0.66 when the model was transferred from the T2D dataset. For the same dataset, we estimated an AUC of 0.785 (Fig 3) and 0.701 (Fig 6) by (non-overfitted) cross-validation and cross-study validation, respectively. Non-overfitted models in general exhibit cross-validation accuracies that are lower, but better represent the ultimate goal of generalization of the model to independent cohorts.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30259,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Avoiding overfitting is crucial to generalization on different cohorts",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We stress that the use of a strict, complete cross-validation/cross-study validation approach is necessary in metagenomics. For cross-validation this requires that for each fold, all training steps (including feature selection, model selection, and model construction) are applied on a set of samples that are not overlapping with the samples used for model evaluation/testing. This, together with reducing confounding factors such as antibiotic usage, is necessary for non-overfitted and non-overestimated assessment of the prediction capabilities of metagenomic data.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30828,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Modelling the \u201chealthy\u201d microbiome: Cross-disease prediction",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We finally tested the hypothesis that the distinction between the \u201chealthy\u201d and disease-associated gut microbiome can be generalized to diseases for which training information is not available. For this purpose, we considered all gut samples from the disease-associated datasets for a total of 903 samples (Fig 7B). Here the class \u201cdiseased\u201d included patients affected by the set of disparate diseases discussed above. The cross-validation analysis on the entire set of samples exhibited satisfactory results (AUC = 0.821 for the best model; most discriminative features are reported in S10 Fig, part a, although in this scenario the model may in reality classify each type of disease separately from the others. More interesting are the results of cross-study and cross-disease prediction. In such cases the disease associated with the testing cohort was not present in the datasets used to generate the model. Although the obtained AUC were lower than the disease-specific cross-validation results reported previously in Fig 3, we still verified in all cases a certain level of generalization of the model. In particular, the AUC varied between 0.628 (for T2D) and 0.872 (for cirrhosis). This represents an intriguing result that can be associated to the task of modelling the features of the \u201chealthy\u201d microbiome for use as a dysbiosis prediction model for syndromes where few or no training samples are available. As expected, several disease-specific species such as G. morbillorum, B. bifidum and P. micra were not among the most discriminative, the diseases with which they are correlated are not in the training set (S10 Fig, part b). Conversely, species discriminative for multiple diseases (S. salivarius, S. anginosus, V. parvula, R. intestinalis, and C. comes) are even more relevant here, confirming that these species are associated to a general non-healthy microbiome state rather than to specific host conditions (especially S. anginosus, which is the most relevant feature for four of the five testing datasets). Overall, this suggests that the dysbiosis-associated microbiome is partially distinct from the healthy microbiome regardless of the specific disease under investigation. This also confirms that study-specific confounding factors [44, 45] are only partially affecting the estimation of the classification performance. These species identified as associated to general microbiome dysbiosis should be considered in future microbiome studies as non-specific responses to dysbiosis rather than as organisms directly involved in the pathogenesis of the disease under study.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "G. morbillorum",
+                            "infons": {
+                                "identifier": "NCBI:txid29391",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:28:57",
+                                "parent_taxonomic_id": "NCBI:txid1378"
+                            },
+                            "id": "685354",
+                            "locations": {
+                                "length": 14,
+                                "offset": 32300
+                            }
+                        },
+                        {
+                            "text": "B. bifidum",
+                            "infons": {
+                                "identifier": "NCBI:txid1681",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:28:57",
+                                "parent_taxonomic_id": "NCBI:txid1678"
+                            },
+                            "id": "685355",
+                            "locations": {
+                                "length": 10,
+                                "offset": 32316
+                            }
+                        },
+                        {
+                            "text": "P. micra",
+                            "infons": {
+                                "identifier": "NCBI:txid33033",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:28:57",
+                                "parent_taxonomic_id": "NCBI:txid543311"
+                            },
+                            "id": "685356",
+                            "locations": {
+                                "length": 8,
+                                "offset": 32331
+                            }
+                        },
+                        {
+                            "text": "S. salivarius",
+                            "infons": {
+                                "identifier": "NCBI:txid1304",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:28:58",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "685357",
+                            "locations": {
+                                "length": 13,
+                                "offset": 32528
+                            }
+                        },
+                        {
+                            "text": "S. anginosus",
+                            "infons": {
+                                "identifier": "NCBI:txid1328",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:28:59",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "685358",
+                            "locations": {
+                                "length": 12,
+                                "offset": 32544
+                            }
+                        },
+                        {
+                            "text": "V. parvula",
+                            "infons": {
+                                "identifier": "NCBI:txid29466",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:28:59",
+                                "parent_taxonomic_id": "NCBI:txid29465"
+                            },
+                            "id": "685359",
+                            "locations": {
+                                "length": 10,
+                                "offset": 32558
+                            }
+                        },
+                        {
+                            "text": "R. intestinalis",
+                            "infons": {
+                                "identifier": "NCBI:txid166486",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:28:59",
+                                "parent_taxonomic_id": "NCBI:txid841"
+                            },
+                            "id": "685360",
+                            "locations": {
+                                "length": 15,
+                                "offset": 32570
+                            }
+                        },
+                        {
+                            "text": "C. comes",
+                            "infons": {
+                                "identifier": "NCBI:txid410072",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:28:59",
+                                "parent_taxonomic_id": "NCBI:txid33042"
+                            },
+                            "id": "685361",
+                            "locations": {
+                                "length": 8,
+                                "offset": 32591
+                            }
+                        },
+                        {
+                            "text": "S. anginosus",
+                            "infons": {
+                                "identifier": "NCBI:txid1328",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 04:29:00",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "685362",
+                            "locations": {
+                                "length": 12,
+                                "offset": 32769
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 33485,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Conclusion",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "We uniformly processed shotgun metagenomic microbiome data for 2424 samples from 8 studies of 6 disease types, and used cross-validation, cross-study validation, and cross-disease validation to evaluate the accuracy of candidate methods of predictive modelling of disease states. We make recommendations of best approaches and non-overfitted practices for using the microbiome as a prediction tool and discuss species and strain-level biomarkers we identified for single and combined datasets. While in this manuscript we focused on taxonomic information, metagenomic functional data such as gene or gene-family abundance data [53] can be exploited in a similar way to conduct a more advanced function-based analysis. Future work will be devoted to exploring more advanced machine learning strategies to further improve classification performance.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34342,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Conclusion",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "In general, cross-validation revealed good prediction capabilities, however classification results varied considerably between prediction tasks. In some cases, the ability to predict disease in undiagnosed cases may be overestimated due to the presence of confounding factors such as active antibiotics treatment. The influence of confounding factors on human microbiome has been scarcely investigated in the literature [54, 55], but recent studies [44, 45] highlight this problem and question the study design of some works.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34867,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Conclusion",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Cross-study validation involved evaluating the transferability of prediction models between completely independent patient cohorts. We verified generalization across studies, although transferred models were in some cases less accurate than models tested by within-study cross-validation. Interestingly, the inclusion of healthy (control) samples from independent cohorts in training sets was effective for improving the transferability of predictions. We emphasize that considering cross-study performance, instead of the more traditional cross-validation approach, is necessary to understanding prediction capabilities from metagenomic data [56]. Furthermore, avoiding overfitting is crucial for transferring models between different cohorts. Finally, we obtained promising results in the ambitious task of modelling the features of the \u201chealthy\u201d microbiome for use as a dysbiosis prediction model for syndromes where few or no training samples are available. Importantly, this setting is not affected by confounding factors on the target dataset since target samples are not used to build the model. The identified biomarkers for the \u201chealthy\u201d versus \u201cdysbiosis\u201d-associated microbiome are also very important for future microbiome studies of new diseases, because if the same biomarkers are appearing as discriminatory they should be regarded as general dysbiotic organisms rather than microbes directly in involved in the disease under investigation.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36321,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Conclusion",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "Compared to the considerable amount of work done on learning methods for 16S rRNA studies, our contribution emphasized two strengths unique to the shotgun metagenomic approach. First, we showed that improved performance can be achieved using strain-level genomic features (i.e., markers) that are not available from 16S rRNA studies. This is also a confirmation that many disease phenotypes are likely linked with microbial genes and factors that are not \u201ccore\u201d components of microbial species, but rather are encoded in variable genomic portions that are strain- or subspecies-specific. Second, despite the common potential biases in DNA extraction, shotgun sequencing is considered more consistent across studies than 16S rRNA sequencing for which different variable regions and primer choices are available [57\u201359], and thus quantitative microbial signature are inherently less difficult to transfer across cohorts and populations. From a more technical viewpoint, learning analysis in shotgun metagenomes presents distinct challenges due to the very high dimensionality of the dataset when considering strain-level markers (~100K features), requiring different considerations in machine learning than for 16S rRNA datasets. Altogether, we provide the first validated toolbox for disease prediction across studies using shotgun metagenomics.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37665,
+                    "infons": {
+                        "section_title_1": "Results and Discussion",
+                        "section_title_2": "Conclusion",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318",
+                        "iao_name_2": "discussion section",
+                        "iao_id_2": "IAO:0000319"
+                    },
+                    "text": "This study provides a publicly available software framework and uniformly processed microbiome profiles for thousands of samples, to facilitate follow-up studies and evaluation of new methods for classification of disease and other states using metagenomic data. This tool allowed us to assess the predictive power of the microbiome features with respect to disease states and transferability across independent datasets. On a final note, we notice that meta-analyses like the one we performed here were recently regarded as \u201cresearch parasitism\u201d [60], because we analyse data produced by other laboratories. The analysis of cross-study predictions, and identification of a dysbiotic microbiome, would not be possible any other way. We hope that not only will these results inform future clinical microbiome studies of disease, but that they promote data transparency and re-use as key components of scientific progress.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38585,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "The proposed tool",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We developed a computational tool for metagenomics-based prediction tasks based on machine learning classifiers (i.e., support vector machines (SVMs), random forests (RFs), Lasso, and Elastic Net (ENet)). The tool uses as features quantitative microbiome profiles including species-level relative abundances and presence of strain-specific markers. The framework is fully automatic, including model and feature selection, permitting a systematic and non-overfitted analysis of large metagenomic datasets. Two main kinds of analysis are implemented, i.e., cross-validation (to evaluate the prediction strength of metagenomic data) and cross-study (to evaluate the generalization of the model between different studies). Additionally, the most relevant features are detected for biomarker discovery tasks. Finally, a set of tools is provided to evaluate classification performances in different ways including i) evaluation metrics such as overall accuracy (OA), precision, recall, F1, and area under the curve (AUC); ii) receiver operating characteristic (ROC) curve plots; iii) confusion matrices; iv) plots of the most relevant features in addition to average relative abundances; and v) heatmap figures.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39814,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "The proposed tool",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The MetAML (Metagenomic prediction Analysis based on Machine Learning) tool is open-source and available online at http://segatalab.cibio.unitn.it/tools/metaml. All the species-level taxonomic profiling and marker presence and absence data generated by MetaPhlAn2 and used in this paper are available at the same address.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40135,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "The adopted machine learning tools",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The developed tool incorporates four classification approaches (i.e. SVM, RF, Lasso, and ENet) which have been extensively applied in many different fields including computational biology and genomics [18]. The classifiers were implemented using the scikit-learn python package [61].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40452,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "The adopted machine learning tools",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "SVMs aim at finding the hyperplane that maximizes the margin between the samples in different classes [38], a strategy with many theoretical and practical advantages [62]. Although they are intrinsically linear, they can be extended to the non-linear case by mapping data into a higher dimensional feature space by means of a kernel function. In this work, a radial basis function (RBF) kernel was considered for classifying species abundances, while a linear kernel was adopted for markers due to the sparsity of marker-based profiling. In both cases, the best regularization parameter C (both for linear and RBF kernel) and the width parameter \u03b3 (only for RBF kernel) were chosen in {2\u22125, 2\u22123, \u2026, 215} and {2\u221215, 2\u221213, \u2026, 23}, respectively, using a 5-fold stratified cross-validation approach. In cross-validation, samples are first randomly subdivided into k subsets (folds) of equal size. In particular, we use here stratified cross-validation, in which folds are made to preserve the percentage of samples of each class. A single subset is then used for the testing the model, and the remaining k\u22121 subsets are used for training. The whole process is repeated k times, with each of the k subsets used once as the testing set. Finally, the results on the k testing folds are averaged to produce a single accuracy evaluation. The parameters that maximize the accuracy (or another metric of choice) are finally chosen. SVMs are binary classifiers and, in this work, extension to multi-class classification problems was obtained through the one-against-one approach [63]. Moreover, class posterior probabilities of each sample were estimated from the predicted labels in the binary case using the Platt formulation [64], which, in the multi-class case, was extended as per [65].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42231,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "The adopted machine learning tools",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "RFs are an ensemble learning method which constructs a large number of decision trees at training time and outputs the class that is the mode of the classes of the individual trees [39]. The free parameters of such classifier were set in this work as follows: i) the number of trees was equal to 500; ii) the number of features to consider when looking for the best split was equal to the root of the number of original features; iii) the quality of a split was measured using the gini impurity criterion. Although a better estimation of such parameters may be obtained through cross-validation, no significant variations were verified by empirical evaluation. We note that RFs can intrinsically deal with binary and multi-class classification problems and give estimation of class probabilities. Moreover, they implicitly provides a list of the features sorted in terms of relative importance. Feature importance was computed in our case using the strategy usually referred to as \u201cgini importance\u201d or \u201cmean decrease impurity\u201d [66]. These importance values were exploited to perform an embedded feature selection strategy (denoted as RF-FS:Emb) implemented as follows: i) RF was applied on the whole set of available features; ii) features were ranked in terms of importance; iii) RF was re-trained on the top k-th features, by varying k in the set {5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 125, 150, 175, 200}; iv) the number of features that maximized the accuracy was chosen as the optimal number; v) the final model was generated by training RF on this reduced set of features.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43815,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "The adopted machine learning tools",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Lasso [40] and ENet [41] are generalized linear modelling approaches that incorporate feature selection and regularization to increase prediction accuracy from high-dimensional and collinear predictors. Lasso is based on a multiple logistic regression trained with L1-norm penalized likelihood, while both L1 and L2 norms are penalized in ENet. In this work, we exploited them in two main ways: i) directly applying Lasso or Enet as pure classifiers by training a regression model on the binary classification problem; and ii) using Lasso or ENet for feature selection and then applying SVM or RF on the selected features. In both cases, best regularization parameters were estimated using a 5-fold stratified cross-validation approach. For Lasso this implied to chose the alpha parameter in {10\u22124, \u2026, 10\u22120.5} with values evenly spaced on a logarithmic scale. For ENet, along with alpha the L1_ratio parameter was chosen in [0.1, 0.5, 0.7, 0.9, 0.95, 0.99, 1.0].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44777,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Validation and evaluation strategies",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Two main kinds of analysis were performed in this work, i.e., cross-validation and cross-stages/studies. For cross-validation studies, prediction accuracies were assessed by 10-fold cross validation, repeated and averaged on 20 independent runs. We underline that model selection and feature selection are done using only the training set thus avoiding overfitting problems. In the cross-stages/studies case, all the samples of the first stage/study are considered for training and thus used to generate the classification model including the model selection and feature selection steps. The generalization of the model is evaluated by applying it on the samples of the independent stage/study. In all the cases, the results obtained on the original classification problem were compared with those obtained by a random classifier (denoted in the paper as SVM-Shuffled and RF-Shuffled). For such purpose, we applied the same setting after shuffling randomly the labels of all the samples.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45800,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Validation and evaluation strategies",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Several different metrics were taken into account to evaluate classification performances. First, we considered the OA, which is the percentage of correctly predicted samples. From the confusion matrix three main metrics were computed: i) the precision (i.e., the number of correct positive samples divided by the number of samples predicted as positive); ii) the recall (i.e., the number of correct positive samples divided by the total number of positive samples); iii) the F1 score, which is the harmonic mean of precision and recall, i.e., F1 = 2*(precision*recall)/(precision+recall). These three metrics (which range in [0, 1], where 1 indicates the best case) can be computed for each class separately. For brevity, we report in the paper only the average values: after calculating the metrics for each class, their average values, weighted by the number of samples per class, are computed. For binary classification problems, class posterior probabilities were used to plot the ROC curve, which represents the true positive rate (i.e., the recall) against the false positive rate (i.e., the number of wrong positive samples divided by the total number of non-positive samples). From the ROC curve, we computed the widely-used AUC statistic, which can be interpreted as the probability that the classifier ranks a randomly chosen positive sample higher than a randomly chosen negative one, assuming that positive ranks higher than negative. The AUC ranges in [0.5, 1], where 0.5 corresponds to random change.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47315,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Validation and evaluation strategies",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "In the comparison among classifiers, prediction accuracy was assessed by 10-fold cross-validation, repeated and averaged on 20 independent runs. The same folds were used for all classifiers, i.e. training and test sets were identical for each classifier. In this way, the difference in performance of two classifiers could be calculated directly as the difference in AUCs (or any other metric) within each test fold. Mean difference and standard error were calculated for each 10-fold CV, then averaged across the 20 repetitions for smoothing. 95% confidence intervals on the difference in AUC performance of two classifiers were calculated using the t-distribution with df = 9, i.e.:\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48000,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Validation and evaluation strategies",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "In terms of feature selection, we reported the list of the 25 most important features found by RFs. For each feature, we considered also the relative importance score, which is a real number in the range [0, 1] with features that sum to 1. Feature selection is done for each run independently, and we report the average results.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48328,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "The considered large metagenomic datasets",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We initially considered a total of 2571 publicly available metagenomic samples (from eight main studies/datasets) that were reduced to 2424 after pre-processing and curation (see next sections). These are all the human-associated shotgun metagenomic studies with more than 70 samples and read length bigger than 70nt available as of January 2015. Six studies were devoted to the characterization of the human gut microbiome in presence of different diseases. Cirrhosis included 123 patients affected by liver cirrhosis and 114 healthy controls [33]. Colorectal consisted of a total of 156 samples, 53 of which were affected by colorectal cancer [34]. IBD represented the first available large metagenomic dataset and includes 124 individuals, 25 were affected by inflammatory bowel disease (IBD) [35]. Obesity included 123 non-obese and 169 obese individuals [31]. Two distinct studies were instead related to the alteration of the microbiome in subjects with type 2 diabetes (T2D). In the T2D dataset, 170 Chinese T2D patients and 174 non-diabetic controls were present [37]. The WT2D focused on European women and included 53 T2D patients, 49 impaired glucose tolerance individuals and 43 normal glucose tolerance people [32]. Among these six datasets, two of them comprise two independent stages. For cirrhosis, 181 and 56 samples were collected during the so defined discovery and validation phases, respectively. Similarly, for T2D, 145 and 199 samples were acquired during the first (stageI) and second (stageII) stages, respectively. Additionally, two studies focused on healthy subjects and not strictly related to the gut microbiome were also taken into account. HMP included samples collected from five major body sites (i.e., gastrointestinal tract, nasal cavity, oral cavity, skin, and urogenital tract). A subset of these samples were described in [1]. Finally, skin was composed by 291 samples acquired from several different skin sites [36].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50325,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Extraction of species abundance and marker presence profiles from metagenomic samples",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The entire analysis was done by taking into account two types of features: species-level relative abundances and presence of strain-specific markers. These features were extracted from the metagenomic samples using MetaPhlAn2 [21] with default parameters. Species abundances are real numbers in the range [0, 1] that sum up to 1 within each sample, while markers assume binary values. Species abundance and marker presence profiles are characterized by very different numbers of features: in the hundreds for species abundance, and hundreds of thousands for markers (the exact numbers of features for each dataset are detailed in Fig 2). Before applying MetaPhlAn2 the samples were subject to standard pre-processing as described in the SOP of the Human Microbiome Project [1] without however the step of human DNA removal as these publicly available metagenomes were deposited free from human DNA contamination. Additionally, we removed reads with length less than 90 nucleotides. For the IBD and obesity datasets the minimum length was set to 70 and 75, respectively, as these cohorts were sequenced with shorter read-lengths. Few samples did not pass the minimum length requirement and were thus discarded.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51619,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Experimental setting",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The experimental evaluation can be summarized into five main steps: 1) cross-validation analysis was done on the six disease-association datasets for evaluating the capabilities of metagenomic data for disease classification; 2) cross-stage studies were performed on the cirrhosis and T2D datasets in order to test the generalization of the model on independent collection batches from the same study; 3) in terms of T2D, the analysis was extended by taking into account also samples from completely distinct cohorts; 4) cross-studies were also done to model the features of the \u201chealthy\u201d gut microbiome for use as a dysbiosis prediction model for syndromes where few or no training samples are available; 5) cross-validation and cross-study analysis were applied to deal with different classification problem such as gender and body site discrimination. We note that all the investigated classification problems, excluding the body site discrimination, represented binary classification problems. Moreover, most of the analysis was done in terms of disease classification, in which the objective was to discriminate between \u201chealthy\u201d and \u201cdiseased\u201d subjects.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 52798,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Experimental setting",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Cross-validation analysis (see \u201cCross-validation studies revealed good capabilities for disease prediction\u201d, \u201cFeature selection and strain-specific markers improve prediction accuracy\u201d and \"Detection of the disease-associated microbial features\") was done on 6 datasets, in which we adopted the same settings used in the original papers. For such reason, in some cases some samples were removed from the analysis. For cirrhosis, all the 232 available samples (subdivided into \u201chealthy\u201d and \u201caffected by liver cirrhosis\u201d subjects) were taken into account. For colorectal we removed the individuals affected by \u201clarge adenoma\u201d, which resulted in a total of 121 samples. \u201cCancer\u201d patients were discriminated from \u201chealthy\u201d subjects, which included also persons affected by \u201csmall adenoma\u201d. IBD was composed by a total of 110 samples, in which the \u201cdiseased\u201d class included IBD patients affected by both \u201cCrohn's disease\u201d and \u201culcerative colitis\u201d. For obesity, we discriminated between \u201clean\u201d (BMI \u2264 25 kg m -2) and \u201cobese\u201d (BMI \u2265 30 kg m -2) subjects for a total of 253 samples. Individuals having an intermediate BMI (i.e., > 25 and < 30 kg m -2) were excluded. All the 344 samples of the T2D dataset were considered to discriminate between \u201chealthy\u201d individuals and \u201cT2D\u201d patients. The same classification problem was investigated in WT2D, in which 96 samples were taken into account after excluding impaired glucose tolerance women.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54230,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Experimental setting",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Cross-stage analysis (see \u201cMetagenomic disease-predictive models show strong cross-stage generalization\u201d) was applied to the cirrhosis and T2D datasets, in which the samples were collected in two independent stages. For cirrhosis, the 232 samples were constituted by 178 samples of discovery and 54 samples of validation. Similarly, for T2D, stageI and stageII included 145 and 199 samples, respectively.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 54634,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Experimental setting",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Cross-study/cohort analysis was done by taking into account gut samples from multiple datasets. In particular, we focused on the discrimination between \u201chealthy\u201d and \u201cT2D\u201d subjects (see \u201cCross-study generalization is improved by including healthy samples from other cohorts\u201d). For this purpose, in addition to the T2D and WT2D datasets, we considered also the \u201chealthy\u201d samples from four other datasets, for which \u201cdiseased\u201d samples were excluded since not related to \u201cT2D\u201d: cirrhosis, colorectal, HMP and IBD for a total of 908 samples. The entire analysis (apart for the two experiments denoted in the figure with the *) was done to evaluate the generalization of the model, therefore all the samples were used for training apart the dataset considered for test. For comparison, we investigated also cross-validation studies (denoted with the *). In such case, we considered a single sample per subject in order to avoid overestimation of the accuracies (this issue was present in the HMP dataset only). The sample was chosen randomly from the available samples for each iteration. So the cross-validation on the entire set of samples (denoted as All*) was done on a total of 827 samples.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 55824,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Experimental setting",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Cross-study analysis was also applied to discriminate between \u201chealthy\u201d and \u201cdiseased\u201d subjects (independently from the type of disease) in gut samples (see \u201cModelling the \u201chealthy\u201d microbiome: cross-disease prediction\u201d). We considered five different datasets (i.e., cirrhosis, colorectal, IBD, T2D, and WT2D) for a total of 903 samples. Therefore the class \u201cdiseased\u201d included patients affected by liver cirrhosis, colorectal cancer, IBD and T2D. Also in this case all the analysis was done to evaluate model generalization, apart the cross-validation study on the entire set of samples (denoted as All*).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 56430,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Experimental setting",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Finally, the developed tool was applied to non-disease-based classification problems (see \u201cExtension to non-disease classification problems\u201d and \u201cCross-study generalization is improved by including healthy samples from other cohorts\u201d). First, we considered gender classification, in which therefore \u201cfemale\u201d were discriminated from \u201cmale\u201d subjects. In this case, we took into account six datasets acquired from different body sites: four from gut (i.e., cirrhosis, colorectal, IBD, and T2D), one from skin (i.e., skin), and one from multiple sites (i.e., HMP). First, we did cross-validation studies, in which each dataset was analyzed independently from the others. Also in this case we considered only one sample per subject in order to avoid overestimation of the accuracies. For such reason, HMP and skin were reduced to 131 and 17 samples, respectively. Then, we performed a cross-study analysis on gut samples (thus the entire skin and part of the HMP datasets were excluded). In such case, we considered first all the available samples (for a total of 1016 samples) and then only the \u201chealthy\u201d samples (for a total of 642 samples). Then, the implemented tool was validated on a multi-class classification problem, which was represented by body site discrimination in the HMP dataset. The available samples were subdivided into five major body sites [1]: gastrointestinal tract, nasal cavity, oral cavity, skin, and urogenital tract. Cross-validation analysis was done by considering one sample per subject. Moreover, we considered also the case in which more than one sample per subject, but each from a different body site, was taken into account.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 58085,
+                    "infons": {
+                        "section_title_1": "Methods",
+                        "section_title_2": "Code and data availability",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The MetAML (Metagenomic prediction Analysis based on Machine Learning) software is open-source, written in Python and available online at http://segatalab.cibio.unitn.it/tools/metaml together with all the data used and discussed in this work.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 58353,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "S1 Table",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "The table reports the p-value for cross-validation analysis for disease discrimination on six different datasets using species abundance as microbiome features. Average values with margins of error for AUC are reported in Fig 1.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 58611,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "S1 Table",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(PDF)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 58616,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "S2 Table",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "The AUC is computed by training the model on one stage of T2D and testing it on WT2D (same results in Fig 5). The IntCorr is the integrative correlation [50] between the feature relative importance scores obtained on the considered stage of T2D and those on WT2D.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 58887,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "S1 Fig",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "The table reports the p-values for the null hypothesis of no difference in AUC by 10-fold cross-validation, assessed by paired t-test, for disease discrimination on six different datasets using species abundance and marker presence as microbiome features. Comparisons that are statistically different (p-value < 0.05) are highlighted in red. Average values with margins of error for AUC are reported in Fig 2.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 59302,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "S1 Fig",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(TIFF)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 59308,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "S2 Fig",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "The corresponding prediction performances are reported in Fig 3 and S3 Fig.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 59389,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "S2 Fig",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(TIF)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 59394,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "S3 Fig",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Species abundance and marker presence were used as microbiome features. The best value for each dataset and feature type (i.e., species abundance or marker presence) are in bold, and the overall best values for each dataset are circled. Enet and Lasso denote their use as classifier applied on the entire set of features; RF(or SVM)-FS:Enet(or Lasso) denotes RF (or SVM) used as classifier on the reduced set of features given by Enet (or Lasso). The margins of error are reported in parenthesis.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 59896,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "S4 Fig",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Most important discriminating species (left) and markers (right) identified by RF for disease discrimination in (a) IBD, (b) obesity, (c) T2D and (d) WT2D cross-validation studies. In the left panels, for each species reported on the vertical axis, the top bar (in blue) corresponds to the feature relative importance (with standard deviation reported with error bars) and the two bottom bars refer to the average relative abundance for healthy (in green) and diseased (in red) samples. In the right panels, for each marker the top bar is coloured according to the corresponding species and the two bottom bars refer to the average marker presence.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 60550,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "S6 Fig",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Features and data sets were clustered using correlation similarity.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 60623,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "S7 Fig",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(a) Cross-validation and (b) cross-study analysis for gender discrimination in multiple datasets. In bold: the best value for each scenario and feature type (i.e., species abundance or marker presence); Circled: the absolute best value for each scenario.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 60883,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "S8 Fig",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(a) Cross-validation results by considering one sample per subject or more than one sample per subject but each from a different body site. (b) Normalized confusion matrix when using RF on species abundance.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 61096,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "S9 Fig",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "Prediction capabilities for disease discrimination in the (a) obesity, (b) T2D and (c) WT2D datasets are overestimated if the most relevant features (i.e., species abundance or marker presence) are pre-selected. Cross-validation prevents this problem.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 61353,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "S10 Fig",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(a) Most relevant species (left) and markers (right) identified by RF by cross-validating on the entire set of samples. In the left panel, for each species reported on the vertical axis, the top bar (in blue) corresponds to the feature relative importance (with standard deviation reported with error bars) and the two bottom bars refer to the average relative abundance for healthy (in green) and diseased (in red) samples. In the right panel, for each marker the top bar is coloured according to the corresponding species and the two bottom bars refer to the average marker presence. (b) Hierarchical clustering on the feature relative importance score determined by running RF on species abundances in a \"leave-one-dataset-out\" cross-study validation [51]. For each case the model was generated on all the datasets other than the dataset considered for testing. Features and data sets were clustered using correlation similarity.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 62292,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "We would like to thank the members of the Segata lab for helpful suggestions.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 62384,
+                    "infons": {
+                        "title": "Structure, function and diversity of the healthy human microbiome",
+                        "journal": "Nature",
+                        "volume": "486",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. Human Microbiome Project Consortium. Structure, function and diversity of the healthy human microbiome. Nature2012;486(7402):207\u2013214. 10.1038/nature11234 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 62606,
+                    "infons": {
+                        "title": "The human microbiome: at the interface of health and disease",
+                        "journal": "Nature Rev Genet",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Cho I, Blaser MJ. The human microbiome: at the interface of health and disease. Nature Rev Genet. 2012;13(4):260\u2013270. 10.1038/nrg3182 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 62798,
+                    "infons": {
+                        "title": "The human microbiome project: a community resource for the healthy human microbiome",
+                        "journal": "PLoS Biol",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Gevers D, Knight R, Petrosino JF, Huang K, McGuire AL, Birren BW, et al.The human microbiome project: a community resource for the healthy human microbiome. PLoS Biol. 2012;10(8):e100137710.1371/journal.pbio.1001377 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 63072,
+                    "infons": {
+                        "title": "Reduced diversity of faecal microbiota in Crohn\u2019s disease revealed by a metagenomic approach",
+                        "journal": "Gut",
+                        "volume": "55",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Manichanh C, Rigottier-Gois L, Bonnaud E, Gloux K, Pelletier E, Frangeul L, et al.Reduced diversity of faecal microbiota in Crohn\u2019s disease revealed by a metagenomic approach. Gut2006;55(2):205\u2013211. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 63318,
+                    "infons": {
+                        "title": "Molecular-phylogenetic characterization of microbial community imbalances in human inflammatory bowel diseases",
+                        "journal": "PNAS",
+                        "volume": "104",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Frank DN, Amand ALS, Feldman RA, Boedeker EC, Harpaz N, Pace NR. Molecular-phylogenetic characterization of microbial community imbalances in human inflammatory bowel diseases. PNAS2007;104(34):13780\u201313785. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 63572,
+                    "infons": {
+                        "title": "Obesity alters gut microbial ecology",
+                        "journal": "PNAS",
+                        "volume": "102",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Ley RE, B\u00e4ckhed F, Turnbaugh P, Lozupone CA, Knight RD, Gordon JI. Obesity alters gut microbial ecology. PNAS2005;102(31):11070\u201311075. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 63754,
+                    "infons": {
+                        "title": "Microbial ecology: human gut microbes associated with obesity",
+                        "journal": "Nature",
+                        "volume": "444",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Ley RE, Turnbaugh PJ, Klein S, Gordon JI. Microbial ecology: human gut microbes associated with obesity. Nature2006;444(7122):1022\u20131023. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 63919,
+                    "infons": {
+                        "title": "A metagenome-wide association study of gut microbiota in type 2 diabetes",
+                        "journal": "Nature",
+                        "volume": "490",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Qin J, Li Y, Cai Z, Li S, Zhu J, Zhang F, et al.A metagenome-wide association study of gut microbiota in type 2 diabetes. Nature2012;490(7418):55\u201360. 10.1038/nature11450 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 64128,
+                    "infons": {
+                        "title": "The human microbiome: from symbiosis to pathogenesis",
+                        "journal": "Annu Rev Med",
+                        "volume": "64",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Eloe-Fadrosh EA, Rasko DA. The human microbiome: from symbiosis to pathogenesis. Annu Rev Med. 2013;64,145\u2013163. 10.1146/annurev-med-010312-133513 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 64332,
+                    "infons": {
+                        "title": "Support vector machine classification and validation of cancer tissue samples using microarray expression data",
+                        "journal": "Bioinformatics",
+                        "volume": "16",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Furey TS, Cristianini N, Duffy N, Bednarski D W, Schummer M, Haussler D. Support vector machine classification and validation of cancer tissue samples using microarray expression data. Bioinformatics2000;16(10):906\u2013914. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 64581,
+                    "infons": {
+                        "title": "A comprehensive evaluation of multicategory classification methods for microarray gene expression cancer diagnosis",
+                        "journal": "Bioinformatics",
+                        "volume": "21",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Statnikov A, Aliferis CF, Tsamardinos I, Hardin D, Levy S. A comprehensive evaluation of multicategory classification methods for microarray gene expression cancer diagnosis. Bioinformatics2005;21(5):631\u2013643. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 64819,
+                    "infons": {
+                        "title": "Large-scale meta-analysis of cancer microarray data identifies common transcriptional profiles of neoplastic transformation and progression",
+                        "journal": "PNAS",
+                        "volume": "101",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Rhodes DR, Yu J, Shanker K, Deshpande N, Varambally R, Ghosh D, et al.Large-scale meta-analysis of cancer microarray data identifies common transcriptional profiles of neoplastic transformation and progression. PNAS2004;101(25):9309\u20139314. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 65106,
+                    "infons": {
+                        "title": "Comparative meta-analysis of prognostic gene signatures for late-stage ovarian cancer",
+                        "journal": "J Natl Cancer Inst",
+                        "volume": "106",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Waldron L, Haibe-Kains B, Culhane AC, Riester M, Ding J, Wang XV, et al.Comparative meta-analysis of prognostic gene signatures for late-stage ovarian cancer. J Natl Cancer Inst. 2014;106(5):dju04910.1093/jnci/dju049 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 65382,
+                    "infons": {
+                        "title": "Microbial community profiling for human microbiome projects: Tools, techniques, and challenges",
+                        "journal": "Genome Res",
+                        "volume": "19",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Hamady M, Knight R. Microbial community profiling for human microbiome projects: Tools, techniques, and challenges. Genome Res. 2009;19(7):1141\u20131152. 10.1101/gr.085464.108 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 65613,
+                    "infons": {
+                        "title": "Meta-analyses of studies of the human microbiota",
+                        "journal": "Genome Res",
+                        "volume": "23",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Lozupone CA, Stombaugh J, Gonzalez A, Ackermann G, Wendel D, V\u00e1zquez-Baeza Y, et al.Meta-analyses of studies of the human microbiota. Genome Res. 2013;23(10):1704\u20131714. 10.1101/gr.151803.112 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 65863,
+                    "infons": {
+                        "title": "The treatment-naive microbiome in new-onset Crohn\u2019s disease",
+                        "journal": "Cell Host Microbe",
+                        "volume": "15",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Gevers D, Kugathasan S, Denson LA, V\u00e1zquez-Baeza Y, Van Treuren W, Ren B, et al.The treatment-naive microbiome in new-onset Crohn\u2019s disease. Cell Host Microbe2014;15(3):382\u2013392. 10.1016/j.chom.2014.02.005 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 66127,
+                    "infons": {
+                        "title": "Prediction of early childhood caries via spatial-temporal variations of oral microbiota",
+                        "journal": "Cell Host Microbe",
+                        "volume": "18",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Teng F, Yang F, Huang S, Bo C, Xu ZZ, Amir A, et al.Prediction of early childhood caries via spatial-temporal variations of oral microbiota. Cell Host Microbe2015;18(3):296\u2013306. 10.1016/j.chom.2015.08.005 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 66372,
+                    "infons": {
+                        "title": "A comprehensive evaluation of multicategory classification methods for microbiomic data",
+                        "journal": "Microbiome",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. Statnikov A, Henaff M, Narendra V, Konganti K, Li Z, Yang L, et al.A comprehensive evaluation of multicategory classification methods for microbiomic data. Microbiome2013;1(1):1110.1186/2049-2618-1-11 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 66632,
+                    "infons": {
+                        "title": "Computational meta'omics for microbial community studies",
+                        "journal": "Mol Syst Biol",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Segata N, Boernigen D, Tickle TL, Morgan XC, Garrett WS, Huttenhower C. Computational meta'omics for microbial community studies. Mol Syst Biol. 2013;9(1):666. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 66840,
+                    "infons": {
+                        "title": "Metagenomic species profiling using universal phylogenetic marker genes",
+                        "journal": "Nature Methods",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Sunagawa S, Mende DR, Zeller G, Izquierdo-Carrasco F, Berger SA, Kultima JR, et al.Metagenomic species profiling using universal phylogenetic marker genes. Nature Methods2013;10(12):1196\u20131199. 10.1038/nmeth.2693 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 67092,
+                    "infons": {
+                        "title": "MetaPhlAn2 for enhanced metagenomic taxonomic profiling",
+                        "journal": "Nature Methods",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Truong DT, Franzosa E, Tickle T, Scholz M, Weingart U, Pasolli E, et al.MetaPhlAn2 for enhanced metagenomic taxonomic profiling. Nature Methods2015;12(10):902\u2013903. 10.1038/nmeth.3589 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 67315,
+                    "infons": {
+                        "title": "PhyloSift: phylogenetic analysis of genomes and metagenomes",
+                        "journal": "PeerJ",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Darling AE, Jospin G, Lowe E, Matsen IV FA, Bik HM, Eisen JA. PhyloSift: phylogenetic analysis of genomes and metagenomes. PeerJ2014;2:e24310.7717/peerj.243 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 67531,
+                    "infons": {
+                        "title": "Strain-level microbial epidemiology and population genomics from shotgun meta\u2019omics",
+                        "journal": "Nature Methods",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Scholz M, Ward DV, Pasolli E, Tolio T, Zolfo M, Asnicar F, et al.Strain-level microbial epidemiology and population genomics from shotgun meta\u2019omics. Nature Methods2016;13(5):435\u2013438. 10.1038/nmeth.3802 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 67774,
+                    "infons": {
+                        "title": "Disease-specific alterations in the enteric virome in inflammatory bowel disease",
+                        "journal": "Cell",
+                        "volume": "160",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Norman JM, Handley SA, Baldridge MT, Droit L, Liu CY, Keller BC, et al.Disease-specific alterations in the enteric virome in inflammatory bowel disease. Cell2015;160(3):447\u2013460. 10.1016/j.cell.2015.01.002 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 68038,
+                    "infons": {
+                        "title": "Functional characterization of the antibiotic resistance reservoir in the human microflora",
+                        "journal": "Science",
+                        "volume": "325",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Sommer MO, Dantas G, Church GM. Functional characterization of the antibiotic resistance reservoir in the human microflora. Science2009;325(5944):1128\u20131131. 10.1126/science.1176950 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 68278,
+                    "infons": {
+                        "title": "Metagenome-wide analysis of antibiotic resistance genes in a large cohort of human gut microbiota",
+                        "journal": "Nat Commun",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. Hu Y, Yang X, Qin J, Lu N, Cheng G, Wu N, et al.Metagenome-wide analysis of antibiotic resistance genes in a large cohort of human gut microbiota. Nat Commun. 2013;4. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 68474,
+                    "infons": {
+                        "title": "An introduction to the analysis of shotgun metagenomic data",
+                        "journal": "Front Plant Sci",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Sharpton TJ. An introduction to the analysis of shotgun metagenomic data. Front Plant Sci. 2014;5. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 68621,
+                    "infons": {
+                        "title": "Selecting age-related functional characteristics in the human gut microbiome",
+                        "journal": "Microbiome",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Lan Y, Kriete A, Rosen GL. Selecting age-related functional characteristics in the human gut microbiome. Microbiome2013;1(1). [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 68795,
+                    "infons": {
+                        "title": "Enterotypes of the human gut microbiome",
+                        "journal": "Nature",
+                        "volume": "473",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. Arumugam M, Raes J, Pelletier E, Le Paslier D, Yamada T, Mende DRet al.Enterotypes of the human gut microbiome. Nature2011;473(7346):174\u2013180. 10.1038/nature09944 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 69016,
+                    "infons": {
+                        "title": "Metagenomic microbial community profiling using unique clade-specific marker genes",
+                        "journal": "Nature Methods",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Segata N, Waldron L, Ballarini A, Narasimhan V, Jousson O, Huttenhower C. Metagenomic microbial community profiling using unique clade-specific marker genes. Nature Methods2012;9(8):811\u2013814. 10.1038/nmeth.2066 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 69285,
+                    "infons": {
+                        "title": "Richness of human gut microbiome correlates with metabolic markers",
+                        "journal": "Nature",
+                        "volume": "500",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Le Chatelier E, Nielsen T, Qin J, Prifti E, Hildebrand F, Falony G, et al.Richness of human gut microbiome correlates with metabolic markers. Nature2013;500(7464):541\u2013546. 10.1038/nature12506 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 69517,
+                    "infons": {
+                        "title": "Gut metagenome in European women with normal, impaired and diabetic glucose control",
+                        "journal": "Nature",
+                        "volume": "498",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Karlsson FH, Tremaroli V, Nookaew I, Bergstr\u00f6m G, Behre CJ, Fagerberg B, et al.Gut metagenome in European women with normal, impaired and diabetic glucose control. Nature2013;498(7452):99\u2013103. 10.1038/nature12198 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 69770,
+                    "infons": {
+                        "title": "Alterations of the human gut microbiome in liver cirrhosis",
+                        "journal": "Nature",
+                        "volume": "513",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Qin N, Yang F, Li A, Prifti E, Chen Y, Shao L, et al.Alterations of the human gut microbiome in liver cirrhosis. Nature2014;513(7516):59\u201364. 10.1038/nature13568 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 69971,
+                    "infons": {
+                        "title": "Potential of fecal microbiota for early\u2010stage detection of colorectal cancer",
+                        "journal": "Mol Syst Biol",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Zeller G, Tap J, Voigt AY, Sunagawa S, Kultima JR, Costea PI, et al.Potential of fecal microbiota for early\u2010stage detection of colorectal cancer. Mol Syst Biol. 2014;10(11):766. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 70197,
+                    "infons": {
+                        "title": "A human gut microbial gene catalogue established by metagenomic sequencing",
+                        "journal": "Nature",
+                        "volume": "464",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Qin J, Li R, Raes J, Arumugam M, Burgdorf KS, Manichanh C, et al.A human gut microbial gene catalogue established by metagenomic sequencing. Nature2010;464(7285):59\u201365. 10.1038/nature08821 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 70445,
+                    "infons": {
+                        "title": "NISC Comparative Sequencing Program. Biogeography and individuality shape function in the human skin metagenome",
+                        "journal": "Nature",
+                        "volume": "514",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "36. Oh J, Byrd AL, Deming C, Conlan S, Kong HH, Segre JA, NISC Comparative Sequencing Program. Biogeography and individuality shape function in the human skin metagenome. Nature2014;514(7520):59\u201364. 10.1038/nature13786 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 70719,
+                    "infons": {
+                        "title": "A metagenome-wide association study of gut microbiota in type 2 diabetes",
+                        "journal": "Nature",
+                        "volume": "490",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "37. Qin J, Li Y, Cai Z, Li S, Zhu J, Zhang F, et al.A metagenome-wide association study of gut microbiota in type 2 diabetes. Nature2012;490(7418):55\u201360. 10.1038/nature11450 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 70929,
+                    "infons": {
+                        "title": "Support-vector networks",
+                        "journal": "Machine Learning",
+                        "volume": "20",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "38. Cortes C, Vapnik V N. Support-vector networks. Machine Learning1995;20:273\u2013297. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 71029,
+                    "infons": {
+                        "title": "Random forests",
+                        "journal": "Machine Learning",
+                        "volume": "45",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "39. Breiman L. Random forests. Machine Learning2001;45:5\u201332. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 71106,
+                    "infons": {
+                        "title": "Regression shrinkage and selection via the lasso",
+                        "journal": "J R Stat Soc Series B",
+                        "volume": "58",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "40. Tibshirani R. Regression shrinkage and selection via the lasso. J R Stat Soc Series B1996;58(1):267\u2013288. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 71231,
+                    "infons": {
+                        "title": "Regularization and variable selection via the elastic net",
+                        "journal": "J R Stat Soc Series B",
+                        "volume": "67",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "41. Zou H, Hastie T. Regularization and variable selection via the elastic net. J R Stat Soc Series B2005;67(2):301\u2013320. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 71368,
+                    "infons": {
+                        "journal": "Neural Networks. A comprehensive foundation",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "42. Haykin S. Neural Networks. A comprehensive foundation. Prentice Hall; 2004. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 71464,
+                    "infons": {
+                        "title": "Large-scale Bayesian logistic regression for text categorization",
+                        "journal": "Technometrics",
+                        "volume": "49",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "43. Genkin A, Lewis DD, Madigan D. Large-scale Bayesian logistic regression for text categorization. Technometrics2007;49(3):291\u2013304. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 71614,
+                    "infons": {
+                        "title": "Decompensated cirrhosis and microbiome interpretation",
+                        "journal": "Nature",
+                        "volume": "525",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "44. Bajaj JS, Betrapally NS, Gillevet PM. Decompensated cirrhosis and microbiome interpretation. Nature2015;525(7569):E1\u2013E2. 10.1038/nature14851 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 71814,
+                    "infons": {
+                        "title": "Disentangling type 2 diabetes and metformin treatment signatures in the human gut microbiota",
+                        "journal": "Nature",
+                        "volume": "528",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "45. Forslund K, Hildebrand F, Nielsen T, Falony G, Le Chatelier E, Sunagawa S, et al.Disentangling type 2 diabetes and metformin treatment signatures in the human gut microbiota. Nature2015;528(7581):262\u2013266. 10.1038/nature15766 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 72098,
+                    "infons": {
+                        "title": "Statistical methods for detecting differentially abundant features in clinical metagenomic samples",
+                        "journal": "PLoS Comput Biol",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "46. White JR, Nagarajan N, Pop M. Statistical methods for detecting differentially abundant features in clinical metagenomic samples. PLoS Comput Biol. 2009;5(4):e100035210.1371/journal.pcbi.1000352 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 72352,
+                    "infons": {
+                        "title": "Metagenomic biomarker discovery and explanation",
+                        "journal": "Genome Biol",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "47. Segata N, Izard J, Waldron L, Gevers D, Miropolsky L, Garrett WS, et al.Metagenomic biomarker discovery and explanation. Genome Biol. 2011;12(6):R6010.1186/gb-2011-12-6-r60 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 72584,
+                    "infons": {
+                        "title": "Fizzy: feature subset selection for metagenomics",
+                        "journal": "BMC Bioinformatics",
+                        "volume": "16",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "48. Ditzler G, Morrison JC, Lan Y, Rosen GL. Fizzy: feature subset selection for metagenomics. BMC Bioinformatics2015;16(1):1. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 72755,
+                    "infons": {
+                        "title": "Individual diet has sex-dependent effects on vertebrate gut microbiota",
+                        "journal": "Nat Commun",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "49. Bolnick DI, Snowberg LK, Hirsch PE, Lauber CL, Parks B, Lusis AJ, et al.Individual diet has sex-dependent effects on vertebrate gut microbiota. Nat Commun. 2014;5. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 72967,
+                    "infons": {
+                        "title": "A cross-study comparison of gene expression studies for the molecular classification of lung cancer",
+                        "journal": "Clin. Cancer Res",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "50. Parmigiani G, Garrett-Mayer ES, Anbazhagan R, Gabrielson E. A cross-study comparison of gene expression studies for the molecular classification of lung cancer. Clin. Cancer Res. 2004;10(9):2922\u20132927. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 73197,
+                    "infons": {
+                        "title": "Risk prediction for late-stage ovarian cancer by meta-analysis of 1525 patient samples",
+                        "journal": "J Natl Cancer Inst",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "51. Riester AM, Wei W, Waldron L, Culhane AC, Trippa L, Oliva E, et al.Risk prediction for late-stage ovarian cancer by meta-analysis of 1525 patient samples. J Natl Cancer Inst2014;dju04810.1093/jnci/dju048 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 73460,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "52. Hastie T, Tibshirani R, Friedman J. The elements of statistical learningBerlin: Springer; 2001. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 73576,
+                    "infons": {
+                        "title": "Metabolic reconstruction for metagenomic data and its application to the human microbiome",
+                        "journal": "PLoS Comput Biol",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "53. Abubucker S, Segata N, Goll J, Schubert AM, Izard J, Cantarel BLet al.Metabolic reconstruction for metagenomic data and its application to the human microbiome. PLoS Comput Biol. 2012;8(6):e100235810.1371/journal.pcbi.1002358 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 73861,
+                    "infons": {
+                        "title": "A taxonomic signature of obesity in the microbiome? Getting to the guts of the matter",
+                        "journal": "PLoS ONE",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "54. Finucane MM, Sharpton TJ, Laurent TJ, Pollard KS. A taxonomic signature of obesity in the microbiome? Getting to the guts of the matter. PLoS ONE2014;9(1):e8468910.1371/journal.pone.0084689 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 74110,
+                    "infons": {
+                        "title": "Proton pump inhibitors affect the gut microbiome",
+                        "journal": "Gut",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "55. Imhann F, Bonder MJ, Vila AV, Fu J, Mujagic Z, Vork L, et al.Proton pump inhibitors affect the gut microbiome. Gut2015;gutjnl-2015. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 74290,
+                    "infons": {
+                        "title": "Cross-study validation for the assessment of prediction algorithms",
+                        "journal": "Bioinformatics",
+                        "volume": "30",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "56. Bernau C, Riester M, Boulesteix AL, Parmigiani G, Huttenhower C, Waldron L, et al.Cross-study validation for the assessment of prediction algorithms. Bioinformatics2014;30(12):i105\u2013i112. 10.1093/bioinformatics/btu279 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 74566,
+                    "infons": {
+                        "title": "Chimeric 16S rRNA sequence formation and detection in Sanger and 454-pyrosequenced PCR amplicons",
+                        "journal": "Genome Res",
+                        "volume": "21",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "57. Haas BJ, Gevers D, Earl AM, Feldgarden M, Ward DV, Giannoukos G, et al.Chimeric 16S rRNA sequence formation and detection in Sanger and 454-pyrosequenced PCR amplicons. Genome Res. 2011;21(3):494\u2013504. 10.1101/gr.112730.110 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 74848,
+                    "infons": {
+                        "title": "Evaluation of 16S rDNA-based community profiling for human microbiome research",
+                        "journal": "PLoS One",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "58. Jumpstart Consortium Human Microbiome Project Data Generation Working Group. Evaluation of 16S rDNA-based community profiling for human microbiome research. PLoS One2012;7(6):e3931510.1371/journal.pone.0039315 [PMC free article] [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 75117,
+                    "infons": {
+                        "title": "16S rRNA gene-based profiling of the human infant gut microbiota is strongly influenced by sample processing and PCR primer choice",
+                        "journal": "Microbiome",
+                        "volume": "3",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "59. Walker AW, Martin JC, Scott P, Parkhill J, Flint HJ, Scott KP. 16S rRNA gene-based profiling of the human infant gut microbiota is strongly influenced by sample processing and PCR primer choice. Microbiome2015;3(1):1. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 75383,
+                    "infons": {
+                        "title": "Data Sharing",
+                        "journal": "N Engl J Med",
+                        "volume": "374",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "60. Longo DL, Drazen JM. Data Sharing. N Engl J Med. 2016;374(3):276\u2013277. 10.1056/NEJMe1516564 [PubMed] [CrossRef] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 75514,
+                    "infons": {
+                        "title": "Scikit-learn: Machine learning in Python",
+                        "journal": "J Mach Learn Res",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "61. Pedregosa F, Varoquaux G, Gramfort A, Michel V, Thirion B, Grisel Oet al.Scikit-learn: Machine learning in Python. J Mach Learn Res. 2011;12:2825\u20132830. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 75686,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "62. Vapnik V N. Statistical learning theory, New York, NY, USA: Wiley; 1998. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 75779,
+                    "infons": {
+                        "journal": "Neurocomputing: Algorithms, Architectures and Applications, NATO ASI",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "63. Knerr S, Personnaz L, Dreyfus G. Single-layer learning revisited: A step-wise procedure for building and training a neural network In: Fogelman-Soulie Herault, editors. Neurocomputing: Algorithms, Architectures and Applications, NATO ASI. Springer; 1990. pp. 41\u201350. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 76065,
+                    "infons": {
+                        "title": "Probabilistic outputs for support vector machines and comparisons to regularized likelihood methods",
+                        "journal": "Advances in large margin classifiers",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "64. Platt J. Probabilistic outputs for support vector machines and comparisons to regularized likelihood methods. Advances in large margin classifiers1999;61\u201374. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 76243,
+                    "infons": {
+                        "title": "Probability estimates for multi-class classification by pairwise coupling",
+                        "journal": "J Mach Learn Res",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "65. Wu T-F, Lin C-J, Weng RC. Probability estimates for multi-class classification by pairwise coupling. J Mach Learn Res. 2004;5:975\u20131005. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 76399,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "66. Breiman L, Friedman J, Stone CJ, Olshen RA. Classification and regression treesCRC press; 1984. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

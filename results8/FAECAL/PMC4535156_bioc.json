@@ -1,0 +1,2159 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC4535156",
+            "inputfile": "../microbiome_corpus_HTML\\PMC4535156.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Fecal Microbiota Characteristics of Patients with Colorectal Adenoma Detected by Screening: A Population-based Study",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 116,
+                    "infons": {
+                        "section_title_1": "keywords",
+                        "iao_name_1": "keywords section",
+                        "iao_id_1": "IAO:0000630"
+                    },
+                    "text": "Feces, Microbiota, Colorectal cancer, Colorectal adenoma, Cancer screening, China",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 205,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Background",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Screening for colorectal cancer (CRC) and precancerous colorectal adenoma (CRA) can detect curable disease. However, participation in colonoscopy and sensitivity of fecal heme for CRA are low.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 415,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Methods",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Microbiota metrics were determined by Illumina sequencing of 16S rRNA genes amplified from DNA extracted from feces self-collected in RNAlater. Among fecal immunochemical test-positive (FIT\u00a0+) participants, colonoscopically-defined normal versus CRA patients were compared by regression, permutation, and random forest plus leave-one-out methods.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 768,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Findings",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Of 95 FIT\u00a0+ participants, 61 had successful fecal microbiota profiling and colonoscopy, identifying 24 completely normal patients, 20 CRA patients, 2 CRC patients, and 15 with other conditions. Phylum-level fecal community composition differed significantly between CRA and normal patients (permutation P\u00a0=\u00a00.02). Rank phylum-level abundance distinguished CRA from normal patients (area under the curve\u00a0=\u00a00.767, permutation P\u00a0=\u00a00.006). CRA prevalence was 59% in phylum-level cluster B versus 20% in cluster A (exact P\u00a0=\u00a00.01). Most of the difference reflected 3-fold higher median relative abundance of Proteobacteria taxa (Wilcoxon signed-rank P\u00a0=\u00a00.03, positive predictive value\u00a0=\u00a067%). Antibiotic exposure and other potential confounders did not affect the associations.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:56:16",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513879",
+                            "locations": {
+                                "length": 14,
+                                "offset": 1371
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 1549,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "section_title_2": "Interpretation",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "If confirmed in larger, more diverse populations, fecal microbiota analysis might be employed to improve screening for CRA and ultimately to reduce mortality from CRC.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1730,
+                    "infons": {
+                        "section_title_1": "1.\u2003Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Screening the general adult population for colorectal cancer (CRC) and precancerous colorectal adenoma (CRA) can detect curable disease and reduce mortality. However, all the screening methods in current use have substantial limitations (Kuipers et al., 2013, Lieberman, 2014). Screening by colonoscopy or detection of fecal occult blood greatly reduces long-term CRC mortality (Zauber et al., 2012), but at least half of CRC mortality in the U.S.A. can be attributed to avoidance of screening (Meester et al., 2015). Colonoscopy, the primary modality used in the U.S.A., is costly and invasive, and its efficacy depends on the endoscopist's skill and the patient's bowel preparation. Computed tomographic colonography has different challenges, and the requirement to pursue detected lesions with colonoscopy limits its use for primary screening (Kuipers et al., 2013). Detecting occult blood in feces, particularly with the fecal immunochemical test (FIT) for human hemoglobin, has reasonable acceptability, cost, and accuracy for detecting CRC (single-test sensitivity, 60%\u201385%; specificity, >\u00a090%) (Lieberman, 2014). Improving the predictive value of a positive FIT (FIT\u00a0+) with molecular analyses of feces or serum is a high priority (Ahlquist et al., 2012, Carmona et al., 2013, Goedert et al., 2014b, Imperiale et al., 2014, Kuipers et al., 2013, Lieberman, 2014), especially because the sensitivity of FIT for CRA is less than 50% and because many FIT\u00a0+ patients decline follow-up colonoscopy (Lieberman, 2014).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3263,
+                    "infons": {
+                        "section_title_1": "1.\u2003Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Research on differences or alterations in the distal gut microbiota has focused on the pathogenesis of CRC (Collins et al., 2011, Schwabe and Jobin, 2013, Sears and Pardoll, 2011, Tjalsma et al., 2012), and such differences may ultimately prove to be helpful for screening. Comprehensive comparisons of the fecal microbiota have been reported by four studies, totaling 176 CRC cases and 241 controls (Ahn et al., 2013, Wang et al., 2012, Weir et al., 2013, Wu et al., 2013, Zeller et al., 2014). Four of these studies reported that butyrate-producing bacteria were significantly less abundant in feces from CRC cases compared to controls, although the particular taxa varied. In addition, the three larger studies reported that CRC cases had significantly higher carriage or abundance of potentially pathogenic Fusobacteria and Proteobacteria (Ahn et al., 2013, Wang et al., 2012, Zeller et al., 2014). Similar or different bacteria may contribute to the CRA stage of neoplasia (Tjalsma et al., 2012), and data to address this hypothesis are starting to emerge. Abundance of several bacterial taxa was reported to differ in rectal mucosa of CRA cases compared to healthy controls (McCoy et al., 2013, Mira-Pascual et al., 2014, Sanapareddy et al., 2012, Shen et al., 2010), including two studies in which well characterized cases' unaffected mucosa had higher levels of Proteobacteria taxa than did the controls' mucosa (Mira-Pascual et al., 2014, Shen et al., 2010).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:56:35",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "513880",
+                            "locations": {
+                                "length": 8,
+                                "offset": 3814
+                            }
+                        },
+                        {
+                            "text": "Fusobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid32066",
+                                    "NCBI:txid203490"
+                                ],
+                                "type": [
+                                    "bacteria_phylum",
+                                    "bacteria_class"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:56:37",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid2",
+                                    "NCBI:txid32066"
+                                ]
+                            },
+                            "id": "513881",
+                            "locations": {
+                                "length": 12,
+                                "offset": 4074
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:56:37",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513882",
+                            "locations": {
+                                "length": 14,
+                                "offset": 4091
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:56:37",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "513883",
+                            "locations": {
+                                "length": 8,
+                                "offset": 4187
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:56:41",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513884",
+                            "locations": {
+                                "length": 14,
+                                "offset": 4633
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 4730,
+                    "infons": {
+                        "section_title_1": "1.\u2003Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "With fecal DNA, Chen and colleagues reported that the overall composition of the microbiota differed between 47 CRA cases and 47 colonoscopically normal, age- and sex-matched controls (Chen et al., 2013). Nominally significant differences in relative abundance, not adjusted for multiple comparisons, were reported for six bacterial genera \u2014 two increased (Enterococcus and Streptococcus) and four decreased (Bacteroides, Clostridium, Roseburia, and Eubacterium) in CRA cases (Chen et al., 2013). Likewise, Zackular et al. identified a dozen of differentially abundant fecal taxa in CRA cases, although they did not consider multiple comparisons, overall diversity or composition (Zackular et al., 2014). In two very small studies, no large or statistically significant differences in the fecal microbiota of CRA cases were found (Brim et al., 2013, Mira-Pascual et al., 2014). The fecal microbiota of patients with small, benign adenoma (polyp) resembles that of normal controls (Zeller et al., 2014).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Enterococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1350",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:56:44",
+                                "parent_taxonomic_id": "NCBI:txid81852"
+                            },
+                            "id": "513885",
+                            "locations": {
+                                "length": 12,
+                                "offset": 5086
+                            }
+                        },
+                        {
+                            "text": "Streptococcus",
+                            "infons": {
+                                "identifier": "NCBI:txid1301",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:56:44",
+                                "parent_taxonomic_id": "NCBI:txid1300"
+                            },
+                            "id": "513886",
+                            "locations": {
+                                "length": 13,
+                                "offset": 5104
+                            }
+                        },
+                        {
+                            "text": "Bacteroides",
+                            "infons": {
+                                "identifier": "NCBI:txid816",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:56:44",
+                                "parent_taxonomic_id": "NCBI:txid815"
+                            },
+                            "id": "513887",
+                            "locations": {
+                                "length": 11,
+                                "offset": 5138
+                            }
+                        },
+                        {
+                            "text": "Clostridium",
+                            "infons": {
+                                "identifier": "NCBI:txid1485",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:56:44",
+                                "parent_taxonomic_id": "NCBI:txid31979"
+                            },
+                            "id": "513888",
+                            "locations": {
+                                "length": 11,
+                                "offset": 5152
+                            }
+                        },
+                        {
+                            "text": "Roseburia",
+                            "infons": {
+                                "identifier": "NCBI:txid841",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:56:44",
+                                "parent_taxonomic_id": "NCBI:txid186803"
+                            },
+                            "id": "513889",
+                            "locations": {
+                                "length": 9,
+                                "offset": 5165
+                            }
+                        },
+                        {
+                            "text": "Eubacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid1730",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:56:44",
+                                "parent_taxonomic_id": "NCBI:txid186806"
+                            },
+                            "id": "513890",
+                            "locations": {
+                                "length": 11,
+                                "offset": 5180
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 5732,
+                    "infons": {
+                        "section_title_1": "1.\u2003Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "The current project had two objectives. We evaluated the feasibility of adding fecal microbiota analysis to the ongoing, population-based CRC screening program in Shanghai, and we sought to identify fecal microbial and other differences between well characterized CRA cases and colonoscopically normal controls from the same population.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6068,
+                    "infons": {
+                        "section_title_1": "2.\u2003Methods",
+                        "section_title_2": "2.1. Overview",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The research protocol and procedures were reviewed and approved by institutional review boards at the U.S. National Cancer Institute and at the Shanghai Municipal Center for Disease Control and Prevention (SCDC). It is registered at ClinicalTrials.gov (identifier: NCT01778595) and conforms with the STROBE guidelines for reporting standards in observational cohort and case\u2013control studies (http://www.strobe-statement.org/).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6517,
+                    "infons": {
+                        "section_title_1": "2.\u2003Methods",
+                        "section_title_2": "2.1. Overview",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Staff at the Minhang and Xuhui district community health centers were trained and provided supplies for 100 participants. Consecutive patients aged 50\u201374\u00a0years who presented for CRC screening, in whom heme was detected by the fecal immunochemical test [FIT\u00a0+, Baso Diagnostics Inc. (www.baso.com.cn/en/), prevalence\u00a0=\u00a014%], were scheduled for colonoscopy at the local hospital and also were invited to participate in the research study. The objectives and required procedures were presented and discussed individually, signed informed consent was obtained, and a CRC risk factor questionnaire was completed. The participant was instructed to collect the fecal specimens within the next few days, and well before bowel cleansing for colonoscopy which was scheduled about 2\u00a0weeks later. Colonoscopy and histopathology results, based on review by a single pathologist at the Fudan University Cancer Center, were electronically transmitted by the local hospital to the community health center and the SCDC.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7519,
+                    "infons": {
+                        "section_title_1": "2.\u2003Methods",
+                        "section_title_2": "2.2. Fecal Specimen Collection",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "The participant was provided with written and illustrated instructions, a cup for catching stool, and bar-coded 20\u00a0mL fecal collection vials (SARSTEDT, N\u00fcmbrecht, Germany). The vials for the current project had been preloaded with 5\u00a0mL of RNAlater (QIAGEN, Hilden, Germany) supplemented with kanamycin 300\u00a0\u03bcg/mL. In this media, fecal microbiota diversity and composition are unaltered and stable for up to seven days at room temperature (submitted for publication). The participant recorded the time of collection and promptly brought the specimens to the community health center where they were immediately frozen at \u2212\u00a020\u00a0\u00b0C. The specimens were transferred weekly on dry ice to the SCDC repository where they were inventoried and stored at \u2212\u00a080\u00a0\u00b0C. One vial from each participant was shipped overnight on dry ice to BGI for testing.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8382,
+                    "infons": {
+                        "section_title_1": "2.\u2003Methods",
+                        "section_title_2": "2.3. DNA Extraction and 16S rRNA Amplification, Sequencing, and Analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "DNA isolation and purification were performed as described previously (Qin et al., 2012). One sample was found to be completely degraded. For unbiased representation of the fecal microbiota as described previously in detail (Fadrosh et al., 2014), approximately 469\u00a0bp of the 16S rRNA gene V3\u2013V4 hypervariable region of the fecal DNA was amplified with primers that included a linker sequence (suitable for the Illumina MiSeq 250PE instrument), a 12\u00a0bp index sequence, a heterogeneity spacer (to minimize bias with low-diversity amplicons), and 16S rRNA universal primers 319F/806R. DNA products were quantified by a Qubit fluorometer (Life Technologies, Grand Island New York, U.S.A.). The amplicons were sequenced in a single pool in one run with the MiSeq 250PE, generating approximately 2.22\u00a0Gb of data. The raw sequences were processed to concatenate forward and reverse reads and to sort and match paired end sequences and barcodes. Using the pipeline of the Institute of Genome Sciences, University of Maryland Medical School, the processed reads were clustered, and the operational taxonomic units (OTUs) were assigned to taxa by matching to the Ribosomal Data Project na\u00efve Bayesian classifier (Wang et al., 2007). Richness (number of observed species) and alpha diversity metrics (Chao1, Shannon index, and Phylogenetic Diversity whole-tree) were calculated using the Quantitative Insights Into Microbial Ecology (QIIME) pipeline (Caporaso et al., 2010).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9918,
+                    "infons": {
+                        "section_title_1": "2.\u2003Methods",
+                        "section_title_2": "2.4. Statistical Analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Primary analyses compared microbiota diversities, both alpha diversity and beta diversity, with CRA (any combination of tubular or villous histology or \u2265\u00a01\u00a0cm diameter) versus normal colonoscopy. Secondary analyses compared CRA patients to all participants and also excluded participants who had received an antibiotic within 24\u00a0weeks of enrollment. Linear regression was used to assess the association of alpha diversity metrics. Quantile\u2013quantile (QQ) plots of P-values were used to evaluate the global association patterns for taxa. Wilcoxon rank-sum tests were used to assess associations of individual taxon relative abundances, without adjustment for multiple comparisons. Differences of all taxon relative abundances in CRA cases, normals and other participants are provided but, these were not formally analyzed because of lack of statistical power considering the small sample size and heavy multiple testing burden.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10868,
+                    "infons": {
+                        "section_title_1": "2.\u2003Methods",
+                        "section_title_2": "2.4. Statistical Analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "We performed receiver operating characteristic (ROC) analysis to assess the potential of differentiating CRA/normal status based on microbiota composition. We used random forest (RF), a powerful supervised learning algorithm, to build classifiers based on taxon relative abundances with or without sex. Because of the small sample size, we could not partition the data into discovery and validation. For unbiased area-under-the-curve (AUC) assessment, we performed leave-one-out (LOO) analysis. Briefly, for each given participant, we built a classifier with all other participants and used the classifier to calculate the posterior probability for the given participant to be a CRA case. The AUC was then calculated based on the posterior probabilities. We also performed permutation analysis to investigate whether the method for assessing AUC was biased upward, i.e., higher than 0.5, for non-discriminative features. In each permutation, we randomly permuted the CRA/normal status and applied the RF\u00a0+\u00a0LOO procedure to calculate AUC. The mean and standard deviation were estimated based on the permuted AUCs.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11980,
+                    "infons": {
+                        "section_title_1": "2.\u2003Methods",
+                        "section_title_2": "2.4. Statistical Analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Across all specimens, we calculated the beta diversity distance metrics, including unweighted and weighted UniFrac distance metrics. Following associations with taxon relative abundance based on the Wilcoxon rank-sum test, we developed a novel rank-based distance metric (RDM) to minimize the effect of outliers for comparisons of overall beta diversity. Given K exclusive taxa, each specimen was represented as a relative abundance vector Xi\u00a0=\u00a0(xi1, \u2026, xiK). For each taxon, we calculated the rank of the relative abundance across all specimens to derive a new rank vector Ri\u00a0=\u00a0(ri1, \u2026, riK). The RDM was defined as the sum of rank distances summarizing all taxa in consideration: dij\u00a0=\u00a0|ri1\u00a0\u2212\u00a0rj1|\u00a0+\u00a0\u2026\u00a0+\u00a0|riK\u00a0\u2212\u00a0rjK|. For additional insights, we considered Euclidian and Kullback-Leibler (K\u2013L) distance metrics, as previously described (Goedert et al., 2014a).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12841,
+                    "infons": {
+                        "section_title_1": "2.\u2003Methods",
+                        "section_title_2": "2.4. Statistical Analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Given a distance matrix D\u00a0=\u00a0(dij) for N specimens, we tested whether CRA cases and normals were separated in the distance matrix by a permutation test. Briefly, we defined Z00 as the average distance in the control group, Z11 as the average distance in the CRA group and Z01 as the average distance for all CRA/normal pairs. The statistic was defined as Z\u00a0=\u00a0(Z00\u00a0+\u00a0Z11)\u00a0/\u00a02\u00a0\u2212\u00a0Z01, and its significance was evaluated by permuting CRA/normal status. Because sex is a risk factor for CRA, we further developed a permutation method to adjust the sex effect. Briefly, we calculated the statistics for males and females separately, denoted as Zmale and Zfemale. The overall statistic was defined as Zboth\u00a0=\u00a0(Zmale\u00a0+\u00a0Zfemale). The significance was evaluated by permuting the CRA/normal status in the male and female groups separately.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13668,
+                    "infons": {
+                        "section_title_1": "2.\u2003Methods",
+                        "section_title_2": "2.4. Statistical Analysis",
+                        "iao_name_1": "methods section",
+                        "iao_id_1": "IAO:0000317"
+                    },
+                    "text": "Furthermore, we performed clustering analysis to visualize the microbiota profile. After clustering, we tested whether some clusters were significantly enriched with CRA cases compared to other clusters. Since sex was associated with CRA status, associations were also adjusted for sex to investigate whether the detected associations were confounded by sex using the Cochran\u2013Mantel\u2013Haenszel exact test.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14071,
+                    "infons": {
+                        "section_title_1": "3.\u2003Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Informed consent was provided by 95 consecutive FIT\u00a0+ patients. Several days prior to bowel cleansing, 68 (72%) patients returned, less than 2\u00a0h after defecation, with all four vials of feces in the media-loaded vials. These 68 participants with specimens were predominantly female (59%), and they had a median age of 65 [interquartile range (IQR)\u00a0=\u00a061\u201369] years and median body mass index (BMI) of 24 (IQR\u00a0=\u00a021\u201327) kg/m2. Other characteristics are provided in Table\u00a01. Cigarette smoking was reported by 21 (75%) men and 1 woman. Alcohol consumption was reported by 10 men and 2 women. Ten participants reported receiving an antibiotic within 12\u00a0weeks of enrollment, 11 others received an antibiotic 12\u201324\u00a0weeks before enrollment, and the remaining 47 had no antibiotic use within 24\u00a0weeks.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14871,
+                    "infons": {
+                        "section_title_1": "3.\u2003Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Six participants refused colonoscopy, and it was unsuccessful in one. The 61 completed colonoscopies included 24 (39%) completely normal, 20 (33%) CRA, 5 (8%) enteritis/irritable bowel, 9 (15%) low-risk polyp, 1 ileocecal follicular lymphoma (grade 1), and 2 CRC (in follow-up, T2N0M0 and T3N1aM0, respectively) patients.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15192,
+                    "infons": {
+                        "section_title_1": "3.\u2003Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Variables that might confound comparison of the CRA and normal participants are presented in Supplemental Table\u00a01. The two groups did not differ in age (P\u00a0=\u00a00.86), but they were more likely to be male (P\u00a0=\u00a00.04). Sex accounted completely for small differences between CRA and normal participants in BMI (P\u00a0=\u00a00.12) and red meat consumption (P\u00a0=\u00a00.05). CRA was associated with antibiotic exposure less than 12\u00a0weeks (N\u00a0=\u00a05 vs 1, P\u00a0=\u00a00.04) and 12\u201324\u00a0weeks (N\u00a0=\u00a05 vs 2, P\u00a0=\u00a00.07) before enrollment.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15686,
+                    "infons": {
+                        "section_title_1": "3.\u2003Results",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "One fecal DNA specimen, in a participant who refused colonoscopy, failed to amplify. In the 67 successful fecal microbiota profiles, a median of 70,583 (range\u00a0=\u00a048,807\u2013170,668) 16S rRNA sequences was clustered by 97% identity into 2922 OTUs, which were assigned to taxa from the phylum to the species level, including 18 different phyla, 38 classes, 64 orders, 115 families, 227 genera, and 303 species. Taxa in the Firmicutes and Bacteroidetes phyla were most common, followed by Proteobacteria, Actinobacteria and Fusobacteria, but individual differences were substantial (Supplemental Fig.\u00a01).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Firmicutes",
+                            "infons": {
+                                "identifier": "NCBI:txid1239",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:00",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "513891",
+                            "locations": {
+                                "length": 10,
+                                "offset": 16102
+                            }
+                        },
+                        {
+                            "text": "Bacteroidetes",
+                            "infons": {
+                                "identifier": "NCBI:txid976",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:00",
+                                "parent_taxonomic_id": "NCBI:txid68336"
+                            },
+                            "id": "513892",
+                            "locations": {
+                                "length": 13,
+                                "offset": 16117
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:00",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513893",
+                            "locations": {
+                                "length": 14,
+                                "offset": 16167
+                            }
+                        },
+                        {
+                            "text": "Actinobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid201174",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:00",
+                                "parent_taxonomic_id": "NCBI:txid1783272"
+                            },
+                            "id": "513894",
+                            "locations": {
+                                "length": 14,
+                                "offset": 16183
+                            }
+                        },
+                        {
+                            "text": "Fusobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid32066",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:00",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513895",
+                            "locations": {
+                                "length": 12,
+                                "offset": 16202
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 16282,
+                    "infons": {
+                        "section_title_1": "3.\u2003Results",
+                        "section_title_2": "3.1. CRA Associations with Fecal Microbiota Diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "CRA and normal participants did not differ in four estimates of fecal microbiota richness or alpha diversity (Supplemental Table\u00a02). In contrast, CRA patients and normals differed in microbiota composition (beta diversity), as shown by the deviation from the null of the phylum-level (L2) quantile\u2013quantile (QQ) plot (Fig.\u00a01). Mean relative abundance in CRA patients and normals for each of the 18 phyla is presented in Supplemental Fig.\u00a02. Similar deviations from null were found in QQ plots at the order level and family level (L4 and L5, respectively, Supplemental Fig.\u00a03). With the beta-diversity matrix calculated using rank distance, the 20 CRA and 24 normal participants differed significantly at the phylum level (P\u00a0=\u00a00.02 based on 10,000 permutations, Supplemental Table\u00a03). When adjusted for sex, this was no longer statistically significant (P\u00a0=\u00a00.11), implying confounding.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17220,
+                    "infons": {
+                        "section_title_1": "3.\u2003Results",
+                        "section_title_2": "3.1. CRA Associations with Fecal Microbiota Diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "In secondary analyses, excluding participants who had taken an antibiotic within the previous 24\u00a0weeks, the remaining 10 CRA patients differed from the 21 normal participants in rank distance at the L2, L6 (genus) and L7 (species) levels, and they differed from all 36 non-CRA participants in K\u2013L distance at the L3 and L4 levels, and in Euclidean distance at the L5, L6 and L7 levels (all P\u00a0\u2264\u00a00.05, Supplemental Table\u00a03). Without the antibiotic exclusion, community composition did not differ for CRA participants by Euclidean, K\u2013L, or UniFrac distance estimates, nor when the 20 CRA participants were compared to all 41 non-CRA participants (Supplemental Table\u00a03).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17886,
+                    "infons": {
+                        "section_title_1": "3.\u2003Results",
+                        "section_title_2": "3.1. CRA Associations with Fecal Microbiota Diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Without antibiotic exclusion, clustering analyses based on the rank-distance beta-diversity matrix revealed that CRA patients and normals differed in phylum-level phylogenetic distances regardless of the number of clusters (Fisher's exact P\u00a0=\u00a00.01 for two clusters, Fig. 2; chi-square test P\u00a0=\u00a00.02 for 3 clusters, and P\u00a0=\u00a00.03 for 4 clusters). The phylum-level dendrogram in Fig.\u00a02 shows that CRA was significantly more prevalent in cluster B (17 of 29, 59%) than in cluster A (3 of 15, 20%, Fisher's exact P\u00a0=\u00a00.01).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18404,
+                    "infons": {
+                        "section_title_1": "3.\u2003Results",
+                        "section_title_2": "3.1. CRA Associations with Fecal Microbiota Diversity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Using rank relative abundance for all phylum-level taxa and the random forest plus leave-one-out procedure, Fig.\u00a03 presents a receiver operating characteristic (ROC) curve distinguishing CRA patients from normals [area under the curve (AUC)\u00a0=\u00a00.767, permutation P\u00a0=\u00a00.006 versus null (AUC\u00a0=\u00a00.5)]. Adding sex did not improve the prediction. A similar discrimination was observed with all order-level taxa (AUC\u00a0=\u00a00.77).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 18822,
+                    "infons": {
+                        "section_title_1": "3.\u2003Results",
+                        "section_title_2": "3.2. CRA Associations with Fecal Microbiota Taxa",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Most of the compositional difference between CRA patients and normals reflected the relative abundance of Proteobacteria taxa (P\u00a0=\u00a00.03) and, to a lesser extent, rare candidate division TM7 taxa (P\u00a0=\u00a00.04). The relative abundance of Fusobacteria taxa was non-significantly lower in CRA cases than in normals (0.4% vs 1.0%, P\u00a0=\u00a00.46). These tests were not adjusted for multiple comparisons. The median relative abundance of Proteobacteria taxa was 3-fold higher in CRA patients than in normals (8.7% vs 2.9%, P\u00a0=\u00a00.03) and intermediate in the 23 other participants (4.4%). The Proteobacteria relative abundance was not associated with antibiotic exposure (P\u00a0\u2265\u00a00.55) or any of the other covariates (all P\u00a0\u2265\u00a00.07, Supplemental Table\u00a04). The Proteobacteria association with CRA was not confounded by sex (Fig.\u00a04) and was mostly with taxa in Gammaproteobacteria families Pseudomonadaceae, Legionellaceae, Halomonadaceae, and Enterobacteriaceae and genera Serratia, Shigella, Salmonella, Pantoea, Morganella, Trabulsiella, and Escherichia (Supplemental Table\u00a05).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:19",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513896",
+                            "locations": {
+                                "length": 14,
+                                "offset": 18928
+                            }
+                        },
+                        {
+                            "text": "Fusobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid32066",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:24",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513897",
+                            "locations": {
+                                "length": 12,
+                                "offset": 19055
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:21",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513898",
+                            "locations": {
+                                "length": 14,
+                                "offset": 19245
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:22",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513899",
+                            "locations": {
+                                "length": 14,
+                                "offset": 19398
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:23",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513900",
+                            "locations": {
+                                "length": 14,
+                                "offset": 19560
+                            }
+                        },
+                        {
+                            "text": "Gammaproteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1236",
+                                "type": "bacteria_class",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:24",
+                                "parent_taxonomic_id": "NCBI:txid1224"
+                            },
+                            "id": "513901",
+                            "locations": {
+                                "length": 19,
+                                "offset": 19659
+                            }
+                        },
+                        {
+                            "text": "Pseudomonadaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid135621",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:24",
+                                "parent_taxonomic_id": "NCBI:txid72274"
+                            },
+                            "id": "513902",
+                            "locations": {
+                                "length": 16,
+                                "offset": 19688
+                            }
+                        },
+                        {
+                            "text": "Legionellaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid444",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:24",
+                                "parent_taxonomic_id": "NCBI:txid118969"
+                            },
+                            "id": "513903",
+                            "locations": {
+                                "length": 14,
+                                "offset": 19706
+                            }
+                        },
+                        {
+                            "text": "Halomonadaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid28256",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:24",
+                                "parent_taxonomic_id": "NCBI:txid135619"
+                            },
+                            "id": "513904",
+                            "locations": {
+                                "length": 14,
+                                "offset": 19722
+                            }
+                        },
+                        {
+                            "text": "Enterobacteriaceae",
+                            "infons": {
+                                "identifier": "NCBI:txid543",
+                                "type": "bacteria_family",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:24",
+                                "parent_taxonomic_id": "NCBI:txid91347"
+                            },
+                            "id": "513905",
+                            "locations": {
+                                "length": 18,
+                                "offset": 19742
+                            }
+                        },
+                        {
+                            "text": "Serratia",
+                            "infons": {
+                                "identifier": "NCBI:txid613",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:24",
+                                "parent_taxonomic_id": "NCBI:txid1903411"
+                            },
+                            "id": "513906",
+                            "locations": {
+                                "length": 8,
+                                "offset": 19772
+                            }
+                        },
+                        {
+                            "text": "Shigella",
+                            "infons": {
+                                "identifier": "NCBI:txid620",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:24",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "513907",
+                            "locations": {
+                                "length": 8,
+                                "offset": 19782
+                            }
+                        },
+                        {
+                            "text": "Salmonella",
+                            "infons": {
+                                "identifier": "NCBI:txid590",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:24",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "513908",
+                            "locations": {
+                                "length": 10,
+                                "offset": 19792
+                            }
+                        },
+                        {
+                            "text": "Pantoea",
+                            "infons": {
+                                "identifier": "NCBI:txid53335",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:24",
+                                "parent_taxonomic_id": "NCBI:txid1903409"
+                            },
+                            "id": "513909",
+                            "locations": {
+                                "length": 7,
+                                "offset": 19804
+                            }
+                        },
+                        {
+                            "text": "Morganella",
+                            "infons": {
+                                "identifier": "NCBI:txid581",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:24",
+                                "parent_taxonomic_id": "NCBI:txid1903414"
+                            },
+                            "id": "513910",
+                            "locations": {
+                                "length": 10,
+                                "offset": 19813
+                            }
+                        },
+                        {
+                            "text": "Trabulsiella",
+                            "infons": {
+                                "identifier": "NCBI:txid158851",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:24",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "513911",
+                            "locations": {
+                                "length": 12,
+                                "offset": 19825
+                            }
+                        },
+                        {
+                            "text": "Escherichia",
+                            "infons": {
+                                "identifier": "NCBI:txid561",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:24",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "513912",
+                            "locations": {
+                                "length": 11,
+                                "offset": 19843
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 19926,
+                    "infons": {
+                        "section_title_1": "4.\u2003Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "We found CRA in 33% of 61 Shanghai residents aged 50\u201374 who had occult blood in feces (FIT\u00a0+) and who completed colonoscopy. The overall composition of the fecal microbiota differed significantly between CRA and normal-colonoscopy participants, with good discrimination (AUC\u00a0=\u00a00.767). Unlike Zackular et al. (2014), this calculation was based on the entire microbial community rather than on a handful of taxa selected to maximize the discrimination. Of potential functional interest, we noted that CRA was associated with significantly higher abundance of fecal Proteobacteria, the phylum that includes established gut pathogens \u2014 Pseudomonas, Escherichia, Shigella, Salmonella, Serratia, Klebsiella, and Helicobacter. Our findings corroborate those from a prior study in Shanghai, in which fecal microbial communities differed between 47 CRA patients and 47 normal-colonoscopy patients (Chen et al., 2013). In that latter study, the abundance of Proteobacteria taxa was modestly higher with CRA (mean\u00a0=\u00a03.7% vs 3.0%), but most of the compositional difference was attributed to other bacterial taxa (Chen et al., 2013). CRA cases also had higher abundance of Proteobacteria in feces in a small study in Spain (Mira-Pascual et al., 2014) and in biopsies of unaffected rectal mucosa (Mira-Pascual et al., 2014, Shen et al., 2010). Only one of the dozen CRA-associated taxa noted in the American study, Pseudomonas, was in the Proteobacteria phylum (Zackular et al., 2014).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:28",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513913",
+                            "locations": {
+                                "length": 14,
+                                "offset": 20489
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas",
+                            "infons": {
+                                "identifier": "NCBI:txid286",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:28",
+                                "parent_taxonomic_id": "NCBI:txid135621"
+                            },
+                            "id": "513914",
+                            "locations": {
+                                "length": 11,
+                                "offset": 20558
+                            }
+                        },
+                        {
+                            "text": "Escherichia",
+                            "infons": {
+                                "identifier": "NCBI:txid561",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:28",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "513915",
+                            "locations": {
+                                "length": 11,
+                                "offset": 20571
+                            }
+                        },
+                        {
+                            "text": "Shigella",
+                            "infons": {
+                                "identifier": "NCBI:txid620",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:28",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "513916",
+                            "locations": {
+                                "length": 8,
+                                "offset": 20584
+                            }
+                        },
+                        {
+                            "text": "Salmonella",
+                            "infons": {
+                                "identifier": "NCBI:txid590",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:28",
+                                "parent_taxonomic_id": "NCBI:txid543"
+                            },
+                            "id": "513917",
+                            "locations": {
+                                "length": 10,
+                                "offset": 20594
+                            }
+                        },
+                        {
+                            "text": "Serratia",
+                            "infons": {
+                                "identifier": "NCBI:txid613",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:28",
+                                "parent_taxonomic_id": "NCBI:txid1903411"
+                            },
+                            "id": "513918",
+                            "locations": {
+                                "length": 8,
+                                "offset": 20606
+                            }
+                        },
+                        {
+                            "text": "Klebsiella",
+                            "infons": {
+                                "identifier": "NCBI:txid570",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:28",
+                                "parent_taxonomic_id": "NCBI:txid2890311"
+                            },
+                            "id": "513919",
+                            "locations": {
+                                "length": 10,
+                                "offset": 20616
+                            }
+                        },
+                        {
+                            "text": "Helicobacter",
+                            "infons": {
+                                "identifier": "NCBI:txid209",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:29",
+                                "parent_taxonomic_id": "NCBI:txid72293"
+                            },
+                            "id": "513920",
+                            "locations": {
+                                "length": 12,
+                                "offset": 20632
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:30",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513921",
+                            "locations": {
+                                "length": 14,
+                                "offset": 20874
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:32",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513922",
+                            "locations": {
+                                "length": 14,
+                                "offset": 21086
+                            }
+                        },
+                        {
+                            "text": "Pseudomonas",
+                            "infons": {
+                                "identifier": "NCBI:txid286",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:33",
+                                "parent_taxonomic_id": "NCBI:txid135621"
+                            },
+                            "id": "513923",
+                            "locations": {
+                                "length": 11,
+                                "offset": 21327
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:34",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513924",
+                            "locations": {
+                                "length": 14,
+                                "offset": 21351
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 21410,
+                    "infons": {
+                        "section_title_1": "4.\u2003Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Following detection of CRA, surveillance colonoscopy after 3\u00a0years is strongly recommended (Lieberman et al., 2012), and this was reinforced by the recent finding that a 5-year interval was insufficient (Loberg et al., 2014). Our results may help to inform CRA/CRC screening, particularly where referral for colonoscopy is based on FIT\u00a0+. Nearly 9% of our FIT\u00a0+ participants refused colonoscopy, which is clearly suboptimal. Perhaps adherence to follow-up colonoscopy would be increased with a higher sensitivity primary screen. The positive predictive value for CRA with above-median Proteobacteria was 67% (12 of 18) in our FIT\u00a0+ participants, although this was optimized for the Proteobacteria distribution that we observed and would be much lower in FIT-negative and -untested populations.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:38",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513925",
+                            "locations": {
+                                "length": 14,
+                                "offset": 21995
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:39",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513926",
+                            "locations": {
+                                "length": 14,
+                                "offset": 22092
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 22203,
+                    "infons": {
+                        "section_title_1": "4.\u2003Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Fecal microbiota alpha diversity and richness (e.g., number of different taxa) were not associated with CRA in our study, whereas one study reported decreased richness in feces from CRC cases (Ahn et al., 2013) and another reported increased richness in unaffected mucosa from CRA cases (Sanapareddy et al., 2012). We also did not find an association of Fusobacteria with CRA, in contrast to the relatively strong and consistent detection of Fusobacteria in malignant CRC tumor tissue (Castellarin et al., 2012, Flanagan et al., 2014, Kostic et al., 2012, Warren et al., 2013) and in feces (Ahn et al., 2013, Wu et al., 2013, Zeller et al., 2014) from CRC cases. Data on Fusobacteria in CRA are sparse. One study reported increased Fusobacteria abundance in CRA tissue, but only with high-grade dysplasia (Flanagan et al., 2014). A second study found that CRA cases, some with very small tumors, had increased Fusobacteria abundance in unaffected rectal mucosa compared to the mucosa of normal controls (McCoy et al., 2013). In our study, Fusobacteria was the fifth most abundant phylum (Fig.\u00a02), but its relative abundance was less than 1% irrespective of CRA status, suggesting that it is not required for CRA. The possibility remains that unbalanced amplification (\u201cprimer bias\u201d) with our newly developed method (Fadrosh et al., 2014) might have contributed to our null association with Fusobacteria. On a broader level, deeper sequencing, as well as additional, larger, and prospective studies of the fecal microbiota in diverse populations, will be needed to clarify whether and how alpha diversity, community composition, Fusobacteria, Proteobacteria, and other potentially pathogenic microbes contribute to the etiology and early detection of colorectal neoplasia (Collins et al., 2011, Tjalsma et al., 2012).",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Fusobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid32066",
+                                    "NCBI:txid203490"
+                                ],
+                                "type": [
+                                    "bacteria_phylum",
+                                    "bacteria_class"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:42",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid2",
+                                    "NCBI:txid32066"
+                                ]
+                            },
+                            "id": "513927",
+                            "locations": {
+                                "length": 12,
+                                "offset": 22557
+                            }
+                        },
+                        {
+                            "text": "Fusobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid32066",
+                                    "NCBI:txid203490"
+                                ],
+                                "type": [
+                                    "bacteria_phylum",
+                                    "bacteria_class"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:42",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid2",
+                                    "NCBI:txid32066"
+                                ]
+                            },
+                            "id": "513928",
+                            "locations": {
+                                "length": 12,
+                                "offset": 22645
+                            }
+                        },
+                        {
+                            "text": "Fusobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid32066",
+                                    "NCBI:txid203490"
+                                ],
+                                "type": [
+                                    "bacteria_phylum",
+                                    "bacteria_class"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:44",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid2",
+                                    "NCBI:txid32066"
+                                ]
+                            },
+                            "id": "513929",
+                            "locations": {
+                                "length": 12,
+                                "offset": 22874
+                            }
+                        },
+                        {
+                            "text": "Fusobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid32066",
+                                    "NCBI:txid203490"
+                                ],
+                                "type": [
+                                    "bacteria_phylum",
+                                    "bacteria_class"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:45",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid2",
+                                    "NCBI:txid32066"
+                                ]
+                            },
+                            "id": "513930",
+                            "locations": {
+                                "length": 12,
+                                "offset": 22935
+                            }
+                        },
+                        {
+                            "text": "Fusobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid32066",
+                                    "NCBI:txid203490"
+                                ],
+                                "type": [
+                                    "bacteria_phylum",
+                                    "bacteria_class"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:46",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid2",
+                                    "NCBI:txid32066"
+                                ]
+                            },
+                            "id": "513931",
+                            "locations": {
+                                "length": 12,
+                                "offset": 23113
+                            }
+                        },
+                        {
+                            "text": "Fusobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid32066",
+                                    "NCBI:txid203490"
+                                ],
+                                "type": [
+                                    "bacteria_phylum",
+                                    "bacteria_class"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:47",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid2",
+                                    "NCBI:txid32066"
+                                ]
+                            },
+                            "id": "513932",
+                            "locations": {
+                                "length": 12,
+                                "offset": 23242
+                            }
+                        },
+                        {
+                            "text": "Fusobacteria",
+                            "infons": {
+                                "identifier": [
+                                    "NCBI:txid32066",
+                                    "NCBI:txid203490"
+                                ],
+                                "type": [
+                                    "bacteria_phylum",
+                                    "bacteria_class"
+                                ],
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:49",
+                                "parent_taxonomic_id": [
+                                    "NCBI:txid2",
+                                    "NCBI:txid32066"
+                                ]
+                            },
+                            "id": "513933",
+                            "locations": {
+                                "length": 12,
+                                "offset": 23593
+                            }
+                        },
+                        {
+                            "text": "Fusobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid32066",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:52",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513934",
+                            "locations": {
+                                "length": 12,
+                                "offset": 23831
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:58:51",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513935",
+                            "locations": {
+                                "length": 14,
+                                "offset": 23845
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 24019,
+                    "infons": {
+                        "section_title_1": "4.\u2003Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "The strengths of our study include nesting within a population-based CRC screening program, fecal specimens collected prior to bowel cleansing and into a chemical stabilizer, and state-of-the-art amplification, sequencing, and statistical analysis methods. Particularly noteworthy is our development and application of a rank-based distance metric to quantify and test for differences in composition (beta diversity). This development originated with the Wilcoxon rank-sum test, which we used to reduce the influence of extreme values and with which we observed CRA associations across most of the 18 detected phyla. Also noteworthy is our use of random forests plus leave-one-out, which is equivalent to repeated cross-validation, to quantify the discrimination between CRA and normal patients. The major weaknesses of our study are the lack of an a priori hypothesis, cross-sectional design and very small size, which preclude detecting changes over time, associations with minor taxa, potential interactions with known risk factors for CRA, and a statistically robust set of CRA-associated taxa.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25117,
+                    "infons": {
+                        "section_title_1": "4.\u2003Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In conclusion, we found that the microbial composition of fecal specimens in both men and women differed significantly between patients with CRA and patients with a normal colonoscopy. In secondary analyses, excluding participants who had antibiotic exposure within 24\u00a0weeks, the difference with CRA was significant with various estimates of composition and down to the species level. The difference was predominantly and significantly due to higher abundance of Proteobacteria taxa in the CRA feces. Because Proteobacteria includes several well established gut pathogens and because colorectal neoplasia is closely tied to mucosal inflammation (Beaugerie et al., 2013, Collins et al., 2011, Tjalsma et al., 2012), the association with CRA that we found is plausible. Larger, longitudinal studies will be needed to determine whether and which Proteobacteria taxa contribute to early colorectal neoplasia and the potential use of fecal microbiota analysis to improve CRA screening and ultimately to reduce CRC mortality.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:59:03",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513936",
+                            "locations": {
+                                "length": 14,
+                                "offset": 25580
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:59:03",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513937",
+                            "locations": {
+                                "length": 14,
+                                "offset": 25626
+                            }
+                        },
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:59:05",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513938",
+                            "locations": {
+                                "length": 14,
+                                "offset": 25960
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26136,
+                    "infons": {
+                        "section_title_1": "4.\u2003Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "The following are the supplementary data related to this article.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26201,
+                    "infons": {
+                        "section_title_1": "4.\u2003Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Characteristics associated with colorectal adenoma versus normal.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26266,
+                    "infons": {
+                        "section_title_1": "4.\u2003Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Richness and alpha diversity with normal versus colorectal adenoma by colonoscopy.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26348,
+                    "infons": {
+                        "section_title_1": "4.\u2003Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "P-values for adenoma cases versus normals or versus all other participants on various fecal microbiota beta diversity parameters.*",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26478,
+                    "infons": {
+                        "section_title_1": "4.\u2003Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Associations of covariates with relative abundance of Proteobacteria taxa.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Proteobacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid1224",
+                                "type": "bacteria_phylum",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:59:09",
+                                "parent_taxonomic_id": "NCBI:txid2"
+                            },
+                            "id": "513939",
+                            "locations": {
+                                "length": 14,
+                                "offset": 26532
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 26552,
+                    "infons": {
+                        "section_title_1": "4.\u2003Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Mean relative abundance of all taxa, by colonoscopy group.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26610,
+                    "infons": {
+                        "section_title_1": "4.\u2003Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Supplemental methods.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26631,
+                    "infons": {
+                        "section_title_1": "Conflict of Interest",
+                        "iao_name_1": "conflict of interest section",
+                        "iao_id_1": "IAO:0000616"
+                    },
+                    "text": "The authors confirm that there are no known conflicts of interest associated with this publication. Dr. Zhong and Dr. He report employment by BGI, but there has been no significant financial support for this work that could have influenced its outcome.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26903,
+                    "infons": {
+                        "section_title_1": "Author Contributions",
+                        "iao_name_1": "author contributions section",
+                        "iao_id_1": "IAO:0000323"
+                    },
+                    "text": "YZ and JJG supervised the study. JJG conceived and designed the study, obtained funding, interpreted the data, and drafted the manuscript. YZ, HZ, WW and JR obtained funding and contributed to the design, interpretation of the data, and drafting of the manuscript. HZ and JR also developed the microbiota testing strategy, methods and analytic procedures. YH performed the microbiota testing and initial data assembly. JR developed the bioinformatic pipeline. WW supervised the biospecimen handling, transportation, and repository. YG and PP trained the field staff and supervised the collection and transport of specimens and the collection and editing of questionnaire data. JS developed the statistical analysis strategy and supervised the statistical analyses. XH, GY and JS performed the statistical analyses. All authors contributed to the interpretation of the data and contributed to and approved the final version of the manuscript.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27864,
+                    "infons": {
+                        "section_title_1": "Funding",
+                        "iao_name_1": "funding source declaration section",
+                        "iao_id_1": "IAO:0000623"
+                    },
+                    "text": "This study was supported by the Intramural Research Program, National Cancer Institute, National Institutes of Health (Z01CP010214) and by the Shanghai Municipal Center for Disease Control and Prevention.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28075,
+                    "infons": {
+                        "section_title_1": "Acknowledgments",
+                        "iao_name_1": "acknowledgements section",
+                        "iao_id_1": "IAO:0000324"
+                    },
+                    "text": "The authors are grateful to the study participants, the staff at the community health centers, Dr. Bing Ma for assistance with data processing, Dr. Ann Chao for facilitating the field work, Dr. Marc Gunter for useful discussions, and Dr. Mitchell Gail for statistical advice.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28365,
+                    "infons": {
+                        "journal": "Gastroenterology. ",
+                        "volume": "142",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Ahlquist D.A., Zou H., Domanico M., Mahoney D.W., Yab T.C., Taylor W.R., Butz M.L., Thibodeau S.N., Rabeneck L., Paszat L.F. Next-generation stool DNA test accurately detects colorectal cancer and large adenomas. Gastroenterology. 2012;142:248\u2013256. (quiz e225-246) [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28684,
+                    "infons": {
+                        "journal": "J. Natl. Cancer Inst. ",
+                        "volume": "105",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Ahn J., Sinha R., Pei Z., Dominianni C., Wu J., Shi J., Goedert J.J., Hayes R.B., Yang L. Human gut microbiome and risk for colorectal cancer. J. Natl. Cancer Inst. 2013;105:1907\u20131911. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28913,
+                    "infons": {
+                        "journal": "Gastroenterology. ",
+                        "volume": "145",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Beaugerie L., Svrcek M., Seksik P., Bouvier A.M., Simon T., Allez M., Brixi H., Gornet J.M., Altwegg R., Beau P. Risk of colorectal high-grade dysplasia and cancer in a prospective observational cohort of patients with inflammatory bowel disease. Gastroenterology. 2013;145:166\u2013175. (e168) [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29228,
+                    "infons": {
+                        "journal": "PLoS One. ",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Brim H., Yooseph S., Zoetendal E.G., Lee E., Torralbo M., Laiyemo A.O., Shokrani B., Nelson K., Ashktorab H. Microbiome analysis of stool samples from African Americans with colon polyps. PLoS One. 2013;8:e81352. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29485,
+                    "infons": {
+                        "journal": "Nat. Methods. ",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Caporaso J.G., Kuczynski J., Stombaugh J., Bittinger K., Bushman F.D., Costello E.K., Fierer N., Pena A.G., Goodrich J.K., Gordon J.I. QIIME allows analysis of high-throughput community sequencing data. Nat. Methods. 2010;7:335\u2013336. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 29762,
+                    "infons": {
+                        "journal": "Cancer Prev. Res. (Phila.) ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Carmona F.J., Azuara D., Berenguer-Llergo A., Fernandez A.F., Biondo S., de Oca J., Rodriguez-Moranta F., Salazar R., Villanueva A., Fraga M.F. DNA methylation biomarkers for noninvasive diagnosis of colorectal cancer. Cancer Prev. Res. (Phila.) 2013;6:656\u2013665. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30049,
+                    "infons": {
+                        "journal": "Genome Res. ",
+                        "volume": "22",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Castellarin M., Warren R.L., Freeman J.D., Dreolini L., Krzywinski M., Strauss J., Barnes R., Watson P., Allen-Vercoe E., Moore R.A. Fusobacterium nucleatum infection is prevalent in human colorectal carcinoma. Genome Res. 2012;22:299\u2013306. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Fusobacterium nucleatum",
+                            "infons": {
+                                "identifier": "NCBI:txid851",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:59:34",
+                                "parent_taxonomic_id": "NCBI:txid848"
+                            },
+                            "id": "513940",
+                            "locations": {
+                                "length": 23,
+                                "offset": 30182
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 30333,
+                    "infons": {
+                        "journal": "Am. J. Clin. Nutr. ",
+                        "volume": "97",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Chen H.M., Yu Y.N., Wang J.L., Lin Y.W., Kong X., Yang C.Q., Yang L., Liu Z.J., Yuan Y.Z., Liu F. Decreased dietary fiber intake and structural alteration of gut microbiota in patients with advanced colorectal adenoma. Am. J. Clin. Nutr. 2013;97:1044\u20131052. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30615,
+                    "infons": {
+                        "journal": "Lancet Oncol. ",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Collins D., Hogan A.M., Winter D.C. Microbial and viral pathogens in colorectal cancer. Lancet Oncol. 2011;12:504\u2013512. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 30759,
+                    "infons": {
+                        "journal": "Microbiome. ",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Fadrosh D.W., Ma B., Gajer P., Sengamalay N., Ott S., Brotman R.M., Ravel J. An improved dual-indexing approach for multiplexed 16S rRNA gene sequencing on the Illumina MiSeq platform. Microbiome. 2014;2:6. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31010,
+                    "infons": {
+                        "journal": "Eur. J. Clin. Microbiol. Infect. Dis. ",
+                        "volume": "33",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Flanagan L., Schmid J., Ebert M., Soucek P., Kunicka T., Liska V., Bruha J., Neary P., Dezeeuw N., Tommasino M. Fusobacterium nucleatum associates with stages of colorectal neoplasia development, colorectal cancer and disease outcome. Eur. J. Clin. Microbiol. Infect. Dis. 2014;33:1381\u20131390. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Fusobacterium nucleatum",
+                            "infons": {
+                                "identifier": "NCBI:txid851",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:59:41",
+                                "parent_taxonomic_id": "NCBI:txid848"
+                            },
+                            "id": "513941",
+                            "locations": {
+                                "length": 23,
+                                "offset": 31122
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 31327,
+                    "infons": {
+                        "journal": "EBioMedicine. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Goedert J.J., Hua X., Yu G., Shi J. Diversity and composition of the adult fecal microbiome associated with history of cesarean birth or appendectomy: analysis of the American Gut Project. EBioMedicine. 2014;1:167\u2013172. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31590,
+                    "infons": {
+                        "journal": "Carcinogenesis. ",
+                        "volume": "35",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Goedert J.J., Sampson J.N., Moore S.C., Xiao Q., Xiong X., Hayes R.B., Ahn J., Shi J., Sinha R. Fecal metabolomics: assay performance and association with colorectal cancer. Carcinogenesis. 2014;35:2089\u20132096. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 31843,
+                    "infons": {
+                        "journal": "N. Engl. J. Med. ",
+                        "volume": "370",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Imperiale T.F., Ransohoff D.F., Itzkowitz S.H., Levin T.R., Lavin P., Lidgard G.P., Ahlquist D.A., Berger B.M. Multitarget stool DNA testing for colorectal-cancer screening. N. Engl. J. Med. 2014;370:1287\u20131297. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32079,
+                    "infons": {
+                        "journal": "Genome Res. ",
+                        "volume": "22",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Kostic A.D., Gevers D., Pedamallu C.S., Michaud M., Duke F., Earl A.M., Ojesina A.I., Jung J., Bass A.J., Tabernero J. Genomic analysis identifies association of Fusobacterium with colorectal carcinoma. Genome Res. 2012;22:292\u2013298. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Fusobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid848",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:59:49",
+                                "parent_taxonomic_id": "NCBI:txid203492"
+                            },
+                            "id": "513942",
+                            "locations": {
+                                "length": 13,
+                                "offset": 32241
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 32355,
+                    "infons": {
+                        "journal": "Nat. Rev. Clin. Oncol. ",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Kuipers E.J., Rosch T., Bretthauer M. Colorectal cancer screening\u2014optimizing current strategies and new directions. Nat. Rev. Clin. Oncol. 2013;10:130\u2013142. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32536,
+                    "infons": {
+                        "journal": "JAMA Intern. Med. ",
+                        "volume": "174",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Lieberman D. Screening for colorectal cancer in individuals at average risk: current methods and emerging issues. JAMA Intern. Med. 2014;174:10\u201311. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 32709,
+                    "infons": {
+                        "journal": "Gastroenterology. ",
+                        "volume": "143",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Lieberman D.A., Rex D.K., Winawer S.J., Giardiello F.M., Johnson D.A., Levin T.R. Guidelines for colonoscopy surveillance after screening and polypectomy: a consensus update by the US Multi-Society Task Force on Colorectal Cancer. Gastroenterology. 2012;143:844\u2013857. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33001,
+                    "infons": {
+                        "journal": "N. Engl. J. Med. ",
+                        "volume": "371",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Loberg M., Kalager M., Holme O., Hoff G., Adami H.O., Bretthauer M. Long-term colorectal-cancer mortality after adenoma removal. N. Engl. J. Med. 2014;371:799\u2013807. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33190,
+                    "infons": {
+                        "journal": "PLoS One. ",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "McCoy A.N., Araujo-Perez F., Azcarate-Peril A., Yeh J.J., Sandler R.S., Keku T.O. Fusobacterium is associated with colorectal adenomas. PLoS One. 2013;8:e53653. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Fusobacterium",
+                            "infons": {
+                                "identifier": "NCBI:txid848",
+                                "type": "bacteria_genus",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 02:59:55",
+                                "parent_taxonomic_id": "NCBI:txid203492"
+                            },
+                            "id": "513943",
+                            "locations": {
+                                "length": 13,
+                                "offset": 33272
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 33395,
+                    "infons": {
+                        "journal": "Ann. Epidemiol. ",
+                        "volume": "25",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Meester R.G., Doubeni C.A., Lansdorp-Vogelaar I., Goede S.L., Levin T.R., Quinn V.P., Ballegooijen M., Corley D.A., Zauber A.G. Colorectal cancer deaths attributable to nonuse of screening in the United States. Ann. Epidemiol. 2015;25:208\u2013213. (e201) [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 33690,
+                    "infons": {
+                        "journal": "J. Gastroenterol. ",
+                        "volume": "50",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Mira-Pascual L., Cabrera-Rubio R., Ocon S., Costales P., Parra A., Suarez A., Moris F., Rodrigo L., Mira A., Collado M.C. Microbial mucosal colonic shifts associated with the development of colorectal cancer reveal the presence of different bacterial and archaeal biomarkers. J. Gastroenterol. 2015;50:167\u2013179. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34026,
+                    "infons": {
+                        "journal": "Nature. ",
+                        "volume": "490",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Qin J., Li Y., Cai Z., Li S., Zhu J., Zhang F., Liang S., Zhang W., Guan Y., Shen D. A metagenome-wide association study of gut microbiota in type 2 diabetes. Nature. 2012;490:55\u201360. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34234,
+                    "infons": {
+                        "journal": "ISME J. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Sanapareddy N., Legge R.M., Jovov B., McCoy A., Burcal L., Araujo-Perez F., Randall T.A., Galanko J., Benson A., Sandler R.S. Increased rectal microbial richness is associated with the presence of colorectal adenomas in humans. ISME J. 2012;6:1858\u20131868. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34532,
+                    "infons": {
+                        "journal": "Nat. Rev. Cancer. ",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Schwabe R.F., Jobin C. The microbiome and cancer. Nat. Rev. Cancer. 2013;13:800\u2013812. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34661,
+                    "infons": {
+                        "journal": "J. Infect. Dis. ",
+                        "volume": "203",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Sears C.L., Pardoll D.M. Perspective: alpha-bugs, their microbial partners, and the link to colon cancer. J. Infect. Dis. 2011;203:306\u2013311. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34845,
+                    "infons": {
+                        "journal": "Gut Microbes. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Shen X.J., Rawls J.F., Randall T., Burcal L., Mpande C.N., Jenkins N., Jovov B., Abdo Z., Sandler R.S., Keku T.O. Molecular characterization of mucosal adherent bacteria and associations with colorectal adenomas. Gut Microbes. 2010;1:138\u2013147. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 03:00:08",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "513944",
+                            "locations": {
+                                "length": 8,
+                                "offset": 35006
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 35132,
+                    "infons": {
+                        "journal": "Nat. Rev. Microbiol. ",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Tjalsma H., Boleij A., Marchesi J.R., Dutilh B.E. A bacterial driver\u2013passenger model for colorectal cancer: beyond the usual suspects. Nat. Rev. Microbiol. 2012;10:575\u2013582. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35330,
+                    "infons": {
+                        "journal": "Appl. Environ. Microbiol. ",
+                        "volume": "73",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Wang Q., Garrity G.M., Tiedje J.M., Cole J.R. Naive Bayesian classifier for rapid assignment of rRNA sequences into the new bacterial taxonomy. Appl. Environ. Microbiol. 2007;73:5261\u20135267. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35563,
+                    "infons": {
+                        "journal": "ISME J. ",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Wang T., Cai G., Qiu Y., Fei N., Zhang M., Pang X., Jia W., Cai S., Zhao L. Structural segregation of gut microbiota between colorectal cancer patients and healthy volunteers. ISME J. 2012;6:320\u2013329. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35807,
+                    "infons": {
+                        "journal": "Microbiome. ",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Warren R.L., Freeman D.J., Pleasance S., Watson P., Moore R.A., Cochrane K., Allen-Vercoe E., Holt R.A. Co-occurrence of anaerobic bacteria in colorectal carcinomas. Microbiome. 2013;1:16. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-30 03:00:15",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "513945",
+                            "locations": {
+                                "length": 8,
+                                "offset": 35938
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 36040,
+                    "infons": {
+                        "journal": "PLoS One. ",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Weir T.L., Manter D.K., Sheflin A.M., Barnett B.A., Heuberger A.L., Ryan E.P. Stool microbiome and metabolome differences between colorectal cancer patients and healthy adults. PLoS One. 2013;8:e70803. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36286,
+                    "infons": {
+                        "journal": "Microb. Ecol. ",
+                        "volume": "66",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Wu N., Yang X., Zhang R., Li J., Xiao X., Hu Y., Chen Y., Yang F., Lu N., Wang Z. Dysbiosis signature of fecal microbiota in colorectal cancer patients. Microb. Ecol. 2013;66:462\u2013470. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36495,
+                    "infons": {
+                        "journal": "Cancer Prev. Res. (Phila.) ",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Zackular J.P., Rogers M.A., Ruffin M.T.T., Schloss P.D. The human gut microbiome as a screening tool for colorectal cancer. Cancer Prev. Res. (Phila.) 2014;7:1112\u20131121. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36708,
+                    "infons": {
+                        "journal": "N. Engl. J. Med. ",
+                        "volume": "366",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Zauber A.G., Winawer S.J., O'Brien M.J., Lansdorp-Vogelaar I., van Ballegooijen M., Hankey B.F., Shi W., Bond J.H., Schapiro M., Panish J.F. Colonoscopic polypectomy and long-term prevention of colorectal-cancer deaths. N. Engl. J. Med. 2012;366:687\u2013696. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37007,
+                    "infons": {
+                        "journal": "Mol. Syst. Biol. ",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "Zeller G., Tap J., Voigt A.Y., Sunagawa S., Kultima J.R., Costea P.I., Amiot A., Bohm J., Brunetti F., Habermann N. Potential of fecal microbiota for early-stage detection of colorectal cancer. Mol. Syst. Biol. 2014;10:766. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

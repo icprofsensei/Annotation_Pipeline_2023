@@ -1,0 +1,1828 @@
+{
+    "source": "Auto-CORPus (full-text)",
+    "date": "20230328",
+    "key": "autocorpus_fulltext.key",
+    "infons": {},
+    "documents": [
+        {
+            "id": "PMC3942451",
+            "inputfile": "../microbiome_corpus_HTML\\PMC3942451.html",
+            "infons": {},
+            "passages": [
+                {
+                    "offset": 0,
+                    "infons": {
+                        "iao_name_1": "document title",
+                        "iao_id_1": "IAO:0000305"
+                    },
+                    "text": "Development of HuMiChip for Functional Profiling of Human Microbiomes",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 69,
+                    "infons": {
+                        "section_title_1": "Abstract",
+                        "iao_name_1": "textual abstract section",
+                        "iao_id_1": "IAO:0000315"
+                    },
+                    "text": "Understanding the diversity, composition, structure, function, and dynamics of human microbiomes in individual human hosts is crucial to reveal human-microbial interactions, especially for patients with microbially mediated disorders, but challenging due to the high diversity of the human microbiome. Here we have developed a functional gene-based microarray for profiling human microbiomes (HuMiChip) with 36,802 probes targeting 50,007 protein coding sequences for 139 key functional gene families. Computational evaluation suggested all probes included are highly specific to their target sequences. HuMiChip was used to analyze human oral and gut microbiomes, showing significantly different functional gene profiles between oral and gut microbiome. Obvious shifts of microbial functional structure and composition were observed for both patients with dental caries and periodontitis from moderate to advanced stages, suggesting a progressive change of microbial communities in response to the diseases. Consistent gene family profiles were observed by both HuMiChip and next generation sequencing technologies. Additionally, HuMiChip was able to detect gene families at as low as 0.001% relative abundance. The results indicate that the developed HuMiChip is a useful and effective tool for functional profiling of human microbiomes.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 1416,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Extensive studies have shown that the human microbiome plays extremely important roles in human health, nutrition, disease, and antibiotic resistance [1], [2], [3], [4], [5]. Many human disorders, such as dental caries, periodontitis, type 2 diabetes, and obesity, are closely related with changed microbial communities in the human body [3], [6], [7], [8], [9], [10], [11], [12]. Thus understanding the diversity, composition, structure, function, and dynamics of human microbiomes in individual human hosts is crucial to reveal human-microbial interactions, especially for patients with microbially mediated disorders, but challenging due to the high diversity of the human microbiome. For example, the number of microbial cells is at least ten times more than human cells in the individual human body [13], [14], and the number of microbial genes is 100 times more than their host. Although thousands of microbial species from the human body have been isolated and sequenced, especially by the Human Microbiome Project (HMP) [15], characterizing and linking the function of microbial communities to their host\u2019s health status (e.g., obesity, liver diseases, periodontitis) is still challenging.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 2625,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "Microbial ecological microarrays are a technology that can be used for highly parallel detection of complex microbial communities in many environments [16], [17]. So far, a variety of microarrays, such as GeoChip, PhyloChip, HITChip, HuGChip, as well as a series of other 16S rRNA based microarrays have been developed and widely used for functional and phylogenetic profiling of microbial communities from different habitats [18], [19], [20], [21], [22], [23]. However, these microbial ecological microarrays mainly target functional genes that play important roles in biogeochemical processes in the natural environment or 16S rRNA genes, but not functional genes specifically important to the human body. Intriguingly, recent metagenomic studies suggested that a functional rather than a taxonomic core might be present within a given niche of the human microbiome, and that changes in these cores might lead to different physiological states [5], [11], [24], [25].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 3593,
+                    "infons": {
+                        "section_title_1": "Introduction",
+                        "iao_name_1": "introduction section",
+                        "iao_id_1": "IAO:0000316"
+                    },
+                    "text": "In this study, we aimed to develop a functional gene based microarray to target key microbial functional processes related with human health, disease and nutrition. The developed HuMiChip was applied to characterize the human microbiome with human gut and oral samples. Also, we compared the functional gene profiles of human gut and oral samples obtained by the HuMiChip and by next generation sequencing technologies, and consistent results were observed. This study demonstrates that the developed HuMiChip is a useful and effective tool for functional profiling of human microbiomes.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 4180,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Sequence retrieval, probe designing and microarray synthesis",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The HuMiChip was developed using a pipeline (Figure S1) modified from the GeoChip 3.0 and 4.0 design [26]. Reference protein sequences for each selected gene family were retrieved from the KEGG database and subject to multiple sequence alignment, and an HMM model was built using the HMMER program [27]. A total of 322 bacterial genome sequences and 31 shotgun metagenomes [24] were downloaded: 300 from NCBI database, 16 from HOMD [28], 6 from Oralgen database [29], and 31 human gut metagenomes from MG-RAST server [24], [30], [31], which formed a Mother database (MotherDB). Protein sequences were extracted and searched against the pre-built HMM models from reference sequences collected from the KEGG database [32]. Corresponding nucleotide sequences were extracted and subject to probe design by CommOligo 2.0 [33] using probe design criteria described previously [26]. Candidate probes were searched against the whole MotherDB for specificity. The best probes were selected for microarray fabrication by Roche NimbleGen (Madison, WI).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 5302,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Sampling, DNA extraction, purification and quantification",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Oral subgingival/supragingival and fecal samples were collected from subjects at the West China Hospital of Stomatology, Sichuan University (oral samples) and the First Affiliated Hospital of Zhejiang University (fecal samples), respectively. A total of 86 individuals were recruited for sample collection, among which 62 were oral samples representing five groups of oral microbiota, and 24 were fecal samples representing gut microbiota. Subgingival plaque was collected for periodontitis patients, subgingival and supragingival plaque from teeth #11-18 and #31-38 was collected for healthy individuals, and supragingival plaque from teeth #11-18 and #31-38 was collected for patients with dental caries. All patients were provided written informed consent and research was approved by the local (the West China Hospital of Stomatology of Sichuan University and the First Affiliated Hospital of Zhejiang University) ethics committee and Institutional Review Broad (IRB), respectively.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 6345,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Sampling, DNA extraction, purification and quantification",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The following criteria were applied to identify healthy individuals and patients with moderate/severe dental caries and moderate/advanced periodontitis. General criteria for patients with periodontitis/dental caries were [34]: (i) aged between 20 and 70 years; (ii) medically healthy; (iii) no previous periodontal/dental caries treatment and no antibiotic use within the past 6 months; and (iv) willing to consent to the clinical examination and microbial sampling. Moderate periodontitis was identified with 4 mm < probe depth (PD) \u2264 6 mm,attachment loss (AL) 3\u223c5 mm, 1/3 root length < alveolar bone destruction (ABD) < \u00bd root length. And advanced periodontitis was identified with PD \u2265 6 mm, AL > 5 mm, and ABD > 1/2 root length [35]. For patients with dental caries, the decayed, missing and filled tooth (DMFT) index was used to define different levels of conditions. Moderate caries was identified for patients with 0 < DMFT < 5, and severe dental caries was defined with DMFT \u2265 5. All healthy individuals must have (i) no pockets and clinical attachment loss (CAL); (ii) no alveolar bone absorption on X-ray examination; and (iii) less than 15% of sites with bleeding on probing (BOP) or redness.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 7548,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Sampling, DNA extraction, purification and quantification",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "For oral microbiome sampling, bacteria were separated from the paper-points by vortexing. The paper points were discarded and community DNA was extracted using the QIAamp \u2122 DNA micro Kit (QIAGEN Sciences, Maryland, USA) following the manufacturer\u2019s instructions and adding a lysozyme (3 mg/mL, 1.5 h) treatment step.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 11:17:36",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "293335",
+                            "locations": {
+                                "length": 8,
+                                "offset": 7578
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 7864,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Sampling, DNA extraction, purification and quantification",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "For gut microbiome sampling, all fecal samples were immediately frozen on collection and stored at \u221270\u00b0C before analysis. A frozen aliquot (200 mg) of each fecal sample was added to a 2.0-ml screwcap vial containing 300 mg glass beads of 0.1 mm diameter (Sigma, St. Louis, MO, USA), and kept on ice until the addition of 1.4-ml ASL buffer from the QIAamp DNA Stool Mini Kit (Qiagen, Valencia, CA, USA). Samples were immediately subjected to beadbeating (45 s, speed 6.5) using a FastPrep machine (Bio 101, Morgan Irvine, CA, USA), prior to the initial incubation for heat and chemical lysis at 95\u00b0C for 5 minutes. Subsequent steps of DNA extraction followed the QIAamp kit protocol for pathogen detection.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 8569,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Sampling, DNA extraction, purification and quantification",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "DNA quality was evaluated by the absorbance ratios at A260/A280 and A260/A230 using spectrophotometry (NanoDrop 1000, Thermo Scientific) and final DNA concentrations were quantified with the Pico-Green kit (Invitrogen, Carlsbad, CA, USA). Only DNA samples with A260/A280 > 1.7 and A260/A230 > 1.8 were used. The extracted whole community DNA for each sample was then shipped to the University of Oklahoma (OU) for HuMiChip analysis. Since only DNA samples were used at OU, the OU IRB ruled this as non-human research so that IRB approval was not needed from OU.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 9130,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Target labeling and hybridization",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "The purified DNA was labeled with Cy-3 using random primers and the Klenow fragment of DNA polymerase I [36]. Labeled DNA was purified using the QIA quick purification kit (Qiagen, Valencia, CA) according to the manufacturer\u2019s instructions, measured on a NanoDrop ND-1000 spectrophotometer (NanoDrop Technologies Inc., Wilmington, DE), and then dried down in a SpeedVac (ThermoSavant, Milford, MA) at 45\u00b0C for 45 min. Dried DNA was rehydrated with 2.68 \u00b5L sample tracking control (NimbleGen, Madison, WI, USA) to confirm sample identity. The samples were incubated at 50\u00b0C for 5 min, vortexed for 30 sec, and then centrifuged to collect all liquid at the bottom of the tube. Hybridization buffer (7.32 \u00b5L), containing 40% formamide, 25% SSC, 1% SDS, 2.38% Cy3-labeled alignment oligo (NimbleGen) and 2.8% Cy5-labeled CORS target, was added. The samples were then mixed by vortexing, spun down, incubated at 95\u00b0C for 5 min, and maintained at 42\u00b0C until hybridization. An HX12 mixer (NimbleGen) was placed onto the array using NimbleGen\u2019s precision mixer alignment tool, and then the array was preheated to 42\u00b0C on a hybridization station (MAUI, BioMicro Systems, Salt Lake City, UT, USA) for at least 5 min. Samples (6.8 \u00b5L) were then loaded onto the array surface and hybridized approximately 16 h with mixing.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 10473,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Imaging, and data preprocessing",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "After hybridization, arrays were scanned at full laser power and 100% PMT gain with a NimbleGen MS 200 Microarray Scanner (Roche NimbleGen). Scanned images were gridded by NimbleScan software using the gridding file containing HuMiChip probes and NimbleGen control probes to obtain the signal intensity for each probe. Probe spots with coefficient of variance (CV) greater than 0.8 were removed. Probes with SNR (signal-to-noise ratio) less than 2 and signal intensities less than 1000 were also removed. Microarray data was then normalized based on the total signal intensity of CORS probes. Both raw and normalized data is available under NCBI GEO accession number GSE54290.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11180,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Statistical analysis",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Three different non-parametric multivariate analysis methods, adonis (permutational multivariate analysis of variance using distance matrices), anosim (analysis of similarities) and MRPP (multi-response permutation procedure), as well as detrended correspondence analysis (DCA), were used to measure the overall differences of the community functional gene structure between treatment and control samples [37]. The significance of relative abundance differences between control and treatment samples for functional gene categories was evaluated by the response ratio analysis.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 11776,
+                    "infons": {
+                        "section_title_1": "Materials and Methods",
+                        "section_title_2": "Comparative analysis of functional gene profiles by HuMiChip and NGS technologies",
+                        "iao_name_1": "materials section",
+                        "iao_id_1": "IAO:0000633",
+                        "iao_name_2": "methods section",
+                        "iao_id_2": "IAO:0000317"
+                    },
+                    "text": "Gene family abundance datasets by NGS technologies were downloaded from http://www.hmpdacc.org/HMMRC/, and profiles targeting human stool and subgingival plaque samples were extracted and analyzed. The human gut and healthy human oral microbial gene family profiles by HuMiChip were extracted and compared with that by NGS technologies. Pearson correlation coefficient was calculated to estimate the correlation between the HuMiChip signal intensity and NGS relative abundance.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12334,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Functional gene families included in HuMiChip",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "To monitor the functional diversity, composition, structure, and dynamics of human microbiomes, we selected 139 functional gene families that play important roles in multiple pathways. A detailed list and description of selected functional genes can be found in the supplementary information (Table S1).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 12689,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "(i) Amino acid metabolism and biosynthesis ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Amino acids play central roles in building protein blocks and intermediates in metabolism. In the human body, 8 of 20 basic amino acids are essential but cannot be self-produced, and for the other 12 amino acids, 8 are conditionally essential [38]. Essential and conditionally essential amino acids must be taken from external sources, such as food and/or microbial synthesis [39]. The human gut microbiome is enriched with genes involved in the synthesis of essential amino acids [40]. Here we selected 59 gene families involved in amino acid and/or precursor synthesis, transport and metabolism in human microbiota. These gene families were selected for their important roles in degradation, biosynthesis, and conversion of essential amino acids, which are of great importance for human nutrition. Among these, 16 gene families were selected for their important roles in arginine and proline metabolism, 9 in alanine, aspartate and glutamate metabolism, 8 in phenylalanine, tyrosine and tryptophan biosynthesis, 11 in glycine, serine and threonine metabolism, 17 in valine, leucine and isoleucine biosynthesis and degradation, and 12 in cysteine and methionine metabolism.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 13906,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "(ii) Metabolism and biosynthesis of other amino acids ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "In addition to standard amino acid metabolism, 23 gene families were selected to target the metabolism of non-standard amino acids, which are not directly produced by cellular machinery, but formed by post-translational modification. The non-standard amino acids are generally essential for the function or regulation of proteins, such as better binding of Ca2+\n[41]. Among the selected gene families, six were involved in selenocompound metabolism, four in D-glutamine and D-glutamate metabolism, three in cyanoamino acid metabolism, five in beta- and D-alanine metabolism, three in glutathione metabolism, and three in taurine and hypotaurine metabolism. A detailed list of gene families as well as involved non-standard amino acids can be found in Table S2.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 14720,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "(iii) Carbohydrate metabolism ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Carbohydrates are critical nutrients for both human hosts and microbiota, and are also mediators that control the complex relationship between microbes and their human host [42], [43]. Only a limited portion of carbohydrates can be digested by human hosts, while the rest may be degraded by the gut microbiota [42]. Metagenome sequencing analysis has shown that the human gut microbiome contains a large number of genes related to carbohydrate degradation [24], [25]. We selected 35 gene families targeting central carbon metabolism (pentose phosphate pathway, TCA cycle, pyruvate, propanoate, and butanoate) and complex carbohydrate metabolism (starch, sucrose and pectin). Among these, six were selected for their important roles in pentose phosphate pathway, eight in pentose and glucuronate interconversions, four in pyruvate metabolism, four in propanoate metabolism, four in butanoate metabolism, six in starch and sucrose metabolism, four in fructose and mannose metabolism, and four in galactose metabolism,",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 15765,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "(iv) Energy metabolism ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Microorganisms are able to gain energy from multiple metabolic pathways, such as carbon fixation, methane metabolism, nitrogen metabolism and sulfur metabolism [44]. Fourteen gene families involved in energy metabolism were selected. Among these, three were selected for their important roles in methane metabolism, five in nitrogen metabolism, four in sulfur metabolism, and four in carbon fixation pathways.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 16197,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "(v) Glycan biosynthesis and metabolism ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The human microbiota residing in the intestine play important roles in degrading glycans and polysaccharides, including dietary plants, animal-derived cartilage and tissue, and host mucus [45]. The polysaccharides synthesized by bacteria can also induce immune responses that are beneficial to bacteria, host, or both [46]. To monitor microbial related glycan metabolism processes, 14 gene families involved in lipopolysaccharide biosynthesis, peptidoglycan biosynthesis, and glycosaminoglycan degradation were selected. Among these, five were selected for their important roles in peptidoglycan biosynthesis, five in glycosaminoglycan degradation, two in lipopolysaccharide biosynthesis, and two in other glycan degradation.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 11:18:38",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "293336",
+                            "locations": {
+                                "length": 8,
+                                "offset": 16426
+                            }
+                        },
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 11:18:38",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "293337",
+                            "locations": {
+                                "length": 8,
+                                "offset": 16491
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 16961,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "(vi) Lipid metabolism and biosynthesis ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Lipids are not only essential components of the human body, but also contribute to many pathological processes, such as obesity, diabetes, heart disease, and inflammation [47]. The biosynthesis and degradation of lipids could be carried out by both human cells and microbial communities. Previous studies have shown that microbial metabolism of lipids in the gut promotes atherosclerosis [48], [49]. Six key gene families involved in fatty acid metabolism (acetyl-CoA acyltransferase and beta-ketoacyl-acyl-carrier-protein synthase), glycerolipid metabolism (glycerol kinase), sphingolipid metabolism (beta-D-galactosidase), ketone bodies synthesis and degradation (butyryl CoA acetate CoA transferase), and bile acid biosynthesis (conjugated bile salt hydrolase) were selected.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 17778,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "(vii) Metabolism and biosynthesis of cofactors and vitamins ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Cofactors are organic or inorganic non-protein chemical compound that are bound to and responsible for a protein\u2019s activity. Organic cofactors are typically vitamins or are made from vitamins. A metagenomic study showed enriched vitamin and cofactor biosynthesis genes were observed in developing infant guts [50]. Also functional genomics analysis showed that some bacteria were unable to synthesize several vitamins, cofactors, and amino acids, and need to be taken up from the human intestine [51]. All these studies showed a complicated relationship between the host and its microbiota. Here 17 gene families involved in biosynthesis and metabolism of pantothenate, CoA, riboflavin, vitamin B6, thiamine, biotin, porphyrin, chlorophyll and folate were selected. For example, gene families encoding 3-demethylubiquinone-9 3-methyltransferase, riboflavin synthase, pyridoxal kinase, and thiamine kinase that function as the terminal step of biosynthesis of ubiquinone, riboflavin, thiamine, and vitamin B12 were selected, respectively.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 11:18:48",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "293338",
+                            "locations": {
+                                "length": 8,
+                                "offset": 18144
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 18875,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "(viii) Metabolism and biosynthesis of terpenoids and polyketides ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Terpenoids and polyketides are natural products that can be found in all living organisms, with the potential function of anti-inflammatory and anticancer though the majority of them remain functionally unknown [52]. Five gene families related with terpenoid biosynthesis were selected.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19226,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "(ix) Nucleotide metabolism and biosynthesis ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Nucleotides are the basic structural units of DNA and RNA, and also participate in cellular signaling as well as cofactor synthesis. We selected 13 gene families involved in nucleotide metabolism.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19466,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "(x) Translation ",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "Three gene families involved in translation processes were selected.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 19550,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Summary of HuMiChip probes and target information",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "A total of 36,802 probes targeting 139 gene families were designed for HuMiChip, covering 50,007 coding sequences (CDS). Among these, 25,003 were sequence-specific probes that each probe targets only one sequence, and 11,799 were group-specific probes that each probe targets multiple sequences with high similarities (Table 1). Specifically, 15,175 (41.2%) probes targeted 59 amino acids metabolism genes, 6,217 (16.9%) targeted 23 genes for metabolism of other amino acids, 9,386 (25.5%) targeted 35 carbohydrate metabolism genes, 4,992 (13.6%) targeted 14 energy metabolism genes, 6,507 (17.7%) targeted 14 glycan biosynthesis and metabolism genes, 2,415 (6.6%) targeted 6 lipid metabolism genes, 3,660 (9.9%) targeted 17 cofactor and vitamin metabolism genes, 1,841 (5.0%) targeted 5 terpenoids and polyketides metabolism genes, 4,437 (12.1%) targeted 13 nucleotide metabolism genes, and 429 (1.2%) targeted 3 translation genes. Also, 80\u00d78 16S rRNA gene degenerate probes as positive control, 3\u00d7563 negative control probes designed from seven thermophile strains, and 6000 identical common oligonucleotide reference standard (CORS) [53] probes for data normalization and comparisons were also included. Specificity for both positive and negative control probes as well as CORS was also verified by searching against NCBI nt database.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 20936,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Computational evaluation of probe specificity",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The specificity for all HuMiChip probes was computationally evaluated against the MotherDB based on sequence identity, continuous stretch length, and free energy. For sequence-specific probes, the maximum identity, maximum stretch length, and minimal free energy to their closest non-target sequences were calculated. More than 83% of probes showed maximum sequence identities of 60% or lower to their non-targets. Only 7.4% of probes showed 80%\u223c90% sequence identity, 3.3% had 19\u223c20 base continuous stretch, and 5.5% had \u221235 to \u221225 kcal mol\u22121 free energy to their non-targets (Figure 1 A, B, C). For group-specific probes, the minimum identity, minimum stretch length, and maximum free energy to its group members were calculated. Approximately 75% of group-specific probes were identical to their group members, and more than 99% showed \u221285 to \u221265 kcal mol\u22121 free energy to their group members (Figure 1 D, E, F). All these results were consistent with the probe design criteria [26], suggesting the HuMiChip probes are specific to their targets.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 22029,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Application of HuMiChip to human gut and oral microbiomes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The HuMiChip was applied to analyze the functional composition and structure of human oral and gut microbiomes from 86 individuals (62 oral samples representing five groups of oral microbiota, and 24 fecal samples representing gut microbiota). Signal intensities for each probe were normalized by the mean signals from all spiked CORS probes. In total, 14,460 probes were detected in at least three out of 12 or 13 samples in each group, with an average of 6,699 probes detected per sample. Detrended correspondence analysis (DCA) of all detected genes showed that microbial communities in human gut samples were well separated from those in oral samples (Figure 2), suggesting significantly different microbial functional gene composition and structure between gut and oral microbiota. The significance was also verified by three different non-parametric multivariate statistical methods (ANOSIM: R\u200a=\u200a0.707, P\u200a=\u200a0.001; adonis: F\u200a=\u200a0.29, P\u200a=\u200a0.001; MRPP: \u03b4\u200a=\u200a0.365, P\u200a=\u200a0.001). Also, a clear trend of separation of periodontitis patients\u2019 oral samples from other oral samples could be observed (ANOSIM: R\u200a=\u200a0.191, P\u200a=\u200a0.001; adonis: F\u200a=\u200a0.086, P\u200a=\u200a0.001; MRPP: \u03b4\u200a=\u200a0.326, P\u200a=\u200a0.001). No clear separation was observed between samples collected from healthy individuals and patients with moderate dental caries (ANOSIM: R\u200a=\u200a0.046, P\u200a=\u200a0.346; adonis: F\u200a=\u200a0.011, P\u200a=\u200a0.354; MRPP: \u03b4\u200a=\u200a0.297, P\u200a=\u200a0.32) (Figure 2). However, significant differences were observed between patients with severe dental caries and individuals who were healthy or patients with moderate dental caries (ANOSIM: R\u200a=\u200a0.186, P\u200a=\u200a0.008; adonis: F\u200a=\u200a0.074, P\u200a=\u200a0.016; MRPP: \u03b4\u200a=\u200a0.332, P\u200a=\u200a0.02), suggesting a progressive shift of microbial community composition and structure during the development of dental caries.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 23867,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Application of HuMiChip to human gut and oral microbiomes",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "In order to see how oral microbiota changes at different stages of periodontitis, response ratio analysis of functional gene categories between moderate or advanced periodontitis patients and healthy individuals was carried out at a 95% confidence interval level. An obvious shift of most functional gene categories was observed between moderate and advanced periodontitis patients with most gene families having decreased abundances in advanced periodontitis (Figure 3A and 3B). For example, the abundance of lipid metabolism genes was significantly (P < 0.05) higher in moderate periodontitis patients compared to healthy individuals (Figure 3A), but became insignificant with decreased abundance in advanced periodontitis patients (Figure 3B). Also, no significant changes were found for gene categories such as carbohydrate metabolism, nucleotide metabolism, and energy metabolism in moderate periodontitis patients (Figure 3A), while significantly decreased abundances were observed in advanced periodontitis patients (Figure 3B). In addition, other gene categories, such as glycan biosynthesis and metabolism, metabolism of other amino acids, amino acid metabolism, metabolism of cofactors and vitamins, and translation, remained significantly decreased in both moderate and advanced periodontitis patients, but further decreased levels were observed in advanced patients (Figure 3A and 3B). All the above results indicated that a shift in oral microbiota with decreased abundances would be associated with the from-moderate-to-advanced periodontitis status, and HuMiChip is a useful tool for functional profiling of human microbiomes.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 25508,
+                    "infons": {
+                        "section_title_1": "Results",
+                        "section_title_2": "Comparative evaluation of HuMiChip against NGS technologies",
+                        "iao_name_1": "results section",
+                        "iao_id_1": "IAO:0000318"
+                    },
+                    "text": "The HuMiChip results targeting human gut and healthy oral samples were then compared with the relative abundances of corresponding gene families revealed by the HMP project using next generation sequencing (NGS). Gene family abundance datasets were downloaded from http://www.hmpdacc.org/HMMRC/, and profiles targeting human stool and subgingival plaque samples were extracted and analyzed. For the human gut samples, 121 of the 139 gene families showed a significant (P\u200a=\u200a4.581E-027) correlation between HuMiChip and HiSeq analyses with a Pearson correlation coefficient of 0.79 (Figure 4A). For the human oral subgingival samples, 112 of 139 gene families had a significant (P\u200a=\u200a2.033E-022) correlation with a Pearson correlation coefficient of 0.76 (Figure 4B). These results suggested that the gene family profiles identified by HuMiChip and NGS were well consistent with each other. In addition, it was noted that the lowest gene family abundance that could be detected by HuMiChip was about 0.001%, suggesting a high sensitivity of HuMiChip in detecting gene families of low abundance.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 26658,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Microbial ecological microarrays such as GeoChip, PathoChip, StressChip, PhyloChip, HITChip, HuGChip, and several other microarrays have been developed and applied to analyze microbial communities in different habitats [18], [19], [20], [21], [22], [26], [54], [55], [56], [57]. These technologies were demonstrated to be powerful for functional and phylogenetic characterization of microbial communities, and linking them with ecosystem processes and functions. Most microbial ecological microarrays targeting human microbiomes are based on 16S rRNA genes, and are mainly suitable for phylogenetic profiling of human microbiomes. The HuMiChip developed in this study targeted 139 functional gene families that play important roles in various metabolic pathways, and can be used for functional profiling of these targeted gene families.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 27504,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Since the HuMiChip developed in this study was developed mainly for microbial community analysis from different human body sites, specificity and sensitivity are two critical issues for successful application of microbial ecological microarrays. To insure the specificity of probes included in HuMiChip, previously experimentally evaluated parameters were used for highly specific probe design [58], [59]. In addition, extensive evaluations for functional gene arrays designed with the same criteria were carried out using pure culture DNA, mock community DNA, and environmental samples, suggesting high specificity and sensitivity for those microarrays [26], [36], [54], [60], [61], [62], [63]. Since the same criteria were used in the HuMiChip development, it is expected that the HuMiChip should have as high specificity and sensitivity as these functional gene arrays. Moreover, specificity for all probes were computationally checked and evaluated against the whole MotherDB, which included both full genomes and metagenomes. Finally, comparative evaluation of functional gene profiles revealed by HuMiChip and NGS technologies suggested significant correlations between these two approaches, and HuMiChip was able to detect functional gene families at as low as 0.001% relative abundance. All results suggest that HuMiChip is a specific and sensitive tool for functional profiling of human microbiomes.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 28912,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "The HuMiChip was applied to characterize the functional gene families in human gut and human oral microbiome. As expected, the overall structures of detected functional gene families in the human gut were clearly separated and significantly different from human oral samples, as suggested by both DCA and three non-parametric statistical methods, which was also consistent with several previous studies using NGS approaches of 16S rRNA genes and shotgun metagenomes [6], [64], [65]. Significantly different overall functional structures of oral microbial communities were also observed between healthy individuals and patients with periodontitis, indicating that periodontitis might be a disorder of the whole microbial community, which is generally consistent with previous studies [7], [8], [66], [67], [68]. Interestingly, significant differences were not observed between the oral microbiome from healthy individuals and patients with moderate dental caries, but observed between patients with severe dental caries and individuals who were healthy or with moderate dental caries. Such results suggested that the overall investigated functional gene profiles of microbial communities associated with moderate dental caries, which might be caused primarily by a few bacterial species such as Streptococcus mutans and Lactobacilli\n[9], were less affected. However, when dental caries develop to a severe stage, the whole microbial community was affected. Similar results were also observed between healthy individuals and patients with dental caries in a previous metagenomic study [6]. Both the changes of oral microbiome in patients with dental caries and periodontitis from moderate to severe status suggested a progressive change of functional gene profiles in response to the diseases. And HuMiChip successfully detected such progressive changes.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Streptococcus mutans",
+                            "infons": {
+                                "identifier": "NCBI:txid1309",
+                                "type": "bacteria_species",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 11:20:10",
+                                "parent_taxonomic_id": "NCBI:txid1301"
+                            },
+                            "id": "293339",
+                            "locations": {
+                                "length": 20,
+                                "offset": 30206
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 30764,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Periodontitis is a complex inflammatory disease in tooth supporting tissues, and is initiated by bacteria embedded in subgingival dental plaques involving complex interactions with their human hosts [67], [69]. The results revealed in this study provided some implications for the potential pathogenesis process of this human oral disease. For example, significantly increased abundances of functional genes involved in lipid metabolism were found in moderate periodontitis patients when compared with healthy individuals. Short-chain fatty acids can function to disrupt host defense systems using different mechanisms, such as the induction of apoptosis in immune cells [70], [71], [72] and gingival epithelial cells [73], and alteration of cell function and gene expression in human gingival fibroblasts [74], [75]. More interestingly, the abundances of lipid metabolism gene families decreased when periodontitis developed to an advanced stage, suggesting that lipid metabolism gene families might be important triggers for periodontitis development.",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 11:20:15",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "293340",
+                            "locations": {
+                                "length": 8,
+                                "offset": 30861
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 31817,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "Currently, most functional profiling studies for human microbiomes were carried out by next generation sequencing (NGS) platforms, which should be used as gold standard for comprehensive analysis in exploratory studies of microbial communities. The HuMiChip developed in this study provides an alternative way for functional analysis of human microbiomes. Compared with NGS technologies, the main disadvantage for HuMiChip as well as other functional gene arrays is that the probes/genes covered by the chip are always limited, thus is not suitable for finding new genes/populations to define the extensive diversity of microbial communities in the environment. In addition, the limited coverage of probes/genes also restricts the accurate estimation of (relative) abundance in the community, making it more suitable for comparative studies but not exploratory studies. However, functional gene arrays still feature several advantages, especially for fast and cost-effective routine analysis of interested gene families. First, although sequencing technology is becoming cheaper and generates huge amounts of data, data analysis (e.g., assembly, function and taxonomy assignment) and interpretation is still extremely challenging and costly [76], [77], especially for complex microbial communities. In contrast, microarray data analysis methods are rapid, mature, and cost-effective. Second, NGS generates huge amounts of sequences (for both genes of interest or not), which is more suitable for discovery studies of both known and unknown gene content in the environment, while microarrays contain only genes of interest and can be used by researchers\u2019 for routine studies of interested genes across many samples within a short time. In addition, due to the nature of NGS technologies, highly abundant gene families such as house-keeping genes are repeatedly sequenced, while low abundant, but functionally important genes are hardly sequenced, resulting in limited observations of these gene families. In contrast, gene families included on functional gene arrays are specifically selected according to researchers\u2019 interests, and low abundant genes can be well captured. Thus, we recommend a complementary use of functional gene arrays for routine studies of interested gene families, and NGS for exploratory discovery studies of microbial communities. Novel gene sequences captured by NGS can be used for developing more comprehensive microarrays (e.g., functional gene arrays).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 34299,
+                    "infons": {
+                        "section_title_1": "Discussion",
+                        "iao_name_1": "discussion section",
+                        "iao_id_1": "IAO:0000319"
+                    },
+                    "text": "In conclusion, we have developed the HuMiChip for functional profiling of human microbiomes. A total of 36,802 probes targeting 139 gene families involved in key microbial functional processes in human microbiomes were included on HuMiChip, covering 50,007 CDS from 322 sequenced genomes as well as 31 shotgun metagenomes. Computational evaluation indicates that all HuMiChip probes are highly specific to their targets. Our analysis of the human oral and gut microbiomes suggests that the HuMiChip is a useful and high throughput tool to analyze the functional diversity, composition, structure, metabolic potential and dynamics of human microbiomes. The gene family profiles identified by HuMiChip were consistent with those obtained by NGS technologies. Further development of HuMiChip will target more sequenced genomes, as well as metagenomes, and develop strain/species-specific probes for strain/species identification[78].",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35229,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nThe pipeline for HuMiChip development. Full microbial genome and metagenome sequences were collected as a MotherDB. Protein sequences were searched against seed sequences of selected functional genes using HMMER program. Corresponding nucleotide sequences of the HMMER confirmed sequences were extracted and subjected to probe designing by CommOligo. Specificity for the designed probes was evaluated against MotherDB. The best probes were then selected for microarray fabrication.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35742,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Figure S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(DOCX)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35748,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nSummary of functional gene categories, families, names, and their involved pathways and probe infromation on HuMiChip.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35876,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S1",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "(XLSX)",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35882,
+                    "infons": {
+                        "section_title_1": "Supporting Information",
+                        "section_title_2": "Table S2",
+                        "iao_name_1": "supplementary material section",
+                        "iao_id_1": "IAO:0000326"
+                    },
+                    "text": "\nGene families selected for non-standard amino acids metabolism.\n",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 35955,
+                    "infons": {
+                        "title": "Host-Bacterial Mutualism in the Human Intestine",
+                        "journal": "Science",
+                        "volume": "307",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "1. B\u00e4ckhed F, Ley RE, Sonnenburg JL, Peterson DA, Gordon JI (2005) Host-Bacterial Mutualism in the Human Intestine. Science307: 1915\u20131920. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36129,
+                    "infons": {
+                        "title": "Human nutrition, the gut microbiome and the immune system",
+                        "journal": "Nature",
+                        "volume": "474",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "2. Kau AL, Ahern PP, Griffin NW, Goodman AL, Gordon JI (2011) Human nutrition, the gut microbiome and the immune system. Nature474: 327\u2013336. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36314,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "3. Ley RE (2010) Obesity and the human microbiome. Current Opinion in Gastroenterology 26: 5-11 10.1097/MOG.1090b1013e328333d328751. [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36455,
+                    "infons": {
+                        "title": "Functional Characterization of the Antibiotic Resistance Reservoir in the Human Microflora",
+                        "journal": "Science",
+                        "volume": "325",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "4. Sommer MOA, Dantas G, Church GM (2009) Functional Characterization of the Antibiotic Resistance Reservoir in the Human Microflora. Science325: 1128\u20131131. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36656,
+                    "infons": {
+                        "title": "The core gut microbiome, energy balance and obesity",
+                        "journal": "The Journal of Physiology",
+                        "volume": "587",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "5. Turnbaugh PJ, Gordon JI (2009) The core gut microbiome, energy balance and obesity. The Journal of Physiology587: 4153\u20134158. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 36828,
+                    "infons": {
+                        "title": "The oral metagenome in health and disease",
+                        "journal": "ISME J",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "6. Belda-Ferre P, Alcaraz LD, Cabrera-Rubio R, Romero H, Simon-Soro A, et al. (2012) The oral metagenome in health and disease. ISME J6: 46\u201356. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37016,
+                    "infons": {
+                        "title": "The subgingival microbiome in health and periodontitis and its relationship with community biomass and inflammation",
+                        "journal": "ISME J",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "7. Abusleme L, Dupuy AK, Dutzan N, Silva N, Burleson JA, et al. (2013) The subgingival microbiome in health and periodontitis and its relationship with community biomass and inflammation. ISME J7: 1016\u20131025. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37268,
+                    "infons": {
+                        "title": "Distinct and complex bacterial profiles in human periodontitis and health revealed by 16S pyrosequencing",
+                        "journal": "ISME J",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "8. Griffen AL, Beall CJ, Campbell JH, Firestone ND, Kumar PS, et al. (2012) Distinct and complex bacterial profiles in human periodontitis and health revealed by 16S pyrosequencing. ISME J6: 1176\u20131185. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37514,
+                    "infons": {
+                        "title": "The microbiology of dental caries",
+                        "journal": "Dent Update",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "9. Hardie JM (1982) The microbiology of dental caries. Dent Update9: 199\u2013200. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37617,
+                    "infons": {
+                        "title": "A metagenome-wide association study of gut microbiota in type 2 diabetes",
+                        "journal": "Nature",
+                        "volume": "490",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "10. Qin J, Li Y, Cai Z, Li S, Zhu J, et al. (2012) A metagenome-wide association study of gut microbiota in type 2 diabetes. Nature490: 55\u201360. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37785,
+                    "infons": {
+                        "title": "Functional interactions between the gut microbiota and host metabolism",
+                        "journal": "Nature",
+                        "volume": "489",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "11. Tremaroli V, Backhed F (2012) Functional interactions between the gut microbiota and host metabolism. Nature489: 242\u2013249. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 37936,
+                    "infons": {
+                        "title": "Interaction Between Obesity and the Gut Microbiota: Relevance in Nutrition",
+                        "journal": "Annual Review of Nutrition",
+                        "volume": "31",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "12. Delzenne NM, Cani PD (2011) Interaction Between Obesity and the Gut Microbiota: Relevance in Nutrition. Annual Review of Nutrition31: 15\u201331. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38106,
+                    "infons": {
+                        "title": "Microbial ecology of the gastrointestinal tract",
+                        "journal": "Annu Rev Microbiol",
+                        "volume": "31",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "13. Savage DC (1977) Microbial ecology of the gastrointestinal tract. Annu Rev Microbiol31: 107\u2013133. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38232,
+                    "infons": {
+                        "title": "The indigenous gastrointestinal microflora",
+                        "journal": "Trends Microbiol",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "14. Berg RD (1996) The indigenous gastrointestinal microflora. Trends Microbiol4: 430\u2013435. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38348,
+                    "infons": {
+                        "title": "The Human Microbiome Project",
+                        "journal": "Nature",
+                        "volume": "449",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "15. Turnbaugh PJ, Ley RE, Hamady M, Fraser-Liggett CM, Knight R, et al. (2007) The Human Microbiome Project. Nature449: 804\u2013810. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38521,
+                    "infons": {
+                        "title": "Analysis of methanotroph community composition using a pmoA-based microbial diagnostic microarray",
+                        "journal": "Nat Protocols",
+                        "volume": "6",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "16. Stralis-Pavese N, Abell GCJ, Sessitsch A, Bodrossy L (2011) Analysis of methanotroph community composition using a pmoA-based microbial diagnostic microarray. Nat Protocols6: 609\u2013624. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38734,
+                    "infons": {
+                        "title": "Comparing microarrays and next-generation sequencing technologies for microbial ecology research",
+                        "journal": "Trends in biotechnology",
+                        "volume": "28",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "17. Roh SW, Abell GCJ, Kim K-H, Nam Y-D, Bae J-W (2010) Comparing microarrays and next-generation sequencing technologies for microbial ecology research. Trends in biotechnology28: 291\u2013299. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 38949,
+                    "infons": {
+                        "title": "Development of functional gene microarrays for microbial community analysis",
+                        "journal": "Current Opinion in Biotechnology",
+                        "volume": "23",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "18. He Z, Deng Y, Zhou J (2012) Development of functional gene microarrays for microbial community analysis. Current Opinion in Biotechnology23: 49\u201355. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39126,
+                    "infons": {
+                        "title": "Application of a High-Density Oligonucleotide Microarray Approach To Study Bacterial Population Dynamics during Uranium Reduction and Reoxidation",
+                        "journal": "Applied and Environmental Microbiology",
+                        "volume": "72",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "19. Brodie EL, DeSantis TZ, Joyner DC, Baek SM, Larsen JT, et al. (2006) Application of a High-Density Oligonucleotide Microarray Approach To Study Bacterial Population Dynamics during Uranium Reduction and Reoxidation. Applied and Environmental Microbiology72: 6288\u20136298. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39443,
+                    "infons": {
+                        "title": "The Human Gut Chip \u201cHuGChip\u201d",
+                        "journal": "PLoS ONE",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "20. Tottey W, Denonfoux J, Jaziri F, Parisot N, Missaoui M, et al. (2013) The Human Gut Chip \u201cHuGChip\u201d. an Explorative Phylogenetic Microarray for Determining Gut Microbiome Diversity at Family Level. PLoS ONE8: e62544. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 39707,
+                    "infons": {
+                        "title": "Development and application of the human intestinal tract chip, a phylogenetic microarray: analysis of universally conserved phylotypes in the abundant microbiota of young and elderly adults",
+                        "journal": "Environmental Microbiology",
+                        "volume": "11",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "21. Rajili\u0107-Stojanovi\u0107 M, Heilig HGHJ, Molenaar D, Kajander K, Surakka A, et al. (2009) Development and application of the human intestinal tract chip, a phylogenetic microarray: analysis of universally conserved phylotypes in the abundant microbiota of young and elderly adults. Environmental Microbiology11: 1736\u20131751. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40072,
+                    "infons": {
+                        "title": "High-Throughput Quantitative Analysis of the Human Intestinal Microbiota with a Phylogenetic Microarray",
+                        "journal": "Applied and Environmental Microbiology",
+                        "volume": "75",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "22. Paliy O, Kenche H, Abernathy F, Michail S (2009) High-Throughput Quantitative Analysis of the Human Intestinal Microbiota with a Phylogenetic Microarray. Applied and Environmental Microbiology75: 3572\u20133579. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40327,
+                    "infons": {
+                        "title": "Development of the Human Infant Intestinal Microbiota",
+                        "journal": "PLoS Biol",
+                        "volume": "5",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "23. Palmer C, Bik EM, DiGiulio DB, Relman DA, Brown PO (2007) Development of the Human Infant Intestinal Microbiota. PLoS Biol5: e177. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40506,
+                    "infons": {
+                        "title": "A core gut microbiome in obese and lean twins",
+                        "journal": "Nature",
+                        "volume": "457",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "24. Turnbaugh PJ, Hamady M, Yatsunenko T, Cantarel BL, Duncan A, et al. (2009) A core gut microbiome in obese and lean twins. Nature457: 480\u2013484. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40696,
+                    "infons": {
+                        "title": "A human gut microbial gene catalogue established by metagenomic sequencing",
+                        "journal": "Nature",
+                        "volume": "464",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "25. Qin J, Li R, Raes J, Arumugam M, Burgdorf KS, et al. (2010) A human gut microbial gene catalogue established by metagenomic sequencing. Nature464: 59\u201365. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 40898,
+                    "infons": {
+                        "title": "GeoChip 3.0 as a high-throughput tool for analyzing microbial community composition, structure and functional activity",
+                        "journal": "ISME J",
+                        "volume": "4",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "26. He Z, Deng Y, Van Nostrand JD, Tu Q, Xu M, et al. (2010) GeoChip 3.0 as a high-throughput tool for analyzing microbial community composition, structure and functional activity. ISME J4: 1167\u20131179. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41124,
+                    "infons": {
+                        "title": "Profile hidden Markov models",
+                        "journal": "Bioinformatics",
+                        "volume": "14",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "27. Eddy SR (1998) Profile hidden Markov models. Bioinformatics14: 755\u2013763. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41225,
+                    "infons": {
+                        "title": "The human oral microbiome",
+                        "journal": "Journal of bacteriology",
+                        "volume": "192",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "28. Dewhirst FE, Chen T, Izard J, Paster BJ, Tanner AC, et al. (2010) The human oral microbiome. Journal of bacteriology192: 5002\u20135017. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41405,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "29. XIE G, CHAIN P, CROONENBERG R, LO C (2011) Oralgen: A comprehensive workbench for NGS analyses of oral microbiome.",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41523,
+                    "infons": {
+                        "title": "The metagenomics RAST server - a public resource for the automatic phylogenetic and functional analysis of metagenomes",
+                        "journal": "BMC Bioinformatics",
+                        "volume": "9",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "30. Meyer F, Paarmann D, D'Souza M, Olson R, Glass E, et al. (2008) The metagenomics RAST server - a public resource for the automatic phylogenetic and functional analysis of metagenomes. BMC Bioinformatics9: 386. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 41781,
+                    "infons": {
+                        "title": "Comparative metagenomics revealed commonly enriched gene sets in human gut microbiomes",
+                        "journal": "DNA Res",
+                        "volume": "14",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "31. Kurokawa K, Itoh T, Kuwahara T, Oshima K, Toh H, et al. (2007) Comparative metagenomics revealed commonly enriched gene sets in human gut microbiomes. DNA Res14: 169\u2013181. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42000,
+                    "infons": {
+                        "title": "KEGG for linking genomes to life and the environment",
+                        "journal": "Nucleic Acids Research",
+                        "volume": "36",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "32. Kanehisa M, Araki M, Goto S, Hattori M, Hirakawa M, et al. (2008) KEGG for linking genomes to life and the environment. Nucleic Acids Research36: D480\u2013D484. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42205,
+                    "infons": {
+                        "title": "Selection of optimal oligonucleotide probes for microarrays using multiple criteria, global alignment and parameter estimation",
+                        "journal": "Nucleic Acids Research",
+                        "volume": "33",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "33. Li X, He Z, Zhou J (2005) Selection of optimal oligonucleotide probes for microarrays using multiple criteria, global alignment and parameter estimation. Nucleic Acids Research33: 6114\u20136123. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42444,
+                    "infons": {
+                        "title": "Clinical characteristics and microbiota of progressing slight chronic periodontitis in adults",
+                        "journal": "Journal of Clinical Periodontology",
+                        "volume": "34",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "34. Tanner ACR, Kent R, Kanasi E, Lu SC, Paster BJ, et al. (2007) Clinical characteristics and microbiota of progressing slight chronic periodontitis in adults. Journal of Clinical Periodontology34: 917\u2013930. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42677,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "35. Meng H (2008) Periodontology: People's Medical Publishing House. 156\u2212 157 p. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 42774,
+                    "infons": {
+                        "title": "Microarray-Based Analysis of Subnanogram Quantities of Microbial Community DNAs by Using Whole-Community Genome Amplification",
+                        "journal": "Applied and Environmental Microbiology",
+                        "volume": "72",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "36. Wu L, Liu X, Schadt CW, Zhou J (2006) Microarray-Based Analysis of Subnanogram Quantities of Microbial Community DNAs by Using Whole-Community Genome Amplification. Applied and Environmental Microbiology72: 4931\u20134941. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43040,
+                    "infons": {
+                        "title": "Microbial mediation of carbon-cycle feedbacks to climate warming",
+                        "journal": "Nature Clim Change",
+                        "volume": "2",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "37. Zhou J, Xue K, Xie J, Deng Y, Wu L, et al. (2012) Microbial mediation of carbon-cycle feedbacks to climate warming. Nature Clim Change2: 106\u2013110. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43206,
+                    "infons": {
+                        "title": "Dispensable and indispensable amino acids for humans",
+                        "journal": "J Nutr",
+                        "volume": "130",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "38. Reeds PJ (2000) Dispensable and indispensable amino acids for humans. J Nutr130: 1835S\u20131840S. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43329,
+                    "infons": {
+                        "title": "Contribution of microbial amino acids to amino acid homeostasis of the host",
+                        "journal": "J Nutr",
+                        "volume": "130",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "39. Metges CC (2000) Contribution of microbial amino acids to amino acid homeostasis of the host. J Nutr130: 1857S\u20131864S. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43476,
+                    "infons": {
+                        "title": "Metagenomic Analysis of the Human Distal Gut Microbiome",
+                        "journal": "Science",
+                        "volume": "312",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "40. Gill SR, Pop M, DeBoy RT, Eckburg PB, Turnbaugh PJ, et al. (2006) Metagenomic Analysis of the Human Distal Gut Microbiome. Science312: 1355\u20131359. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43670,
+                    "infons": {
+                        "title": "Gamma-carboxyglutamate-containing proteins and the vitamin K-dependent carboxylase",
+                        "journal": "Biochem J",
+                        "volume": "266",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "41. Vermeer C (1990) Gamma-carboxyglutamate-containing proteins and the vitamin K-dependent carboxylase. Biochem J266: 625\u2013636. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 43842,
+                    "infons": {
+                        "title": "How host-microbial interactions shape the nutrient environment of the mammalian intestine",
+                        "journal": "Annu Rev Nutr",
+                        "volume": "22",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "42. Hooper LV, Midtvedt T, Gordon JI (2002) How host-microbial interactions shape the nutrient environment of the mammalian intestine. Annu Rev Nutr22: 283\u2013307. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44028,
+                    "infons": {
+                        "title": "Complex Carbohydrate Utilization by the Healthy Human Microbiome",
+                        "journal": "PLoS ONE",
+                        "volume": "7",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "43. Cantarel BL, Lombard V, Henrissat B (2012) Complex Carbohydrate Utilization by the Healthy Human Microbiome. PLoS ONE7: e28742. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44204,
+                    "infons": {
+                        "title": "Nitrogen, Carbon, and Sulfur Metabolism in NaturalThioploca Samples",
+                        "journal": "Applied and Environmental Microbiology",
+                        "volume": "65",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "44. Otte S, Kuenen JG, Nielsen LP, Paerl HW, Zopfi J, et al. (1999) Nitrogen, Carbon, and Sulfur Metabolism in NaturalThioploca Samples. Applied and Environmental Microbiology65: 3148\u20133157. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44438,
+                    "infons": {
+                        "title": "How glycan metabolism shapes the human gut microbiota",
+                        "journal": "Nat Rev Micro",
+                        "volume": "10",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "45. Koropatkin NM, Cameron EA, Martens EC (2012) How glycan metabolism shapes the human gut microbiota. Nat Rev Micro10: 323\u2013335. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44612,
+                    "infons": {
+                        "title": "Bacterial Glycans: Key Mediators of Diverse Host Immune Responses",
+                        "journal": "Cell",
+                        "volume": "126",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "46. Comstock LE, Kasper DL (2006) Bacterial Glycans: Key Mediators of Diverse Host Immune Responses. Cell126: 847\u2013850. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44756,
+                    "infons": {
+                        "title": "Minireview: Lipid Metabolism, Metabolic Diseases, and Peroxisome Proliferator-Activated Receptors",
+                        "journal": "Endocrinology",
+                        "volume": "144",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "47. Lee C-H, Olson P, Evans RM (2003) Minireview: Lipid Metabolism, Metabolic Diseases, and Peroxisome Proliferator-Activated Receptors. Endocrinology144: 2201\u20132207. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 44947,
+                    "infons": {
+                        "title": "Gut flora metabolism of phosphatidylcholine promotes cardiovascular disease",
+                        "journal": "Nature",
+                        "volume": "472",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "48. Wang Z, Klipfell E, Bennett BJ, Koeth R, Levison BS, et al. (2011) Gut flora metabolism of phosphatidylcholine promotes cardiovascular disease. Nature472: 57\u201363. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45157,
+                    "infons": {
+                        "title": "Lipid Metabolism by Gut Microbes and Atherosclerosis",
+                        "journal": "Circulation Research",
+                        "volume": "109",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "49. Loscalzo J (2011) Lipid Metabolism by Gut Microbes and Atherosclerosis. Circulation Research109: 127\u2013129. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45292,
+                    "infons": {
+                        "title": "Succession of microbial consortia in the developing infant gut microbiome",
+                        "journal": "Proceedings of the National Academy of Sciences",
+                        "volume": "108",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "50. Koenig JE, Spor A, Scalfone N, Fricker AD, Stombaugh J, et al. (2011) Succession of microbial consortia in the developing infant gut microbiome. Proceedings of the National Academy of Sciences108: 4578\u20134585. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45548,
+                    "infons": {
+                        "title": "Functional genomics of probiotic Lactobacilli",
+                        "journal": "J Clin Gastroenterol",
+                        "volume": "42",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "51. Klaenhammer TR, Altermann E, Pfeiler E, Buck BL, Goh YJ, et al. (2008) Functional genomics of probiotic Lactobacilli. J Clin Gastroenterol42: S160\u2013162. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45729,
+                    "infons": {
+                        "title": "Terpenoids: natural inhibitors of NF-kappaB signaling with anti-inflammatory and anticancer potential",
+                        "journal": "Cell Mol Life Sci",
+                        "volume": "65",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "52. Salminen A, Lehtonen M, Suuronen T, Kaarniranta K, Huuskonen J (2008) Terpenoids: natural inhibitors of NF-kappaB signaling with anti-inflammatory and anticancer potential. Cell Mol Life Sci65: 2979\u20132999. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 45963,
+                    "infons": {
+                        "title": "Development of a Common Oligonucleotide Reference Standard for Microarray Data Normalization and Comparison across Different Microbial Communities",
+                        "journal": "Applied and Environmental Microbiology",
+                        "volume": "76",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "53. Liang Y, He Z, Wu L, Deng Y, Li G, et al. (2010) Development of a Common Oligonucleotide Reference Standard for Microarray Data Normalization and Comparison across Different Microbial Communities. Applied and Environmental Microbiology76: 1088\u20131094. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46261,
+                    "infons": {
+                        "title": "GeoChip: a comprehensive microarray for investigating biogeochemical, ecological and environmental processes",
+                        "journal": "ISME J",
+                        "volume": "1",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "54. He Z, Gentry TJ, Schadt CW, Wu L, Liebich J, et al. (2007) GeoChip: a comprehensive microarray for investigating biogeochemical, ecological and environmental processes. ISME J1: 67\u201377. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46475,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "55. He Z, Van Nostrand JD, Zhou J (2012) Applications of functional gene microarrays for profiling microbial communities. Current Opinion in Biotechnology. [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46639,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "56. Lee Y-J, van Nostrand JD, Tu Q, Lu Z, Cheng L, et al... (2013) The PathoChip, a functional gene array for assessing pathogenic properties of diverse microbial communities. ISME J. [PMC free article] [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 46850,
+                    "infons": {
+                        "title": "StressChip as a High-Throughput Tool for Assessing Microbial Community Responses to Environmental Stresses",
+                        "journal": "Environ Sci Technol",
+                        "volume": "13",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "57. Zhou A, He Z, Qin Y, Lu Z, Deng Y, et al. (2013) StressChip as a High-Throughput Tool for Assessing Microbial Community Responses to Environmental Stresses. Environ Sci Technol13: 13. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47063,
+                    "infons": {
+                        "title": "Empirical Establishment of Oligonucleotide Probe Design Criteria",
+                        "journal": "Applied and Environmental Microbiology",
+                        "volume": "71",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "58. He Z, Wu L, Li X, Fields MW, Zhou J (2005) Empirical Establishment of Oligonucleotide Probe Design Criteria. Applied and Environmental Microbiology71: 3753\u20133760. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47273,
+                    "infons": {
+                        "title": "Improvement of Oligonucleotide Probe Design Criteria for Functional Gene Microarrays in Environmental Applications",
+                        "journal": "Applied and Environmental Microbiology",
+                        "volume": "72",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "59. Liebich J, Schadt CW, Chong SC, He Z, Rhee S-K, et al. (2006) Improvement of Oligonucleotide Probe Design Criteria for Functional Gene Microarrays in Environmental Applications. Applied and Environmental Microbiology72: 1688\u20131691. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47552,
+                    "infons": {
+                        "title": "Detection of genes involved in biodegradation and biotransformation in microbial communities by using 50-mer oligonucleotide microarrays",
+                        "journal": "Appl Environ Microbiol",
+                        "volume": "70",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "60. Rhee SK, Liu X, Wu L, Chong SC, Wan X, et al. (2004) Detection of genes involved in biodegradation and biotransformation in microbial communities by using 50-mer oligonucleotide microarrays. Appl Environ Microbiol70: 4303\u20134317. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 47828,
+                    "infons": {
+                        "title": "Evaluation of 50-mer oligonucleotide arrays for detecting microbial populations in environmental samples",
+                        "journal": "Biotechniques",
+                        "volume": "36",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "61. Tiquia SM, Wu L, Chong SC, Passovets S, Xu D, et al. (2004) Evaluation of 50-mer oligonucleotide arrays for detecting microbial populations in environmental samples. Biotechniques36: 664\u2013670. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48049,
+                    "infons": {
+                        "title": "Development and Evaluation of Functional Gene Arrays for Detection of Selected Genes in the Environment",
+                        "journal": "Applied and Environmental Microbiology",
+                        "volume": "67",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "62. Wu L, Thompson DK, Li G, Hurt RA, Tiedje JM, et al. (2001) Development and Evaluation of Functional Gene Arrays for Detection of Selected Genes in the Environment. Applied and Environmental Microbiology67: 5780\u20135790. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48314,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "63. Tu Q, Yu H, He Z, Deng Y, Wu L, et al... (2013) GeoChip 4.0: A High Density Functional Gene Array for Microbial Ecology Studies (submitted).",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48458,
+                    "infons": {
+                        "title": "Bacterial community variation in human body habitats across space and time",
+                        "journal": "Science",
+                        "volume": "326",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "64. Costello EK, Lauber CL, Hamady M, Fierer N, Gordon JI, et al. (2009) Bacterial community variation in human body habitats across space and time. Science326: 1694\u20131697. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48674,
+                    "infons": {
+                        "title": "Structure, function and diversity of the healthy human microbiome",
+                        "journal": "Nature",
+                        "volume": "486",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "65. Consortium THMP (2012) Structure, function and diversity of the healthy human microbiome. Nature486: 207\u2013214. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 48832,
+                    "infons": {
+                        "title": "Community as the unit of pathogenicity: An emerging concept as to the microbial pathogenesis of apical periodontitis",
+                        "journal": "Oral Surgery, Oral Medicine, Oral Pathology, Oral Radiology, and Endodontology",
+                        "volume": "107",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "66. Siqueira Jr JF, R\u00f4\u00e7as IN (2009) Community as the unit of pathogenicity: An emerging concept as to the microbial pathogenesis of apical periodontitis. Oral Surgery, Oral Medicine, Oral Pathology, Oral Radiology, and Endodontology107: 870\u2013878. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49103,
+                    "infons": {
+                        "title": "Periodontitis: a polymicrobial disruption of host homeostasis",
+                        "journal": "Nat Rev Micro",
+                        "volume": "8",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "67. Darveau RP (2010) Periodontitis: a polymicrobial disruption of host homeostasis. Nat Rev Micro8: 481\u2013490. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49238,
+                    "infons": {
+                        "title": "The intra-oral translocation of periodontopathogens jeopardises the outcome of periodontal therapy. A review of the literature",
+                        "journal": "J Clin Periodontol",
+                        "volume": "28",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "68. Quirynen M, De Soete M, Dierickx K, van Steenberghe D (2001) The intra-oral translocation of periodontopathogens jeopardises the outcome of periodontal therapy. A review of the literature. J Clin Periodontol28: 499\u2013507. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49487,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "69. Tatakis DN, Kumar PS (2005) Etiology and pathogenesis of periodontal diseases. Dental clinics of North America 49: 491\u2212516, v. [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49626,
+                    "infons": {
+                        "title": "Butyric acid induces apoptosis in both human monocytes and lymphocytes equivalently",
+                        "journal": "Journal of Oral Science",
+                        "volume": "54",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "70. Abe K (2012) Butyric acid induces apoptosis in both human monocytes and lymphocytes equivalently. Journal of Oral Science54: 7\u201314. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49786,
+                    "infons": {
+                        "title": "Butyric Acid Effects in the Development of Periodontitis and Systemic Diseases",
+                        "journal": "Journal of Oral Biosciences",
+                        "volume": "53",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "71. Ochiai K, Imai K, Tamura M, Kurita-Ochiai T (2011) Butyric Acid Effects in the Development of Periodontitis and Systemic Diseases. Journal of Oral Biosciences53: 213\u2013220. [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 49977,
+                    "infons": {
+                        "title": "Short-Chain Carboxylic Acids Produced by Gram-Negative Anaerobic Bacteria Can Accelerate or Delay Polymorphonuclear Leukocyte Apoptosis in Vitro",
+                        "journal": "Journal of Periodontology",
+                        "volume": "72",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "72. Stehle HW, Leblebicioglu B, Walters JD (2001) Short-Chain Carboxylic Acids Produced by Gram-Negative Anaerobic Bacteria Can Accelerate or Delay Polymorphonuclear Leukocyte Apoptosis in Vitro. Journal of Periodontology72: 1059\u20131063. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [
+                        {
+                            "text": "Bacteria",
+                            "infons": {
+                                "identifier": "NCBI:txid2",
+                                "type": "bacteria_superkingdom",
+                                "annotator": "dhylan.patel21@imperial.ac.uk",
+                                "date": "2024-01-31 11:22:36",
+                                "parent_taxonomic_id": "noParentIDinList"
+                            },
+                            "id": "293342",
+                            "locations": {
+                                "length": 8,
+                                "offset": 50092
+                            }
+                        }
+                    ],
+                    "relations": []
+                },
+                {
+                    "offset": 50238,
+                    "infons": {
+                        "title": "Butyrate, a bacterial metabolite, induces apoptosis and autophagic cell death in gingival epithelial cells",
+                        "journal": "Journal of Periodontal Research",
+                        "volume": "45",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "73. Tsuda H, Ochiai K, Suzuki N, Otsuka K (2010) Butyrate, a bacterial metabolite, induces apoptosis and autophagic cell death in gingival epithelial cells. Journal of Periodontal Research45: 626\u2013634. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50464,
+                    "infons": {
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "74. Qiqiang L, Huanxin M, Xuejun G (2012) Longitudinal study of volatile fatty acids in the gingival crevicular fluid of patients with periodontitis before and after nonsurgical therapy. Journal of Periodontal Research: no-no. [PubMed]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50699,
+                    "infons": {
+                        "title": "Analysis of short chain fatty acids in gingival crevicular fluid of patients with aggressive periodontitis",
+                        "journal": "Zhonghua Kou Qiang Yi Xue Za Zhi",
+                        "volume": "43",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "75. Lu RF, Meng HX, Gao XJ, Feng L, Xu L (2008) Analysis of short chain fatty acids in gingival crevicular fluid of patients with aggressive periodontitis. Zhonghua Kou Qiang Yi Xue Za Zhi43: 664\u2013667. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 50925,
+                    "infons": {
+                        "title": "The real cost of sequencing: higher than you think",
+                        "journal": "Genome Biol",
+                        "volume": "12",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "76. Sboner A, Mu XJ, Greenbaum D, Auerbach RK, Gerstein MB (2011) The real cost of sequencing: higher than you think. Genome Biol12: 125. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51107,
+                    "infons": {
+                        "title": "Next generation sequencing and bioinformatic bottlenecks: the current state of metagenomic data analysis",
+                        "journal": "Current Opinion in Biotechnology",
+                        "volume": "23",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "77. Scholz MB, Lo C-C, Chain PSG (2012) Next generation sequencing and bioinformatic bottlenecks: the current state of metagenomic data analysis. Current Opinion in Biotechnology23: 9\u201315. [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                },
+                {
+                    "offset": 51320,
+                    "infons": {
+                        "title": "Strain/Species-specific probe design for microbial identification microarrays",
+                        "journal": "Appl Environ Microbiol",
+                        "volume": "79",
+                        "section_title_1": "References",
+                        "iao_name_1": "references section",
+                        "iao_id_1": "IAO:0000320"
+                    },
+                    "text": "78. Tu Q, He Z, Deng Y, Zhou J (2013) Strain/Species-specific probe design for microbial identification microarrays. Appl Environ Microbiol79: 5085\u20135088. [PMC free article] [PubMed] [Google Scholar]",
+                    "sentences": [],
+                    "annotations": [],
+                    "relations": []
+                }
+            ],
+            "annotations": [],
+            "relations": []
+        }
+    ]
+}

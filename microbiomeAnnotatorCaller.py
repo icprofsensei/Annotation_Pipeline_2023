@@ -22,5 +22,7 @@ window.close()
 result = ann(jsondic, inputfiles, outputfiles, 0, values, valuescs)
 result.initialsteps()
 '''
-result = ann('NCBI_tax_dictionary10.json', 'Microbiomes_test/urinary', 'results5', 0, 'ALL', 'no' )
+#values = section title being searched for
+#valuescs = case sens on /off
+result = ann('NCBI_tax_dictionary10.json', 'Microbiomes_test/airway', 'results9', 0, 'ALL', 'no' )
 result.initialsteps()
