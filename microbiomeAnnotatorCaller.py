@@ -24,5 +24,5 @@ result.initialsteps()
 '''
 #values = section title being searched for
 #valuescs = case sens on /off
-result = ann('NCBI_tax_dictionary10.json', 'Microbiomes_test/airway', 'results9', 0, 'ALL', 'no' )
+result = ann('NCBI_tax_dictionary10.json', 'testset', 'results', 0, 'ALL', 'no' )
 result.initialsteps()
