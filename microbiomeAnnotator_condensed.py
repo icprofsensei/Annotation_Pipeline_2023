@@ -350,7 +350,7 @@ class Annotator:
                                                                                             annot_stopper = True
                                                                                     else:
                                                                                         continue
-                                                                        #G. species. CHECK WHAT IS ACCEPTABLE TO ABBREVIATE IN ORDER TO REMOVE FALSE +VES??
+                                                                        #G. species. 
                                                                         elif (len(finalword) == 2 and finalword[1] == '.' and finalword[0].isupper):
                                                                                     
                                                                                     possible = [cn for cn in CleanNames if nextword.lower() in cn.split(" ") and cn.split(" ")[0][0] == finalword[0]]

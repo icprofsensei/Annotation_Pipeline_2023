@@ -4,7 +4,7 @@ import csv
 from alive_progress import alive_bar
 import os
 array = []
-tsv = open('NCBI_taxonomy_dictionary_v10.tsv', 'r')
+tsv = open('NCBI_taxonomy_dictionary_v11.tsv', 'r')
 titles = ["OriginalName", "TaxRank", "CleanName", "TaxID", "ParentTaxID", "KingdomID"]
 for line in tsv:
     d = {}
@@ -33,8 +33,8 @@ with open("NCBI_TAX_DIC.json", 'r+') as f:
                 newdata.append(i)
             bar()
 
-with open("NCBI_tax_dictionary10.json", "w") as e:
+with open("NCBI_tax_dictionary11.json", "w") as e:
     json.dump(newdata, e, indent = 4)
 
-if os.path.isfile('NCBI_tax_dictionary10.json') == True:
+if os.path.isfile('NCBI_tax_dictionary11.json') == True:
                  os.remove('NCBI_TAX_DIC.json')
